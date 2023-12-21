@@ -115,3 +115,11 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+# epic exported shit
+out-linux/
+out-windows/
+MarkisaOS-Linux.tar.gz
+MarkisaOS-Windows.zip
+MarkisaOS-Android.apk
+MarkisaOS-Android.apk.idsig
