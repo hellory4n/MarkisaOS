@@ -5,11 +5,19 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.hellory4n.frambos.util.FrambosFile
 
 /** [com.badlogic.gdx.ApplicationListener] implementation shared by all platforms. */
-class Bootloader : ApplicationAdapter() {
+class Bootloader() : ApplicationAdapter() {
     private val batch by lazy { SpriteBatch() }
     private val image by lazy { Texture("libgdx.png") }
+
+    override fun create() {
+        println(Gdx.files.localStoragePath)
+        var file: FrambosFile = FrambosFile.open("user://fucker.txt")
+        file.overwriteString("Fuck you")
+        println("file user://fucker.txt is ${file.readString()}")
+    }
 
     override fun render() {
         Gdx.gl.glClearColor(0.15f, 0.15f, 0.2f, 1f)
