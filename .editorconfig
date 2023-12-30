@@ -131,15 +131,6 @@ csharp_style_prefer_null_check_over_type_check = true:suggestion
 csharp_style_var_for_built_in_types = false:suggestion
 csharp_style_var_when_type_is_apparent = false:suggestion
 csharp_style_var_elsewhere = false:suggestion
-# Expression-bodied members
-csharp_style_expression_bodied_methods = true:suggestion
-csharp_style_expression_bodied_constructors = true:suggestion
-csharp_style_expression_bodied_operators = true:suggestion
-csharp_style_expression_bodied_properties = true:suggestion
-csharp_style_expression_bodied_indexers = true:suggestion
-csharp_style_expression_bodied_accessors = true:suggestion
-csharp_style_expression_bodied_lambdas = true:suggestion
-csharp_style_expression_bodied_local_functions = true:suggestion
 # Pattern matching preferences
 csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
@@ -303,7 +294,7 @@ dotnet_naming_rule.sanity_check_uncovered_field_case_rule.severity = error
 #   https://docs.microsoft.com/dotnet/standard/design-guidelines/names-of-classes-structs-and-interfaces#names-of-common-types
 # - Constructors, Properties, Events, Methods
 #   https://docs.microsoft.com/dotnet/standard/design-guidelines/names-of-type-members
-dotnet_naming_symbols.element_group.applicable_kinds = namespace, class, enum, struct
+dotnet_naming_symbols.element_group.applicable_kinds = class, enum, struct
 dotnet_naming_rule.element_rule.symbols              = element_group
 dotnet_naming_rule.element_rule.style                = pascal_case_style
 dotnet_naming_rule.element_rule.severity             = suggestion
