@@ -2,15 +2,33 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
 	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="..\frambos.android\AndroidManifest.xml">
+      <Link>AndroidManifest.xml</Link>
+    </None>
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' != 'net8.0-android'">
+    <RuntimeIdentifiers>win-x64;win-x86;linux-x64;linux-musl-x64;linux-arm;linux-arm64;linux-bionic-arm64</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Silk.NET.Windowing" Version="2.*" />
     <PackageReference Include="Silk.NET.OpenGL" Version="2.*" />
     <PackageReference Include="Silk.NET.Input" Version="2.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <ProjectReference Include="..\frambos.android\frambos.android.csproj" />
   </ItemGroup>
 
 </Project>

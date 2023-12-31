@@ -23,18 +23,18 @@ public class MainActivity : SilkActivity {
     private static Texture Texture;
     private static Shader Shader;
 
-    private static readonly float[] Vertices = [
+    private static readonly float[] Vertices = {
         //X    Y      Z     U   V
          0.5f,  0.5f, 0.0f, 1f, 0f,
          0.5f, -0.5f, 0.0f, 1f, 1f,
         -0.5f, -0.5f, 0.0f, 0f, 1f,
         -0.5f,  0.5f, 0.5f, 0f, 0f
-    ];
+    };
 
-    private static readonly uint[] Indices = [
+    private static readonly uint[] Indices = {
         0, 1, 3,
         1, 2, 3
-    ];
+    };
 
     /// <summary>
     /// This is where the application starts.

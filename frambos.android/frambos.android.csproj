@@ -3,17 +3,17 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0-android</TargetFramework>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Silk.NET.Windowing" Version="2.*" />
     <PackageReference Include="Silk.NET.OpenGL" Version="2.*" />
     <PackageReference Include="SixLabors.ImageSharp" Version="2.1.6" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\frambos\frambos.csproj" />
   </ItemGroup>
 
 </Project>

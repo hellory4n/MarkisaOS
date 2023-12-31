@@ -482,3 +482,12 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# exported stuff
+outAndroid
+outLinux
+outWindows
+MarkisaOS-Windows.zip
+MarkisaOS-Linux.tar.gz
+MarkisaOS-Android.apk
+MarkisaOS-Android.apk.idsig
