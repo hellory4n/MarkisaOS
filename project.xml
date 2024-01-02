@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="MarkisaOS" package="com.hellory4n.markisa" version="0.12.4" company="hellory4n" />
+	<app main="Main" path="export" file="MarkisaOS" />
+	
+	<source path="src" />
+	
+	<haxelib name="lime" />
+	
+	<assets path="assets" />
+	
+</project>
