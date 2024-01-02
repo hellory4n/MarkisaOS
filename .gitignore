@@ -4,3 +4,5 @@ dump
 !.vscode/launch.json
 *.diff
 *.hxproj
+MarkisaOS-Windows.zip
+MarkisaOS-Linux.tar.gz

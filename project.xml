@@ -3,6 +3,13 @@
 	
 	<meta title="MarkisaOS" package="com.hellory4n.markisa" version="0.12.4" company="hellory4n" />
 	<app main="Main" path="export" file="MarkisaOS" />
+
+	<window width="0" height="0" background="#000000" fps="60" if="android" />
+	<android minimum-sdk-version="21" />
+	<android target-sdk-version="34" />
+	<window hardware="true" allow-shaders="true" require-shaders="true" if="cpp"/>
+	<window vsync="true" antialiasing="4" if="cpp" />
+	<window orientation="landscape"/>
 	
 	<source path="src" />
 	
