@@ -4,16 +4,32 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0-android</TargetFramework>
 	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="shader.frag" />
+    <None Remove="shader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="shader.frag">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="shader.vert">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="silk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
 
   <PropertyGroup>
     <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Silk.NET.Windowing" Version="2.*" />
-    <PackageReference Include="Silk.NET.OpenGL" Version="2.*" />
+    <PackageReference Include="Silk.NET.Windowing" Version="2.20.0" />
+    <PackageReference Include="Silk.NET.OpenGL" Version="2.20.0" />
     <PackageReference Include="SixLabors.ImageSharp" Version="2.1.6" />
   </ItemGroup>
 

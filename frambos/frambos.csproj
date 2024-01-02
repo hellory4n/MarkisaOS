@@ -22,9 +22,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Silk.NET.Windowing" Version="2.*" />
-    <PackageReference Include="Silk.NET.OpenGL" Version="2.*" />
-    <PackageReference Include="Silk.NET.Input" Version="2.*" />
+    <PackageReference Include="Silk.NET.Windowing" Version="2.20.0" />
+    <PackageReference Include="Silk.NET.OpenGL" Version="2.20.0" />
+    <PackageReference Include="Silk.NET.Input" Version="2.20.0" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">

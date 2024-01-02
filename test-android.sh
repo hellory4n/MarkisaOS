@@ -3,7 +3,7 @@ if [ "$#" -ne 2 ]; then
     exit 1
 fi
 
-echo "make sure you have a device connected (through abd devices)"
+echo "make sure you have a device connected (through adb devices)"
 ./export-android.sh $1 $2
 
 # change if you're not me
