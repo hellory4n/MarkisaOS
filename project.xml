@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="MarkisaOS" package="com.hellory4n.markisa" version="0.12.4" company="hellory4n" />
+	<meta title="MarkisaOS" package="com.hellory4n.markisa" version="0.13.0" company="hellory4n" />
 	<app main="Main" path="export" file="MarkisaOS" />
 
 	<window width="0" height="0" background="#000000" fps="60" if="android" />
