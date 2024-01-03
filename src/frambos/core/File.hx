@@ -1,26 +1,23 @@
 package frambos.core;
 
 import frambos.core.Result;
-import sys.io.FileInput;
-import lime.utils.Assets;
-import sys.io.File;
 import lime.system.System;
 
 /**
  * Provides an API for reading user files.
  */
 class File {
-    var path: String;
+    var internalPath: String;
+    public var path: String;
     var isAsset: Bool;
 
     /**
      * Opens a file.
-     * @param path The path of the file.
+     * @param path The path of the file. Make sure to start the path with `user://` if you're writing saves or whatever.
      */
-
-
     public function new(path: String) {
         this.path = path;
+        this.internalPath = Directory.processPath(path);
     }
 
     /**
@@ -28,21 +25,21 @@ class File {
      */
     public function read(): Result<String, FileError> {
         try {
-            return Result.Success(sys.io.File.getContent(path));
+            return Success(sys.io.File.getContent(internalPath));
         } catch (e) {
-            return Result.Error(FileError.CouldntRead("Couldn't read $path"));
+            return Error(FileError.CouldntRead("Couldn't read $path ($internalPath), are you sure it exists?"));
         }
     }
 
     /**
-     * Overwrites all of the content in a file.
-     * @param content 
+     * Overwrites all of the content in a file, or creates a new file if it doesn't exist yet.
      */
-    public function write(content: String): Result<Bool, FileError> {
+    public function write(content: String): Error<FileError> {
         try {
-            return Result.Success(sys.io.File.getContent(path));
+            sys.io.File.saveContent(internalPath, content);
+            return Success;
         } catch (e) {
-            return Result.Error(FileError.CouldntRead("Couldn't read $path"));
+            return Error(FileError.CouldntWrite("Couldn't write to $path ($internalPath)"));
         }
     }
 }

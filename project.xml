@@ -5,6 +5,7 @@
 	<app main="Main" path="export" file="MarkisaOS" />
 
 	<window width="0" height="0" background="#000000" fps="60" if="android" />
+	<window fullscreen="true" background="#000000" fps="60" if="desktop" />
 	<android minimum-sdk-version="21" />
 	<android target-sdk-version="34" />
 	<window hardware="true" allow-shaders="true" require-shaders="true" if="cpp"/>

@@ -1,6 +1,7 @@
 package;
 
 
+import frambos.core.File;
 import lime.app.Application;
 import lime.graphics.cairo.CairoImageSurface;
 import lime.graphics.opengl.GLBuffer;
@@ -30,6 +31,9 @@ class Main extends Application {
 	public function new () {
 		
 		super ();
+
+		var file = new File("user://stupidity.txt");
+		file.write("The female parental unit of yours contains a vast amount of weight.");
 		
 	}
 	
