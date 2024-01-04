@@ -1,6 +1,7 @@
 package;
 
 
+import markisa.bootloader.Boot;
 import frambos.core.Signal;
 import frambos.core.File;
 import lime.app.Application;
@@ -27,7 +28,6 @@ class Main extends Application {
 	private var glTextureAttribute:Int;
 	private var glVertexAttribute:Int;
 	private var image:Image;
-	var somethingHappened: Signal<Int> = new Signal();
 	
 	
 	public function new () {
@@ -38,8 +38,7 @@ class Main extends Application {
 		meta.set("company", "hellory4n");
 		meta.set("file", "MarkisaOS");
 
-		var lol = new ClassThatHandlesEvents();
-		somethingHappened.connect(lol.whenSomethingHappens);
+		var gameBootloader = new Boot();
 	}
 	
 	
@@ -219,8 +218,6 @@ class Main extends Application {
 					gl.drawArrays (gl.TRIANGLE_STRIP, 0, 4);
 					
 				}
-
-				somethingHappened.emit(69420);
 			
 			default:
 			
@@ -229,15 +226,4 @@ class Main extends Application {
 	}
 	
 	
-}
-
-class ClassThatHandlesEvents {
-	public function new() {
-		
-	}
-
-	public function whenSomethingHappens(someFuckingArgument: Int) {
-		trace("NO FUCKING WAY SOMETHING HAPPENED");
-		trace('some fucking argument is $someFuckingArgument');
-	}
 }
