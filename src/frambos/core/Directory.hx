@@ -28,7 +28,7 @@ class Directory {
             sys.io.File.copy(processPath(from), processPath(to));
             return Success;
         } catch (e) {
-            return Error(FileError.CouldntWrite("Couldn't copy from $from to $to"));
+            return Error(FileError.CouldntWrite('Couldn\'t copy from $from to $to'));
         }
     }
 
@@ -40,7 +40,7 @@ class Directory {
             FileSystem.createDirectory(processPath(path));
             return Success;
         } catch (e) {
-            return Error(DirectoryError.CouldntMakeDir("Couldn't make directories $path"));
+            return Error(DirectoryError.CouldntMakeDir('Couldn\'t make directories $path'));
         }
     }
 
@@ -51,7 +51,7 @@ class Directory {
         try {
             return Success(FileSystem.isDirectory(processPath(path)));
         } catch (e) {
-            return Error(DirectoryError.NotFound("Couldn't access $path"));
+            return Error(DirectoryError.NotFound('Couldn\'t access $path'));
         }
     }
 
@@ -64,20 +64,20 @@ class Directory {
 
         switch (isdir) {
             case Success(data): actualIsdir = data;
-            case Error(error): return Error(DirectoryError.CouldntDelete("Couldn't delete $path"));
+            case Error(error): return Error(DirectoryError.CouldntDelete('Couldn\'t delete $path'));
         }
         
         if (actualIsdir) {
             try {
                 FileSystem.deleteDirectory(processPath(path));
             } catch (e) {
-                return Error(DirectoryError.CouldntDelete("Couldn't delete $path"));
+                return Error(DirectoryError.CouldntDelete('Couldn\'t delete $path'));
             }
         } else {
             try {
                 FileSystem.deleteFile(processPath(path));
             } catch (e) {
-                return Error(DirectoryError.CouldntDelete("Couldn't delete $path"));
+                return Error(DirectoryError.CouldntDelete('Couldn\'t delete $path'));
             }
         }
 
@@ -91,7 +91,7 @@ class Directory {
         try {
             return Success(FileSystem.readDirectory(processPath(path)));
         } catch (e) {
-            return Error(DirectoryError.CouldntList("Couldn't list $path"));
+            return Error(DirectoryError.CouldntList('Couldn\'t list $path'));
         }
     }
 
@@ -103,7 +103,7 @@ class Directory {
             FileSystem.rename(processPath(from), processPath(to));
             return Success;
         } catch (e) {
-            return Error(DirectoryError.CouldntMove("Couldn't move from $from to $to"));
+            return Error(DirectoryError.CouldntMove('Couldn\'t move from $from to $to'));
         }
     }
 }

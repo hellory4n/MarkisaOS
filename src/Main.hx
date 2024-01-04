@@ -1,6 +1,7 @@
 package;
 
 
+import frambos.core.Signal;
 import frambos.core.File;
 import lime.app.Application;
 import lime.graphics.cairo.CairoImageSurface;
@@ -26,19 +27,19 @@ class Main extends Application {
 	private var glTextureAttribute:Int;
 	private var glVertexAttribute:Int;
 	private var image:Image;
+	var somethingHappened: Signal<Int> = new Signal();
 	
 	
 	public function new () {
 		
 		super ();
 
-		// trying to make it recognize the correct place for putting files
+		// make it recognize the correct place for putting files
 		meta.set("company", "hellory4n");
 		meta.set("file", "MarkisaOS");
 
-		var file = new File("user://stupidity.txt");
-		file.write("The female parental unit of yours contains a vast amount of weight.");
-		
+		var lol = new ClassThatHandlesEvents();
+		somethingHappened.connect(lol.whenSomethingHappens);
 	}
 	
 	
@@ -218,6 +219,8 @@ class Main extends Application {
 					gl.drawArrays (gl.TRIANGLE_STRIP, 0, 4);
 					
 				}
+
+				somethingHappened.emit(69420);
 			
 			default:
 			
@@ -226,4 +229,15 @@ class Main extends Application {
 	}
 	
 	
+}
+
+class ClassThatHandlesEvents {
+	public function new() {
+		
+	}
+
+	public function whenSomethingHappens(someFuckingArgument: Int) {
+		trace("NO FUCKING WAY SOMETHING HAPPENED");
+		trace('some fucking argument is $someFuckingArgument');
+	}
 }

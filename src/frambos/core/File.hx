@@ -27,7 +27,7 @@ class File {
         try {
             return Success(sys.io.File.getContent(internalPath));
         } catch (e) {
-            return Error(FileError.CouldntRead("Couldn't read $path ($internalPath), are you sure it exists?"));
+            return Error(FileError.CouldntRead('Couldn\'t read $path ($internalPath), are you sure it exists?'));
         }
     }
 
@@ -39,7 +39,7 @@ class File {
             sys.io.File.saveContent(internalPath, content);
             return Success;
         } catch (e) {
-            return Error(FileError.CouldntWrite("Couldn't write to $path ($internalPath)"));
+            return Error(FileError.CouldntWrite('Couldn\'t write to $path ($internalPath)'));
         }
     }
 }
