@@ -32,6 +32,10 @@ class Main extends Application {
 		
 		super ();
 
+		// trying to make it recognize the correct place for putting files
+		meta.set("company", "hellory4n");
+		meta.set("file", "MarkisaOS");
+
 		var file = new File("user://stupidity.txt");
 		file.write("The female parental unit of yours contains a vast amount of weight.");
 		

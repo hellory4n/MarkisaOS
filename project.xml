@@ -11,11 +11,14 @@
 	<window hardware="true" allow-shaders="true" require-shaders="true" if="cpp"/>
 	<window vsync="true" antialiasing="4" if="cpp" />
 	<window orientation="landscape"/>
+	<icon path="assets/icon.png" size="1024" />
 	
 	<source path="src" />
 	
 	<haxelib name="lime" />
 	
 	<assets path="assets" />
+
+	<language name="en" />
 	
 </project>
