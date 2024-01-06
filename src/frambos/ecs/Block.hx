@@ -23,15 +23,13 @@ class Block {
      */
     public var name: String = "New Block";
     var pieces: Array<Piece> = [];
-    var children: Array<Block> = [];
-    var parent: Block = BlockTree.root;
 
     public function new() {}
 
     /**
      * Gets a piece attached to this block, or adds a new one if it's not there yet.
      */
-    /*public function getPiece<T: Piece>() {
+    /*public function getPiece<T: Piece>(piece: T) {
         for (awesomePiece in pieces) {
             if (awesomePiece is T) {
                 return awesomePiece;
@@ -44,3 +42,8 @@ class Block {
         return newPiece;
     }*/
 }
+
+/**
+ * It's just a disguised string
+ */
+typedef BlockPath = String;

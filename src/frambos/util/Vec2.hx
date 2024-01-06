@@ -159,27 +159,27 @@ abstract Vec2(Array<Float>) to Array<Float> {
         return new Vec2(Math.max(x, value.x), Math.max(y, value.y));
     }
 
-    public inline function get_ZERO(): Vec2 {
+    static function get_ZERO(): Vec2 {
         return new Vec2(0, 0);
     }
 
-    public inline function get_ONE(): Vec2 {
+    static function get_ONE(): Vec2 {
         return new Vec2(1, 1);
     }
 
-    public inline function get_LEFT(): Vec2 {
+    static function get_LEFT(): Vec2 {
         return new Vec2(-1, 0);
     }
 
-    public inline function get_RIGHT(): Vec2 {
+    static function get_RIGHT(): Vec2 {
         return new Vec2(1, 0);
     }
 
-    public inline function get_UP(): Vec2 {
+    static function get_UP(): Vec2 {
         return new Vec2(0, -1);
     }
 
-    public inline function get_DOWN(): Vec2 {
+    static function get_DOWN(): Vec2 {
         return new Vec2(0, 1);
     }
 
