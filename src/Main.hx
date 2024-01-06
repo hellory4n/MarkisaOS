@@ -2,8 +2,7 @@ package;
 
 
 import markisa.bootloader.Boot;
-import frambos.core.Signal;
-import frambos.core.File;
+import frambos.core.Init;
 import lime.app.Application;
 import lime.graphics.cairo.CairoImageSurface;
 import lime.graphics.opengl.GLBuffer;
@@ -38,7 +37,8 @@ class Main extends Application {
 		meta.set("company", "hellory4n");
 		meta.set("file", "MarkisaOS");
 
-		var gameBootloader = new Boot();
+		new Init();
+		new Boot();
 	}
 	
 	
