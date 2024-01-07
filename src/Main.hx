@@ -1,8 +1,9 @@
 package;
 
 
+import frambos.ecs.Block;
+import frambos.ecs.BlockTree;
 import markisa.bootloader.Boot;
-import frambos.core.Init;
 import lime.app.Application;
 import lime.graphics.cairo.CairoImageSurface;
 import lime.graphics.opengl.GLBuffer;
@@ -37,75 +38,22 @@ class Main extends Application {
 		meta.set("company", "hellory4n");
 		meta.set("file", "MarkisaOS");
 
-		new Init();
+		// create the block tree
+        var root = new Block();
+        root.name = "root";
+        BlockTree.root = root;
+
 		new Boot();
 	}
 	
+	public override function update(deltaTime: Int) {
+		BlockTree.callUpdate(deltaTime / 1000);
+	}
 	
 	public override function render (context:RenderContext):Void {
+		BlockTree.callDraw();
 		
-		switch (context.type) {
-			
-			case CAIRO:
-				
-				var cairo = context.cairo;
-				
-				if (image == null && preloader.complete) {
-					
-					image = Assets.getImage ("assets/lime.png");
-					image.format = BGRA32;
-					image.premultiplied = true;
-					
-					cairoSurface = CairoImageSurface.fromImage (image);
-					
-				}
-				
-				var r = ((context.attributes.background >> 16) & 0xFF) / 0xFF;
-				var g = ((context.attributes.background >> 8) & 0xFF) / 0xFF;
-				var b = (context.attributes.background & 0xFF) / 0xFF;
-				var a = ((context.attributes.background >> 24) & 0xFF) / 0xFF;
-				
-				cairo.setSourceRGB (r, g, b);
-				cairo.paint ();
-				
-				if (image != null) {
-					
-					image.format = BGRA32;
-					image.premultiplied = true;
-					
-					cairo.setSourceSurface (cairoSurface, 0, 0);
-					cairo.paint ();
-					
-				}
-			
-			case CANVAS:
-				
-				var ctx = context.canvas2D;
-				
-				if (image == null && preloader.complete) {
-					
-					image = Assets.getImage ("assets/lime.png");
-					
-					ctx.fillStyle = "#" + StringTools.hex (context.attributes.background, 6);
-					ctx.fillRect (0, 0, window.width, window.height);
-					ctx.drawImage (image.src, 0, 0, image.width, image.height);
-					
-				}
-			
-			case DOM:
-				
-				var element = context.dom;
-				
-				if (image == null && preloader.complete) {
-					
-					image = Assets.getImage ("assets/lime.png");
-					
-					element.style.backgroundColor = "#" + StringTools.hex (context.attributes.background, 6);
-					element.appendChild (image.src);
-					
-				}
-			
-			
+		switch (context.type) {			
 			case OPENGL, OPENGLES, WEBGL:
 				
 				var gl = context.webgl;

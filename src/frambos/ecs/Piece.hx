@@ -19,7 +19,7 @@ class Piece {
     public function ready() {}
     /**
      * Called every frame.
-     * @param delta Represents the elapsed time between consecutive frames, so moving things are consistent between frames, e.g. `velocity += speed * delta`
+     * @param delta Represents the elapsed time between consecutive frames in seconds, so moving things are consistent between frames, e.g. `velocity += speed * delta`
      */
     public function update(delta: Float) {}
     /**

@@ -4,7 +4,7 @@ import frambos.ecs.Block.BlockPath;
 using StringTools;
 
 /**
- * Manages all of the blocks and shit. Most of the stuff here should be used through the `Block` class instead.
+ * Manages all of the blocks and shit.
  */
 class BlockTree {
     /**
@@ -17,7 +17,7 @@ class BlockTree {
         if (root != null) {
         	return root;
         }
-        tree.block = value;
+        tree = new BlockTreeItem(value, null);
         return root = value;
     }
 
@@ -26,6 +26,7 @@ class BlockTree {
      * @param block The reference to the block.
      * @return The tree item with the block, or null if the block isn't on the tree yet.
      */
+    @:noCompletion
     public static function findByRef(block: Block): BlockTreeItem {
         return findByRefButItDoesRecursion(tree, block);
     }
@@ -48,6 +49,7 @@ class BlockTree {
     /**
      * Adds a block to the tree. This also ensures the name is valid.
      */
+    @:noCompletion
     public static function addToTree(block: Block, parent: Block) {
         var parentItem = findByRef(parent);
 
@@ -68,6 +70,7 @@ class BlockTree {
         parentItem.children.push(new BlockTreeItem(block, parentItem));
     }
 
+    @:noCompletion
     public static function findByPath(path: BlockPath): Block {
         var hierarchy = path.split("/");
 
@@ -88,14 +91,57 @@ class BlockTree {
         return currentThingy.block;
     }
 
+    @:noCompletion
     public static function getParent(block: Block): BlockTreeItem {
         var theFuckingTreeItem = findByRef(block) ?? return null;
         return theFuckingTreeItem.parent;
     }
 
+    @:noCompletion
     public static function getChildren(block: Block): Array<BlockTreeItem> {
         var theFuckingTreeItem = findByRef(block) ?? return null;
         return theFuckingTreeItem.children;
+    }
+
+    public static function printTree() {
+        printTreeButItsRecursiveAndShitAndFuck(tree, 0);
+    }
+
+    static function printTreeButItsRecursiveAndShitAndFuck(block: BlockTreeItem, level) {
+        trace(tree.block.name.lpad("    ", tree.block.name.length + 4 * level));
+        for (fijfjf in tree.children) {
+            printTreeButItsRecursiveAndShitAndFuck(fijfjf, level + 1);
+        }
+    }
+
+    @:noCompletion
+    public static function callUpdate(delta: Float) {
+        callUpdateButRceucrsiiosns(tree, delta);
+    }
+
+    static function callUpdateButRceucrsiiosns(block: BlockTreeItem, delta: Float) {
+        for (awesomePiece in block.block.pieces) {
+            awesomePiece.update(delta);
+        }
+
+        for (fijfjf in tree.children) {
+            callUpdateButRceucrsiiosns(fijfjf, delta);
+        }
+    }
+
+    @:noCompletion
+    public static function callDraw() {
+        callDrawButRceucrsiiosns(tree);
+    }
+
+    static function callDrawButRceucrsiiosns(block: BlockTreeItem,) {
+        for (awesomePiece in block.block.pieces) {
+            awesomePiece.draw();
+        }
+
+        for (fijfjf in tree.children) {
+            callDrawButRceucrsiiosns(fijfjf);
+        }
     }
 }
 

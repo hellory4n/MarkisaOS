@@ -25,7 +25,8 @@ class Block {
      * The name of the block. Should not have / or @ in it.
      */
     public var name: String = "New Block";
-    var pieces: Array<Piece> = [];
+    @:noCompletion
+    public var pieces: Array<Piece> = [];
 
     public function new() {}
 
@@ -65,6 +66,10 @@ class Block {
      */
     public function addChild(child: Block) {
         BlockTree.addToTree(child, this);
+        
+        for (awesomePiece in child.pieces) {
+            awesomePiece.ready();
+        }
     }
 
     /**
