@@ -24,7 +24,7 @@ class Block {
     /**
      * The name of the block. Should not have / or @ in it.
      */
-    public var name: String = "New Block";
+    public var name: String = "newBlock";
     @:noCompletion
     public var pieces: Array<Piece> = [];
 
@@ -76,7 +76,8 @@ class Block {
      * Gets the direct parent of this block.
      */
     public function getParent(): Block {
-        return BlockTree.getParent(this).block;
+        var m = BlockTree.getParent(this) ?? return null;
+        return m.block;
     }
 
     /**
@@ -98,7 +99,7 @@ class Block {
         var path = "";
         var currentThingy: Block = this;
         while (currentThingy != null) {
-            path = '$currentThingy/$path';
+            path = '${currentThingy.name}/$path';
             currentThingy = currentThingy.getParent();
         }
 

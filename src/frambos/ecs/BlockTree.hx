@@ -103,17 +103,6 @@ class BlockTree {
         return theFuckingTreeItem.children;
     }
 
-    public static function printTree() {
-        printTreeButItsRecursiveAndShitAndFuck(tree, 0);
-    }
-
-    static function printTreeButItsRecursiveAndShitAndFuck(block: BlockTreeItem, level) {
-        trace(tree.block.name.lpad("    ", tree.block.name.length + 4 * level));
-        for (fijfjf in tree.children) {
-            printTreeButItsRecursiveAndShitAndFuck(fijfjf, level + 1);
-        }
-    }
-
     @:noCompletion
     public static function callUpdate(delta: Float) {
         callUpdateButRceucrsiiosns(tree, delta);
