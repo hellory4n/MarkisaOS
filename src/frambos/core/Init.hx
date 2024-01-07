@@ -1,5 +1,6 @@
 package frambos.core;
 
+import frambos.ecs.Piece;
 import frambos.ecs.BlockTree;
 import frambos.ecs.Block;
 
