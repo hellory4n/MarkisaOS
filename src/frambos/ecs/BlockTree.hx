@@ -4,9 +4,12 @@ import frambos.ecs.Block.BlockPath;
 using StringTools;
 
 /**
- * Manages all of the blocks and shit.
+ * Manages all of the blocks and shit. Most of the stuff here should be used through the `Block` class instead.
  */
 class BlockTree {
+    /**
+     * The parent of all blocks under the sun.
+     */
     public static var root(default, set): Block;
     static var tree: BlockTreeItem;
 
@@ -44,8 +47,6 @@ class BlockTree {
 
     /**
      * Adds a block to the tree. This also ensures the name is valid.
-     * @param block 
-     * @param parent 
      */
     public static function addToTree(block: Block, parent: Block) {
         var parentItem = findByRef(parent);
@@ -53,6 +54,7 @@ class BlockTree {
         // very illegal characters (@ is used to ensure unique names)
         block.name = block.name.replace("/", "");
         block.name = block.name.replace("@", "");
+        block.name = block.name.replace(".", "");
 
         // make sure there's nothing with that name
         for (child in parentItem.children) {
