@@ -113,7 +113,7 @@ class BlockTree {
             awesomePiece.update(delta);
         }
 
-        for (fijfjf in tree.children) {
+        for (fijfjf in block.children) {
             callUpdateButRceucrsiiosns(fijfjf, delta);
         }
     }
@@ -123,12 +123,12 @@ class BlockTree {
         callDrawButRceucrsiiosns(tree);
     }
 
-    static function callDrawButRceucrsiiosns(block: BlockTreeItem,) {
+    static function callDrawButRceucrsiiosns(block: BlockTreeItem) {
         for (awesomePiece in block.block.pieces) {
             awesomePiece.draw();
         }
 
-        for (fijfjf in tree.children) {
+        for (fijfjf in block.children) {
             callDrawButRceucrsiiosns(fijfjf);
         }
     }
