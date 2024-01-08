@@ -1,5 +1,7 @@
 package frambos.ecs;
 
+import frambos.core.Assets;
+
 /**
  * Things you attach to blocks to make them do something.
  */
@@ -26,4 +28,11 @@ class Piece {
      * Called every frame when it's time to render the game. This function should only be used by the engine.
      */
     public function draw() {}
+
+    /**
+     * Loads a texture from the specified path. Start with `res://` so it doesn't crash and burn
+     */
+    public function loadTexture(path: String): Texture {
+        return Assets.loadTexture(path);
+    }
 }

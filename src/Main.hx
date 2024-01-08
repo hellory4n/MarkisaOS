@@ -1,6 +1,7 @@
 package;
 
-
+import frambos.core.Assets;
+import frambos.core.Assets.Texture;
 import frambos.ecs.Block;
 import frambos.ecs.BlockTree;
 import markisa.bootloader.Boot;
@@ -10,29 +11,22 @@ import lime.graphics.opengl.GLBuffer;
 import lime.graphics.opengl.GLProgram;
 import lime.graphics.opengl.GLTexture;
 import lime.graphics.opengl.GLUniformLocation;
-import lime.graphics.Image;
 import lime.graphics.RenderContext;
 import lime.math.Matrix4;
-import lime.utils.Assets;
 import lime.utils.Float32Array;
 
-
 class Main extends Application {
+	var cairoSurface: CairoImageSurface;
+	var glBuffer: GLBuffer;
+	var glMatrixUniform: GLUniformLocation;
+	var glProgram: GLProgram;
+	var glTexture: GLTexture;
+	var glTextureAttribute: Int;
+	var glVertexAttribute: Int;
+	var image: Texture;
 	
-	
-	private var cairoSurface:CairoImageSurface;
-	private var glBuffer:GLBuffer;
-	private var glMatrixUniform:GLUniformLocation;
-	private var glProgram:GLProgram;
-	private var glTexture:GLTexture;
-	private var glTextureAttribute:Int;
-	private var glVertexAttribute:Int;
-	private var image:Image;
-	
-	
-	public function new () {
-		
-		super ();
+	public function new() {
+		super();
 
 		// make it recognize the correct place for putting files
 		meta.set("company", "hellory4n");
@@ -50,20 +44,17 @@ class Main extends Application {
 		BlockTree.callUpdate(deltaTime / 1000);
 	}
 	
-	public override function render (context:RenderContext):Void {
+	public override function render(context: RenderContext) {
 		BlockTree.callDraw();
 		
 		switch (context.type) {			
 			case OPENGL, OPENGLES, WEBGL:
-				
 				var gl = context.webgl;
 				
 				if (image == null && preloader.complete) {
-					
-					image = Assets.getImage ("assets/lime.png");
+					image = Assets.loadTexture("res://assets/icon.png");
 					
 					var vertexSource = 
-						
 						"attribute vec4 aPosition;
 						attribute vec2 aTexCoord;
 						varying vec2 vTexCoord;
@@ -71,23 +62,19 @@ class Main extends Application {
 						uniform mat4 uMatrix;
 						
 						void main(void) {
-							
 							vTexCoord = aTexCoord;
 							gl_Position = uMatrix * aPosition;
-							
 						}";
 					
 					var fragmentSource = 
-						
 						#if !desktop
 						"precision mediump float;" +
 						#end
 						"varying vec2 vTexCoord;
 						uniform sampler2D uImage0;
 						
-						void main(void)
-						{
-							gl_FragColor = texture2D (uImage0, vTexCoord);
+						void main(void) {
+							gl_FragColor = texture2D(uImage0, vTexCoord);
 						}";
 					
 					glProgram = GLProgram.fromSources (gl, vertexSource, fragmentSource);
@@ -106,12 +93,10 @@ class Main extends Application {
 					gl.enable (gl.BLEND);
 					
 					var data = [
-						
 						image.width, image.height, 0, 1, 1,
 						0, image.height, 0, 0, 1,
 						image.width, 0, 0, 1, 0,
 						0, 0, 0, 0, 0
-						
 					];
 					
 					glBuffer = gl.createBuffer ();
@@ -123,17 +108,11 @@ class Main extends Application {
 					gl.bindTexture (gl.TEXTURE_2D, glTexture);
 					gl.texParameteri (gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 					gl.texParameteri (gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-					
-					#if js
-					gl.texImage2D (gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image.src);
-					#else
 					gl.texImage2D (gl.TEXTURE_2D, 0, gl.RGBA, image.buffer.width, image.buffer.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, image.data);
-					#end
 					
 					gl.texParameteri (gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 					gl.texParameteri (gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 					gl.bindTexture (gl.TEXTURE_2D, null);
-					
 				}
 				
 				gl.viewport (0, 0, window.width, window.height);
@@ -147,7 +126,6 @@ class Main extends Application {
 				gl.clear (gl.COLOR_BUFFER_BIT);
 				
 				if (image != null) {
-					
 					var matrix = new Matrix4 ();
 					matrix.createOrtho (0, window.width, window.height, 0, -1000, 1000);
 					gl.uniformMatrix4fv (glMatrixUniform, false, matrix);
@@ -164,14 +142,9 @@ class Main extends Application {
 					gl.vertexAttribPointer (glTextureAttribute, 2, gl.FLOAT, false, 5 * Float32Array.BYTES_PER_ELEMENT, 3 * Float32Array.BYTES_PER_ELEMENT);
 					
 					gl.drawArrays (gl.TRIANGLE_STRIP, 0, 4);
-					
 				}
 			
 			default:
-			
 		}
-		
 	}
-	
-	
 }
