@@ -1,5 +1,8 @@
 package;
 
+import lime.utils.ArrayBuffer;
+import lime.utils.Float64Array;
+import lime.graphics.OpenGLES3RenderContext;
 import lime.utils.ArrayBufferView;
 import lime.graphics.WebGLRenderContext;
 import frambos.core.Assets;
@@ -26,7 +29,11 @@ class Main extends Application {
 	var glVertexAttribute: Int;
 	var image: Texture;
 	var timeToSetupOpenGeeEl = true;
-	var awesomeData = new ArrayBufferView(null, TypedArrayType.Float64);
+	var positionsAndShit = new Float64Array(6, null, [
+		-0.5, -0.5,
+		 0.0,  0.5,
+		 0.5, -0.5
+	]);
 	
 	public function new() {
 		super();
@@ -52,20 +59,29 @@ class Main extends Application {
 		
 		switch (context.type) {			
 			case OPENGL, OPENGLES, WEBGL:
-				var gl = context.webgl;
+				var gl = context.gles3;
 				
 				if (timeToSetupOpenGeeEl && preloader.complete) {
 					timeToSetupOpenGl(gl);
 					timeToSetupOpenGeeEl = false;
+				} else {
+					renderStuffAndStuff(gl);
 				}
 			
 			default:
 		}
 	}
 
-	public function timeToSetupOpenGl(gl: WebGLRenderContext) {
+	public function timeToSetupOpenGl(gl: OpenGLES3RenderContext) {
+		// awesome opengl setup bullshit
 		glBuffer = gl.createBuffer();
 		gl.bindBuffer(gl.ARRAY_BUFFER, glBuffer);
-		gl.bufferData(gl.ARRAY_BUFFER, awesomeData);
+
+		// give opengl the triangle
+		gl.bufferData(gl.ARRAY_BUFFER, 6, positionsAndShit, gl.STATIC_DRAW);
+	}
+
+	public function renderStuffAndStuff(gl: OpenGLES3RenderContext) {
+		gl.drawArrays(gl.TRIANGLES, 0, 3);
 	}
 }

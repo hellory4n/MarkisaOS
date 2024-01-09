@@ -13,6 +13,5 @@ class Project {
     /**
      * The version of the Frambos game engine.
      */
-    public static final ENGINE_VERSION = new Version(0, 1, 0);
-
+    public static final ENGINE_VERSION = new Version(0, 5, 0);
 }
