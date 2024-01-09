@@ -25,8 +25,8 @@ class Block {
      * The name of the block. Should not have / or @ in it.
      */
     public var name: String = "newBlock";
-    @:noCompletion
-    public var pieces: Array<Piece> = [];
+    @:allow(frambos.ecs)
+    var pieces: Array<Piece> = [];
 
     public function new() {}
 

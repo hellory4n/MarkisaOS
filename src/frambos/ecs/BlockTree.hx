@@ -13,7 +13,7 @@ class BlockTree {
     public static var root(default, set): Block;
     static var tree: BlockTreeItem;
 
-    private static function set_root(value: Block): Block {
+    static function set_root(value: Block): Block {
         if (root != null) {
         	return root;
         }
@@ -26,8 +26,8 @@ class BlockTree {
      * @param block The reference to the block.
      * @return The tree item with the block, or null if the block isn't on the tree yet.
      */
-    @:noCompletion
-    public static function findByRef(block: Block): BlockTreeItem {
+    @:allow(frambos.ecs)
+    static function findByRef(block: Block): BlockTreeItem {
         return findByRefButItDoesRecursion(tree, block);
     }
 
@@ -49,8 +49,8 @@ class BlockTree {
     /**
      * Adds a block to the tree. This also ensures the name is valid.
      */
-    @:noCompletion
-    public static function addToTree(block: Block, parent: Block) {
+    @:allow(frambos.ecs)
+    static function addToTree(block: Block, parent: Block) {
         var parentItem = findByRef(parent);
 
         // very illegal characters (@ is used to ensure unique names)
@@ -70,8 +70,8 @@ class BlockTree {
         parentItem.children.push(new BlockTreeItem(block, parentItem));
     }
 
-    @:noCompletion
-    public static function findByPath(path: BlockPath): Block {
+    @:allow(frambos.ecs)
+    static function findByPath(path: BlockPath): Block {
         var hierarchy = path.split("/");
 
         var currentThingy = tree;
@@ -91,20 +91,20 @@ class BlockTree {
         return currentThingy.block;
     }
 
-    @:noCompletion
-    public static function getParent(block: Block): BlockTreeItem {
+    @:allow(frambos.ecs)
+    static function getParent(block: Block): BlockTreeItem {
         var theFuckingTreeItem = findByRef(block) ?? return null;
         return theFuckingTreeItem.parent;
     }
 
-    @:noCompletion
-    public static function getChildren(block: Block): Array<BlockTreeItem> {
+    @:allow(frambos.ecs)
+    static function getChildren(block: Block): Array<BlockTreeItem> {
         var theFuckingTreeItem = findByRef(block) ?? return null;
         return theFuckingTreeItem.children;
     }
 
-    @:noCompletion
-    public static function callUpdate(delta: Float) {
+    @:allow(Main)
+    static function callUpdate(delta: Float) {
         callUpdateButRceucrsiiosns(tree, delta);
     }
 
@@ -118,8 +118,8 @@ class BlockTree {
         }
     }
 
-    @:noCompletion
-    public static function callDraw() {
+    @:allow(Main)
+    static function callDraw() {
         callDrawButRceucrsiiosns(tree);
     }
 
