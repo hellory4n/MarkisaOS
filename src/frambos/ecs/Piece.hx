@@ -35,4 +35,11 @@ class Piece {
     public function loadTexture(path: String): Texture {
         return Assets.loadTexture(path);
     }
+
+    /**
+     * Loads a texture from the specified path. Start with `res://` so it doesn't crash and burn
+     */
+     public function loadText(path: String): String {
+        return Assets.loadText(path);
+    }
 }
