@@ -4,6 +4,8 @@
 	<meta title="MarkisaOS" package="com.hellory4n.markisa" version="0.13.0" company="hellory4n" />
 	<app main="Main" path="export" file="MarkisaOS" />
 
+	<define name="cairo" />
+
 	<window width="0" height="0" background="#000000" fps="60" if="android" />
 	<window fullscreen="true" background="#000000" fps="60" if="desktop" />
 	<android minimum-sdk-version="21" />
