@@ -137,6 +137,4 @@ abstract Rect(Array<Vec2>) to Array<Vec2> {
     private inline function notEquals(right: Rect): Bool {
         return !(this == right);
     }
-
-    
 }

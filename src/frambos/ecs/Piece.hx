@@ -1,5 +1,6 @@
 package frambos.ecs;
 
+import frambos.util.Vec2;
 import frambos.ecs.Block.BlockPath;
 import frambos.graphics.RenderDevice;
 import frambos.core.Assets;
@@ -14,6 +15,11 @@ class Piece {
      * The block this piece is attached to.
      */
     public final block: Block;
+    /**
+     * The position of the block.
+     */
+    public var position(get, set): Vec2;
+    public var size(get, set): Vec2;
     /**
      * The rect of the block.
      */
@@ -106,4 +112,20 @@ class Piece {
     public function getBlock(path: BlockPath): Block {
         return block.getBlock(path);
     }
+
+    function set_position(value: Vec2): Vec2 {
+        return block.position = value;
+    }
+
+	function get_position(): Vec2 {
+		return block.position;
+	}
+
+    function set_size(value: Vec2): Vec2 {
+        return block.size = value;
+    }
+
+	function get_size(): Vec2 {
+		return block.size;
+	}
 }

@@ -39,14 +39,14 @@ class Main extends Application {
 	}
 	
 	public override function render(context: RenderContext) {
-		BlockTree.callDraw();
+		
 		
 		switch (context.type) {
 			case CAIRO:
 				var cairo = context.cairo;
 				RenderDevice.cairo = cairo;
 				
-				if (image == null && preloader.complete) {
+				if (preloader.complete && !Project.engineSetupDone) {
 					Project.engineSetupDone = true;
 					onEngineSetup.emit();
 				}
@@ -57,6 +57,8 @@ class Main extends Application {
 				var b = (context.attributes.background & 0xFF) / 0xFF;
 				cairo.setSourceRGB(r, g, b);
 				cairo.paint();
+				
+				BlockTree.callDraw();
 				
 				/*if (image != null) {
 					image.format = BGRA32;

@@ -1,5 +1,6 @@
 package frambos.ecs;
 
+import frambos.util.Vec2;
 import frambos.core.Project;
 import frambos.graphics.RenderDevice;
 import frambos.util.Color;
@@ -12,9 +13,17 @@ using StringTools;
  */
 class Block {
     /**
+     * The position of the block.
+     */
+    public var position = new Vec2(0, 0);
+    /**
+     * The size of the block.
+     */
+    public var size = new Vec2(0, 0);
+    /**
      * The rect of the block.
      */
-    public var rect = new Rect(0, 0, 0, 0);
+    public var rect(get, set): Rect;
     /**
      * The rectangle of the block, in degrees.
      */
@@ -199,6 +208,19 @@ class Block {
         lol.children.remove(jkgjdgj);
         lol.children.push(jkgjdgj);
     }
+
+    function set_rect(value: Rect): Rect {
+        return new Rect(
+            position.x = value.position.x,
+            position.y = value.position.y,
+            size.x = value.size.x,
+            size.y = value.size.y
+        );
+    }
+
+	function get_rect(): Rect {
+        return new Rect(position.x, position.y, size.x, size.y);
+	}
 }
 
 /**
