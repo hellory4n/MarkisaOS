@@ -43,13 +43,13 @@ class Block {
 
     @:allow(frambos.ecs)
     var pieces: Array<Piece> = [];
-    @:allow(frambos.ecs)
+    @:allow(frambos.ecs, Main)
     var device: RenderDevice;
 
     /**
      * The engine has to setup a lot of stuff, so if a block is created when the game starts, it would break and stuff.
      */
-    @:allow(frambos.ecs)
+    @:allow(Main)
     static var queuedForReady: Array<Piece> = [];
 
     public function new() {

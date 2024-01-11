@@ -132,14 +132,6 @@ class BlockTree {
             callDrawButRceucrsiiosns(fijfjf);
         }
     }
-
-    @:allow(Main)
-    static function handleQueuedReadyStuff() {
-        for (lol in Block.queuedForReady) {
-            lol.prepareDraw(lol.block.device);
-            lol.ready();
-        }
-    }
 }
 
 /**

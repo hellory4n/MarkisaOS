@@ -13,8 +13,6 @@ import lime.app.Application;
 import lime.graphics.RenderContext;
 
 class Main extends Application {
-	public var onEngineSetup = new SignalNoArgs();
-
 	var image: Texture;
 	var cairoSurface: CairoImageSurface;
 	
@@ -28,37 +26,47 @@ class Main extends Application {
 		// create the block tree
         var root = new Block();
         root.name = "root";
-		onEngineSetup.connect(BlockTree.handleQueuedReadyStuff);
         BlockTree.root = root;
 
 		new Boot();
 	}
 	
 	public override function update(deltaTime: Int) {
-		BlockTree.callUpdate(deltaTime / 1000);
+		if (Project.engineSetupDone) {
+			BlockTree.callUpdate(deltaTime / 1000);
+		}
+	}
+
+	public override function onPreloadComplete() {
+		Project.engineSetupDone = true;
+		trace("oh boy");
+
+		// handle the blocks that were created before the engine was setup
+		for (lol in Block.queuedForReady) {
+			trace("just casually handling a piece");
+            lol.prepareDraw(lol.block.device);
+            lol.ready();
+        }
+		Block.queuedForReady = [];
+		trace("queued pieces are no more");
 	}
 	
 	public override function render(context: RenderContext) {
-		
-		
 		switch (context.type) {
 			case CAIRO:
 				var cairo = context.cairo;
 				RenderDevice.cairo = cairo;
 				
-				if (preloader.complete && !Project.engineSetupDone) {
-					Project.engineSetupDone = true;
-					onEngineSetup.emit();
-				}
-				
 				// clear the screen
 				var r = ((context.attributes.background >> 16) & 0xFF) / 0xFF;
 				var g = ((context.attributes.background >> 8) & 0xFF) / 0xFF;
 				var b = (context.attributes.background & 0xFF) / 0xFF;
-				cairo.setSourceRGB(r, g, b);
+				cairo.setSourceRGB(0.05, 0.066, 0.09);
 				cairo.paint();
 				
-				BlockTree.callDraw();
+				if (Project.engineSetupDone) {
+					BlockTree.callDraw();
+				}
 				
 				/*if (image != null) {
 					image.format = BGRA32;
