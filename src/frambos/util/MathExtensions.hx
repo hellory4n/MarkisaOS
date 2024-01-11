@@ -21,4 +21,22 @@ class MathExtensions {
 		}
 		return Math.abs(a - b) < tolerance;
     }
+
+    /**
+     * Limits a value between the specified numbers.
+     */
+    public static function clamp(value: Float, min: Float, max: Float): Float {
+        return Math.max(min, Math.min(value, max));
+    }
+
+    /**
+     * Converts degrees to radians
+     */
+    public static function deg2rad(value: Float): Float {
+        return value * (Math.PI / 180);
+    }
+
+    public static function rad2deg(value: Float): Float {
+        return (value * 180) / Math.PI;
+    }
 }

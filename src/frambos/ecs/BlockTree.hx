@@ -125,11 +125,19 @@ class BlockTree {
 
     static function callDrawButRceucrsiiosns(block: BlockTreeItem) {
         for (awesomePiece in block.block.pieces) {
-            awesomePiece.draw();
+            awesomePiece.draw(awesomePiece.block.device);
         }
 
         for (fijfjf in block.children) {
             callDrawButRceucrsiiosns(fijfjf);
+        }
+    }
+
+    @:allow(Main)
+    static function handleQueuedReadyStuff() {
+        for (lol in Block.queuedForReady) {
+            lol.prepareDraw(lol.block.device);
+            lol.ready();
         }
     }
 }

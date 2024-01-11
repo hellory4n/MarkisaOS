@@ -14,4 +14,17 @@ class Project {
      * The version of the Frambos game engine.
      */
     public static final ENGINE_VERSION = new Version(0, 5, 0);
+
+    /**
+     * If `true`, all of the setting up bonanza has been finished. Useful when you're doing stuff right when the game starts.
+     */
+    public static var engineSetupDone(default, set) = false;
+
+    static function set_engineSetupDone(value: Bool): Bool {
+        return if (engineSetupDone) {
+            true;
+        } else {
+            engineSetupDone = false;
+        }
+    }
 }

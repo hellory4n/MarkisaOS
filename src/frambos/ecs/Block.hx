@@ -1,6 +1,8 @@
 package frambos.ecs;
 
-import frambos.ecs.BlockTree.BlockTreeItem;
+import frambos.core.Project;
+import frambos.graphics.RenderDevice;
+import frambos.util.Color;
 import frambos.ecs.Piece;
 import frambos.util.Rect;
 using StringTools;
@@ -18,17 +20,32 @@ class Block {
      */
     public var rotation: Float = 0;
     /**
-     * The color of the block, but only affects it when it's drawing something. Use 0xFFFFFFFF if you don't want to change the color.
+     * The color of the block, but only affects it when it's drawing something. Use white if you don't want to change the color.
      */
-    public var modulate: Int = 0xFFFFFFFF;
+    public var modulate: Color = new Color(1, 1, 1, 1);
     /**
      * The name of the block. Should not have / or @ in it.
      */
     public var name: String = "newBlock";
+    /**
+     * If `true`, this block is visible.
+     */
+    public var visible = true;
+
     @:allow(frambos.ecs)
     var pieces: Array<Piece> = [];
+    @:allow(frambos.ecs)
+    var device: RenderDevice;
 
-    public function new() {}
+    /**
+     * The engine has to setup a lot of stuff, so if a block is created when the game starts, it would break and stuff.
+     */
+    @:allow(frambos.ecs)
+    static var queuedForReady: Array<Piece> = [];
+
+    public function new() {
+        device = new RenderDevice(this);
+    }
 
     /**
      * Gets a piece attached to this block, or adds a new one if it's not there yet.
@@ -41,7 +58,7 @@ class Block {
         }
 
         // the piece doesn't exist, make a new one
-        var newPiece = Type.createInstance(type, []);
+        var newPiece = Type.createInstance(type, [this]);
         pieces.push(cast newPiece);
         return newPiece;
     }
@@ -62,13 +79,17 @@ class Block {
 
     /**
      * Adds a block as a child of this block. This also ensures the name is valid.
-     * 
      */
     public function addChild(child: Block) {
         BlockTree.addToTree(child, this);
         
         for (awesomePiece in child.pieces) {
-            awesomePiece.ready();
+            if (Project.engineSetupDone) {
+                awesomePiece.prepareDraw(device);
+                awesomePiece.ready();
+            } else {
+                queuedForReady.push(awesomePiece);
+            }
         }
     }
 
