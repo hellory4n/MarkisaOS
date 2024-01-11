@@ -23,7 +23,7 @@ class Piece {
     /**
      * The rect of the block.
      */
-    public var rect(get, set): Rect;
+    public var rect(get, never): Rect;
     /**
      * The rectangle of the block, in degrees.
      */
@@ -31,7 +31,7 @@ class Piece {
     /**
      * The color of the block, but only affects it when it's drawing something. Use white if you don't want to change the color.
      */
-    public var modulate(get, set): Color;
+    public var alpha(get, set): Float;
 
     public function new(block: Block) {
         this.block = block;
@@ -65,12 +65,8 @@ class Piece {
     /**
      * Loads a texture from the specified path. Start with `res://` so it doesn't crash and burn
      */
-     public function loadText(path: String): String {
+    public function loadText(path: String): String {
         return Assets.loadText(path);
-    }
-
-    function set_rect(value: Rect): Rect {
-        return block.rect = value;
     }
 
 	function get_rect(): Rect {
@@ -83,14 +79,6 @@ class Piece {
 
 	function get_rotation(): Float {
 		return block.rotation;
-	}
-
-    function set_modulate(value: Color): Color {
-        return block.modulate = value;
-    }
-
-	function get_modulate(): Color {
-		return block.modulate;
 	}
 
     /**
@@ -127,5 +115,13 @@ class Piece {
 
 	function get_size(): Vec2 {
 		return block.size;
+	}
+
+    function set_alpha(value: Float): Float {
+        return block.alpha = value;
+    }
+
+	function get_alpha(): Float {
+		return block.alpha;
 	}
 }

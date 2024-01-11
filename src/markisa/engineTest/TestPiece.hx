@@ -1,5 +1,6 @@
 package markisa.engineTest;
 
+import frambos.util.Color;
 import haxe.Exception;
 import frambos.util.Vec2;
 import frambos.core.Assets;
@@ -11,7 +12,7 @@ class TestPiece extends Piece {
 
     public override function ready() {
         trace("good morning lmao");
-        rect.size = new Vec2(420, 690);
+        size = new Vec2(690, 420);
         trace("i'm ready, i'm ready!!!!!!!!!!!");
     }
 
@@ -19,7 +20,7 @@ class TestPiece extends Piece {
         trace("updating");
         position += new Vec2(50 * delta, 50 * delta);
         rotation += 200 * delta;
-        //modulate.a -= 5 * delta;
+        alpha -= 0.25 * delta;
         trace("updated");
     }
 
@@ -32,7 +33,7 @@ class TestPiece extends Piece {
 
     public override function draw(device: RenderDevice) {
         trace("drawing");
-        device.drawImage(fuckingSurface, rect, rotation, modulate, new Vec2(1, 1));
+        device.drawImage(fuckingSurface, rect, rotation, alpha, new Vec2(0.5, 0.5));
         trace("drawed");
     }
 }

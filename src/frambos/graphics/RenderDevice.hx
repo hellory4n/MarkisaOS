@@ -1,5 +1,6 @@
 package frambos.graphics;
 
+import lime.graphics.cairo.CairoPattern;
 import frambos.util.MathExtensions;
 import frambos.util.Color;
 import frambos.util.Rect;
@@ -39,27 +40,24 @@ class RenderDevice {
      * @param imageSurface The image surface to draw (create one with `newImageSurface`)
      * @param rect The rect to draw the image on
      * @param rotation The rotation of the image, in degrees.
-     * @param modulate A color object to change the color of the image.
+     * @param alpha The transparency on the image on a scale from 0 to 1
      * @param origin Defines the origin point of the image, with the x and y going from 0 to 1, aligned to the top-left corner (so 0, 0 would be the top-left).
      */
-    public function drawImage(imageSurface: ImageSurface, rect: Rect, rotation: Float, modulate: Color, origin: Vec2) {
+    public function drawImage(imageSurface: ImageSurface, rect: Rect, rotation: Float, alpha: Float, origin: Vec2) {
         if (!block.visible) {
             return;
         }
 
-        origin = origin.clamp(new Vec2(0, 0), new Vec2(1, 1));
-
         cairo.save();
-
-        // set the origin point
-        cairo.translate(rect.position.x + (rect.size.x * origin.x), rect.position.y + (rect.size.y * origin.y));
-
+        
+        // i don't really know what this does, chatgpt made it
+        cairo.translate(rect.position.x + (rect.size.x / 2), rect.position.y + (rect.size.y / 2));
         cairo.rotate(MathExtensions.deg2rad(rotation));
-        cairo.scale(rect.size.x, rect.size.y);
-        cairo.setSourceSurface(imageSurface, -origin.x, -origin.y);
-        cairo.setSourceRGBA(modulate.r, modulate.g, modulate.b, modulate.a);
+        cairo.scale(rect.size.x / imageSurface.width, rect.size.y / imageSurface.height);
+        cairo.translate(-origin.x * imageSurface.width, -origin.y * imageSurface.height);
+        cairo.setSourceSurface(imageSurface, 0, 0);
 
-        cairo.paint();
+        cairo.paintWithAlpha(alpha);
         cairo.restore();
     }
 }

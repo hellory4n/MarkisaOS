@@ -23,17 +23,17 @@ class Block {
     /**
      * The rect of the block.
      */
-    public var rect(get, set): Rect;
+    public var rect(get, never): Rect;
     /**
      * The rectangle of the block, in degrees.
      */
     public var rotation: Float = 0;
     /**
-     * The color of the block, but only affects it when it's drawing something. Use white if you don't want to change the color.
+     * The transparency on the image on a scale from 0 to 1
      */
-    public var modulate: Color = new Color(1, 1, 1, 1);
+    public var alpha: Float = 1;
     /**
-     * The name of the block. Should not have / or @ in it.
+     * The name of the block. Should not have `/`, `@` or `.` in it.
      */
     public var name: String = "newBlock";
     /**
@@ -207,15 +207,6 @@ class Block {
         var jkgjdgj = BlockTree.findByRef(this);
         lol.children.remove(jkgjdgj);
         lol.children.push(jkgjdgj);
-    }
-
-    function set_rect(value: Rect): Rect {
-        return new Rect(
-            position.x = value.position.x,
-            position.y = value.position.y,
-            size.x = value.size.x,
-            size.y = value.size.y
-        );
     }
 
 	function get_rect(): Rect {
