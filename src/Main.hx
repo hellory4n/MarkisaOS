@@ -1,10 +1,8 @@
 package;
 
 import frambos.core.Project;
-import frambos.core.Signal;
 import frambos.graphics.RenderDevice;
 import lime.graphics.cairo.CairoImageSurface;
-import frambos.core.Assets;
 import frambos.core.Assets.Texture;
 import frambos.ecs.Block;
 import frambos.ecs.BlockTree;
@@ -58,10 +56,7 @@ class Main extends Application {
 				RenderDevice.cairo = cairo;
 				
 				// clear the screen
-				var r = ((context.attributes.background >> 16) & 0xFF) / 0xFF;
-				var g = ((context.attributes.background >> 8) & 0xFF) / 0xFF;
-				var b = (context.attributes.background & 0xFF) / 0xFF;
-				cairo.setSourceRGB(0.05, 0.066, 0.09);
+				cairo.setSourceRGB(0, 0, 0);
 				cairo.paint();
 				
 				if (Project.engineSetupDone) {

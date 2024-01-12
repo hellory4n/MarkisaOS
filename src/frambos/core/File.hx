@@ -1,7 +1,6 @@
 package frambos.core;
 
 import frambos.core.Result;
-import lime.system.System;
 
 /**
  * Provides an API for reading user files.

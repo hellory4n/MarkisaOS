@@ -1,8 +1,6 @@
 package frambos.graphics;
 
-import lime.graphics.cairo.CairoPattern;
 import frambos.util.MathExtensions;
-import frambos.util.Color;
 import frambos.util.Rect;
 import frambos.util.Vec2;
 import lime.graphics.cairo.CairoImageSurface;
