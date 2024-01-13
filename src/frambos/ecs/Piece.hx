@@ -124,4 +124,11 @@ class Piece {
 	function get_alpha(): Float {
 		return block.alpha;
 	}
+
+    /**
+     * Recursively calls `getParent` until it finds a block with a viewport piece.
+     */
+    public function getViewport(): Block {
+        return block.getViewport();
+    }
 }

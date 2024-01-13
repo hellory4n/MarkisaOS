@@ -1,5 +1,7 @@
 package frambos.graphics;
 
+import frambos.graphics.instructions.RenderImage;
+import frambos.ecs.etc.Viewport;
 import frambos.util.MathExtensions;
 import frambos.util.Rect;
 import frambos.util.Vec2;
@@ -12,9 +14,6 @@ import frambos.ecs.Block;
  * Used by pieces to do their graphics bonanza, mostly just a wrapper around [Cairo](https://www.cairographics.org/) functions with some utilities to help making fancy effects.
  */
 class RenderDevice {
-    @:allow(Main)
-    static var cairo: CairoRenderContext;
-
     /**
      * The block
      */
@@ -30,7 +29,7 @@ class RenderDevice {
     public function newImageSurface(texture: Texture): ImageSurface {
         texture.format = BGRA32;
         texture.premultiplied = true;
-        return CairoImageSurface.fromImage(texture);
+        return ImageSurface.fromImage(texture);
     }
 
     /**
@@ -46,17 +45,9 @@ class RenderDevice {
             return;
         }
 
-        cairo.save();
-        
-        // i don't really know what this does, chatgpt made it
-        cairo.translate(rect.position.x + (rect.size.x / 2), rect.position.y + (rect.size.y / 2));
-        cairo.rotate(MathExtensions.deg2rad(rotation));
-        cairo.scale(rect.size.x / imageSurface.width, rect.size.y / imageSurface.height);
-        cairo.translate(-origin.x * imageSurface.width, -origin.y * imageSurface.height);
-        cairo.setSourceSurface(imageSurface, 0, 0);
-
-        cairo.paintWithAlpha(alpha);
-        cairo.restore();
+        block.getViewport().getPiece(Viewport).instructions.push(
+            new RenderImage(imageSurface, rect, rotation, alpha, origin)
+        );
     }
 }
 

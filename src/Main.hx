@@ -1,5 +1,6 @@
 package;
 
+import frambos.ecs.etc.Viewport;
 import frambos.core.Project;
 import frambos.graphics.RenderDevice;
 import lime.graphics.cairo.CairoImageSurface;
@@ -53,7 +54,7 @@ class Main extends Application {
 		switch (context.type) {
 			case CAIRO:
 				var cairo = context.cairo;
-				RenderDevice.cairo = cairo;
+				Viewport.cairo = cairo;
 				
 				// clear the screen
 				cairo.setSourceRGB(0, 0, 0);

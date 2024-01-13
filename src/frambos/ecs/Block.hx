@@ -1,5 +1,6 @@
 package frambos.ecs;
 
+import frambos.ecs.etc.Viewport;
 import frambos.util.Vec2;
 import frambos.core.Project;
 import frambos.graphics.RenderDevice;
@@ -212,6 +213,18 @@ class Block {
 	function get_rect(): Rect {
         return new Rect(position.x, position.y, size.x, size.y);
 	}
+
+    /**
+     * Recursively calls `getParent` until it finds a block with a viewport piece.
+     */
+    public function getViewport(): Block {
+        while (true) {
+            var yes = getParent();
+            if (yes.hasPiece(Viewport)) {
+                return yes;
+            }
+        }
+    }
 }
 
 /**
