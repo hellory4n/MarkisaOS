@@ -25,21 +25,22 @@ class Viewport extends Piece {
 
     public override function draw(device: RenderDevice) {
         cairo.save();
+        
 
-        if (scale) {
+        /*if (scale) {
             final scaleX = rect.size.x / originalSize.x;
             final scaleY = rect.size.y / originalSize.y;
             cairo.scale(scaleX, scaleY);
-        }
+        }*/
 
         for (instruction in instructions) {
             instruction.draw(cairo);
         }
 
-        if (!scale) {
+        /*if (!scale) {
             cairo.rectangle(rect.position.x, rect.position.y, rect.size.x, rect.size.y);
             cairo.clip();
-        }
+        }*/
 
         cairo.restore();
     }

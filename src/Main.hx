@@ -29,6 +29,12 @@ class Main extends Application {
 		var rootViewport = root.getPiece(Viewport);
 
 		// setup the screen
+		if (window != null) {
+			trace(window.width);
+			trace(window.height);
+		} else {
+			trace("shit");
+		}
 		// i am comedy
 		/*var ratio = window.width / window.height;
 		var width = 720 * ratio;
