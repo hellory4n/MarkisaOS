@@ -6,8 +6,7 @@
 
 	<define name="cairo" />
 
-	<window width="0" height="0" background="#000000" fps="60" if="android" />
-	<window fullscreen="true" background="#000000" fps="60" if="desktop" />
+	<window width="1280" height="720" fullscreen="true" background="#000000" fps="60" />
 	<android minimum-sdk-version="21" />
 	<android target-sdk-version="34" />
 	<window hardware="true" allow-shaders="true" require-shaders="true" if="cpp"/>

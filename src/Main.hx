@@ -26,6 +26,17 @@ class Main extends Application {
         var root = new Block();
         root.name = "root";
         BlockTree.root = root;
+		var rootViewport = root.getPiece(Viewport);
+
+		// setup the screen
+		// i am comedy
+		/*var ratio = window.width / window.height;
+		var width = 720 * ratio;
+		Project._width = Math.round(width);
+		Project._height = 720;
+		root.size = new Vec2(window.width, window.height);
+		rootViewport.originalSize = new Vec2(Project._width, Project._height);
+		rootViewport.scale = true;*/
 
 		new Boot();
 	}

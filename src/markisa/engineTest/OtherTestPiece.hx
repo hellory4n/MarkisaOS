@@ -11,7 +11,7 @@ class OtherTestPiece extends Piece {
 
     public override function ready() {
         trace("good morning lmao");
-        size = new Vec2(1366, 768);
+        size = new Vec2(1280, 720);
         trace("i'm ready, i'm ready!!!!!!!!!!!");
     }
 

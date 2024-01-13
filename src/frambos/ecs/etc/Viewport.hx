@@ -1,5 +1,6 @@
 package frambos.ecs.etc;
 
+import frambos.core.Project;
 import frambos.util.Vec2;
 import lime.graphics.CairoRenderContext;
 import frambos.graphics.instructions.IGraphicsInstruction;
