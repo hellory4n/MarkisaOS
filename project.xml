@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-	
+
 	<meta title="MarkisaOS" package="com.hellory4n.markisa" version="0.13.0" company="hellory4n" />
 	<app main="Main" path="export" file="MarkisaOS" />
-
-	<define name="cairo" />
 
 	<window width="1280" height="720" fullscreen="true" background="#000000" fps="60" />
 	<android minimum-sdk-version="21" />
@@ -13,13 +11,13 @@
 	<window vsync="true" antialiasing="4" if="cpp" />
 	<window orientation="landscape"/>
 	<icon path="assets/icon.png" size="1024" />
-	
+
 	<source path="src" />
-	
-	<haxelib name="lime" />
-	
+
+	<haxelib name="openfl" />
+
 	<assets path="assets" />
 
 	<language name="en" />
-	
+
 </project>
