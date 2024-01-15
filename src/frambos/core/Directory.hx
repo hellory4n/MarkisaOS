@@ -1,6 +1,5 @@
 package frambos.core;
 
-import openfl.filesystem.FileStream;
 import openfl.filesystem.File;
 using StringTools;
 
@@ -12,7 +11,7 @@ class Directory {
      * Processes a path and stuff.
      */
     public static function processPath(path: String): File {
-        return File.applicationStorageDirectory.resolvePath(path);
+        return File.applicationStorageDirectory.resolvePath(path.substr(7));
     }
 
     /**

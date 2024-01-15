@@ -30,7 +30,7 @@ class File {
         try {
             var lol = new FileStream();
             lol.open(internalPath, _mode);
-            var ghhghg = lol.readUTF();
+            var ghhghg = lol.readUTFBytes(lol.bytesAvailable);
             lol.close();
             return Success(ghhghg);
         } catch (e) {
@@ -45,7 +45,7 @@ class File {
         try {
             var lol = new FileStream();
             lol.open(internalPath, _mode);
-            lol.writeUTF(content);
+            lol.writeUTFBytes(content);
             lol.close();
             return Success;
         } catch (e) {
