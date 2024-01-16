@@ -13,6 +13,7 @@ import openfl.Assets;
 class Main extends Sprite {
     static inline var MIN_UPDATE_INTERVAL: Float = 1.0 / 60.0;
     var cacheTime: Float = -1.0;
+    var bitmap: Bitmap;
 
     public function new() {
         super();
@@ -22,8 +23,10 @@ class Main extends Sprite {
         root.name = "root";
         BlockTree.root = root;
 
+        // 
+
         var bitmapData: BitmapData = Assets.getBitmapData("assets/icon.png");
-        var bitmap = new Bitmap(bitmapData);
+        bitmap = new Bitmap(bitmapData);
         addChild(bitmap);
 
         bitmap.x = (stage.stageWidth - bitmap.width) / 2;
