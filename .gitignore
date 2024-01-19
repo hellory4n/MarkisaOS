@@ -5,3 +5,5 @@ export_presets.cfg
 *.translation
 android
 .vscode
+# just a plugin i downloaded for convenience or some shit like that, not required to make the game work
+addons/resources_spreadsheet_view/

@@ -1,0 +1,321 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6wbyuxhyo1uj"]
+
+[ext_resource type="Script" path="res://os/etc/theme_test_menu_bar.gd" id="1_31g01"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_va8xp"]
+
+[node name="Panel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 50.0
+offset_bottom = 23.0
+text = "Label"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 24.0
+offset_right = 10.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(297, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Button"
+
+[node name="Button3" type="Button" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Disabled"
+
+[node name="Button2" type="Button" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Toggle"
+
+[node name="Danger" type="Button" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "Secondary"
+
+[node name="Danger2" type="Button" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Danger"
+text = "Danger"
+
+[node name="LinkButton" type="LinkButton" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Tooltip"
+text = "Link (hover me)"
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Checkbox"
+
+[node name="CheckBox2" type="CheckBox" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+button_pressed = true
+text = "Checkbox"
+
+[node name="CheckBox3" type="CheckBox" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+button_group = SubResource("ButtonGroup_va8xp")
+text = "Radio button"
+text_overrun_behavior = 3
+
+[node name="CheckBox4" type="CheckBox" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+button_group = SubResource("ButtonGroup_va8xp")
+text = "Radio button"
+text_overrun_behavior = 3
+
+[node name="MenuBar" type="MenuBar" parent="HBoxContainer/FlowContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuBar 1" type="PopupMenu" parent="HBoxContainer/FlowContainer/MenuBar"]
+item_count = 8
+item_0/text = "Item"
+item_0/id = 0
+item_1/text = "Disabled"
+item_1/id = 1
+item_1/disabled = true
+item_2/text = ""
+item_2/id = 2
+item_2/separator = true
+item_3/text = "Check item"
+item_3/checkable = 1
+item_3/id = 3
+item_4/text = "Checked item"
+item_4/checkable = 1
+item_4/checked = true
+item_4/id = 4
+item_5/text = "Radio item"
+item_5/checkable = 2
+item_5/id = 5
+item_6/text = "Checked radio item"
+item_6/checkable = 2
+item_6/checked = true
+item_6/id = 6
+item_7/text = "Named separator"
+item_7/id = 7
+item_7/separator = true
+script = ExtResource("1_31g01")
+
+[node name="PopupMenu" type="PopupMenu" parent="HBoxContainer/FlowContainer/MenuBar/MenuBar 1"]
+item_count = 2
+item_0/text = "Subitem 1"
+item_0/id = 0
+item_1/text = "Subitem 2"
+item_1/id = 1
+
+[node name="MenuBar 2" type="PopupMenu" parent="HBoxContainer/FlowContainer/MenuBar"]
+item_count = 8
+item_0/text = "Item"
+item_0/id = 0
+item_1/text = "Disabled"
+item_1/id = 1
+item_1/disabled = true
+item_2/text = ""
+item_2/id = 2
+item_2/separator = true
+item_3/text = "Check item"
+item_3/checkable = 1
+item_3/id = 3
+item_4/text = "Checked item"
+item_4/checkable = 1
+item_4/checked = true
+item_4/id = 4
+item_5/text = "Radio item"
+item_5/checkable = 2
+item_5/id = 5
+item_6/text = "Checked radio item"
+item_6/checkable = 2
+item_6/checked = true
+item_6/id = 6
+item_7/text = "Named separator"
+item_7/id = 7
+item_7/separator = true
+script = ExtResource("1_31g01")
+
+[node name="PopupMenu" type="PopupMenu" parent="HBoxContainer/FlowContainer/MenuBar/MenuBar 2"]
+item_count = 2
+item_0/text = "Subitem 1"
+item_0/id = 0
+item_1/text = "Subitem 2"
+item_1/id = 1
+
+[node name="MenuBar 3" type="PopupMenu" parent="HBoxContainer/FlowContainer/MenuBar"]
+item_count = 8
+item_0/text = "Item"
+item_0/id = 0
+item_1/text = "Disabled"
+item_1/id = 1
+item_1/disabled = true
+item_2/text = ""
+item_2/id = 2
+item_2/separator = true
+item_3/text = "Check item"
+item_3/checkable = 1
+item_3/id = 3
+item_4/text = "Checked item"
+item_4/checkable = 1
+item_4/checked = true
+item_4/id = 4
+item_5/text = "Radio item"
+item_5/checkable = 2
+item_5/id = 5
+item_6/text = "Checked radio item"
+item_6/checkable = 2
+item_6/checked = true
+item_6/id = 6
+item_7/text = "Named separator"
+item_7/id = 7
+item_7/separator = true
+script = ExtResource("1_31g01")
+
+[node name="PopupMenu" type="PopupMenu" parent="HBoxContainer/FlowContainer/MenuBar/MenuBar 3"]
+item_count = 2
+item_0/text = "Subitem 1"
+item_0/id = 0
+item_1/text = "Subitem 2"
+item_1/id = 1
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer/FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+item_count = 5
+selected = 0
+popup/item_0/text = "OptionButton"
+popup/item_0/id = 0
+popup/item_1/text = ""
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "Has"
+popup/item_2/id = 2
+popup/item_3/text = "Many"
+popup/item_3/id = 3
+popup/item_4/text = "Options"
+popup/item_4/id = 4
+
+[node name="FlowContainer2" type="FlowContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(297, 0)
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/FlowContainer2"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "LineEdit"
+placeholder_text = "Placeholder"
+alignment = 1
+virtual_keyboard_type = 1
+caret_blink = true
+
+[node name="LineEdit2" type="LineEdit" parent="HBoxContainer/FlowContainer2"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Readonly"
+alignment = 1
+editable = false
+virtual_keyboard_type = 1
+caret_blink = true
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer/FlowContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+update_on_text_changed = true
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer/FlowContainer2"]
+custom_minimum_size = Vector2(297, 148)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "TextEdit"
+minimap_draw = true
+caret_blink = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/FlowContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSlider" type="VSlider" parent="HBoxContainer/FlowContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(0, 103)
+layout_mode = 2
+tick_count = 5
+ticks_on_borders = true
+
+[node name="VScrollBar" type="VScrollBar" parent="HBoxContainer/FlowContainer2/HBoxContainer"]
+layout_mode = 2
+page = 28.0
+
+[node name="VSlider2" type="VSlider" parent="HBoxContainer/FlowContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(0, 103)
+layout_mode = 2
+editable = false
+ticks_on_borders = true
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/FlowContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/FlowContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer/FlowContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HScrollBar" type="HScrollBar" parent="HBoxContainer/FlowContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+page = 30.0
+
+[node name="HSlider2" type="HSlider" parent="HBoxContainer/FlowContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+editable = false
+tick_count = 5
+ticks_on_borders = true
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/FlowContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/FlowContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+value = 45.0

@@ -8,11 +8,20 @@
 
 config_version=5
 
+[addons]
+
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/color_arrays=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/resource_preview_size=32.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+
 [application]
 
 config/name="MarkisaOS"
 config/version="0.13.0"
-run/main_scene="res://kvgv.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="markisa"
 config/quit_on_go_back=false
@@ -30,6 +39,14 @@ window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 window/handheld/orientation=4
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/resources_spreadsheet_view/plugin.cfg")
+
+[gui]
+
+theme/custom="res://os_assets/high_peaks_blue/theme.tres"
 
 [rendering]
 
