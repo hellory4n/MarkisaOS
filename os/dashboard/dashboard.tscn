@@ -2,9 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://cy6lkhtg5mubh" path="res://os_assets/system_sounds/startup.mp3" id="1_4ykex"]
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_vkgrx"]
-font_size = 24
+[ext_resource type="Script" path="res://os/dashboardtk/mks_window.gd" id="3_hc3an"]
 
 [sub_resource type="Animation" id="Animation_n8ctj"]
 resource_name = "startup"
@@ -62,36 +60,16 @@ texture = ExtResource("1_euobj")
 expand_mode = 2
 stretch_mode = 6
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "HELP!!!!!!!!!!!!!!!!!!!!"
-label_settings = SubResource("LabelSettings_vkgrx")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="."]
-custom_minimum_size = Vector2(690, 0)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "this is where i'm supposed to test my custom implementation of a window system"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_w28mp")
 }
 autoplay = "startup"
+
+[node name="MksWindow" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 68.0
+offset_top = 54.0
+offset_right = 415.0
+offset_bottom = 288.0
+script = ExtResource("3_hc3an")
