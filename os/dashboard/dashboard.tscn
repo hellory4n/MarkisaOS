@@ -68,8 +68,6 @@ autoplay = "startup"
 
 [node name="MksWindow" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 68.0
-offset_top = 54.0
-offset_right = 415.0
-offset_bottom = 288.0
+offset_right = 318.0
+offset_bottom = 221.0
 script = ExtResource("3_hc3an")
