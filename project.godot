@@ -33,6 +33,10 @@ boot_splash/fullsize=false
 config/icon="res://os_assets/bootloader/icon.png"
 boot_splash/minimum_display_time=1100
 
+[autoload]
+
+Frambos="*res://os/kickstart/frambos.gd"
+
 [display]
 
 window/size/viewport_width=853

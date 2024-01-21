@@ -8,8 +8,11 @@ func _ready():
     # don't make everything ginormous on desktop
     # there's an option to do that from the project settings but it means
     # i don't get to see how it would look on mobile, so i prefer this
-    if OS.get_name() != "Android":
+    if not Frambos.is_on_mobile:
         get_tree().root.content_scale_size = DisplayServer.screen_get_size()
+        Frambos.resolution = DisplayServer.screen_get_size()
+    else:
+        Frambos.resolution = get_tree().root.content_scale_size
     
     tjtjt.pivot_offset = tjtjt.size / 2
     

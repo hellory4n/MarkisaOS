@@ -27,7 +27,7 @@ class_name MksWindow
         if Engine.is_editor_hint():
             lol = Vector2(853, 480)
         else:
-            lol = DisplayServer.window_get_size() as Vector2            
+            lol = Frambos.resolution
         size = (lol * value / 100) - Vector2(0, 45)
         update_configuration_warnings()
 
@@ -75,11 +75,13 @@ func _ready():
     theme_changed.connect(_on_theme_changed.bind())
     
     # make sure the size is right
-    size = (DisplayServer.window_get_size() as Vector2 * size_percentage / 100) - Vector2(0, 45)
+    if not Engine.is_editor_hint():
+        size = (Frambos.resolution * size_percentage / 100) - Vector2(0, 45)
     
     # go to the center of the screen
-    var cool_size := size + Vector2(0, 45)
-    position = DisplayServer.window_get_size() as Vector2 / 2 - (cool_size / 2)
+    #var cool_size := size + Vector2(0, 45)
+    #position = DisplayServer.window_get_size() as Vector2 / 2 - (cool_size / 2)
+    position = Vector2(0, 45)
     
     # do the awesome window opening animation
     scale = Vector2.ZERO

@@ -16,7 +16,7 @@ func _process(_delta):
         window.global_position = mpos + offset + Vector2(0, 45)
 
 func _input(ev: InputEvent):
-    if ev is InputEventMouseButton and ev.button_index == MOUSE_BUTTON_LEFT:
+    if (ev is InputEventMouseButton and ev.button_index == MOUSE_BUTTON_LEFT) or (ev is InputEventScreenTouch and ev.is_pressed()):
         var ev2 := ev as InputEventMouseButton
         if status != "dragging" and ev.pressed:
             var evpos = ev2.global_position
@@ -39,7 +39,7 @@ func _input(ev: InputEvent):
             status = "released"
             active_window = null
     
-    if status == "clicked" and ev is InputEventMouseMotion and active_window == window:
+    if status == "clicked" and active_window == window and (ev is InputEventMouseMotion or ev is InputEventScreenDrag):
         status = "dragging"
 
     mpos = get_global_mouse_position()

@@ -75,9 +75,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MksWindow" parent="Windows" instance=ExtResource("3_g7l8b")]
-offset_left = 110.0
-offset_top = 110.0
-offset_right = 451.2
-offset_bottom = 353.0
-dock_icon = null
-floating = true
+offset_left = 4.0
+offset_top = 46.0
+offset_right = 345.2
+offset_bottom = 289.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 22.0
+text = "just making sure 5"
