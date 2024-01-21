@@ -14,7 +14,22 @@ class_name MksWindow
 ## The icon that will be shown in the dock.
 @export var dock_icon: Texture2D
 ## If true, the window will be floating and draggable. Else, it will be maximized.
-@export var floating := true
+@export var floating := true:
+    set(value):
+        floating = value
+        update_configuration_warnings()
+
+## How much % of the screen the window will be.
+@export var size_percentage: Vector2:
+    set(value):
+        size_percentage = value
+        var lol: Vector2
+        if Engine.is_editor_hint():
+            lol = Vector2(853, 480)
+        else:
+            lol = DisplayServer.window_get_size() as Vector2            
+        size = (lol * value / 100) - Vector2(0, 45)
+        update_configuration_warnings()
 
 var title_height: float
 var title_rect: Rect2
@@ -39,8 +54,9 @@ func _ready():
     title.offset_top = -45
     title.custom_minimum_size -= Vector2(0, 45)
     
-    draggable_title = DraggableTitle.instantiate()
-    draggable_title.window = self
+    if floating:
+        draggable_title = DraggableTitle.instantiate()
+        draggable_title.window = self
     
     title_name = Label.new()
     title_name.set_anchors_preset(PRESET_FULL_RECT)
@@ -50,14 +66,19 @@ func _ready():
     
     add_child(bg, false, Node.INTERNAL_MODE_FRONT)
     add_child(title, false, Node.INTERNAL_MODE_FRONT)
-    add_child(draggable_title, false, Node.INTERNAL_MODE_FRONT)
     title.add_child(title_name)
+    
+    if floating:
+        add_child(draggable_title, false, Node.INTERNAL_MODE_FRONT)
     
     theme_changed.connect(_on_theme_changed.bind())
     
-    # if a window just opened it would obviously be the active window
-    # sorry for calling it "__internaldonotuseorthingswillblowupandstuff__DraggableTitle__"
-    __internaldonotuseorthingswillblowupandstuff__DraggableTitle__.active_window = self
+    # make sure the size is right
+    size = (DisplayServer.window_get_size() as Vector2 * size_percentage / 100) - Vector2(0, 45)
+    
+    # go to the center of the screen
+    var cool_size := size + Vector2(0, 45)
+    position = DisplayServer.window_get_size() as Vector2 / 2 - (cool_size / 2)
 
 func _process(_delta):
     # loading it in _ready doesn't work
@@ -66,7 +87,8 @@ func _process(_delta):
         _on_theme_changed()
     
     # make sure the draggable shit is correct
-    draggable_title.scale = Vector2(size.x, 45)
+    if floating:
+        draggable_title.scale = Vector2(size.x, 45)
     
     # sync the window title stuff
     title_name.text = window_name
@@ -84,5 +106,7 @@ func _on_theme_changed():
 func _get_configuration_warnings():
     if content_root == null:
         return ["Please set a content root for things to actually work and stuff"]
+    elif !floating and size_percentage != Vector2(100, 100):
+        return ["This would make users assume it's a floating window when it's not, please set the size percentage to 100, 100 or enable the floating property"]
     else:
         return []

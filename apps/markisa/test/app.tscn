@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://gh0q6tcc83uq"]
+
+[ext_resource type="Script" path="res://os/dashboardtk/mks_window.gd" id="1_qsqac"]
+[ext_resource type="Script" path="res://os/dashboardtk/window_opener.gd" id="2_hisl0"]
+
+[node name="MksWindow" type="Control" node_paths=PackedStringArray("content_root")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 341.2
+offset_bottom = 243.0
+script = ExtResource("1_qsqac")
+content_root = NodePath("contents")
+window_name = "Awesome Window :)"
+size_percentage = Vector2(40, 60)
+
+[node name="contents" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="contents"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -21.0
+offset_right = 94.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "more window"
+script = ExtResource("2_hisl0")
+window = "res://apps/markisa/test/app.tscn"

@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://cy6lkhtg5mubh" path="res://os_assets/system_sounds/startup.mp3" id="1_4ykex"]
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
-[ext_resource type="Script" path="res://os/dashboardtk/mks_window.gd" id="3_hc3an"]
+[ext_resource type="PackedScene" uid="uid://gh0q6tcc83uq" path="res://apps/markisa/test/app.tscn" id="3_g7l8b"]
 
 [sub_resource type="Animation" id="Animation_n8ctj"]
 resource_name = "startup"
@@ -66,19 +66,7 @@ libraries = {
 }
 autoplay = "startup"
 
-[node name="MksWindow" type="Control" parent="." node_paths=PackedStringArray("content_root")]
-anchors_preset = 0
-offset_left = 77.0
-offset_top = 130.0
-offset_right = 395.0
-offset_bottom = 351.0
-script = ExtResource("3_hc3an")
-content_root = NodePath("contents")
-window_name = "dddddddd"
-metadata/_edit_group_ = true
-
-[node name="contents" type="Control" parent="MksWindow"]
-clip_contents = true
+[node name="Windows" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,46 +74,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="MksWindow/contents"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text "
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="MksWindow2" type="Control" parent="." node_paths=PackedStringArray("content_root")]
-anchors_preset = 0
-offset_left = 345.0
-offset_top = 201.0
-offset_right = 663.0
-offset_bottom = 422.0
-script = ExtResource("3_hc3an")
-content_root = NodePath("../MksWindow/contents")
-window_name = "dkdkdkdkkdkdkdkdkd"
-metadata/_edit_group_ = true
-
-[node name="contents" type="Control" parent="MksWindow2"]
-clip_contents = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="MksWindow2/contents"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text too much text "
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
+[node name="MksWindow" parent="Windows" instance=ExtResource("3_g7l8b")]
+offset_left = 110.0
+offset_top = 110.0
+offset_right = 451.2
+offset_bottom = 353.0
