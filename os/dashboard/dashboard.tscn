@@ -68,13 +68,13 @@ autoplay = "startup"
 
 [node name="MksWindow" type="Control" parent="." node_paths=PackedStringArray("content_root")]
 anchors_preset = 0
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 368.0
-offset_bottom = 271.0
+offset_left = 80.0
+offset_top = 73.0
+offset_right = 398.0
+offset_bottom = 294.0
 script = ExtResource("3_hc3an")
 content_root = NodePath("contents")
-window_name = "lolokokjjjjj"
+window_name = "asdasgdafajgahfaghjahjshfjahfafhjsdasjajdajjsjgajks"
 
 [node name="contents" type="Control" parent="MksWindow"]
 clip_contents = true

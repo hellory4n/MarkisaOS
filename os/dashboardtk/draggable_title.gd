@@ -1,15 +1,42 @@
-extends CharacterBody2D
+## I wonder if you should use it
+extends Sprite2D
+class_name __internaldonotuseorthingswillblowupandstuff__DraggableTitle__
 
-var can_drag := false
-var grabbed_offset := Vector2.ZERO
-@onready var window: MksWindow = get_parent()
+# don't ask what this does, i stole this from https://gist.github.com/angstyloop/08200c6d816347c82ea1aed56c219f17
+# and deleted all of the comments since they were pretty ridiculous
+@export var window: MksWindow
 
-func _input_event(_viewport, event, _shape_idx):
-    if event is InputEventMouseButton:
-        can_drag = event.is_pressed()
-        grabbed_offset = window.position - get_global_mouse_position()
-        get_tree().quit()
+var status = "none"
+var tsize = Vector2()
+var mpos = Vector2()
 
 func _process(_delta):
-    if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and can_drag:
-        window.position = grabbed_offset + get_global_mouse_position()
+    tsize = scale
+    if status == "dragging":
+        window.global_position = mpos + offset + Vector2(0, 45)
+
+func _input(ev: InputEvent):
+    if ev is InputEventMouseButton and ev.button_index == MOUSE_BUTTON_LEFT:
+        var ev2 := ev as InputEventMouseButton
+        if status != "dragging" and ev.pressed:
+            var evpos = ev2.global_position
+            
+            var gpos = global_position
+            
+            var rect = Rect2()
+            if is_centered():
+                rect = Rect2(gpos.x - tsize.x / 2, gpos.y - tsize.y / 2, tsize.x, tsize.y)
+            else:
+                rect = Rect2(gpos.x, gpos.y, tsize.x, tsize.y)
+                
+            if rect.has_point(evpos):
+                status = "clicked"
+                offset = gpos - evpos
+        
+        elif status == "dragging" and not ev.pressed:
+            status = "released"
+    
+    if status == "clicked" and ev is InputEventMouseMotion:
+        status = "dragging"
+
+    mpos = get_global_mouse_position()

@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp3p5b0mmnwpt"]
+[gd_scene load_steps=3 format=3 uid="uid://cu1yohjatx5y"]
 
 [ext_resource type="Script" path="res://os/dashboardtk/draggable_title.gd" id="1_x7ra7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cs40r"]
+[sub_resource type="ImageTexture" id="ImageTexture_mqo7b"]
 
-[node name="DraggableTitle" type="CharacterBody2D"]
-input_pickable = true
+[node name="dragtitle" type="Sprite2D"]
+position = Vector2(0, -45)
+scale = Vector2(45, 45)
+texture = SubResource("ImageTexture_mqo7b")
+centered = false
 script = ExtResource("1_x7ra7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_cs40r")

@@ -22,12 +22,12 @@ var background_style: StyleBox
 var title_style: StyleBox
 var bg: Panel
 var title: Panel
-var draggable_shit: CharacterBody2D
-var iminlovewiththeshapeofyou: CollisionShape2D # i am the very embodiment of comedy itself
+var draggable_title: __internaldonotuseorthingswillblowupandstuff__DraggableTitle__
+var title_name: Label
 
 # dumb shit
 var frames: int
-const DraggableTitle := preload("res://os/dashboardtk/draggable_title.tscn")
+const DraggableTitle = preload("res://os/dashboardtk/draggable_title.tscn")
 
 func _ready():
     # make the internal bullshit
@@ -39,14 +39,19 @@ func _ready():
     title.offset_top = -45
     title.custom_minimum_size -= Vector2(0, 45)
     
-    draggable_shit = DraggableTitle.instantiate()
-    draggable_shit.ready.connect(
-        func(): iminlovewiththeshapeofyou = draggable_shit.get_node("CollisionShape2D")
-    )
+    draggable_title = DraggableTitle.instantiate()
+    draggable_title.window = self
+    
+    title_name = Label.new()
+    title_name.set_anchors_preset(PRESET_FULL_RECT)
+    title_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    title_name.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+    title_name.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
     
     add_child(bg, false, Node.INTERNAL_MODE_FRONT)
     add_child(title, false, Node.INTERNAL_MODE_FRONT)
-    add_child(draggable_shit, false, Node.INTERNAL_MODE_FRONT)
+    add_child(draggable_title, false, Node.INTERNAL_MODE_FRONT)
+    title.add_child(title_name)
     
     theme_changed.connect(_on_theme_changed.bind())
 
@@ -56,11 +61,11 @@ func _process(_delta):
     if frames > 2:
         _on_theme_changed()
     
-    # make sure the draggable shit's collision is correct
-    var m := RectangleShape2D.new()
-    m.size = Vector2(size.x, 45)
-    iminlovewiththeshapeofyou.shape = m
-    iminlovewiththeshapeofyou.position = Vector2(size.x / 2, -23)
+    # make sure the draggable shit is correct
+    draggable_title.scale = Vector2(size.x, 45)
+    
+    # sync the window title stuff
+    title_name.text = window_name
 
 func _on_theme_changed():
     title_rect = Rect2(position.x, position.y - title_height, size.x, title_height)
@@ -76,8 +81,6 @@ func _on_theme_changed():
 func _draw():
     if Engine.is_editor_hint():
         draw_rect(get_rect(), Color("#070E1A"))
-    else:
-        draw_rect(Rect2((iminlovewiththeshapeofyou.shape as RectangleShape2D).size, iminlovewiththeshapeofyou.position), Color.RED, false)
 
 func _get_configuration_warnings():
     if content_root == null:
