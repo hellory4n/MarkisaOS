@@ -43,6 +43,7 @@ var title_name: Label
 # dumb shit
 var frames: int
 const DraggableTitle = preload("res://os/dashboardtk/draggable_title.tscn")
+@onready var tween := create_tween()
 
 func _ready():
     # make the internal bullshit
@@ -79,6 +80,10 @@ func _ready():
     # go to the center of the screen
     var cool_size := size + Vector2(0, 45)
     position = DisplayServer.window_get_size() as Vector2 / 2 - (cool_size / 2)
+    
+    # do the awesome window opening animation
+    scale = Vector2.ZERO
+    tween.tween_property(self, "scale", Vector2.ONE, 0.2).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
 func _process(_delta):
     # loading it in _ready doesn't work
