@@ -79,3 +79,5 @@ offset_left = 110.0
 offset_top = 110.0
 offset_right = 451.2
 offset_bottom = 353.0
+dock_icon = null
+floating = true

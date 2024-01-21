@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cu1yohjatx5y"]
+[gd_scene load_steps=3 format=3 uid="uid://br2g04ws3v2us"]
 
-[ext_resource type="Script" path="res://os/dashboardtk/draggable_title.gd" id="1_x7ra7"]
+[ext_resource type="Script" path="res://os/dashboardtk/draggable_title.gd" id="1_gffmm"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_mqo7b"]
+[sub_resource type="ImageTexture" id="ImageTexture_h1vwp"]
 
-[node name="dragtitle" type="Sprite2D"]
-position = Vector2(0, -45)
+[node name="__internaldonotuseorthingswillblowupandstuff__DraggableTitle__" type="Sprite2D"]
 scale = Vector2(45, 45)
-texture = SubResource("ImageTexture_mqo7b")
-centered = false
-script = ExtResource("1_x7ra7")
+texture = SubResource("ImageTexture_h1vwp")
+script = ExtResource("1_gffmm")

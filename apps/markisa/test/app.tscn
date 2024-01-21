@@ -11,6 +11,8 @@ offset_bottom = 243.0
 script = ExtResource("1_qsqac")
 content_root = NodePath("contents")
 window_name = "Awesome Window :)"
+dock_icon = null
+floating = true
 size_percentage = Vector2(40, 60)
 
 [node name="contents" type="Control" parent="."]
