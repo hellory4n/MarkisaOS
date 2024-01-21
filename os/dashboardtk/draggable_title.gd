@@ -5,7 +5,7 @@ class_name __internaldonotuseorthingswillblowupandstuff__DraggableTitle__
 # don't ask what this does, i stole this from https://gist.github.com/angstyloop/08200c6d816347c82ea1aed56c219f17
 # and deleted all of the comments since they were pretty ridiculous
 @export var window: MksWindow
-
+static var active_window: MksWindow
 var status = "none"
 var tsize = Vector2()
 var mpos = Vector2()
@@ -30,13 +30,16 @@ func _input(ev: InputEvent):
                 rect = Rect2(gpos.x, gpos.y, tsize.x, tsize.y)
                 
             if rect.has_point(evpos):
+                window.move_to_front()
                 status = "clicked"
                 offset = gpos - evpos
+                active_window = window
         
         elif status == "dragging" and not ev.pressed:
             status = "released"
+            active_window = null
     
-    if status == "clicked" and ev is InputEventMouseMotion:
+    if status == "clicked" and ev is InputEventMouseMotion and active_window == window:
         status = "dragging"
 
     mpos = get_global_mouse_position()

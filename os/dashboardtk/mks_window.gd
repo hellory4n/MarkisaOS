@@ -54,6 +54,10 @@ func _ready():
     title.add_child(title_name)
     
     theme_changed.connect(_on_theme_changed.bind())
+    
+    # if a window just opened it would obviously be the active window
+    # sorry for calling it "__internaldonotuseorthingswillblowupandstuff__DraggableTitle__"
+    __internaldonotuseorthingswillblowupandstuff__DraggableTitle__.active_window = self
 
 func _process(_delta):
     # loading it in _ready doesn't work
@@ -70,17 +74,12 @@ func _process(_delta):
 func _on_theme_changed():
     title_rect = Rect2(position.x, position.y - title_height, size.x, title_height)
     
-    background_style = get_theme_stylebox("active_background", "MksWindow")
-    title_style = get_theme_stylebox("active_title", "MksWindow")
+    background_style = get_theme_stylebox("background", "MksWindow")
+    title_style = get_theme_stylebox("title_bg", "MksWindow")
     
     if bg != null and title != null:
         bg.add_theme_stylebox_override("panel", background_style)
         title.add_theme_stylebox_override("panel", title_style)
-
-# just show a preview in the editor
-func _draw():
-    if Engine.is_editor_hint():
-        draw_rect(get_rect(), Color("#070E1A"))
 
 func _get_configuration_warnings():
     if content_root == null:
