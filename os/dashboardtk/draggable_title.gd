@@ -11,35 +11,35 @@ var tsize = Vector2()
 var mpos = Vector2()
 
 func _process(_delta):
-    tsize = scale
-    if status == "dragging":
-        window.global_position = mpos + offset + Vector2(0, 45)
+	tsize = scale
+	if status == "dragging":
+		window.global_position = mpos + offset + Vector2(0, 45)
 
 func _input(ev: InputEvent):
-    if (ev is InputEventMouseButton and ev.button_index == MOUSE_BUTTON_LEFT) or (ev is InputEventScreenTouch and ev.is_pressed()):
-        var ev2 := ev as InputEventMouseButton
-        if status != "dragging" and ev.pressed:
-            var evpos = ev2.global_position
-            
-            var gpos = global_position
-            
-            var rect = Rect2()
-            if is_centered():
-                rect = Rect2(gpos.x - tsize.x / 2, gpos.y - tsize.y / 2, tsize.x, tsize.y)
-            else:
-                rect = Rect2(gpos.x, gpos.y, tsize.x, tsize.y)
-                
-            if rect.has_point(evpos):
-                window.move_to_front()
-                status = "clicked"
-                offset = gpos - evpos
-                active_window = window
-        
-        elif status == "dragging" and not ev.pressed:
-            status = "released"
-            active_window = null
-    
-    if status == "clicked" and active_window == window and (ev is InputEventMouseMotion or ev is InputEventScreenDrag):
-        status = "dragging"
+	if (ev is InputEventMouseButton and ev.button_index == MOUSE_BUTTON_LEFT) or (ev is InputEventScreenTouch and ev.is_pressed()):
+		var ev2 := ev as InputEventMouseButton
+		if status != "dragging" and ev.pressed:
+			var evpos = ev2.global_position
+			
+			var gpos = global_position
+			
+			var rect = Rect2()
+			if is_centered():
+				rect = Rect2(gpos.x - tsize.x / 2, gpos.y - tsize.y / 2, tsize.x, tsize.y)
+			else:
+				rect = Rect2(gpos.x, gpos.y, tsize.x, tsize.y)
+				
+			if rect.has_point(evpos):
+				window.move_to_front()
+				status = "clicked"
+				offset = gpos - evpos
+				active_window = window
+		
+		elif status == "dragging" and not ev.pressed:
+			status = "released"
+			active_window = null
+	
+	if status == "clicked" and active_window == window and (ev is InputEventMouseMotion or ev is InputEventScreenDrag):
+		status = "dragging"
 
-    mpos = get_global_mouse_position()
+	mpos = get_global_mouse_position()
