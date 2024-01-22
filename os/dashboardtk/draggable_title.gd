@@ -11,7 +11,7 @@ var tsize = Vector2()
 var mpos = Vector2()
 
 func _process(_delta):
-	tsize = scale
+	tsize = scale - Vector2(45, 0)
 	if status == "dragging":
 		window.global_position = mpos + offset + Vector2(0, 45)
 

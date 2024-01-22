@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://chalhd48g1f40"]
+[gd_scene load_steps=7 format=3 uid="uid://chalhd48g1f40"]
 
 [ext_resource type="AudioStream" uid="uid://cy6lkhtg5mubh" path="res://os_assets/system_sounds/startup.mp3" id="1_4ykex"]
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
 [ext_resource type="PackedScene" uid="uid://gh0q6tcc83uq" path="res://apps/markisa/test/app.tscn" id="3_g7l8b"]
+[ext_resource type="Texture2D" uid="uid://c5xfagwea1j4o" path="res://os_assets/high_peaks/color_icons/small_markisa.png" id="4_ln838"]
 
 [sub_resource type="Animation" id="Animation_n8ctj"]
 resource_name = "startup"
@@ -75,13 +76,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MksWindow" parent="Windows" instance=ExtResource("3_g7l8b")]
-offset_left = 4.0
-offset_top = 46.0
-offset_right = 345.2
-offset_bottom = 289.0
+offset_top = 45.0
+offset_bottom = 288.0
+small_icon = ExtResource("4_ln838")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 22.0
 text = "just making sure 5"
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+text = "bb"
