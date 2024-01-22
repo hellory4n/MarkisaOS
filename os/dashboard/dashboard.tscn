@@ -38,12 +38,14 @@ _data = {
 }
 
 [node name="Dashboard" type="Control"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_4ykex")
@@ -75,8 +77,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MksWindow" parent="Windows" instance=ExtResource("3_g7l8b")]
-modulate = Color(1, 1, 1, 0)
-scale = Vector2(1e-05, 1e-05)
 
 [node name="Label" type="Label" parent="."]
 visible = false

@@ -1,7 +1,7 @@
 extends Node
 
 @export var parent_bullshit_thing_y: Node
-@export var dashboard: PackedScene
+@export var onboarding: PackedScene
 @export var tjtjt: TextureRect
 
 func _ready():
@@ -21,16 +21,12 @@ func _ready():
 	Input.warp_mouse(Vector2.ZERO)
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	
-	# placeholder until i add a login screen
-	Frambos.login("joemama")
-	MarkisaUser.load()
-	
 func _process(_delta: float):
 	if Input.is_action_just_released("skip_boot"):
 		load_thing()
 
 func load_thing():
-	var lol: Control = dashboard.instantiate()
+	var lol: Control = onboarding.instantiate()
 	get_tree().root.add_child(lol)
 	parent_bullshit_thing_y.queue_free()
 	

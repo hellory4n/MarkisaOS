@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://os/kickstart/bootloader.gd" id="1_cvxs4"]
 [ext_resource type="FontFile" uid="uid://b8jp5w6b34llv" path="res://os_assets/high_peaks/fonts/JetBrainsMono-Regular.ttf" id="1_ipe8o"]
-[ext_resource type="PackedScene" uid="uid://chalhd48g1f40" path="res://os/dashboard/dashboard.tscn" id="2_6id4n"]
+[ext_resource type="PackedScene" uid="uid://dgyt7s3yvhtmw" path="res://os/kickstart/onboarding.tscn" id="2_m2dgk"]
 [ext_resource type="FontFile" uid="uid://bfiid0nwufg2m" path="res://os_assets/high_peaks/fonts/JetBrainsMono-ExtraBoldItalic.ttf" id="4_8wgrl"]
 [ext_resource type="Texture2D" uid="uid://dcfba2n232i4f" path="res://os_assets/bootloader/logo.png" id="5_kbf4e"]
 
@@ -127,7 +127,7 @@ grow_vertical = 2
 [node name="bullshit" type="Node" parent="." node_paths=PackedStringArray("parent_bullshit_thing_y", "tjtjt")]
 script = ExtResource("1_cvxs4")
 parent_bullshit_thing_y = NodePath("..")
-dashboard = ExtResource("2_6id4n")
+onboarding = ExtResource("2_m2dgk")
 tjtjt = NodePath("../Control/TextureRect")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -169,7 +169,7 @@ visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 0.529412)
 theme_override_fonts/font = ExtResource("1_ipe8o")
-text = "Please wait... \\"
+text = "Please wait... /"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(220, 0)

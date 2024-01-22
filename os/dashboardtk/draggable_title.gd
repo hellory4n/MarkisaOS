@@ -1,6 +1,6 @@
 ## I wonder if you should use it
 extends Sprite2D
-class_name __internaldonotuseorthingswillblowupandstuff__DraggableTitle__
+class_name __internaldonotuseorthingswillblowupandstuff__DraggableTitle__ 
 
 # don't ask what this does, i stole this from https://gist.github.com/angstyloop/08200c6d816347c82ea1aed56c219f17
 # and deleted all of the comments since they were pretty ridiculous

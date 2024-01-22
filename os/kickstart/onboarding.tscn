@@ -1,0 +1,239 @@
+[gd_scene load_steps=21 format=3 uid="uid://dgyt7s3yvhtmw"]
+
+[ext_resource type="Texture2D" uid="uid://b1xte1s5dfkx0" path="res://os_assets/bootloader/onboarding_wallpaper.png" id="1_4v4vy"]
+[ext_resource type="AudioStream" uid="uid://batyrkqpccryr" path="res://os_assets/music/login.mp3" id="1_f5r1d"]
+[ext_resource type="Texture2D" uid="uid://dxy3cujlfwbex" path="res://os_assets/bootloader/logo2.png" id="2_5a320"]
+[ext_resource type="Texture2D" uid="uid://i3m153hyef37" path="res://os_assets/user_icons/small/cat.png" id="3_ce6mb"]
+[ext_resource type="Script" path="res://os/kickstart/onboarding/go_to_the_shutdown_screen.gd" id="4_76qe0"]
+[ext_resource type="Script" path="res://os/kickstart/onboarding/user_list.gd" id="4_80y05"]
+[ext_resource type="Texture2D" uid="uid://dl13ejtw3ntrb" path="res://os_assets/user_icons/small/flower.png" id="4_etmoj"]
+[ext_resource type="PackedScene" uid="uid://kov76gsi4htr" path="res://os/kickstart/shutdown.tscn" id="5_gqh0a"]
+[ext_resource type="Texture2D" uid="uid://w3cbya5lq4q0" path="res://os_assets/user_icons/small/balloons.png" id="5_mo0xu"]
+[ext_resource type="Texture2D" uid="uid://dkey4jl2wqli2" path="res://os_assets/user_icons/small/car.png" id="6_mvxcl"]
+[ext_resource type="PackedScene" uid="uid://chalhd48g1f40" path="res://os/dashboard/dashboard.tscn" id="7_1mthd"]
+[ext_resource type="Texture2D" uid="uid://bfy84bpqbbfyo" path="res://os_assets/user_icons/small/dog.png" id="7_iycpp"]
+[ext_resource type="Texture2D" uid="uid://bp1no26rxrwwy" path="res://os_assets/user_icons/small/duck.png" id="8_ughmt"]
+[ext_resource type="Texture2D" uid="uid://byr50x27as8yg" path="res://os_assets/user_icons/small/pancakes.png" id="9_tatga"]
+[ext_resource type="Texture2D" uid="uid://cq5sscxjb1kv8" path="res://os_assets/user_icons/small/brushes.png" id="10_nonap"]
+[ext_resource type="Texture2D" uid="uid://bgc4qgy4ew43w" path="res://os_assets/user_icons/small/shuttle.png" id="11_s5bxx"]
+[ext_resource type="Texture2D" uid="uid://bqc8r7mrdgrv" path="res://os_assets/user_icons/small/football.png" id="12_dymj3"]
+[ext_resource type="Script" path="res://os/kickstart/onboarding/create_user.gd" id="18_8q0p1"]
+
+[sub_resource type="Animation" id="Animation_w1cov"]
+resource_name = "asnadajfjajfajdfsjafkak"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.37, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6xh8p"]
+_data = {
+"asnadajfjajfajdfsjafkak": SubResource("Animation_w1cov")
+}
+
+[node name="Onboarding" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6xh8p")
+}
+autoplay = "asnadajfjajfajdfsjafkak"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_f5r1d")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4v4vy")
+expand_mode = 2
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(360, 100)
+layout_mode = 2
+size_flags_vertical = 8
+texture = ExtResource("2_5a320")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+item_count = 2
+selected = 0
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Português"
+popup/item_1/id = 2
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer" node_paths=PackedStringArray("one_parent_to_rule_them_all")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "shutdown"
+script = ExtResource("4_76qe0")
+shutdown = ExtResource("5_gqh0a")
+one_parent_to_rule_them_all = NodePath("../../..")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(325, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.294118)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Header"
+text = "login as an existing user"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 135)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer/ScrollContainer" node_paths=PackedStringArray("parenttttt")]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("4_80y05")
+dashboard = ExtResource("7_1mthd")
+parenttttt = NodePath("../../../../..")
+
+[node name="Label2" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Header"
+text = "or make a new one"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "username, e.g. johndoe"
+alignment = 1
+
+[node name="LineEdit2" type="LineEdit" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "display name, e.g. John Doe"
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "photo:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+expand_icon = true
+item_count = 10
+selected = 0
+popup/item_0/text = "Cat"
+popup/item_0/icon = ExtResource("3_ce6mb")
+popup/item_0/id = 0
+popup/item_1/text = "Flower"
+popup/item_1/icon = ExtResource("4_etmoj")
+popup/item_1/id = 1
+popup/item_2/text = "Balloons"
+popup/item_2/icon = ExtResource("5_mo0xu")
+popup/item_2/id = 2
+popup/item_3/text = "Car"
+popup/item_3/icon = ExtResource("6_mvxcl")
+popup/item_3/id = 3
+popup/item_4/text = "Dog"
+popup/item_4/icon = ExtResource("7_iycpp")
+popup/item_4/id = 4
+popup/item_5/text = "Duck"
+popup/item_5/icon = ExtResource("8_ughmt")
+popup/item_5/id = 5
+popup/item_6/text = "Pancakes"
+popup/item_6/icon = ExtResource("9_tatga")
+popup/item_6/id = 6
+popup/item_7/text = "Brushes"
+popup/item_7/icon = ExtResource("10_nonap")
+popup/item_7/id = 7
+popup/item_8/text = "Shuttle"
+popup/item_8/icon = ExtResource("11_s5bxx")
+popup/item_8/id = 8
+popup/item_9/text = "Football"
+popup/item_9/icon = ExtResource("12_dymj3")
+popup/item_9/id = 9
+
+[node name="Button" type="Button" parent="ColorRect/CenterContainer/VBoxContainer" node_paths=PackedStringArray("username", "display_name", "photo", "atpaeotory")]
+layout_mode = 2
+text = "Create"
+script = ExtResource("18_8q0p1")
+username = NodePath("../LineEdit")
+display_name = NodePath("../LineEdit2")
+photo = NodePath("../HBoxContainer/OptionButton")
+dashboard = ExtResource("7_1mthd")
+atpaeotory = NodePath("../../../..")

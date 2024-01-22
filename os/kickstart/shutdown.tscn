@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3 uid="uid://kov76gsi4htr"]
+
+[ext_resource type="AudioStream" uid="uid://c68r6unikynwt" path="res://os_assets/system_sounds/shutdown.mp3" id="1_4cqwa"]
+[ext_resource type="Texture2D" uid="uid://dcfba2n232i4f" path="res://os_assets/bootloader/logo.png" id="1_8qopp"]
+[ext_resource type="Script" path="res://os/kickstart/shutdown.gd" id="3_3a6ee"]
+
+[sub_resource type="Animation" id="Animation_x1yk2"]
+resource_name = "new_animation"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 3.001, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-6.28319, 6.28319, -6.28319, 6.28319]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"heheheha"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tnu6h"]
+_data = {
+"new_animation": SubResource("Animation_x1yk2")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_5h11t"]
+font_size = 24
+
+[node name="shutdown" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tnu6h")
+}
+autoplay = "new_animation"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_4cqwa")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.8)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -6.28319
+scale = Vector2(0.65, 0.65)
+pivot_offset = Vector2(426, 240)
+texture = ExtResource("1_8qopp")
+stretch_mode = 3
+
+[node name="Label3" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Shutting down MarkisaOS..."
+label_settings = SubResource("LabelSettings_5h11t")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Node" type="Node" parent="." node_paths=PackedStringArray("lol")]
+script = ExtResource("3_3a6ee")
+lol = NodePath("../TextureRect")

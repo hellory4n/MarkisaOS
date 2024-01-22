@@ -1,6 +1,6 @@
 ## It's a button that opens windows.
 extends Button
-class_name WindowOpener
+class_name WindowOpener 
 
 ## The window to open.
 @export_file("*.tscn") var window := ""
