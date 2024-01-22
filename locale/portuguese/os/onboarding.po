@@ -1,0 +1,91 @@
+# LANGUAGE translation for MarkisaOS for the following files:
+# res://os/kickstart/onboarding.tscn
+#
+# Automatically generated, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: os/kickstart/onboarding.tscn
+msgid "shutdown"
+msgstr "desligar"
+
+#: os/kickstart/onboarding.tscn
+msgid "login as an existing user"
+msgstr "faça login"
+
+#: os/kickstart/onboarding.tscn
+msgid "or make a new one"
+msgstr "ou crie um novo usuário"
+
+#: os/kickstart/onboarding.tscn
+msgid "username:"
+msgstr "nome de usuário:"
+
+#: os/kickstart/onboarding.tscn
+msgid "john.doe"
+msgstr "novousuario"
+
+#: os/kickstart/onboarding.tscn
+msgid "display name:"
+msgstr "nome:"
+
+#: os/kickstart/onboarding.tscn
+msgid "John Doe"
+msgstr "Novo Usuário"
+
+#: os/kickstart/onboarding.tscn
+msgid "photo:"
+msgstr "foto:"
+
+#: os/kickstart/onboarding.tscn
+msgid "Create"
+msgstr "Criar"
+
+#: os/kickstart/onboarding.tscn
+msgid "Balloons"
+msgstr "Balões"
+
+#: os/kickstart/onboarding.tscn
+msgid "Brushes"
+msgstr "Pinceis"
+
+#: os/kickstart/onboarding.tscn
+msgid "Car"
+msgstr "Carro"
+
+#: os/kickstart/onboarding.tscn
+msgid "Cat"
+msgstr "Gato"
+
+#: os/kickstart/onboarding.tscn
+msgid "Dog"
+msgstr "Cachorro"
+
+#: os/kickstart/onboarding.tscn
+msgid "Duck"
+msgstr "Pato"
+
+#: os/kickstart/onboarding.tscn
+msgid "Flower"
+msgstr "Flor"
+
+#: os/kickstart/onboarding.tscn
+msgid "Football"
+msgstr "Futebol"
+
+#: os/kickstart/onboarding.tscn
+msgid "Pancakes"
+msgstr "Panquecas"
+
+#: os/kickstart/onboarding.tscn
+msgid "Shuttle"
+msgstr "Foguete"

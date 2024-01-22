@@ -21,6 +21,10 @@ func _ready():
 	Input.warp_mouse(Vector2.ZERO)
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	
+	# lcoalziation glboalstizagioyn internalizitation
+	var system_info := SystemInfo.load()
+	TranslationServer.set_locale(system_info.language)
+	
 func _process(_delta: float):
 	if Input.is_action_just_released("skip_boot"):
 		load_thing()

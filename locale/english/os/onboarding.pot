@@ -1,0 +1,48 @@
+# LANGUAGE translation for MarkisaOS for the following files:
+# res://os/kickstart/onboarding.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: os/kickstart/onboarding.tscn
+msgid "shutdown"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "login as an existing user"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "or make a new one"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "username:"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "john.doe"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "display name:"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "John Doe"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "photo:"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Create"
+msgstr ""
