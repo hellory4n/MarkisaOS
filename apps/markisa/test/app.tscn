@@ -55,6 +55,7 @@ script = ExtResource("4_o40t8")
 popup = NodePath("../../MksPopup")
 
 [node name="MksPopup" type="Control" parent="contents"]
+visible = false
 custom_minimum_size = Vector2(245, 144)
 layout_mode = 1
 anchors_preset = 5
