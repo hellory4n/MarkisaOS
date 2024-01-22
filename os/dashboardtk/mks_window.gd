@@ -115,7 +115,10 @@ func _ready():
 	
 	# do the awesome window opening animation
 	scale = Vector2.ZERO
+	modulate = Color.TRANSPARENT
+	tween.set_parallel(true)
 	tween.tween_property(self, "scale", Vector2.ONE, 0.2).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "modulate", Color.WHITE, 0.2).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
 
 func _process(_delta):
 	# loading it in _ready doesn't work
@@ -158,7 +161,9 @@ func _get_configuration_warnings():
 
 func _on_close_request():
 	tween = create_tween()
-	tween.tween_property(self, "scale", Vector2.ZERO, 0.2) \
+	tween.set_parallel(true)
+	tween.tween_property(self, "scale", Vector2.ZERO, 0.3) \
 		.set_trans(Tween.TRANS_EXPO) \
 		.set_ease(Tween.EASE_OUT) \
 		.finished.connect(func(): queue_free())
+	tween.tween_property(self, "modulate", Color.TRANSPARENT, 0.3).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
