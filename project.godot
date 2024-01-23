@@ -21,7 +21,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 [application]
 
 config/name="MarkisaOS"
-config/version="0.13.0"
+config/version="0.13.1"
 run/main_scene="res://os/kickstart/bootloader.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="markisa"

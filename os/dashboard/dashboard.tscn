@@ -75,6 +75,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MksWindow" parent="Windows" instance=ExtResource("3_g7l8b")]
+offset_left = 222.0
+offset_top = 135.0
+offset_right = 563.2
+offset_bottom = 378.0
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -89,3 +93,30 @@ layout_mode = 0
 offset_right = 20.0
 offset_bottom = 20.0
 text = "bb"
+
+[node name="guiStuff" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Dock" type="Panel" parent="guiStuff"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 40.0
+offset_right = 64.0
+grow_vertical = 2
+theme_type_variation = &"OsDock"
+
+[node name="Panel" type="Panel" parent="guiStuff"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_type_variation = &"OsPanel"
