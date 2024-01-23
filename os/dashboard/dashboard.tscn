@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://chalhd48g1f40"]
+[gd_scene load_steps=14 format=3 uid="uid://chalhd48g1f40"]
 
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
 [ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_k1cua"]
 [ext_resource type="PackedScene" uid="uid://gh0q6tcc83uq" path="res://apps/markisa/test/app.tscn" id="3_g7l8b"]
 [ext_resource type="Texture2D" uid="uid://byi3hqcm5xfi8" path="res://os_assets/high_peaks/icons/markisa.png" id="4_ogjlo"]
-[ext_resource type="Texture2D" uid="uid://jwp6ncfmlefd" path="res://os_assets/high_peaks/color_icons/big_markisa.png" id="4_tnvqh"]
 [ext_resource type="Texture2D" uid="uid://056d8d0ebqr0" path="res://os_assets/high_peaks/color_icons/all_apps.png" id="5_dd4s0"]
 [ext_resource type="Texture2D" uid="uid://cyk61r2bex7n1" path="res://os_assets/high_peaks/icons/sticky_note.png" id="5_lgxgi"]
 [ext_resource type="Texture2D" uid="uid://bv2ovxx78eoxl" path="res://os_assets/high_peaks/icons/calculator.png" id="6_c0acn"]
@@ -86,12 +85,12 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="MksWindow" parent="Windows" instance=ExtResource("3_g7l8b")]
-offset_left = 222.0
-offset_top = 135.0
-offset_right = 563.2
-offset_bottom = 378.0
+offset_left = 287.9
+offset_top = 116.0
+offset_right = 629.1
+offset_bottom = 359.0
 
-[node name="guiStuff" type="Control" parent="."]
+[node name="GuiStuff" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -100,7 +99,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Dock" type="Panel" parent="guiStuff"]
+[node name="Dock" type="Panel" parent="GuiStuff"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 1
 anchors_preset = 9
@@ -110,7 +109,7 @@ offset_right = 64.0
 grow_vertical = 2
 theme_type_variation = &"OsDock"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="guiStuff/Dock"]
+[node name="Dock" type="VBoxContainer" parent="GuiStuff/Dock"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -119,53 +118,30 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="Spacer" type="Panel" parent="guiStuff/Dock/VBoxContainer"]
+[node name="Spacer" type="Panel" parent="GuiStuff/Dock/Dock"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nkorl")
 
-[node name="Apps2" type="VBoxContainer" parent="guiStuff/Dock/VBoxContainer"]
+[node name="Apps" type="VBoxContainer" parent="GuiStuff/Dock/Dock"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="Button" type="Button" parent="guiStuff/Dock/VBoxContainer/Apps2"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-theme_type_variation = &"DockButton"
-icon = ExtResource("4_tnvqh")
-
-[node name="Button2" type="Button" parent="guiStuff/Dock/VBoxContainer/Apps2"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-theme_type_variation = &"DockButton"
-icon = ExtResource("4_tnvqh")
-
-[node name="Button3" type="Button" parent="guiStuff/Dock/VBoxContainer/Apps2"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-theme_type_variation = &"DockButton"
-icon = ExtResource("4_tnvqh")
-
-[node name="Button4" type="Button" parent="guiStuff/Dock/VBoxContainer/Apps2"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-theme_type_variation = &"DockButton"
-icon = ExtResource("4_tnvqh")
-
-[node name="Spacer2" type="Panel" parent="guiStuff/Dock/VBoxContainer"]
+[node name="Spacer2" type="Panel" parent="GuiStuff/Dock/Dock"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nkorl")
 
-[node name="Apps" type="Button" parent="guiStuff/Dock/VBoxContainer"]
+[node name="AppLauncher" type="Button" parent="GuiStuff/Dock/Dock"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+tooltip_text = "App launcher"
 theme_type_variation = &"DockButton"
 icon = ExtResource("5_dd4s0")
 
-[node name="Panel" type="Panel" parent="guiStuff"]
+[node name="Panel" type="Panel" parent="GuiStuff"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 1
 anchors_preset = 10
@@ -173,7 +149,7 @@ anchor_right = 1.0
 grow_horizontal = 2
 theme_type_variation = &"OsPanel"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="guiStuff/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GuiStuff/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -182,7 +158,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="Markisa" type="Button" parent="guiStuff/Panel/HBoxContainer"]
+[node name="Markisa" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "About this system"
@@ -190,7 +166,7 @@ theme_type_variation = &"PanelButton"
 icon = ExtResource("4_ogjlo")
 expand_icon = true
 
-[node name="StickyNote" type="Button" parent="guiStuff/Panel/HBoxContainer"]
+[node name="StickyNote" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Notes"
@@ -198,7 +174,7 @@ theme_type_variation = &"PanelButton"
 icon = ExtResource("5_lgxgi")
 expand_icon = true
 
-[node name="Calculator" type="Button" parent="guiStuff/Panel/HBoxContainer"]
+[node name="Calculator" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Calculator"
@@ -206,12 +182,12 @@ theme_type_variation = &"PanelButton"
 icon = ExtResource("6_c0acn")
 expand_icon = true
 
-[node name="Spacer" type="Panel" parent="guiStuff/Panel/HBoxContainer"]
+[node name="Spacer" type="Panel" parent="GuiStuff/Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nkorl")
 
-[node name="Time" type="Button" parent="guiStuff/Panel/HBoxContainer"]
+[node name="Time" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(175, 0)
 layout_mode = 2
 tooltip_text = "Time and date"
@@ -219,19 +195,19 @@ theme_type_variation = &"PanelButton"
 text = "0001-01-01 01:01"
 expand_icon = true
 
-[node name="Money" type="Button" parent="guiStuff/Panel/HBoxContainer"]
+[node name="Money" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 layout_mode = 2
 tooltip_text = "Your money"
 theme_type_variation = &"PanelButton"
 text = "Ø0.01"
 expand_icon = true
 
-[node name="Spacer2" type="Panel" parent="guiStuff/Panel/HBoxContainer"]
+[node name="Spacer2" type="Panel" parent="GuiStuff/Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nkorl")
 
-[node name="QuickSettings" type="Button" parent="guiStuff/Panel/HBoxContainer"]
+[node name="QuickSettings" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Quick settings"
@@ -239,7 +215,7 @@ theme_type_variation = &"PanelButton"
 icon = ExtResource("7_vnlc6")
 expand_icon = true
 
-[node name="Notifications" type="Button" parent="guiStuff/Panel/HBoxContainer"]
+[node name="Notifications" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Notifications"
@@ -247,7 +223,7 @@ theme_type_variation = &"PanelButton"
 icon = ExtResource("7_bnfx1")
 expand_icon = true
 
-[node name="Search" type="Button" parent="guiStuff/Panel/HBoxContainer"]
+[node name="Search" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Search"

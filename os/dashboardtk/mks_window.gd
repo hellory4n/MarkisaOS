@@ -43,6 +43,7 @@ var draggable_title: __internaldonotuseorthingswillblowupandstuff__DraggableTitl
 var title_name: Label
 var icon_display: Button
 var close_button: Button
+var dock_button: Button
 
 # dumb shit
 var frames: int
@@ -109,9 +110,21 @@ func _ready():
 		size = (Frambos.resolution * size_percentage / 100) - Vector2(0, 45)
 	
 	# go to the center of the screen
-	#var cool_size := size + Vector2(0, 45)
-	#position = DisplayServer.window_get_size() as Vector2 / 2 - (cool_size / 2)
-	position = Vector2(0, 45)
+	if not Engine.is_editor_hint():
+		var cool_size := size + Vector2(0, 45)
+		position = (Frambos.resolution + Vector2(64, 40)) / 2 - (cool_size / 2)
+	
+	# show up in the dock
+	if not Frambos.is_on_mobile and not Engine.is_editor_hint():
+		var haha := get_node("/root/Dashboard/GuiStuff/Dock/Dock/Apps")
+		dock_button = Button.new()
+		dock_button.icon = dock_icon
+		dock_button.theme_type_variation = "DockButton"
+		haha.add_child(dock_button)
+		
+		dock_button.pressed.connect(func():
+			move_to_front()
+		)
 	
 	# do the awesome window opening animation
 	scale = Vector2.ZERO
@@ -166,3 +179,5 @@ func _on_close_request():
 		.set_ease(Tween.EASE_OUT) \
 		.finished.connect(func(): queue_free())
 	tween.tween_property(self, "modulate", Color.TRANSPARENT, 0.3).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	
+	dock_button.queue_free()
