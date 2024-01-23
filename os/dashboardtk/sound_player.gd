@@ -1,4 +1,4 @@
-## It plays a sound effect. Use MusicPlayer if you want music.
+## It plays a sound effect. Use MusicSwitcher if you want music.
 extends Node
 class_name SoundPlayer
 

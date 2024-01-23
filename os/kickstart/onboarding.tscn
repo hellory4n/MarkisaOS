@@ -1,8 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://dgyt7s3yvhtmw"]
+[gd_scene load_steps=23 format=3 uid="uid://dgyt7s3yvhtmw"]
 
 [ext_resource type="Texture2D" uid="uid://b1xte1s5dfkx0" path="res://os_assets/bootloader/onboarding_wallpaper.png" id="1_4v4vy"]
-[ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_vsbkt"]
 [ext_resource type="Texture2D" uid="uid://dxy3cujlfwbex" path="res://os_assets/bootloader/logo2.png" id="2_5a320"]
+[ext_resource type="AudioStream" uid="uid://batyrkqpccryr" path="res://os_assets/music/login.mp3" id="2_ynp7t"]
 [ext_resource type="Texture2D" uid="uid://i3m153hyef37" path="res://os_assets/user_icons/small/cat.png" id="3_ce6mb"]
 [ext_resource type="Script" path="res://os/kickstart/onboarding/set_language.gd" id="4_35eyj"]
 [ext_resource type="Script" path="res://os/kickstart/onboarding/go_to_the_shutdown_screen.gd" id="4_76qe0"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bgc4qgy4ew43w" path="res://os_assets/user_icons/small/shuttle.png" id="11_s5bxx"]
 [ext_resource type="Texture2D" uid="uid://bqc8r7mrdgrv" path="res://os_assets/user_icons/small/football.png" id="12_dymj3"]
 [ext_resource type="Script" path="res://os/kickstart/onboarding/create_user.gd" id="18_8q0p1"]
+[ext_resource type="Script" path="res://os/dashboardtk/music_switcher.gd" id="19_kfynb"]
 
 [sub_resource type="Animation" id="Animation_w1cov"]
 resource_name = "asnadajfjajfajdfsjafkak"
@@ -66,6 +67,11 @@ libraries = {
 "": SubResource("AnimationLibrary_6xh8p")
 }
 autoplay = "asnadajfjajfajdfsjafkak"
+
+[node name="MusicSwitcher" type="Node" parent="."]
+script = ExtResource("19_kfynb")
+stream = ExtResource("2_ynp7t")
+autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -154,12 +160,13 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(0, 135)
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer/ScrollContainer" node_paths=PackedStringArray("parenttttt")]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer/ScrollContainer" node_paths=PackedStringArray("parenttttt", "moosic")]
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("4_80y05")
 dashboard = ExtResource("7_1mthd")
 parenttttt = NodePath("../../../../..")
+moosic = NodePath("../../../../../MusicSwitcher")
 
 [node name="Label2" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -253,7 +260,7 @@ popup/item_9/text = "Football"
 popup/item_9/icon = ExtResource("12_dymj3")
 popup/item_9/id = 9
 
-[node name="Button" type="Button" parent="ColorRect/CenterContainer/VBoxContainer" node_paths=PackedStringArray("username", "display_name", "photo", "atpaeotory")]
+[node name="Button" type="Button" parent="ColorRect/CenterContainer/VBoxContainer" node_paths=PackedStringArray("username", "display_name", "photo", "atpaeotory", "moosic")]
 layout_mode = 2
 text = "Create"
 script = ExtResource("18_8q0p1")
@@ -262,9 +269,6 @@ display_name = NodePath("../HBoxContainer3/LineEdit2")
 photo = NodePath("../HBoxContainer/OptionButton")
 dashboard = ExtResource("7_1mthd")
 atpaeotory = NodePath("../../../..")
-
-[node name="SystemSoundPlayer" type="Node" parent="."]
-script = ExtResource("1_vsbkt")
-autoplay = true
+moosic = NodePath("../../../../MusicSwitcher")
 
 [connection signal="item_selected" from="MarginContainer/HBoxContainer/OptionButton" to="MarginContainer/HBoxContainer/OptionButton" method="_on_item_selected"]

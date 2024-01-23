@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://chalhd48g1f40"]
 
-[ext_resource type="AudioStream" uid="uid://cy6lkhtg5mubh" path="res://os_assets/system_sounds/startup.mp3" id="1_4ykex"]
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
+[ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_k1cua"]
 [ext_resource type="PackedScene" uid="uid://gh0q6tcc83uq" path="res://apps/markisa/test/app.tscn" id="3_g7l8b"]
 
 [sub_resource type="Animation" id="Animation_n8ctj"]
@@ -38,18 +38,22 @@ _data = {
 }
 
 [node name="Dashboard" type="Control"]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1e-05, 1e-05)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_4ykex")
+[node name="SystemSoundPlayer" type="Node" parent="."]
+script = ExtResource("1_k1cua")
 autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_w28mp")
+}
+autoplay = "startup"
 
 [node name="wallpaper" type="TextureRect" parent="."]
 layout_mode = 1
@@ -61,12 +65,6 @@ grow_vertical = 2
 texture = ExtResource("1_euobj")
 expand_mode = 2
 stretch_mode = 6
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_w28mp")
-}
-autoplay = "startup"
 
 [node name="Windows" type="Control" parent="."]
 layout_mode = 1

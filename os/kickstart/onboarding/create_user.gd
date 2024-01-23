@@ -5,6 +5,7 @@ extends Button
 @export var photo: OptionButton
 @export var dashboard: PackedScene
 @export var atpaeotory: Node
+@export var moosic: MusicSwitcher
 
 func _pressed():
 	# epic way of making the username thing correct since i can't be bothered to deal with regex
@@ -44,3 +45,4 @@ func _pressed():
 	var hejkhjkshjkg := dashboard.instantiate()
 	get_tree().root.add_child(hejkhjkshjkg)
 	atpaeotory.queue_free()
+	moosic.stop()

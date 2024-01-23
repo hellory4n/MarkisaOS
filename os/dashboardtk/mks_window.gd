@@ -64,7 +64,7 @@ func _ready():
 	title.offset_top = -45
 	title.custom_minimum_size -= Vector2(0, 45)
 	
-	if floating:
+	if floating and !Engine.is_editor_hint():
 		draggable_title = DraggableTitle.instantiate()
 		draggable_title.window = self
 	
@@ -99,7 +99,7 @@ func _ready():
 	title.add_child(close_button)
 	title.add_child(icon_display)
 	
-	if floating:
+	if floating and !Engine.is_editor_hint():
 		add_child(draggable_title, false, Node.INTERNAL_MODE_FRONT)
 	
 	theme_changed.connect(_on_theme_changed.bind())
@@ -127,7 +127,7 @@ func _process(_delta):
 		_on_theme_changed()
 	
 	# make sure the draggable shit is correct
-	if floating:
+	if floating and !Engine.is_editor_hint():
 		draggable_title.scale = Vector2(size.x, 45)
 	
 	# sync the window title icon stuff
@@ -143,7 +143,6 @@ func _on_theme_changed():
 	if bg != null and title != null:
 		bg.add_theme_stylebox_override("panel", background_style)
 		title.add_theme_stylebox_override("panel", title_style)
-		title_name.add_theme_color_override("font_color", get_theme_color("title_color", "MksWindow"))
 		close_button.icon = get_theme_icon("close", "MksWindow")
 		close_button.add_theme_color_override("icon_normal_color", get_theme_color("icon_modulate", "MksWindow"))
 		close_button.add_theme_color_override("icon_hover_color", get_theme_color("icon_modulate", "MksWindow"))
