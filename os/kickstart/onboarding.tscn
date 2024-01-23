@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://dgyt7s3yvhtmw"]
 
 [ext_resource type="Texture2D" uid="uid://b1xte1s5dfkx0" path="res://os_assets/bootloader/onboarding_wallpaper.png" id="1_4v4vy"]
-[ext_resource type="AudioStream" uid="uid://batyrkqpccryr" path="res://os_assets/music/login.mp3" id="1_f5r1d"]
+[ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_vsbkt"]
 [ext_resource type="Texture2D" uid="uid://dxy3cujlfwbex" path="res://os_assets/bootloader/logo2.png" id="2_5a320"]
 [ext_resource type="Texture2D" uid="uid://i3m153hyef37" path="res://os_assets/user_icons/small/cat.png" id="3_ce6mb"]
 [ext_resource type="Script" path="res://os/kickstart/onboarding/set_language.gd" id="4_35eyj"]
@@ -66,10 +66,6 @@ libraries = {
 "": SubResource("AnimationLibrary_6xh8p")
 }
 autoplay = "asnadajfjajfajdfsjafkak"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_f5r1d")
-autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -266,5 +262,9 @@ display_name = NodePath("../HBoxContainer3/LineEdit2")
 photo = NodePath("../HBoxContainer/OptionButton")
 dashboard = ExtResource("7_1mthd")
 atpaeotory = NodePath("../../../..")
+
+[node name="SystemSoundPlayer" type="Node" parent="."]
+script = ExtResource("1_vsbkt")
+autoplay = true
 
 [connection signal="item_selected" from="MarginContainer/HBoxContainer/OptionButton" to="MarginContainer/HBoxContainer/OptionButton" method="_on_item_selected"]
