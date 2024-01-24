@@ -9,11 +9,13 @@
 [ext_resource type="Script" path="res://os/dashboardtk/mks_popup_hide.gd" id="6_mc83a"]
 
 [node name="MksWindow" type="Control" node_paths=PackedStringArray("content_root")]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
 offset_top = 45.0
 offset_right = 341.2
 offset_bottom = 288.0
+scale = Vector2(1e-05, 1e-05)
 script = ExtResource("1_qsqac")
 content_root = NodePath("contents")
 window_name = "Awesome Window :)"

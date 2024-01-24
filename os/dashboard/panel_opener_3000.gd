@@ -1,6 +1,6 @@
 extends Button
 
-enum Modes { APP_LAUNCHER }
+enum Modes { APP_LAUNCHER, QUICK_SETTINGS }
 
 @export var panel: Panel
 @export var panel_type := Modes.APP_LAUNCHER
@@ -12,6 +12,9 @@ func _ready():
 		Modes.APP_LAUNCHER:
 			from = Vector2(-400, Frambos.resolution.y - 300)
 			to = Vector2(64, Frambos.resolution.y - 300)
+		Modes.QUICK_SETTINGS:
+			from = Vector2(Frambos.resolution.x - 300, -300)
+			to = Vector2(Frambos.resolution.x - 300, 40)
 
 func _toggled(toggled_on):
 	var tween := create_tween()

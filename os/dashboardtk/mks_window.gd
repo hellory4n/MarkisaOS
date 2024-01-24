@@ -30,7 +30,7 @@ class_name MksWindow
 			lol = Vector2(853, 480)
 		else:
 			lol = Frambos.resolution
-		size = (lol * value / 100) - Vector2(0, 45)
+		size = (lol * value / 100) - Vector2(64, 85)
 		update_configuration_warnings()
 
 var title_height: float
@@ -107,12 +107,15 @@ func _ready():
 	
 	# make sure the size is right
 	if not Engine.is_editor_hint():
-		size = (Frambos.resolution * size_percentage / 100) - Vector2(0, 45)
+		size = (Frambos.resolution * size_percentage / 100) - Vector2(64, 85)
 	
 	# go to the center of the screen
 	if not Engine.is_editor_hint():
-		var cool_size := size + Vector2(0, 45)
-		position = (Frambos.resolution + Vector2(64, 40)) / 2 - (cool_size / 2)
+		if floating:
+			var cool_size := size + Vector2(64, 45)
+			position = (Frambos.resolution + Vector2(64, 40)) / 2 - (cool_size / 2)
+		else:
+			position = Vector2(64, 85)
 	
 	# show up in the dock
 	if not Frambos.is_on_mobile and not Engine.is_editor_hint():

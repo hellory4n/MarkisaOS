@@ -25,6 +25,9 @@ func _ready():
 	var system_info := SystemInfo.load()
 	TranslationServer.set_locale(system_info.language)
 	
+	# so the sound manager doesn't spam comical amounts of warnings
+	SoundManager.set_default_music_bus("Music")
+	
 func _process(_delta: float):
 	if Input.is_action_just_released("skip_boot"):
 		load_thing()

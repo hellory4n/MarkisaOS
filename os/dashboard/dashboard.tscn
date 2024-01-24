@@ -1,16 +1,22 @@
-[gd_scene load_steps=27 format=3 uid="uid://chalhd48g1f40"]
+[gd_scene load_steps=35 format=3 uid="uid://chalhd48g1f40"]
 
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
 [ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_k1cua"]
+[ext_resource type="Texture2D" uid="uid://dqwh1cwy4yyjg" path="res://os_assets/user_icons/football.png" id="3_uwr4o"]
+[ext_resource type="Script" path="res://os/dashboard/quick_settings/user_shit.gd" id="4_fwinw"]
 [ext_resource type="Texture2D" uid="uid://byi3hqcm5xfi8" path="res://os_assets/high_peaks/icons/markisa.png" id="4_ogjlo"]
 [ext_resource type="Script" path="res://os/dashboard/app_launcher_switch_category.gd" id="4_ue5rf"]
 [ext_resource type="Texture2D" uid="uid://056d8d0ebqr0" path="res://os_assets/high_peaks/color_icons/all_apps.png" id="5_dd4s0"]
 [ext_resource type="Texture2D" uid="uid://cyk61r2bex7n1" path="res://os_assets/high_peaks/icons/sticky_note.png" id="5_lgxgi"]
+[ext_resource type="Texture2D" uid="uid://tj22eoxcbars" path="res://os_assets/high_peaks/icons/bar_chart.png" id="5_p5c8r"]
+[ext_resource type="Script" path="res://os/dashboard/quick_settings/epic_slider.gd" id="5_qb2ur"]
 [ext_resource type="Script" path="res://os/dashboard/panel_opener_3000.gd" id="5_sop7h"]
 [ext_resource type="Texture2D" uid="uid://bv2ovxx78eoxl" path="res://os_assets/high_peaks/icons/calculator.png" id="6_c0acn"]
+[ext_resource type="Texture2D" uid="uid://dfknxpplo0hj4" path="res://os_assets/high_peaks/icons/logout.png" id="6_p6ha8"]
+[ext_resource type="Texture2D" uid="uid://b3m63b7xawjns" path="res://os_assets/high_peaks/icons/power.png" id="7_8l7dd"]
 [ext_resource type="Texture2D" uid="uid://ospjb7hqi56y" path="res://os_assets/high_peaks/icons/notifications.png" id="7_bnfx1"]
-[ext_resource type="Texture2D" uid="uid://bsnbdyq4ehl6f" path="res://os_assets/high_peaks/icons/search.png" id="7_ndfjn"]
 [ext_resource type="Texture2D" uid="uid://bruqjrtdgh5bl" path="res://os_assets/high_peaks/icons/settings.png" id="7_vnlc6"]
+[ext_resource type="Script" path="res://os/dashboard/quick_settings/logout_or_shutdown.gd" id="9_akfv3"]
 [ext_resource type="Texture2D" uid="uid://cup5nv5t4sxkl" path="res://os_assets/high_peaks/icons/home.png" id="11_uugky"]
 [ext_resource type="Texture2D" uid="uid://bm25hw6qwi3e" path="res://os_assets/high_peaks/icons/settings_but_smaller.png" id="12_xq65f"]
 [ext_resource type="Texture2D" uid="uid://conwp216c1rkd" path="res://os_assets/high_peaks/icons/code.png" id="13_xalng"]
@@ -23,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://cudnqcij55gxu" path="res://os_assets/high_peaks/icons/finance_mode.png" id="18_rt2se"]
 [ext_resource type="Texture2D" uid="uid://j3u2nqkg26dl" path="res://os_assets/high_peaks/icons/system.png" id="19_bjg4p"]
 [ext_resource type="Texture2D" uid="uid://ddohtmym5shrt" path="res://os_assets/high_peaks/icons/utilities.png" id="20_gfn4i"]
+[ext_resource type="Script" path="res://os/dashboard/quick_settings/cancel_logout_or_shutdown.gd" id="30_56kft"]
+[ext_resource type="Script" path="res://os/dashboard/quick_settings/continue_logout_or_shutdown.gd" id="31_2g0fv"]
 
 [sub_resource type="Animation" id="Animation_n8ctj"]
 resource_name = "startup"
@@ -105,6 +113,116 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="QuickSettings" type="Panel" parent="GuiStuff"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = -300.0
+grow_horizontal = 0
+theme_type_variation = &"OsPanelThingy"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/QuickSettings"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -145.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="UserShit" type="Button" parent="GuiStuff/QuickSettings/VBoxContainer"]
+layout_mode = 2
+auto_translate = false
+mouse_filter = 2
+theme_type_variation = &"PanelButton"
+text = "Robert Balls"
+icon = ExtResource("3_uwr4o")
+text_overrun_behavior = 3
+expand_icon = true
+script = ExtResource("4_fwinw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GuiStuff/QuickSettings/VBoxContainer"]
+custom_minimum_size = Vector2(290, 38)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="GuiStuff/QuickSettings/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Sound:"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="GuiStuff/QuickSettings/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("5_qb2ur")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GuiStuff/QuickSettings/VBoxContainer"]
+custom_minimum_size = Vector2(290, 38)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="GuiStuff/QuickSettings/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Music:"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="GuiStuff/QuickSettings/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("5_qb2ur")
+music = true
+
+[node name="Settings" type="Button" parent="GuiStuff/QuickSettings/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Settings"
+icon = ExtResource("12_xq65f")
+expand_icon = true
+
+[node name="SystemMonitor" type="Button" parent="GuiStuff/QuickSettings/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "System Monitor"
+icon = ExtResource("5_p5c8r")
+expand_icon = true
+
+[node name="Logout" type="Button" parent="GuiStuff/QuickSettings/VBoxContainer" node_paths=PackedStringArray("thing", "awesome_shutdown_button_thing_lmao")]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Logout"
+icon = ExtResource("6_p6ha8")
+expand_icon = true
+script = ExtResource("9_akfv3")
+thing = NodePath("../../../../BigDumbConfirmationBullshit")
+awesome_shutdown_button_thing_lmao = NodePath("../../../../BigDumbConfirmationBullshit/CenterContainer/VBoxContainer/HBoxContainer/Button2")
+
+[node name="Shutdown" type="Button" parent="GuiStuff/QuickSettings/VBoxContainer" node_paths=PackedStringArray("thing", "awesome_shutdown_button_thing_lmao")]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Shutdown"
+icon = ExtResource("7_8l7dd")
+expand_icon = true
+script = ExtResource("9_akfv3")
+thing = NodePath("../../../../BigDumbConfirmationBullshit")
+shutdown = true
+awesome_shutdown_button_thing_lmao = NodePath("../../../../BigDumbConfirmationBullshit/CenterContainer/VBoxContainer/HBoxContainer/Button2")
 
 [node name="AppLauncher" type="Panel" parent="GuiStuff"]
 custom_minimum_size = Vector2(400, 300)
@@ -922,14 +1040,14 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_nkorl")
 [node name="Time" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(175, 0)
 layout_mode = 2
-tooltip_text = "Time and date"
+auto_translate = false
 theme_type_variation = &"PanelButton"
 text = "0001-01-01 01:01"
 expand_icon = true
 
 [node name="Money" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 layout_mode = 2
-tooltip_text = "Your money"
+auto_translate = false
 theme_type_variation = &"PanelButton"
 text = "Ø0.01"
 expand_icon = true
@@ -939,14 +1057,18 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nkorl")
 
-[node name="QuickSettings" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
+[node name="QuickSettings" type="Button" parent="GuiStuff/Panel/HBoxContainer" node_paths=PackedStringArray("panel")]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Quick settings"
 theme_type_variation = &"PanelButton"
+toggle_mode = true
 icon = ExtResource("7_vnlc6")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("5_sop7h")
+panel = NodePath("../../../QuickSettings")
+panel_type = 1
 
 [node name="Notifications" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
@@ -960,8 +1082,60 @@ expand_icon = true
 [node name="Search" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-tooltip_text = "Search"
+tooltip_text = "Show dekstop"
 theme_type_variation = &"PanelButton"
-icon = ExtResource("7_ndfjn")
+icon = ExtResource("11_uugky")
 icon_alignment = 1
 expand_icon = true
+
+[node name="BigDumbConfirmationBullshit" type="ColorRect" parent="."]
+visible = false
+z_index = 4096
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+
+[node name="CenterContainer" type="CenterContainer" parent="BigDumbConfirmationBullshit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BigDumbConfirmationBullshit/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BigDumbConfirmationBullshit/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Header"
+text = "Are you sure?"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="BigDumbConfirmationBullshit/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Progress is saved automatically."
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BigDumbConfirmationBullshit/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="BigDumbConfirmationBullshit/CenterContainer/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("thing")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "Cancel"
+script = ExtResource("30_56kft")
+thing = NodePath("../../../..")
+
+[node name="Button2" type="Button" parent="BigDumbConfirmationBullshit/CenterContainer/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("the_bullshit_that_will_die")]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Continue"
+script = ExtResource("31_2g0fv")
+the_bullshit_that_will_die = NodePath("../../../../..")

@@ -122,7 +122,7 @@ popup/item_1/text = "Português"
 popup/item_1/id = 2
 script = ExtResource("4_35eyj")
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer" node_paths=PackedStringArray("one_parent_to_rule_them_all")]
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer" node_paths=PackedStringArray("one_parent_to_rule_them_all", "xd")]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"Secondary"
@@ -130,6 +130,7 @@ text = "Shutdown"
 script = ExtResource("4_76qe0")
 shutdown = ExtResource("5_gqh0a")
 one_parent_to_rule_them_all = NodePath("../../..")
+xd = NodePath("../../../MusicSwitcher")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(325, 0)
