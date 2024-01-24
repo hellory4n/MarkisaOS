@@ -1,15 +1,28 @@
-[gd_scene load_steps=14 format=3 uid="uid://chalhd48g1f40"]
+[gd_scene load_steps=27 format=3 uid="uid://chalhd48g1f40"]
 
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
 [ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_k1cua"]
-[ext_resource type="PackedScene" uid="uid://gh0q6tcc83uq" path="res://apps/markisa/test/app.tscn" id="3_g7l8b"]
 [ext_resource type="Texture2D" uid="uid://byi3hqcm5xfi8" path="res://os_assets/high_peaks/icons/markisa.png" id="4_ogjlo"]
+[ext_resource type="Script" path="res://os/dashboard/app_launcher_switch_category.gd" id="4_ue5rf"]
 [ext_resource type="Texture2D" uid="uid://056d8d0ebqr0" path="res://os_assets/high_peaks/color_icons/all_apps.png" id="5_dd4s0"]
 [ext_resource type="Texture2D" uid="uid://cyk61r2bex7n1" path="res://os_assets/high_peaks/icons/sticky_note.png" id="5_lgxgi"]
+[ext_resource type="Script" path="res://os/dashboard/panel_opener_3000.gd" id="5_sop7h"]
 [ext_resource type="Texture2D" uid="uid://bv2ovxx78eoxl" path="res://os_assets/high_peaks/icons/calculator.png" id="6_c0acn"]
 [ext_resource type="Texture2D" uid="uid://ospjb7hqi56y" path="res://os_assets/high_peaks/icons/notifications.png" id="7_bnfx1"]
 [ext_resource type="Texture2D" uid="uid://bsnbdyq4ehl6f" path="res://os_assets/high_peaks/icons/search.png" id="7_ndfjn"]
 [ext_resource type="Texture2D" uid="uid://bruqjrtdgh5bl" path="res://os_assets/high_peaks/icons/settings.png" id="7_vnlc6"]
+[ext_resource type="Texture2D" uid="uid://cup5nv5t4sxkl" path="res://os_assets/high_peaks/icons/home.png" id="11_uugky"]
+[ext_resource type="Texture2D" uid="uid://bm25hw6qwi3e" path="res://os_assets/high_peaks/icons/settings_but_smaller.png" id="12_xq65f"]
+[ext_resource type="Texture2D" uid="uid://conwp216c1rkd" path="res://os_assets/high_peaks/icons/code.png" id="13_xalng"]
+[ext_resource type="Texture2D" uid="uid://c5xfagwea1j4o" path="res://os_assets/high_peaks/color_icons/small_markisa.png" id="14_5qou7"]
+[ext_resource type="Texture2D" uid="uid://by7166sbjsfub" path="res://os_assets/high_peaks/icons/joystick.png" id="14_o6sbm"]
+[ext_resource type="Texture2D" uid="uid://bh7mw84gvqqj8" path="res://os_assets/high_peaks/icons/palette.png" id="15_2qqku"]
+[ext_resource type="Script" path="res://os/dashboardtk/window_opener.gd" id="15_8sbp8"]
+[ext_resource type="Texture2D" uid="uid://c83dpl8owmxn5" path="res://os_assets/high_peaks/icons/internet.png" id="16_6x2i1"]
+[ext_resource type="Texture2D" uid="uid://bp5714nd12rov" path="res://os_assets/high_peaks/icons/live_tv.png" id="17_qh8h4"]
+[ext_resource type="Texture2D" uid="uid://cudnqcij55gxu" path="res://os_assets/high_peaks/icons/finance_mode.png" id="18_rt2se"]
+[ext_resource type="Texture2D" uid="uid://j3u2nqkg26dl" path="res://os_assets/high_peaks/icons/system.png" id="19_bjg4p"]
+[ext_resource type="Texture2D" uid="uid://ddohtmym5shrt" path="res://os_assets/high_peaks/icons/utilities.png" id="20_gfn4i"]
 
 [sub_resource type="Animation" id="Animation_n8ctj"]
 resource_name = "startup"
@@ -84,12 +97,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="MksWindow" parent="Windows" instance=ExtResource("3_g7l8b")]
-offset_left = 287.9
-offset_top = 116.0
-offset_right = 629.1
-offset_bottom = 359.0
-
 [node name="GuiStuff" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -98,6 +105,725 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="AppLauncher" type="Panel" parent="GuiStuff"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -300.0
+grow_vertical = 0
+theme_type_variation = &"OsPanelThingy"
+
+[node name="SoTrue" type="HBoxContainer" parent="GuiStuff/AppLauncher"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="Home" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Home"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("11_uugky")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Home")
+the_parent = NodePath("../..")
+
+[node name="Accessories" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Accessories"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("12_xq65f")
+expand_icon = true
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Accessories")
+the_parent = NodePath("../..")
+
+[node name="Development" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Development"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("13_xalng")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Development")
+the_parent = NodePath("../..")
+
+[node name="Games" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Games"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("14_o6sbm")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Games")
+the_parent = NodePath("../..")
+
+[node name="Graphics" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Graphics"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("15_2qqku")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Graphics")
+the_parent = NodePath("../..")
+
+[node name="Internet" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Internet"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("16_6x2i1")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Internet")
+the_parent = NodePath("../..")
+
+[node name="Multimedia" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Multimedia"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("17_qh8h4")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Multimedia")
+the_parent = NodePath("../..")
+
+[node name="Office" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Office"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("18_rt2se")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Office")
+the_parent = NodePath("../..")
+
+[node name="System" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "System"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("19_bjg4p")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../System")
+the_parent = NodePath("../..")
+
+[node name="Utilities" type="Button" parent="GuiStuff/AppLauncher/SoTrue" node_paths=PackedStringArray("awesome_category", "the_parent")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+tooltip_text = "Utilities"
+theme_type_variation = &"PanelButton"
+icon = ExtResource("20_gfn4i")
+script = ExtResource("4_ue5rf")
+awesome_category = NodePath("../../Utilities")
+the_parent = NodePath("../..")
+
+[node name="HSeparator" type="HSeparator" parent="GuiStuff/AppLauncher"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 0
+offset_top = 256.0
+offset_right = 400.0
+offset_bottom = 260.0
+
+[node name="Home" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Home"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Home/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="Accessories" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Accessories"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Accessories/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Accessories/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="Development" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Development"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Development/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Development/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener3" type="Button" parent="GuiStuff/AppLauncher/Development/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="Games" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Games"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Games/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Games/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener3" type="Button" parent="GuiStuff/AppLauncher/Games/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener4" type="Button" parent="GuiStuff/AppLauncher/Games/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="Graphics" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Graphics"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Graphics/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Graphics/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener3" type="Button" parent="GuiStuff/AppLauncher/Graphics/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener4" type="Button" parent="GuiStuff/AppLauncher/Graphics/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener5" type="Button" parent="GuiStuff/AppLauncher/Graphics/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="Internet" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Internet"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Internet/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Internet/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener3" type="Button" parent="GuiStuff/AppLauncher/Internet/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener4" type="Button" parent="GuiStuff/AppLauncher/Internet/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener5" type="Button" parent="GuiStuff/AppLauncher/Internet/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener6" type="Button" parent="GuiStuff/AppLauncher/Internet/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="Multimedia" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Multimedia"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Multimedia/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Multimedia/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener3" type="Button" parent="GuiStuff/AppLauncher/Multimedia/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener4" type="Button" parent="GuiStuff/AppLauncher/Multimedia/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener5" type="Button" parent="GuiStuff/AppLauncher/Multimedia/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener6" type="Button" parent="GuiStuff/AppLauncher/Multimedia/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener7" type="Button" parent="GuiStuff/AppLauncher/Multimedia/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="Office" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Office"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Office/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Office/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener3" type="Button" parent="GuiStuff/AppLauncher/Office/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener4" type="Button" parent="GuiStuff/AppLauncher/Office/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener5" type="Button" parent="GuiStuff/AppLauncher/Office/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener6" type="Button" parent="GuiStuff/AppLauncher/Office/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener7" type="Button" parent="GuiStuff/AppLauncher/Office/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener8" type="Button" parent="GuiStuff/AppLauncher/Office/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="System" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/System"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener3" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener4" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener5" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener6" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener7" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener8" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener9" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="Utilities" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/AppLauncher/Utilities"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener3" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener4" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener5" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener6" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener7" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener8" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener9" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
+
+[node name="WindowOpener10" type="Button" parent="GuiStuff/AppLauncher/Utilities/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "Epic Application"
+icon = ExtResource("14_5qou7")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/test/app.tscn"
 
 [node name="Dock" type="Panel" parent="GuiStuff"]
 custom_minimum_size = Vector2(64, 0)
@@ -134,12 +860,15 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nkorl")
 
-[node name="AppLauncher" type="Button" parent="GuiStuff/Dock/Dock"]
+[node name="AppLauncher" type="Button" parent="GuiStuff/Dock/Dock" node_paths=PackedStringArray("panel")]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 tooltip_text = "App launcher"
 theme_type_variation = &"DockButton"
+toggle_mode = true
 icon = ExtResource("5_dd4s0")
+script = ExtResource("5_sop7h")
+panel = NodePath("../../../AppLauncher")
 
 [node name="Panel" type="Panel" parent="GuiStuff"]
 custom_minimum_size = Vector2(0, 40)
@@ -164,6 +893,7 @@ layout_mode = 2
 tooltip_text = "About this system"
 theme_type_variation = &"PanelButton"
 icon = ExtResource("4_ogjlo")
+icon_alignment = 1
 expand_icon = true
 
 [node name="StickyNote" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
@@ -172,6 +902,7 @@ layout_mode = 2
 tooltip_text = "Notes"
 theme_type_variation = &"PanelButton"
 icon = ExtResource("5_lgxgi")
+icon_alignment = 1
 expand_icon = true
 
 [node name="Calculator" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
@@ -180,6 +911,7 @@ layout_mode = 2
 tooltip_text = "Calculator"
 theme_type_variation = &"PanelButton"
 icon = ExtResource("6_c0acn")
+icon_alignment = 1
 expand_icon = true
 
 [node name="Spacer" type="Panel" parent="GuiStuff/Panel/HBoxContainer"]
@@ -213,6 +945,7 @@ layout_mode = 2
 tooltip_text = "Quick settings"
 theme_type_variation = &"PanelButton"
 icon = ExtResource("7_vnlc6")
+icon_alignment = 1
 expand_icon = true
 
 [node name="Notifications" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
@@ -221,6 +954,7 @@ layout_mode = 2
 tooltip_text = "Notifications"
 theme_type_variation = &"PanelButton"
 icon = ExtResource("7_bnfx1")
+icon_alignment = 1
 expand_icon = true
 
 [node name="Search" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
@@ -229,4 +963,5 @@ layout_mode = 2
 tooltip_text = "Search"
 theme_type_variation = &"PanelButton"
 icon = ExtResource("7_ndfjn")
+icon_alignment = 1
 expand_icon = true
