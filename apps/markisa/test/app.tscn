@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://gh0q6tcc83uq"]
+[gd_scene load_steps=9 format=3 uid="uid://gh0q6tcc83uq"]
 
 [ext_resource type="Script" path="res://os/dashboardtk/mks_window.gd" id="1_qsqac"]
 [ext_resource type="Texture2D" uid="uid://jwp6ncfmlefd" path="res://os_assets/high_peaks/color_icons/big_markisa.png" id="2_blevj"]
@@ -6,16 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://c5xfagwea1j4o" path="res://os_assets/high_peaks/color_icons/small_markisa.png" id="2_k4we4"]
 [ext_resource type="Script" path="res://os/dashboardtk/mks_popup.gd" id="4_80nch"]
 [ext_resource type="Script" path="res://os/dashboardtk/mks_popup_show.gd" id="4_o40t8"]
+[ext_resource type="Script" path="res://apps/markisa/test/jnjnhjhjjjk.gd" id="6_48elu"]
 [ext_resource type="Script" path="res://os/dashboardtk/mks_popup_hide.gd" id="6_mc83a"]
 
 [node name="MksWindow" type="Control" node_paths=PackedStringArray("content_root")]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
 offset_top = 45.0
-offset_right = 341.2
-offset_bottom = 288.0
-scale = Vector2(1e-05, 1e-05)
+offset_right = 277.2
+offset_bottom = 248.0
 script = ExtResource("1_qsqac")
 content_root = NodePath("contents")
 window_name = "Awesome Window :)"
@@ -57,6 +56,12 @@ theme_type_variation = &"Secondary"
 text = "show popup lol"
 script = ExtResource("4_o40t8")
 popup = NodePath("../../MksPopup")
+
+[node name="Button3" type="Button" parent="contents/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Secondary"
+text = "show notification"
+script = ExtResource("6_48elu")
 
 [node name="MksPopup" type="Control" parent="contents"]
 visible = false

@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6t3e3kd3r48x"]
+
+[ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_wscfa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c8aq8"]
+
+[node name="Notification" type="Panel"]
+z_index = 4000
+custom_minimum_size = Vector2(285, 130)
+offset_right = 285.0
+offset_bottom = 130.0
+mouse_filter = 2
+theme_type_variation = &"OsPanelThingy"
+
+[node name="App" type="Label" parent="."]
+custom_minimum_size = Vector2(275, 30)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1.0
+offset_bottom = 30.0
+grow_horizontal = 0
+theme_type_variation = &"Header"
+text = "Epic App Epic App Epic App Epic App"
+label_settings = SubResource("LabelSettings_c8aq8")
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Text" type="Label" parent="."]
+custom_minimum_size = Vector2(275, 100)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -275.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Fuck you XD Fuck you XD Fuck you XD Fuck you XD Fuck you XD Fuck you XD Fuck you XD Fuck you XD Fuck you XD Fuck you XD Fuck you XD Fuck you XD "
+autowrap_mode = 3
+text_overrun_behavior = 3
+
+[node name="SystemSoundPlayer" type="Node" parent="."]
+script = ExtResource("1_wscfa")
+sound = 5
+autoplay = true

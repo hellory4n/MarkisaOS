@@ -118,7 +118,7 @@ func _ready():
 			position = Vector2(64, 85)
 	
 	# show up in the dock
-	if not Frambos.is_on_mobile and not Engine.is_editor_hint():
+	if not Engine.is_editor_hint():
 		var haha := get_node("/root/Dashboard/GuiStuff/Dock/Dock/Apps")
 		dock_button = Button.new()
 		dock_button.icon = dock_icon
