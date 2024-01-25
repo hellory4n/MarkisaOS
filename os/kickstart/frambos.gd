@@ -18,15 +18,14 @@ func login(username: String) -> void:
 func notify(app: String, text: String) -> void:
 	# I HATE DYNAMIC TYPING I HATE DYNAMIC TYPING I HATE DYNAMIC TYPING I HATE DYNAMIC TYPING I HATE DYNAMIC TYPING I HATE DYNAMIC TYPING 
 	var ngdhkdo := notifficatiionsdkhift.instantiate() as Panel
-	(ngdhkdo.get_node("App") as Label).text = app
-	(ngdhkdo.get_node("Text") as Label).text = text
+	var A := ngdhkdo.get_node("Text") as RichTextLabel
+	A.append_text("[b]" + app + "[/b]\n" + text)
 	add_child(ngdhkdo)
 	
 	# awesome animation
 	var tween := create_tween()
 	tween.set_parallel(true)
-	@warning_ignore("integer_division")
-	ngdhkdo.position = Vector2((resolution.x / 2) - (285 / 2), resolution.y)
+	ngdhkdo.position = Vector2((resolution.x / 2.0) - (285.0 / 2.0), resolution.y)
 	ngdhkdo.modulate = Color.TRANSPARENT
 	# don't feel like writing good code today
 	tween.tween_property(ngdhkdo, "position", Vector2(ngdhkdo.position.x, resolution.y - 150), 0.2).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
@@ -45,3 +44,12 @@ func notify(app: String, text: String) -> void:
 		twin.finished.connect(func(): ngdhkdo.queue_free())
 	)
 	ngdhkdo.add_child(timer)
+	
+	# make it show up in the notification list lmao
+	var jhsgsjkghjirjk := get_node("/root/Dashboard/GuiStuff/Notifications/ScrollContainer/VBoxContainer")
+	var g := notifficatiionsdkhift.instantiate() as Panel
+	(g.get_node("Text") as RichTextLabel).append_text("[b]" + app + "[/b]\n" + text)
+	g.modulate = Color.WHITE
+	g.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	g.z_index = 0
+	jhsgsjkghjirjk.add_child(g)

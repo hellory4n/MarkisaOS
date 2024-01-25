@@ -224,6 +224,44 @@ thing = NodePath("../../../../BigDumbConfirmationBullshit")
 shutdown = true
 awesome_shutdown_button_thing_lmao = NodePath("../../../../BigDumbConfirmationBullshit/CenterContainer/VBoxContainer/HBoxContainer/Button2")
 
+[node name="Notifications" type="Panel" parent="GuiStuff"]
+custom_minimum_size = Vector2(350, 400)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -350.0
+offset_top = -400.0
+grow_horizontal = 0
+theme_type_variation = &"OsPanelThingy"
+
+[node name="Label" type="Label" parent="GuiStuff/Notifications"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_type_variation = &"Header"
+text = "Notifications"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GuiStuff/Notifications"]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuiStuff/Notifications/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
 [node name="AppLauncher" type="Panel" parent="GuiStuff"]
 custom_minimum_size = Vector2(400, 300)
 layout_mode = 1
@@ -1072,16 +1110,20 @@ script = ExtResource("5_sop7h")
 panel = NodePath("../../../QuickSettings")
 panel_type = 1
 
-[node name="Notifications" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
+[node name="Notifications" type="Button" parent="GuiStuff/Panel/HBoxContainer" node_paths=PackedStringArray("panel")]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Notifications"
 theme_type_variation = &"PanelButton"
+toggle_mode = true
 icon = ExtResource("7_bnfx1")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("5_sop7h")
+panel = NodePath("../../../Notifications")
+panel_type = 2
 
-[node name="Search" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
+[node name="Home" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Show dekstop"
