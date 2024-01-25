@@ -145,7 +145,7 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("1_ipe8o")
 theme_override_fonts/bold_font = ExtResource("4_8wgrl")
 bbcode_enabled = true
-text = "[color=limegreen][b]MarkisaOS v0.13.0[/b]
+text = "[color=limegreen][b]MarkisaOS v0.13.1[/b]
 by hellory4n, alex343xd[/color]
 
 Starting Frambos kernel v7.4 core...

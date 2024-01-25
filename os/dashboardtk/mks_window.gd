@@ -30,7 +30,7 @@ class_name MksWindow
 			lol = Vector2(853, 480)
 		else:
 			lol = Frambos.resolution
-		size = (lol * value / 100) - Vector2(64, 85)
+		size = (lol * (value / 100)) - Vector2(64, 85)
 		update_configuration_warnings()
 
 var title_height: float

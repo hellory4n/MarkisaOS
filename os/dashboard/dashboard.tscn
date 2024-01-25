@@ -1013,6 +1013,8 @@ theme_type_variation = &"PanelButton"
 icon = ExtResource("4_ogjlo")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("15_8sbp8")
+window = "res://os/dashboard/about.tscn"
 
 [node name="StickyNote" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)

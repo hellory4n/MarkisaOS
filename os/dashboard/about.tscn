@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://clh7nx5hcpjsn"]
+
+[ext_resource type="Script" path="res://os/dashboardtk/mks_window.gd" id="1_njri0"]
+[ext_resource type="Texture2D" uid="uid://jwp6ncfmlefd" path="res://os_assets/high_peaks/color_icons/big_markisa.png" id="2_6rk4m"]
+[ext_resource type="Texture2D" uid="uid://c5xfagwea1j4o" path="res://os_assets/high_peaks/color_icons/small_markisa.png" id="3_tnqvc"]
+[ext_resource type="Texture2D" uid="uid://dxy3cujlfwbex" path="res://os_assets/bootloader/logo2.png" id="4_2x1ri"]
+[ext_resource type="Script" path="res://os/dashboardtk/window_opener.gd" id="4_4edvw"]
+
+[node name="About" type="Control" node_paths=PackedStringArray("content_root")]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 45.0
+offset_right = 319.85
+offset_bottom = 344.0
+script = ExtResource("1_njri0")
+content_root = NodePath("contents")
+window_name = "About"
+dock_icon = ExtResource("2_6rk4m")
+small_icon = ExtResource("3_tnqvc")
+size_percentage = Vector2(45, 80)
+
+[node name="contents" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="contents"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="contents/CenterContainer"]
+custom_minimum_size = Vector2(275, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="contents/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture = ExtResource("4_2x1ri")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="contents/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(275, 0)
+layout_mode = 2
+text = "MarkisaOS Me v0.13.1 - kernel v7.4
+Running on [Epic Device]
+© 2069 Passionfruit Corporation"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="contents/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WindowOpener" type="Button" parent="contents/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Secondary"
+text = "Credits"
+script = ExtResource("4_4edvw")
+window = "res://os/dashboard/credits.tscn"
