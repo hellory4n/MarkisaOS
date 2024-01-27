@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://chalhd48g1f40"]
+[gd_scene load_steps=37 format=3 uid="uid://chalhd48g1f40"]
 
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
 [ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_k1cua"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ospjb7hqi56y" path="res://os_assets/high_peaks/icons/notifications.png" id="7_bnfx1"]
 [ext_resource type="Texture2D" uid="uid://bruqjrtdgh5bl" path="res://os_assets/high_peaks/icons/settings.png" id="7_vnlc6"]
 [ext_resource type="Script" path="res://os/dashboard/quick_settings/logout_or_shutdown.gd" id="9_akfv3"]
+[ext_resource type="Script" path="res://os/dashboard/sticky_note_stuff_xdjjfjdijkgh.gd" id="11_eaven"]
 [ext_resource type="Texture2D" uid="uid://cup5nv5t4sxkl" path="res://os_assets/high_peaks/icons/home.png" id="11_uugky"]
 [ext_resource type="Texture2D" uid="uid://bm25hw6qwi3e" path="res://os_assets/high_peaks/icons/settings_but_smaller.png" id="12_xq65f"]
 [ext_resource type="Texture2D" uid="uid://conwp216c1rkd" path="res://os_assets/high_peaks/icons/code.png" id="13_xalng"]
@@ -262,6 +263,33 @@ grow_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
+
+[node name="StickyNotes" type="Panel" parent="GuiStuff"]
+custom_minimum_size = Vector2(350, 400)
+layout_mode = 1
+offset_left = 64.0
+offset_top = -400.0
+offset_right = 414.0
+theme_type_variation = &"OsPanelThingy"
+
+[node name="TextEdit" type="TextEdit" parent="GuiStuff/StickyNotes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Write your notes here..."
+wrap_mode = 1
+script = ExtResource("11_eaven")
+
+[node name="Timer" type="Timer" parent="GuiStuff/StickyNotes/TextEdit"]
+wait_time = 0.5
+autostart = true
 
 [node name="AppLauncher" type="Panel" parent="GuiStuff"]
 custom_minimum_size = Vector2(400, 300)
@@ -1055,14 +1083,18 @@ expand_icon = true
 script = ExtResource("15_8sbp8")
 window = "res://os/dashboard/about.tscn"
 
-[node name="StickyNote" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
+[node name="StickyNote" type="Button" parent="GuiStuff/Panel/HBoxContainer" node_paths=PackedStringArray("panel")]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Notes"
 theme_type_variation = &"PanelButton"
+toggle_mode = true
 icon = ExtResource("5_lgxgi")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("5_sop7h")
+panel = NodePath("../../../StickyNotes")
+panel_type = 3
 
 [node name="Calculator" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(64, 0)
@@ -1187,3 +1219,5 @@ size_flags_horizontal = 3
 text = "Continue"
 script = ExtResource("31_2g0fv")
 the_bullshit_that_will_die = NodePath("../../../../..")
+
+[connection signal="timeout" from="GuiStuff/StickyNotes/TextEdit/Timer" to="GuiStuff/StickyNotes/TextEdit" method="_on_timer_timeout"]
