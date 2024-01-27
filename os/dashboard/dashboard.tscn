@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://chalhd48g1f40"]
+[gd_scene load_steps=40 format=3 uid="uid://chalhd48g1f40"]
 
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
 [ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_k1cua"]
@@ -19,6 +19,9 @@
 [ext_resource type="Script" path="res://os/dashboard/quick_settings/logout_or_shutdown.gd" id="9_akfv3"]
 [ext_resource type="Script" path="res://os/dashboard/sticky_note_stuff_xdjjfjdijkgh.gd" id="11_eaven"]
 [ext_resource type="Texture2D" uid="uid://cup5nv5t4sxkl" path="res://os_assets/high_peaks/icons/home.png" id="11_uugky"]
+[ext_resource type="Script" path="res://os/dashboard/calculator/clear.gd" id="12_3dlr0"]
+[ext_resource type="Script" path="res://os/dashboard/calculator/evaluate_and_shit.gd" id="12_a0yvq"]
+[ext_resource type="Script" path="res://os/dashboard/calculator/insert_stuff_in_calculator.gd" id="12_nm34w"]
 [ext_resource type="Texture2D" uid="uid://bm25hw6qwi3e" path="res://os_assets/high_peaks/icons/settings_but_smaller.png" id="12_xq65f"]
 [ext_resource type="Texture2D" uid="uid://conwp216c1rkd" path="res://os_assets/high_peaks/icons/code.png" id="13_xalng"]
 [ext_resource type="Texture2D" uid="uid://c5xfagwea1j4o" path="res://os_assets/high_peaks/color_icons/small_markisa.png" id="14_5qou7"]
@@ -290,6 +293,229 @@ script = ExtResource("11_eaven")
 [node name="Timer" type="Timer" parent="GuiStuff/StickyNotes/TextEdit"]
 wait_time = 0.5
 autostart = true
+
+[node name="Calculator" type="Panel" parent="GuiStuff"]
+custom_minimum_size = Vector2(350, 400)
+layout_mode = 1
+offset_left = 64.0
+offset_top = -400.0
+offset_right = 414.0
+theme_type_variation = &"OsPanelThingy"
+
+[node name="LineEdit" type="LineEdit" parent="GuiStuff/Calculator"]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 340.0
+offset_bottom = 52.0
+size_flags_horizontal = 3
+placeholder_text = "2+2"
+alignment = 2
+script = ExtResource("12_a0yvq")
+
+[node name="GridContainer" type="GridContainer" parent="GuiStuff/Calculator"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Button5" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("clear")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "C"
+script = ExtResource("12_3dlr0")
+clear = NodePath("../../LineEdit")
+
+[node name="Button6" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "("
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "("
+
+[node name="Button7" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = ")"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = ")"
+
+[node name="Button8" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "÷"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "÷"
+
+[node name="Button9" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "7"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "7"
+
+[node name="Button10" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "8"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "8"
+
+[node name="Button11" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "9"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "9"
+
+[node name="Button12" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "×"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "×"
+
+[node name="Button13" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "4"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "4"
+
+[node name="Button14" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "5"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "5"
+
+[node name="Button15" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "6"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "6"
+
+[node name="Button16" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "-"
+
+[node name="Button17" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "1"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "1"
+
+[node name="Button18" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "2"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "2"
+
+[node name="Button19" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "3"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "3"
+
+[node name="Button20" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "+"
+
+[node name="Button21" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "±"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "-"
+
+[node name="Button22" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "0"
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "0"
+
+[node name="Button23" type="Button" parent="GuiStuff/Calculator/GridContainer" node_paths=PackedStringArray("lol")]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"Secondary"
+text = "."
+script = ExtResource("12_nm34w")
+lol = NodePath("../../LineEdit")
+the_fucking_text = "."
+
+[node name="Button24" type="Button" parent="GuiStuff/Calculator/GridContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "="
 
 [node name="AppLauncher" type="Panel" parent="GuiStuff"]
 custom_minimum_size = Vector2(400, 300)
@@ -1096,14 +1322,18 @@ script = ExtResource("5_sop7h")
 panel = NodePath("../../../StickyNotes")
 panel_type = 3
 
-[node name="Calculator" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
+[node name="Calculator" type="Button" parent="GuiStuff/Panel/HBoxContainer" node_paths=PackedStringArray("panel")]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Calculator"
 theme_type_variation = &"PanelButton"
+toggle_mode = true
 icon = ExtResource("6_c0acn")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("5_sop7h")
+panel = NodePath("../../../Calculator")
+panel_type = 3
 
 [node name="Spacer" type="Panel" parent="GuiStuff/Panel/HBoxContainer"]
 layout_mode = 2
@@ -1221,3 +1451,5 @@ script = ExtResource("31_2g0fv")
 the_bullshit_that_will_die = NodePath("../../../../..")
 
 [connection signal="timeout" from="GuiStuff/StickyNotes/TextEdit/Timer" to="GuiStuff/StickyNotes/TextEdit" method="_on_timer_timeout"]
+[connection signal="text_submitted" from="GuiStuff/Calculator/LineEdit" to="GuiStuff/Calculator/LineEdit" method="_on_shit"]
+[connection signal="pressed" from="GuiStuff/Calculator/GridContainer/Button24" to="GuiStuff/Calculator/LineEdit" method="_fuck_fuck_fuck_fuck"]
