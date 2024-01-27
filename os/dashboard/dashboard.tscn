@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://chalhd48g1f40"]
+[gd_scene load_steps=36 format=3 uid="uid://chalhd48g1f40"]
 
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
 [ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_k1cua"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cudnqcij55gxu" path="res://os_assets/high_peaks/icons/finance_mode.png" id="18_rt2se"]
 [ext_resource type="Texture2D" uid="uid://j3u2nqkg26dl" path="res://os_assets/high_peaks/icons/system.png" id="19_bjg4p"]
 [ext_resource type="Texture2D" uid="uid://ddohtmym5shrt" path="res://os_assets/high_peaks/icons/utilities.png" id="20_gfn4i"]
+[ext_resource type="Script" path="res://os/dashboard/show_desktop.gd" id="30_7s0ub"]
 [ext_resource type="Script" path="res://os/dashboard/quick_settings/cancel_logout_or_shutdown.gd" id="30_56kft"]
 [ext_resource type="Script" path="res://os/dashboard/quick_settings/continue_logout_or_shutdown.gd" id="31_2g0fv"]
 
@@ -1123,14 +1124,17 @@ script = ExtResource("5_sop7h")
 panel = NodePath("../../../Notifications")
 panel_type = 2
 
-[node name="Home" type="Button" parent="GuiStuff/Panel/HBoxContainer"]
+[node name="Home" type="Button" parent="GuiStuff/Panel/HBoxContainer" node_paths=PackedStringArray("window_stuff")]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
 tooltip_text = "Show dekstop"
 theme_type_variation = &"PanelButton"
+toggle_mode = true
 icon = ExtResource("11_uugky")
 icon_alignment = 1
 expand_icon = true
+script = ExtResource("30_7s0ub")
+window_stuff = NodePath("../../../../Windows")
 
 [node name="BigDumbConfirmationBullshit" type="ColorRect" parent="."]
 visible = false

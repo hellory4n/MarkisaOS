@@ -5,11 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://c5xfagwea1j4o" path="res://os_assets/high_peaks/color_icons/small_markisa.png" id="3_bqy4c"]
 
 [node name="About" type="Control" node_paths=PackedStringArray("content_root")]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
 offset_top = 45.0
 offset_right = 319.85
 offset_bottom = 344.0
+scale = Vector2(1e-05, 1e-05)
 script = ExtResource("1_ah1u1")
 content_root = NodePath("contents")
 window_name = "Credits"
