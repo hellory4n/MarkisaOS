@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://chalhd48g1f40"]
+[gd_scene load_steps=41 format=3 uid="uid://chalhd48g1f40"]
 
 [ext_resource type="Texture2D" uid="uid://d3axsg61fyial" path="res://os_assets/wallpapers/high_peaks.jpg" id="1_euobj"]
 [ext_resource type="Script" path="res://os/dashboardtk/system_sound_player.gd" id="1_k1cua"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cudnqcij55gxu" path="res://os_assets/high_peaks/icons/finance_mode.png" id="18_rt2se"]
 [ext_resource type="Texture2D" uid="uid://j3u2nqkg26dl" path="res://os_assets/high_peaks/icons/system.png" id="19_bjg4p"]
 [ext_resource type="Texture2D" uid="uid://ddohtmym5shrt" path="res://os_assets/high_peaks/icons/utilities.png" id="20_gfn4i"]
+[ext_resource type="Texture2D" uid="uid://dty16k4em8il2" path="res://apps/markisa/system_monitor/small_icon.png" id="27_l3ekn"]
 [ext_resource type="Script" path="res://os/dashboard/show_desktop.gd" id="30_7s0ub"]
 [ext_resource type="Script" path="res://os/dashboard/quick_settings/cancel_logout_or_shutdown.gd" id="30_56kft"]
 [ext_resource type="Script" path="res://os/dashboard/quick_settings/continue_logout_or_shutdown.gd" id="31_2g0fv"]
@@ -669,6 +670,14 @@ icon = ExtResource("14_5qou7")
 script = ExtResource("15_8sbp8")
 window = "res://apps/markisa/test/app.tscn"
 
+[node name="WindowOpener2" type="Button" parent="GuiStuff/AppLauncher/Home/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "System Monitor"
+icon = ExtResource("27_l3ekn")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/system_monitor/app.tscn"
+
 [node name="Accessories" type="ScrollContainer" parent="GuiStuff/AppLauncher"]
 visible = false
 layout_mode = 1
@@ -1068,6 +1077,14 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
+
+[node name="WindowOpener10" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"PanelButton"
+text = "System Monitor"
+icon = ExtResource("27_l3ekn")
+script = ExtResource("15_8sbp8")
+window = "res://apps/markisa/system_monitor/app.tscn"
 
 [node name="WindowOpener" type="Button" parent="GuiStuff/AppLauncher/System/VBoxContainer"]
 layout_mode = 2
