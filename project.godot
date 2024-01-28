@@ -37,6 +37,7 @@ boot_splash/minimum_display_time=1100
 
 Frambos="*res://os/kickstart/frambos.gd"
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
+ComputerNoises="*res://os/kickstart/computer_noises.gd"
 
 [display]
 

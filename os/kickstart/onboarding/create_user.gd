@@ -46,3 +46,5 @@ func _pressed():
 	get_tree().root.add_child(hejkhjkshjkg)
 	atpaeotory.queue_free()
 	moosic.stop()
+
+	ComputerNoises.dashboard_exists = true

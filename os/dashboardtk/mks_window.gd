@@ -33,6 +33,11 @@ class_name MksWindow
 		size = (lol * (value / 100)) - Vector2(64, 85)
 		update_configuration_warnings()
 
+## How much CPU this app will use. This will affect computer noises
+@export_range(1, 100, 1, "suffix:%") var cpu_usage := 1
+## How much this app will read and write. This will affect computer noises
+@export_range(1, 100, 1, "suffix:%") var disk_usage := 1
+
 var title_height: float
 var title_rect: Rect2
 var background_style: StyleBox

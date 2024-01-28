@@ -38,3 +38,4 @@ func _on_thing(button: BaseButton):
 	parenttttt.queue_free()
 	
 	moosic.stop()
+	ComputerNoises.dashboard_exists = true

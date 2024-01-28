@@ -18,6 +18,8 @@ window_name = "Credits"
 dock_icon = ExtResource("2_0c0yg")
 small_icon = ExtResource("3_bqy4c")
 size_percentage = Vector2(45, 80)
+cpu_usage = null
+disk_usage = null
 
 [node name="contents" type="Control" parent="."]
 clip_contents = true

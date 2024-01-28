@@ -27,6 +27,7 @@ func _ready():
 	
 	# so the sound manager doesn't spam comical amounts of warnings
 	SoundManager.set_default_music_bus("Music")
+	SoundManager.set_default_ui_sound_bus("ComputerNoises")
 	
 func _process(_delta: float):
 	if Input.is_action_just_released("skip_boot"):

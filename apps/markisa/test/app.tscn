@@ -10,19 +10,19 @@
 [ext_resource type="Script" path="res://os/dashboardtk/mks_popup_hide.gd" id="6_mc83a"]
 
 [node name="MksWindow" type="Control" node_paths=PackedStringArray("content_root")]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
 offset_top = 45.0
 offset_right = 277.2
 offset_bottom = 248.0
-scale = Vector2(1e-05, 1e-05)
 script = ExtResource("1_qsqac")
 content_root = NodePath("contents")
 window_name = "Awesome Window :)"
 dock_icon = ExtResource("2_blevj")
 small_icon = ExtResource("2_k4we4")
 size_percentage = Vector2(40, 60)
+cpu_usage = 26
+disk_usage = 66
 
 [node name="contents" type="Control" parent="."]
 clip_contents = true

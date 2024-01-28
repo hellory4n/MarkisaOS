@@ -21,3 +21,5 @@ func _pressed():
 		jhjdjhdjhg.sound = SystemSoundPlayer.SystemSounds.LOGOUT
 		jhjdjhdjhg.autoplay = true
 		jgjsgjsf.add_child(jhjdjhdjhg)
+	
+	ComputerNoises.dashboard_exists = false
