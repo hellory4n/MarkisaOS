@@ -6,72 +6,26 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=5
-
-[addons]
-
-resources_spreadsheet_view/color_rows=true
-resources_spreadsheet_view/color_arrays=true
-resources_spreadsheet_view/array_min_width=128.0
-resources_spreadsheet_view/resource_preview_size=32.0
-resources_spreadsheet_view/clip_headers=false
-resources_spreadsheet_view/dupe_arrays=true
-resources_spreadsheet_view/context_menu_on_leftclick=false
+config_version=4
 
 [application]
 
 config/name="MarkisaOS"
-config/version="0.13.1"
-run/main_scene="res://os/kickstart/bootloader.tscn"
-config/use_custom_user_dir=true
-config/custom_user_dir_name="markisa"
-config/quit_on_go_back=false
-config/features=PackedStringArray("4.2", "GL Compatibility")
-boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="res://os_assets/bootloader/bios.png"
-boot_splash/fullsize=false
-config/icon="res://os_assets/bootloader/icon.png"
-boot_splash/minimum_display_time=1100
-
-[autoload]
-
-Frambos="*res://os/kickstart/frambos.gd"
-SoundManager="*res://addons/sound_manager/sound_manager.gd"
-ComputerNoises="*res://os/kickstart/computer_noises.gd"
-
-[display]
-
-window/size/viewport_width=853
-window/size/viewport_height=480
-window/size/mode=3
-window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_height"
-window/handheld/orientation=4
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/sound_manager/plugin.cfg")
+run/main_scene="res://h.tscn"
+config/icon="res://icon.png"
 
 [gui]
 
-theme/custom="res://os_assets/high_peaks_blue/theme.tres"
+common/drop_mouse_on_gui_input_disabled=true
 
-[input]
+[mono]
 
-skip_boot={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
-]
-}
+project/assembly_name="MarkisaOS"
 
-[internationalization]
+[physics]
 
-locale/translations=PackedStringArray("res://locale/portuguese/os/bootscreen.po", "res://locale/portuguese/os/onboarding.po")
-locale/translations_pot_files=PackedStringArray("res://os/kickstart/onboarding.tscn")
+common/enable_pause_aware_picking=true
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
-textures/vram_compression/import_etc2_astc=true
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/default_environment="res://default_env.tres"
