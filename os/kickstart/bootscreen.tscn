@@ -1,0 +1,256 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://os/kickstart/Bootloader.cs" type="Script" id=1]
+[ext_resource path="res://os/assets/highPeaks/fonts/JetBrainsMono-ExtraBoldItalic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://os/assets/highPeaks/fonts/JetBrainsMono-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://os/assets/bootloader/logo.png" type="Texture" id=4]
+[ext_resource path="res://os/assets/highPeaks/fonts/normalFont.tres" type="DynamicFont" id=5]
+[ext_resource path="res://os/kickstart/onboarding.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=5]
+resource_name = "boot"
+length = 8.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer/RichTextLabel:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 17, 40, 76, 105, 125, 153, 180, 211, 241, 270, 301, 327, -1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VBoxContainer/Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("VBoxContainer/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "Please wait... |", "Please wait... /", "Please wait... -", "Please wait... \\", "Please wait... |", "Please wait... /", "Please wait... -", "Please wait... \\", "Please wait... |", "Please wait... /", "Please wait... -", "Please wait... \\", "Please wait... |", "Please wait... /", "Please wait... -", "Please wait... \\" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3.5, 3.6, 3.7, 3.8, 3.9, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.215686 ), Color( 1, 1, 1, 0.4 ), Color( 1, 1, 1, 0.6 ), Color( 1, 1, 1, 0.8 ), Color( 1, 1, 1, 0.901961 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 7.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/TextureRect:rect_rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 4.1, 7.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -360.0, -360.0, 360.0 ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath("bullshit")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 8.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "loadThing"
+} ]
+}
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[node name="bootscreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="bullshit" type="Node" parent="."]
+script = ExtResource( 1 )
+hehe = ExtResource( 6 )
+textureRectangle = NodePath("../Control/TextureRect")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "boot"
+anims/boot = SubResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 853.0
+margin_bottom = 345.0
+custom_fonts/bold_italics_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[color=lime][i][b]MarkisaOS v0.13.1[/b][/i]
+by hellory4n, alex343xd[/color]
+
+Starting Frambos kernel v7.4 core...
+Configuring device drivers...
+Mounting root (/)...
+Starting PassionScript VM...
+Starting PassionDefender...
+Starting the display manager...
+Starting the window manager...
+Starting the sound manager...
+Starting the network manager...
+Starting Dashboard Core...
+
+Dashboard GUI is ready to be loaded."
+text = "MarkisaOS v0.13.1
+by hellory4n, alex343xd
+
+Starting Frambos kernel v7.4 core...
+Configuring device drivers...
+Mounting root (/)...
+Starting PassionScript VM...
+Starting PassionDefender...
+Starting the display manager...
+Starting the window manager...
+Starting the sound manager...
+Starting the network manager...
+Starting Dashboard Core...
+
+Dashboard GUI is ready to be loaded."
+fit_content_height = true
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 345.0
+margin_right = 853.0
+margin_bottom = 367.0
+custom_colors/font_color = Color( 1, 1, 1, 0.529412 )
+custom_fonts/font = SubResource( 3 )
+text = "Please wait... \\"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -220.0
+margin_bottom = 269.0
+rect_min_size = Vector2( 220, 269 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[color=fuchsia]      +++   +++     
+     +++++ +++++    
+ +++  +++++++++     
+++++++++++++++++++++
+ +++++++    ++++++++
+   ++++      ++++   
+++++++++    +++++++ 
+++++++++++++++++++++
+     +++++++++  +++ 
+    +++++ +++++     
+     +++   +++      "
+text = "      +++   +++     
+     +++++ +++++    
+ +++  +++++++++     
+++++++++++++++++++++
+ +++++++    ++++++++
+   ++++      ++++   
+++++++++    +++++++ 
+++++++++++++++++++++
+     +++++++++  +++ 
+    +++++ +++++     
+     +++   +++      "
+
+[node name="Label2" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -22.0
+margin_right = 853.0
+custom_colors/font_color = Color( 1, 1, 1, 0.529412 )
+custom_fonts/font = SubResource( 3 )
+text = "Press ESC to skip"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_rotation = -56.842
+rect_scale = Vector2( 0.65, 0.65 )
+rect_pivot_offset = Vector2( 426, 240 )
+texture = ExtResource( 4 )
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Control"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+rect_min_size = Vector2( 0, 40 )
+custom_colors/font_color = Color( 1, 1, 1, 0.654902 )
+custom_fonts/font = ExtResource( 5 )
+text = "Copyright © 2069 Passionfruit Corporation. All rights reserved."
+align = 1
+valign = 1
