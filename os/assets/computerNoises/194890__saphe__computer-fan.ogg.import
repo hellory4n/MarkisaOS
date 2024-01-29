@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/194890__saphe__computer-fan.ogg-763cce2779ef89d20674a9884fda5a60.oggstr"
+
+[deps]
+
+source_file="res://os/assets/computerNoises/194890__saphe__computer-fan.ogg"
+dest_files=[ "res://.import/194890__saphe__computer-fan.ogg-763cce2779ef89d20674a9884fda5a60.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

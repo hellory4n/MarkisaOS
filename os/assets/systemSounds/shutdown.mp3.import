@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/shutdown.mp3-1fabc6fdb0d927b3fea8a1154de23c7d.mp3str"
+
+[deps]
+
+source_file="res://os/assets/systemSounds/shutdown.mp3"
+dest_files=[ "res://.import/shutdown.mp3-1fabc6fdb0d927b3fea8a1154de23c7d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

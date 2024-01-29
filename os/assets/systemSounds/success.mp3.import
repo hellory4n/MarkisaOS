@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/success.mp3-b2c4e855df5b394295bd34850e26e948.mp3str"
+
+[deps]
+
+source_file="res://os/assets/systemSounds/success.mp3"
+dest_files=[ "res://.import/success.mp3-b2c4e855df5b394295bd34850e26e948.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

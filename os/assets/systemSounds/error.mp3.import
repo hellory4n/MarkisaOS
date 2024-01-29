@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/error.mp3-0b018aa41db3fe2db29a687a57cdd4df.mp3str"
+
+[deps]
+
+source_file="res://os/assets/systemSounds/error.mp3"
+dest_files=[ "res://.import/error.mp3-0b018aa41db3fe2db29a687a57cdd4df.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/criticalError.mp3-78da03b6cf244a5b156ac2084ec6b4ba.mp3str"
+
+[deps]
+
+source_file="res://os/assets/systemSounds/criticalError.mp3"
+dest_files=[ "res://.import/criticalError.mp3-78da03b6cf244a5b156ac2084ec6b4ba.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
