@@ -18,8 +18,7 @@ namespace markisa.kickstart
             // i don't get to see how it would look on mobile, so i prefer this
             if (!Frambos.isOnMobile) {
                 GetTree().SetScreenStretch(
-                    SceneTree.StretchMode.Mode2d, SceneTree.StretchAspect.Keep, OS.GetScreenSize()
-                );
+                    SceneTree.StretchMode.Mode2d, SceneTree.StretchAspect.Keep, OS.GetScreenSize());
                 Frambos.resolution = OS.GetScreenSize();
             }
             else {
