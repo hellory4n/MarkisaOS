@@ -41,6 +41,7 @@ scene_naming=1
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+theme/custom="res://os/assets/highPeaksBlue/theme.tres"
 
 [input]
 
