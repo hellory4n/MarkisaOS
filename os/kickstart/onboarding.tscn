@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://os/assets/bootloader/onboardingWallpaper.png" type="Texture" id=1]
 [ext_resource path="res://os/assets/bootloader/logo2.png" type="Texture" id=2]
@@ -12,6 +12,10 @@
 [ext_resource path="res://os/assets/userIcons/small/duck.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/userIcons/small/pancakes.png" type="Texture" id=11]
 [ext_resource path="res://os/assets/userIcons/small/brushes.png" type="Texture" id=12]
+[ext_resource path="res://os/kickstart/onboarding/shutdownAndShit.gd" type="Script" id=13]
+[ext_resource path="res://os/kickstart/onboarding/UserList.cs" type="Script" id=14]
+[ext_resource path="res://os/dashboard/dashboard.tscn" type="PackedScene" id=15]
+[ext_resource path="res://os/kickstart/onboarding/CreateUser.cs" type="Script" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "heheheheha"
@@ -41,7 +45,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Control" type="Control"]
+[node name="onboarding" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -85,7 +89,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer"]
-margin_right = 148.0
+margin_right = 146.0
 margin_bottom = 45.0
 size_flags_horizontal = 3
 text = "English"
@@ -94,12 +98,23 @@ items = [ "English", null, false, 0, null, "Português (Brasil)", null, false, 1
 selected = 0
 
 [node name="Button" type="Button" parent="MarginContainer/HBoxContainer"]
-margin_left = 152.0
+margin_left = 154.0
 margin_right = 300.0
 margin_bottom = 45.0
 size_flags_horizontal = 3
 theme_type_variation = "Secondary"
 text = "Shutdown"
+script = ExtResource( 13 )
+gkjdhjdg = "res://os/kickstart/shutdown.tscn"
+h = NodePath("../../..")
+
+[node name="Label" type="Label" parent="MarginContainer"]
+margin_top = 212.0
+margin_right = 360.0
+margin_bottom = 267.0
+text = "NOTE: i deleted the music system as it's godot 4-only, new one coming soon"
+align = 2
+autowrap = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_bottom = 1.0
@@ -136,6 +151,8 @@ size_flags_vertical = 3
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer/ScrollContainer"]
 margin_right = 289.0
 size_flags_horizontal = 3
+script = ExtResource( 14 )
+packed = ExtResource( 15 )
 
 [node name="Label2" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
 margin_top = 192.0
@@ -159,9 +176,10 @@ rect_min_size = Vector2( 128, 0 )
 size_flags_horizontal = 0
 text = "username:"
 align = 2
+clip_text = true
 
 [node name="LineEdit" type="LineEdit" parent="ColorRect/CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 132.0
+margin_left = 136.0
 margin_right = 289.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
@@ -182,9 +200,10 @@ rect_min_size = Vector2( 128, 0 )
 size_flags_horizontal = 0
 text = "display name:"
 align = 2
+clip_text = true
 
 [node name="LineEdit" type="LineEdit" parent="ColorRect/CenterContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 132.0
+margin_left = 136.0
 margin_right = 289.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
@@ -205,6 +224,7 @@ rect_min_size = Vector2( 128, 0 )
 size_flags_horizontal = 0
 text = "photo:"
 align = 2
+clip_text = true
 
 [node name="OptionButton" type="OptionButton" parent="ColorRect/CenterContainer/VBoxContainer/HBoxContainer3"]
 margin_left = 136.0
@@ -213,6 +233,7 @@ margin_bottom = 48.0
 size_flags_horizontal = 3
 text = "Cat"
 icon = ExtResource( 8 )
+clip_text = true
 align = 1
 items = [ "Cat", ExtResource( 8 ), false, 0, null, "Flower", ExtResource( 4 ), false, 1, null, "Balloons", ExtResource( 3 ), false, 2, null, "Car", ExtResource( 7 ), false, 3, null, "Dog", ExtResource( 6 ), false, 4, null, "Duck", ExtResource( 10 ), false, 5, null, "Pancakes", ExtResource( 11 ), false, 6, null, "Brushes", ExtResource( 12 ), false, 7, null, "Shuttle", ExtResource( 5 ), false, 8, null, "Football", ExtResource( 9 ), false, 9, null ]
 selected = 0
@@ -222,3 +243,8 @@ margin_top = 397.0
 margin_right = 289.0
 margin_bottom = 439.0
 text = "Create"
+script = ExtResource( 16 )
+fuckingUsername = NodePath("../HBoxContainer/LineEdit")
+fuckingDisplayName = NodePath("../HBoxContainer2/LineEdit")
+fuckingPhoto = NodePath("../HBoxContainer3/OptionButton")
+myPackedQuestionMarkScenePeriod = ExtResource( 15 )

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/warning.mp3-db7a22691dd27398f70dca0f1eb160bb.mp3str"
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

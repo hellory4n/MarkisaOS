@@ -38,7 +38,7 @@ class Config<T> where T : IConfigData, new()
     {
         // temporary object so we can generate a path and load the data frfrfr
         T tempdata = new T();
-        string path = tempdata.GetFilename();
+        string path = FigureOutTheFuckingPath(tempdata.GetFilename());
 
         var dir = new Directory();
         if (dir.FileExists(path)) {
@@ -54,12 +54,14 @@ class Config<T> where T : IConfigData, new()
         }
         else {
             var file = new File();
+            file.Open(path, File.ModeFlags.Write);
             file.StoreString(
                 JsonConvert.SerializeObject(tempdata, new JsonSerializerSettings {
                     TypeNameHandling = TypeNameHandling.All,
                     Formatting = Formatting.Indented
                 })
             );
+            file.Close();
         }
     }
 

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/criticalError.mp3-78da03b6cf244a5b156ac2084ec6b4ba.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
