@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=88 format=2]
+[gd_resource type="Theme" load_steps=89 format=2]
 
 [ext_resource path="res://os/assets/highPeaksBlue/buttons/pressed.png" type="Texture" id=1]
 [ext_resource path="res://os/assets/highPeaksBlue/buttons/focus.png" type="Texture" id=2]
@@ -291,6 +291,26 @@ draw_center = false
 border_width_bottom = 2
 border_color = Color( 0.266667, 0.541176, 1, 1 )
 
+[sub_resource type="StyleBoxFlat" id=42]
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.027451, 0.054902, 0.101961, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.266667, 0.541176, 1, 0.498039 )
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+shadow_size = 4
+shadow_offset = Vector2( 0, 2 )
+
 [sub_resource type="StyleBoxFlat" id=40]
 bg_color = Color( 0.027451, 0.054902, 0.0980392, 1 )
 border_width_left = 1
@@ -580,6 +600,8 @@ MenuButton/styles/focus = SubResource( 14 )
 MenuButton/styles/hover = SubResource( 14 )
 MenuButton/styles/normal = SubResource( 13 )
 MenuButton/styles/pressed = SubResource( 14 )
+MksPopup/base_type = "Panel"
+MksPopup/styles/panel = SubResource( 42 )
 MksWindow/icons/close = ExtResource( 45 )
 MksWindow/styles/background = SubResource( 40 )
 MksWindow/styles/titleBackground = SubResource( 41 )

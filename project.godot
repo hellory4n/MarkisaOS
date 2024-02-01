@@ -9,12 +9,24 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Button",
+"class": "MksPopupHide",
+"language": "GDScript",
+"path": "res://os/mkstoolkit/MksPopupHide.gd"
+}, {
+"base": "Button",
+"class": "MksPopupShow",
+"language": "GDScript",
+"path": "res://os/mkstoolkit/MksPopupShow.gd"
+}, {
 "base": "ProgressBar",
 "class": "ParadoxBar",
 "language": "GDScript",
 "path": "res://os/mkstoolkit/ParadoxBar.gd"
 } ]
 _global_script_class_icons={
+"MksPopupHide": "",
+"MksPopupShow": "",
 "ParadoxBar": ""
 }
 
