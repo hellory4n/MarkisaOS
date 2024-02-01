@@ -79,7 +79,7 @@ public class MksWindow : Control
         if (Floating && !Engine.EditorHint) {
             draggableTitle = new DraggableTitle{
                 window = this,
-                Position = new Vector2(0, 45)
+                Position = new Vector2(0, -45)
             };
             AddChild(draggableTitle);
         }
@@ -99,7 +99,8 @@ public class MksWindow : Control
             AnchorLeft = 1,
             AnchorRight = 1,
             AnchorBottom = 1,
-            MarginRight = -90
+            MarginLeft = -45,
+            MarginRight = -45
         };
 
         closeButton.AddStyleboxOverride("focus", new StyleBoxEmpty());

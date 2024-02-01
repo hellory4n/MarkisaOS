@@ -13,12 +13,12 @@ public class DraggableTitle : Node2D
     string status = "none";
     public Vector2 tsize;
     Vector2 mpos;
-    Vector2 offset;
+    public Vector2 offset;
 
     public override void _Process(float delta)
     {
         if (status == "dragging") {
-            window.RectGlobalPosition = mpos + offset + new Vector2(0, 45);
+            window.RectPosition = mpos + offset + new Vector2(0, 45);
         }
         Update();
     }
@@ -30,7 +30,7 @@ public class DraggableTitle : Node2D
                 Vector2 evpos = eve.GlobalPosition;
                 Vector2 gpos = GlobalPosition;
 
-                Rect2 rect = new Rect2(Position, tsize);
+                Rect2 rect = new Rect2(GlobalPosition, tsize);
                 if (rect.HasPoint(evpos)) {
                     window.Raise();
                     status = "clicked";
@@ -49,11 +49,6 @@ public class DraggableTitle : Node2D
         }
 
         mpos = GetGlobalMousePosition();
-    }
-
-    public override void _Draw()
-    {
-        DrawRect(new Rect2(Position, tsize), Colors.Red);
     }
 }
 

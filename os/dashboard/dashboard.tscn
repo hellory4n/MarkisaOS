@@ -17,12 +17,12 @@ expand = true
 stretch_mode = 7
 
 [node name="Control" type="Control" parent="."]
-margin_left = 166.0
-margin_top = 64.0
-margin_right = 444.0
-margin_bottom = 155.0
+margin_left = 79.0
+margin_top = 126.0
+margin_right = 473.0
+margin_bottom = 397.0
 script = ExtResource( 2 )
-WindowTitle = "fshydjuitfyui"
+WindowTitle = "IGTSDIYHKDRYJHDRKYODKYOKDTOYKODTPKUPDKPHJSPHKTESUYHKSIPMJYIPTDJMHIPTSJYPHJTMDIOYJHMSRIPMJHIPFTDJGPSJP"
 DockIcon = ExtResource( 4 )
 SmallIcon = ExtResource( 3 )
 Floating = true
