@@ -9,18 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Control",
-"class": "MksWindow",
-"language": "GDScript",
-"path": "res://os/mkstoolkit/MksWindow.gd"
-}, {
 "base": "ProgressBar",
 "class": "ParadoxBar",
 "language": "GDScript",
 "path": "res://os/mkstoolkit/ParadoxBar.gd"
 } ]
 _global_script_class_icons={
-"MksWindow": "",
 "ParadoxBar": ""
 }
 
