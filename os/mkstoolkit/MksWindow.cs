@@ -43,6 +43,15 @@ public class MksWindow : Control
     /// </summary>
     [Export(PropertyHint.Range, "1,100")]
     public int DiskUsage { get; set; } = 1;
+    /// <summary>
+    /// The root of all content in this window.
+    /// </summary>
+    [Export(PropertyHint.NodePathValidTypes, "Control")]
+    public NodePath ContentRoot { get; set; }
+    /// <summary>
+    /// Yes
+    /// </summary>
+    public Control RealContentRoot { get; set; }
 
     StyleBox backgroundStyle;
     StyleBox titleStyle;
@@ -122,7 +131,7 @@ public class MksWindow : Control
 
         if (!Engine.EditorHint) {
             // make sure the size is right
-            RectSize = (Frambos.Resolution * SizePercentage / 100) - new Vector2(64, 85);
+            RectSize = (Frambos.Resolution * (SizePercentage / 100)) - new Vector2(64, 85);
 
             // go to the center of the screen
             if (Floating) {
@@ -137,18 +146,22 @@ public class MksWindow : Control
         // TODO: show up in the dock
 
         // do the awesome window opening animation
-        RectScale = Vector2.Zero;
-        Modulate = Colors.Transparent;
+        if (!Engine.EditorHint) {
+            RectScale = Vector2.Zero;
+            Modulate = Colors.Transparent;
 
-        SceneTreeTween tween = CreateTween();
-        tween.SetParallel(true);
-        tween.TweenProperty(this, "rect_scale", Vector2.One, 0.2f)
-            .SetTrans(Tween.TransitionType.Cubic)
-            .SetEase(Tween.EaseType.Out);
+            SceneTreeTween tween = CreateTween();
+            tween.SetParallel(true);
+            tween.TweenProperty(this, "rect_scale", Vector2.One, 0.2f)
+                .SetTrans(Tween.TransitionType.Cubic)
+                .SetEase(Tween.EaseType.Out);
+            
+            tween.TweenProperty(this, "modulate", Colors.White, 0.2f)
+                .SetTrans(Tween.TransitionType.Expo)
+                .SetEase(Tween.EaseType.Out);
+        }
         
-        tween.TweenProperty(this, "modulate", Colors.White, 0.2f)
-            .SetTrans(Tween.TransitionType.Expo)
-            .SetEase(Tween.EaseType.Out);
+        RealContentRoot = GetNode<Control>(ContentRoot);
     }
 
     public override void _Process(float delta)
@@ -162,9 +175,24 @@ public class MksWindow : Control
             draggableTitle.tsize = new Vector2(RectSize.x, 45);
         }
 
+        // show a preview of the size and shit
+        if (Engine.EditorHint) {
+            // we show a preview of what it would be on desktop unless it's not floating,
+            // since everything is maximized on mobile
+            // this is confusing
+            if (Floating) {
+                RectSize = (new Vector2(1280, 720) * SizePercentage / 100) - new Vector2(64, 85);
+            }
+            else {
+                RectSize = (new Vector2(853, 480) * SizePercentage / 100) - new Vector2(64, 85);
+            }
+        }
+
         // sync the window title icon stuff
         titleName.Text = WindowTitle;
         iconDisplay.Icon = SmallIcon;
+
+        RealContentRoot.Raise();
     }
 
     // TODO: call this function when i add theming

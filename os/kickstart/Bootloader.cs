@@ -23,7 +23,7 @@ public class Bootloader : Node
             Frambos.Resolution = OS.GetScreenSize();
         }
         else {
-            Frambos.Resolution = OS.WindowSize;
+            Frambos.Resolution = GetViewport().GetVisibleRect().Size;
         }
 
         tjtjt = GetNode<TextureRect>(textureRectangle);
