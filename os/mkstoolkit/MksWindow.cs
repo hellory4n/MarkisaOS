@@ -233,6 +233,7 @@ public class MksWindow : Control
             .SetEase(Tween.EaseType.Out);
         
         dockButton?.QueueFree();
+        Frambos.Notify("Tim Apple", "Fuck you! Fuck you! Fuck you. Fuck you.");
     }
 
     void DumbFunctionThatCallsASingleOtherFunctionBecauseGodot3DoesntLetMeUseLambdas() => QueueFree();

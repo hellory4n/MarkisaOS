@@ -14,7 +14,8 @@ public class Frambos : Node
     public static uint MinorVersion => 13;
     public static uint PatchVersion => 1;
     static bool forceMobile = false;
-        //static PackedScene notificationShit = GD.Load<PackedScene>()
+    static PackedScene notificationShit = GD.Load<PackedScene>("res://os/dashboard/notification.tscn");
+    static SceneTree sceneTreeSoICanMakeAStaticFunction;
 
     public override void _Ready()
     {
@@ -22,6 +23,20 @@ public class Frambos : Node
         if (dir.FileExists("user://forcemobile")) {
             forceMobile = true;
         }
+
+        sceneTreeSoICanMakeAStaticFunction = GetTree();
+    }
+
+    /// <summary>
+    /// It shows a notification :)
+    /// </summary>
+    public static void Notify(string app, string text)
+    {
+        var shit = notificationShit.Instance<Panel>();
+        sceneTreeSoICanMakeAStaticFunction.Root.AddChild(shit);
+
+        shit.GetNode<RichTextLabel>("text").AppendBbcode($"[b]{app}[/b]\n{text}");
+        shit.GetNode<AnimationPlayer>("animation").Play("ghggh");
     }
 }
 
