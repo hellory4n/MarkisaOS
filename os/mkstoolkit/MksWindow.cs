@@ -143,7 +143,18 @@ public class MksWindow : Control
             }
         }
 
-        // TODO: show up in the dock
+        // show up in the dock
+        if (!Engine.EditorHint) {
+            Node haha = GetNode("/root/dashboard/interface/dock/stuff/apps");
+            dockButton = new Button {
+                Icon = DockIcon,
+                ThemeTypeVariation = "OSButton",
+                IconAlign = Button.TextAlign.Center,
+                RectMinSize = new Vector2(64, 64)
+            };
+            haha.AddChild(dockButton);
+            dockButton.Connect("pressed", this, nameof(OtherDumbFunctionThatCallsASingleOtherFunction));
+        }
 
         // do the awesome window opening animation
         if (!Engine.EditorHint) {
@@ -225,6 +236,7 @@ public class MksWindow : Control
     }
 
     void DumbFunctionThatCallsASingleOtherFunctionBecauseGodot3DoesntLetMeUseLambdas() => QueueFree();
+    void OtherDumbFunctionThatCallsASingleOtherFunction() => Raise();
 }
 
 }

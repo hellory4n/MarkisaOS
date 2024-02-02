@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "ParadoxBar",
 "language": "GDScript",
 "path": "res://os/mkstoolkit/ParadoxBar.gd"
+}, {
+"base": "Button",
+"class": "WindowOpener",
+"language": "GDScript",
+"path": "res://os/mkstoolkit/WindowOpener.gd"
 } ]
 _global_script_class_icons={
 "MksPopupHide": "",
 "MksPopupShow": "",
-"ParadoxBar": ""
+"ParadoxBar": "",
+"WindowOpener": ""
 }
 
 [application]

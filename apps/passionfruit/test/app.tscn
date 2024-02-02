@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://os/mkstoolkit/MksPopupHide.gd" type="Script" id=1]
+[ext_resource path="res://os/mkstoolkit/MksPopupShow.gd" type="Script" id=2]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/bigMarkisa.png" type="Texture" id=4]
+[ext_resource path="res://os/mkstoolkit/MksPopup.cs" type="Script" id=5]
+[ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
+
+[node name="EpicWindo" type="Control"]
+margin_left = 212.0
+margin_top = 107.0
+margin_right = 660.0
+margin_bottom = 454.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+WindowTitle = "The Industrial Revolution and its consequences have been a disaster for the human race."
+DockIcon = ExtResource( 4 )
+SmallIcon = ExtResource( 3 )
+Floating = true
+SizePercentage = Vector2( 40, 60 )
+ContentRoot = NodePath("contents")
+
+[node name="contents" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="contents"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="contents/ScrollContainer"]
+margin_right = 448.0
+margin_bottom = 347.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MksPopupShow" type="Button" parent="contents/ScrollContainer/VBoxContainer"]
+margin_right = 448.0
+margin_bottom = 42.0
+text = "ffggcjcfh"
+script = ExtResource( 2 )
+popup = NodePath("../../../Panel")
+
+[node name="MksPopupShow2" type="Button" parent="contents/ScrollContainer/VBoxContainer"]
+margin_top = 50.0
+margin_right = 448.0
+margin_bottom = 347.0
+size_flags_vertical = 3
+theme_type_variation = "Secondary"
+text = "ffggcjcfh"
+script = ExtResource( 1 )
+popup = NodePath("../../../Panel")
+
+[node name="Panel" type="Panel" parent="contents"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -183.5
+margin_right = 183.5
+margin_bottom = 192.0
+theme_type_variation = "MksPopup"
+script = ExtResource( 5 )
