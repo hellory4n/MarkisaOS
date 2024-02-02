@@ -1,7 +1,7 @@
 using Godot;
 using System;
+using System.Data;
 using System.Globalization;
-using System.Linq;
 
 namespace markisa.dashboard {
 
@@ -11,40 +11,22 @@ public class EvaluateBullshit : LineEdit
     {
         newText = newText.Replace('÷', '/');
         newText = newText.Replace('×', '*');
-        newText = newText.Replace(',', '.'); // TODO: this probably doesn't work very well with some languages
+        newText = newText.Replace(',', '.');
 
-        // couldn't find a less hideous way to make a character whitelist or whatever
-        // don't feel like making some regex bullshit either
-        string fuckr = "";
-        char[] allowedCharacters = new char[] {
-            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-            '(', ')', '.', '+', '-', '*', '/'
-        };
-        foreach (var item in newText) {
-            if (allowedCharacters.Contains(item)) {
-                fuckr += item;
-            }
-        }
-
-        var express = new Expression();
-        Error bruhMoment = express.Parse(fuckr);
-
-        if (bruhMoment != Error.Ok) {
-            Text = "Syntax error";
-            return;
-        }
-
+        // this certainly does something
         try {
-            float epicResult = (float)express.Execute();
-            if (express.HasExecuteFailed()) {
-                Text = "Calculation error";
-            }
-            else {
-                Text = epicResult.ToString(CultureInfo.InvariantCulture);
-            }
+            var hi = new DataTable();
+            var column = new DataColumn("result", typeof(double), newText);
+            hi.Columns.Add(column);
+            DataRow row = hi.NewRow();
+            hi.Rows.Add(row);
+
+            double result = (double)row["result"];
+            Text = result.ToString(CultureInfo.InvariantCulture);
         }
-        catch (Exception) {
-            Text = "Calculation error, maybe the number is too big?";
+        catch (Exception e) {
+            Text = "Error";
+            throw e;
         }
     }
 
