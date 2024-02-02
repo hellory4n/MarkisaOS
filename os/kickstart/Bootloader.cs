@@ -27,7 +27,7 @@ public class Bootloader : Node
         }
 
         tjtjt = GetNode<TextureRect>(textureRectangle);
-        tjtjt.RectPivotOffset = tjtjt.RectSize / 2;
+        tjtjt.RectPivotOffset = Frambos.Resolution / 2;
 
         // seeing your cursor while the computer is booting is quite uncommon
         Input.WarpMousePosition(Vector2.Zero);

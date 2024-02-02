@@ -30,6 +30,7 @@ public class CreateUser : Button
         username = username.Replace("/", "");
         username = username.Replace("?", "");
         username = username.Replace("*", "");
+        username = username.Replace(" ", "");
         
         // photo stuff
         string photo = "";
