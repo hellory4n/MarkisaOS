@@ -37,6 +37,13 @@ public class Frambos : Node
 
         shit.GetNode<RichTextLabel>("text").AppendBbcode($"[b]{app}[/b]\n{text}");
         shit.GetNode<AnimationPlayer>("animation").Play("ghggh");
+
+        // show it in the notification bullshit
+        // quite the mouthful
+        var noyodthyodtijhidtihujdit = shit.GetNode("/root/dashboard/interface/notifications/ScrollContainer/VBoxContainer");
+        var G = notificationShit.Instance<Panel>();
+        G.GetNode<RichTextLabel>("text").AppendBbcode($"[b]{app}[/b]\n{text}");
+        noyodthyodtijhidtihujdit.AddChild(G);
     }
 }
 

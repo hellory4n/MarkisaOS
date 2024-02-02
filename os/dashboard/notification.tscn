@@ -43,12 +43,12 @@ tracks/2/keys = {
 }
 
 [node name="notification" type="Panel"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 74.0
-margin_top = -140.0
+margin_top = 50.0
 margin_right = 359.0
-margin_bottom = -10.0
+margin_bottom = 180.0
 rect_min_size = Vector2( 285, 130 )
+size_flags_horizontal = 4
 theme_type_variation = "OSPanel"
 
 [node name="animation" type="AnimationPlayer" parent="."]

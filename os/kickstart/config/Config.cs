@@ -62,6 +62,7 @@ class Config<T> where T : IConfigData, new()
                 })
             );
             file.Close();
+            Data = tempdata;
         }
     }
 
