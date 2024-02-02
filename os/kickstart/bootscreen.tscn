@@ -157,7 +157,7 @@ margin_bottom = 345.0
 custom_fonts/bold_italics_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[color=lime][i][b]MarkisaOS v0.13.1[/b][/i]
+bbcode_text = "[color=lime][i][b]MarkisaOS v0.13.2[/b][/i]
 by hellory4n, alex343xd[/color]
 
 Starting Frambos kernel v7.4 core...
@@ -172,7 +172,7 @@ Starting the network manager...
 Starting Dashboard Core...
 
 Dashboard GUI is ready to be loaded."
-text = "MarkisaOS v0.13.1
+text = "MarkisaOS v0.13.2
 by hellory4n, alex343xd
 
 Starting Frambos kernel v7.4 core...
@@ -251,7 +251,7 @@ anchor_bottom = 1.0
 [node name="TextureRect" type="TextureRect" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_rotation = -56.842
+rect_rotation = -113.684
 rect_scale = Vector2( 0.65, 0.65 )
 rect_pivot_offset = Vector2( 426, 240 )
 texture = ExtResource( 4 )
