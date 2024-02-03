@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 namespace markisa.foundation
 {
@@ -16,6 +17,18 @@ public class Frambos : Node
     static bool forceMobile = false;
     static PackedScene notificationShit = GD.Load<PackedScene>("res://os/dashboard/notification.tscn");
     static SceneTree sceneTreeSoICanMakeAStaticFunction;
+
+    static Dictionary<SystemSound, AudioStream> AwesomeSounds { get; } = new Dictionary<SystemSound, AudioStream> {
+        {SystemSound.Startup,       GD.Load<AudioStream>("res://os/assets/systemSounds/startup.mp3")},
+        {SystemSound.Shutdown,      GD.Load<AudioStream>("res://os/assets/systemSounds/shutdown.mp3")},
+        {SystemSound.Logout,        GD.Load<AudioStream>("res://os/assets/systemSounds/logout.mp3")},
+        {SystemSound.CriticalError, GD.Load<AudioStream>("res://os/assets/systemSounds/criticalError.mp3")},
+        {SystemSound.Error,         GD.Load<AudioStream>("res://os/assets/systemSounds/error.mp3")},
+        {SystemSound.Notification,  GD.Load<AudioStream>("res://os/assets/systemSounds/notification.mp3")},
+        {SystemSound.Question,      GD.Load<AudioStream>("res://os/assets/systemSounds/question.mp3")},
+        {SystemSound.Success,       GD.Load<AudioStream>("res://os/assets/systemSounds/success.mp3")},
+        {SystemSound.Warning,       GD.Load<AudioStream>("res://os/assets/systemSounds/warning.mp3")}
+    };
 
     public override void _Ready()
     {
@@ -45,6 +58,35 @@ public class Frambos : Node
         G.GetNode<RichTextLabel>("text").AppendBbcode($"[b]{app}[/b]\n{text}");
         noyodthyodtijhidtihujdit.AddChild(G);
     }
+
+    // when you call it would show as Play(SystemSound.Something), i'm truly a jeenyous
+    // i spent more time than i'd like coming up with a terrible spelling of genius
+    /// <summary>
+    /// Plays a system sound :))
+    /// </summary>
+    public static void Play(SystemSound sound)
+    {
+        var dollarsign = new AudioStreamPlayer {
+            Stream = AwesomeSounds[sound],
+            Autoplay = true,
+            Bus = "sound"
+        };
+        // quite a convoluted way of saying `this.`
+        sceneTreeSoICanMakeAStaticFunction.Root.GetNode("/root/Frambos").AddChild(dollarsign);
+    }
+}
+
+public enum SystemSound
+{
+    Startup,
+    Shutdown,
+    Logout,
+    Warning,
+    Error,
+    Notification,
+    CriticalError,
+    Question,
+    Success
 }
 
 }

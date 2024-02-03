@@ -70,10 +70,10 @@ custom_constants/margin_top = 24
 custom_constants/margin_bottom = 24
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-margin_top = 331.0
+margin_top = 356.0
 margin_right = 360.0
 margin_bottom = 456.0
-rect_min_size = Vector2( 360, 125 )
+rect_min_size = Vector2( 360, 100 )
 size_flags_vertical = 8
 texture = ExtResource( 2 )
 expand = true
@@ -113,15 +113,6 @@ margin_top = 212.0
 margin_right = 360.0
 margin_bottom = 267.0
 text = "NOTE: i deleted the music system as it's godot 4-only, new one coming soon"
-align = 2
-autowrap = true
-
-[node name="Label2" type="Label" parent="MarginContainer"]
-margin_top = 426.0
-margin_right = 360.0
-margin_bottom = 456.0
-size_flags_vertical = 8
-text = "Username seems to be correct"
 align = 2
 autowrap = true
 

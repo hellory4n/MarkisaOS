@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://os/assets/wallpapers/highPeaks.jpg" type="Texture" id=1]
 [ext_resource path="res://os/assets/highPeaks/icons/code.png" type="Texture" id=2]
@@ -14,7 +14,7 @@
 [ext_resource path="res://os/assets/highPeaks/icons/notifications.png" type="Texture" id=12]
 [ext_resource path="res://os/assets/highPeaks/icons/home.png" type="Texture" id=13]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/allApps.png" type="Texture" id=14]
-[ext_resource path="res://os/assets/systemSounds/startup.mp3" type="AudioStream" id=15]
+[ext_resource path="res://os/dashboard/Dashboard.cs" type="Script" id=15]
 [ext_resource path="res://os/dashboard/PanelOpener3000.cs" type="Script" id=16]
 [ext_resource path="res://os/dashboard/AppLauncherSwitchCategory.cs" type="Script" id=17]
 [ext_resource path="res://os/mkstoolkit/WindowOpener.gd" type="Script" id=18]
@@ -33,6 +33,7 @@
 [ext_resource path="res://os/dashboard/calculator/Clear.cs" type="Script" id=31]
 [ext_resource path="res://os/dashboard/calculator/EvaluateBullshit.cs" type="Script" id=32]
 [ext_resource path="res://os/dashboard/calculator/AddStuffToCalculatorStuffStuffStuffStuffStuff.cs" type="Script" id=33]
+[ext_resource path="res://os/dashboard/setVolume.gd" type="Script" id=34]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hideBigPopup"
@@ -121,10 +122,7 @@ tracks/1/keys = {
 [node name="dashboard" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
-autoplay = true
+script = ExtResource( 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "startup"
@@ -194,7 +192,11 @@ margin_left = 88.0
 margin_right = 290.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
-value = 100.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource( 34 )
+sound = true
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="interface/quickSettings/VBoxContainer"]
 margin_top = 78.0
@@ -216,7 +218,10 @@ margin_left = 88.0
 margin_right = 290.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
-value = 100.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource( 34 )
 
 [node name="Button2" type="Button" parent="interface/quickSettings/VBoxContainer"]
 margin_top = 114.0
@@ -1802,6 +1807,8 @@ size_flags_horizontal = 3
 text = "Continue"
 script = ExtResource( 27 )
 
+[connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer/HSlider" method="_on_HSlider_value_changed"]
+[connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer2/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer2/HSlider" method="_on_HSlider_value_changed"]
 [connection signal="timeout" from="interface/stickyNotes/TextEdit/epicTimer" to="interface/stickyNotes/TextEdit" method="TimerBullshit"]
 [connection signal="text_entered" from="interface/calculator/expression" to="interface/calculator/expression" method="Fuck"]
 [connection signal="pressed" from="interface/calculator/GridContainer/Button3" to="interface/calculator/expression" method="Suffering"]
