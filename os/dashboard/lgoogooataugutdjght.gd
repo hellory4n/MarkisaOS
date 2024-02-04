@@ -10,3 +10,5 @@ func _pressed():
 		get_tree().root.add_child(shit.instance())
 	
 	get_node("/root/dashboard").queue_free()
+	
+	ComputerNoises.DashboardExists = false

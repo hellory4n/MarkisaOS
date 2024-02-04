@@ -52,6 +52,7 @@ config/quit_on_go_back=false
 [autoload]
 
 Frambos="*res://os/kickstart/Frambos.cs"
+ComputerNoises="*res://os/kickstart/ComputerNoises.cs"
 
 [display]
 

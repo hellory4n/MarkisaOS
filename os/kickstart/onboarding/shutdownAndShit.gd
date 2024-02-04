@@ -8,3 +8,5 @@ func _pressed():
 	m.queue_free()
 	var gjfdg = (load(gkjdhjdg) as PackedScene).instance()
 	get_tree().root.add_child(gjfdg)
+	
+	ComputerNoises.DashboardExists = false

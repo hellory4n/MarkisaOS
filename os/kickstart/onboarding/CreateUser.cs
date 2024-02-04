@@ -69,6 +69,9 @@ public class CreateUser : Button
         GetTree().Root.AddChild(njsjhmjdfhfkdo);
         // quite a few parents obtained
         GetParent().GetParent().GetParent().GetParent().QueueFree();
+
+        var m = GetNode<ComputerNoises>("/root/ComputerNoises");
+        m.DashboardExists = true;
     }
 }
 

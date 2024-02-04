@@ -51,6 +51,9 @@ public class UserList : VBoxContainer
         GetTree().Root.AddChild(ehjfjgjstiesigs);
         // so many parents
         GetParent().GetParent().GetParent().GetParent().GetParent().QueueFree();
+
+        var m = GetNode<ComputerNoises>("/root/ComputerNoises");
+        m.DashboardExists = true;
     }
 }
 
