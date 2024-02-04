@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: os/dashboard/dashboard.tscn
+msgid "Sound:"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Music:"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "PC:"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Settings"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Logout"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Shutdown"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Notifications"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Home"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Accessories"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Development"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Games"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Graphics"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Internet"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Multimedia"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Office"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "System"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Utilities"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Continue"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Cancel"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Are you sure?"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Progress is saved automatically."
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Show desktop"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Quick settings"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Your money"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Time and date"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Calculator"
+msgstr ""
+
+#: os/dashboard/dashboard.tscn
+msgid "Your notes"
+msgstr ""

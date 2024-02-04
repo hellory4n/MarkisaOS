@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: os/kickstart/bootscreen.tscn
+msgid "Copyright © 2069 Passionfruit Corporation. All rights reserved."
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Shutdown"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "login as an existing user"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "or create a new one"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "username:"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "johndoe"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "display name:"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "John Doe"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "photo:"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Cat"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Flower"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Balloons"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Car"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Dog"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Duck"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Pancakes"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Brushes"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Shuttle"
+msgstr ""
+
+#: os/kickstart/onboarding.tscn
+msgid "Football"
+msgstr ""
+
+#: os/kickstart/shutdown.tscn
+msgid "Turning off MarkisaOS..."
+msgstr ""

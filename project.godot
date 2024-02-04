@@ -84,9 +84,17 @@ skipBoot={
 
 pointing/android/enable_long_press_as_right_click=true
 
+[locale]
+
+translations=PoolStringArray( "res://locale/portuguese/os/kickstart.po", "res://locale/portuguese/os/dashboard.po" )
+
 [mono]
 
 project/assembly_name="MarkisaOS"
+
+[node]
+
+name_casing=1
 
 [physics]
 

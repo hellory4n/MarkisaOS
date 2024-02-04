@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: os/kickstart/bootscreen.tscn
+msgid "Copyright © 2069 Passionfruit Corporation. All rights reserved."
+msgstr "Copyright © 2069 Passionfruit S.A. Todos os direitos reservados."
+
+#: os/kickstart/onboarding.tscn
+msgid "Shutdown"
+msgstr "Desligar"
+
+#: os/kickstart/onboarding.tscn
+msgid "login as an existing user"
+msgstr "faça login"
+
+#: os/kickstart/onboarding.tscn
+msgid "or create a new one"
+msgstr "ou crie um novo usuário"
+
+#: os/kickstart/onboarding.tscn
+msgid "username:"
+msgstr "identificador:"
+
+#: os/kickstart/onboarding.tscn
+msgid "johndoe"
+msgstr "novousuário"
+
+#: os/kickstart/onboarding.tscn
+msgid "display name:"
+msgstr "nome:"
+
+#: os/kickstart/onboarding.tscn
+msgid "John Doe"
+msgstr "Novo Usuário"
+
+#: os/kickstart/onboarding.tscn
+msgid "photo:"
+msgstr "foto:"
+
+#: os/kickstart/onboarding.tscn
+msgid "Cat"
+msgstr "Gato"
+
+#: os/kickstart/onboarding.tscn
+msgid "Flower"
+msgstr "Flor"
+
+#: os/kickstart/onboarding.tscn
+msgid "Balloons"
+msgstr "Balões"
+
+#: os/kickstart/onboarding.tscn
+msgid "Car"
+msgstr "Carro"
+
+#: os/kickstart/onboarding.tscn
+msgid "Dog"
+msgstr "Cachorro"
+
+#: os/kickstart/onboarding.tscn
+msgid "Duck"
+msgstr "Pato"
+
+#: os/kickstart/onboarding.tscn
+msgid "Pancakes"
+msgstr "Panquecas"
+
+#: os/kickstart/onboarding.tscn
+msgid "Brushes"
+msgstr "Pinceis"
+
+#: os/kickstart/onboarding.tscn
+msgid "Shuttle"
+msgstr "Foguete"
+
+#: os/kickstart/onboarding.tscn
+msgid "Football"
+msgstr "Futebol"
+
+#: os/kickstart/onboarding.tscn
+msgid "Create"
+msgstr "Criar"
+
+#: os/kickstart/shutdown.tscn
+msgid "Turning off MarkisaOS..."
+msgstr "Desligando..."

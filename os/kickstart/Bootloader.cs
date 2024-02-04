@@ -32,6 +32,23 @@ public class Bootloader : Node
         // seeing your cursor while the computer is booting is quite uncommon
         Input.WarpMousePosition(Vector2.Zero);
         Input.MouseMode = Input.MouseModeEnum.ConfinedHidden;
+
+        // lcoalziation glboalstizagioyn internalizitation
+        var confgd = new Config<SystemInfo>();
+
+        var file = new File();
+        if (file.FileExists("user://yestheuserhasindeedopenedthegameforthefirsttime")) {
+            TranslationServer.SetLocale(confgd.Data.Language);
+        }
+        else {
+            TranslationServer.SetLocale(OS.GetLocaleLanguage());
+            confgd.Data.Language = OS.GetLocaleLanguage();
+            confgd.Save();
+
+            // so we don't overwrite what the user chose everytime the game launches :)
+            file.Open("user://yestheuserhasindeedopenedthegameforthefirsttime", File.ModeFlags.Write);
+            file.Close();
+        }
     }
 
     public override void _Process(float delta)

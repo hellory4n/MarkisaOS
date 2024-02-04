@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: os/dashboard/dashboard.tscn
+msgid "Sound:"
+msgstr "Som:"
+
+#: os/dashboard/dashboard.tscn
+msgid "Music:"
+msgstr "Música"
+
+#: os/dashboard/dashboard.tscn
+msgid "PC:"
+msgstr "PC:"
+
+#: os/dashboard/dashboard.tscn
+msgid "Settings"
+msgstr "Configurações"
+
+#: os/dashboard/dashboard.tscn
+msgid "Logout"
+msgstr "Sair"
+
+#: os/dashboard/dashboard.tscn
+msgid "Shutdown"
+msgstr "Desligar"
+
+#: os/dashboard/dashboard.tscn
+msgid "Notifications"
+msgstr "Notificações"
+
+#: os/dashboard/dashboard.tscn
+msgid "Home"
+msgstr "Início"
+
+#: os/dashboard/dashboard.tscn
+msgid "Accessories"
+msgstr "Acessórios"
+
+#: os/dashboard/dashboard.tscn
+msgid "Development"
+msgstr "Desenvolvimento"
+
+#: os/dashboard/dashboard.tscn
+msgid "Games"
+msgstr "Jogos"
+
+#: os/dashboard/dashboard.tscn
+msgid "Graphics"
+msgstr "Gráficos"
+
+#: os/dashboard/dashboard.tscn
+msgid "Internet"
+msgstr "Internet"
+
+#: os/dashboard/dashboard.tscn
+msgid "Multimedia"
+msgstr "Multimídia"
+
+#: os/dashboard/dashboard.tscn
+msgid "Office"
+msgstr "Escritório"
+
+#: os/dashboard/dashboard.tscn
+msgid "System"
+msgstr "Sistema"
+
+#: os/dashboard/dashboard.tscn
+msgid "Utilities"
+msgstr "Utilitários"
+
+#: os/dashboard/dashboard.tscn
+msgid "Continue"
+msgstr "Continuar"
+
+#: os/dashboard/dashboard.tscn
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: os/dashboard/dashboard.tscn
+msgid "Are you sure?"
+msgstr "Tem certeza?"
+
+#: os/dashboard/dashboard.tscn
+msgid "Progress is saved automatically."
+msgstr "Sue progresso é salvo automaticamente."
+
+#: os/dashboard/dashboard.tscn
+msgid "Show desktop"
+msgstr "Mostrar área de trabalho"
+
+#: os/dashboard/dashboard.tscn
+msgid "Quick settings"
+msgstr "Configurações rápidos"
+
+#: os/dashboard/dashboard.tscn
+msgid "Your money"
+msgstr "Seu dinheiro"
+
+#: os/dashboard/dashboard.tscn
+msgid "Time and date"
+msgstr "Hora e data"
+
+#: os/dashboard/dashboard.tscn
+msgid "Calculator"
+msgstr "Calculadora"
+
+#: os/dashboard/dashboard.tscn
+msgid "Your notes"
+msgstr "Suas notas"
