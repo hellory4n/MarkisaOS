@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/629020__kolombooo__button-click-edited.ogg-71406029912c9fc0a5ab8c5a6377e907.oggstr"
+
+[deps]
+
+source_file="res://os/assets/computerNoises/629020__kolombooo__button-click-edited.ogg"
+dest_files=[ "res://.import/629020__kolombooo__button-click-edited.ogg-71406029912c9fc0a5ab8c5a6377e907.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

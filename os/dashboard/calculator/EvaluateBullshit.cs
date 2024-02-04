@@ -24,9 +24,8 @@ public class EvaluateBullshit : LineEdit
             double result = (double)row["result"];
             Text = result.ToString(CultureInfo.InvariantCulture);
         }
-        catch (Exception e) {
+        catch (Exception) {
             Text = "Error";
-            throw e;
         }
     }
 

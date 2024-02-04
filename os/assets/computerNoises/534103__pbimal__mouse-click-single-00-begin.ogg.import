@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/534103__pbimal__mouse-click-single-00-begin.ogg-77eba6b6d1064b73e11940fa59cd2eda.oggstr"
+
+[deps]
+
+source_file="res://os/assets/computerNoises/534103__pbimal__mouse-click-single-00-begin.ogg"
+dest_files=[ "res://.import/534103__pbimal__mouse-click-single-00-begin.ogg-77eba6b6d1064b73e11940fa59cd2eda.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
