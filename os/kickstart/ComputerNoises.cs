@@ -103,11 +103,14 @@ public class ComputerNoises : Node
     public override void _Input(InputEvent @event)
     {
         if (@event is InputEventMouseButton lol) {
-            if (lol.IsReleased()) {
-                clickEnd.Play();
-            }
-            else {
-                clickBegin.Play();
+            // we really don't want to play sounds when you scroll
+            if (lol.ButtonIndex != (int)ButtonList.WheelDown && lol.ButtonIndex != (int)ButtonList.WheelUp && lol.ButtonIndex != (int)ButtonList.WheelLeft && lol.ButtonIndex != (int)ButtonList.WheelRight) {
+                if (lol.IsReleased()) {
+                    clickEnd.Play();
+                }
+                else {
+                    clickBegin.Play();
+                }
             }
         }
 

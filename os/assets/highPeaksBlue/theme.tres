@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=102 format=2]
+[gd_resource type="Theme" load_steps=104 format=2]
 
 [ext_resource path="res://os/assets/highPeaksBlue/buttons/pressed.png" type="Texture" id=1]
 [ext_resource path="res://os/assets/highPeaksBlue/buttons/focus.png" type="Texture" id=2]
@@ -240,6 +240,19 @@ margin_left = 8.0
 margin_right = 8.0
 margin_top = 8.0
 margin_bottom = 8.0
+
+[sub_resource type="StyleBoxEmpty" id=49]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id=50]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0.266667, 0.541176, 1, 0.498039 )
 
 [sub_resource type="StyleBoxEmpty" id=12]
 content_margin_left = 4.0
@@ -628,6 +641,19 @@ Header/base_type = "Label"
 Header/fonts/font = ExtResource( 11 )
 Italic/base_type = "Label"
 Italic/fonts/font = ExtResource( 51 )
+ItemList/colors/font_color = Color( 1, 1, 1, 1 )
+ItemList/colors/font_color_selected = Color( 1, 1, 1, 1 )
+ItemList/colors/guide_color = Color( 0.266666, 0.541176, 1, 0.5 )
+ItemList/constants/hseparation = 32
+ItemList/constants/icon_margin = 8
+ItemList/constants/line_separation = 3
+ItemList/constants/vseparation = 8
+ItemList/styles/bg = SubResource( 49 )
+ItemList/styles/bg_focus = SubResource( 49 )
+ItemList/styles/cursor = null
+ItemList/styles/cursor_unfocused = null
+ItemList/styles/selected = SubResource( 50 )
+ItemList/styles/selected_focus = SubResource( 50 )
 Label/colors/font_color = Color( 1, 1, 1, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )

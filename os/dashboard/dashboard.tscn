@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://os/assets/wallpapers/highPeaks.jpg" type="Texture" id=1]
 [ext_resource path="res://os/assets/highPeaks/icons/code.png" type="Texture" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://os/dashboard/calculator/EvaluateBullshit.cs" type="Script" id=32]
 [ext_resource path="res://os/dashboard/calculator/AddStuffToCalculatorStuffStuffStuffStuffStuff.cs" type="Script" id=33]
 [ext_resource path="res://os/dashboard/setVolume.gd" type="Script" id=34]
+[ext_resource path="res://apps/passionfruit/systemMonitor/iconsmall.png" type="Texture" id=35]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hideBigPopup"
@@ -725,7 +726,7 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Home"]
 margin_right = 231.0
-margin_bottom = 42.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 
 [node name="Button" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
@@ -740,6 +741,20 @@ icon = ExtResource( 3 )
 expand_icon = true
 script = ExtResource( 18 )
 window = "res://apps/passionfruit/test/app.tscn"
+
+[node name="Button2" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
+margin_top = 50.0
+margin_right = 400.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 0, 42 )
+mouse_filter = 1
+size_flags_horizontal = 3
+theme_type_variation = "OSButton"
+text = "System Monitor"
+icon = ExtResource( 35 )
+expand_icon = true
+script = ExtResource( 18 )
+window = "res://apps/passionfruit/systemMonitor/app.tscn"
 
 [node name="Accessories" type="ScrollContainer" parent="interface/appLauncher"]
 visible = false
@@ -1309,8 +1324,22 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/System"]
 margin_right = 400.0
-margin_bottom = 442.0
+margin_bottom = 492.0
 size_flags_horizontal = 3
+
+[node name="Button10" type="Button" parent="interface/appLauncher/System/VBoxContainer"]
+margin_top = 100.0
+margin_right = 400.0
+margin_bottom = 142.0
+rect_min_size = Vector2( 0, 42 )
+mouse_filter = 1
+size_flags_horizontal = 3
+theme_type_variation = "OSButton"
+text = "System Monitor"
+icon = ExtResource( 35 )
+expand_icon = true
+script = ExtResource( 18 )
+window = "res://apps/passionfruit/systemMonitor/app.tscn"
 
 [node name="Button" type="Button" parent="interface/appLauncher/System/VBoxContainer"]
 margin_right = 394.0

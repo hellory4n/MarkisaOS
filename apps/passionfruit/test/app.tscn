@@ -13,9 +13,6 @@ margin_top = 107.0
 margin_right = 660.0
 margin_bottom = 454.0
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
 WindowTitle = "The Industrial Revolution and its consequences have been a disaster for the human race."
 DockIcon = ExtResource( 4 )
 SmallIcon = ExtResource( 3 )
