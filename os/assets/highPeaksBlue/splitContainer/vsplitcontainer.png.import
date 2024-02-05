@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/focus.png-35617db018ea14488090e059e49f781a.stex"
+path="res://.import/vsplitcontainer.png-cc13bd5597f674889b79506e3b5ee37a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://os/assets/highPeaksBlue/text_edit/focus.png"
-dest_files=[ "res://.import/focus.png-35617db018ea14488090e059e49f781a.stex" ]
+source_file="res://os/assets/highPeaksBlue/splitContainer/vsplitcontainer.png"
+dest_files=[ "res://.import/vsplitcontainer.png-cc13bd5597f674889b79506e3b5ee37a.stex" ]
 
 [params]
 

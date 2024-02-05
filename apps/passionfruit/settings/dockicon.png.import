@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/normal.png-94d6519e1f90a7b471a31fd7d16f2b77.stex"
+path="res://.import/dockicon.png-0b981054528fd269ac83b71d760104b9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://os/assets/highPeaksBlue/text_edit/normal.png"
-dest_files=[ "res://.import/normal.png-94d6519e1f90a7b471a31fd7d16f2b77.stex" ]
+source_file="res://apps/passionfruit/settings/dockicon.png"
+dest_files=[ "res://.import/dockicon.png-0b981054528fd269ac83b71d760104b9.stex" ]
 
 [params]
 

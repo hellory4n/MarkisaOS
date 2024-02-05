@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://apps/passionfruit/settings/dockicon.png" type="Texture" id=1]
+[ext_resource path="res://apps/passionfruit/settings/smallicon.png" type="Texture" id=2]
+[ext_resource path="res://apps/passionfruit/settings/fullicon.png" type="Texture" id=3]
+[ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
+
+[node name="EpicWindo" type="Control"]
+margin_right = 576.0
+margin_bottom = 347.0
+script = ExtResource( 6 )
+WindowTitle = "Settings"
+DockIcon = ExtResource( 1 )
+SmallIcon = ExtResource( 2 )
+FullIcon = ExtResource( 3 )
+Floating = true
+SizePercentage = Vector2( 50, 60 )
+MemoryUsage = 25
+DiskUsage = 25
+ContentRoot = NodePath("contents")
+
+[node name="contents" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+
+[node name="hSplitContainer" type="HSplitContainer" parent="contents"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/hSplitContainer"]
+margin_right = 62.0
+margin_bottom = 347.0
+
+[node name="button" type="Button" parent="contents/hSplitContainer/vBoxContainer"]
+margin_right = 62.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+theme_type_variation = "OSButton"
+text = "Home"
+
+[node name="control" type="Control" parent="contents/hSplitContainer"]
+margin_left = 74.0
+margin_right = 576.0
+margin_bottom = 347.0
