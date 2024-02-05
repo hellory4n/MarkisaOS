@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=104 format=2]
+[gd_resource type="Theme" load_steps=107 format=2]
 
 [ext_resource path="res://os/assets/highPeaksBlue/buttons/pressed.png" type="Texture" id=1]
 [ext_resource path="res://os/assets/highPeaksBlue/buttons/focus.png" type="Texture" id=2]
@@ -53,6 +53,8 @@
 [ext_resource path="res://os/assets/highPeaks/fonts/italicFont.tres" type="DynamicFont" id=51]
 [ext_resource path="res://os/assets/highPeaks/fonts/monospaceFont.tres" type="DynamicFont" id=52]
 [ext_resource path="res://os/assets/highPeaks/fonts/boldItalicFont.tres" type="DynamicFont" id=53]
+[ext_resource path="res://os/assets/highPeaksBlue/splitContainer/hsplitcontainer.png" type="Texture" id=54]
+[ext_resource path="res://os/assets/highPeaksBlue/splitContainer/vsplitcontainer.png" type="Texture" id=55]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 10.0
@@ -510,6 +512,15 @@ margin_right = 16.0
 margin_top = 16.0
 margin_bottom = 16.0
 
+[sub_resource type="StyleBoxFlat" id=51]
+bg_color = Color( 0, 0, 0, 0.247059 )
+border_width_right = 1
+border_color = Color( 0.266667, 0.541176, 1, 1 )
+expand_margin_right = 5.0
+shadow_color = Color( 0, 0, 0, 0.498039 )
+shadow_size = 25
+shadow_offset = Vector2( -5, 0 )
+
 [sub_resource type="StyleBoxTexture" id=19]
 content_margin_left = 12.0
 content_margin_right = 12.0
@@ -637,6 +648,9 @@ HSlider/icons/tick = ExtResource( 44 )
 HSlider/styles/grabber_area = SubResource( 30 )
 HSlider/styles/grabber_area_highlight = SubResource( 31 )
 HSlider/styles/slider = SubResource( 32 )
+HSplitContainer/constants/autohide = 1
+HSplitContainer/constants/separation = 12
+HSplitContainer/icons/grabber = ExtResource( 54 )
 Header/base_type = "Label"
 Header/fonts/font = ExtResource( 11 )
 Italic/base_type = "Label"
@@ -762,6 +776,8 @@ Secondary/base_type = "Button"
 Secondary/styles/hover = SubResource( 16 )
 Secondary/styles/normal = SubResource( 17 )
 Secondary/styles/pressed = SubResource( 18 )
+Sidebar/base_type = "Panel"
+Sidebar/styles/panel = SubResource( 51 )
 SpinBox/icons/updown = ExtResource( 26 )
 TextEdit/colors/caret_color = Color( 0.266667, 0.541176, 1, 0.819608 )
 TextEdit/colors/font_color = Color( 1, 1, 1, 1 )
@@ -789,3 +805,7 @@ VSlider/icons/tick = ExtResource( 39 )
 VSlider/styles/grabber_area = SubResource( 37 )
 VSlider/styles/grabber_area_highlight = SubResource( 38 )
 VSlider/styles/slider = SubResource( 39 )
+VSplitContainer/constants/autohide = 1
+VSplitContainer/constants/separation = 12
+VSplitContainer/icons/grabber = ExtResource( 55 )
+VSplitContainer/styles/bg = null
