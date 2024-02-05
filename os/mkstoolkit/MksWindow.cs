@@ -139,7 +139,12 @@ public class MksWindow : Control
                 RectPosition = (Frambos.Resolution + new Vector2(64, 40)) / 2 - (coolSize / 2);
             }
             else {
-                RectPosition = new Vector2(64, 85);
+                if (Frambos.IsOnMobile) {
+                    RectPosition = new Vector2(64, 85);
+                }
+                else {
+                    RectPosition = new Vector2(64, 0);
+                }
             }
         }
 

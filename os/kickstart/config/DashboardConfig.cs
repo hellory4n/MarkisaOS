@@ -9,7 +9,7 @@ class DashboardConfig : IConfigData
     public string Theme { get; set; } = "res://os/assets/highPeaksBlue/theme.tres";
     public string[] ExtraThemes { get; set; } = new string[] {};
     public string[] ExtraWallpapers { get; set; } = new string[] {};
-    public string StickyNoteText { get; set; } = "Write your notes here";
+    public string StickyNoteText { get; set; } = "";
 }
 
 }

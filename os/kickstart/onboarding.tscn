@@ -101,7 +101,7 @@ margin_bottom = 45.0
 size_flags_horizontal = 3
 text = "English"
 align = 1
-items = [ "English", null, false, 0, null, "Português (Brasil)", null, false, 1, null ]
+items = [ "English", null, false, 0, null, "Português (Brasil)", null, false, 1, null, "Español", null, false, 2, null ]
 selected = 0
 script = ExtResource( 18 )
 
@@ -115,14 +115,6 @@ text = "Shutdown"
 script = ExtResource( 13 )
 gkjdhjdg = "res://os/kickstart/shutdown.tscn"
 h = NodePath("../../..")
-
-[node name="Label" type="Label" parent="MarginContainer"]
-margin_top = 212.0
-margin_right = 360.0
-margin_bottom = 267.0
-text = "NOTE: i deleted the music system as it's godot 4-only, new one coming soon"
-align = 2
-autowrap = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_bottom = 1.0

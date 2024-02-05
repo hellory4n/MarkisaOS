@@ -6,12 +6,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
-"Language: pt\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: os/dashboard/dashboard.tscn
 msgid "Sound:"
-msgstr "Som:"
+msgstr "Sonido:"
 
 #: os/dashboard/dashboard.tscn
 msgid "Music:"
@@ -23,19 +23,19 @@ msgstr "PC:"
 
 #: os/dashboard/dashboard.tscn
 msgid "Settings"
-msgstr "Configurações"
+msgstr "Configuraciones"
 
 #: os/dashboard/dashboard.tscn
 msgid "Logout"
-msgstr "Sair"
+msgstr "Salir"
 
 #: os/dashboard/dashboard.tscn
 msgid "Shutdown"
-msgstr "Desligar"
+msgstr "Apagar"
 
 #: os/dashboard/dashboard.tscn
 msgid "Notifications"
-msgstr "Notificações"
+msgstr "Notificaciones"
 
 #: os/dashboard/dashboard.tscn
 msgid "Home"
@@ -43,15 +43,15 @@ msgstr "Início"
 
 #: os/dashboard/dashboard.tscn
 msgid "Accessories"
-msgstr "Acessórios"
+msgstr "Accessorios"
 
 #: os/dashboard/dashboard.tscn
 msgid "Development"
-msgstr "Desenvolvimento"
+msgstr "Desarrollo"
 
 #: os/dashboard/dashboard.tscn
 msgid "Games"
-msgstr "Jogos"
+msgstr "Juegos"
 
 #: os/dashboard/dashboard.tscn
 msgid "Graphics"
@@ -63,7 +63,7 @@ msgstr "Internet"
 
 #: os/dashboard/dashboard.tscn
 msgid "Multimedia"
-msgstr "Multimídia"
+msgstr "Multimedia"
 
 #: os/dashboard/dashboard.tscn
 msgid "Office"
@@ -75,7 +75,7 @@ msgstr "Sistema"
 
 #: os/dashboard/dashboard.tscn
 msgid "Utilities"
-msgstr "Utilitários"
+msgstr "Utilitarios"
 
 #: os/dashboard/dashboard.tscn
 msgid "Continue"
@@ -87,27 +87,27 @@ msgstr "Cancelar"
 
 #: os/dashboard/dashboard.tscn
 msgid "Are you sure?"
-msgstr "Tem certeza?"
+msgstr "Estás seguro?"
 
 #: os/dashboard/dashboard.tscn
 msgid "Progress is saved automatically."
-msgstr "Seu progresso é salvo automaticamente."
+msgstr "Su progreso se guarda automáticamente."
 
 #: os/dashboard/dashboard.tscn
 msgid "Show desktop"
-msgstr "Mostrar área de trabalho"
+msgstr "Mostrar área de trabajo"
 
 #: os/dashboard/dashboard.tscn
 msgid "Quick settings"
-msgstr "Configurações rápidos"
+msgstr "Configuración rapida"
 
 #: os/dashboard/dashboard.tscn
 msgid "Your money"
-msgstr "Seu dinheiro"
+msgstr "Su dinero"
 
 #: os/dashboard/dashboard.tscn
 msgid "Time and date"
-msgstr "Hora e data"
+msgstr "Hora y fecha"
 
 #: os/dashboard/dashboard.tscn
 msgid "Calculator"
@@ -115,4 +115,4 @@ msgstr "Calculadora"
 
 #: os/dashboard/dashboard.tscn
 msgid "Your notes"
-msgstr "Suas notas"
+msgstr "Sus notas"

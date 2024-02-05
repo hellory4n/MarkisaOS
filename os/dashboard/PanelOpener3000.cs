@@ -19,18 +19,31 @@ public class PanelOpener3000 : Button
         epicPanel = GetNode<Panel>(Panel);
         switch (Type) {
             case 0: // app launcher
-                from = new Vector2(-400, Frambos.Resolution.y - 300);
-                to = new Vector2(64, Frambos.Resolution.y - 300);
+                if (Frambos.IsOnMobile) {
+                    from = new Vector2(-400, (Frambos.Resolution.y / 2) - 150);
+                    to = new Vector2(64, (Frambos.Resolution.y / 2) - 150);
+                }
+                else {
+                    from = new Vector2(-400, Frambos.Resolution.y - 300);
+                    to = new Vector2(64, Frambos.Resolution.y - 300);
+                }
                 break;
             case 1: // quick settings
-                from = new Vector2(Frambos.Resolution.x - 300, -300);
-                to = new Vector2(Frambos.Resolution.x - 300, 40);
+                if (Frambos.IsOnMobile) {
+                    from = new Vector2(-364, 0);
+                    to = new Vector2(64, 0);
+                }
+                else {
+                    from = new Vector2(Frambos.Resolution.x - 300, -300);
+                    to = new Vector2(Frambos.Resolution.x - 300, 40);
+                }
                 break;
             case 2: // notifications
                 from = new Vector2(Frambos.Resolution.x - 350, -400);
                 to = new Vector2(Frambos.Resolution.x - 350, 40);
                 break;
             case 3: // sticky notes
+            
                 from = new Vector2(64, -400);
                 to = new Vector2(64, 40);
                 break;
