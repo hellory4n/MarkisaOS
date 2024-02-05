@@ -23,6 +23,10 @@ public class Dashboard : Control
             GetNode<Control>("interface/mobileui").Visible = false;
             GetNode<Control>("mobileTimeMoney").Visible = false;
         }
+
+        // load the fucking settings
+        var config = new Config<DashboardConfig>();
+        GetNode<TextureRect>("wallpaper").Texture = GD.Load<Texture>(config.Data.Wallpaper);
     }
 }
 
