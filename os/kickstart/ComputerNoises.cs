@@ -1,4 +1,5 @@
 using Godot;
+using markisa.foundation;
 using markisa.mkstoolkit;
 using System;
 using System.Linq;
@@ -33,6 +34,11 @@ public class ComputerNoises : Node
     AudioStreamPlayer clickBegin;
     AudioStreamPlayer clickEnd;
     AudioStreamPlayer keyboard;
+
+    public bool FanEnabled = false;
+    public bool DiskEnabled = false;
+    public bool MouseEnabled = false;
+    public bool KeyboardEnabled = false;
 
     public override void _Ready()
     {
@@ -70,10 +76,30 @@ public class ComputerNoises : Node
         // so it isn't really loud before you login
         fanPlayer.VolumeDb = GD.Linear2Db(0.05f); // (10 / 100) / 2
         diskPlayer.VolumeDb = GD.Linear2Db(0.1f); // (5 / 100) * 2
+
+        // so true
+        var fig = new Config<ComputerNoisesConfig>();
+        FanEnabled = fig.Data.Fan;
+        DiskEnabled = fig.Data.Disk;
+        MouseEnabled = fig.Data.Mouse;
+        KeyboardEnabled = fig.Data.Keyboard;
     }
 
     public override void _Process(float delta)
     {
+        // enable or disable shit
+        fanPlayer.StreamPaused = !FanEnabled;
+        diskPlayer.StreamPaused = !DiskEnabled;
+        if (!MouseEnabled) {
+            clickBegin.VolumeDb = -80;
+            clickEnd.VolumeDb = -80;}
+        else {
+            clickBegin.VolumeDb = 0;
+            clickEnd.VolumeDb = 0;
+        }
+
+        if (KeyboardEnabled) keyboard.VolumeDb = 0; else keyboard.VolumeDb = -80;
+        
         if (!DashboardExists) {
             return;
         }
@@ -96,7 +122,9 @@ public class ComputerNoises : Node
         double actualDiskStuff = DiskSuffering / 100;
 
         fanPlayer.VolumeDb = GD.Linear2Db((float)(actualFanStuff / 2));
-        diskPlayer.VolumeDb = GD.Linear2Db((float)(actualDiskStuff / 2));
+        diskPlayer.VolumeDb = GD.Linear2Db((float)(actualDiskStuff * 2));
+
+        
     }
 
     // clicking and typing noises lol
