@@ -14,8 +14,12 @@ public class Frambos : Node
     public static uint MajorVersion => 0;
     public static uint MinorVersion => 13;
     public static uint PatchVersion => 2;
+
     static bool forceMobile = false;
     static PackedScene notificationShit = GD.Load<PackedScene>("res://os/dashboard/notification.tscn");
+    static PackedScene peekAtText = GD.Load<PackedScene>("res://os/dashboard/textpeek.tscn");
+    static Panel text;
+    static LineEdit peek;
     static SceneTree sceneTreeSoICanMakeAStaticFunction;
 
     static Dictionary<SystemSound, AudioStream> AwesomeSounds { get; } = new Dictionary<SystemSound, AudioStream> {
@@ -38,6 +42,35 @@ public class Frambos : Node
         }
 
         sceneTreeSoICanMakeAStaticFunction = GetTree();
+
+        text = peekAtText.Instance<Panel>();
+        // add_child: Parent node is busy setting up children, add_node() failed. Consider using call_deferred("add_child", child) instead.
+        GetTree().Root.CallDeferred("add_child", text);
+        peek = text.GetNode<LineEdit>("peek");
+    }
+
+    public override void _Process(float delta)
+    {
+        // we don't need textpeek on a pc :)
+        if (!IsOnMobile) {
+            return;
+        }
+
+        // normal nodes can't get the focus owner :(
+        text.Visible = text.GetFocusOwner() is LineEdit || text.GetFocusOwner() is TextEdit;
+
+        if (text.GetFocusOwner() is LineEdit ha) {
+            // HE SAID IT
+            // TEXT PEEK ‼️
+            peek.Text = ha.Text;
+        }
+
+        if (text.GetFocusOwner() is TextEdit lol) {
+            peek.Text = lol.GetLine(lol.CursorGetLine());
+        }
+
+        // so you can actually see shit :)))))))
+        text.Raise();
     }
 
     /// <summary>
