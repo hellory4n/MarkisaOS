@@ -138,6 +138,10 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxTexture" id=8]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
 texture = ExtResource( 18 )
 region_rect = Rect2( 0, 0, 40, 40 )
 margin_left = 20.0
@@ -146,6 +150,10 @@ margin_top = 20.0
 margin_bottom = 20.0
 
 [sub_resource type="StyleBoxTexture" id=9]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
 texture = ExtResource( 16 )
 region_rect = Rect2( 0, 0, 40, 40 )
 margin_left = 20.0
@@ -166,6 +174,10 @@ margin_top = 20.0
 margin_bottom = 20.0
 
 [sub_resource type="StyleBoxTexture" id=11]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 40, 40 )
 margin_left = 20.0
