@@ -260,6 +260,7 @@ public class MksWindow : Control
             .SetEase(Tween.EaseType.Out);
         
         dockButton?.QueueFree();
+        activitiesButton?.QueueFree();
     }
 
     void DumbFunctionThatCallsASingleOtherFunctionBecauseGodot3DoesntLetMeUseLambdas() => QueueFree();
