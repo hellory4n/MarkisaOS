@@ -47,6 +47,7 @@ public class Frambos : Node
         // add_child: Parent node is busy setting up children, add_node() failed. Consider using call_deferred("add_child", child) instead.
         GetTree().Root.CallDeferred("add_child", text);
         peek = text.GetNode<LineEdit>("peek");
+        text.Visible = false;
     }
 
     public override void _Process(float delta)
