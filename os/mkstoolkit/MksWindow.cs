@@ -24,6 +24,11 @@ public class MksWindow : Control
     [Export]
     public Texture SmallIcon { get; set; }
     /// <summary>
+    /// The icon in its full glory, recommended resolution of 128x128
+    /// </summary>
+    [Export]
+    public Texture FullIcon { get; set; }
+    /// <summary>
     /// If true, the window will be floating and draggable. Else, it will be maximized. This is always set to false on mobile :)
     /// </summary>
     [Export]
@@ -62,6 +67,7 @@ public class MksWindow : Control
     Button iconDisplay;
     Button closeButton;
     Button dockButton;
+    Button activitiesButton;
     double timeStuff;
 
     public override void _Ready()
@@ -130,8 +136,16 @@ public class MksWindow : Control
         title.AddChild(iconDisplay);
 
         if (!Engine.EditorHint) {
+            Vector2 nonoArea;
+            if (Frambos.IsOnMobile) {
+                nonoArea = new Vector2(64, 45);
+            }
+            else {
+                nonoArea = new Vector2(64, 85);
+            }
+
             // make sure the size is right
-            RectSize = (Frambos.Resolution * (SizePercentage / 100)) - new Vector2(64, 85);
+            RectSize = (Frambos.Resolution * (SizePercentage / 100)) - nonoArea;
 
             // go to the center of the screen
             if (Floating) {
@@ -139,17 +153,12 @@ public class MksWindow : Control
                 RectPosition = (Frambos.Resolution + new Vector2(64, 40)) / 2 - (coolSize / 2);
             }
             else {
-                if (Frambos.IsOnMobile) {
-                    RectPosition = new Vector2(64, 85);
-                }
-                else {
-                    RectPosition = new Vector2(64, 0);
-                }
+                RectPosition = nonoArea;
             }
         }
 
         // show up in the dock
-        if (!Engine.EditorHint) {
+        if (!Engine.EditorHint && !Frambos.IsOnMobile) {
             Node haha = GetNode("/root/dashboard/interface/dock/stuff/apps");
             dockButton = new Button {
                 Icon = DockIcon,
@@ -159,6 +168,19 @@ public class MksWindow : Control
             };
             haha.AddChild(dockButton);
             dockButton.Connect("pressed", this, nameof(OtherDumbFunctionThatCallsASingleOtherFunction));
+        }
+
+        // and also the activities
+        if (!Engine.EditorHint && Frambos.IsOnMobile) {
+            Node haha = GetNode("/root/dashboard/activities/conta/iner");
+            activitiesButton = new Button {
+                Icon = FullIcon,
+                ThemeTypeVariation = "OSButton",
+                IconAlign = Button.TextAlign.Center,
+                RectMinSize = new Vector2(144, 144)
+            };
+            haha.AddChild(activitiesButton);
+            activitiesButton.Connect("pressed", this, nameof(YetAnotherDumbFunctionButThisTimeItDoes2LinesOfShit));
         }
 
         // do the awesome window opening animation
@@ -242,6 +264,11 @@ public class MksWindow : Control
 
     void DumbFunctionThatCallsASingleOtherFunctionBecauseGodot3DoesntLetMeUseLambdas() => QueueFree();
     void OtherDumbFunctionThatCallsASingleOtherFunction() => Raise();
+    void YetAnotherDumbFunctionButThisTimeItDoes2LinesOfShit()
+    {
+        Raise();
+        GetNode<ColorRect>("/root/dashboard/activities").Visible = false;
+    }
 }
 
 }

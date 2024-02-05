@@ -15,13 +15,13 @@ public class Dashboard : Control
             GetNode<Control>("interface/panel").Visible = false;
             GetNode<Control>("interface/dock").Visible = false;
             GetNode<Control>("interface/mobileui").Visible = true;
-            GetNode<Control>("interface/mobileTimeMoney").Visible = true;
+            GetNode<Control>("mobileTimeMoney").Visible = true;
         }
         else {
             GetNode<Control>("interface/panel").Visible = true;
             GetNode<Control>("interface/dock").Visible = true;
             GetNode<Control>("interface/mobileui").Visible = false;
-            GetNode<Control>("interface/mobileTimeMoney").Visible = false;
+            GetNode<Control>("mobileTimeMoney").Visible = false;
         }
     }
 }
