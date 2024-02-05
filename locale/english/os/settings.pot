@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Home"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Apps"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Wallpapers"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Themes"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Languages"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Sound"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "System"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Credits"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Welcome to the Settings app!"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "All sounds:"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Sounds:"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Music"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "PC:"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Computer noises"
+msgstr ""
+
+# fan as in computer fan :)
+#: apps/passionfruit/settings/app.tscn
+msgid "Fan"
+msgstr ""
+
+# disk as in the part of the computer where you store malware
+#: apps/passionfruit/settings/app.tscn
+msgid "Disk"
+msgstr ""
+
+# mouse as in the bullshit you use to click on stuff
+#: apps/passionfruit/settings/app.tscn
+msgid "Mouse"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Keyboard"
+msgstr ""
+
+# the last line will eventually display useful information
+#: apps/passionfruit/settings/app.tscn
+msgid "MarkisaOS Me v0.14.0\n"
+"© 2069 Passionfruit Corporation\n"
+"by hellory4n, alex343xd\n"
+"Running on some device :)\n"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Factory reset"
+msgstr ""
+
+# the bullshit between [this shit] does formatting shit
+#: apps/passionfruit/settings/app.tscn
+msgid "[center]Developed by hellory4n\n"
+"Audio by alex343xd\n"
+"\n"
+"[b]Translations[/b]\n"
+"Português (Brasil) (Brazilian Portuguese): hellory4n\n"
+"Español (Spanish): Tha Muffin\n"
+"\n"
+"[b]Startup Sound[/b]\n"
+"Melody thing by alex343xd\n"
+"There's also the Zorin OS 16.x startup with some effects and the Ubuntu 6.10 - 18.04 shutdown sound (composed by Peter Savage) with some more effects\n"
+"\n"
+"[b]Wallpapers[/b]\n"
+"High Peaks: Nisarg Patel on Unsplash\n"
+"Flowers: Aaron Burden on Unsplash\n"
+"Beach: Derek Thomson on Unsplash\n"
+"Space: Tengyart on Unsplash\n"
+"Mountains: Leila Azevedo on Unsplash\n"
+"Aurora: Sami Matias on Unsplash\n"
+"Forest: Geronimo on Unsplash\n"
+"Lake: dirk von loen-wagnen on Unsplash\n"
+"Coffee: Mike Kenneally on Unsplash\n"
+"Green Peaks: Dayan Quinterosss on Unsplash\n"
+"\n"
+"[b]User Icons[/b]\n"
+"Cat: Andriyko Podilnyk on Unsplash\n"
+"Flower: Aaron Burden on Unsplash\n"
+"Balloon: Kyle Hinkson on Unsplash\n"
+"Car: Sven D on Unsplash\n"
+"Dog: Jamie Street on Unsplash\n"
+"Duck: Timothy Dykes on Unsplash\n"
+"Pancakes: nikldn on Unsplash\n"
+"Brushes: nikldn on Unsplash\n"
+"Shuttle: NASA on Unsplash\n"
+"Football: Wesley Tingey on Unsplash\n"
+"\n"
+"[b]Computer Noises[/b]\n"
+"Fan: saphe on Freesound\n"
+"HDD: sad3d on Freesound\n"
+"Mouse: pbimal on Freesound\n"
+"Keyboard: kolombooo on Freesound\n"
+"\n"
+"[b]Special Thanks[/b]\n"
+"My parents\n"
+"My cats\n"
+"Godot developers\n"
+"Figma developers\n"
+"parfait.san\n"
+"Tha Muffin\n"
+"Bricked\n"
+"alex343xd\n"
+"Rubi\n"
+"RThreeFive\n"
+"ten9⁵\n"
+"Newton Gametone\n"
+"MashedFig\n"
+"Artifyber\n"
+"Aliorio\n"
+"Telcaum\n"
+"Clustra\n"
+"DeafSalute\n"
+"matt7ress\n"
+"Everyone who liked and subscribed"
+"Martin Magni\n"
+"You :)"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Are you sure?"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "ALL internal data stored in this device will be lost! No exceptions! There is no going back!\n"
+"\n"
+"NOTE: This requires a restart."
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Nevermind"
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Delete everything"
+msgstr ""
