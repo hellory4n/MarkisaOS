@@ -152,8 +152,9 @@ mouse_filter = 2
 
 [node name="quickSettings" type="Panel" parent="interface"]
 margin_left = 553.0
-margin_top = -300.0
+margin_top = -369.0
 margin_right = 853.0
+margin_bottom = -69.0
 rect_min_size = Vector2( 300, 300 )
 theme_type_variation = "OSPanel"
 
@@ -291,8 +292,9 @@ shutdown = true
 
 [node name="notifications" type="Panel" parent="interface"]
 margin_left = 503.0
-margin_top = -400.0
+margin_top = -469.0
 margin_right = 853.0
+margin_bottom = -69.0
 rect_min_size = Vector2( 350, 400 )
 theme_type_variation = "OSPanel"
 
@@ -317,8 +319,9 @@ alignment = 1
 
 [node name="stickyNotes" type="Panel" parent="interface"]
 margin_left = 64.0
-margin_top = -400.0
+margin_top = -469.0
 margin_right = 414.0
+margin_bottom = -69.0
 rect_min_size = Vector2( 350, 400 )
 theme_type_variation = "OSPanel"
 
@@ -341,8 +344,9 @@ autostart = true
 
 [node name="calculator" type="Panel" parent="interface"]
 margin_left = 64.0
-margin_top = -400.0
+margin_top = -469.0
 margin_right = 414.0
+margin_bottom = -69.0
 rect_min_size = Vector2( 350, 400 )
 theme_type_variation = "OSPanel"
 
@@ -1666,7 +1670,7 @@ icon_align = 1
 expand_icon = true
 script = ExtResource( 16 )
 Panel = NodePath("../../../calculator")
-Type = 3
+Type = 4
 
 [node name="spacer1" type="Control" parent="interface/panel/stuff"]
 margin_left = 192.0
@@ -1778,6 +1782,7 @@ margin_top = 376.0
 margin_right = 64.0
 margin_bottom = 440.0
 rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "App launcher"
 theme_type_variation = "OSButton"
 toggle_mode = true
 icon = ExtResource( 14 )
@@ -1799,6 +1804,7 @@ custom_constants/separation = 0
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Quick settings"
 theme_type_variation = "OSButton"
 toggle_mode = true
 icon = ExtResource( 11 )
@@ -1812,6 +1818,7 @@ margin_top = 64.0
 margin_right = 64.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Your notes"
 theme_type_variation = "OSButton"
 toggle_mode = true
 icon = ExtResource( 10 )
@@ -1826,7 +1833,7 @@ margin_right = 64.0
 margin_bottom = 144.0
 size_flags_vertical = 3
 
-[node name="quickLaunch4" type="Button" parent="interface/mobileui/stuff"]
+[node name="activities" type="Button" parent="interface/mobileui/stuff"]
 margin_top = 144.0
 margin_right = 64.0
 margin_bottom = 208.0
@@ -1842,6 +1849,7 @@ margin_top = 208.0
 margin_right = 64.0
 margin_bottom = 272.0
 rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Show desktop"
 theme_type_variation = "OSButton"
 toggle_mode = true
 icon = ExtResource( 36 )
@@ -1853,6 +1861,7 @@ margin_top = 272.0
 margin_right = 64.0
 margin_bottom = 336.0
 rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "App launcher"
 theme_type_variation = "OSButton"
 toggle_mode = true
 icon = ExtResource( 35 )
@@ -1866,31 +1875,33 @@ margin_right = 64.0
 margin_bottom = 352.0
 size_flags_vertical = 3
 
-[node name="quickLaunch2" type="Button" parent="interface/mobileui/stuff"]
+[node name="calculator" type="Button" parent="interface/mobileui/stuff"]
 margin_top = 352.0
 margin_right = 64.0
 margin_bottom = 416.0
 rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Calculator"
 theme_type_variation = "OSButton"
 toggle_mode = true
 icon = ExtResource( 9 )
 icon_align = 1
 script = ExtResource( 16 )
-Panel = NodePath("../../../quickSettings")
-Type = 1
+Panel = NodePath("../../../calculator")
+Type = 4
 
-[node name="quickLaunch7" type="Button" parent="interface/mobileui/stuff"]
+[node name="notifications" type="Button" parent="interface/mobileui/stuff"]
 margin_top = 416.0
 margin_right = 64.0
 margin_bottom = 480.0
 rect_min_size = Vector2( 64, 64 )
+hint_tooltip = "Notifications"
 theme_type_variation = "OSButton"
 toggle_mode = true
 icon = ExtResource( 12 )
 icon_align = 1
 script = ExtResource( 16 )
-Panel = NodePath("../../../quickSettings")
-Type = 1
+Panel = NodePath("../../../notifications")
+Type = 2
 
 [node name="bigDumbConfirmationBullshit" type="ColorRect" parent="."]
 visible = false

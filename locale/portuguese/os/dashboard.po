@@ -116,3 +116,11 @@ msgstr "Calculadora"
 #: os/dashboard/dashboard.tscn
 msgid "Your notes"
 msgstr "Suas notas"
+
+#: os/dashboard/dashboard.tscn
+msgid "App launcher"
+msgstr "Meus apps"
+
+#: os/dashboard/dashboard.tscn
+msgid "Switch apps"
+msgstr "Alternar aplicativos"

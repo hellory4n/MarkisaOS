@@ -8,7 +8,7 @@ public class PanelOpener3000 : Button
 {
     [Export(PropertyHint.NodePathValidTypes, "Panel")]
     public NodePath Panel;
-    [Export(PropertyHint.Enum, "App launcher,Quick settings,Notifications,Sticky notes")]
+    [Export(PropertyHint.Enum, "App launcher,Quick settings,Notifications,Sticky notes,Calculator")]
     public int Type;
     Panel epicPanel;
     Vector2 from;
@@ -39,13 +39,34 @@ public class PanelOpener3000 : Button
                 }
                 break;
             case 2: // notifications
-                from = new Vector2(Frambos.Resolution.x - 350, -400);
-                to = new Vector2(Frambos.Resolution.x - 350, 40);
+                if (Frambos.IsOnMobile) {
+                    from = new Vector2(-414, Frambos.Resolution.y - 400);
+                    to = new Vector2(64, Frambos.Resolution.y - 400);
+                }
+                else {
+                    from = new Vector2(Frambos.Resolution.x - 350, -400);
+                    to = new Vector2(Frambos.Resolution.x - 350, 40);
+                }
                 break;
             case 3: // sticky notes
-            
-                from = new Vector2(64, -400);
-                to = new Vector2(64, 40);
+                if (Frambos.IsOnMobile) {
+                    from = new Vector2(-414, 0);
+                    to = new Vector2(64, 0);
+                }
+                else {
+                    from = new Vector2(64, -400);
+                    to = new Vector2(64, 40);
+                }
+                break;
+            case 4: // calculator
+                if (Frambos.IsOnMobile) {
+                    from = new Vector2(-414, Frambos.Resolution.y - 400);
+                    to = new Vector2(64, Frambos.Resolution.y - 400);
+                }
+                else {
+                    from = new Vector2(64, -400);
+                    to = new Vector2(64, 40);
+                }
                 break;
         }
     }
