@@ -472,7 +472,7 @@ stretch_mode = 6
 margin_top = 108.0
 margin_right = 300.0
 margin_bottom = 213.0
-text = "MarkisaOS Me v0.13.3
+text = "MarkisaOS Me v0.14.0
 © 2069 Passionfruit Corporation
 by hellory4n, alex343xd
 Running on some device :)"
@@ -632,6 +632,7 @@ You :)"
 selection_enabled = true
 
 [node name="popup" type="Panel" parent="contents"]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -200.0

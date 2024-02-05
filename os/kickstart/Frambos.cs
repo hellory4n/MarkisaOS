@@ -12,8 +12,8 @@ public class Frambos : Node
     public static string CurrentUser { get; set; } = "";
     public static string CurrentUserDisplayName { get; set; } = "";
     public static uint MajorVersion => 0;
-    public static uint MinorVersion => 13;
-    public static uint PatchVersion => 3;
+    public static uint MinorVersion => 14;
+    public static uint PatchVersion => 0;
 
     static bool forceMobile = false;
     static PackedScene notificationShit = GD.Load<PackedScene>("res://os/dashboard/notification.tscn");

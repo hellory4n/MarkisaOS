@@ -6,8 +6,8 @@ class MarkisaUser : IConfigData
     public string GetFilename() => "%user/user.mksconf";
 
     public uint MajorVersion { get; set; } = 0;
-    public uint MinorVersion { get; set; } = 13;
-    public uint PatchVersion { get; set; } = 3;
+    public uint MinorVersion { get; set; } = 14;
+    public uint PatchVersion { get; set; } = 0;
 
     /// <summary>
     /// The name displayed for the user, not the one used for saving the user's data.
