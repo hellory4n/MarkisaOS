@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=107 format=2]
+[gd_resource type="Theme" load_steps=109 format=2]
 
 [ext_resource path="res://os/assets/highPeaksBlue/buttons/pressed.png" type="Texture" id=1]
 [ext_resource path="res://os/assets/highPeaksBlue/buttons/focus.png" type="Texture" id=2]
@@ -524,6 +524,10 @@ margin_right = 16.0
 margin_top = 16.0
 margin_bottom = 16.0
 
+[sub_resource type="StyleBoxEmpty" id=52]
+
+[sub_resource type="StyleBoxEmpty" id=53]
+
 [sub_resource type="StyleBoxFlat" id=51]
 bg_color = Color( 0, 0, 0, 0.247059 )
 border_width_right = 1
@@ -782,8 +786,8 @@ RichTextLabel/fonts/bold_italics_font = ExtResource( 53 )
 RichTextLabel/fonts/italics_font = ExtResource( 51 )
 RichTextLabel/fonts/mono_font = ExtResource( 52 )
 RichTextLabel/fonts/normal_font = ExtResource( 3 )
-RichTextLabel/styles/focus = null
-RichTextLabel/styles/normal = null
+RichTextLabel/styles/focus = SubResource( 52 )
+RichTextLabel/styles/normal = SubResource( 53 )
 Secondary/base_type = "Button"
 Secondary/styles/hover = SubResource( 16 )
 Secondary/styles/normal = SubResource( 17 )

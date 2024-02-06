@@ -15,10 +15,13 @@ public class SetLanguage : Node
         var con = new Config<SystemInfo>();
         // checking if a string starts with something isn't supported in switch cases
         if (TranslationServer.GetLocale().StartsWith("pt")) {
-            GetNode<CheckBox>("../brazilMentioned").Pressed = true;
+            GetNode<CheckBox>("../brazilMentioned").SetPressedNoSignal(true);
         }
         if (TranslationServer.GetLocale().StartsWith("es")) {
-            GetNode<CheckBox>("../insertStereotypicalMexicanMusicHere").Pressed = true;
+            GetNode<CheckBox>("../insertStereotypicalMexicanMusicHere").SetPressedNoSignal(true);
+        }
+        else {
+            GetNode<CheckBox>("../englishInnit").SetPressedNoSignal(true);
         }
     }
 
