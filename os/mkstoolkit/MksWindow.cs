@@ -246,6 +246,9 @@ public class MksWindow : Control
         }
     }
 
+    /// <summary>
+    /// Closes the window lol
+    /// </summary>
     public void Close()
     {
         SceneTreeTween tween = CreateTween();

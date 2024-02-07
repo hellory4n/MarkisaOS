@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dogwater.mp3-d5658581a7fb5e4f040c8b1acb0afe7c.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/websites/browserSites/dogwater.mp3"
+dest_files=[ "res://.import/dogwater.mp3-d5658581a7fb5e4f040c8b1acb0afe7c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
