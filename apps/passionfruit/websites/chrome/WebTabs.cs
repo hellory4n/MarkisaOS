@@ -42,6 +42,7 @@ public class WebTabs : VBoxContainer
     public void AddTab()
     {
         var eichBoxContainer = new HBoxContainer();
+        eichBoxContainer.AddConstantOverride("separation", 0);
 
         var buttOn = new Button {
             ClipText = true,
@@ -96,6 +97,8 @@ public class WebTabs : VBoxContainer
             jgg.Value.IsActive = jgg.Key == button;
             button.Pressed = true;
         }
+
+        emKayEssWindow.WindowTitle = $"{epicTabs[button].Title} — Websites";
     }
 
     public void OnTabClose(Button button)

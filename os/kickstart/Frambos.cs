@@ -108,6 +108,54 @@ public class Frambos : Node
         // quite a convoluted way of saying `this.`
         sceneTreeSoICanMakeAStaticFunction.Root.GetNode("/root/Frambos").AddChild(dollarsign);
     }
+
+    /// <summary>
+    /// Gets the real path from an URL, or "404" if it's not found
+    /// </summary>
+    public static string GetRealWebPath(string url)
+    {
+        // maybe it happens to already be exactly what we want?
+        if (ResourceLoader.Exists(url)) {
+            return url;
+        }
+        
+        // maybe the user put web:// and we need to handle that
+        if (url.StartsWith("web://")) {
+            if (ResourceLoader.Exists(url.Replace("web://", "res://web/"))) {
+                return url.Replace("web://", "res://web/");
+            }
+
+            // maybe we need .tscn?
+            if (ResourceLoader.Exists(url.Replace("web://", "res://web/") + ".tscn")) {
+                return url.Replace("web://", "res://web/") + ".tscn";
+            }
+
+            // maybe we need home.tscn?
+            if (ResourceLoader.Exists(url.Replace("web://", "res://web/") + "home.tscn"))  {
+                return url.Replace("web://", "res://web/") + "home.tscn";
+            }
+        }
+
+        // maybe the user didn't put web://
+        if (!url.StartsWith("web://")) {
+            if (ResourceLoader.Exists("res://web/" + url)) {
+                return "res://web/" + url;
+            }
+
+            // maybe we need .tscn?
+            if (ResourceLoader.Exists("res://web" + url + ".tscn")) {
+                return "res://web" + url + ".tscn";
+            }
+
+            // maybe we need home.tscn?
+            if (ResourceLoader.Exists("res://web" + url + "/home.tscn"))  {
+                return "res://web" + url + "/home.tscn";
+            }
+        }
+
+        // ahhhhhhhhh fuck
+        return "404";
+    }
 }
 
 public enum SystemSound
