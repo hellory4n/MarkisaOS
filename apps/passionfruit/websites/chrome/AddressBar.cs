@@ -43,6 +43,7 @@ public class AddressBar : LineEdit
         webTabs.EpicCloseButtons[close] = wideWorldOfWeb;
         webTabs.EpicTabs[webTabs.ActiveBullshit] = wideWorldOfWeb;
         webTabs.EpicAwesomeEpicAddresses[webTabs.ActiveBullshit] = newText;
+        webTabs.NavigationStuffs[webTabs.ActiveBullshit].Push(newText);
 
         webTabs.OnTabSwitch(webTabs.ActiveBullshit);
     }

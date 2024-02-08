@@ -1,4 +1,5 @@
 using Godot;
+using markisa.foundation;
 using markisa.mkstoolkit;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,12 +17,14 @@ public class WebTabs : VBoxContainer
     Node the;
     MksWindow emKayEssWindow;
     LineEdit addressBar;
+    Button goBack;
 
     ButtonGroup group = new ButtonGroup();
     public Dictionary<Button, Webview> EpicTabs = new Dictionary<Button, Webview>();
     public Dictionary<Button, Webview> EpicCloseButtons = new Dictionary<Button, Webview>();
     public Dictionary<Button, string> EpicAwesomeEpicAddresses = new Dictionary<Button, string>();
     public Button ActiveBullshit;
+    public Dictionary<Button, Stack<string>> NavigationStuffs = new Dictionary<Button, Stack<string>>();
 
     readonly PackedScene newtab = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/newtab.tscn");
     readonly Texture closeIcon = GD.Load<Texture>("res://os/assets/highPeaks/icons/close.png");
@@ -31,6 +34,7 @@ public class WebTabs : VBoxContainer
         the = GetNode(TheShitWhereWebsitesAre);
         emKayEssWindow = GetNode<MksWindow>(Window);
         addressBar = GetNode<LineEdit>(Adderesrhbartr);
+        goBack = GetNode<Button>("../../top/back");
         AddTab();
     }
 
@@ -43,6 +47,9 @@ public class WebTabs : VBoxContainer
         }
 
         emKayEssWindow.MemoryUsage = Mathf.Min(EpicTabs.Count * 6, 100);
+        goBack.Disabled = NavigationStuffs[ActiveBullshit].Count < 1;
+
+        GD.Print(string.Join(", ", NavigationStuffs[ActiveBullshit]));
     }
 
     public void AddTab()
@@ -77,6 +84,7 @@ public class WebTabs : VBoxContainer
         EpicTabs.Add(buttOn, totallyAccurateBattleSimulator);
         EpicCloseButtons.Add(nearby, totallyAccurateBattleSimulator);
         EpicAwesomeEpicAddresses.Add(buttOn, "");
+        NavigationStuffs.Add(buttOn, new Stack<string>());
 
         the.AddChild(totallyAccurateBattleSimulator);
         AddChild(eichBoxContainer);
@@ -107,7 +115,6 @@ public class WebTabs : VBoxContainer
         emKayEssWindow.WindowTitle = $"{EpicTabs[button].Title} — Websites";
         ActiveBullshit = button;
         addressBar.Text = EpicAwesomeEpicAddresses[button];
-
     }
 
     public void OnTabClose(Button button)
@@ -126,10 +133,44 @@ public class WebTabs : VBoxContainer
         EpicCloseButtons.Remove(button);
         EpicTabs.Remove(clashOfClans);
         EpicAwesomeEpicAddresses.Remove(clashOfClans);
+        NavigationStuffs.Remove(clashOfClans);
 
         if (EpicTabs.Count == 0) {
             emKayEssWindow.Close();
         }
+    }
+
+    public void GOBACKNOW()
+    {
+        // help
+        // copied straight from AddressBar.cs
+        string newAddress = NavigationStuffs[ActiveBullshit].Pop();
+        PackedScene packed;
+        string jsigtksk = Frambos.GetRealWebPath(newAddress);
+        if (jsigtksk == "404") {
+            packed = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/404.tscn");
+        }
+        else {
+            packed = GD.Load<PackedScene>(jsigtksk);
+        }
+
+        // commit some shitfuckery :D
+        Webview wideWorldOfWeb = packed.Instance<Webview>();
+        Webview webviewThatWillDie = EpicTabs[ActiveBullshit];
+
+        foreach (Node kgxfjkgsfjghisf in webviewThatWillDie.GetChildren()) {
+            kgxfjkgsfjghisf.QueueFree();
+        }
+
+        webviewThatWillDie.ReplaceBy(wideWorldOfWeb);
+
+        // what am i doing
+        Button close = EpicCloseButtons.FirstOrDefault(x => x.Value == EpicTabs[ActiveBullshit]).Key;
+        EpicCloseButtons[close] = wideWorldOfWeb;
+        EpicTabs[ActiveBullshit] = wideWorldOfWeb;
+        EpicAwesomeEpicAddresses[ActiveBullshit] = newAddress;
+
+        OnTabSwitch(ActiveBullshit);
     }
 }
 
