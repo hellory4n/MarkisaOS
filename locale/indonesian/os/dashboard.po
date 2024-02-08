@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: os/dashboard/dashboard.tscn
+msgid "Sound:"
+msgstr "Suara:"
+
+#: os/dashboard/dashboard.tscn
+msgid "Music:"
+msgstr "Musik:"
+
+#: os/dashboard/dashboard.tscn
+msgid "PC:"
+msgstr "PC:"
+
+#: os/dashboard/dashboard.tscn
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: os/dashboard/dashboard.tscn
+msgid "Logout"
+msgstr "Keluar"
+
+#: os/dashboard/dashboard.tscn
+msgid "Shutdown"
+msgstr "Matikan"
+
+#: os/dashboard/dashboard.tscn
+msgid "Notifications"
+msgstr "Notifikasi"
+
+#: os/dashboard/dashboard.tscn
+msgid "Home"
+msgstr "Rumah"
+
+#: os/dashboard/dashboard.tscn
+msgid "Accessories"
+msgstr "Aksesoris"
+
+#: os/dashboard/dashboard.tscn
+msgid "Development"
+msgstr "Pengembangan"
+
+#: os/dashboard/dashboard.tscn
+msgid "Games"
+msgstr "Permainan"
+
+#: os/dashboard/dashboard.tscn
+msgid "Graphics"
+msgstr "Grafik"
+
+#: os/dashboard/dashboard.tscn
+msgid "Internet"
+msgstr "Internet"
+
+#: os/dashboard/dashboard.tscn
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: os/dashboard/dashboard.tscn
+msgid "Office"
+msgstr "Kantor"
+
+#: os/dashboard/dashboard.tscn
+msgid "System"
+msgstr "Sistem"
+
+#: os/dashboard/dashboard.tscn
+msgid "Utilities"
+msgstr "Utilitas"
+
+#: os/dashboard/dashboard.tscn
+msgid "Continue"
+msgstr "Lanjutkan"
+
+#: os/dashboard/dashboard.tscn
+msgid "Cancel"
+msgstr "Batal"
+
+#: os/dashboard/dashboard.tscn
+msgid "Are you sure?"
+msgstr "Apakah anda yakin?"
+
+#: os/dashboard/dashboard.tscn
+msgid "Progress is saved automatically."
+msgstr "Progres disimpan secara otomatis."
+
+#: os/dashboard/dashboard.tscn
+msgid "Show desktop"
+msgstr "Tampilkan desktop"
+
+#: os/dashboard/dashboard.tscn
+msgid "Quick settings"
+msgstr "Pengaturan cepat"
+
+#: os/dashboard/dashboard.tscn
+msgid "Your money"
+msgstr "Uang anda"
+
+#: os/dashboard/dashboard.tscn
+msgid "Time and date"
+msgstr "Waktu dan tanggal"
+
+#: os/dashboard/dashboard.tscn
+msgid "Calculator"
+msgstr "Kalkulator"
+
+#: os/dashboard/dashboard.tscn
+msgid "Your notes"
+msgstr "Catatan anda"
+
+#: os/dashboard/dashboard.tscn
+msgid "App launcher"
+msgstr "Peluncur aplikasi"
+
+#: os/dashboard/dashboard.tscn
+msgid "Switch apps"
+msgstr "Ganti aplikasi"

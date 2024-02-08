@@ -101,7 +101,7 @@ margin_bottom = 45.0
 size_flags_horizontal = 3
 text = "English"
 align = 1
-items = [ "English", null, false, 0, null, "Português (Brasil)", null, false, 1, null, "Español", null, false, 2, null ]
+items = [ "English", null, false, 0, null, "Português (Brasil)", null, false, 1, null, "Español", null, false, 2, null, "Bahasa Indonesia", null, false, 3, null ]
 selected = 0
 script = ExtResource( 18 )
 
@@ -126,37 +126,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
-margin_left = 18.0
+margin_left = 12.0
 margin_top = 20.0
-margin_right = 307.0
+margin_right = 312.0
 margin_bottom = 459.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
 [node name="Label" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 41.0
+rect_min_size = Vector2( 300, 0 )
 theme_type_variation = "Header"
 text = "login as an existing user"
 align = 1
+autowrap = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
 margin_top = 49.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 184.0
 rect_min_size = Vector2( 0, 135 )
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer/ScrollContainer"]
-margin_right = 289.0
+margin_right = 300.0
 size_flags_horizontal = 3
 script = ExtResource( 14 )
 packed = ExtResource( 15 )
 
 [node name="Label2" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
 margin_top = 192.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 233.0
 theme_type_variation = "Header"
 text = "or create a new one"
@@ -164,7 +166,7 @@ align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
 margin_top = 241.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 283.0
 alignment = 1
 
@@ -180,7 +182,7 @@ clip_text = true
 
 [node name="LineEdit" type="LineEdit" parent="ColorRect/CenterContainer/VBoxContainer/HBoxContainer"]
 margin_left = 136.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
 align = 1
@@ -188,7 +190,7 @@ placeholder_text = "johndoe"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
 margin_top = 291.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 333.0
 alignment = 1
 
@@ -204,7 +206,7 @@ clip_text = true
 
 [node name="LineEdit" type="LineEdit" parent="ColorRect/CenterContainer/VBoxContainer/HBoxContainer2"]
 margin_left = 136.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
 align = 1
@@ -212,7 +214,7 @@ placeholder_text = "John Doe"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ColorRect/CenterContainer/VBoxContainer"]
 margin_top = 341.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 389.0
 alignment = 1
 
@@ -228,7 +230,7 @@ clip_text = true
 
 [node name="OptionButton" type="OptionButton" parent="ColorRect/CenterContainer/VBoxContainer/HBoxContainer3"]
 margin_left = 136.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 text = "Cat"
@@ -240,7 +242,7 @@ selected = 0
 
 [node name="Button" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
 margin_top = 397.0
-margin_right = 289.0
+margin_right = 300.0
 margin_bottom = 439.0
 text = "Create"
 script = ExtResource( 16 )

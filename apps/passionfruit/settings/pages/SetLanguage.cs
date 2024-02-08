@@ -20,6 +20,9 @@ public class SetLanguage : Node
         if (TranslationServer.GetLocale().StartsWith("es")) {
             GetNode<CheckBox>("../insertStereotypicalMexicanMusicHere").SetPressedNoSignal(true);
         }
+        else if (TranslationServer.GetLocale().StartsWith("id")) {
+            GetNode<CheckBox>("../idkMan").SetPressedNoSignal(true);
+        }
         else {
             GetNode<CheckBox>("../englishInnit").SetPressedNoSignal(true);
         }
@@ -31,6 +34,7 @@ public class SetLanguage : Node
         switch (brh.Text) {
             case "Português (Brasil)": locale = "pt"; break;
             case "Español": locale = "es"; break;
+            case "Bahasa Indonesia": locale = "id"; break;
             default: locale = "en"; break;
         }
 

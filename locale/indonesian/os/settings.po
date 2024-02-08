@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Apps"
+msgstr "Aplikasi"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Wallpapers"
+msgstr "Wallpaper"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Themes"
+msgstr "Tema"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Languages"
+msgstr "Bahasa"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Sound"
+msgstr "Suara"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Credits"
+msgstr "Kredit"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Welcome to the Settings app!"
+msgstr "Selamat datang di Pengaturan!"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "All sounds:"
+msgstr "Semua suara:"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Sounds:"
+msgstr "Suara:"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Music:"
+msgstr "Musik:"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "PC:"
+msgstr "PC:"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Computer noises"
+msgstr "Suara komputer"
+
+# fan as in computer fan :)
+#: apps/passionfruit/settings/app.tscn
+msgid "Fan"
+msgstr "Kipas"
+
+# disk as in the part of the computer where you store malware
+#: apps/passionfruit/settings/app.tscn
+msgid "Disk"
+msgstr "Disk"
+
+# mouse as in the bullshit you use to click on stuff
+#: apps/passionfruit/settings/app.tscn
+msgid "Mouse"
+msgstr "Mouse"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Keyboard"
+msgstr "Keyboard"
+
+# the last line will eventually display useful information
+# MULTILINE_TEXT (here so i can easily find all of the translations with multiple lines)
+#: apps/passionfruit/settings/app.tscn
+msgid "[center]MarkisaOS Me v0.14.0"
+"© 2069 Passionfruit Corporation"
+"by hellory4n, alex343xd"
+"Running on some device :)[/center]"
+msgstr "[center]MarkisaOS Me v0.14.0"
+"© 2069 Passionfruit Corporation"
+"oleh hellory4n, alex343xd"
+"Dijalankan di beberapa perangkat[/center]"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Factory reset"
+msgstr "Reset data pabrik"
+
+# the bullshit between [this shit] does formatting shit
+# MULTILINE_TEXT (here so i can easily find all of the translations with multiple lines)
+#: apps/passionfruit/settings/app.tscn
+msgid "[center]Developed by hellory4n"
+"Audio by alex343xd"
+""
+"[b]Translations[/b]"
+"Português (Brasil) (Brazilian Portuguese): hellory4n"
+"Español (Spanish): Tha Muffin"
+""
+"[b]Startup Sound[/b]"
+"Melody thing by alex343xd + the Zorin OS 16.x startup sound + Ubuntu 6.10 - 18.04 shutdown sound + some effects"
+""
+"[b]Wallpapers[/b]"
+"High Peaks: Nisarg Patel on Unsplash"
+"Flowers: Aaron Burden on Unsplash"
+"Beach: Derek Thomson on Unsplash"
+"Space: Tengyart on Unsplash"
+"Mountains: Leila Azevedo on Unsplash"
+"Aurora: Sami Matias on Unsplash"
+"Forest: Geronimo on Unsplash"
+"Lake: dirk von loen-wagnen on Unsplash"
+"Coffee: Mike Kenneally on Unsplash"
+"Green Peaks: Dayan Quinterosss on Unsplash"
+""
+"[b]User Icons[/b]"
+"Cat: Andriyko Podilnyk on Unsplash"
+"Flower: Aaron Burden on Unsplash"
+"Balloon: Kyle Hinkson on Unsplash"
+"Car: Sven D on Unsplash"
+"Dog: Jamie Street on Unsplash"
+"Duck: Timothy Dykes on Unsplash"
+"Pancakes: nikldn on Unsplash"
+"Brushes: nikldn on Unsplash"
+"Shuttle: NASA on Unsplash"
+"Football: Wesley Tingey on Unsplash"
+""
+"[b]Computer Noises[/b]"
+"Fan: saphe on Freesound"
+"HDD: sad3d on Freesound"
+"Mouse: pbimal on Freesound"
+"Keyboard: kolombooo on Freesound"
+""
+"[b]Special Thanks[/b]"
+"My parents"
+"My cats"
+"Godot developers"
+"Figma developers"
+"parfait.san"
+"Tha Muffin"
+"Bricked"
+"alex343xd"
+"Rubi"
+"RThreeFive"
+"ten9⁵"
+"Newton Gametone"
+"MashedFig"
+"Artifyber"
+"Aliorio"
+"Telcaum"
+"Clustra"
+"DeafSalute"
+"matt7ress"
+"Everyone who liked and subscribed"
+"Martin Magni"
+"You :)"
+msgstr "[center]Dikembangkan oleh hellory4n"
+"Suara oleh alex343xd"
+""
+"[b]Terjemahan[/b]"
+"Português (Brazil): hellory4n"
+"Español (Spanyol): Tha Muffin"
+""
+"[b]Suara startup[/b]"
+"Melodi oleh alex343xd + Suara startup Zorin OS 16.x + Suara saat mematikan Ubuntu 6.10 - 18.04 + beberapa efek suara"
+""
+"[b]Wallpaper[/b]"
+"Puncak Tinggi: Nisarg Patel di Unsplash"
+"Bunga-bunga: Aaron Burden di Unsplash"
+"Pantai: Derek Thomson di Unsplash"
+"Angkasa: Tengyart di Unsplash"
+"Pegunungan: Leila Azevedo di Unsplash"
+"Aurora: Sami Matias di Unsplash"
+"Hutan: Geronimo di Unsplash"
+"Danau: dirk von loen-wagnen di Unsplash"
+"Kopi: Mike Kenneally di Unsplash"
+"Puncak Hijau: Dayan Quinterosss di Unsplash"
+""
+"[b]Ikon Pengguna[/b]"
+"Kucing: Andriyko Podilnyk di Unsplash"
+"Bunga: Aaron Burden di Unsplash"
+"Balon: Kyle Hinkson di Unsplash"
+"Mobil: Sven D di Unsplash"
+"Anjing: Jamie Street di Unsplash"
+"Bebek: Timothy Dykes di Unsplash"
+"Kue pancake: nikldn di Unsplash"
+"Kuas: nikldn di Unsplash"
+"Pesawat antariksa: NASA di Unsplash"
+"Bola sepak: Wesley Tingey di Unsplash"
+""
+"[b]Suara Komputer[/b]"
+"Kipas: saphe di Freesound"
+"HDD: sad3d di Freesound"
+"Mouse: pbimal di Freesound"
+"Keyboard: kolombooo di Freesound"
+""
+"[b]Terima Kasih Kepada[/b]"
+"Orangtuaku"
+"Kucingku"
+"Pengembang Godot"
+"Pengembang Figma"
+"parfait.san"
+"Tha Muffin"
+"Bricked"
+"alex343xd"
+"Rubi"
+"RThreeFive"
+"ten9⁵"
+"Newton Gametone"
+"MashedFig"
+"Artifyber"
+"Aliorio"
+"Telcaum"
+"Clustra"
+"DeafSalute"
+"matt7ress"
+"Semua yang sudah like dan subscribe"
+"Martin Magni"
+"Anda :)"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Are you sure?"
+msgstr "Apakah anda yakin?"
+
+#: apps/passionfruit/settings/app.tscn
+msgid ""
+"ALL internal data stored in this device will be lost! No exceptions! There "
+"is no going back!"
+""
+"NOTE: This requires a restart."
+msgstr ""
+"Semua data internal yang telah disimpan dalam perangkat ini akan hilang! Tanpa pengecualian! Tidak bisa kembali lagi!"
+""
+"Ctt: Harus dihidupkan ulang"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Nevermind"
+msgstr "Batal"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Delete everything"
+msgstr "Hapus semuanya"

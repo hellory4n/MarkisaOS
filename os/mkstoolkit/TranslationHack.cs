@@ -14,6 +14,8 @@ public class TranslationHack : Node
     public string PortugueseText = "";
     [Export(PropertyHint.MultilineText)]
     public string SpanishText = "";
+    [Export(PropertyHint.MultilineText)]
+    public string IndonesianText = "";
 
     public override void _Ready()
     {
@@ -21,6 +23,10 @@ public class TranslationHack : Node
         if (TranslationServer.GetLocale().StartsWith("pt")) {
             rich.Clear();
             rich.AppendBbcode(PortugueseText);
+        }
+        else if (TranslationServer.GetLocale().StartsWith("id")) {
+            rich.Clear();
+            rich.AppendBbcode(IndonesianText);
         }
         else if (TranslationServer.GetLocale().StartsWith("es")) {
             rich.Clear();

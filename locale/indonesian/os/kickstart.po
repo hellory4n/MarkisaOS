@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: os/kickstart/bootscreen.tscn
+msgid "Copyright © 2069 Passionfruit Corporation. All rights reserved."
+msgstr "Copyright © 2069 Passionfruit Corporation. All rights reserved."
+
+#: os/kickstart/onboarding.tscn
+msgid "Shutdown"
+msgstr "Matikan"
+
+#: os/kickstart/onboarding.tscn
+msgid "login as an existing user"
+msgstr "masuk sebagai pengguna yang sudah ada"
+
+#: os/kickstart/onboarding.tscn
+msgid "or create a new one"
+msgstr "atau buat baru"
+
+#: os/kickstart/onboarding.tscn
+msgid "username:"
+msgstr "nama pengguna:"
+
+#: os/kickstart/onboarding.tscn
+msgid "johndoe"
+msgstr "johndoe"
+
+#: os/kickstart/onboarding.tscn
+msgid "display name:"
+msgstr "nama penampil:"
+
+#: os/kickstart/onboarding.tscn
+msgid "John Doe"
+msgstr "John Doe"
+
+#: os/kickstart/onboarding.tscn
+msgid "photo:"
+msgstr "foto:"
+
+#: os/kickstart/onboarding.tscn
+msgid "Cat"
+msgstr "Kucing"
+
+#: os/kickstart/onboarding.tscn
+msgid "Flower"
+msgstr "Bunga"
+
+#: os/kickstart/onboarding.tscn
+msgid "Balloons"
+msgstr "Balon"
+
+#: os/kickstart/onboarding.tscn
+msgid "Car"
+msgstr "Mobil"
+
+#: os/kickstart/onboarding.tscn
+msgid "Dog"
+msgstr "Anjing"
+
+#: os/kickstart/onboarding.tscn
+msgid "Duck"
+msgstr "Bebek"
+
+#: os/kickstart/onboarding.tscn
+msgid "Pancakes"
+msgstr "Kue pancake"
+
+#: os/kickstart/onboarding.tscn
+msgid "Brushes"
+msgstr "Kuas"
+
+#: os/kickstart/onboarding.tscn
+msgid "Shuttle"
+msgstr "Pesawat antariksa"
+
+#: os/kickstart/onboarding.tscn
+msgid "Football"
+msgstr "Bola sepak"
+
+#: os/kickstart/onboarding.tscn
+msgid "Create"
+msgstr "Buat"
+
+#: os/kickstart/shutdown.tscn
+msgid "Turning off MarkisaOS..."
+msgstr "Mematikan MarkisaOS..."

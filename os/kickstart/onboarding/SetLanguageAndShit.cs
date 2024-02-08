@@ -14,6 +14,9 @@ public class SetLanguageAndShit : OptionButton
         else if (TranslationServer.GetLocale().StartsWith("es")) {
             Selected = 2;
         }
+        else if (TranslationServer.GetLocale().StartsWith("id")) {
+            Selected = 3;
+        }
         else {
             Selected = 0;
         }
@@ -25,6 +28,7 @@ public class SetLanguageAndShit : OptionButton
         switch (index) {
             case 1: locale = "pt"; break;
             case 2: locale = "es"; break;
+            case 3: locale = "id"; break;
             default: locale = "en"; break;
         }
 
