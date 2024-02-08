@@ -131,8 +131,8 @@ public class Frambos : Node
             }
 
             // maybe we need home.tscn?
-            if (ResourceLoader.Exists(url.Replace("web://", "res://web/") + "home.tscn"))  {
-                return url.Replace("web://", "res://web/") + "home.tscn";
+            if (ResourceLoader.Exists(url.Replace("web://", "res://web/") + "/home.tscn"))  {
+                return url.Replace("web://", "res://web/") + "/home.tscn";
             }
         }
 
@@ -143,13 +143,13 @@ public class Frambos : Node
             }
 
             // maybe we need .tscn?
-            if (ResourceLoader.Exists("res://web" + url + ".tscn")) {
-                return "res://web" + url + ".tscn";
+            if (ResourceLoader.Exists("res://web/" + url + ".tscn")) {
+                return "res://web/" + url + ".tscn";
             }
 
             // maybe we need home.tscn?
-            if (ResourceLoader.Exists("res://web" + url + "/home.tscn"))  {
-                return "res://web" + url + "/home.tscn";
+            if (ResourceLoader.Exists("res://web/" + url + "/home.tscn"))  {
+                return "res://web/" + url + "/home.tscn";
             }
         }
 

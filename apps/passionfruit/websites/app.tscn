@@ -100,26 +100,30 @@ icon_align = 1
 [node name="lineEdit" type="LineEdit" parent="contents/container/sidebar/vBoxContainer"]
 margin_top = 45.0
 margin_right = 180.0
-margin_bottom = 87.0
+margin_bottom = 90.0
 theme_type_variation = "ToolbarLineEdit"
 text = "bubble.com"
+clear_button_enabled = true
+placeholder_text = "Search or enter address"
 script = ExtResource( 4 )
+Tabs = NodePath("../scrollContainer/vBoxContainer")
 
 [node name="scrollContainer" type="ScrollContainer" parent="contents/container/sidebar/vBoxContainer"]
-margin_top = 87.0
+margin_top = 90.0
 margin_right = 180.0
 margin_bottom = 350.0
 size_flags_vertical = 3
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/container/sidebar/vBoxContainer/scrollContainer"]
 margin_right = 180.0
-margin_bottom = 263.0
+margin_bottom = 260.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 script = ExtResource( 12 )
 TheShitWhereWebsitesAre = NodePath("../../../../websites")
 Window = NodePath("../../../../../..")
+Adderesrhbartr = NodePath("../../lineEdit")
 
 [node name="hBoxContainer2" type="HBoxContainer" parent="contents/container/sidebar/vBoxContainer"]
 margin_top = 350.0

@@ -13,6 +13,7 @@ rect_clip_content = true
 script = ExtResource( 1 )
 Title = "New Tab"
 Description = "The new tab on the Websites browser."
+Tags = PoolStringArray( "__system__" )
 Icon = ExtResource( 4 )
 Music = ExtResource( 5 )
 

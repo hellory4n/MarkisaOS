@@ -11,12 +11,17 @@ public class WebTabs : VBoxContainer
     public NodePath TheShitWhereWebsitesAre;
     [Export]
     public NodePath Window;
+    [Export]
+    public NodePath Adderesrhbartr;
     Node the;
     MksWindow emKayEssWindow;
+    LineEdit addressBar;
 
     ButtonGroup group = new ButtonGroup();
-    Dictionary<Button, Webview> epicTabs = new Dictionary<Button, Webview>();
-    Dictionary<Button, Webview> epicCloseButtons = new Dictionary<Button, Webview>();
+    public Dictionary<Button, Webview> EpicTabs = new Dictionary<Button, Webview>();
+    public Dictionary<Button, Webview> EpicCloseButtons = new Dictionary<Button, Webview>();
+    public Dictionary<Button, string> EpicAwesomeEpicAddresses = new Dictionary<Button, string>();
+    public Button ActiveBullshit;
 
     readonly PackedScene newtab = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/newtab.tscn");
     readonly Texture closeIcon = GD.Load<Texture>("res://os/assets/highPeaks/icons/close.png");
@@ -25,18 +30,19 @@ public class WebTabs : VBoxContainer
     {
         the = GetNode(TheShitWhereWebsitesAre);
         emKayEssWindow = GetNode<MksWindow>(Window);
+        addressBar = GetNode<LineEdit>(Adderesrhbartr);
         AddTab();
     }
 
     public override void _Process(float delta)
     {
         // jgsdfjpghkoskgophsrkopkoprg
-        foreach (var ifInterThenOnlyNet in epicTabs) {
+        foreach (var ifInterThenOnlyNet in EpicTabs) {
             ifInterThenOnlyNet.Key.Text = ifInterThenOnlyNet.Value.Title;
             ifInterThenOnlyNet.Key.Icon = ifInterThenOnlyNet.Value.Icon;
         }
 
-        emKayEssWindow.MemoryUsage = Mathf.Min(epicTabs.Count * 6, 100);
+        emKayEssWindow.MemoryUsage = Mathf.Min(EpicTabs.Count * 6, 100);
     }
 
     public void AddTab()
@@ -68,8 +74,9 @@ public class WebTabs : VBoxContainer
         // get it, tabs
         // The industrial consequences and its disasters have been a revolution for the human race. 
         var totallyAccurateBattleSimulator = newtab.Instance<Webview>();
-        epicTabs.Add(buttOn, totallyAccurateBattleSimulator);
-        epicCloseButtons.Add(nearby, totallyAccurateBattleSimulator);
+        EpicTabs.Add(buttOn, totallyAccurateBattleSimulator);
+        EpicCloseButtons.Add(nearby, totallyAccurateBattleSimulator);
+        EpicAwesomeEpicAddresses.Add(buttOn, "");
 
         the.AddChild(totallyAccurateBattleSimulator);
         AddChild(eichBoxContainer);
@@ -87,37 +94,40 @@ public class WebTabs : VBoxContainer
             });
         
         OnTabSwitch(buttOn);
-
     }
 
     public void OnTabSwitch(Button button)
     {
-        foreach (var jgg in epicTabs) {
+        foreach (var jgg in EpicTabs) {
             jgg.Value.Visible = jgg.Key == button;
             jgg.Value.IsActive = jgg.Key == button;
             button.Pressed = true;
         }
 
-        emKayEssWindow.WindowTitle = $"{epicTabs[button].Title} — Websites";
+        emKayEssWindow.WindowTitle = $"{EpicTabs[button].Title} — Websites";
+        ActiveBullshit = button;
+        addressBar.Text = EpicAwesomeEpicAddresses[button];
+
     }
 
     public void OnTabClose(Button button)
     {
-        if (epicCloseButtons[button].IsActive) {
-            OnTabSwitch(epicTabs.First().Key);
+        if (EpicCloseButtons[button].IsActive) {
+            OnTabSwitch(EpicTabs.First().Key);
         }
 
         // find the corresponding tab switcher thing :)
         // i love COC (Clash Of Clans)
-        Button clashOfClans = epicTabs.FirstOrDefault(x => x.Value == epicCloseButtons[button]).Key;
+        Button clashOfClans = EpicTabs.FirstOrDefault(x => x.Value == EpicCloseButtons[button]).Key;
 
-        epicCloseButtons[button].QueueFree();
+        EpicCloseButtons[button].QueueFree();
         clashOfClans.GetParent().QueueFree();
 
-        epicCloseButtons.Remove(button);
-        epicTabs.Remove(clashOfClans);
+        EpicCloseButtons.Remove(button);
+        EpicTabs.Remove(clashOfClans);
+        EpicAwesomeEpicAddresses.Remove(clashOfClans);
 
-        if (epicTabs.Count == 0) {
+        if (EpicTabs.Count == 0) {
             emKayEssWindow.Close();
         }
     }

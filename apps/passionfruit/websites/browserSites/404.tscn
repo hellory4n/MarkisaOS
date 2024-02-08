@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://apps/passionfruit/websites/dammit.png" type="Texture" id=2]
+[ext_resource path="res://apps/passionfruit/websites/smallicon.png" type="Texture" id=4]
+
+[node name="404" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+script = ExtResource( 1 )
+Title = "404"
+Description = "Couldn't find website"
+Tags = PoolStringArray( "__system__" )
+Icon = ExtResource( 4 )
+
+[node name="colorRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="centerContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="centerContainer"]
+margin_left = 299.0
+margin_top = 158.0
+margin_right = 554.0
+margin_bottom = 322.0
+
+[node name="label" type="Label" parent="centerContainer/vBoxContainer"]
+margin_right = 255.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 255, 0 )
+theme_type_variation = "Header"
+text = "Website not found"
+valign = 1
+
+[node name="label2" type="RichTextLabel" parent="centerContainer/vBoxContainer"]
+margin_top = 49.0
+margin_right = 255.0
+margin_bottom = 164.0
+bbcode_enabled = true
+bbcode_text = "We couldn't find this website.
+Here's what you can do you:
+1. Check the address
+2. Check your internet connection
+3. Try again later"
+text = "We couldn't find this website.
+Here's what you can do you:
+1. Check the address
+2. Check your internet connection
+3. Try again later"
+fit_content_height = true

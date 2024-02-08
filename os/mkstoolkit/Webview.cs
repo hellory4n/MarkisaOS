@@ -20,7 +20,7 @@ public class Webview : Control
     /// The tags of this website.
     /// </summary>
     [Export]
-    public List<string> Tags { get; set; } = new List<string>();
+    public string[] Tags { get; set; } = new string[]{};
     /// <summary>
     /// The icon of the website, recommended resolution of 28x28
     /// </summary>
