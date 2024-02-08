@@ -153,6 +153,11 @@ public class Frambos : Node
             }
         }
 
+        // lol
+        if (url == "") {
+            return "res://apps/passionfruit/websites/browserSites/newtab.tscn";
+        }
+
         // ahhhhhhhhh fuck
         return "404";
     }
