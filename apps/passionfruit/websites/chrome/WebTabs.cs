@@ -17,16 +17,12 @@ public class WebTabs : VBoxContainer
     Node the;
     MksWindow emKayEssWindow;
     LineEdit addressBar;
-    Button goBack;
-    Button goForward;
 
     ButtonGroup group = new ButtonGroup();
     public Dictionary<Button, Webview> EpicTabs = new Dictionary<Button, Webview>();
     public Dictionary<Button, Webview> EpicCloseButtons = new Dictionary<Button, Webview>();
     public Dictionary<Button, string> EpicAwesomeEpicAddresses = new Dictionary<Button, string>();
     public Button ActiveBullshit;
-    public Dictionary<Button, List<string>> NavigationStuffs = new Dictionary<Button, List<string>>();
-    public Dictionary<Button, int> IndexStuff = new Dictionary<Button, int>();
 
     readonly PackedScene newtab = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/newtab.tscn");
     readonly Texture closeIcon = GD.Load<Texture>("res://os/assets/highPeaks/icons/close.png");
@@ -36,8 +32,6 @@ public class WebTabs : VBoxContainer
         the = GetNode(TheShitWhereWebsitesAre);
         emKayEssWindow = GetNode<MksWindow>(Window);
         addressBar = GetNode<LineEdit>(Adderesrhbartr);
-        goBack = GetNode<Button>("../../top/back");
-        goForward = GetNode<Button>("../../top/forward");
         AddTab();
     }
 
@@ -50,11 +44,6 @@ public class WebTabs : VBoxContainer
         }
 
         emKayEssWindow.MemoryUsage = Mathf.Min(EpicTabs.Count * 6, 100);
-        goBack.Disabled = IndexStuff[ActiveBullshit] == 0;
-        goForward.Disabled = IndexStuff[ActiveBullshit] == NavigationStuffs[ActiveBullshit].Count - 1;
-
-        GD.Print(string.Join(", ", NavigationStuffs[ActiveBullshit]));
-        GD.Print(IndexStuff[ActiveBullshit]);
     }
 
     public void AddTab()
@@ -89,8 +78,6 @@ public class WebTabs : VBoxContainer
         EpicTabs.Add(buttOn, totallyAccurateBattleSimulator);
         EpicCloseButtons.Add(nearby, totallyAccurateBattleSimulator);
         EpicAwesomeEpicAddresses.Add(buttOn, "");
-        NavigationStuffs.Add(buttOn, new List<string>() {});
-        IndexStuff.Add(buttOn, -1);
 
         the.AddChild(totallyAccurateBattleSimulator);
         AddChild(eichBoxContainer);
@@ -134,6 +121,13 @@ public class WebTabs : VBoxContainer
         EpicAwesomeEpicAddresses[ActiveBullshit] = path;
 
         OnTabSwitch(ActiveBullshit);
+
+        // save it in the user's history :)
+        if (path != "404" && path != "") {
+            var fig = new Config<WebsiteConfig>();
+            fig.Data.History.Add(path);
+            fig.Save();
+        }
     }
 
     public void OnTabSwitch(Button button)
@@ -165,24 +159,10 @@ public class WebTabs : VBoxContainer
         EpicCloseButtons.Remove(button);
         EpicTabs.Remove(clashOfClans);
         EpicAwesomeEpicAddresses.Remove(clashOfClans);
-        NavigationStuffs.Remove(clashOfClans);
-        IndexStuff.Remove(clashOfClans);
 
         if (EpicTabs.Count == 0) {
             emKayEssWindow.Close();
         }
-    }
-
-    public void GOBACKNOW()
-    {
-        IndexStuff[ActiveBullshit]--;
-        LoadStuff(NavigationStuffs[ActiveBullshit][IndexStuff[ActiveBullshit]]); // wtf
-    }
-
-    public void GOFORWARDNOW()
-    {
-        IndexStuff[ActiveBullshit]++;
-        LoadStuff(NavigationStuffs[ActiveBullshit][IndexStuff[ActiveBullshit]]); // wtf
     }
 }
 

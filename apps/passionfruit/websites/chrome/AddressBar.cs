@@ -20,8 +20,6 @@ public class AddressBar : LineEdit
     public void Djfjsgjs(string newText)
     {
         webTabs.LoadStuff(newText);
-        webTabs.NavigationStuffs[webTabs.ActiveBullshit].Add(newText);
-        webTabs.IndexStuff[webTabs.ActiveBullshit]++;
     }
 }
 
