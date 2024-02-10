@@ -34,6 +34,10 @@ public class Frambos : Node
         {SystemSound.Warning,       GD.Load<AudioStream>("res://os/assets/systemSounds/warning.mp3")}
     };
 
+    readonly Texture cursor = GD.Load<Texture>("res://os/assets/highPeaks/cursors/cursor.png");
+    readonly Texture pointingHand = GD.Load<Texture>("res://os/assets/highPeaks/cursors/pointingHand.png");
+    readonly Texture ibeam = GD.Load<Texture>("res://os/assets/highPeaks/cursors/ibeam.png");
+
     public override void _Ready()
     {
         var dir = new Directory();
@@ -48,6 +52,11 @@ public class Frambos : Node
         GetTree().Root.CallDeferred("add_child", text);
         peek = text.GetNode<LineEdit>("peek");
         text.Visible = false;
+
+        // awesome custom cursors :)
+        Input.SetCustomMouseCursor(cursor, Input.CursorShape.Arrow, new Vector2(11, 8));
+        Input.SetCustomMouseCursor(pointingHand, Input.CursorShape.PointingHand, new Vector2(17, 8));
+        Input.SetCustomMouseCursor(ibeam, Input.CursorShape.Ibeam, new Vector2(11, 8));
     }
 
     public override void _Process(float delta)
