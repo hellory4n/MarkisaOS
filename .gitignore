@@ -824,3 +824,4 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,rider,android,csharp,dotnetcore,windows,linux,macos,git,godot
 
 android/
+.vscode/settings.json

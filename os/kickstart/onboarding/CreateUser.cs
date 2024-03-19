@@ -15,6 +15,17 @@ public class CreateUser : Button
     [Export]
     public PackedScene myPackedQuestionMarkScenePeriod; // My packed? Scene.
 
+    public override void _Process(float delta)
+    {
+        var hehe = GetNode<LineEdit>(fuckingUsername).Text.ToLower();
+        Disabled = hehe == "con" || hehe == "prn" || hehe == "aux" || hehe == "nul" ||
+                   hehe == "com0" || hehe == "com1" || hehe == "com2" || hehe == "com3" ||
+                   hehe == "com4" || hehe == "com5" || hehe == "com6" || hehe == "com7" ||
+                   hehe == "com8" || hehe == "com9" || hehe == "lpt0" || hehe == "lpt1" ||
+                   hehe == "lpt2" || hehe == "lpt3" || hehe == "lpt4" || hehe == "lpt5" ||
+                   hehe == "lpt6" || hehe == "lpt7" || hehe == "lpt8" || hehe == "lpt9";
+    }
+
     public override void _Pressed()
     {
         // fuck
@@ -30,7 +41,9 @@ public class CreateUser : Button
         username = username.Replace("/", "");
         username = username.Replace("?", "");
         username = username.Replace("*", "");
+        username = username.Replace(".", "");
         username = username.Replace(" ", "");
+        username = username.ToLower();
         
         // photo stuff
         string photo = "";
@@ -55,6 +68,8 @@ public class CreateUser : Button
             Username = username,
             Photo = photo
         };
+
+        
 
         Frambos.CurrentUser = username;
         Frambos.CurrentUserDisplayName = heheheha.DisplayName;
