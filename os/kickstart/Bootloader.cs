@@ -14,7 +14,6 @@ public class Bootloader : Node
 
 	public override void _Ready()
 	{
-		GD.Print("Fuck off");
 		// don't make everything ginormous on desktop
 		// there's an option to do that from the project settings but it means
 		// i don't get to see how it would look on mobile, so i prefer this
