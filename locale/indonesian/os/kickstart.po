@@ -18,7 +18,7 @@ msgstr "Matikan"
 
 #: os/kickstart/onboarding.tscn
 msgid "login as an existing user"
-msgstr "masuk sebagai pengguna yang sudah ada"
+msgstr "masuk sebagai pengguna"
 
 #: os/kickstart/onboarding.tscn
 msgid "or create a new one"

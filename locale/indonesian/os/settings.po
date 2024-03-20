@@ -223,7 +223,7 @@ msgstr "[center]Dikembangkan oleh hellory4n"
 
 #: apps/passionfruit/settings/app.tscn
 msgid "Are you sure?"
-msgstr "Apakah anda yakin?"
+msgstr "Apakah Anda yakin?"
 
 #: apps/passionfruit/settings/app.tscn
 msgid ""

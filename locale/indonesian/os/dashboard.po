@@ -38,7 +38,7 @@ msgstr "Notifikasi"
 
 #: os/dashboard/dashboard.tscn
 msgid "Home"
-msgstr "Rumah"
+msgstr "Beranda"
 
 #: os/dashboard/dashboard.tscn
 msgid "Accessories"
@@ -86,7 +86,7 @@ msgstr "Batal"
 
 #: os/dashboard/dashboard.tscn
 msgid "Are you sure?"
-msgstr "Apakah anda yakin?"
+msgstr "Apakah Anda yakin?"
 
 #: os/dashboard/dashboard.tscn
 msgid "Progress is saved automatically."
@@ -102,7 +102,7 @@ msgstr "Pengaturan cepat"
 
 #: os/dashboard/dashboard.tscn
 msgid "Your money"
-msgstr "Uang anda"
+msgstr "Uang Anda"
 
 #: os/dashboard/dashboard.tscn
 msgid "Time and date"
@@ -114,7 +114,7 @@ msgstr "Kalkulator"
 
 #: os/dashboard/dashboard.tscn
 msgid "Your notes"
-msgstr "Catatan anda"
+msgstr "Catatan Anda"
 
 #: os/dashboard/dashboard.tscn
 msgid "App launcher"
