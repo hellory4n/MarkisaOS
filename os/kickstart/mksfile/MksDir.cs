@@ -34,34 +34,28 @@ public static class MksDir
     public static bool Exists(string path)
     {
         var dir = new Directory();
-        return dir.FileExists(path) || dir.DirExists(path);
+        return dir.FileExists(ProcessPath(path)) || dir.DirExists(ProcessPath(path));
     }
 
     /// <summary>
     /// Returns an array of the relative paths of every file or folder inside the target folder. If <c>skipHidden</c> is true, every file or folder that starts with "." is skipped, similar to UNIX-like systems.
     /// </summary>
-    public static string[] ListFiles(string dirPath, bool skipHidden = true)
+    public static string[] ListFiles(string dirPath)
     {
         string[] paths = {};
         var dir = new Directory();
-        dir.Open(dirPath);
+        dir.Open(ProcessPath(dirPath));
         dir.ListDirBegin(true);
 
         string filename = null;
         while (filename != "") {
             filename = dir.GetNext();
 
-            if (skipHidden) {
-                if (filename.StartsWith(".")) {
-                    paths = paths.Append(filename).ToArray();
-                }
-            }
-            else {
-                paths = paths.Append(filename).ToArray();
-            }
+            paths = paths.Append(filename).ToArray();
         }
 
-        return paths;
+        // the last item is always ""
+        return paths.Take(paths.Length - 1).ToArray();
     }
 
     /// <summary>
@@ -82,6 +76,25 @@ public static class MksDir
         var dir = new Directory();
         Error m = dir.Rename(ProcessPath(from), ProcessPath(to));
         return m == Error.Ok;
+    }
+
+    /// <summary>
+    /// If <c>true</c>, the target file is a directory. Else, it's a file. Please note that it also returns false if the path doesn't exist, so remember to check that with <c>MksDir.Exists()</c> first.
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public static bool IsDir(string path)
+    {
+        var dir = new Directory();
+        if (dir.FileExists(ProcessPath(path))) {
+            return false;
+        }
+        else if (dir.DirExists(ProcessPath(path))) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     static string ProcessPath(string path) {
