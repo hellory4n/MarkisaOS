@@ -27,6 +27,10 @@ public class Dashboard : Control
         // load the fucking settings
         var config = new Config<DashboardConfig>();
         GetNode<TextureRect>("wallpaper").Texture = GD.Load<Texture>(config.Data.Wallpaper);
+
+        var f = new MksFile<SystemInfo>("/fucking.txt");
+		f.Data.Language = "deez";
+		f.Save();
     }
 }
 
