@@ -12,8 +12,7 @@ public class ListFiles : ItemList
     readonly Texture fileIcon = GD.Load<Texture>("res://apps/passionfruit/files/fileTypes/unknown.png");
 
     List<string> paths = new List<string>();
-    string lastSelected = "";
-    string currentFolder = "/";
+    public string CurrentFolder = "/";
 
     public override void _Ready()
     {
@@ -23,7 +22,7 @@ public class ListFiles : ItemList
 
     public void Refresh(string path)
     {
-        currentFolder = path;
+        CurrentFolder = path;
         Clear();
         paths.Clear();
         string[] stuff = MksDir.ListFiles(path);
@@ -43,7 +42,7 @@ public class ListFiles : ItemList
     {
         string item = paths[index];
         switch (GetType(item)) {
-            case FileType.Folder: Refresh($"{currentFolder}/{item}"); break;
+            case FileType.Folder: Refresh($"{CurrentFolder}/{item}"); break;
             // TODO: add a text viewer
         }
     }

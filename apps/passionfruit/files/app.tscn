@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://apps/passionfruit/files/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/files/dockicon.png" type="Texture" id=2]
@@ -12,9 +12,8 @@
 [ext_resource path="res://os/assets/highPeaks/icons/add.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/folder.png" type="Texture" id=11]
 [ext_resource path="res://os/assets/highPeaks/icons/info.png" type="Texture" id=12]
-[ext_resource path="res://os/mkstoolkit/MksPopupHide.gd" type="Script" id=14]
-[ext_resource path="res://apps/passionfruit/websites/chrome/OpenFromHistory.cs" type="Script" id=15]
-[ext_resource path="res://apps/passionfruit/websites/chrome/History.cs" type="Script" id=16]
+[ext_resource path="res://apps/passionfruit/files/ui/GoToParentFolder.cs" type="Script" id=13]
+[ext_resource path="res://apps/passionfruit/files/ui/AddressBar.cs" type="Script" id=14]
 [ext_resource path="res://os/assets/highPeaks/icons/description.png" type="Texture" id=17]
 [ext_resource path="res://os/assets/highPeaks/icons/borderColor.png" type="Texture" id=18]
 [ext_resource path="res://os/assets/highPeaks/icons/contentCut.png" type="Texture" id=19]
@@ -73,6 +72,8 @@ size_flags_horizontal = 3
 theme_type_variation = "SidebarButton"
 icon = ExtResource( 8 )
 icon_align = 1
+script = ExtResource( 13 )
+EpicAwesomeEpicThingy = NodePath("../../../../content/control")
 
 [node name="bookmarks" type="Button" parent="contents/container/sidebar/vBoxContainer/top"]
 margin_left = 50.0
@@ -104,6 +105,8 @@ theme_type_variation = "ToolbarLineEdit"
 text = "/home"
 clear_button_enabled = true
 placeholder_text = "Search or enter address"
+script = ExtResource( 14 )
+EpicAwesomeEpicThingy = NodePath("../../../content/control")
 
 [node name="middle" type="ScrollContainer" parent="contents/container/sidebar/vBoxContainer"]
 margin_top = 90.0
@@ -224,7 +227,7 @@ theme_type_variation = "SidebarButton"
 text = "New"
 icon = ExtResource( 10 )
 align = 1
-items = [ "New", ExtResource( 10 ), false, -1, null, "Folder", ExtResource( 11 ), false, 0, null, "Text", ExtResource( 17 ), false, 1, null ]
+items = [ "New", ExtResource( 10 ), false, 1, null, "Folder", ExtResource( 11 ), false, 2, null, "Text", ExtResource( 17 ), false, 3, null ]
 selected = 0
 
 [node name="copy" type="Button" parent="contents/container/content/panel/hBoxContainer"]
@@ -316,41 +319,5 @@ rect_min_size = Vector2( 600, 350 )
 theme_type_variation = "MksPopup"
 script = ExtResource( 9 )
 
-[node name="list" type="ItemList" parent="contents/history"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 10.0
-margin_right = -10.0
-margin_bottom = -55.0
-script = ExtResource( 16 )
-
-[node name="bottom" type="HBoxContainer" parent="contents/history"]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = -55.0
-margin_right = -10.0
-margin_bottom = -55.0
-rect_min_size = Vector2( 0, 45 )
-
-[node name="close" type="Button" parent="contents/history/bottom"]
-margin_right = 286.0
-margin_bottom = 45.0
-size_flags_horizontal = 3
-theme_type_variation = "Secondary"
-text = "Close"
-script = ExtResource( 14 )
-popup = NodePath("../..")
-
-[node name="open" type="Button" parent="contents/history/bottom"]
-margin_left = 294.0
-margin_right = 580.0
-margin_bottom = 45.0
-size_flags_horizontal = 3
-disabled = true
-text = "Open website"
-script = ExtResource( 15 )
-Address = NodePath("../../../container/sidebar/vBoxContainer/address")
-
+[connection signal="text_entered" from="contents/container/sidebar/vBoxContainer/address" to="contents/container/sidebar/vBoxContainer/address" method="Submit"]
 [connection signal="item_activated" from="contents/container/content/control" to="contents/container/content/control" method="Open"]
