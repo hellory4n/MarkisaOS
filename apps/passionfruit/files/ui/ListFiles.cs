@@ -47,6 +47,11 @@ public class ListFiles : ItemList
         }
     }
 
+    public void RefreshButton()
+    {
+        Refresh(CurrentFolder);
+    }
+
     public FileType GetType(string path)
     {
         if (MksDir.IsDir(path)) {
