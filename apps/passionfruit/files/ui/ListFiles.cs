@@ -13,6 +13,9 @@ public class ListFiles : ItemList
 
     List<string> paths = new List<string>();
     public string CurrentFolder = "/";
+    public string BeingCopied = "";
+    public string BeingCut = "";
+    public string Selected = "";
 
     public override void _Ready()
     {
@@ -36,11 +39,18 @@ public class ListFiles : ItemList
 
             paths.Add(item);
         }
+
+        Selected = "";
     }
 
     public void Open(int index)
     {
         string item = paths[index];
+        GD.Print(item);
+        GD.Print(CurrentFolder);
+        GD.Print($"{CurrentFolder}/{item}");
+        GD.Print();
+        
         switch (GetType(item)) {
             case FileType.Folder: Refresh($"{CurrentFolder}/{item}"); break;
             // TODO: add a text viewer
@@ -50,6 +60,11 @@ public class ListFiles : ItemList
     public void RefreshButton()
     {
         Refresh(CurrentFolder);
+    }
+
+    public void Select(int index)
+    {
+        Selected = $"{CurrentFolder}/{paths[index]}";
     }
 
     public FileType GetType(string path)

@@ -385,4 +385,5 @@ text = "Create"
 [connection signal="text_entered" from="contents/container/sidebar/vBoxContainer/address" to="contents/container/sidebar/vBoxContainer/address" method="Submit"]
 [connection signal="item_selected" from="contents/container/content/panel/hBoxContainer/new" to="contents/container/content/panel/hBoxContainer/new" method="ItemSelected"]
 [connection signal="item_activated" from="contents/container/content/control" to="contents/container/content/control" method="Open"]
+[connection signal="item_selected" from="contents/container/content/control" to="contents/container/content/control" method="Select"]
 [connection signal="pressed" from="contents/newItem/centerContainer/vBoxContainer/hBoxContainer/button2" to="contents/newItem/centerContainer/vBoxContainer/lineEdit" method="Create"]
