@@ -1,5 +1,6 @@
 using Godot;
 using markisa.foundation;
+using markisa.mkstoolkit;
 using System;
 
 namespace passionfruit.coreapps.files {
@@ -39,9 +40,14 @@ public class NewItemNameInput : LineEdit
                 break;
             
             case 2:
-                new MksFile<MksTextFile>($"{fucking}/{Text}");
+                new MksFile<MksTextFile>($"{fucking}/{Text}.txt");
                 break;
         }
+
+        Text = "";
+        // fuck it
+        GetParent().GetParent().GetParent<MksPopup>().HidePopup();
+        GetNode<ListFiles>("../../../../container/content/control").Refresh(fucking);
     }
 }
 
