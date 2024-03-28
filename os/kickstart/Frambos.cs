@@ -12,7 +12,7 @@ public class Frambos : Node
     public static string CurrentUser { get; set; } = "";
     public static string CurrentUserDisplayName { get; set; } = "";
     public static uint MajorVersion => 0;
-    public static uint MinorVersion => 14;
+    public static uint MinorVersion => 15;
     public static uint PatchVersion => 0;
 
     static bool forceMobile = false;
