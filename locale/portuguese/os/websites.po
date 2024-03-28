@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-03-27 22:40-0500\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# app name, might as well be just "Browser"
+#: apps/passionfruit/websites/app.tscn
+msgid "Websites"
+msgstr "Navegador"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "History"
+msgstr "Histórico"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Downloads"
+msgstr "Downloads"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Search or enter address"
+msgstr "Pesquise ou digite um endereço"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Close"
+msgstr "Fechar"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Open website"
+msgstr "Abrir site"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Downloading file..."
+msgstr "Baixando arquivo..."
+
+#: apps/passionfruit/websites/browserSites/404.tscn
+msgid "404"
+msgstr "404"
+
+#: apps/passionfruit/websites/browserSites/404.tscn
+msgid "Couldn't find website"
+msgstr "Não foi possível achar o site"
+
+#: apps/passionfruit/websites/browserSites/404.tscn
+msgid "Website not found"
+msgstr "Não foi possível achar o site"
+
+# [MULTILINE TEXT]
+#: apps/passionfruit/websites/browserSites/404.tscn
+msgid ""
+"We couldn't find this website.\n"
+"Here's what you can do:\n"
+"1. Check the address\n"
+"2. Check your internet connection\n"
+"3. Try again later\n"
+msgstr "Nós não conseguimos encontrar este site.\n"
+"O que você pode fazer:\n"
+"1. Verifique o endereço"
+"2. Verifique a sua conexão de internet"
+"3. Tente de novo depois\n"
+
+#: apps/passionfruit/websites/browserSites/newtab.tscn
+msgid "New Tab"
+msgstr "Nova Aba"
+
+#: apps/passionfruit/websites/browserSites/newtab.tscn
+msgid "The new tab on the Websites browser."
+msgstr "A nova aba no Navegador."
+
+#: apps/passionfruit/websites/browserSites/newtab.tscn
+msgid "Welcome to the Websites app!"
+msgstr "Bem-vindo ao Navegador!"
+
+#: web/example.com/home.tscn
+msgid "Example"
+msgstr "Exemplo"
+
+#: web/example.com/home.tscn
+msgid "Example website"
+msgstr "Site de exemplo"
+
+#: web/example.com/home.tscn
+msgid "Example Domain"
+msgstr "Site de exemplo"
+
+#: web/example.com/home.tscn
+msgid ""
+"This domain is for use in illustrative examples in documents. You may use "
+"this domain in literature without prior coordination or asking for "
+"permission."
+msgstr "Esse endereço é para exemplos ilustrativos em documentos. Você pode usar este endereço em literatura sem precisar de permissão."
