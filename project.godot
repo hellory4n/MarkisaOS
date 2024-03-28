@@ -53,6 +53,7 @@ config/quit_on_go_back=false
 
 Frambos="*res://os/kickstart/Frambos.cs"
 ComputerNoises="*res://os/kickstart/ComputerNoises.cs"
+GdScriptBridge="*res://os/kickstart/GdScriptBridge.cs"
 
 [display]
 

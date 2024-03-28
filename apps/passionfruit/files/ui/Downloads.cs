@@ -54,8 +54,7 @@ public class Downloads : ItemList
 
     public void OnDeleteRequest()
     {
-        // for fuck's sake
-        MksFile<object>.Delete(selected);
+        MksFile.Delete(selected);
         GetNode<MksPopup>("../delete").HidePopup();
         Refresh();
     }

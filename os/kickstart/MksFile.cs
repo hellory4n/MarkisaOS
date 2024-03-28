@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace markisa.foundation {
 
-public class MksFile<T> where T : new()
+public class MksFile
 {
     /// <summary>
     /// The path of the file.
@@ -13,7 +13,7 @@ public class MksFile<T> where T : new()
     /// <summary>
     /// The data the file stores.
     /// </summary>
-    public T Data { get; set; }
+    public string Data { get; set; }
 
     /// <summary>
     /// Loads a file at the given path.
@@ -26,15 +26,10 @@ public class MksFile<T> where T : new()
         if (dir.FileExists(ProcessName(Name))) {
             var file = new File();
             file.Open(ProcessName(Name), File.ModeFlags.Read);
-            Data = JsonConvert.DeserializeObject<T>(
-                file.GetAsText(), new JsonSerializerSettings {
-                    TypeNameHandling = TypeNameHandling.All,
-                    Formatting = Formatting.Indented
-                }
-            );
+            Data = file.GetAsText();
         }
         else {
-            Data = new T();
+            Data = "";
             Save();
         }
     }
@@ -49,12 +44,7 @@ public class MksFile<T> where T : new()
 
         var file = new File();
         file.Open(ProcessName(Name), File.ModeFlags.Write);
-        file.StoreString(
-            JsonConvert.SerializeObject(Data, new JsonSerializerSettings {
-                TypeNameHandling = TypeNameHandling.All,
-                Formatting = Formatting.Indented
-            })
-        );
+        file.StoreString(Data);
         file.Close();
     }
 
