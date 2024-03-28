@@ -66,9 +66,9 @@ public class Frambos : Node
             return;
         }
 
-        // normal nodes can't get the focus owner :(
-        text.Visible = text.GetFocusOwner() is LineEdit || text.GetFocusOwner() is TextEdit;
+        text.Visible = OS.GetVirtualKeyboardHeight() > 0;
 
+        // only controls can get the focus owner
         if (text.GetFocusOwner() is LineEdit ha) {
             // HE SAID IT
             // TEXT PEEK ‼️
