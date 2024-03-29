@@ -847,6 +847,7 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Accessories"]
 margin_right = 400.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 
 [node name="Button2" type="Button" parent="interface/appLauncher/Accessories/VBoxContainer"]
@@ -884,7 +885,6 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Development"]
 margin_right = 400.0
-margin_bottom = 142.0
 size_flags_horizontal = 3
 
 [node name="Games" type="ScrollContainer" parent="interface/appLauncher"]
@@ -895,7 +895,6 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Games"]
 margin_right = 400.0
-margin_bottom = 192.0
 size_flags_horizontal = 3
 
 [node name="Graphics" type="ScrollContainer" parent="interface/appLauncher"]
@@ -906,7 +905,6 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Graphics"]
 margin_right = 400.0
-margin_bottom = 242.0
 size_flags_horizontal = 3
 
 [node name="Internet" type="ScrollContainer" parent="interface/appLauncher"]
@@ -917,7 +915,7 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Internet"]
 margin_right = 400.0
-margin_bottom = 292.0
+margin_bottom = 142.0
 size_flags_horizontal = 3
 
 [node name="Button3" type="Button" parent="interface/appLauncher/Internet/VBoxContainer"]
@@ -970,7 +968,6 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Multimedia"]
 margin_right = 400.0
-margin_bottom = 342.0
 size_flags_horizontal = 3
 
 [node name="Office" type="ScrollContainer" parent="interface/appLauncher"]
@@ -981,7 +978,7 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Office"]
 margin_right = 400.0
-margin_bottom = 392.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 
 [node name="Button" type="Button" parent="interface/appLauncher/Office/VBoxContainer"]
@@ -1006,7 +1003,7 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/System"]
 margin_right = 400.0
-margin_bottom = 442.0
+margin_bottom = 42.0
 size_flags_horizontal = 3
 
 [node name="Button2" type="Button" parent="interface/appLauncher/System/VBoxContainer"]
@@ -1030,7 +1027,7 @@ margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Utilities"]
 margin_right = 400.0
-margin_bottom = 492.0
+margin_bottom = 92.0
 size_flags_horizontal = 3
 
 [node name="Button4" type="Button" parent="interface/appLauncher/Utilities/VBoxContainer"]

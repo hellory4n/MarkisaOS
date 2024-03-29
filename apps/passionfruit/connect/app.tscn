@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://apps/passionfruit/connect/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/connect/fullicon.png" type="Texture" id=2]
 [ext_resource path="res://apps/passionfruit/connect/dockicon.png" type="Texture" id=3]
+[ext_resource path="res://os/assets/highPeaks/icons/system.png" type="Texture" id=4]
+[ext_resource path="res://os/assets/highPeaks/icons/palette.png" type="Texture" id=5]
 [ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
+[ext_resource path="res://os/assets/highPeaks/icons/financeMode.png" type="Texture" id=7]
+[ext_resource path="res://os/assets/highPeaks/icons/psychology.png" type="Texture" id=8]
+[ext_resource path="res://os/assets/highPeaks/icons/comedyMask.png" type="Texture" id=9]
+[ext_resource path="res://os/assets/highPeaks/icons/movie.png" type="Texture" id=10]
+[ext_resource path="res://os/assets/highPeaks/icons/help.png" type="Texture" id=11]
+[ext_resource path="res://os/assets/userIcons/cat.png" type="Texture" id=12]
+[ext_resource path="res://os/mkstoolkit/SidebarButton.gd" type="Script" id=13]
+[ext_resource path="res://apps/passionfruit/connect/backgrounds/trending.png" type="Texture" id=14]
 
 [node name="connect" type="Control"]
 margin_right = 789.0
@@ -23,9 +33,175 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_clip_content = true
 
-[node name="label" type="Label" parent="contents"]
-margin_left = 52.0
-margin_top = 60.0
-margin_right = 246.0
+[node name="categories" type="Control" parent="contents"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 180.0
+
+[node name="trending" type="Control" parent="contents/categories"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="textureRect" type="TextureRect" parent="contents/categories/trending"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 304, 197 )
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 7
+
+[node name="header" type="Panel" parent="contents/categories/trending"]
+anchor_right = 1.0
+rect_min_size = Vector2( 0, 40 )
+theme_type_variation = "Toolbar"
+
+[node name="label" type="Label" parent="contents/categories/trending/header"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_type_variation = "Bold"
+text = "Trending"
+align = 1
+valign = 1
+
+[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/trending"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/trending/scrollContainer"]
+margin_right = 609.0
+margin_bottom = 166.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/trending/scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 609.0
+margin_bottom = 8.0
+
+[node name="post" type="ColorRect" parent="contents/categories/trending/scrollContainer/vBoxContainer"]
+margin_left = 104.0
+margin_top = 16.0
+margin_right = 504.0
+margin_bottom = 166.0
+rect_min_size = Vector2( 400, 150 )
+size_flags_horizontal = 4
+color = Color( 0, 0, 0, 0.498039 )
+
+[node name="icon" type="TextureRect" parent="contents/categories/trending/scrollContainer/vBoxContainer/post"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 48.0
+margin_bottom = 48.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 1
+
+[node name="user" type="Label" parent="contents/categories/trending/scrollContainer/vBoxContainer/post"]
+anchor_right = 1.0
+margin_left = 56.0
+margin_top = 8.0
+margin_bottom = 30.0
+theme_type_variation = "Bold"
+text = "Joe McPerson"
+valign = 1
+
+[node name="content" type="Label" parent="contents/categories/trending/scrollContainer/vBoxContainer/post"]
+anchor_right = 1.0
+margin_left = 56.0
+margin_top = 38.0
+margin_bottom = 30.0
+text = "I'm definitely not a cat."
+
+[node name="tool" type="HBoxContainer" parent="contents/categories/trending/scrollContainer/vBoxContainer/post"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+rect_min_size = Vector2( 0, 40 )
+
+[node name="button" type="Button" parent="contents/categories/trending/scrollContainer/vBoxContainer/post/tool"]
+margin_right = 400.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+
+[node name="sidebar" type="Panel" parent="contents"]
+anchor_bottom = 1.0
+rect_min_size = Vector2( 180, 0 )
+theme_type_variation = "Sidebar"
+
+[node name="scrollContainer" type="ScrollContainer" parent="contents/sidebar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/sidebar/scrollContainer"]
+margin_right = 180.0
+margin_bottom = 315.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="trending" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
+margin_right = 180.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Trending"
+icon = ExtResource( 7 )
+script = ExtResource( 13 )
+sidebarRoot = NodePath("../../../../categories")
+
+[node name="button2" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
+margin_top = 45.0
+margin_right = 180.0
 margin_bottom = 90.0
-text = "hehehehaheshutdhjdtgjh"
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Help Center"
+icon = ExtResource( 11 )
+
+[node name="button3" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Comedy"
+icon = ExtResource( 9 )
+
+[node name="button4" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
+margin_top = 135.0
+margin_right = 180.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Technology"
+icon = ExtResource( 4 )
+
+[node name="button5" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
+margin_top = 180.0
+margin_right = 180.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Entertainment"
+icon = ExtResource( 10 )
+
+[node name="button6" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
+margin_top = 225.0
+margin_right = 180.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Creativity"
+icon = ExtResource( 5 )
+
+[node name="button7" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
+margin_top = 270.0
+margin_right = 180.0
+margin_bottom = 315.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Discussion"
+icon = ExtResource( 8 )

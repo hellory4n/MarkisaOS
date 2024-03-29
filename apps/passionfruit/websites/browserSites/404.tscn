@@ -57,7 +57,7 @@ Here's what you can do:
 3. Try again later"
 fit_content_height = true
 
-[node name="node" type="Node" parent="."]
+[node name="translationHack" type="Node" parent="."]
 script = ExtResource( 3 )
 label = NodePath("../centerContainer/vBoxContainer/label2")
 PortugueseText = "Nós não conseguimos encontrar este site.
@@ -65,3 +65,8 @@ O que você pode fazer:
 1. Verifique o endereço
 2. Verifique a sua conexão de internet
 3. Tente de novo depois"
+IndonesianText = "Kami tidak bisa menemukan situs web ini.
+Anda bisa mencoba untuk:
+1. Memeriksa alamat
+2. Memeriksa koneksi internet
+3. Coba lagi nanti"

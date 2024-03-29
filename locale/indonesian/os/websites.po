@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+# app name, might as well be just "Browser"
+#: apps/passionfruit/websites/app.tscn
+msgid "Websites"
+msgstr "Situs Web"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "History"
+msgstr "Riwayat"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Downloads"
+msgstr "Unduhan"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Search or enter address"
+msgstr "Cari atau masukkan alamat"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Close"
+msgstr "Tutup"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Open website"
+msgstr "Buka situs web"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Downloading file..."
+msgstr "Mengunduh file..."
+
+#: apps/passionfruit/websites/browserSites/404.tscn
+msgid "404"
+msgstr "404"
+
+#: apps/passionfruit/websites/browserSites/404.tscn
+msgid "Couldn't find website"
+msgstr "Tidak bisa menemukan situs web"
+
+#: apps/passionfruit/websites/browserSites/404.tscn
+msgid "Website not found"
+msgstr "Situs web tidak ditemukan"
+
+# [MULTILINE TEXT]
+#: apps/passionfruit/websites/browserSites/404.tscn
+msgid ""
+"We couldn't find this website.\n"
+"Here's what you can do:\n"
+"1. Check the address\n"
+"2. Check your internet connection\n"
+"3. Try again later\n"
+msgstr "Kami tidak bisa menemukan situs web ini.\n"
+"Anda bisa mencoba untuk:\n"
+"1. Memeriksa alamat"
+"2. Memeriksa koneksi internet"
+"3. Coba lagi nanti\n"
+
+#: apps/passionfruit/websites/browserSites/newtab.tscn
+msgid "New Tab"
+msgstr "Tab Baru"
+
+#: apps/passionfruit/websites/browserSites/newtab.tscn
+msgid "The new tab on the Websites browser."
+msgstr "Tab baru ada di browser Situs Web."
+
+#: apps/passionfruit/websites/browserSites/newtab.tscn
+msgid "Welcome to the Websites app!"
+msgstr "Selamat datang di aplikasi Situs Web!"
+
+#: web/example.com/home.tscn
+msgid "Example"
+msgstr "Contoh"
+
+#: web/example.com/home.tscn
+msgid "Example website"
+msgstr "Contoh situs web"
+
+#: web/example.com/home.tscn
+msgid "Example Domain"
+msgstr "Contoh Domain"
+
+#: web/example.com/home.tscn
+msgid ""
+"This domain is for use in illustrative examples in documents. You may use "
+"this domain in literature without prior coordination or asking for "
+"permission."
+msgstr "Domain ini digunakan untuk contoh ilustratif dalam beberapa dokumen. Anda mungkin menggunakan domain ini dalam bacaan tanpa harus meminta izin."
