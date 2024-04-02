@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hereComesTheFunny.mp3-971320171bd147d8da24a507f3426c2b.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/connect/music/hereComesTheFunny.mp3"
+dest_files=[ "res://.import/hereComesTheFunny.mp3-971320171bd147d8da24a507f3426c2b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

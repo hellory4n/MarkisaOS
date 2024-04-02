@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/industrialRevolutionAndItsConsequences.mp3-38813a663855bbcc0ecbf9b112372d47.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/connect/music/industrialRevolutionAndItsConsequences.mp3"
+dest_files=[ "res://.import/industrialRevolutionAndItsConsequences.mp3-38813a663855bbcc0ecbf9b112372d47.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

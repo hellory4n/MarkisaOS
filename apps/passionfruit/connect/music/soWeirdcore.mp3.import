@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/soWeirdcore.mp3-181f04a4b77c06bc0add030cf7785f4b.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/connect/music/soWeirdcore.mp3"
+dest_files=[ "res://.import/soWeirdcore.mp3-181f04a4b77c06bc0add030cf7785f4b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

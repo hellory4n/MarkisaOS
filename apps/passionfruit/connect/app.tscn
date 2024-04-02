@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://apps/passionfruit/connect/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/connect/fullicon.png" type="Texture" id=2]
@@ -11,10 +11,18 @@
 [ext_resource path="res://os/assets/highPeaks/icons/comedyMask.png" type="Texture" id=9]
 [ext_resource path="res://os/assets/highPeaks/icons/movie.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/help.png" type="Texture" id=11]
+[ext_resource path="res://apps/passionfruit/connect/ui/music.gd" type="Script" id=12]
 [ext_resource path="res://os/mkstoolkit/SidebarButton.gd" type="Script" id=13]
 [ext_resource path="res://apps/passionfruit/connect/backgrounds/trending.png" type="Texture" id=14]
+[ext_resource path="res://apps/passionfruit/connect/music/quiteABitGoingOn.mp3" type="AudioStream" id=15]
+[ext_resource path="res://apps/passionfruit/connect/music/fairlyCorporateSong.mp3" type="AudioStream" id=16]
+[ext_resource path="res://apps/passionfruit/connect/music/fancySchmancy.mp3" type="AudioStream" id=17]
+[ext_resource path="res://apps/passionfruit/connect/music/hereComesTheFunny.mp3" type="AudioStream" id=18]
 [ext_resource path="res://apps/passionfruit/connect/ui/moreButton.gd" type="Script" id=19]
+[ext_resource path="res://apps/passionfruit/connect/music/industrialRevolutionAndItsConsequences.mp3" type="AudioStream" id=20]
 [ext_resource path="res://apps/passionfruit/connect/backgrounds/helpCenter.png" type="Texture" id=21]
+[ext_resource path="res://apps/passionfruit/connect/music/soWeirdcore.mp3" type="AudioStream" id=22]
+[ext_resource path="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3" type="AudioStream" id=23]
 [ext_resource path="res://apps/passionfruit/connect/ui/TheAlgorithm.cs" type="Script" id=29]
 
 [node name="connect" type="Control"]
@@ -43,6 +51,12 @@ margin_left = 180.0
 [node name="trending" type="Control" parent="contents/categories"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/trending"]
+stream = ExtResource( 15 )
+autoplay = true
+bus = "music"
+script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/trending"]
 anchor_right = 1.0
@@ -99,6 +113,13 @@ script = ExtResource( 19 )
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/helpCenter"]
+stream = ExtResource( 16 )
+autoplay = true
+stream_paused = true
+bus = "music"
+script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/helpCenter"]
 anchor_right = 1.0
@@ -157,6 +178,13 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/comedy"]
+stream = ExtResource( 18 )
+autoplay = true
+stream_paused = true
+bus = "music"
+script = ExtResource( 12 )
+
 [node name="textureRect" type="TextureRect" parent="contents/categories/comedy"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -212,6 +240,13 @@ script = ExtResource( 19 )
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="music2" type="AudioStreamPlayer" parent="contents/categories/technology"]
+stream = ExtResource( 20 )
+autoplay = true
+stream_paused = true
+bus = "music"
+script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/technology"]
 anchor_right = 1.0
@@ -269,6 +304,13 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="music3" type="AudioStreamPlayer" parent="contents/categories/entertainment"]
+stream = ExtResource( 23 )
+autoplay = true
+stream_paused = true
+bus = "music"
+script = ExtResource( 12 )
+
 [node name="textureRect" type="TextureRect" parent="contents/categories/entertainment"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -325,6 +367,13 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="music4" type="AudioStreamPlayer" parent="contents/categories/creativity"]
+stream = ExtResource( 22 )
+autoplay = true
+stream_paused = true
+bus = "music"
+script = ExtResource( 12 )
+
 [node name="textureRect" type="TextureRect" parent="contents/categories/creativity"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -380,6 +429,13 @@ script = ExtResource( 19 )
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="music5" type="AudioStreamPlayer" parent="contents/categories/discussion"]
+stream = ExtResource( 17 )
+autoplay = true
+stream_paused = true
+bus = "music"
+script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/discussion"]
 anchor_right = 1.0

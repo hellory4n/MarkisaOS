@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fancySchmancy.mp3-7fff4e2882fe3285d91c1c3d777409ed.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/connect/music/fancySchmancy.mp3"
+dest_files=[ "res://.import/fancySchmancy.mp3-7fff4e2882fe3285d91c1c3d777409ed.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

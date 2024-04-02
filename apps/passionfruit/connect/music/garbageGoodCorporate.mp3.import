@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/garbageGoodCorporate.mp3-acda008744a70d457bc364cbf6acd923.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3"
+dest_files=[ "res://.import/garbageGoodCorporate.mp3-acda008744a70d457bc364cbf6acd923.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

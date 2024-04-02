@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fairlyCorporateSong.mp3-3afdc0d1429dc8830e019dd3193a7c91.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/connect/music/fairlyCorporateSong.mp3"
+dest_files=[ "res://.import/fairlyCorporateSong.mp3-3afdc0d1429dc8830e019dd3193a7c91.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

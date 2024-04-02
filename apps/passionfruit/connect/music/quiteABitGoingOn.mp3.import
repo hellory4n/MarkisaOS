@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/quiteABitGoingOn.mp3-9cb468e6b01e58017bcab45ea0ea6321.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/connect/music/quiteABitGoingOn.mp3"
+dest_files=[ "res://.import/quiteABitGoingOn.mp3-9cb468e6b01e58017bcab45ea0ea6321.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

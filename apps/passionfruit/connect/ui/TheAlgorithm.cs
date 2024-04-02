@@ -103,7 +103,7 @@ public class TheAlgorithm : VBoxContainer
         return result;
     }
 
-    static string FormatNumber(int number)
+    static string FormatNumber(double number)
     {
         if (number >= 1_000_000) {
             return $"{number / 1_000_000:F1}M";
