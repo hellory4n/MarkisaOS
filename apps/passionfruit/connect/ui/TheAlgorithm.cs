@@ -57,6 +57,42 @@ public class TheAlgorithm : VBoxContainer
     {
         MksConnectZone result;
         switch (zone) {
+            case "comedy":
+                switch (month) {
+                    default: result = ComedyZone1.Data; break;
+                }
+                break;
+            
+            case "creativity":
+                switch (month) {
+                    default: result = CreativityZone1.Data; break;
+                }
+                break;
+            
+            case "discussion":
+                switch (month) {
+                    default: result = DiscussionZone1.Data; break;
+                }
+                break;
+            
+            case "entertainment":
+                switch (month) {
+                    default: result = EntertainmentZone1.Data; break;
+                }
+                break;
+            
+            case "help center":
+                switch (month) {
+                    default: result = HelpCenterZone1.Data; break;
+                }
+                break;
+            
+            case "technology":
+                switch (month) {
+                    default: result = TechnologyZone1.Data; break;
+                }
+                break;
+            
             default:
                 switch (month) {
                     default: result = TrendingZone1.Data; break;

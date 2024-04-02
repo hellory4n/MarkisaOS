@@ -1,4 +1,4 @@
 extends Button
 
-func _process(delta):
+func _process(_delta):
 	raise()
