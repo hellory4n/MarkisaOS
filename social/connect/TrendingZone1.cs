@@ -8,14 +8,14 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
     Month = 1,
     Posts = new MksPost[] {
         new MksPost {
-            Username = "Joe McPerson",
+            User = "Joe McPerson",
             ProfilePicture = "res://os/assets/userIcons/cat.png",
             Verified = true,
             Content = "I'm not a cat!!!!!"
         },
 
         new MksPost {
-            Username = "SMNN News",
+            User = "SMNN News",
             ProfilePicture = "res://os/assets/userIcons/cat.png",
             Verified = true,
             Content = "BREAKING: <ping>Joe McPerson</ping> is a cat.",
@@ -23,13 +23,13 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
         },
 
         new MksPost {
-            Username = "Taylor F. Ed",
+            User = "Taylor F. Ed",
             ProfilePicture = "res://os/assets/userIcons/cat.png",
             Content = "Who else loves methamphetamine???????? I'm certainly not a federal agent."
         },
 
         new MksPost {
-            Username = "Mall Wares",
+            User = "Mall Wares",
             ProfilePicture = "res://os/assets/userIcons/cat.png",
             Content = "Check out this awesome application, it makes you security",
             Link = "malware.org"

@@ -2,7 +2,7 @@ namespace markisa.network {
 
 public class MksPost
 {
-    public string Username { get; set; }
+    public string User { get; set; }
     public string ProfilePicture { get; set; }
     public bool Verified { get; set; }
     public string Content { get; set; }
