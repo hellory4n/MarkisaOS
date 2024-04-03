@@ -3,6 +3,7 @@ using markisa.foundation;
 using markisa.mkstoolkit;
 using markisa.network;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace passionfruit.coreapps.connect {
@@ -87,8 +88,20 @@ public class TheAlgorithm : VBoxContainer
             AddChild(postUi);
 
             if (post.Replies != null) {
+                // since godot is stupid we have to do this dumbass conversion to then parse it in Replies()
+                var stupidarr = new Godot.Collections.Array();
+                foreach (MksPost lol in post.Replies) {
+                    stupidarr.Add(lol.User);
+                    stupidarr.Add(lol.ProfilePicture);
+                    stupidarr.Add(lol.Verified);
+                    stupidarr.Add(lol.Content);
+                    stupidarr.Add(lol.Images);
+                    stupidarr.Add(lol.Link);
+                    stupidarr.Add("");
+                }
+
                 postUi.GetNode<Button>("m/tools/reply").Connect("pressed", this, nameof(Replies), new Godot.Collections.Array {
-                    GetNode<VBoxContainer>("../../popup/scrollContainer/vBoxContainer"), post.Replies
+                    stupidarr
                 });
             }
         }
@@ -181,9 +194,25 @@ public class TheAlgorithm : VBoxContainer
         Frambos.Play(SystemSound.Notification);
     }
 
-    public void Replies(VBoxContainer list, MksPost[] posts)
+    public void Replies(Godot.Collections.Array postsStupidEdition)
     {
         GetNode<MksPopup>("../../popup").ShowPopup();
+        var list = GetNode<VBoxContainer>("../../popup/scrollContainer/vBoxContainer");
+        
+        // since godot is stupid we have to send a dumbass array and then parse it
+        var posts = new List<MksPost>();
+        for (int i = 0; i < postsStupidEdition.Count; i++) {
+            var mkspost = new MksPost {
+                User = (string)postsStupidEdition[i],
+                ProfilePicture = (string)postsStupidEdition[i + 1],
+                Verified = (bool)postsStupidEdition[i + 2],
+                Content = (string)postsStupidEdition[i + 3],
+                Images = (string[])postsStupidEdition[i + 4],
+                Link = (string)postsStupidEdition[i + 5]
+            };
+            i += 6;
+            posts.Add(mkspost);
+        }
 
         // clear previous replies
         foreach (dynamic node in list.GetChildren()) {
@@ -244,6 +273,7 @@ public class TheAlgorithm : VBoxContainer
             
             // dumbass stats
             postUi.GetNode<Button>("m/tools/like").Text = FormatNumber(random.Next(50, 5_000));
+            postUi.GetNode("m/tools/reply").QueueFree();
             postUi.GetNode<Button>("m/tools/views").Text = FormatNumber(random.Next(5_000, 500_000));
 
             list.AddChild(postUi);

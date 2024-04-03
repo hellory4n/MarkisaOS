@@ -63,7 +63,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
                 new MksPost {
                     User = "Bill Gates",
                     ProfilePicture = "res://os/assets/userIcons/cat.png",
-                    Content = "😍😍😍"
+                    Content = "<3"
                 }
             }
         },
