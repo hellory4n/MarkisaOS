@@ -225,14 +225,8 @@ public class TheAlgorithm : VBoxContainer
             return;
         }
 
-        var shuffled = posts
-            .Select(x => (x, random.Next()))
-            .OrderBy(tuple => tuple.Item2)
-            .Select(tuple => tuple.x)
-            .ToArray();
-
         // show all of the replies and shit :)
-        foreach (MksPost post in shuffled) {
+        foreach (MksPost post in posts) {
             var postUi = postScene.Instance<Control>();
 
             // main content shit
