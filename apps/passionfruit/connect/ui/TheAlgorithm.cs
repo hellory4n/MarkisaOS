@@ -2,6 +2,7 @@ using Godot;
 using markisa.foundation;
 using markisa.mkstoolkit;
 using markisa.network;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,11 +35,17 @@ public class TheAlgorithm : VBoxContainer
         MksConnectZone zone = GetConnectZone(Zone, 1);
 
         // shuffle posts
-        var shuffled = zone.Posts
-            .Select(x => (x, random.Next()))
-            .OrderBy(tuple => tuple.Item2)
-            .Select(tuple => tuple.x)
-            .ToArray();
+        MksPost[] shuffled;
+        if (Zone != "bookmarks") {
+            shuffled = zone.Posts
+                .Select(x => (x, random.Next()))
+                .OrderBy(tuple => tuple.Item2)
+                .Select(tuple => tuple.x)
+                .ToArray();
+        }
+        else {
+            shuffled = zone.Posts;
+        }
 
         // show all of the posts and shit :)
         foreach (MksPost post in shuffled) {
@@ -104,6 +111,16 @@ public class TheAlgorithm : VBoxContainer
                     stupidarr
                 });
             }
+
+            if (Zone != "bookmarks") {
+                // godot is stupid
+                postUi.GetNode<Button>("m/tools/bookmark").Connect("pressed", this, nameof(Bookmark), new Godot.Collections.Array {
+                    JsonConvert.SerializeObject(post)
+                });
+            }
+            else {
+                postUi.GetNode("m/tools/bookmark").QueueFree();
+            }
         }
     }
 
@@ -145,6 +162,16 @@ public class TheAlgorithm : VBoxContainer
                 switch (month) {
                     default: result = TechnologyZone1.Data; break;
                 }
+                break;
+            
+            case "bookmarks":
+                var config = new Config<ConnectConfig>();
+                result = new MksConnectZone {
+                    Month = 1, // TODO: update when i add time
+                    Music = "",
+                    Background = "res://os/assets/bootloader/onboardingWallpaper.png",
+                    Posts = config.Data.Bookmarks
+                };
                 break;
             
             default:
@@ -268,10 +295,22 @@ public class TheAlgorithm : VBoxContainer
             // dumbass stats
             postUi.GetNode<Button>("m/tools/like").Text = FormatNumber(random.Next(50, 5_000));
             postUi.GetNode("m/tools/reply").QueueFree();
+            postUi.GetNode("m/tools/bookmark").QueueFree();
             postUi.GetNode<Button>("m/tools/views").Text = FormatNumber(random.Next(5_000, 500_000));
 
             list.AddChild(postUi);
         }
+    }
+
+    public void Bookmark(string postjson)
+    {
+        var post = JsonConvert.DeserializeObject<MksPost>(postjson);
+        var config = new Config<ConnectConfig>();
+        config.Data.Bookmarks = config.Data.Bookmarks.Append(post).ToArray();
+        config.Save();
+
+        Frambos.Notify("Connect", "Post added to bookmarks");
+        Frambos.Play(SystemSound.Notification);
     }
 }
 
