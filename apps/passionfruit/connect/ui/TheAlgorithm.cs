@@ -106,10 +106,27 @@ public class TheAlgorithm : VBoxContainer
     static string FormatNumber(double number)
     {
         if (number >= 1_000_000) {
-            return $"{number / 1_000_000:F1}M";
+            // guess what, international number formatting !!
+            if (TranslationServer.GetLocale() == "pt") {
+                return $"{number / 1_000_000:F1} mi";
+            }
+            else if (TranslationServer.GetLocale() == "id") {
+                return $"{number / 1_000_000:F1}jt";
+            }
+            else {
+                return $"{number / 1_000_000:F1}M";
+            }
         }
         else if (number >= 1_000) {
-            return $"{number / 1_000:F1}K";
+            if (TranslationServer.GetLocale() == "pt") {
+                return $"{number / 1_000:F1} mil";
+            }
+            else if (TranslationServer.GetLocale() == "id") {
+                return $"{number / 1_000:F1}rb";
+            }
+            else {
+                return $"{number / 1_000:F1}K";
+            }
         }
         else {
             return number.ToString();
