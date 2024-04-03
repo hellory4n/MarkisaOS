@@ -12,7 +12,20 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Joe McPerson",
             ProfilePicture = "res://os/assets/userIcons/cat.png",
             Verified = true,
-            Content = "I'm not a cat!!!!!"
+            Content = "I'm not a cat!!!!!",
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "Amon Lee Hughman",
+                    ProfilePicture = "res://os/assets/userIcons/cat.png",
+                    Content = "Yes you are."
+                },
+
+                new MksPost {
+                    User = "Elon Musk",
+                    ProfilePicture = "res://os/assets/userIcons/cat.png",
+                    Content = "You are awesome"
+                }
+            }
         },
 
         new MksPost {
@@ -20,20 +33,53 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             ProfilePicture = "res://os/assets/userIcons/cat.png",
             Verified = true,
             Content = "BREAKING: <ping>Joe McPerson</ping> is a cat.",
-            Images = new string[] { "res://os/assets/userIcons/cat.png" }
+            Images = new string[] { "res://os/assets/userIcons/cat.png" },
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "Amon Lee Hughman",
+                    ProfilePicture = "res://os/assets/userIcons/cat.png",
+                    Content = "[reaction image]"
+                },
+
+                new MksPost {
+                    User = "Elon Musk",
+                    ProfilePicture = "res://os/assets/userIcons/cat.png",
+                    Content = "Concerning..."
+                }
+            }
         },
 
         new MksPost {
             User = "Taylor F. Ed",
             ProfilePicture = "res://os/assets/userIcons/cat.png",
-            Content = "Who else loves methamphetamine???????? I'm certainly not a federal agent."
+            Content = "Who else loves methamphetamine???????? I'm certainly not a federal agent.",
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "Posts by Feds",
+                    ProfilePicture = "res://os/assets/userIcons/cat.png",
+                    Content = "Fantastic"
+                },
+
+                new MksPost {
+                    User = "Bill Gates",
+                    ProfilePicture = "res://os/assets/userIcons/cat.png",
+                    Content = "😍😍😍"
+                }
+            }
         },
 
         new MksPost {
             User = "Mall Wares",
             ProfilePicture = "res://os/assets/userIcons/cat.png",
             Content = "Check out this awesome application, it makes you security",
-            Link = "malware.org"
+            Link = "malware.org",
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "Elon Musk",
+                    ProfilePicture = "res://os/assets/userIcons/cat.png",
+                    Content = "I will look into that"
+                }
+            }
         }
     }
 };

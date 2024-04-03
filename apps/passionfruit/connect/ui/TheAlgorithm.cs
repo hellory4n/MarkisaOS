@@ -1,5 +1,6 @@
 using Godot;
 using markisa.foundation;
+using markisa.mkstoolkit;
 using markisa.network;
 using System;
 using System.Linq;
@@ -84,6 +85,12 @@ public class TheAlgorithm : VBoxContainer
             postUi.GetNode<Button>("m/tools/views").Text = FormatNumber(random.Next(10_000, 10_000_000));
 
             AddChild(postUi);
+
+            if (post.Replies != null) {
+                postUi.GetNode<Button>("m/tools/reply").Connect("pressed", this, nameof(Replies), new Godot.Collections.Array {
+                    GetNode<VBoxContainer>("../../popup/scrollContainer/vBoxContainer"), post.Replies
+                });
+            }
         }
     }
 
@@ -172,6 +179,75 @@ public class TheAlgorithm : VBoxContainer
         OS.Clipboard = url;
         Frambos.Notify("Connect", "Link copied.");
         Frambos.Play(SystemSound.Notification);
+    }
+
+    public void Replies(VBoxContainer list, MksPost[] posts)
+    {
+        GetNode<MksPopup>("../../popup").ShowPopup();
+
+        // clear previous replies
+        foreach (dynamic node in list.GetChildren()) {
+            if (node is PanelContainer ha) {
+                ha.QueueFree();
+            }
+        }
+
+        if (posts == null) {
+            return;
+        }
+
+        var shuffled = posts
+            .Select(x => (x, random.Next()))
+            .OrderBy(tuple => tuple.Item2)
+            .Select(tuple => tuple.x)
+            .ToArray();
+
+        // show all of the replies and shit :)
+        foreach (MksPost post in shuffled) {
+            var postUi = postScene.Instance<Control>();
+
+            // main content shit
+            postUi.GetNode<Label>("m/n/user").Text = post.User;
+            postUi.GetNode<TextureRect>("m/n/pfp").Texture = GD.Load<Texture>(post.ProfilePicture);
+            // quite the mouthful
+            postUi.GetNode<RichTextLabel>("m/o/content").BbcodeText = Tr(post.Content.Replace("<ping>", "[color=#448AFF]@").Replace("</ping>", "[/color]"));
+            postUi.GetNode<CanvasItem>("m/n/verified").Visible = post.Verified;
+
+            // attachments :)
+            var attachmentPlace = postUi.GetNode("m/fk/attach");
+            if (post.Images != null) { // rewrite it in rust
+                foreach (string img in post.Images) {
+                    var imag = new TextureRect {
+                        Texture = GD.Load<Texture>(img),
+                        SizeFlagsHorizontal = 0,
+                        RectMinSize = new Vector2(332, 249),
+                        Expand = true,
+                        StretchMode = TextureRect.StretchModeEnum.KeepAspectCovered
+                    };
+                    attachmentPlace.AddChild(imag);
+                }
+            }
+
+            // rewrite it in rust
+            if (!string.IsNullOrEmpty(post.Link)) {
+                var linkFromTheLegendOfZelda = new Button {
+                    Text = "Copy Link",
+                    ThemeTypeVariation = "Secondary",
+                    RectMinSize = new Vector2(332, 45),
+                    SizeFlagsHorizontal = 0
+                };
+                attachmentPlace.AddChild(linkFromTheLegendOfZelda);
+                linkFromTheLegendOfZelda.Connect("pressed", this, nameof(CopyLink), new Godot.Collections.Array {
+                    post.Link
+                });
+            }
+            
+            // dumbass stats
+            postUi.GetNode<Button>("m/tools/like").Text = FormatNumber(random.Next(50, 5_000));
+            postUi.GetNode<Button>("m/tools/views").Text = FormatNumber(random.Next(5_000, 500_000));
+
+            list.AddChild(postUi);
+        }
     }
 }
 
