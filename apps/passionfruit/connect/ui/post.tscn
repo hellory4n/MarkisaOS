@@ -76,7 +76,20 @@ margin_right = 400.0
 margin_bottom = 20.0
 mouse_filter = 2
 bbcode_enabled = true
+bbcode_text = "xd"
+text = "xd"
 fit_content_height = true
+
+[node name="fk" type="MarginContainer" parent="m"]
+margin_top = 68.0
+margin_right = 400.0
+margin_bottom = 68.0
+mouse_filter = 2
+custom_constants/margin_left = 60
+
+[node name="attach" type="VBoxContainer" parent="m/fk"]
+margin_left = 60.0
+margin_right = 400.0
 
 [node name="tools" type="HBoxContainer" parent="m"]
 margin_top = 68.0

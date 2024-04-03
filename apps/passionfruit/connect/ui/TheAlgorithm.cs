@@ -1,4 +1,5 @@
 using Godot;
+using markisa.foundation;
 using markisa.network;
 using System;
 using System.Linq;
@@ -40,11 +41,44 @@ public class TheAlgorithm : VBoxContainer
         // show all of the posts and shit :)
         foreach (MksPost post in shuffled) {
             var postUi = postScene.Instance<Control>();
+
+            // main content shit
             postUi.GetNode<Label>("m/n/user").Text = post.User;
             postUi.GetNode<TextureRect>("m/n/pfp").Texture = GD.Load<Texture>(post.ProfilePicture);
-            postUi.GetNode<RichTextLabel>("m/o/content").BbcodeText = Tr(post.Content);
+            // quite the mouthful
+            postUi.GetNode<RichTextLabel>("m/o/content").BbcodeText = Tr(post.Content.Replace("<ping>", "[color=#448AFF]@").Replace("</ping>", "[/color]"));
             postUi.GetNode<CanvasItem>("m/n/verified").Visible = post.Verified;
 
+            // attachments :)
+            var attachmentPlace = postUi.GetNode("m/fk/attach");
+            if (post.Images != null) { // rewrite it in rust
+                foreach (string img in post.Images) {
+                    var imag = new TextureRect {
+                        Texture = GD.Load<Texture>(img),
+                        SizeFlagsHorizontal = 0,
+                        RectMinSize = new Vector2(332, 249),
+                        Expand = true,
+                        StretchMode = TextureRect.StretchModeEnum.KeepAspectCovered
+                    };
+                    attachmentPlace.AddChild(imag);
+                }
+            }
+
+            // rewrite it in rust
+            if (!string.IsNullOrEmpty(post.Link)) {
+                var linkFromTheLegendOfZelda = new Button {
+                    Text = "Copy Link",
+                    ThemeTypeVariation = "Secondary",
+                    RectMinSize = new Vector2(332, 45),
+                    SizeFlagsHorizontal = 0
+                };
+                attachmentPlace.AddChild(linkFromTheLegendOfZelda);
+                linkFromTheLegendOfZelda.Connect("pressed", this, nameof(CopyLink), new Godot.Collections.Array {
+                    post.Link
+                });
+            }
+            
+            // dumbass stats
             postUi.GetNode<Button>("m/tools/like").Text = FormatNumber(random.Next(1_000, 100_000));
             postUi.GetNode<Button>("m/tools/reply").Text = FormatNumber(random.Next(10, 10_000));
             postUi.GetNode<Button>("m/tools/views").Text = FormatNumber(random.Next(10_000, 10_000_000));
@@ -131,6 +165,13 @@ public class TheAlgorithm : VBoxContainer
         else {
             return number.ToString();
         }
+    }
+
+    public void CopyLink(string url)
+    {
+        OS.Clipboard = url;
+        Frambos.Notify("Connect", "Link copied.");
+        Frambos.Play(SystemSound.Notification);
     }
 }
 
