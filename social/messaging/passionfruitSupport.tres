@@ -5,4 +5,43 @@
 [resource]
 script = ExtResource( 1 )
 username = "Passionfruit Support"
-content = "haha"
+content = "\"Welcome to the awesome Passionfruit help center thing. How can I help you?\";
+choose {
+  option \"My apps are not worky :(\" {
+    \"Have you tried turning it off an on again?\";
+    choose {
+      option \"Yes\" {
+        \"Sounds like a skill issue.\";
+        block;
+      }
+      option \"No\" {
+        \"Then do it immediately. This is a threat.\";
+        block;
+      }
+    }
+  }
+  
+  option \"My device is no worky :(\" {
+    \"Have you tried smashing it with a hammer?\";
+    choose {
+      option \"Yes\" {
+        \"The warranty doesn't cover that.\";
+        block;
+      }
+      option \"No\" {
+        \"Understandable.\";
+        block;
+      }
+    }
+  }
+  
+  option \"I want a refund NOW!\" {
+    \"Fuck off.\";
+    block;
+  }
+  
+  option \"I'm gonna sue you\" {
+    \"This is unfortunate.\";
+    block;
+  }
+}"

@@ -14,7 +14,9 @@ enum ConversationTokenType
 class ConversationToken
 {
     public ConversationTokenType Type { get; set; }
-    public string Literal { get; set; }
+    public string Literal { get; set; } = "";
+
+    public override string ToString() => $"[{Type} = {Literal}]";
 }
 
 }
