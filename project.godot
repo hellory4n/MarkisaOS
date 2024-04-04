@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "MksConversation",
+"language": "GDScript",
+"path": "res://os/kickstart/network/conversation.gd"
+}, {
 "base": "Button",
 "class": "MksPopupHide",
 "language": "GDScript",
@@ -30,6 +35,7 @@ _global_script_classes=[ {
 "path": "res://os/mkstoolkit/WindowOpener.gd"
 } ]
 _global_script_class_icons={
+"MksConversation": "",
 "MksPopupHide": "",
 "MksPopupShow": "",
 "ParadoxBar": "",
