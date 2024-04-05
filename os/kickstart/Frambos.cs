@@ -1,5 +1,4 @@
 using Godot;
-using markisa.network;
 using System;
 using System.Collections.Generic;
 
@@ -58,8 +57,6 @@ public class Frambos : Node
         Input.SetCustomMouseCursor(cursor, Input.CursorShape.Arrow, new Vector2(11, 8));
         Input.SetCustomMouseCursor(pointingHand, Input.CursorShape.PointingHand, new Vector2(17, 8));
         Input.SetCustomMouseCursor(ibeam, Input.CursorShape.Ibeam, new Vector2(11, 8));
-
-        ConversationLoader.Load("res://social/messaging/passionfruitSupport.tres");
     }
 
     public override void _Process(float delta)

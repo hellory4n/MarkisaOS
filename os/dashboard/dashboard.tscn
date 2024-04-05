@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://apps/passionfruit/websites/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://os/assets/highPeaks/icons/code.png" type="Texture" id=2]
@@ -43,6 +43,7 @@
 [ext_resource path="res://os/dashboard/MarkisaButton.cs" type="Script" id=41]
 [ext_resource path="res://apps/passionfruit/files/smallicon.png" type="Texture" id=42]
 [ext_resource path="res://apps/passionfruit/connect/smallicon.png" type="Texture" id=43]
+[ext_resource path="res://apps/passionfruit/email/smallicon.png" type="Texture" id=44]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hideBigPopup"
@@ -189,6 +190,7 @@ margin_bottom = 400.0
 rect_min_size = Vector2( 350, 360 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/notifications/ScrollContainer"]
+margin_right = 350.0
 size_flags_horizontal = 3
 alignment = 1
 
@@ -765,12 +767,12 @@ anchor_bottom = 1.0
 margin_bottom = -42.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/appLauncher/Home"]
-margin_right = 231.0
-margin_bottom = 242.0
+margin_right = 394.0
+margin_bottom = 292.0
 size_flags_horizontal = 3
 
 [node name="Button2" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
-margin_right = 400.0
+margin_right = 394.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 0, 42 )
 mouse_filter = 1
@@ -784,7 +786,7 @@ window = "res://apps/passionfruit/settings/app.tscn"
 
 [node name="Button3" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
 margin_top = 50.0
-margin_right = 400.0
+margin_right = 394.0
 margin_bottom = 92.0
 rect_min_size = Vector2( 0, 42 )
 mouse_filter = 1
@@ -798,7 +800,7 @@ window = "res://apps/passionfruit/websites/app.tscn"
 
 [node name="Button4" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
 margin_top = 100.0
-margin_right = 400.0
+margin_right = 394.0
 margin_bottom = 142.0
 rect_min_size = Vector2( 0, 42 )
 mouse_filter = 1
@@ -812,7 +814,7 @@ window = "res://apps/passionfruit/files/app.tscn"
 
 [node name="Button5" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
 margin_top = 150.0
-margin_right = 400.0
+margin_right = 394.0
 margin_bottom = 192.0
 rect_min_size = Vector2( 0, 42 )
 mouse_filter = 1
@@ -824,10 +826,24 @@ expand_icon = true
 script = ExtResource( 18 )
 window = "res://apps/passionfruit/connect/app.tscn"
 
-[node name="Button" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
+[node name="Button6" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
 margin_top = 200.0
-margin_right = 400.0
+margin_right = 394.0
 margin_bottom = 242.0
+rect_min_size = Vector2( 0, 42 )
+mouse_filter = 1
+size_flags_horizontal = 3
+theme_type_variation = "OSButton"
+text = "Email"
+icon = ExtResource( 44 )
+expand_icon = true
+script = ExtResource( 18 )
+window = "res://apps/passionfruit/email/app.tscn"
+
+[node name="Button" type="Button" parent="interface/appLauncher/Home/VBoxContainer"]
+margin_top = 250.0
+margin_right = 394.0
+margin_bottom = 292.0
 rect_min_size = Vector2( 0, 42 )
 mouse_filter = 1
 size_flags_horizontal = 3
