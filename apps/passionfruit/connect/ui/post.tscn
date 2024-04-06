@@ -74,11 +74,13 @@ margin_left = 60.0
 margin_top = -10.0
 margin_right = 400.0
 margin_bottom = 20.0
+focus_mode = 2
 mouse_filter = 2
 bbcode_enabled = true
 bbcode_text = "xd"
 text = "xd"
 fit_content_height = true
+selection_enabled = true
 
 [node name="fk" type="MarginContainer" parent="m"]
 margin_top = 68.0
