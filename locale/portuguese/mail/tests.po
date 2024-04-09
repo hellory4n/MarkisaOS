@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-03-27 22:40-0500\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Lelcube (god)"
+msgstr "Lelcube (deus)"
+
+msgid "I've been spying on you and what you just did is truly frustrageous, i'm gonna fucking take you for a ride"
+msgstr "Eu tive espionando em você, e o que você acabou de fazer é de fato frustrarrecedor, eu vou te levar para um passeio"
