@@ -178,6 +178,10 @@ public class Frambos : Node
     /// </summary>
     public static void SendEmail(MksEmail email)
     {
+        if (CurrentUser == "") {
+            return;
+        }
+        
         var timeConfig = new Config<StoryProgress>();
         DateTime now = DateTime.Now;
 

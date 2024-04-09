@@ -8,12 +8,13 @@ public class ListEmails : ItemList
     [Export(PropertyHint.NodePathValidTypes, "RichTextLabel")]
     public NodePath Help;
 
-    Config<SocialInfo> config = new Config<SocialInfo>();
+    Config<SocialInfo> config;
 
     public override void _Ready()
     {
         // really couldn't figure out a proper null check
         // should have written it in rust smh
+        config = new Config<SocialInfo>();
         config.Data.Emails = new MksEmail[] {};
         Refresh();
     }

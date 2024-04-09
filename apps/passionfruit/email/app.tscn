@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://apps/passionfruit/email/dockicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/email/fullicon.png" type="Texture" id=2]
 [ext_resource path="res://apps/passionfruit/email/smallicon.png" type="Texture" id=3]
 [ext_resource path="res://apps/passionfruit/email/ui/ListEmails.cs" type="Script" id=4]
+[ext_resource path="res://os/assets/wallpapers/coffee.jpg" type="Texture" id=5]
 [ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
 
 [node name="email" type="Control"]
@@ -34,7 +35,7 @@ margin_bottom = 395.0
 rect_min_size = Vector2( 180, 0 )
 fixed_icon_size = Vector2( 28, 28 )
 script = ExtResource( 4 )
-Help = NodePath("../control/richTextLabel")
+Help = NodePath("../control/scrollContainer/vBoxContainer/richTextLabel")
 
 [node name="timer" type="Timer" parent="contents/hSplitContainer/itemList"]
 autostart = true
@@ -52,13 +53,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme_type_variation = "RightSidebar"
 
-[node name="richTextLabel" type="RichTextLabel" parent="contents/hSplitContainer/control"]
+[node name="scrollContainer" type="ScrollContainer" parent="contents/hSplitContainer/control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/hSplitContainer/control/scrollContainer"]
+margin_right = 587.0
+margin_bottom = 303.0
+size_flags_horizontal = 3
+
+[node name="richTextLabel" type="RichTextLabel" parent="contents/hSplitContainer/control/scrollContainer/vBoxContainer"]
+margin_right = 587.0
+margin_bottom = 46.0
 focus_mode = 2
 bbcode_enabled = true
+bbcode_text = "[b]Motherfucker - 76/542/52/5 - 2040%\"%\"%:%[/b]
+Good fucking morning"
+text = "Motherfucker - 76/542/52/5 - 2040%\"%\"%:%
+Good fucking morning"
+fit_content_height = true
 selection_enabled = true
+
+[node name="textureRect" type="TextureRect" parent="contents/hSplitContainer/control/scrollContainer/vBoxContainer"]
+margin_top = 54.0
+margin_right = 332.0
+margin_bottom = 303.0
+rect_min_size = Vector2( 332, 249 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 7
 
 [connection signal="item_selected" from="contents/hSplitContainer/itemList" to="contents/hSplitContainer/itemList" method="ItemSelected"]
 [connection signal="timeout" from="contents/hSplitContainer/itemList/timer" to="contents/hSplitContainer/itemList" method="Refresh"]
