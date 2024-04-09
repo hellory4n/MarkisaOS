@@ -3,8 +3,10 @@ namespace markisa.foundation {
 /// <summary>
 /// Btw everything is -100 to 100
 /// </summary>
-class StoryProgress
+class StoryProgress : IConfigData
 {
+    public string GetFilename() => "%user/storyProgress.mksconf";
+    
     /// <summary>
     /// The current month you're in, from 1 to 12 (the game ends in december)
     /// </summary>

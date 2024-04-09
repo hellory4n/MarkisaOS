@@ -1,6 +1,8 @@
 using Godot;
+using markisa.network;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace markisa.foundation
 {
@@ -20,7 +22,7 @@ public class Frambos : Node
     static PackedScene peekAtText = GD.Load<PackedScene>("res://os/dashboard/textpeek.tscn");
     static Panel text;
     static LineEdit peek;
-    static SceneTree sceneTreeSoICanMakeAStaticFunction;
+    static SceneTree oopMoment;
 
     static Dictionary<SystemSound, AudioStream> AwesomeSounds { get; } = new Dictionary<SystemSound, AudioStream> {
         {SystemSound.Startup,       GD.Load<AudioStream>("res://os/assets/systemSounds/startup.mp3")},
@@ -45,7 +47,7 @@ public class Frambos : Node
             forceMobile = true;
         }
 
-        sceneTreeSoICanMakeAStaticFunction = GetTree();
+        oopMoment = GetTree();
 
         text = peekAtText.Instance<Panel>();
         // add_child: Parent node is busy setting up children, add_node() failed. Consider using call_deferred("add_child", child) instead.
@@ -89,7 +91,7 @@ public class Frambos : Node
     public static void Notify(string app, string text)
     {
         var shit = notificationShit.Instance<Panel>();
-        sceneTreeSoICanMakeAStaticFunction.Root.AddChild(shit);
+        oopMoment.Root.AddChild(shit);
 
         shit.GetNode<RichTextLabel>("text").AppendBbcode($"[b]{app}[/b]\n{text}");
         shit.GetNode<AnimationPlayer>("animation").Play("ghggh");
@@ -115,7 +117,7 @@ public class Frambos : Node
             Bus = "sound"
         };
         // quite a convoluted way of saying `this.`
-        sceneTreeSoICanMakeAStaticFunction.Root.GetNode("/root/Frambos").AddChild(dollarsign);
+        oopMoment.Root.GetNode("/root/Frambos").AddChild(dollarsign);
     }
 
     /// <summary>
@@ -169,6 +171,32 @@ public class Frambos : Node
 
         // ahhhhhhhhh fuck
         return "404";
+    }
+
+    /// <summary>
+    /// Sends an email to the user.
+    /// </summary>
+    public static void SendEmail(MksEmail email)
+    {
+        var timeConfig = new Config<StoryProgress>();
+        DateTime now = DateTime.Now;
+
+        // figure out the date of the email
+        email.Time = new DateTime(2071, (int)timeConfig.Data.Month, (int)timeConfig.Data.Day, now.Hour, now.Minute,
+                                  now.Second);
+        
+        var config = new Config<SocialInfo>();
+        config.Data.Emails = config.Data.Emails.Append(email).ToArray();
+        config.Save();
+        
+        // localization is some tricky stuff
+        switch (TranslationServer.GetLocale()) 
+        {
+            case "en": Notify($"{email.User} sent an email", email.Content); break;
+            case "pt": Notify($"{oopMoment.Tr(email.User)} enviou um email", oopMoment.Tr(email.Content)); break;
+            default: Notify("Unsupported language?????", oopMoment.Tr(email.Content)); break;
+        }
+        Play(SystemSound.Notification);
     }
 }
 

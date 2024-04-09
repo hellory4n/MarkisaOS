@@ -48,6 +48,7 @@ margin_top = 50.0
 margin_right = 359.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 285, 130 )
+rect_clip_content = true
 size_flags_horizontal = 4
 theme_type_variation = "OSPanel"
 
@@ -60,3 +61,4 @@ margin_top = 5.0
 margin_right = 285.0
 margin_bottom = 130.0
 bbcode_enabled = true
+fit_content_height = true

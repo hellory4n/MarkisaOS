@@ -44,6 +44,6 @@ public class ListEmails : ItemList
         // do the shit
         var bourgeoisTextLabel = GetNode<RichTextLabel>(Help);
         bourgeoisTextLabel.Clear();
-        bourgeoisTextLabel.BbcodeText = $"[b]{email.User}[/b]\n{email.Content}";
+        bourgeoisTextLabel.BbcodeText = $"[b]{Tr(email.User)} - {email.Time}[/b]\n\n{email.Content}";
     }
 }
