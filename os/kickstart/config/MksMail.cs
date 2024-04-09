@@ -3,7 +3,7 @@ using System;
 namespace markisa.network
 {
 
-public class MksMail
+public class MksEmail
 {
     public string User { get; set; } = "";
     public string ProfilePicture { get; set; } = "";
