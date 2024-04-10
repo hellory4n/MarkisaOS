@@ -47,6 +47,15 @@ public class ListEmails : ItemList
         bourgeoisTextLabel.Clear();
         bourgeoisTextLabel.BbcodeText = $"[b]{Tr(email.User)} - {email.Time}[/b]\n\n{Tr(email.Content)}";
 
+        foreach (object m in bourgeoisTextLabel.GetParent().GetChildren()) {
+            if (m is Node h) {
+                if (h is RichTextLabel) {
+                    continue;
+                }
+                h.QueueFree();
+            }
+        }
+
         // GTUIGJKBGJKNHK
         if (email.Images != null) { // rewrite it in rust
             foreach (string img in email.Images) {
@@ -60,5 +69,27 @@ public class ListEmails : ItemList
                 bourgeoisTextLabel.GetParent().AddChild(iphone);
             }
         }
+
+        // rewrite it in rust
+        GD.Print(email.Link.Clone());
+        if ((string)email.Link.Clone() != "" && email.Link.Clone() != null) {
+            var linkFromTheLegendOfZelda = new Button {
+                Text = "Copy Link",
+                ThemeTypeVariation = "Secondary",
+                RectMinSize = new Vector2(332, 45),
+                SizeFlagsHorizontal = 0
+            };
+            bourgeoisTextLabel.GetParent().AddChild(linkFromTheLegendOfZelda);
+            linkFromTheLegendOfZelda.Connect("pressed", this, nameof(CopyLink), new Godot.Collections.Array {
+                email.Link.Clone()
+            });
+        }
+    }
+
+    public void CopyLink(string url)
+    {
+        OS.Clipboard = url;
+        Frambos.Notify("Emails", "Link copied.");
+        Frambos.Play(SystemSound.Notification);
     }
 }
