@@ -1,4 +1,6 @@
 using markisa.foundation;
+using System;
+using System.Linq;
 
 namespace markisa.network
 {
@@ -17,7 +19,8 @@ public class SocialInfo : IConfigData
         new MksEmail {
             User = "Federal Bureau of Investigation",
             ProfilePicture = "res://os/assets/userIcons/cat.png",
-            Content = "Tomorrow you die ;)"
+            Content = "Tomorrow you die ;)\nIn other news, here's 4 copies of the same image of coffee",
+            Images = new string[] { "res://os/assets/wallpapers/coffee.jpg", "res://os/assets/wallpapers/coffee.jpg", "res://os/assets/wallpapers/coffee.jpg", "res://os/assets/wallpapers/coffee.jpg" }
         },
 
         new MksEmail {

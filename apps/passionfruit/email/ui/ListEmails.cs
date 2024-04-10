@@ -46,5 +46,19 @@ public class ListEmails : ItemList
         var bourgeoisTextLabel = GetNode<RichTextLabel>(Help);
         bourgeoisTextLabel.Clear();
         bourgeoisTextLabel.BbcodeText = $"[b]{Tr(email.User)} - {email.Time}[/b]\n\n{Tr(email.Content)}";
+
+        // GTUIGJKBGJKNHK
+        if (email.Images != null) { // rewrite it in rust
+            foreach (string img in email.Images) {
+                var iphone = new TextureRect {
+                    Texture = GD.Load<Texture>(img),
+                    SizeFlagsHorizontal = 0,
+                    RectMinSize = new Vector2(332, 249),
+                    Expand = true,
+                    StretchMode = TextureRect.StretchModeEnum.KeepAspectCovered
+                };
+                bourgeoisTextLabel.GetParent().AddChild(iphone);
+            }
+        }
     }
 }

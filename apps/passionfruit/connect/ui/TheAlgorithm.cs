@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 
 namespace passionfruit.coreapps.connect {
 
@@ -55,7 +56,7 @@ public class TheAlgorithm : VBoxContainer
             postUi.GetNode<Label>("m/n/user").Text = post.User;
             postUi.GetNode<TextureRect>("m/n/pfp").Texture = GD.Load<Texture>(post.ProfilePicture);
             // quite the mouthful
-            postUi.GetNode<RichTextLabel>("m/o/content").BbcodeText = Tr(post.Content.Replace("<ping>", "[color=#448AFF]@").Replace("</ping>", "[/color]"));
+            postUi.GetNode<RichTextLabel>("m/o/content").BbcodeText = Tr(post.Content).Replace("<ping>", "[color=#448AFF]@").Replace("</ping>", "[/color]");
             postUi.GetNode<CanvasItem>("m/n/verified").Visible = post.Verified;
 
             // attachments :)
