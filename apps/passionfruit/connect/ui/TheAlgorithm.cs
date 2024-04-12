@@ -122,6 +122,10 @@ public class TheAlgorithm : VBoxContainer
             else {
                 postUi.GetNode("m/tools/bookmark").QueueFree();
             }
+
+            postUi.GetNode<Button>("m/tools/share").Connect("pressed", this, nameof(Share), new Godot.Collections.Array {
+                JsonConvert.SerializeObject(post)
+            });
         }
     }
 

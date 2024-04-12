@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://apps/passionfruit/connect/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/connect/fullicon.png" type="Texture" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://os/assets/highPeaks/icons/bookmark.png" type="Texture" id=27]
 [ext_resource path="res://apps/passionfruit/connect/ui/refreshBookmarks.gd" type="Script" id=28]
 [ext_resource path="res://apps/passionfruit/connect/ui/TheAlgorithm.cs" type="Script" id=29]
+[ext_resource path="res://apps/passionfruit/connect/ui/SharePost.cs" type="Script" id=30]
 
 [node name="connect" type="Control"]
 margin_right = 789.0
@@ -1019,7 +1020,7 @@ icon = ExtResource( 27 )
 script = ExtResource( 13 )
 sidebarRoot = NodePath("../../../../categories")
 
-[node name="popup" type="Panel" parent="contents"]
+[node name="share" type="Panel" parent="contents"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -250.0
@@ -1029,47 +1030,56 @@ rect_min_size = Vector2( 500, 375 )
 theme_type_variation = "MksPopup"
 script = ExtResource( 24 )
 
-[node name="centerContainer" type="CenterContainer" parent="contents/popup"]
+[node name="m" type="CenterContainer" parent="contents/share"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/popup/centerContainer"]
+[node name="n" type="VBoxContainer" parent="contents/share/m"]
 margin_left = 37.0
-margin_top = 101.0
+margin_top = 30.0
 margin_right = 462.0
-margin_bottom = 274.0
+margin_bottom = 345.0
 
-[node name="label" type="Label" parent="contents/popup/centerContainer/vBoxContainer"]
+[node name="label" type="Label" parent="contents/share/m/n"]
 margin_right = 425.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "Who are you gonna share this with?"
 
-[node name="itemList" type="ItemList" parent="contents/popup/centerContainer/vBoxContainer"]
+[node name="contacts" type="ItemList" parent="contents/share/m/n"]
 margin_top = 49.0
 margin_right = 425.0
-margin_bottom = 107.0
+margin_bottom = 249.0
+rect_min_size = Vector2( 0, 200 )
 items = [ "You have no contacts.", null, true ]
-auto_height = true
+fixed_icon_size = Vector2( 28, 28 )
 
-[node name="hSeparator" type="HSeparator" parent="contents/popup/centerContainer/vBoxContainer"]
-margin_top = 115.0
+[node name="hSeparator" type="HSeparator" parent="contents/share/m/n"]
+margin_top = 257.0
 margin_right = 425.0
-margin_bottom = 123.0
+margin_bottom = 265.0
 
-[node name="hBoxContainer" type="HBoxContainer" parent="contents/popup/centerContainer/vBoxContainer"]
-margin_top = 131.0
+[node name="o" type="HBoxContainer" parent="contents/share/m/n"]
+margin_top = 273.0
 margin_right = 425.0
-margin_bottom = 173.0
+margin_bottom = 315.0
 
-[node name="MksPopupHide" type="Button" parent="contents/popup/centerContainer/vBoxContainer/hBoxContainer"]
-margin_right = 425.0
+[node name="MksPopupHide" type="Button" parent="contents/share/m/n/o"]
+margin_right = 208.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
 theme_type_variation = "Secondary"
 text = "Cancel"
 script = ExtResource( 25 )
 popup = NodePath("../../../..")
+
+[node name="continue" type="Button" parent="contents/share/m/n/o"]
+margin_left = 216.0
+margin_right = 425.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+text = "Continue"
+script = ExtResource( 30 )
 
 [connection signal="pressed" from="contents/categories/trending/scrollContainer/vBoxContainer/button" to="contents/categories/trending/scrollContainer/vBoxContainer" method="LoadMorePosts"]
 [connection signal="pressed" from="contents/categories/helpCenter/scrollContainer/vBoxContainer/button" to="contents/categories/helpCenter/scrollContainer/vBoxContainer" method="LoadMorePosts"]

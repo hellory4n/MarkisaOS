@@ -58,7 +58,6 @@ anchor_bottom = 1.0
 margin_left = 10.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/hSplitContainer/control/scrollContainer"]
-margin_right = 587.0
 margin_bottom = 46.0
 size_flags_horizontal = 3
 
