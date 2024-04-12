@@ -3,6 +3,8 @@ using markisa.foundation;
 using markisa.network;
 using System;
 
+namespace passionfruit.coreapps.emails {
+
 public class ListEmails : ItemList
 {
     [Export(PropertyHint.NodePathValidTypes, "RichTextLabel")]
@@ -45,7 +47,13 @@ public class ListEmails : ItemList
         // do the shit
         var bourgeoisTextLabel = GetNode<RichTextLabel>(Help);
         bourgeoisTextLabel.Clear();
-        bourgeoisTextLabel.BbcodeText = $"[b]{Tr(email.User)} - {email.Time}[/b]\n\n{Tr(email.Content)}";
+        // the content for emails sent by you already come translated :)
+        if (email.User == "You") {
+            bourgeoisTextLabel.BbcodeText = $"{Tr("[b]You -")} {email.Time}[/b]\n\n{email.Content}";
+        }
+        else {
+            bourgeoisTextLabel.BbcodeText = $"[b]{Tr(email.User)} - {email.Time}[/b]\n\n{Tr(email.Content)}";
+        }
 
         foreach (object m in bourgeoisTextLabel.GetParent().GetChildren()) {
             if (m is Node h) {
@@ -69,21 +77,6 @@ public class ListEmails : ItemList
                 bourgeoisTextLabel.GetParent().AddChild(iphone);
             }
         }
-
-        // rewrite it in rust
-        GD.Print(email.Link.Clone());
-        if ((string)email.Link.Clone() != "" && email.Link.Clone() != null) {
-            var linkFromTheLegendOfZelda = new Button {
-                Text = "Copy Link",
-                ThemeTypeVariation = "Secondary",
-                RectMinSize = new Vector2(332, 45),
-                SizeFlagsHorizontal = 0
-            };
-            bourgeoisTextLabel.GetParent().AddChild(linkFromTheLegendOfZelda);
-            linkFromTheLegendOfZelda.Connect("pressed", this, nameof(CopyLink), new Godot.Collections.Array {
-                email.Link.Clone()
-            });
-        }
     }
 
     public void CopyLink(string url)
@@ -92,4 +85,6 @@ public class ListEmails : ItemList
         Frambos.Notify("Emails", "Link copied.");
         Frambos.Play(SystemSound.Notification);
     }
+}
+
 }

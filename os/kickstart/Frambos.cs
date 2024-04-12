@@ -88,12 +88,17 @@ public class Frambos : Node
     /// <summary>
     /// It shows a notification :)
     /// </summary>
-    public static void Notify(string app, string text)
+    public static void Notify(string app, string text, bool autoTranslate = true)
     {
         var shit = notificationShit.Instance<Panel>();
         oopMoment.Root.AddChild(shit);
 
-        shit.GetNode<RichTextLabel>("text").AppendBbcode($"[b]{app}[/b]\n{text}");
+        if (autoTranslate) {
+            shit.GetNode<RichTextLabel>("text").AppendBbcode($"[b]{oopMoment.Tr(app)}[/b]\n{oopMoment.Tr(text)}");
+        }
+        else {
+            shit.GetNode<RichTextLabel>("text").AppendBbcode($"[b]{app}[/b]\n{text}");
+        }
         shit.GetNode<AnimationPlayer>("animation").Play("ghggh");
 
         // show it in the notification bullshit
@@ -191,17 +196,19 @@ public class Frambos : Node
         
         var config = new Config<SocialInfo>();
         config.Data.Emails = config.Data.Emails.Append(email).ToArray();
+        config.Data.Contacts = config.Data.Contacts.Append(email.User).ToArray();
         config.Save();
         
         // localization is some tricky stuff
-        switch (TranslationServer.GetLocale()) 
-        {
-            case "en": Notify($"{email.User} sent an email", email.Content); break;
-            case "pt": Notify($"{oopMoment.Tr(email.User)} enviou um email", oopMoment.Tr(email.Content)); break;
-            case "es": Notify($"{oopMoment.Tr(email.User)} te a enviado un email", oopMoment.Tr(email.Content)); break;
-            default: Notify("Unsupported language?????", oopMoment.Tr(email.Content)); break;
+        if (email.User != "You") {
+            switch (TranslationServer.GetLocale()) {
+                case "en": Notify($"{email.User} sent an email", email.Content); break;
+                case "pt": Notify($"{oopMoment.Tr(email.User)} enviou um email", oopMoment.Tr(email.Content)); break;
+                case "es": Notify($"{oopMoment.Tr(email.User)} te a enviado un email", oopMoment.Tr(email.Content)); break;
+                default: Notify("Unsupported language?????", oopMoment.Tr(email.Content)); break;
+            }
+            Play(SystemSound.Notification);
         }
-        Play(SystemSound.Notification);
     }
 }
 

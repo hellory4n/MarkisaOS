@@ -261,7 +261,7 @@ public class TheAlgorithm : VBoxContainer
             postUi.GetNode<Label>("m/n/user").Text = post.User;
             postUi.GetNode<TextureRect>("m/n/pfp").Texture = GD.Load<Texture>(post.ProfilePicture);
             // quite the mouthful
-            postUi.GetNode<RichTextLabel>("m/o/content").BbcodeText = Tr(post.Content.Replace("<ping>", "[color=#448AFF]@").Replace("</ping>", "[/color]"));
+            postUi.GetNode<RichTextLabel>("m/o/content").BbcodeText = Tr(post.Content).Replace("<ping>", "[color=#448AFF]@").Replace("</ping>", "[/color]");
             postUi.GetNode<CanvasItem>("m/n/verified").Visible = post.Verified;
 
             // attachments :)
@@ -312,6 +312,28 @@ public class TheAlgorithm : VBoxContainer
 
         Frambos.Notify("Connect", "Post added to bookmarks");
         Frambos.Play(SystemSound.Notification);
+    }
+
+    public void Share(string postjson)
+    {
+        // open the popup & share data in the most questionable way possible
+        GetNode<MksPopup>("../../../../share").ShowPopup();
+        GetNode<Button>("../../../../share/m/n/o/continue").EditorDescription = postjson;
+
+        // list the contacts :)
+        var config = new Config<SocialInfo>();
+        if (config.Data.Contacts.Length == 0) {
+            return;
+        }
+
+        var contacts = GetNode<ItemList>("../../../../share/m/n/contacts");
+        // we have to share it like this since the contact name is gonna be translated
+        // i'm gonna die
+        GetNode<ItemList>("../../../../share/m/n/contacts").EditorDescription = JsonConvert.SerializeObject(config.Data.Contacts);
+        contacts.Clear();
+        foreach (string contact in config.Data.Contacts) {
+            contacts.AddItem(contact);
+        }
     }
 }
 

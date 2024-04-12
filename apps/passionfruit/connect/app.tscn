@@ -1019,6 +1019,58 @@ icon = ExtResource( 27 )
 script = ExtResource( 13 )
 sidebarRoot = NodePath("../../../../categories")
 
+[node name="popup" type="Panel" parent="contents"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -250.0
+margin_right = 250.0
+margin_bottom = 375.0
+rect_min_size = Vector2( 500, 375 )
+theme_type_variation = "MksPopup"
+script = ExtResource( 24 )
+
+[node name="centerContainer" type="CenterContainer" parent="contents/popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/popup/centerContainer"]
+margin_left = 37.0
+margin_top = 101.0
+margin_right = 462.0
+margin_bottom = 274.0
+
+[node name="label" type="Label" parent="contents/popup/centerContainer/vBoxContainer"]
+margin_right = 425.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Who are you gonna share this with?"
+
+[node name="itemList" type="ItemList" parent="contents/popup/centerContainer/vBoxContainer"]
+margin_top = 49.0
+margin_right = 425.0
+margin_bottom = 107.0
+items = [ "You have no contacts.", null, true ]
+auto_height = true
+
+[node name="hSeparator" type="HSeparator" parent="contents/popup/centerContainer/vBoxContainer"]
+margin_top = 115.0
+margin_right = 425.0
+margin_bottom = 123.0
+
+[node name="hBoxContainer" type="HBoxContainer" parent="contents/popup/centerContainer/vBoxContainer"]
+margin_top = 131.0
+margin_right = 425.0
+margin_bottom = 173.0
+
+[node name="MksPopupHide" type="Button" parent="contents/popup/centerContainer/vBoxContainer/hBoxContainer"]
+margin_right = 425.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+theme_type_variation = "Secondary"
+text = "Cancel"
+script = ExtResource( 25 )
+popup = NodePath("../../../..")
+
 [connection signal="pressed" from="contents/categories/trending/scrollContainer/vBoxContainer/button" to="contents/categories/trending/scrollContainer/vBoxContainer" method="LoadMorePosts"]
 [connection signal="pressed" from="contents/categories/helpCenter/scrollContainer/vBoxContainer/button" to="contents/categories/helpCenter/scrollContainer/vBoxContainer" method="LoadMorePosts"]
 [connection signal="pressed" from="contents/categories/comedy/scrollContainer/vBoxContainer/button" to="contents/categories/comedy/scrollContainer/vBoxContainer" method="LoadMorePosts"]
