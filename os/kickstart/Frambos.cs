@@ -196,7 +196,9 @@ public class Frambos : Node
         
         var config = new Config<SocialInfo>();
         config.Data.Emails = config.Data.Emails.Append(email).ToArray();
-        config.Data.Contacts = config.Data.Contacts.Append(email.User).ToArray();
+        if (!config.Data.Contacts.Contains(email.User)) {
+            config.Data.Contacts = config.Data.Contacts.Append(email.User).ToArray();
+        }
         config.Save();
         
         // localization is some tricky stuff
