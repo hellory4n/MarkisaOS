@@ -204,10 +204,9 @@ public class Frambos : Node
         // localization is some tricky stuff
         if (email.User != "You") {
             switch (TranslationServer.GetLocale()) {
-                case "en": Notify($"{email.User} sent an email", email.Content); break;
+                default: Notify($"{email.User} sent an email", email.Content); break;
                 case "pt": Notify($"{oopMoment.Tr(email.User)} enviou um email", oopMoment.Tr(email.Content)); break;
                 case "es": Notify($"{oopMoment.Tr(email.User)} te a enviado un email", oopMoment.Tr(email.Content)); break;
-                default: Notify("Unsupported language?????", oopMoment.Tr(email.Content)); break;
             }
             Play(SystemSound.Notification);
         }

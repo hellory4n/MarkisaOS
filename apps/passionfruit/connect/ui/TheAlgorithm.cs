@@ -336,7 +336,7 @@ public class TheAlgorithm : VBoxContainer
         GetNode<ItemList>("../../../../share/m/n/contacts").EditorDescription = JsonConvert.SerializeObject(config.Data.Contacts);
         contacts.Clear();
         foreach (string contact in config.Data.Contacts) {
-            contacts.AddItem(contact);
+            contacts.AddItem(Tr(contact));
         }
     }
 }

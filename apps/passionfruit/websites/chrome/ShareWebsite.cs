@@ -6,20 +6,32 @@ using Newtonsoft.Json;
 using System;
 using System.Linq;
 
-namespace passionfruit.coreapps.connect {
+namespace passionfruit.coreapps.websites {
 
-public class SharePost : Button
+public class ShareWebsite : Button
 {
+    public override void _Ready()
+    {
+        var config = new Config<SocialInfo>();
+        if (config.Data.Contacts.Length == 0) {
+            return; 
+        }
+
+        var contacts = GetNode<ItemList>("../../contacts");
+        contacts.Clear();
+        foreach (string contact in config.Data.Contacts) {
+            contacts.AddItem(Tr(contact));
+        }
+    }
+
     public override void _Pressed()
     {
-        // TheAlgorithm.cs shares the post in certainly unique ways
-        var post = JsonConvert.DeserializeObject<MksPost>(EditorDescription);
-
         var config = new Config<SocialInfo>();
         var config2 = new Config<MarkisaUser>();
         var config3 = new Config<StoryProgress>();
         var contacts = GetNode<ItemList>("../../contacts");
-        
+        string address = GetNode<LineEdit>("../../../../../container/sidebar/vBoxContainer/address").Text;
+
         // AAAAAAAAAAAAAAAAA
         if (contacts.GetSelectedItems().Length == 0) {
             return;
@@ -30,11 +42,9 @@ public class SharePost : Button
         var emkayessMeiou = new MksEmail {
             User = "You",
             ProfilePicture = config2.Data.Photo,
-            Content = Tr($"Dear (name),\nI found a post you might be interested in:\n\n(post info)\n\nCheers,\n{Frambos.CurrentUserDisplayName}")
-                .Replace("(name)", contact)
-                .Replace("(post info)", $"[b]{Tr(post.User)}[/b]\n{Tr(post.Content)}")
-                .Replace("<ping>", "[color=#448AFF]@")
-                .Replace("</ping>", "[/color]"),
+            Content = Tr($"Dear (name),\nI found a website you might be interested in: (website)\n\nCheers,\n{Frambos.CurrentUserDisplayName}")
+                .Replace("(name)", Tr(contact))
+                .Replace("(website)", address),
             
             Time = new DateTime(2071, (int)config3.Data.Month, (int)config3.Data.Day, DateTime.Now.Hour,
                                 DateTime.Now.Minute, DateTime.Now.Second)
