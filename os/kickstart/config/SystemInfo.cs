@@ -1,7 +1,7 @@
 namespace markisa.foundation
 {
 
-class SystemInfo : IConfigData
+public class SystemInfo : IConfigData
 {
     public string GetFilename() => "systemInfo.mksconf";
 

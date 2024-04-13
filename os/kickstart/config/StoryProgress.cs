@@ -3,7 +3,7 @@ namespace markisa.foundation {
 /// <summary>
 /// Btw everything is -100 to 100
 /// </summary>
-class StoryProgress : IConfigData
+public class StoryProgress : IConfigData
 {
     public string GetFilename() => "%user/storyProgress.mksconf";
     

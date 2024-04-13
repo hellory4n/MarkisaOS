@@ -1,7 +1,7 @@
 namespace markisa.foundation
 {
 
-class MarkisaUser : IConfigData
+public class MarkisaUser : IConfigData
 {
     public string GetFilename() => "%user/user.mksconf";
 

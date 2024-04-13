@@ -6,7 +6,7 @@ namespace markisa.foundation
 /// <summary>
 /// Represents some application bullshit
 /// </summary>
-struct MksPackage
+public struct MksPackage
 {
     /// <summary>
     /// The display names for each language the app supports, with the key being a code like "en" or "pt" or "es" or "ru"

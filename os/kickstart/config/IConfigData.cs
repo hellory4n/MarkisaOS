@@ -1,6 +1,6 @@
-namespace markisa.foundation
-{
-interface IConfigData
+namespace markisa.foundation {
+    
+public interface IConfigData
 {
     /// <summary>
     /// Gets the filename of the config. If you're making mods then it's a good idea to put the author before the filename, so instead of <c>data.mksconf</c>, you would make <c>author/data.mksconf</c>, to prevent breaking other mods. Examples:

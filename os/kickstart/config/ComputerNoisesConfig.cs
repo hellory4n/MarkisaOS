@@ -1,7 +1,7 @@
 namespace markisa.foundation
 {
 
-class ComputerNoisesConfig : IConfigData
+public class ComputerNoisesConfig : IConfigData
 {
     public string GetFilename() => "computerNoises.mksconf";
 

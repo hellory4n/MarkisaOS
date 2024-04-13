@@ -8,7 +8,7 @@ namespace markisa.foundation
 /// <summary>
 /// A container for data or some shit like that.
 /// </summary>
-class Config<T> where T : IConfigData, new()
+public class Config<T> where T : IConfigData, new()
 {
     /// <summary>
     /// The data in this config.

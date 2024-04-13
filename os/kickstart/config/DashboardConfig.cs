@@ -1,7 +1,7 @@
 namespace markisa.foundation
 {
 
-class DashboardConfig : IConfigData
+public class DashboardConfig : IConfigData
 {
     public string GetFilename() => "%user/dashboardConfig.mksconf";
 
