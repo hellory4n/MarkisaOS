@@ -16,6 +16,16 @@ public class Frambos : Node
     public static uint MajorVersion => 0;
     public static uint MinorVersion => 15;
     public static uint PatchVersion => 0;
+    public static DateTime Now { get {
+        if (CurrentUser == "") {
+            return new DateTime();
+        }
+
+        var config = new Config<StoryProgress>();
+        var m = new DateTime(2071, (int)config.Data.Month, (int)config.Data.Day, DateTime.Now.Hour,
+                             DateTime.Now.Minute, DateTime.Now.Second);
+        return m;
+    }}
 
     static bool forceMobile = false;
     static PackedScene notificationShit = GD.Load<PackedScene>("res://os/dashboard/notification.tscn");
@@ -189,10 +199,7 @@ public class Frambos : Node
         
         var timeConfig = new Config<StoryProgress>();
         DateTime now = DateTime.Now;
-
-        // figure out the date of the email
-        email.Time = new DateTime(2071, (int)timeConfig.Data.Month, (int)timeConfig.Data.Day, now.Hour, now.Minute,
-                                  now.Second);
+        email.Time = Now;
         
         var config = new Config<SocialInfo>();
         config.Data.Emails = config.Data.Emails.Append(email).ToArray();

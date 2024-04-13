@@ -1,3 +1,5 @@
+using System;
+
 namespace markisa.foundation
 {
 
@@ -16,9 +18,10 @@ public class BankTransaction
     public decimal Amount { get; set; } = 0;
     public string Account { get; set; } = "";
     /// <summary>
-    /// If true, the user sent. Else, the user received.
+    /// If true, the user sent moneys. Else, the user received moneys.
     /// </summary>
     public bool Send { get; set; } = false;
+    public DateTime Time { get; set; }
 }
 
 }

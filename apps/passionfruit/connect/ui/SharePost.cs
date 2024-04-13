@@ -36,8 +36,7 @@ public class SharePost : Button
                 .Replace("<ping>", "[color=#448AFF]@")
                 .Replace("</ping>", "[/color]"),
             
-            Time = new DateTime(2071, (int)config3.Data.Month, (int)config3.Data.Day, DateTime.Now.Hour,
-                                DateTime.Now.Minute, DateTime.Now.Second)
+            Time = Frambos.Now
         };
 
         config.Data.Emails = config.Data.Emails.Append(emkayessMeiou).ToArray();

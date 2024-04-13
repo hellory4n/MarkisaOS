@@ -46,8 +46,7 @@ public class ShareWebsite : Button
                 .Replace("(name)", Tr(contact))
                 .Replace("(website)", address),
             
-            Time = new DateTime(2071, (int)config3.Data.Month, (int)config3.Data.Day, DateTime.Now.Hour,
-                                DateTime.Now.Minute, DateTime.Now.Second)
+            Time = Frambos.Now
         };
 
         config.Data.Emails = config.Data.Emails.Append(emkayessMeiou).ToArray();
