@@ -207,6 +207,7 @@ public class Frambos : Node
                 default: Notify($"{email.User} sent an email", email.Content); break;
                 case "pt": Notify($"{oopMoment.Tr(email.User)} enviou um email", oopMoment.Tr(email.Content)); break;
                 case "es": Notify($"{oopMoment.Tr(email.User)} te a enviado un email", oopMoment.Tr(email.Content)); break;
+                case "id": Notify($"{oopMoment.Tr(email.User)} mengirimkan email", oopMoment.Tr(email.Content)); break;
             }
             Play(SystemSound.Notification);
         }

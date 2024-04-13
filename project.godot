@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://os/mkstoolkit/ParadoxBar.gd"
 }, {
 "base": "Button",
+"class": "SidebarButton",
+"language": "GDScript",
+"path": "res://os/mkstoolkit/SidebarButton.gd"
+}, {
+"base": "Button",
 "class": "WindowOpener",
 "language": "GDScript",
 "path": "res://os/mkstoolkit/WindowOpener.gd"
@@ -39,6 +44,7 @@ _global_script_class_icons={
 "MksPopupHide": "",
 "MksPopupShow": "",
 "ParadoxBar": "",
+"SidebarButton": "",
 "WindowOpener": ""
 }
 

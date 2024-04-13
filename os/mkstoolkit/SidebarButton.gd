@@ -1,4 +1,5 @@
 extends Button
+class_name SidebarButton
 
 export var sidebarRoot: NodePath
 onready var sidebarRootStuff := get_node(sidebarRoot)

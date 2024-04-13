@@ -24,9 +24,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_clip_content = true
 
-[node name="hSplitContainer" type="HSplitContainer" parent="contents"]
+[node name="hSplitContainer" type="HBoxContainer" parent="contents"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/separation = 0
 
 [node name="itemList" type="ItemList" parent="contents/hSplitContainer"]
 margin_right = 180.0
@@ -43,9 +44,10 @@ __meta__ = {
 }
 
 [node name="control" type="Control" parent="contents/hSplitContainer"]
-margin_left = 192.0
+margin_left = 180.0
 margin_right = 789.0
 margin_bottom = 395.0
+size_flags_horizontal = 3
 
 [node name="panel" type="Panel" parent="contents/hSplitContainer/control"]
 anchor_right = 1.0
@@ -58,11 +60,12 @@ anchor_bottom = 1.0
 margin_left = 10.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/hSplitContainer/control/scrollContainer"]
+margin_right = 599.0
 margin_bottom = 46.0
 size_flags_horizontal = 3
 
 [node name="richTextLabel" type="RichTextLabel" parent="contents/hSplitContainer/control/scrollContainer/vBoxContainer"]
-margin_right = 587.0
+margin_right = 599.0
 margin_bottom = 46.0
 focus_mode = 2
 bbcode_enabled = true
