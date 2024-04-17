@@ -16,6 +16,9 @@ public class Frambos : Node
     public static uint MajorVersion => 0;
     public static uint MinorVersion => 15;
     public static uint PatchVersion => 0;
+    /// <summary>
+    /// The current time in game.
+    /// </summary>
     public static DateTime Now { get {
         if (CurrentUser == "") {
             return new DateTime();

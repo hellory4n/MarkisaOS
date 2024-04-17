@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://apps/passionfruit/bank/fullicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/bank/smallicon.png" type="Texture" id=2]
@@ -9,6 +9,11 @@
 [ext_resource path="res://os/assets/highPeaks/icons/contract.png" type="Texture" id=7]
 [ext_resource path="res://os/assets/highPeaks/icons/creditCard.png" type="Texture" id=8]
 [ext_resource path="res://os/assets/highPeaks/icons/paid.png" type="Texture" id=9]
+[ext_resource path="res://apps/passionfruit/bank/ui/ListTransactions.cs" type="Script" id=10]
+[ext_resource path="res://os/assets/highPeaks/icons/send.png" type="Texture" id=11]
+[ext_resource path="res://apps/passionfruit/bank/ui/ASpinBoxThatSpecifyAQuantityOfMoneyToSend.cs" type="Script" id=12]
+[ext_resource path="res://apps/passionfruit/bank/ui/ContactList.cs" type="Script" id=13]
+[ext_resource path="res://apps/passionfruit/bank/ui/SendYourLifeSavingsToANigerianPrince.cs" type="Script" id=14]
 
 [node name="bank" type="Control"]
 margin_right = 704.0
@@ -34,6 +39,7 @@ anchor_bottom = 1.0
 margin_left = 150.0
 
 [node name="home" type="CenterContainer" parent="contents/categories"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -95,97 +101,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/transactions"]
-margin_right = 168.0
-margin_bottom = 562.0
-
-[node name="label" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_right = 168.0
-margin_bottom = 30.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label2" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 38.0
-margin_right = 168.0
-margin_bottom = 68.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label3" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 76.0
-margin_right = 168.0
-margin_bottom = 106.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label4" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 114.0
-margin_right = 168.0
-margin_bottom = 144.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label5" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 152.0
-margin_right = 168.0
-margin_bottom = 182.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label6" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 190.0
-margin_right = 168.0
-margin_bottom = 220.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label7" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 228.0
-margin_right = 168.0
-margin_bottom = 258.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label8" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 266.0
-margin_right = 168.0
-margin_bottom = 296.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label9" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 304.0
-margin_right = 168.0
-margin_bottom = 334.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label10" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 342.0
-margin_right = 168.0
-margin_bottom = 372.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label11" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 380.0
-margin_right = 168.0
-margin_bottom = 410.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label12" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 418.0
-margin_right = 168.0
-margin_bottom = 448.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label13" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 456.0
-margin_right = 168.0
-margin_bottom = 486.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label14" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 494.0
-margin_right = 168.0
-margin_bottom = 524.0
-text = "Ø69.42 to Joe Mama"
-
-[node name="label15" type="Label" parent="contents/categories/transactions/vBoxContainer"]
-margin_top = 532.0
-margin_right = 168.0
-margin_bottom = 562.0
-text = "Ø69.42 to Joe Mama"
+script = ExtResource( 10 )
 
 [node name="creditCard" type="CenterContainer" parent="contents/categories"]
 visible = false
@@ -218,6 +134,49 @@ margin_top = 112.0
 margin_right = 345.0
 margin_bottom = 154.0
 text = "Get a credit card"
+
+[node name="send" type="CenterContainer" parent="contents/categories"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/send"]
+margin_left = 37.0
+margin_top = 7.0
+margin_right = 517.0
+margin_bottom = 376.0
+
+[node name="label" type="Label" parent="contents/categories/send/vBoxContainer"]
+margin_right = 480.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Send money"
+align = 1
+
+[node name="contacts" type="ItemList" parent="contents/categories/send/vBoxContainer"]
+margin_top = 49.0
+margin_right = 480.0
+margin_bottom = 269.0
+rect_min_size = Vector2( 480, 220 )
+items = [ "No contacts.", null, true ]
+script = ExtResource( 13 )
+
+[node name="money" type="SpinBox" parent="contents/categories/send/vBoxContainer"]
+margin_top = 277.0
+margin_right = 480.0
+margin_bottom = 319.0
+min_value = 0.01
+step = 0.01
+value = 0.01
+align = 1
+prefix = "Ø"
+script = ExtResource( 12 )
+
+[node name="continue" type="Button" parent="contents/categories/send/vBoxContainer"]
+margin_top = 327.0
+margin_right = 480.0
+margin_bottom = 369.0
+text = "Send"
+script = ExtResource( 14 )
 
 [node name="loans" type="CenterContainer" parent="contents/categories"]
 visible = false
@@ -265,15 +224,26 @@ margin_right = 150.0
 margin_bottom = 90.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
-text = "Transactions"
+text = "History"
 icon = ExtResource( 7 )
 script = ExtResource( 4 )
 sidebarRoot = NodePath("../../../categories")
 
-[node name="creditCard" type="Button" parent="contents/sidebar/vBoxContainer"]
+[node name="send" type="Button" parent="contents/sidebar/vBoxContainer"]
 margin_top = 90.0
 margin_right = 150.0
 margin_bottom = 135.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Send"
+icon = ExtResource( 11 )
+script = ExtResource( 4 )
+sidebarRoot = NodePath("../../../categories")
+
+[node name="creditCard" type="Button" parent="contents/sidebar/vBoxContainer"]
+margin_top = 135.0
+margin_right = 150.0
+margin_bottom = 180.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Credit Card"
@@ -282,9 +252,9 @@ script = ExtResource( 4 )
 sidebarRoot = NodePath("../../../categories")
 
 [node name="loans" type="Button" parent="contents/sidebar/vBoxContainer"]
-margin_top = 135.0
+margin_top = 180.0
 margin_right = 150.0
-margin_bottom = 180.0
+margin_bottom = 225.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Loans"
