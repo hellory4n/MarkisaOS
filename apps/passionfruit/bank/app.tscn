@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://apps/passionfruit/bank/fullicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/bank/smallicon.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://apps/passionfruit/bank/ui/ASpinBoxThatSpecifyAQuantityOfMoneyToSend.cs" type="Script" id=12]
 [ext_resource path="res://apps/passionfruit/bank/ui/ContactList.cs" type="Script" id=13]
 [ext_resource path="res://apps/passionfruit/bank/ui/SendYourLifeSavingsToANigerianPrince.cs" type="Script" id=14]
+[ext_resource path="res://apps/passionfruit/bank/ui/SignUpForCreditCard.cs" type="Script" id=15]
 
 [node name="bank" type="Control"]
 margin_right = 704.0
@@ -100,7 +101,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/transactions"]
+margin_right = 554.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
 script = ExtResource( 10 )
+
+[node name="label" type="Label" parent="contents/categories/transactions/vBoxContainer"]
+margin_right = 554.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "All transactions"
+align = 1
 
 [node name="creditCard" type="CenterContainer" parent="contents/categories"]
 visible = false
@@ -133,6 +144,7 @@ margin_top = 112.0
 margin_right = 345.0
 margin_bottom = 154.0
 text = "Get a credit card"
+script = ExtResource( 15 )
 
 [node name="send" type="CenterContainer" parent="contents/categories"]
 visible = false
