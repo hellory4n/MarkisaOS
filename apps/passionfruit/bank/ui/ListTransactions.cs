@@ -25,7 +25,8 @@ public class ListTransactions : VBoxContainer
 
             var label = new Label {
                 Text = text,
-                Align = Label.AlignEnum.Center
+                Align = Label.AlignEnum.Center,
+                SizeFlagsHorizontal = (int)SizeFlags.ExpandFill
             };
             AddChild(label);
         }
