@@ -40,7 +40,6 @@ anchor_bottom = 1.0
 margin_left = 150.0
 
 [node name="home" type="CenterContainer" parent="contents/categories"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -97,6 +96,7 @@ text = "Ø252945910950213950923509205902395023522634"
 align = 1
 
 [node name="transactions" type="ScrollContainer" parent="contents/categories"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
