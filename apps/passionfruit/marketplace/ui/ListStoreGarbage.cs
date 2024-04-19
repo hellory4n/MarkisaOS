@@ -117,11 +117,12 @@ public class ListStoreGarbage : HFlowContainer
         var config = new Config<Banking>();
         config.Data.Cash -= m.Price;
 
-        config.Data.Transactions = config.Data.Transactions.Append(new BankTransaction {
+        /*config.Data.Transactions = config.Data.Transactions.Append(new BankTransaction {
             Amount = m.Price,
             Account = Tr(m.Seller),
             Send = true
         }).ToArray();
+        GD.Print(config.Data.Transactions.Length);*/
 
         config.Save();
     }
