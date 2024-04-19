@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://apps/passionfruit/marketplace/dockicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/marketplace/smallicon.png" type="Texture" id=2]
@@ -7,13 +7,12 @@
 [ext_resource path="res://os/assets/highPeaks/icons/locationOn.png" type="Texture" id=5]
 [ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
 [ext_resource path="res://os/assets/highPeaks/icons/restaurant.png" type="Texture" id=7]
-[ext_resource path="res://os/assets/highPeaks/icons/soap.png" type="Texture" id=8]
+[ext_resource path="res://apps/passionfruit/marketplace/ui/ListStoreGarbage.cs" type="Script" id=8]
 [ext_resource path="res://os/assets/highPeaks/icons/shoppingCart.png" type="Texture" id=9]
 [ext_resource path="res://os/assets/highPeaks/icons/desktop.png" type="Texture" id=10]
-[ext_resource path="res://os/assets/highPeaks/icons/cleaning.png" type="Texture" id=11]
-[ext_resource path="res://os/assets/highPeaks/icons/blender.png" type="Texture" id=12]
-[ext_resource path="res://os/assets/wallpapers/space.jpg" type="Texture" id=13]
-[ext_resource path="res://os/assets/highPeaks/icons/ecgHeart.png" type="Texture" id=14]
+[ext_resource path="res://os/assets/highPeaks/icons/home.png" type="Texture" id=11]
+[ext_resource path="res://apps/passionfruit/marketplace/music/heyWouldYouLikeToDie.mp3" type="AudioStream" id=12]
+[ext_resource path="res://apps/passionfruit/connect/ui/music.gd" type="Script" id=13]
 
 [node name="marketplace" type="Control"]
 margin_right = 789.0
@@ -61,658 +60,31 @@ margin_top = 54.0
 margin_right = 599.0
 margin_bottom = 54.0
 
-[node name="food" type="ScrollContainer" parent="contents/categories"]
+[node name="essentials" type="ScrollContainer" parent="contents/categories"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/food"]
-margin_right = 593.0
-margin_bottom = 2778.0
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/essentials"]
+margin_right = 599.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 
-[node name="hSeparator" type="HSeparator" parent="contents/categories/food/vBoxContainer"]
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/essentials/vBoxContainer"]
+stream = ExtResource( 12 )
+autoplay = true
+bus = "music"
+script = ExtResource( 13 )
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/essentials/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_right = 593.0
+margin_right = 599.0
 margin_bottom = 8.0
 
-[node name="hFlowContainer" type="HFlowContainer" parent="contents/categories/food/vBoxContainer"]
+[node name="hFlowContainer" type="HFlowContainer" parent="contents/categories/essentials/vBoxContainer"]
 margin_top = 16.0
-margin_right = 593.0
-margin_bottom = 2778.0
-
-[node name="item" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item2" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_right = 408.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item2"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item2"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item2"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item3" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 277.0
-margin_right = 200.0
-margin_bottom = 546.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item3"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item3"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item3"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item4" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_top = 277.0
-margin_right = 408.0
-margin_bottom = 546.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item4"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item4"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item4"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item5" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 554.0
-margin_right = 200.0
-margin_bottom = 823.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item5"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item5"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item5"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item6" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_top = 554.0
-margin_right = 408.0
-margin_bottom = 823.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item6"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item6"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item6"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item7" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 831.0
-margin_right = 200.0
-margin_bottom = 1100.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item7"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item7"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item7"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item8" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_top = 831.0
-margin_right = 408.0
-margin_bottom = 1100.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item8"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item8"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item8"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item9" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 1108.0
-margin_right = 200.0
-margin_bottom = 1377.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item9"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item9"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item9"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item10" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_top = 1108.0
-margin_right = 408.0
-margin_bottom = 1377.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item10"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item10"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item10"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item11" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 1385.0
-margin_right = 200.0
-margin_bottom = 1654.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item11"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item11"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item11"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item12" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_top = 1385.0
-margin_right = 408.0
-margin_bottom = 1654.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item12"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item12"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item12"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item13" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 1662.0
-margin_right = 200.0
-margin_bottom = 1931.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item13"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item13"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item13"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item14" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_top = 1662.0
-margin_right = 408.0
-margin_bottom = 1931.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item14"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item14"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item14"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item15" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 1939.0
-margin_right = 200.0
-margin_bottom = 2208.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item15"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item15"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item15"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item16" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_top = 1939.0
-margin_right = 408.0
-margin_bottom = 2208.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item16"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item16"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item16"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item17" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 2216.0
-margin_right = 200.0
-margin_bottom = 2485.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item17"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item17"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item17"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item18" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_left = 208.0
-margin_top = 2216.0
-margin_right = 408.0
-margin_bottom = 2485.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item18"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item18"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item18"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
-
-[node name="item19" type="VBoxContainer" parent="contents/categories/food/vBoxContainer/hFlowContainer"]
-margin_top = 2493.0
-margin_right = 200.0
-margin_bottom = 2762.0
-rect_min_size = Vector2( 200, 269 )
-custom_constants/separation = 0
-
-[node name="photo" type="TextureRect" parent="contents/categories/food/vBoxContainer/hFlowContainer/item19"]
-margin_right = 200.0
-margin_bottom = 194.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource( 13 )
-expand = true
-stretch_mode = 7
-
-[node name="product" type="Label" parent="contents/categories/food/vBoxContainer/hFlowContainer/item19"]
-margin_top = 194.0
-margin_right = 200.0
-margin_bottom = 224.0
-text = "An entire galaxy!!!!"
-
-[node name="button" type="Button" parent="contents/categories/food/vBoxContainer/hFlowContainer/item19"]
-margin_top = 224.0
-margin_right = 200.0
-margin_bottom = 269.0
-rect_min_size = Vector2( 0, 45 )
-mouse_filter = 1
-theme_type_variation = "Secondary"
-text = "View - Ø1,000,000"
-clip_text = true
+margin_right = 599.0
+margin_bottom = 16.0
+script = ExtResource( 8 )
 
 [node name="toolbar" type="Panel" parent="contents"]
 anchor_bottom = 1.0
@@ -729,7 +101,7 @@ margin_right = 180.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 0, 45 )
 text = "Address"
-icon = ExtResource( 5 )
+icon = ExtResource( 11 )
 items = [ "Greater Lelisia", null, 0, false, false, 0, 0, null, "", false, "Motteto", null, 0, false, false, 1, 0, null, "", false, "Turtingas", null, 0, false, false, 2, 0, null, "", false, "Benediction", null, 0, false, false, 3, 0, null, "", false, "Onneto", null, 0, false, false, 4, 0, null, "", false, "Lumi", null, 0, false, false, 5, 0, null, "", false, "Skala", null, 0, false, false, 6, 0, null, "", false, "Visoko", null, 0, false, false, 7, 0, null, "", false, "Kelapa", null, 0, false, false, 8, 0, null, "", false, "Maleta Island", null, 0, false, false, 9, 0, null, "", false ]
 
 [node name="cart" type="Button" parent="contents/toolbar/vBoxContainer"]
@@ -743,43 +115,21 @@ icon = ExtResource( 9 )
 script = ExtResource( 4 )
 sidebarRoot = NodePath("../../../categories")
 
-[node name="food" type="Button" parent="contents/toolbar/vBoxContainer"]
+[node name="essentials" type="Button" parent="contents/toolbar/vBoxContainer"]
 margin_top = 90.0
 margin_right = 180.0
 margin_bottom = 135.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
-text = "Food & Drinks"
+text = "Essentials"
 icon = ExtResource( 7 )
 script = ExtResource( 4 )
 sidebarRoot = NodePath("../../../categories")
 
-[node name="hygiene" type="Button" parent="contents/toolbar/vBoxContainer"]
+[node name="technology" type="Button" parent="contents/toolbar/vBoxContainer"]
 margin_top = 135.0
 margin_right = 180.0
 margin_bottom = 180.0
-rect_min_size = Vector2( 0, 45 )
-theme_type_variation = "SidebarButton"
-text = "Hygiene"
-icon = ExtResource( 8 )
-script = ExtResource( 4 )
-sidebarRoot = NodePath("../../../categories")
-
-[node name="cleaning" type="Button" parent="contents/toolbar/vBoxContainer"]
-margin_top = 180.0
-margin_right = 180.0
-margin_bottom = 225.0
-rect_min_size = Vector2( 0, 45 )
-theme_type_variation = "SidebarButton"
-text = "Cleaning"
-icon = ExtResource( 11 )
-script = ExtResource( 4 )
-sidebarRoot = NodePath("../../../categories")
-
-[node name="technology" type="Button" parent="contents/toolbar/vBoxContainer"]
-margin_top = 225.0
-margin_right = 180.0
-margin_bottom = 270.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Technology"
@@ -787,24 +137,13 @@ icon = ExtResource( 10 )
 script = ExtResource( 4 )
 sidebarRoot = NodePath("../../../categories")
 
-[node name="appliance" type="Button" parent="contents/toolbar/vBoxContainer"]
-margin_top = 270.0
+[node name="localMarket" type="Button" parent="contents/toolbar/vBoxContainer"]
+margin_top = 180.0
 margin_right = 180.0
-margin_bottom = 315.0
+margin_bottom = 225.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
-text = "Appliances"
-icon = ExtResource( 12 )
-script = ExtResource( 4 )
-sidebarRoot = NodePath("../../../categories")
-
-[node name="health" type="Button" parent="contents/toolbar/vBoxContainer"]
-margin_top = 315.0
-margin_right = 180.0
-margin_bottom = 360.0
-rect_min_size = Vector2( 0, 45 )
-theme_type_variation = "SidebarButton"
-text = "Health"
-icon = ExtResource( 14 )
+text = "Local Market"
+icon = ExtResource( 5 )
 script = ExtResource( 4 )
 sidebarRoot = NodePath("../../../categories")

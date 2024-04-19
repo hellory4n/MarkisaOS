@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/heyWouldYouLikeToDie.mp3-6c378e396f912aa9c5123a318ca60ae2.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/marketplace/music/heyWouldYouLikeToDie.mp3"
+dest_files=[ "res://.import/heyWouldYouLikeToDie.mp3-6c378e396f912aa9c5123a318ca60ae2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
