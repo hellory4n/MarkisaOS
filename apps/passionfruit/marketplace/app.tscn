@@ -62,12 +62,11 @@ margin_right = 599.0
 margin_bottom = 54.0
 
 [node name="food" type="ScrollContainer" parent="contents/categories"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/food"]
-margin_right = 599.0
+margin_right = 593.0
 margin_bottom = 2778.0
 size_flags_horizontal = 3
 
