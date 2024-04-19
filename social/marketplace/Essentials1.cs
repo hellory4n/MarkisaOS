@@ -7,6 +7,7 @@ public static MksStore Data { get; set; } = new MksStore {
     Month = 1,
     Items = new MksStoreItem[] {
         new MksStoreItem {
+            Id = "hexagon_food",
             Seller = "Hexagon Inc.",
             Name = "Food Supplies",
             Photo = "res://social/storephotos/hexagonEssentials.png",
@@ -22,6 +23,7 @@ Features:
         },
 
         new MksStoreItem {
+            Id = "hexagon_hygiene",
             Seller = "Hexagon Inc.",
             Name = "Hygiene Supplies",
             Photo = "res://social/storephotos/hexagonEssentials.png",
@@ -37,6 +39,7 @@ Features:
         },
 
         new MksStoreItem {
+            Id = "hexagon_cleaning",
             Seller = "Hexagon Inc.",
             Name = "Cleaning Supplies",
             Photo = "res://social/storephotos/hexagonEssentials.png",
@@ -52,6 +55,7 @@ Features:
         },
 
         new MksStoreItem {
+            Id = "hexagon_medicine",
             Seller = "Hexagon Inc.",
             Name = "Medicine Supplies",
             Photo = "res://social/storephotos/hexagonEssentials.png",
@@ -67,6 +71,7 @@ Features:
         },
 
         new MksStoreItem {
+            Id = "hexagon_office",
             Seller = "Hexagon Inc.",
             Name = "Office Supplies",
             Photo = "res://social/storephotos/hexagonEssentials.png",
@@ -82,6 +87,7 @@ Features:
         },
 
         new MksStoreItem {
+            Id = "hexagon_emergency",
             Seller = "Hexagon Inc.",
             Name = "Emergency Supplies",
             Photo = "res://social/storephotos/hexagonEssentials.png",

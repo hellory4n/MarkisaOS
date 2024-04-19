@@ -7,6 +7,7 @@ public static MksStore Data { get; set; } = new MksStore {
     Month = 1,
     Items = new MksStoreItem[] {
         new MksStoreItem {
+            Id = "passionfruit_espionage_pro",
             Seller = "Passionfruit Corporation",
             Name = "Espionage Pro",
             Photo = "res://os/assets/wallpapers/coffee.jpg",

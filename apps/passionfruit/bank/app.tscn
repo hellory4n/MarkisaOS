@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://apps/passionfruit/bank/fullicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/bank/smallicon.png" type="Texture" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://apps/passionfruit/bank/ui/ContactList.cs" type="Script" id=13]
 [ext_resource path="res://apps/passionfruit/bank/ui/SendYourLifeSavingsToANigerianPrince.cs" type="Script" id=14]
 [ext_resource path="res://apps/passionfruit/bank/ui/SignUpForCreditCard.cs" type="Script" id=15]
+[ext_resource path="res://apps/passionfruit/bank/ui/ShowCash.cs" type="Script" id=16]
+[ext_resource path="res://apps/passionfruit/bank/ui/ShowDebt.cs" type="Script" id=17]
+[ext_resource path="res://apps/passionfruit/bank/ui/ShowAssets.cs" type="Script" id=18]
 
 [node name="bank" type="Control"]
 margin_right = 704.0
@@ -62,6 +65,7 @@ margin_bottom = 79.0
 theme_type_variation = "Header"
 text = "Ø69.42"
 align = 1
+script = ExtResource( 16 )
 
 [node name="label3" type="Label" parent="contents/categories/home/vBoxContainer"]
 margin_top = 87.0
@@ -78,6 +82,7 @@ margin_bottom = 166.0
 theme_type_variation = "Header"
 text = "Ø5.00"
 align = 1
+script = ExtResource( 18 )
 
 [node name="label5" type="Label" parent="contents/categories/home/vBoxContainer"]
 margin_top = 174.0
@@ -94,6 +99,7 @@ margin_bottom = 253.0
 theme_type_variation = "Header"
 text = "Ø252945910950213950923509205902395023522634"
 align = 1
+script = ExtResource( 17 )
 
 [node name="transactions" type="ScrollContainer" parent="contents/categories"]
 visible = false

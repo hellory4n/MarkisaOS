@@ -1,4 +1,5 @@
 using Godot;
+using markisa.foundation;
 using markisa.mkstoolkit;
 using markisa.network;
 using Newtonsoft.Json;
@@ -92,6 +93,46 @@ public class ListStoreGarbage : HFlowContainer
         popup.GetNode<Label>("m/n/o/p/rating").Text = $"{m.Rating}/10";
         popup.GetNode<RichTextLabel>("m/n/o/description").Text = Tr(m.Description);
         popup.GetNode<Button>("m/n/o/buy").Text = Tr("Buy - {price}").Replace("{price}", $"Ø{m.Price}");
+        popup.GetNode<Button>("m/n/o/buy").Connect("pressed", this, nameof(Purchase), new Godot.Collections.Array { item });
+
+        // can you actually buy it? lol
+        var config = new Config<Banking>();
+        popup.GetNode<Button>("m/n/o/buy").Disabled = config.Data.Cash < m.Price;
+    }
+
+    public void Purchase(string item)
+    {
+        var m = JsonConvert.DeserializeObject<MksStoreItem>(item);
+
+        GetNode<MksPopup>("../../../../popup").HidePopup();
+
+        // confusing way of switching categories
+        GetNode<Control>("../../").Visible = false;
+        GetNode<Control>("../../../cart").Visible = true;
+        GetNode<ProgressBar>("../../../cart/m/paradoxBar").Value = 0;
+        GetNode<ProgressBar>("../../../cart/m/paradoxBar").MaxValue = 100;
+        GetNode<ProgressBar>("../../../cart/m/paradoxBar").Connect("finished", this, nameof(WhenTheShitArrives), new Godot.Collections.Array { item });
+
+        // lose your life savings
+        var config = new Config<Banking>();
+        config.Data.Cash -= m.Price;
+
+        config.Data.Transactions = config.Data.Transactions.Append(new BankTransaction {
+            Amount = m.Price,
+            Account = Tr(m.Seller),
+            Send = true
+        }).ToArray();
+
+        config.Save();
+    }
+
+    public void WhenTheShitArrives(string item)
+    {
+        var m = JsonConvert.DeserializeObject<MksStoreItem>(item);
+        Frambos.Notify("Marketplace", "Your package has arrived.");
+        Frambos.Play(SystemSound.Success);
+        new OnItemArrival(m);
+        GetNode<ProgressBar>("../../../cart/m/paradoxBar").Disconnect("finished", this, nameof(WhenTheShitArrives));
     }
 }
 

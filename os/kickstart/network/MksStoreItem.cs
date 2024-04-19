@@ -2,6 +2,7 @@ namespace markisa.network {
 
 public class MksStoreItem
 {
+    public string Id { get; set; } = "invalid_id";
     public string Seller { get; set; } = "";
     public string Name { get; set; } = "";
     public string Photo { get; set; } = "";

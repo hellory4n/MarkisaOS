@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://apps/passionfruit/marketplace/dockicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/marketplace/smallicon.png" type="Texture" id=2]
@@ -12,11 +12,13 @@
 [ext_resource path="res://os/assets/highPeaks/icons/desktop.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/home.png" type="Texture" id=11]
 [ext_resource path="res://apps/passionfruit/marketplace/music/heyWouldYouLikeToNotDie.mp3" type="AudioStream" id=12]
+[ext_resource path="res://os/mkstoolkit/ParadoxBar.gd" type="Script" id=13]
 [ext_resource path="res://apps/passionfruit/marketplace/music/buyMyGarbagePlease.mp3" type="AudioStream" id=14]
 [ext_resource path="res://apps/passionfruit/connect/music/industrialRevolutionAndItsConsequences.mp3" type="AudioStream" id=15]
 [ext_resource path="res://apps/passionfruit/marketplace/ui/music.gd" type="Script" id=16]
 [ext_resource path="res://os/mkstoolkit/MksPopupHide.gd" type="Script" id=17]
 [ext_resource path="res://os/mkstoolkit/MksPopup.cs" type="Script" id=18]
+[ext_resource path="res://apps/passionfruit/marketplace/ui/stupidNode.gd" type="Script" id=19]
 
 [node name="marketplace" type="Control"]
 margin_right = 789.0
@@ -40,30 +42,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 190.0
 
-[node name="cart" type="ScrollContainer" parent="contents/categories"]
+[node name="cart" type="CenterContainer" parent="contents/categories"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/cart"]
-margin_right = 599.0
-margin_bottom = 54.0
+[node name="m" type="VBoxContainer" parent="contents/categories/cart"]
+margin_left = 32.0
+margin_top = 146.0
+margin_right = 567.0
+margin_bottom = 249.0
 size_flags_horizontal = 3
 
-[node name="hSeparator" type="HSeparator" parent="contents/categories/cart/vBoxContainer"]
+[node name="hSeparator" type="HSeparator" parent="contents/categories/cart/m"]
 modulate = Color( 1, 1, 1, 0 )
-margin_right = 599.0
+margin_right = 535.0
 margin_bottom = 8.0
 
-[node name="label" type="Label" parent="contents/categories/cart/vBoxContainer"]
+[node name="label" type="Label" parent="contents/categories/cart/m"]
 margin_top = 16.0
-margin_right = 599.0
-margin_bottom = 46.0
+margin_right = 535.0
+margin_bottom = 57.0
+theme_type_variation = "Header"
+text = "Your package should arrive soon."
+align = 1
+autowrap = true
 
-[node name="textureRect" type="TextureRect" parent="contents/categories/cart/vBoxContainer"]
-margin_top = 54.0
-margin_right = 599.0
-margin_bottom = 54.0
+[node name="paradoxBar" type="ProgressBar" parent="contents/categories/cart/m"]
+margin_top = 65.0
+margin_right = 535.0
+margin_bottom = 103.0
+rect_min_size = Vector2( 535, 0 )
+size_flags_horizontal = 4
+script = ExtResource( 13 )
+instability = 5
+
+[node name="stupidNode" type="Node" parent="contents/categories/cart/m"]
+script = ExtResource( 19 )
 
 [node name="essentials" type="ScrollContainer" parent="contents/categories"]
 anchor_right = 1.0
@@ -77,6 +92,7 @@ size_flags_horizontal = 3
 [node name="music" type="AudioStreamPlayer" parent="contents/categories/essentials/vBoxContainer"]
 stream = ExtResource( 12 )
 autoplay = true
+stream_paused = true
 bus = "music"
 script = ExtResource( 16 )
 
@@ -104,6 +120,7 @@ size_flags_horizontal = 3
 [node name="music" type="AudioStreamPlayer" parent="contents/categories/technology/vBoxContainer"]
 stream = ExtResource( 15 )
 autoplay = true
+stream_paused = true
 bus = "music"
 script = ExtResource( 16 )
 
@@ -132,6 +149,7 @@ size_flags_horizontal = 3
 [node name="music" type="AudioStreamPlayer" parent="contents/categories/localMarket/vBoxContainer"]
 stream = ExtResource( 14 )
 autoplay = true
+stream_paused = true
 bus = "music"
 script = ExtResource( 16 )
 
@@ -210,6 +228,7 @@ script = ExtResource( 4 )
 sidebarRoot = NodePath("../../../categories")
 
 [node name="popup" type="Panel" parent="contents"]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -250.0
