@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://apps/passionfruit/marketplace/dockicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/marketplace/smallicon.png" type="Texture" id=2]
@@ -11,8 +11,10 @@
 [ext_resource path="res://os/assets/highPeaks/icons/shoppingCart.png" type="Texture" id=9]
 [ext_resource path="res://os/assets/highPeaks/icons/desktop.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/home.png" type="Texture" id=11]
-[ext_resource path="res://apps/passionfruit/marketplace/music/heyWouldYouLikeToDie.mp3" type="AudioStream" id=12]
-[ext_resource path="res://apps/passionfruit/connect/ui/music.gd" type="Script" id=13]
+[ext_resource path="res://apps/passionfruit/marketplace/music/heyWouldYouLikeToNotDie.mp3" type="AudioStream" id=12]
+[ext_resource path="res://apps/passionfruit/marketplace/music/buyMyGarbagePlease.mp3" type="AudioStream" id=14]
+[ext_resource path="res://apps/passionfruit/connect/music/industrialRevolutionAndItsConsequences.mp3" type="AudioStream" id=15]
+[ext_resource path="res://apps/passionfruit/marketplace/ui/music.gd" type="Script" id=16]
 
 [node name="marketplace" type="Control"]
 margin_right = 789.0
@@ -73,7 +75,7 @@ size_flags_horizontal = 3
 stream = ExtResource( 12 )
 autoplay = true
 bus = "music"
-script = ExtResource( 13 )
+script = ExtResource( 16 )
 
 [node name="hSeparator" type="HSeparator" parent="contents/categories/essentials/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
@@ -85,6 +87,60 @@ margin_top = 16.0
 margin_right = 599.0
 margin_bottom = 16.0
 script = ExtResource( 8 )
+
+[node name="technology" type="ScrollContainer" parent="contents/categories"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/technology"]
+margin_right = 599.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/technology/vBoxContainer"]
+stream = ExtResource( 15 )
+autoplay = true
+bus = "music"
+script = ExtResource( 16 )
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/technology/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 599.0
+margin_bottom = 8.0
+
+[node name="hFlowContainer" type="HFlowContainer" parent="contents/categories/technology/vBoxContainer"]
+margin_top = 16.0
+margin_right = 599.0
+margin_bottom = 16.0
+script = ExtResource( 8 )
+Zone = "technology"
+
+[node name="localMarket" type="ScrollContainer" parent="contents/categories"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/localMarket"]
+margin_right = 599.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/localMarket/vBoxContainer"]
+stream = ExtResource( 14 )
+autoplay = true
+bus = "music"
+script = ExtResource( 16 )
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/localMarket/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 599.0
+margin_bottom = 8.0
+
+[node name="hFlowContainer" type="HFlowContainer" parent="contents/categories/localMarket/vBoxContainer"]
+margin_top = 16.0
+margin_right = 599.0
+margin_bottom = 16.0
+script = ExtResource( 8 )
+Zone = "local market"
 
 [node name="toolbar" type="Panel" parent="contents"]
 anchor_bottom = 1.0

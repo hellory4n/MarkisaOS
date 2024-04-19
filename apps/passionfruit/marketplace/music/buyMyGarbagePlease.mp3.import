@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/buyMyGarbagePlease.mp3-be2da97de74e0b406d163c091bf0c91d.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/marketplace/music/buyMyGarbagePlease.mp3"
+dest_files=[ "res://.import/buyMyGarbagePlease.mp3-be2da97de74e0b406d163c091bf0c91d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

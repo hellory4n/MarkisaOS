@@ -52,6 +52,18 @@ public class ListStoreGarbage : HFlowContainer
     {
         MksStore result;
         switch (zone) {
+            case "technology":
+                switch (month) {
+                    default: result = Technology1.Data; break;
+                }
+                break;
+            
+            case "local market":
+                switch (month) {
+                    default: result = LocalMarket1.Data; break;
+                }
+                break;
+
             default:
                 switch (month) {
                     default: result = Essentials1.Data; break;
