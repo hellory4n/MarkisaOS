@@ -28,7 +28,7 @@ Features:
             Rating = 8,
             Price = 25,
             Description = 
-@"This is a box with hygiene products. It includes hygiene products, which is useful for when you're dirt. Studies show that hygiene helps your life.
+@"This is a box with hygiene products. It includes hygiene products, which is useful for when you're dirty. Studies show that hygiene helps your life.
 
 Features:
 - It contains hygiene products

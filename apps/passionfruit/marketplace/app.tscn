@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://apps/passionfruit/marketplace/dockicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/marketplace/smallicon.png" type="Texture" id=2]
@@ -12,9 +12,12 @@
 [ext_resource path="res://os/assets/highPeaks/icons/desktop.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/home.png" type="Texture" id=11]
 [ext_resource path="res://apps/passionfruit/marketplace/music/heyWouldYouLikeToNotDie.mp3" type="AudioStream" id=12]
+[ext_resource path="res://os/assets/wallpapers/space.jpg" type="Texture" id=13]
 [ext_resource path="res://apps/passionfruit/marketplace/music/buyMyGarbagePlease.mp3" type="AudioStream" id=14]
 [ext_resource path="res://apps/passionfruit/connect/music/industrialRevolutionAndItsConsequences.mp3" type="AudioStream" id=15]
 [ext_resource path="res://apps/passionfruit/marketplace/ui/music.gd" type="Script" id=16]
+[ext_resource path="res://os/mkstoolkit/MksPopupHide.gd" type="Script" id=17]
+[ext_resource path="res://os/mkstoolkit/MksPopup.cs" type="Script" id=18]
 
 [node name="marketplace" type="Control"]
 margin_right = 789.0
@@ -203,3 +206,102 @@ text = "Local Market"
 icon = ExtResource( 5 )
 script = ExtResource( 4 )
 sidebarRoot = NodePath("../../../categories")
+
+[node name="popup" type="Panel" parent="contents"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -250.0
+margin_right = 250.0
+margin_bottom = 375.0
+rect_min_size = Vector2( 500, 375 )
+theme_type_variation = "MksPopup"
+script = ExtResource( 18 )
+
+[node name="m" type="VBoxContainer" parent="contents/popup"]
+margin_right = 500.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="hSeparator" type="HSeparator" parent="contents/popup/m"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 500.0
+margin_bottom = 8.0
+
+[node name="MksPopupHide" type="Button" parent="contents/popup/m"]
+margin_left = 25.0
+margin_top = 16.0
+margin_right = 475.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 450, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "Close"
+script = ExtResource( 17 )
+popup = NodePath("../..")
+
+[node name="n" type="HBoxContainer" parent="contents/popup/m"]
+margin_left = 25.0
+margin_top = 66.0
+margin_right = 475.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 450, 0 )
+size_flags_horizontal = 4
+
+[node name="photo" type="TextureRect" parent="contents/popup/m/n"]
+margin_right = 221.0
+margin_bottom = 285.0
+rect_min_size = Vector2( 0, 285 )
+size_flags_horizontal = 3
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 7
+
+[node name="o" type="VBoxContainer" parent="contents/popup/m/n"]
+margin_left = 229.0
+margin_right = 450.0
+margin_bottom = 285.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="name" type="Label" parent="contents/popup/m/n/o"]
+margin_right = 221.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Product™"
+
+[node name="p" type="HBoxContainer" parent="contents/popup/m/n/o"]
+margin_top = 41.0
+margin_right = 221.0
+margin_bottom = 71.0
+
+[node name="seller" type="Label" parent="contents/popup/m/n/o/p"]
+margin_right = 50.0
+margin_bottom = 30.0
+text = "Seller"
+
+[node name="vSeparator" type="VSeparator" parent="contents/popup/m/n/o/p"]
+margin_left = 58.0
+margin_right = 66.0
+margin_bottom = 30.0
+
+[node name="rating" type="Label" parent="contents/popup/m/n/o/p"]
+margin_left = 74.0
+margin_right = 122.0
+margin_bottom = 30.0
+text = "10/10"
+
+[node name="description" type="RichTextLabel" parent="contents/popup/m/n/o"]
+margin_top = 71.0
+margin_right = 221.0
+margin_bottom = 243.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Go fuck yourself"
+
+[node name="buy" type="Button" parent="contents/popup/m/n/o"]
+margin_top = 243.0
+margin_right = 221.0
+margin_bottom = 285.0
+text = "Buy - Ø69,420"

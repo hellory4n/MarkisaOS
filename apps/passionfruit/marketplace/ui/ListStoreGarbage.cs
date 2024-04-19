@@ -1,5 +1,7 @@
 using Godot;
+using markisa.mkstoolkit;
 using markisa.network;
+using Newtonsoft.Json;
 using System;
 using System.Linq;
 
@@ -43,6 +45,9 @@ public class ListStoreGarbage : HFlowContainer
             itemUi.GetNode<TextureRect>("photo").Texture = GD.Load<Texture>(item.Photo);
             itemUi.GetNode<Label>("product").Text = item.Name;
             itemUi.GetNode<Button>("view").Text = Tr("View - {price}").Replace("{price}", $"Ø{item.Price}");
+
+            // quite the mouthful
+            itemUi.GetNode<Button>("view").Connect("pressed", this, nameof(View), new Godot.Collections.Array { JsonConvert.SerializeObject(item) });
             
             AddChild(itemUi);
         }
@@ -72,6 +77,21 @@ public class ListStoreGarbage : HFlowContainer
         }
 
         return result;
+    }
+
+    public void View(string item)
+    {
+        var m = JsonConvert.DeserializeObject<MksStoreItem>(item);
+
+        // do the shits :D
+        var popup = GetNode<MksPopup>("../../../../popup");
+        popup.ShowPopup();
+        popup.GetNode<TextureRect>("m/n/photo").Texture = GD.Load<Texture>(m.Photo);
+        popup.GetNode<Label>("m/n/o/name").Text = Tr(m.Name);
+        popup.GetNode<Label>("m/n/o/p/seller").Text = Tr(m.Seller);
+        popup.GetNode<Label>("m/n/o/p/rating").Text = $"{m.Rating}/10";
+        popup.GetNode<RichTextLabel>("m/n/o/description").Text = Tr(m.Description);
+        popup.GetNode<Button>("m/n/o/buy").Text = Tr("Buy - {price}").Replace("{price}", $"Ø{m.Price}");
     }
 }
 
