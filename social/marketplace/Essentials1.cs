@@ -9,7 +9,7 @@ public static MksStore Data { get; set; } = new MksStore {
         new MksStoreItem {
             Seller = "Hexagon Inc.",
             Name = "Food Supplies",
-            Photo = "res://os/assets/wallpapers/space.jpg",
+            Photo = "res://social/storephotos/hexagonEssentials.png",
             Rating = 8,
             Price = 25,
             Description = 
@@ -24,7 +24,7 @@ Features:
         new MksStoreItem {
             Seller = "Hexagon Inc.",
             Name = "Hygiene Supplies",
-            Photo = "res://os/assets/wallpapers/space.jpg",
+            Photo = "res://social/storephotos/hexagonEssentials.png",
             Rating = 8,
             Price = 25,
             Description = 
@@ -39,7 +39,7 @@ Features:
         new MksStoreItem {
             Seller = "Hexagon Inc.",
             Name = "Cleaning Supplies",
-            Photo = "res://os/assets/wallpapers/space.jpg",
+            Photo = "res://social/storephotos/hexagonEssentials.png",
             Rating = 8,
             Price = 25,
             Description = 
@@ -54,7 +54,7 @@ Features:
         new MksStoreItem {
             Seller = "Hexagon Inc.",
             Name = "Medicine Supplies",
-            Photo = "res://os/assets/wallpapers/space.jpg",
+            Photo = "res://social/storephotos/hexagonEssentials.png",
             Rating = 8,
             Price = 25,
             Description = 
@@ -69,7 +69,7 @@ Features:
         new MksStoreItem {
             Seller = "Hexagon Inc.",
             Name = "Office Supplies",
-            Photo = "res://os/assets/wallpapers/space.jpg",
+            Photo = "res://social/storephotos/hexagonEssentials.png",
             Rating = 8,
             Price = 25,
             Description = 
@@ -84,7 +84,7 @@ Features:
         new MksStoreItem {
             Seller = "Hexagon Inc.",
             Name = "Emergency Supplies",
-            Photo = "res://os/assets/wallpapers/space.jpg",
+            Photo = "res://social/storephotos/hexagonEssentials.png",
             Rating = 8,
             Price = 25,
             Description = 
