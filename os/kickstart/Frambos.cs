@@ -40,13 +40,9 @@ public class Frambos : Node
     static Dictionary<SystemSound, AudioStream> AwesomeSounds { get; } = new Dictionary<SystemSound, AudioStream> {
         {SystemSound.Startup,       GD.Load<AudioStream>("res://os/assets/systemSounds/startup.mp3")},
         {SystemSound.Shutdown,      GD.Load<AudioStream>("res://os/assets/systemSounds/shutdown.mp3")},
-        {SystemSound.Logout,        GD.Load<AudioStream>("res://os/assets/systemSounds/logout.mp3")},
-        {SystemSound.CriticalError, GD.Load<AudioStream>("res://os/assets/systemSounds/criticalError.mp3")},
         {SystemSound.Error,         GD.Load<AudioStream>("res://os/assets/systemSounds/error.mp3")},
         {SystemSound.Notification,  GD.Load<AudioStream>("res://os/assets/systemSounds/notification.mp3")},
-        {SystemSound.Question,      GD.Load<AudioStream>("res://os/assets/systemSounds/question.mp3")},
-        {SystemSound.Success,       GD.Load<AudioStream>("res://os/assets/systemSounds/success.mp3")},
-        {SystemSound.Warning,       GD.Load<AudioStream>("res://os/assets/systemSounds/warning.mp3")}
+        {SystemSound.Confirm,       GD.Load<AudioStream>("res://os/assets/systemSounds/confirm.mp3")},
     };
 
     readonly Texture cursor = GD.Load<Texture>("res://os/assets/highPeaks/cursors/cursor.png");
@@ -228,13 +224,10 @@ public enum SystemSound
 {
     Startup,
     Shutdown,
-    Logout,
-    Warning,
+    Confirm,
     Error,
     Notification,
     CriticalError,
-    Question,
-    Success
 }
 
 }

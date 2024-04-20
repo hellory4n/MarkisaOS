@@ -33,6 +33,6 @@ public class SendYourLifeSavingsToANigerianPrince : Button
 
         config.Save();
         Frambos.Notify("Bank", "Money send successfully.");
-        Frambos.Play(SystemSound.Success);
+        Frambos.Play(SystemSound.Notification);
     }
 }

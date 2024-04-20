@@ -5,4 +5,4 @@ onready var realPopup = get_node(popup)
 
 func _pressed():
 	realPopup.ShowPopup()
-	Frambos.Play(3)
+	Frambos.Play(2)

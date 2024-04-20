@@ -131,7 +131,7 @@ public class ListStoreGarbage : HFlowContainer
     {
         var m = JsonConvert.DeserializeObject<MksStoreItem>(item);
         Frambos.Notify("Marketplace", "Your package has arrived.");
-        Frambos.Play(SystemSound.Success);
+        Frambos.Play(SystemSound.Notification);
         new OnItemArrival(m);
         GetNode<ProgressBar>("../../../cart/m/paradoxBar").Disconnect("finished", this, nameof(WhenTheShitArrives));
     }
