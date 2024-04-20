@@ -28,6 +28,7 @@ public class Downloads : ItemList
         List<string> files = new List<string>();
         
         var dir = new Directory();
+        dir.MakeDirRecursive($"user://fs/{Frambos.CurrentUser}");
         dir.Open($"user://fs/{Frambos.CurrentUser}/");
         dir.ListDirBegin(true);
 

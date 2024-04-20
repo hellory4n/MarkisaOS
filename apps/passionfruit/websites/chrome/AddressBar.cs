@@ -19,7 +19,8 @@ public class AddressBar : LineEdit
 
     public void Djfjsgjs(string newText)
     {
-        webTabs.LoadStuff(newText);
+        Text = Text.Replace(" ", "");
+        webTabs.LoadStuff(Text);
     }
 }
 

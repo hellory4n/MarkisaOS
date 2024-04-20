@@ -533,9 +533,9 @@ anchor_bottom = 1.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/hSplitContainer/control/sound"]
 margin_left = 127.0
-margin_top = 79.0
+margin_top = 30.0
 margin_right = 427.0
-margin_bottom = 304.0
+margin_bottom = 353.0
 
 [node name="hBoxContainer" type="HBoxContainer" parent="contents/hSplitContainer/control/sound/vBoxContainer"]
 margin_right = 300.0
@@ -671,6 +671,7 @@ rect_min_size = Vector2( 128, 0 )
 size_flags_horizontal = 3
 text = "Disk"
 script = ExtResource( 27 )
+Shit = 1
 
 [node name="checkBox3" type="CheckBox" parent="contents/hSplitContainer/control/sound/vBoxContainer/hFlowContainer"]
 margin_top = 53.0
@@ -680,6 +681,7 @@ rect_min_size = Vector2( 128, 0 )
 size_flags_horizontal = 3
 text = "Mouse"
 script = ExtResource( 27 )
+Shit = 2
 
 [node name="checkBox4" type="CheckBox" parent="contents/hSplitContainer/control/sound/vBoxContainer/hFlowContainer"]
 margin_left = 154.0
@@ -690,6 +692,7 @@ rect_min_size = Vector2( 128, 0 )
 size_flags_horizontal = 3
 text = "Keyboard"
 script = ExtResource( 27 )
+Shit = 3
 
 [node name="system" type="CenterContainer" parent="contents/hSplitContainer/control"]
 visible = false
