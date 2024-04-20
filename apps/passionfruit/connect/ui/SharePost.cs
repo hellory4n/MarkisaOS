@@ -30,9 +30,11 @@ public class SharePost : Button
         var emkayessMeiou = new MksEmail {
             User = "You",
             ProfilePicture = config2.Data.Photo,
-            Content = Tr($"Dear (name),\nI found a post you might be interested in:\n\n(post info)\n\nCheers,\n{Frambos.CurrentUserDisplayName}")
-                .Replace("(name)", contact)
-                .Replace("(post info)", $"[b]{Tr(post.User)}[/b]\n{Tr(post.Content)}")
+            Content = Tr("Dear {name},(/n)(/n)I found a post you might be interested in:(/n)(/n){post info}(/n)(/n)Cheers,(/n){user}")
+                .Replace("(/n)", "\n")
+                .Replace("{name}", contact)
+                .Replace("{user}", Frambos.CurrentUserDisplayName)
+                .Replace("{post info}", $"[b]{Tr(post.User)}[/b]\n{Tr(post.Content)}")
                 .Replace("<ping>", "[color=#448AFF]@")
                 .Replace("</ping>", "[/color]"),
             

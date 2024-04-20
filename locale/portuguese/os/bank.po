@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Bank"
+msgstr "Banco"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Cash"
+msgstr "Saldo"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Assets"
+msgstr "Patrimônio"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Debt"
+msgstr "Dívidas"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "All transactions"
+msgstr "Extrato"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "You don't have a credit card."
+msgstr "Você não tem um cartão de crédito."
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Once you sign up you will receive an email in up to 5 business days."
+msgstr "Quando você se inscrever, você irá receber um e-mail em até 5 dias úteis."
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Get a credit card"
+msgstr "Se inscrever"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Send money"
+msgstr "Enviar dinheiro"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "No contacts."
+msgstr "Nenhum contato."
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Send"
+msgstr "Enviar"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "No loans available. Check again later."
+msgstr "Nenhum empréstimo disponível. Tente de novo depois."
+
+#: apps/passionfruit/bank/app.tscn
+msgid "History"
+msgstr "Histórico"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Credit Card"
+msgstr "Cartão"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Loans"
+msgstr "Empréstimos"
+
+#: apps/passionfruit/bank/ui/SendYourLifeSavingsToANigerianPrince.cs
+msgid "Money send successfully."
+msgstr "Dinheiro enviado com sucesso."
+
+#: apps/passionfruit/bank/ui/ListTransactions.cs
+msgid "{money} sent to {person}"
+msgstr "{money} enviado para {person}"
+
+#: apps/passionfruit/bank/ui/ListTransactions.cs
+msgid "{money} sent from {person}"
+msgstr "{person} enviou {money}"
+
+#: apps/passionfruit/bank/ui/SignUpForCreditCard.cs
+msgid "National Lelclub Bank"
+msgstr "Banco Nacional do Lelclub"
+
+#: apps/passionfruit/bank/ui/SignUpForCreditCard.cs
+msgid "Dear {user},(/n)(/n)We regret to inform you that your recent application for a credit card has been declined. We understand that this may be disappointing news, and we appreciate the time you took to apply with us.(/n)(/n)Thank you for considering the National Lelclub Bank for your financial needs. We appreciate the opportunity to serve you, and we wish you the best in your financial journey.(/n)(/n)Sincerely,(/n)Andrew Talley(/n)National Lelclub Bank"
+msgstr "Caro {user},\n"
+"\n"
+"Lamentamos informar que seu pedido para um cartão de crédito foi recusado. Entendemos que isso pode ser decepcionante, e apreciamos que você nos considerou para suas necessidades financeiras.\n"
+"\n"
+"Agradecemos que você considerou o Banco Nacional do Lelclub para suas necessidades financeiros. Esperamos que você tenha um bom dia.\n"
+"\n"
+"Sinceramente,\n"
+"André Talé\n"
+"Banco Nacional do Lelclub\n"

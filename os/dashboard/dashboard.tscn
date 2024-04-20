@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://os/dashboard/AppLauncher.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/email/dockicon.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://os/assets/highPeaks/colorIcons/allApps.png" type="Texture" id=14]
 [ext_resource path="res://os/dashboard/Dashboard.cs" type="Script" id=15]
 [ext_resource path="res://os/dashboard/PanelOpener3000.cs" type="Script" id=16]
+[ext_resource path="res://apps/passionfruit/bank/dockicon.png" type="Texture" id=17]
 [ext_resource path="res://os/mkstoolkit/WindowOpener.gd" type="Script" id=18]
 [ext_resource path="res://os/dashboard/quickSettings/UserDisplayBullshit.cs" type="Script" id=22]
 [ext_resource path="res://os/assets/userIcons/football.png" type="Texture" id=23]
@@ -615,7 +616,7 @@ theme_type_variation = "OSPanel"
 [node name="itemList" type="ItemList" parent="interface/appLauncher"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-items = [ "Websites", ExtResource( 5 ), false, "Downloads", ExtResource( 6 ), false, "Email", ExtResource( 2 ), false, "Connect", ExtResource( 7 ), false, "Marketplace", ExtResource( 3 ), false, "Settings", ExtResource( 4 ), false ]
+items = [ "Websites", ExtResource( 5 ), false, "Downloads", ExtResource( 6 ), false, "Email", ExtResource( 2 ), false, "Connect", ExtResource( 7 ), false, "Marketplace", ExtResource( 3 ), false, "Settings", ExtResource( 4 ), false, "Bank", ExtResource( 17 ), false ]
 allow_reselect = true
 max_columns = 20
 same_column_width = true

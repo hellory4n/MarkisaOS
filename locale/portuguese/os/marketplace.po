@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Marketplace"
+msgstr "Loja"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Your package should arrive soon."
+msgstr "Seu pedido irá chegar em breve."
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Address"
+msgstr "Endereço"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Cart"
+msgstr "Carrinho"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Essentials"
+msgstr "Essenciais"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Technology"
+msgstr "Tecnologia"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Local Market"
+msgstr "Próximos"
+
+#: apps/passionfruit/marketplace/ui/ListStoreGarbage.cs
+msgid "Your package has arrived."
+msgstr "Seu pacote chegou."
+
+# the following are place names, you're only supposed to adapt it to the language's spelling rules (or just leave it as it is)
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Greater Lelisia"
+msgstr "Grande Lelisia"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Motteto"
+msgstr "Motteto"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Turtingas"
+msgstr "Turtingas"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Benediction"
+msgstr "Benedição"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Onneto"
+msgstr "Onneto"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Lumi"
+msgstr "Lumi"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Skala"
+msgstr "Skala"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Visoko"
+msgstr "Visoko"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Kelapa"
+msgstr "Kelapa"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Maleta Island"
+msgstr "Ilha Maleta"
+
+#: apps/passionfruit/marketplace/ListStoreGarbage.cs
+msgid "View - {price}"
+msgstr "Ver - {price}"
+
+#: apps/passionfruit/marketplace/ListStoreGarbage.cs
+msgid "Buy - {price}"
+msgstr "Comprar - {price}"

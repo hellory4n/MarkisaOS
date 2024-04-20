@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Connect"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Trending"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "More"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Loading..."
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Help Center"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Comedy"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Technology"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Entertainment"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Creativity"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Discussion"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Bookmarks"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Refresh"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Who are you gonna share this with?"
+msgstr ""
+
+#: apps/passionfruit/connect/app.tscn
+msgid "You have no contacts."
+msgstr ""

@@ -40,7 +40,7 @@ public class GdScriptBridge : Node
         };
         file.Save();
 
-        Frambos.Notify("Websites", $"\"{filename}\" was downloaded.");
+        Frambos.Notify("Websites", Tr("{file} was downloaded.").Replace("{file}", filename));
         Frambos.Play(SystemSound.Notification);
 
         // so it doesn't show up 856893959395090390 times

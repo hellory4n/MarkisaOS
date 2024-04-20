@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Bank"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Cash"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Assets"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Debt"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "All transactions"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "You don't have a credit card."
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Once you sign up you will receive an email in up to 5 business days."
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Get a credit card"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Send money"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "No contacts."
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Send"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "No loans available. Check again later."
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "History"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Credit Card"
+msgstr ""
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Loans"
+msgstr ""

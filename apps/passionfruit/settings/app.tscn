@@ -54,15 +54,15 @@ ContentRoot = NodePath("contents")
 [node name="translationHack" type="Node" parent="."]
 script = ExtResource( 34 )
 label = NodePath("../contents/hSplitContainer/control/system/vBoxContainer/label")
-PortugueseText = "[center]MarkisaOS Me v0.14.0
+PortugueseText = "[center]MarkisaOS Me v0.15.0
 © 2069 Passionfruit Corporation
-por hellory4n, alex343xd
+por hellory4n, alex343xd, parfesan, e tradutores
 Faltam 14 dias para WhatsApp 2[/center]"
-SpanishText = "[center]MarkisaOS Me v0.14.0
+SpanishText = "[center]MarkisaOS Me v0.15.0
 © 2069 Passionfruit Corporation
 por hellory4n, alex343xd
 Qué[/center]"
-IndonesianText = "[center]MarkisaOS Me v0.14.0
+IndonesianText = "[center]MarkisaOS Me v0.15.0
 © 2069 Passionfruit Corporation
 oleh hellory4n, alex343xd
 Dijalankan di beberapa perangkat[/center]"
@@ -72,6 +72,7 @@ script = ExtResource( 34 )
 label = NodePath("../contents/hSplitContainer/control/credits")
 PortugueseText = "[center]Criado por hellory4n
 Áudio por alex343xd
+Imagens 3D por parfesan
 
 [b]Traduções[/b]
 Português (Brasil): hellory4n
@@ -533,9 +534,9 @@ anchor_bottom = 1.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/hSplitContainer/control/sound"]
 margin_left = 127.0
-margin_top = 30.0
+margin_top = 79.0
 margin_right = 427.0
-margin_bottom = 353.0
+margin_bottom = 304.0
 
 [node name="hBoxContainer" type="HBoxContainer" parent="contents/hSplitContainer/control/sound/vBoxContainer"]
 margin_right = 300.0
@@ -719,13 +720,13 @@ margin_right = 300.0
 margin_bottom = 200.0
 focus_mode = 2
 bbcode_enabled = true
-bbcode_text = "[center]MarkisaOS Me v0.14.0
+bbcode_text = "[center]MarkisaOS Me v0.15.0
 © 2069 Passionfruit Corporation
-by hellory4n, alex343xd
+by hellory4n, alex343xd, parfesan, and translators
 Running on some device :)[/center]"
-text = "MarkisaOS Me v0.14.0
+text = "MarkisaOS Me v0.15.0
 © 2069 Passionfruit Corporation
-by hellory4n, alex343xd
+by hellory4n, alex343xd, parfesan, and translators
 Running on some device :)"
 fit_content_height = true
 selection_enabled = true
@@ -754,15 +755,13 @@ anchor_bottom = 1.0
 focus_mode = 2
 bbcode_enabled = true
 bbcode_text = "[center]Developed by hellory4n
-Audio by alex343xd
+Audio by hellory4n, alex343xd
+3D images by parfesan
 
 [b]Translations[/b]
 Português (Brasil) (Brazilian Portuguese): hellory4n
 Español (Spanish): Tha Muffin
 Bahasa Indonesia (Indonesian): RThreeFive
-
-[b]Startup Sound[/b]
-Melody thing by alex343xd + the Zorin OS 16.x startup sound + Ubuntu 6.10 - 18.04 shutdown sound + some effects
 
 [b]Wallpapers[/b]
 High Peaks: Nisarg Patel on Unsplash
@@ -799,7 +798,7 @@ My parents
 My cats
 Godot developers
 Figma developers
-parfait.san
+parfesan
 Tha Muffin
 Bricked
 alex343xd
@@ -818,15 +817,13 @@ Everyone who liked and subscribed
 Martin Magni
 You :)"
 text = "Developed by hellory4n
-Audio by alex343xd
+Audio by hellory4n, alex343xd
+3D images by parfesan
 
 Translations
 Português (Brasil) (Brazilian Portuguese): hellory4n
 Español (Spanish): Tha Muffin
 Bahasa Indonesia (Indonesian): RThreeFive
-
-Startup Sound
-Melody thing by alex343xd + the Zorin OS 16.x startup sound + Ubuntu 6.10 - 18.04 shutdown sound + some effects
 
 Wallpapers
 High Peaks: Nisarg Patel on Unsplash
@@ -863,7 +860,7 @@ My parents
 My cats
 Godot developers
 Figma developers
-parfait.san
+parfesan
 Tha Muffin
 Bricked
 alex343xd

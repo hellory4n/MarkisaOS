@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: apps/passionfruit/email/app.tscn
+msgid "Emails"
+msgstr ""
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Share"
+msgstr ""
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Who are you gonna share this with?"
+msgstr ""
+
+#: apps/passionfruit/websites/app.tscn
+msgid "You have no contacts."
+msgstr ""
+
+#: apps/passionfruit/websites/chrome/ShareWebsites.cs
+msgid "Dear {name},(/n)I found a website you might be interested in: {website}(/n)(/n)Cheers,(/n){user}"
+msgstr ""
+
+#: os/kickstart/GdScriptBridge.cs
+msgid "{file} was downloaded."
+msgstr ""

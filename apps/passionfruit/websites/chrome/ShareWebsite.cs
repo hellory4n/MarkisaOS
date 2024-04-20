@@ -42,9 +42,11 @@ public class ShareWebsite : Button
         var emkayessMeiou = new MksEmail {
             User = "You",
             ProfilePicture = config2.Data.Photo,
-            Content = Tr($"Dear (name),\nI found a website you might be interested in: (website)\n\nCheers,\n{Frambos.CurrentUserDisplayName}")
-                .Replace("(name)", Tr(contact))
-                .Replace("(website)", address),
+            Content = Tr("Dear {name},(/n)(/n)I found a website you might be interested in: {website}(/n)(/n)Cheers,(/n){user}")
+                .Replace("(/n)", "\n")
+                .Replace("{name}", Tr(contact))
+                .Replace("{website}", address)
+                .Replace("{user}", Frambos.CurrentUserDisplayName),
             
             Time = Frambos.Now
         };
