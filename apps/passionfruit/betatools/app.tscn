@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://apps/passionfruit/betatools/ui/feedbackButton.gd" type="Script" id=1]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/bigMarkisa.png" type="Texture" id=4]
 [ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
@@ -20,3 +21,21 @@ ContentRoot = NodePath("contents")
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_clip_content = true
+
+[node name="sidebar" type="Panel" parent="contents"]
+anchor_bottom = 1.0
+rect_min_size = Vector2( 180, 0 )
+theme_type_variation = "Sidebar"
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/sidebar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+
+[node name="button" type="Button" parent="contents/sidebar/vBoxContainer"]
+margin_right = 180.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Feedback"
+script = ExtResource( 1 )
