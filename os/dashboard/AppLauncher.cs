@@ -16,6 +16,7 @@ public class AppLauncher : ItemList
             case 4: j = "res://apps/passionfruit/marketplace/app.tscn"; break;
             case 5: j = "res://apps/passionfruit/settings/app.tscn"; break;
             case 6: j = "res://apps/passionfruit/bank/app.tscn"; break;
+            case 7: j = "res://apps/passionfruit/betatools/app.tscn"; break;
             default: j = "res://apps/passionfruit/test/app.tscn"; break;
         }
 
