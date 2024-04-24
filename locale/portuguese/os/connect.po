@@ -79,7 +79,7 @@ msgstr "Postagem salva."
 
 #: apps/passionfruit/connect/ui/SharePost.cs
 msgid "Dear {name},(/n)(/n)I found a post you might be interested in:(/n)(/n){post info}(/n)(/n)Cheers,(/n){user}"
-msgstr "Caro {nome},\n"
+msgstr "Caro {name},\n"
 "\n"
 "Encontrei uma postagem que pode te interessar:\n"
 "\n"

@@ -54,15 +54,15 @@ ContentRoot = NodePath("contents")
 [node name="translationHack" type="Node" parent="."]
 script = ExtResource( 34 )
 label = NodePath("../contents/hSplitContainer/control/system/vBoxContainer/label")
-PortugueseText = "[center]MarkisaOS Me v0.15.0
+PortugueseText = "[center]MarkisaOS Me v0.16.0
 © 2069 Passionfruit Corporation
 por hellory4n, alex343xd, parfesan, e tradutores
 Faltam 14 dias para WhatsApp 2[/center]"
-SpanishText = "[center]MarkisaOS Me v0.15.0
+SpanishText = "[center]MarkisaOS Me v0.16.0
 © 2069 Passionfruit Corporation
 por hellory4n, alex343xd
 Qué[/center]"
-IndonesianText = "[center]MarkisaOS Me v0.15.0
+IndonesianText = "[center]MarkisaOS Me v0.16.0
 © 2069 Passionfruit Corporation
 oleh hellory4n, alex343xd
 Dijalankan di beberapa perangkat[/center]"
@@ -702,9 +702,9 @@ anchor_bottom = 1.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/hSplitContainer/control/system"]
 margin_left = 127.0
-margin_top = 58.0
+margin_top = 47.0
 margin_right = 427.0
-margin_bottom = 324.0
+margin_bottom = 336.0
 
 [node name="textureRect" type="TextureRect" parent="contents/hSplitContainer/control/system/vBoxContainer"]
 margin_right = 300.0
@@ -720,11 +720,11 @@ margin_right = 300.0
 margin_bottom = 200.0
 focus_mode = 2
 bbcode_enabled = true
-bbcode_text = "[center]MarkisaOS Me v0.15.0
+bbcode_text = "[center]MarkisaOS Me v0.16.0
 © 2069 Passionfruit Corporation
 by hellory4n, alex343xd, parfesan, and translators
 Running on some device :)[/center]"
-text = "MarkisaOS Me v0.15.0
+text = "MarkisaOS Me v0.16.0
 © 2069 Passionfruit Corporation
 by hellory4n, alex343xd, parfesan, and translators
 Running on some device :)"
