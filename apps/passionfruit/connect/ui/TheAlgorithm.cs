@@ -35,6 +35,9 @@ public class TheAlgorithm : VBoxContainer
     {
         MksConnectZone zone = GetConnectZone(Zone, 1);
 
+        // the more button just reloads everything again, we can handle translation now :)
+        HandleStringFinder(zone.Posts);
+
         // shuffle posts
         MksPost[] shuffled;
         if (Zone != "bookmarks") {
@@ -337,6 +340,44 @@ public class TheAlgorithm : VBoxContainer
         contacts.Clear();
         foreach (string contact in config.Data.Contacts) {
             contacts.AddItem(Tr(contact));
+        }
+    }
+
+    static void HandleStringFinder(MksPost[] posts)
+    {
+        var config = new Config<StringFinder>();
+
+        var notAList = new HashSet<TranslationString>();
+        foreach (MksPost post in posts) {
+            notAList.Add(new TranslationString {
+                Path = "res://apps/passionfruit/connect/app.tscn", // don't want to handle that
+                MessageId = post.User
+            });
+
+            notAList.Add(new TranslationString {
+                Path = "res://apps/passionfruit/connect/app.tscn", // don't want to handle that
+                MessageId = post.Content
+            });
+
+            foreach (MksPost reply in post.Replies) {
+                notAList.Add(new TranslationString {
+                    Path = "res://apps/passionfruit/connect/app.tscn", // don't want to handle that
+                    MessageId = reply.User
+                });
+
+                notAList.Add(new TranslationString {
+                    Path = "res://apps/passionfruit/connect/app.tscn", // don't want to handle that
+                    MessageId = reply.Content
+                });
+            }
+        }
+
+        config.Data.Strings.Add(notAList);
+        config.Save();
+
+        if (config.Data.Enabled) {
+            Frambos.Notify("System", "Translation strings unlocked. Translate them at BetaTools.");
+            Frambos.Play(SystemSound.Notification);
         }
     }
 }
