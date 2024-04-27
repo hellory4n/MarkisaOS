@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://apps/passionfruit/betatools/ui/feedbackButton.gd" type="Script" id=1]
+[ext_resource path="res://os/mkstoolkit/SidebarButton.gd" type="Script" id=2]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/bigMarkisa.png" type="Texture" id=4]
+[ext_resource path="res://apps/passionfruit/betatools/ui/ConfigCopyStuffShit.cs" type="Script" id=5]
 [ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/biggerMarkisa.png" type="Texture" id=7]
 
@@ -22,6 +24,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_clip_content = true
 
+[node name="categories" type="Control" parent="contents"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 190.0
+
+[node name="configs" type="VBoxContainer" parent="contents/categories"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="text" type="RichTextLabel" parent="contents/categories/configs"]
+margin_right = 599.0
+margin_bottom = 345.0
+focus_mode = 2
+size_flags_vertical = 3
+selection_enabled = true
+
+[node name="copy" type="Button" parent="contents/categories/configs"]
+margin_top = 353.0
+margin_right = 599.0
+margin_bottom = 395.0
+theme_type_variation = "Secondary"
+text = "Copy"
+
 [node name="sidebar" type="Panel" parent="contents"]
 anchor_bottom = 1.0
 rect_min_size = Vector2( 180, 0 )
@@ -39,3 +65,15 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Feedback"
 script = ExtResource( 1 )
+
+[node name="configs" type="Button" parent="contents/sidebar/vBoxContainer"]
+margin_top = 45.0
+margin_right = 180.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Config (debugging)"
+script = ExtResource( 2 )
+sidebarRoot = NodePath("../../../categories")
+
+[connection signal="pressed" from="contents/sidebar/vBoxContainer/configs" to="contents/categories/configs" method="Load"]
