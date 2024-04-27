@@ -51,6 +51,35 @@ public class Frambos : Node
 
     public override void _Ready()
     {
+        // don't make everything ginormous on desktop
+		// there's an option to do that from the project settings but it means
+		// i don't get to see how it would look on mobile, so i prefer this
+		if (!IsOnMobile) {
+			GetTree().SetScreenStretch(
+				SceneTree.StretchMode.Mode2d, SceneTree.StretchAspect.Keep, OS.GetScreenSize());
+			Resolution = OS.GetScreenSize();
+		}
+		else {
+			Resolution = GetViewport().GetVisibleRect().Size;
+		}
+
+        // lcoalziation glboalstizagioyn internalizitation
+		var config = new Config<SystemInfo>();
+
+		var file = new File();
+		if (file.FileExists("user://yestheuserhasindeedopenedthegameforthefirsttime")) {
+			TranslationServer.SetLocale(config.Data.Language);
+		}
+		else {
+			TranslationServer.SetLocale(OS.GetLocaleLanguage());
+			config.Data.Language = OS.GetLocaleLanguage();
+			config.Save();
+
+			// so we don't overwrite what the user chose everytime the game launches :)
+			file.Open("user://yestheuserhasindeedopenedthegameforthefirsttime", File.ModeFlags.Write);
+			file.Close();
+		}
+
         var dir = new Directory();
         if (dir.FileExists("user://forcemobile")) {
             forceMobile = true;
