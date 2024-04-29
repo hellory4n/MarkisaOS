@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://apps/passionfruit/betatools/ui/feedbackButton.gd" type="Script" id=1]
 [ext_resource path="res://os/mkstoolkit/SidebarButton.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://apps/passionfruit/betatools/ui/ConfigCopyStuffShit.cs" type="Script" id=5]
 [ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/biggerMarkisa.png" type="Texture" id=7]
+[ext_resource path="res://apps/passionfruit/betatools/ui/TranslationStuff.cs" type="Script" id=8]
 
 [node name="betatools" type="Control"]
 margin_right = 789.0
@@ -30,6 +31,7 @@ anchor_bottom = 1.0
 margin_left = 190.0
 
 [node name="configs" type="VBoxContainer" parent="contents/categories"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
@@ -47,6 +49,12 @@ margin_right = 599.0
 margin_bottom = 395.0
 theme_type_variation = "Secondary"
 text = "Copy"
+
+[node name="translations" type="TabContainer" parent="contents/categories"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+tab_align = 0
+script = ExtResource( 8 )
 
 [node name="sidebar" type="Panel" parent="contents"]
 anchor_bottom = 1.0
@@ -73,6 +81,16 @@ margin_bottom = 90.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Config (debugging)"
+script = ExtResource( 2 )
+sidebarRoot = NodePath("../../../categories")
+
+[node name="translations" type="Button" parent="contents/sidebar/vBoxContainer"]
+margin_top = 90.0
+margin_right = 180.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Translations"
 script = ExtResource( 2 )
 sidebarRoot = NodePath("../../../categories")
 

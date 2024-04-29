@@ -5,6 +5,18 @@ namespace markisa.dashboard {
 
 public class AppLauncher : ItemList
 {
+    public override void _Ready()
+    {
+        SetItemText(0, Tr("Websites"));
+        SetItemText(1, Tr("Downloads"));
+        SetItemText(2, Tr("Email"));
+        SetItemText(3, Tr("Connect"));
+        SetItemText(4, Tr("Marketplace"));
+        SetItemText(5, Tr("Settings"));
+        SetItemText(6, Tr("Bank"));
+        SetItemText(7, Tr("BetaTools"));
+    }
+
     public void OnItemSelected(int idx)
     {
         string j;

@@ -343,8 +343,14 @@ public class TheAlgorithm : VBoxContainer
         }
     }
 
-    static void HandleStringFinder(MksPost[] posts)
+    void HandleStringFinder(MksPost[] posts)
     {
+        // make sure we're actually pressing the "more" button
+        // the 2 children are an invisible hseparator for padding, & the more button
+        if (GetChildCount() == 2) {
+            return;
+        }
+
         var config = new Config<StringFinder>();
 
         var notAList = new HashSet<TranslationString>();
