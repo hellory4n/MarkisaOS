@@ -32,7 +32,12 @@ public class Webview : Control
     [Export]
     public AudioStream Music { get; set; }
     /// <summary>
-    /// If `true`, this website is currently the active one.
+    /// Used for the string finder.
+    /// </summary>
+    [Export]
+    public string TranslationPot { get; set; } = "";
+    /// <summary>
+    /// If <c>true</c>, this website is currently the active one.
     /// </summary>
     public bool IsActive { get; set; }
     AudioStreamPlayer awesomePlayer;

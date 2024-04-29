@@ -125,6 +125,25 @@ public class WebTabs : VBoxContainer
         // save it in the user's history :)
         if (path != "404" && path != "") {
             var fig = new Config<WebsiteConfig>();
+
+            // translation crap
+            var config = new Config<StringFinder>();
+            if (!fig.Data.History.Contains(path)) {
+                var jgssggsIthink = new Config<StringFinder>();
+                jgssggsIthink.Data.Strings.Add(new HashSet<TranslationString>() {
+                    new TranslationString {
+                        Path = jsigtksk,
+                        MessageId = $"You have unlocked '{path}', ask @hellory4n for the strings (it would be too much work to make this extract the strings from the scene)"
+                    },
+                });
+                jgssggsIthink.Save();
+
+                if (jgssggsIthink.Data.Enabled) {
+                    Frambos.Notify("System", "Translation strings unlocked. Translate them at BetaTools.");
+                    Frambos.Play(SystemSound.Notification);
+                }
+            }
+            
             fig.Data.History.Add(path);
             fig.Save();
         }

@@ -225,8 +225,6 @@ public class Frambos : Node
             return;
         }
         
-        var timeConfig = new Config<StoryProgress>();
-        DateTime now = DateTime.Now;
         email.Time = Now;
         
         var config = new Config<SocialInfo>();
@@ -244,6 +242,25 @@ public class Frambos : Node
                 case "es": Notify($"{oopMoment.Tr(email.User)} te a enviado un email", oopMoment.Tr(email.Content)); break;
                 case "id": Notify($"{oopMoment.Tr(email.User)} mengirimkan email", oopMoment.Tr(email.Content)); break;
             }
+            Play(SystemSound.Notification);
+        }
+
+        var configSequel = new Config<StringFinder>();
+        configSequel.Data.Strings.Add(new HashSet<TranslationString>() {
+            new TranslationString {
+                Path = "res://apps/passionfruit/email/app.tscn",
+                MessageId = email.User
+            },
+
+            new TranslationString {
+                Path = "res://apps/passionfruit/email/app.tscn",
+                MessageId = email.Content
+            },
+        });
+        configSequel.Save();
+
+        if (configSequel.Data.Enabled) {
+            Notify("System", "Translation strings unlocked. Translate them at BetaTools.");
             Play(SystemSound.Notification);
         }
     }
