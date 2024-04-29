@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Connect"
+msgstr "Conectar"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Trending"
+msgstr "Popular"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "More"
+msgstr "Más"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Help Center"
+msgstr "Centro de Ayuda"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Comedy"
+msgstr "Comedia"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Technology"
+msgstr "Tecnología"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Entertainment"
+msgstr "Entretenimiento"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Creativity"
+msgstr "Creatividad"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Discussion"
+msgstr "Discusión"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Bookmarks"
+msgstr "Elementos Guardados"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Refresh"
+msgstr "Recargar"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Who are you gonna share this with?"
+msgstr "¿Con quien quiere compartir esto?"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "You have no contacts."
+msgstr "No tiene ningún contacto."
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Copy Link"
+msgstr "Copiar Link"
+
+#: apps/passionfruit/connect/ui/TheAlgorithm.cs
+msgid "Link copied."
+msgstr "Link copiado."
+
+#: apps/passionfruit/connect/ui/TheAlgorithm.cs
+msgid "Post added to bookmarks"
+msgstr "Post añadido a tus elementos guardados."
+
+#: apps/passionfruit/connect/ui/SharePost.cs
+msgid "Dear {name},(/n)(/n)I found a post you might be interested in:(/n)(/n){post info}(/n)(/n)Cheers,(/n){user}"
+msgstr "Querido {name},\n"
+"\n"
+"Encontré un post qué puede qué sea de tu interés:\n"
+"\n"
+"{post info}\n"
+"\n"
+"Sinceramente,\n"
+"{user}"
