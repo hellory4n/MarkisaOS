@@ -51,7 +51,7 @@ msgstr "Discusión"
 
 #: apps/passionfruit/connect/app.tscn
 msgid "Bookmarks"
-msgstr "Elementos Guardados"
+msgstr "Guardados"
 
 #: apps/passionfruit/connect/app.tscn
 msgid "Refresh"

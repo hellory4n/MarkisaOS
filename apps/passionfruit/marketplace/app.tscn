@@ -100,11 +100,13 @@ script = ExtResource( 16 )
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 599.0
 margin_bottom = 8.0
+mouse_filter = 2
 
 [node name="hFlowContainer" type="HFlowContainer" parent="contents/categories/essentials/vBoxContainer"]
 margin_top = 16.0
 margin_right = 599.0
 margin_bottom = 16.0
+mouse_filter = 1
 script = ExtResource( 8 )
 
 [node name="technology" type="ScrollContainer" parent="contents/categories"]
@@ -128,11 +130,13 @@ script = ExtResource( 16 )
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 599.0
 margin_bottom = 8.0
+mouse_filter = 2
 
 [node name="hFlowContainer" type="HFlowContainer" parent="contents/categories/technology/vBoxContainer"]
 margin_top = 16.0
 margin_right = 599.0
 margin_bottom = 16.0
+mouse_filter = 1
 script = ExtResource( 8 )
 Zone = "technology"
 
@@ -157,11 +161,13 @@ script = ExtResource( 16 )
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 599.0
 margin_bottom = 8.0
+mouse_filter = 2
 
 [node name="hFlowContainer" type="HFlowContainer" parent="contents/categories/localMarket/vBoxContainer"]
 margin_top = 16.0
 margin_right = 599.0
 margin_bottom = 16.0
+mouse_filter = 1
 script = ExtResource( 8 )
 Zone = "local market"
 

@@ -63,7 +63,7 @@ msgstr "Historial"
 
 #: apps/passionfruit/bank/app.tscn
 msgid "Credit Card"
-msgstr "Tarjeta de crédito"
+msgstr "Tarjeta"
 
 #: apps/passionfruit/bank/app.tscn
 msgid "Loans"
