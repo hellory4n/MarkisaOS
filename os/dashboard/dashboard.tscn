@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://os/dashboard/AppLauncher.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/email/dockicon.png" type="Texture" id=2]
@@ -41,8 +41,14 @@
 [ext_resource path="res://os/dashboard/Activities.cs" type="Script" id=39]
 [ext_resource path="res://os/dashboard/tutorial/nextButton3.gd" type="Script" id=40]
 [ext_resource path="res://os/dashboard/MarkisaButton.cs" type="Script" id=41]
+[ext_resource path="res://os/dashboard/tutorial/nextButton4.gd" type="Script" id=42]
+[ext_resource path="res://os/dashboard/tutorial/nextButton5.gd" type="Script" id=43]
+[ext_resource path="res://os/dashboard/tutorial/nextButtonMobile1.gd" type="Script" id=44]
+[ext_resource path="res://os/dashboard/tutorial/nextButtonMobile2.gd" type="Script" id=45]
+[ext_resource path="res://os/dashboard/tutorial/nextButtonMobile3.gd" type="Script" id=46]
 [ext_resource path="res://os/dashboard/TimeDashboardPanel.cs" type="Script" id=47]
 [ext_resource path="res://os/dashboard/MoneyDashboardPanel.cs" type="Script" id=48]
+[ext_resource path="res://os/dashboard/tutorial/nextButtonMobile4.gd" type="Script" id=49]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hideBigPopup"
@@ -127,6 +133,9 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+
+[sub_resource type="ButtonGroup" id=4]
+resource_name = "hehe"
 
 [node name="dashboard" type="Control"]
 anchor_right = 1.0
@@ -655,6 +664,7 @@ rect_min_size = Vector2( 64, 40 )
 hint_tooltip = "Your notes"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 10 )
 icon_align = 1
 expand_icon = true
@@ -670,6 +680,7 @@ rect_min_size = Vector2( 64, 40 )
 hint_tooltip = "Calculator"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 9 )
 icon_align = 1
 expand_icon = true
@@ -724,6 +735,7 @@ rect_min_size = Vector2( 64, 40 )
 hint_tooltip = "Quick settings"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 11 )
 icon_align = 1
 expand_icon = true
@@ -739,6 +751,7 @@ rect_min_size = Vector2( 64, 40 )
 hint_tooltip = "Notifications"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 12 )
 icon_align = 1
 expand_icon = true
@@ -795,6 +808,7 @@ rect_min_size = Vector2( 64, 64 )
 hint_tooltip = "App launcher"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 14 )
 icon_align = 1
 script = ExtResource( 16 )
@@ -817,6 +831,7 @@ rect_min_size = Vector2( 64, 64 )
 hint_tooltip = "Quick settings"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 11 )
 icon_align = 1
 script = ExtResource( 16 )
@@ -831,6 +846,7 @@ rect_min_size = Vector2( 64, 64 )
 hint_tooltip = "Your notes"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 10 )
 icon_align = 1
 script = ExtResource( 16 )
@@ -874,6 +890,7 @@ rect_min_size = Vector2( 64, 64 )
 hint_tooltip = "App launcher"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 35 )
 icon_align = 1
 script = ExtResource( 16 )
@@ -893,6 +910,7 @@ rect_min_size = Vector2( 64, 64 )
 hint_tooltip = "Calculator"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 9 )
 icon_align = 1
 script = ExtResource( 16 )
@@ -907,6 +925,7 @@ rect_min_size = Vector2( 64, 64 )
 hint_tooltip = "Notifications"
 theme_type_variation = "OSButton"
 toggle_mode = true
+group = SubResource( 4 )
 icon = ExtResource( 12 )
 icon_align = 1
 script = ExtResource( 16 )
@@ -984,47 +1003,45 @@ text = "Continue"
 script = ExtResource( 27 )
 
 [node name="tutorial" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="1desktop" type="Control" parent="tutorial"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="1" type="Control" parent="tutorial"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-
-[node name="bg" type="ColorRect" parent="tutorial/1"]
+[node name="bg" type="ColorRect" parent="tutorial/1desktop"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.686275 )
 
-[node name="start" type="VBoxContainer" parent="tutorial/1"]
+[node name="start" type="VBoxContainer" parent="tutorial/1desktop"]
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 495.0
 margin_bottom = 257.0
 rect_min_size = Vector2( 445, 0 )
 
-[node name="label" type="Label" parent="tutorial/1/start"]
+[node name="label" type="Label" parent="tutorial/1desktop/start"]
 margin_right = 445.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "Welcome to MarkisaOS Me"
 
-[node name="label2" type="Label" parent="tutorial/1/start"]
+[node name="label2" type="Label" parent="tutorial/1desktop/start"]
 margin_top = 49.0
 margin_right = 445.0
-margin_bottom = 154.0
-text = "MarkisaOS: Productivity, efficiency, personalized to you.
+margin_bottom = 104.0
+text = "This short guide will help you learn everything you need to know to get started with MarkisaOS."
+autowrap = true
 
-This short guide will help you learn everything you need to
-know to get started with MarkisaOS."
-
-[node name="button" type="Button" parent="tutorial/1/start"]
-margin_top = 162.0
+[node name="button" type="Button" parent="tutorial/1desktop/start"]
+margin_top = 112.0
 margin_right = 445.0
-margin_bottom = 207.0
+margin_bottom = 157.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "Next"
@@ -1058,8 +1075,8 @@ text = "Sticky notes"
 margin_top = 49.0
 margin_right = 249.0
 margin_bottom = 104.0
-text = "Here you can remind yourself of
-important things."
+text = "Here you can remind yourself of important things."
+autowrap = true
 
 [node name="button" type="Button" parent="tutorial/2desktop/bg/start"]
 margin_top = 112.0
@@ -1130,25 +1147,266 @@ margin_right = 299.0
 margin_bottom = 207.0
 
 [node name="label" type="Label" parent="tutorial/4desktop/bg/start"]
-margin_right = 275.0
+margin_right = 249.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "Dock"
 
 [node name="label2" type="Label" parent="tutorial/4desktop/bg/start"]
 margin_top = 49.0
-margin_right = 275.0
-margin_bottom = 104.0
-text = "Here you can launch applications as
-well as launching them."
+margin_right = 249.0
+margin_bottom = 129.0
+text = "Here you can switch between applications as well as launching them."
+autowrap = true
 
 [node name="button" type="Button" parent="tutorial/4desktop/bg/start"]
+margin_top = 137.0
+margin_right = 249.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Next"
+script = ExtResource( 42 )
+
+[node name="5desktop" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/5desktop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/5desktop"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 495.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 445, 0 )
+
+[node name="label" type="Label" parent="tutorial/5desktop/start"]
+margin_right = 445.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Thanks for choosing MarkisaOS Me"
+
+[node name="label2" type="Label" parent="tutorial/5desktop/start"]
+margin_top = 49.0
+margin_right = 445.0
+margin_bottom = 79.0
+text = "For more information, check out passionfruit.com."
+autowrap = true
+
+[node name="button" type="Button" parent="tutorial/5desktop/start"]
+margin_top = 87.0
+margin_right = 445.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Finish"
+script = ExtResource( 43 )
+
+[node name="1mobile" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/1mobile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/1mobile"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 495.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 445, 0 )
+
+[node name="label" type="Label" parent="tutorial/1mobile/start"]
+margin_right = 445.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Welcome to MarkisaOS Me"
+
+[node name="label2" type="Label" parent="tutorial/1mobile/start"]
+margin_top = 49.0
+margin_right = 445.0
+margin_bottom = 104.0
+text = "This short guide will help you learn everything you need to know to get started with MarkisaOS."
+autowrap = true
+
+[node name="button" type="Button" parent="tutorial/1mobile/start"]
 margin_top = 112.0
-margin_right = 275.0
+margin_right = 445.0
 margin_bottom = 157.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "Next"
+script = ExtResource( 44 )
+
+[node name="2mobile" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/2mobile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 500.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/2mobile/bg"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 299.0
+margin_bottom = 207.0
+
+[node name="label" type="Label" parent="tutorial/2mobile/bg/start"]
+margin_right = 249.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Sticky notes"
+
+[node name="label2" type="Label" parent="tutorial/2mobile/bg/start"]
+margin_top = 49.0
+margin_right = 249.0
+margin_bottom = 104.0
+text = "Here you can remind yourself of important things."
+autowrap = true
+
+[node name="button" type="Button" parent="tutorial/2mobile/bg/start"]
+margin_top = 112.0
+margin_right = 249.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Next"
+script = ExtResource( 45 )
+
+[node name="3mobile" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/3mobile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 500.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/3mobile/bg"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 299.0
+margin_bottom = 207.0
+
+[node name="label" type="Label" parent="tutorial/3mobile/bg/start"]
+margin_right = 249.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Quick settings"
+
+[node name="label2" type="Label" parent="tutorial/3mobile/bg/start"]
+margin_top = 49.0
+margin_right = 249.0
+margin_bottom = 104.0
+text = "Here you can quickly tweak settings."
+autowrap = true
+
+[node name="button" type="Button" parent="tutorial/3mobile/bg/start"]
+margin_top = 112.0
+margin_right = 249.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Next"
+script = ExtResource( 46 )
+
+[node name="4mobile" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/4mobile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 500.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/4mobile/bg"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 299.0
+margin_bottom = 207.0
+
+[node name="label" type="Label" parent="tutorial/4mobile/bg/start"]
+margin_right = 249.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Apps"
+
+[node name="label2" type="Label" parent="tutorial/4mobile/bg/start"]
+margin_top = 49.0
+margin_right = 249.0
+margin_bottom = 254.0
+text = "You can switch between applications using the button with 2 squares, as well as launching them with the button with a grid of circles. The home button hides all apps, so you can see the time, date, and your money."
+autowrap = true
+
+[node name="button" type="Button" parent="tutorial/4mobile/bg/start"]
+margin_top = 262.0
+margin_right = 249.0
+margin_bottom = 307.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Next"
+script = ExtResource( 49 )
+
+[node name="5mobile" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/5mobile"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/5mobile"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 495.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 445, 0 )
+
+[node name="label" type="Label" parent="tutorial/5mobile/start"]
+margin_right = 445.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Thanks for choosing MarkisaOS Me"
+
+[node name="label2" type="Label" parent="tutorial/5mobile/start"]
+margin_top = 49.0
+margin_right = 445.0
+margin_bottom = 79.0
+text = "For more information, check out passionfruit.com."
+autowrap = true
+
+[node name="button" type="Button" parent="tutorial/5mobile/start"]
+margin_top = 87.0
+margin_right = 445.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Finish"
+script = ExtResource( 43 )
 
 [connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer/HSlider" method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer2/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer2/HSlider" method="_on_HSlider_value_changed"]
@@ -1158,3 +1416,5 @@ text = "Next"
 [connection signal="pressed" from="interface/calculator/GridContainer/Button3" to="interface/calculator/expression" method="Suffering"]
 [connection signal="item_selected" from="interface/appLauncher/itemList" to="interface/appLauncher/itemList" method="OnItemSelected"]
 [connection signal="timeout" from="interface/panel/stuff/money/timer" to="interface/panel/stuff/money" method="Beans"]
+[connection signal="pressed" from="tutorial/5desktop/start/button" to="." method="TutorialComplete"]
+[connection signal="pressed" from="tutorial/5mobile/start/button" to="." method="TutorialComplete"]
