@@ -265,6 +265,6 @@ margin_top = -40.0
 rect_min_size = Vector2( 0, 40 )
 custom_colors/font_color = Color( 1, 1, 1, 0.654902 )
 custom_fonts/font = ExtResource( 5 )
-text = "Copyright © 2069 Passionfruit Corporation. All rights reserved."
+text = "Copyright © 2071 Passionfruit Corporation. All rights reserved."
 align = 1
 valign = 1

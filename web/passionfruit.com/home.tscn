@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3" type="AudioStream" id=2]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=4]
+[ext_resource path="res://os/assets/bootloader/bios.png" type="Texture" id=5]
+[ext_resource path="res://web/passionfruit.com/assets/bg.png" type="Texture" id=6]
 
 [node name="passionfruit" type="Control"]
 anchor_right = 1.0
@@ -12,7 +14,7 @@ rect_clip_content = true
 script = ExtResource( 1 )
 Title = "Passionfruit Corporation"
 Description = "The official website for Passionfruit."
-Tags = PoolStringArray( "company", "passionfruit", "markisa", "computers" )
+Tags = PoolStringArray( "company", "passionfruit", "markisa", "computers", "os", "software", "business", "developer", "government_partner" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 2 )
 
@@ -21,18 +23,115 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.027451, 0.054902, 0.0980392, 1 )
 
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 45.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_right = 853.0
+margin_bottom = 278.0
+size_flags_horizontal = 3
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_right = 853.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 0, 240 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 7
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -195.0
+margin_top = -58.0
+margin_right = 195.0
+margin_bottom = 58.0
+custom_constants/separation = 0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+margin_right = 390.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 390, 75 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+margin_top = 75.0
+margin_right = 390.0
+margin_bottom = 116.0
+theme_type_variation = "Header"
+text = "Powering the world."
+align = 1
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 248.0
+margin_right = 853.0
+margin_bottom = 278.0
+text = "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+align = 1
+
 [node name="toolbar" type="Panel" parent="."]
 anchor_right = 1.0
+margin_bottom = 45.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Toolbar"
 
 [node name="hBoxContainer" type="HBoxContainer" parent="toolbar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/separation = 0
+alignment = 1
 
 [node name="button" type="Button" parent="toolbar/hBoxContainer"]
-margin_right = 113.0
+margin_right = 170.0
 margin_bottom = 45.0
-text = "Bee movie..."
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "Passionfruit"
 script = ExtResource( 4 )
-website = "beemovie.net"
+website = "passionfruit.com"
+
+[node name="button2" type="Button" parent="toolbar/hBoxContainer"]
+margin_left = 170.0
+margin_right = 341.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "MarkisaOS"
+script = ExtResource( 4 )
+website = "markisa.passionfruit.com"
+
+[node name="button3" type="Button" parent="toolbar/hBoxContainer"]
+margin_left = 341.0
+margin_right = 511.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "Markistations"
+script = ExtResource( 4 )
+website = "markistation.passionfruit.com"
+
+[node name="button5" type="Button" parent="toolbar/hBoxContainer"]
+margin_left = 511.0
+margin_right = 682.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "Business"
+script = ExtResource( 4 )
+website = "business.passionfruit.com"
+
+[node name="button4" type="Button" parent="toolbar/hBoxContainer"]
+margin_left = 682.0
+margin_right = 853.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "Developers"
+script = ExtResource( 4 )
+website = "developers.passionfruit.com"
