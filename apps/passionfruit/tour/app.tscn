@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/bigMarkisa.png" type="Texture" id=4]
+[ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/biggerMarkisa.png" type="Texture" id=7]
+
+[node name="tour" type="Control"]
+margin_right = 789.0
+margin_bottom = 395.0
+script = ExtResource( 6 )
+WindowTitle = "Tour"
+DockIcon = ExtResource( 4 )
+SmallIcon = ExtResource( 3 )
+FullIcon = ExtResource( 7 )
+SizePercentage = Vector2( 100, 100 )
+MemoryUsage = 10
+ContentRoot = NodePath("contents")
+
+[node name="contents" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true

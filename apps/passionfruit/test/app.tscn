@@ -9,10 +9,8 @@
 [ext_resource path="res://os/assets/highPeaks/colorIcons/biggerMarkisa.png" type="Texture" id=7]
 
 [node name="EpicWindo" type="Control"]
-margin_left = 212.0
-margin_top = 107.0
-margin_right = 660.0
-margin_bottom = 454.0
+margin_right = 448.0
+margin_bottom = 347.0
 script = ExtResource( 6 )
 WindowTitle = "The Industrial Revolution and its consequences have been a disaster for the human race."
 DockIcon = ExtResource( 4 )

@@ -51,6 +51,11 @@ public class Frambos : Node
 
     public override void _Ready()
     {
+        var dir = new Directory();
+        if (dir.FileExists("user://forcemobile")) {
+            forceMobile = true;
+        }
+        
         // don't make everything ginormous on desktop
 		// there's an option to do that from the project settings but it means
 		// i don't get to see how it would look on mobile, so i prefer this
@@ -79,11 +84,6 @@ public class Frambos : Node
 			file.Open("user://yestheuserhasindeedopenedthegameforthefirsttime", File.ModeFlags.Write);
 			file.Close();
 		}
-
-        var dir = new Directory();
-        if (dir.FileExists("user://forcemobile")) {
-            forceMobile = true;
-        }
 
         oopMoment = GetTree();
 
