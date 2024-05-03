@@ -1,6 +1,7 @@
 using Godot;
 using markisa.foundation;
 using markisa.mkstoolkit;
+using passionfruit.coreapps.websites;
 using System;
 
 public class GdScriptBridge : Node
@@ -45,5 +46,20 @@ public class GdScriptBridge : Node
 
         // so it doesn't show up 856893959395090390 times
         bar.Disconnect("finished", this, nameof(WhyThough));
+    }
+
+    public void Hyperlink(Button btn, string website)
+    {
+        // find the window
+        Node parent = btn.GetParent();
+        while (!(parent is MksWindow)) {
+            parent = parent.GetParent();
+        }
+        var window = (MksWindow)parent;
+
+        // yeah
+        var addressBar = window.GetNode<AddressBar>("contents/container/sidebar/vBoxContainer/address");
+        addressBar.Text = website;
+        addressBar.Djfjsgjs(website);
     }
 }

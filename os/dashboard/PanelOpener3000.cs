@@ -13,6 +13,7 @@ public class PanelOpener3000 : Button
     Panel epicPanel;
     Vector2 from;
     Vector2 to;
+    static PanelOpener3000 lastPressed = null;
 
     public override void _Ready()
     {
@@ -73,10 +74,19 @@ public class PanelOpener3000 : Button
 
     public override void _Toggled(bool buttonPressed)
     {
+        // so you can still unselect with a ButtonGroup :)
+        if (lastPressed == this) {
+            Pressed = false;
+            lastPressed = null;
+        }
+        else {
+            lastPressed = this;
+        }
+
         SceneTreeTween tween = CreateTween();
         tween.SetParallel(true);
 
-        if (buttonPressed) {
+        if (Pressed) {
             epicPanel.RectPosition = from;
             epicPanel.Modulate = Colors.Transparent;
 

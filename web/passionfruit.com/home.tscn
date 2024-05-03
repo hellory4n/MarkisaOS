@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3" type="AudioStream" id=2]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=4]
 
 [node name="passionfruit" type="Control"]
 anchor_right = 1.0
@@ -27,3 +28,11 @@ theme_type_variation = "Toolbar"
 
 [node name="hBoxContainer" type="HBoxContainer" parent="toolbar"]
 anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="button" type="Button" parent="toolbar/hBoxContainer"]
+margin_right = 113.0
+margin_bottom = 45.0
+text = "Bee movie..."
+script = ExtResource( 4 )
+website = "beemovie.net"
