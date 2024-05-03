@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://os/dashboard/AppLauncher.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/email/dockicon.png" type="Texture" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://apps/passionfruit/bank/dockicon.png" type="Texture" id=17]
 [ext_resource path="res://os/mkstoolkit/WindowOpener.gd" type="Script" id=18]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/bigMarkisa.png" type="Texture" id=19]
+[ext_resource path="res://os/dashboard/tutorial/nextButton1.gd" type="Script" id=20]
+[ext_resource path="res://os/dashboard/tutorial/nextButton2.gd" type="Script" id=21]
 [ext_resource path="res://os/dashboard/quickSettings/UserDisplayBullshit.cs" type="Script" id=22]
 [ext_resource path="res://os/assets/userIcons/football.png" type="Texture" id=23]
 [ext_resource path="res://os/assets/highPeaks/icons/logout.png" type="Texture" id=24]
@@ -37,6 +39,7 @@
 [ext_resource path="res://os/assets/highPeaks/icons/selectWindow.png" type="Texture" id=37]
 [ext_resource path="res://os/dashboard/showActivitiesLol.gd" type="Script" id=38]
 [ext_resource path="res://os/dashboard/Activities.cs" type="Script" id=39]
+[ext_resource path="res://os/dashboard/tutorial/nextButton3.gd" type="Script" id=40]
 [ext_resource path="res://os/dashboard/MarkisaButton.cs" type="Script" id=41]
 [ext_resource path="res://os/dashboard/TimeDashboardPanel.cs" type="Script" id=47]
 [ext_resource path="res://os/dashboard/MoneyDashboardPanel.cs" type="Script" id=48]
@@ -979,6 +982,173 @@ margin_bottom = 42.0
 size_flags_horizontal = 3
 text = "Continue"
 script = ExtResource( 27 )
+
+[node name="tutorial" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="1" type="Control" parent="tutorial"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/1"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 495.0
+margin_bottom = 257.0
+rect_min_size = Vector2( 445, 0 )
+
+[node name="label" type="Label" parent="tutorial/1/start"]
+margin_right = 445.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Welcome to MarkisaOS Me"
+
+[node name="label2" type="Label" parent="tutorial/1/start"]
+margin_top = 49.0
+margin_right = 445.0
+margin_bottom = 154.0
+text = "MarkisaOS: Productivity, efficiency, personalized to you.
+
+This short guide will help you learn everything you need to
+know to get started with MarkisaOS."
+
+[node name="button" type="Button" parent="tutorial/1/start"]
+margin_top = 162.0
+margin_right = 445.0
+margin_bottom = 207.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Next"
+script = ExtResource( 20 )
+
+[node name="2desktop" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/2desktop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 500.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/2desktop/bg"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 299.0
+margin_bottom = 207.0
+
+[node name="label" type="Label" parent="tutorial/2desktop/bg/start"]
+margin_right = 249.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Sticky notes"
+
+[node name="label2" type="Label" parent="tutorial/2desktop/bg/start"]
+margin_top = 49.0
+margin_right = 249.0
+margin_bottom = 104.0
+text = "Here you can remind yourself of
+important things."
+
+[node name="button" type="Button" parent="tutorial/2desktop/bg/start"]
+margin_top = 112.0
+margin_right = 249.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Next"
+script = ExtResource( 21 )
+
+[node name="3desktop" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/3desktop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -450.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/3desktop/bg"]
+anchor_right = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -50.0
+margin_bottom = 157.0
+
+[node name="label" type="Label" parent="tutorial/3desktop/bg/start"]
+margin_right = 303.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Quick settings"
+
+[node name="label2" type="Label" parent="tutorial/3desktop/bg/start"]
+margin_top = 49.0
+margin_right = 303.0
+margin_bottom = 79.0
+text = "Here you can quickly tweak settings."
+autowrap = true
+
+[node name="button" type="Button" parent="tutorial/3desktop/bg/start"]
+margin_top = 87.0
+margin_right = 303.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Next"
+script = ExtResource( 40 )
+
+[node name="4desktop" type="Control" parent="tutorial"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="bg" type="ColorRect" parent="tutorial/4desktop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 500.0
+color = Color( 0, 0, 0, 0.686275 )
+
+[node name="start" type="VBoxContainer" parent="tutorial/4desktop/bg"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 299.0
+margin_bottom = 207.0
+
+[node name="label" type="Label" parent="tutorial/4desktop/bg/start"]
+margin_right = 275.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Dock"
+
+[node name="label2" type="Label" parent="tutorial/4desktop/bg/start"]
+margin_top = 49.0
+margin_right = 275.0
+margin_bottom = 104.0
+text = "Here you can launch applications as
+well as launching them."
+
+[node name="button" type="Button" parent="tutorial/4desktop/bg/start"]
+margin_top = 112.0
+margin_right = 275.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "Next"
 
 [connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer/HSlider" method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer2/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer2/HSlider" method="_on_HSlider_value_changed"]
