@@ -99,7 +99,7 @@ msgstr "Mostrar área de trabalho"
 
 #: os/dashboard/dashboard.tscn
 msgid "Quick settings"
-msgstr "Configurações rápidos"
+msgstr "Configurações rápidas"
 
 #: os/dashboard/dashboard.tscn
 msgid "Your money"

@@ -1070,7 +1070,7 @@ margin_bottom = 207.0
 margin_right = 249.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
-text = "Sticky notes"
+text = "Notes"
 
 [node name="label2" type="Label" parent="tutorial/2desktop/bg/start"]
 margin_top = 49.0
@@ -1271,7 +1271,7 @@ margin_bottom = 207.0
 margin_right = 249.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
-text = "Sticky notes"
+text = "Notes"
 
 [node name="label2" type="Label" parent="tutorial/2mobile/bg/start"]
 margin_top = 49.0

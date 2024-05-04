@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: os/dashboard/dashboard.tscn
+msgid "Welcome to MarkisaOS Me"
+msgstr "Bem-vindo ao MarkisaOS Me."
+
+#: os/dashboard/dashboard.tscn
+msgid "This short guide will help you learn everything you need to know to get started with MarkisaOS."
+msgstr "Este breve guia irá te ajudar a aprender tudo que você precisa saber para começar a usar o MarkisaOS."
+
+#: os/dashboard/dashboard.tscn
+msgid "Notes"
+msgstr "Notas"
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can remind yourself of important things."
+msgstr "Aqui você pode se lembrar de coisas importantes."
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can quickly tweak settings."
+msgstr "Aqui você pode ajustar as configurações."
+
+#: os/dashboard/dashboard.tscn
+msgid "Next"
+msgstr "Próximo"
+
+# this shouldn't be a literal translation, just come up with a dumb name for the stuff at the left of the screen
+#: os/dashboard/dashboard.tscn
+msgid "Dock"
+msgstr "Barra de tarefas"
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can switch between applications as well as launching them."
+msgstr "Aqui você pode alternar entre aplicativos e também abrir eles."
+
+#: os/dashboard/dashboard.tscn
+msgid "Thanks for choosing MarkisaOS Me"
+msgstr "Obrigado por escolher MarkisaOS Me"
+
+#: os/dashboard/dashboard.tscn
+msgid "For more information, check out passionfruit.com."
+msgstr "Para mais informações, visite passionfruit.com."
+
+#: os/dashboard/dashboard.tscn
+msgid "Finish"
+msgstr "Terminar"
+
+#: os/dashboard/dashboard.tscn
+msgid "You can switch between applications using the button with 2 squares, as well as launching them with the button with a grid of circles. The home button hides all apps, so you can see the time, date, and your money."
+msgstr "Você pode alternar entre aplicativos usando o botão com 2 quadrados, e abrir aplicativos com o botão com uma grade de círculos. O botão com uma casa esconde todos os aplicativos, revelando o tempo, a data, e o seu dinheiro."
