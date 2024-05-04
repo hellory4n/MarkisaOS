@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: os/dashboard/dashboard.tscn
+msgid "Welcome to MarkisaOS Me"
+msgstr "Selamat datang di MarkisaOS Me"
+
+#: os/dashboard/dashboard.tscn
+msgid "This short guide will help you learn everything you need to know to get started with MarkisaOS."
+msgstr "Panduan singkat ini akan membantu Anda untuk mempelajari semua yang perlu Anda tahu untuk memulai dengan MarkisaOS."
+
+#: os/dashboard/dashboard.tscn
+msgid "Notes"
+msgstr "Catatan"
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can remind yourself of important things."
+msgstr "Disini Anda bisa mengingatkan diri Anda dari hal-hal penting."
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can quickly tweak settings."
+msgstr "Disini Anda bisa mengubah pengaturan dengan cepat."
+
+#: os/dashboard/dashboard.tscn
+msgid "Next"
+msgstr "Selanjutnya"
+
+# this shouldn't be a literal translation, just come up with a dumb name for the stuff at the left of the screen
+#: os/dashboard/dashboard.tscn
+msgid "Dock"
+msgstr "Dok"
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can switch between applications as well as launching them."
+msgstr "Disini Anda bisa mengganti aplikasi sekaligus untuk menjalankannya."
+
+#: os/dashboard/dashboard.tscn
+msgid "Thanks for choosing MarkisaOS Me"
+msgstr "Terima kasih telah memilih MarkisaOS Me"
+
+#: os/dashboard/dashboard.tscn
+msgid "For more information, check out passionfruit.com."
+msgstr "Untuk informasi yang lainnya, kunjungi passionfruit.com."
+
+#: os/dashboard/dashboard.tscn
+msgid "Finish"
+msgstr "Selesai"
+
+#: os/dashboard/dashboard.tscn
+msgid "You can switch between applications using the button with 2 squares, as well as launching them with the button with a grid of circles. The home button hides all apps, so you can see the time, date, and your money."
+msgstr "Anda bisa mengganti aplikasi dengan menggunakan tombol dengan 2 kotak, dan juga menjalankannya dengan tombol dengan lingkaran-lingkaran yang berderet. Tombol beranda menyembunyikan semua aplikasi, jadi Anda bisa melihat waktu, tanggal, dan jumlah uang Anda."

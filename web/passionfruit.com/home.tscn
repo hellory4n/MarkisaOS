@@ -10,7 +10,9 @@
 [node name="passionfruit" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -214.0
 rect_clip_content = true
+size_flags_horizontal = 3
 script = ExtResource( 1 )
 Title = "Passionfruit Corporation"
 Description = "The official website for Passionfruit."
@@ -29,12 +31,12 @@ anchor_bottom = 1.0
 margin_top = 45.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
-margin_right = 482.0
+margin_right = 639.0
 margin_bottom = 278.0
 size_flags_horizontal = 3
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
-margin_right = 853.0
+margin_right = 639.0
 margin_bottom = 240.0
 rect_min_size = Vector2( 0, 240 )
 texture = ExtResource( 6 )
@@ -70,7 +72,7 @@ align = 1
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_top = 248.0
-margin_right = 853.0
+margin_right = 639.0
 margin_bottom = 278.0
 text = "Copyright © 2071 Passionfruit Corporation. All rights reserved."
 align = 1
@@ -88,7 +90,7 @@ custom_constants/separation = 0
 alignment = 1
 
 [node name="button" type="Button" parent="toolbar/hBoxContainer"]
-margin_right = 170.0
+margin_right = 127.0
 margin_bottom = 45.0
 size_flags_horizontal = 3
 theme_type_variation = "ToolbarButton"
@@ -97,8 +99,8 @@ script = ExtResource( 4 )
 website = "passionfruit.com"
 
 [node name="button2" type="Button" parent="toolbar/hBoxContainer"]
-margin_left = 170.0
-margin_right = 341.0
+margin_left = 127.0
+margin_right = 255.0
 margin_bottom = 45.0
 size_flags_horizontal = 3
 theme_type_variation = "ToolbarButton"
@@ -107,8 +109,8 @@ script = ExtResource( 4 )
 website = "markisa.passionfruit.com"
 
 [node name="button3" type="Button" parent="toolbar/hBoxContainer"]
-margin_left = 341.0
-margin_right = 511.0
+margin_left = 255.0
+margin_right = 383.0
 margin_bottom = 45.0
 size_flags_horizontal = 3
 theme_type_variation = "ToolbarButton"
@@ -117,8 +119,8 @@ script = ExtResource( 4 )
 website = "markistation.passionfruit.com"
 
 [node name="button5" type="Button" parent="toolbar/hBoxContainer"]
-margin_left = 511.0
-margin_right = 682.0
+margin_left = 383.0
+margin_right = 511.0
 margin_bottom = 45.0
 size_flags_horizontal = 3
 theme_type_variation = "ToolbarButton"
@@ -127,8 +129,8 @@ script = ExtResource( 4 )
 website = "business.passionfruit.com"
 
 [node name="button4" type="Button" parent="toolbar/hBoxContainer"]
-margin_left = 682.0
-margin_right = 853.0
+margin_left = 511.0
+margin_right = 639.0
 margin_bottom = 45.0
 size_flags_horizontal = 3
 theme_type_variation = "ToolbarButton"
