@@ -1,4 +1,5 @@
 extends Button
+class_name MksHyperlink
 
 export var website := "example.com"
 

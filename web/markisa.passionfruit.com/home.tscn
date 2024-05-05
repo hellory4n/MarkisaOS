@@ -16,7 +16,6 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -214.0
-rect_clip_content = true
 size_flags_horizontal = 3
 script = ExtResource( 1 )
 Title = "MarkisaOS"
@@ -38,7 +37,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 1223.0
+margin_bottom = 1331.0
 size_flags_horizontal = 3
 alignment = 1
 
@@ -292,7 +291,7 @@ margin_bottom = 64.5
 margin_right = 450.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
-text = "More apps that you can count"
+text = "More apps than you can count"
 align = 1
 
 [node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/vBoxContainer"]
@@ -301,9 +300,35 @@ margin_right = 450.0
 margin_bottom = 104.0
 rect_min_size = Vector2( 450, 0 )
 size_flags_horizontal = 4
-text = "MarkisaOS has a wide ecosystem of apps for everything you could imagine."
+text = "MarkisaOS has a wide ecosystem of apps for everything you could ever imagine."
 align = 1
 autowrap = true
+
+[node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
+margin_top = 1231.0
+margin_right = 633.0
+margin_bottom = 1331.0
+rect_min_size = Vector2( 0, 100 )
+color = Color( 0.0117647, 0.0196078, 0.0392157, 1 )
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/footer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -48.0
+margin_right = 502.0
+text = "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+align = 2
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/footer"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -80.0
+margin_right = 502.0
+margin_bottom = -32.0
+text = "idfk"
 
 [node name="toolbar" type="Panel" parent="."]
 anchor_right = 1.0

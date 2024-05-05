@@ -15,6 +15,11 @@ _global_script_classes=[ {
 "path": "res://os/kickstart/network/conversation.gd"
 }, {
 "base": "Button",
+"class": "MksHyperlink",
+"language": "GDScript",
+"path": "res://os/mkstoolkit/MksHyperlink.gd"
+}, {
+"base": "Button",
 "class": "MksPopupHide",
 "language": "GDScript",
 "path": "res://os/mkstoolkit/MksPopupHide.gd"
@@ -41,6 +46,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "MksConversation": "",
+"MksHyperlink": "",
 "MksPopupHide": "",
 "MksPopupShow": "",
 "ParadoxBar": "",

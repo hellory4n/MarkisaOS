@@ -110,6 +110,10 @@ public class WebTabs : VBoxContainer
 
         // commit some shitfuckery :D
         Webview wideWorldOfWeb = packed.Instance<Webview>();
+        wideWorldOfWeb.AnchorRight = 1;
+        wideWorldOfWeb.AnchorBottom = 1;
+        wideWorldOfWeb.MarginRight = 0;
+        wideWorldOfWeb.RectClipContent = true;
         Webview webviewThatWillDie = EpicTabs[ActiveBullshit];
         webviewThatWillDie.QueueFree();
         the.AddChild(wideWorldOfWeb);
