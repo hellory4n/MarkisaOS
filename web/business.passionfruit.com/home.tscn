@@ -18,6 +18,7 @@ Description = "The official website for Passionfruit."
 Tags = PoolStringArray( "company", "passionfruit", "markisa", "computers", "os", "software", "business", "developer", "government_partner" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 2 )
+TranslationPot = "res://locale/english/web/passionfruit.com.pot"
 
 [node name="background" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -32,7 +33,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 620.0
+margin_bottom = 570.0
 size_flags_horizontal = 3
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
@@ -117,10 +118,11 @@ autowrap = true
 margin_top = 416.0
 margin_right = 633.0
 margin_bottom = 446.0
-text = "Jobs available for software engineer, computer engineer"
+text = "Loading..."
 align = 1
 
 [node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer"]
+visible = false
 margin_left = 216.0
 margin_top = 454.0
 margin_right = 416.0
@@ -134,16 +136,16 @@ website = "business.passionfruit.com/jobs.tscn"
 
 [node name="hSeparator10" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 504.0
+margin_top = 454.0
 margin_right = 620.0
-margin_bottom = 512.0
+margin_bottom = 462.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
-margin_top = 520.0
+margin_top = 470.0
 margin_right = 633.0
-margin_bottom = 620.0
+margin_bottom = 570.0
 rect_min_size = Vector2( 0, 100 )
 color = Color( 0.0117647, 0.0196078, 0.0392157, 1 )
 

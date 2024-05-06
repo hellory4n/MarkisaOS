@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3" type="AudioStream" id=2]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=4]
-[ext_resource path="res://web/passionfruit.com/assets/markistationU5.png" type="Texture" id=5]
+[ext_resource path="res://web/passionfruit.com/assets/markistationHome.png" type="Texture" id=5]
+[ext_resource path="res://web/passionfruit.com/assets/markistationProfessional.png" type="Texture" id=6]
+[ext_resource path="res://web/passionfruit.com/assets/markistationWorkstation.png" type="Texture" id=7]
 [ext_resource path="res://web/passionfruit.com/assets/markistation.png" type="Texture" id=12]
 
 [node name="markisa" type="Control"]
@@ -15,9 +17,10 @@ size_flags_horizontal = 3
 script = ExtResource( 1 )
 Title = "Markistation"
 Description = "The official website for Passionfruit's Markistations."
-Tags = PoolStringArray( "company", "passionfruit", "markisa", "computers" )
+Tags = PoolStringArray( "company", "markisa", "computers" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 2 )
+TranslationPot = "res://locale/english/web/markistation.passionfruit.com.pot"
 
 [node name="translationNotes" type="Node" parent="."]
 __meta__ = {
@@ -163,7 +166,7 @@ custom_constants/separation = 0
 margin_right = 200.0
 margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 expand = true
 stretch_mode = 6
 
@@ -196,7 +199,7 @@ custom_constants/separation = 0
 margin_right = 200.0
 margin_bottom = 96.0
 rect_min_size = Vector2( 96, 96 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 
@@ -280,7 +283,7 @@ margin_right = 566.0
 margin_bottom = 164.0
 rect_min_size = Vector2( 500, 0 )
 size_flags_horizontal = 4
-text = "3. 2071 Markistations feature cutting-edge security technology"
+text = "4. 2071 Markistations feature cutting-edge security technology"
 align = 1
 autowrap = true
 

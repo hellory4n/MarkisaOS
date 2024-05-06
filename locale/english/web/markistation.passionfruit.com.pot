@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Markistation"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "The official website for Passionfruit's Markistations."
+msgstr ""
+
+# this is a website tag
+#: web/markistation.passionfruit.com/home.tscn
+msgid "company"
+msgstr ""
+
+# this is a website tag
+#: web/markistation.passionfruit.com/home.tscn
+msgid "markisa"
+msgstr ""
+
+# this is a website tag
+#: web/markistation.passionfruit.com/home.tscn
+msgid "computers"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Unlock your mind."
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Markistations are the #1 mind-controlled computers."
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Explore the lineup"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Markistations can be bought on the Marketplace app."
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Home​"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Everyday tasks for casual users"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Workstation"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Studenets and offices"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Professional"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Gaming and professional workloads"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Why 2071 Markistations are the best option"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "1. Markistations run MarkisaOS, more information at markistation.passionfruit.com"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "2. 2071 Markistations are the fastest Markistations to date"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "3. 2071 Markistations are built durable and resistant materials"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "4. 2071 Markistations feature cutting-edge security technology"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Still using MarkisaBoxes?"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "1. MarkisaBoxes are discontinued and stuck on old software"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "2. Markistations are faster and more secure"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "3. Getting a Markistation moves the world towards the future"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "4. The security of Markistations are now better than ever"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Passionfruit"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "MarkisaOS"
+msgstr ""
+
+# this one is different, it's in plural form
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Markistations"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Business"
+msgstr ""
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Developers"
+msgstr ""

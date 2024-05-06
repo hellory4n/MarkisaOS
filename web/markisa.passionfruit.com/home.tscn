@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3" type="AudioStream" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://web/passionfruit.com/assets/markisaOsScreenshot4.png" type="Texture" id=9]
 [ext_resource path="res://web/passionfruit.com/assets/aLotOfApps.png" type="Texture" id=10]
 [ext_resource path="res://web/passionfruit.com/assets/markisaOsScreenshot3.png" type="Texture" id=11]
+[ext_resource path="res://os/assets/bootloader/onboardingWallpaper.png" type="Texture" id=12]
 
 [node name="markisa" type="Control"]
 anchor_right = 1.0
@@ -23,6 +24,7 @@ Description = "The official website for Passionfruit MarkisaOS."
 Tags = PoolStringArray( "company", "passionfruit", "markisa", "computers", "os", "software" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 2 )
+TranslationPot = "res://locale/english/web/markisa.passionfruit.com.pot"
 
 [node name="background" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -37,7 +39,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 1331.0
+margin_bottom = 1419.0
 size_flags_horizontal = 3
 alignment = 1
 
@@ -46,116 +48,125 @@ modulate = Color( 1, 1, 1, 0 )
 margin_right = 633.0
 margin_bottom = 8.0
 
-[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+[node name="textureRect3" type="TextureRect" parent="scrollContainer/vBoxContainer"]
 margin_top = 16.0
 margin_right = 633.0
-margin_bottom = 168.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 0, 240 )
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 7
+
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/textureRect3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 28
 alignment = 1
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 63.0
-margin_right = 334.0
-margin_bottom = 152.0
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer"]
+margin_left = 53.0
+margin_right = 324.0
+margin_bottom = 240.0
 rect_min_size = Vector2( 271, 152 )
 texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 script = ExtResource( 7 )
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 342.0
-margin_right = 569.0
-margin_bottom = 152.0
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer"]
+margin_left = 352.0
+margin_right = 579.0
+margin_bottom = 240.0
 alignment = 1
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
-margin_top = 4.0
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+margin_top = 48.0
 margin_right = 227.0
-margin_bottom = 62.0
+margin_bottom = 106.0
 rect_min_size = Vector2( 227, 58 )
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 5
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
-margin_top = 70.0
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+margin_top = 114.0
 margin_right = 227.0
-margin_bottom = 147.0
+margin_bottom = 191.0
 theme_type_variation = "Header"
 text = "The ultimate operating system."
 autowrap = true
 
 [node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 176.0
+margin_top = 264.0
 margin_right = 620.0
-margin_bottom = 184.0
+margin_bottom = 272.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 192.0
+margin_top = 280.0
 margin_right = 633.0
-margin_bottom = 233.0
+margin_bottom = 321.0
 theme_type_variation = "Header"
 text = "MarkisaOS Me is out!"
 align = 1
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 241.0
+margin_top = 329.0
 margin_right = 633.0
-margin_bottom = 271.0
+margin_bottom = 359.0
 text = "Enjoy the latest and greatest version of an already great operating system."
 align = 1
 
 [node name="button" type="Button" parent="scrollContainer/vBoxContainer"]
 margin_left = 141.0
-margin_top = 279.0
+margin_top = 367.0
 margin_right = 491.0
-margin_bottom = 321.0
+margin_bottom = 409.0
 rect_min_size = Vector2( 350, 0 )
 size_flags_horizontal = 4
 disabled = true
 text = "Download MarkisaOS Me - 12.5 GB"
 
 [node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 329.0
+margin_top = 417.0
 margin_right = 633.0
-margin_bottom = 359.0
+margin_bottom = 447.0
 text = "You already have MarkisaOS Me!"
 align = 1
 
 [node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 367.0
+margin_top = 455.0
 margin_right = 620.0
-margin_bottom = 375.0
+margin_bottom = 463.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 383.0
+margin_top = 471.0
 margin_right = 633.0
-margin_bottom = 424.0
+margin_bottom = 512.0
 theme_type_variation = "Header"
 text = "A familiar interface"
 align = 1
 
 [node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_left = 91.0
-margin_top = 432.0
+margin_top = 520.0
 margin_right = 541.0
-margin_bottom = 487.0
+margin_bottom = 575.0
 rect_min_size = Vector2( 450, 0 )
 size_flags_horizontal = 4
-text = "MarkisaOS is designed to be used, and with MarkisaOS it has become even easier."
+text = "MarkisaOS is designed to be used, and with MarkisaOS Me it has become even easier."
 align = 1
 autowrap = true
 
 [node name="hBoxContainer2" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
-margin_top = 495.0
+margin_top = 583.0
 margin_right = 633.0
-margin_bottom = 602.0
+margin_bottom = 690.0
 alignment = 1
 
 [node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
@@ -187,17 +198,17 @@ stretch_mode = 6
 
 [node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 610.0
+margin_top = 698.0
 margin_right = 620.0
-margin_bottom = 618.0
+margin_bottom = 706.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-margin_top = 626.0
+margin_top = 714.0
 margin_right = 633.0
-margin_bottom = 811.0
+margin_bottom = 899.0
 rect_min_size = Vector2( 0, 185 )
 size_flags_horizontal = 3
 texture = ExtResource( 8 )
@@ -233,25 +244,25 @@ autowrap = true
 
 [node name="hSeparator5" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 819.0
+margin_top = 907.0
 margin_right = 620.0
-margin_bottom = 827.0
+margin_bottom = 915.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="label6" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 835.0
+margin_top = 923.0
 margin_right = 633.0
-margin_bottom = 876.0
+margin_bottom = 964.0
 theme_type_variation = "Header"
 text = "Reliable & Secure"
 align = 1
 
 [node name="label7" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_left = 91.0
-margin_top = 884.0
+margin_top = 972.0
 margin_right = 541.0
-margin_bottom = 1014.0
+margin_bottom = 1102.0
 rect_min_size = Vector2( 450, 0 )
 size_flags_horizontal = 4
 text = "MarkisaOS Me is built on 60 years of stability of the Frambos core foundation. In these years, we have developed advanced features to protect your computer. MarkisaOS is used everywhere, from the military to the homes of people like you."
@@ -260,17 +271,17 @@ autowrap = true
 
 [node name="hSeparator6" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 1022.0
+margin_top = 1110.0
 margin_right = 620.0
-margin_bottom = 1030.0
+margin_bottom = 1118.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.270588 )
-margin_top = 1038.0
+margin_top = 1126.0
 margin_right = 633.0
-margin_bottom = 1223.0
+margin_bottom = 1311.0
 rect_min_size = Vector2( 0, 185 )
 size_flags_horizontal = 3
 texture = ExtResource( 10 )
@@ -305,9 +316,9 @@ align = 1
 autowrap = true
 
 [node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
-margin_top = 1231.0
+margin_top = 1319.0
 margin_right = 633.0
-margin_bottom = 1331.0
+margin_bottom = 1419.0
 rect_min_size = Vector2( 0, 100 )
 color = Color( 0.0117647, 0.0196078, 0.0392157, 1 )
 

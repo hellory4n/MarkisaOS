@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS"
+msgstr ""
+
+# this is a website tag
+#: web/markisa.passionfruit.com/home.tscn
+msgid "company"
+msgstr ""
+
+# this is a website tag
+#: web/markisa.passionfruit.com/home.tscn
+msgid "markisa"
+msgstr ""
+
+# this is a website tag
+#: web/markisa.passionfruit.com/home.tscn
+msgid "computers"
+msgstr ""
+
+# this is a website tag
+# os = operating system
+#: web/markisa.passionfruit.com/home.tscn
+msgid "os"
+msgstr ""
+
+# this is a website tag
+#: web/markisa.passionfruit.com/home.tscn
+msgid "software"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "The official website for Passionfruit MarkisaOS."
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "The ultimate operating system."
+msgstr ""
+
+# "Me" is the version, like how there's windows XP, windows vista, windows 7, etc
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS Me is out!"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Enjoy the latest and greatest version of an already great operating system."
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Download MarkisaOS Me - 12.5 GB"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "You already have MarkisaOS Me!"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "A familiar interface"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS is designed to be used, and with MarkisaOS Me it has become even easier."
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Less waiting. More speed."
+msgstr ""
+
+# ultranet is a made up term
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS Me runs lighting quick. Apps open fast, and MarkisaOS supports Ultranet technology for even faster internet speeds."
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Reliable & Secure"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS Me is built on 60 years of stability of the Frambos core foundation. In these years, we have developed advanced features to protect your computer. MarkisaOS is used everywhere, from the military to the homes of people like you."
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "More apps than you can count"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS has a wide ecosystem of apps for everything you could ever imagine."
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Passionfruit"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS"
+msgstr ""
+
+# this one is different, it's in plural form
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Markistations"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Business"
+msgstr ""
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Developers"
+msgstr ""

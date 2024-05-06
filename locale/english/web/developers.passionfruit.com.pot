@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Passionfruit Developers"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Get the MarkisaOS SDK"
+msgstr ""
+
+# this is a website tag
+#: web/developers.passionfruit.com/home.tscn
+msgid "company"
+msgstr ""
+
+# this is a website tag
+#: web/developers.passionfruit.com/home.tscn
+msgid "markisa"
+msgstr ""
+
+# this is a website tag
+#: web/developers.passionfruit.com/home.tscn
+msgid "computers"
+msgstr ""
+
+# this is a website tag
+# os = operating system
+#: web/developers.passionfruit.com/home.tscn
+msgid "os"
+msgstr ""
+
+# this is a website tag
+#: web/developers.passionfruit.com/home.tscn
+msgid "software"
+msgstr ""
+
+# this is a website tag
+#: web/developers.passionfruit.com/home.tscn
+msgid "business"
+msgstr ""
+
+# this is a website tag
+#: web/developers.passionfruit.com/home.tscn
+msgid "developer"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Software Development Kit"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "MarkisaOS Next"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Test the future of MarkisaOS."
+msgstr ""
+
+# download stuff
+#: web/developers.passionfruit.com/home.tscn
+msgid "MarkisaOS_Vision_v8.0.beta162.mpkg - 18 GB"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Device unsupported."
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "MarkisaOS SDK"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Develop applications for MarkisaOS"
+msgstr ""
+
+# download stuff
+#: web/developers.passionfruit.com/home.tscn
+msgid "MksMeSdkInstall.mpkg - 30 GB"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "MksVisionSdkInstall.mpkg - 35 GB"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Passionfruit"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "MarkisaOS"
+msgstr ""
+
+# this one is different, it's in plural form
+#: web/developers.passionfruit.com/home.tscn
+msgid "Markistations"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Business"
+msgstr ""
+
+#: web/developers.passionfruit.com/home.tscn
+msgid "Developers"
+msgstr ""
