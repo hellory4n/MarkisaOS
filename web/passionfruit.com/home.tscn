@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3" type="AudioStream" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://web/passionfruit.com/assets/bg.png" type="Texture" id=6]
 [ext_resource path="res://os/assets/bootloader/logo.png" type="Texture" id=7]
 [ext_resource path="res://os/assets/bootloader/onboardingWallpaper.png" type="Texture" id=8]
+[ext_resource path="res://web/passionfruit.com/assets/markistationU5.png" type="Texture" id=9]
+[ext_resource path="res://web/passionfruit.com/assets/reallyCoolRgbLights.png" type="Texture" id=10]
 
 [node name="passionfruit" type="Control"]
 anchor_right = 1.0
@@ -34,7 +36,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 573.0
+margin_bottom = 758.0
 size_flags_horizontal = 3
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
@@ -80,84 +82,23 @@ margin_bottom = 256.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
-[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer"]
-self_modulate = Color( 1, 1, 1, 0.752941 )
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer"]
 margin_top = 264.0
 margin_right = 633.0
-margin_bottom = 449.0
-rect_min_size = Vector2( 0, 185 )
-size_flags_horizontal = 3
-texture = ExtResource( 8 )
-expand = true
-stretch_mode = 7
-
-[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/textureRect2"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -176.0
-margin_top = -60.5
-margin_right = 176.0
-margin_bottom = 60.5
-
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect2/hBoxContainer"]
-margin_right = 100.0
-margin_bottom = 121.0
-rect_min_size = Vector2( 100, 100 )
-texture = ExtResource( 7 )
-expand = true
-stretch_mode = 6
-
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect2/hBoxContainer"]
-margin_left = 108.0
-margin_right = 352.0
-margin_bottom = 121.0
+margin_bottom = 634.0
 custom_constants/separation = 0
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
-margin_right = 244.0
-margin_bottom = 41.0
-theme_type_variation = "Header"
-text = "MarkisaOS"
-
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
-margin_top = 41.0
-margin_right = 244.0
-margin_bottom = 71.0
-text = "The ultimate operating system."
-
-[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 71.0
-margin_right = 3.0
-margin_bottom = 79.0
-size_flags_horizontal = 0
-
-[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
-margin_top = 79.0
-margin_right = 200.0
-margin_bottom = 121.0
-rect_min_size = Vector2( 200, 0 )
-size_flags_horizontal = 0
-theme_type_variation = "Secondary"
-text = "More information"
-script = ExtResource( 4 )
-website = "markisa.passionfruit.com"
-
-[node name="textureRect3" type="TextureRect" parent="scrollContainer/vBoxContainer"]
-visible = false
+[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer/vBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.752941 )
-margin_top = 457.0
 margin_right = 633.0
-margin_bottom = 642.0
+margin_bottom = 185.0
 rect_min_size = Vector2( 0, 185 )
 size_flags_horizontal = 3
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 7
 
-[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/textureRect3"]
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -167,7 +108,7 @@ margin_top = -60.5
 margin_right = 176.0
 margin_bottom = 60.5
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer"]
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer"]
 margin_right = 100.0
 margin_bottom = 121.0
 rect_min_size = Vector2( 100, 100 )
@@ -175,32 +116,98 @@ texture = ExtResource( 7 )
 expand = true
 stretch_mode = 6
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer"]
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer"]
 margin_left = 108.0
 margin_right = 352.0
 margin_bottom = 121.0
 custom_constants/separation = 0
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
 margin_right = 244.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "MarkisaOS"
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
 margin_top = 41.0
 margin_right = 244.0
 margin_bottom = 71.0
 text = "The ultimate operating system."
 
-[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 71.0
 margin_right = 3.0
 margin_bottom = 79.0
 size_flags_horizontal = 0
 
-[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
+margin_top = 79.0
+margin_right = 200.0
+margin_bottom = 121.0
+rect_min_size = Vector2( 200, 0 )
+mouse_filter = 1
+size_flags_horizontal = 0
+theme_type_variation = "Secondary"
+text = "More information"
+script = ExtResource( 4 )
+website = "markisa.passionfruit.com"
+
+[node name="textureRect3" type="TextureRect" parent="scrollContainer/vBoxContainer/vBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0.415686 )
+margin_top = 185.0
+margin_right = 633.0
+margin_bottom = 370.0
+rect_min_size = Vector2( 0, 185 )
+size_flags_horizontal = 3
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 7
+
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -187.0
+margin_top = -60.5
+margin_right = 187.0
+margin_bottom = 60.5
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer"]
+margin_right = 100.0
+margin_bottom = 121.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer"]
+margin_left = 108.0
+margin_right = 374.0
+margin_bottom = 121.0
+custom_constants/separation = 0
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+margin_right = 266.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "Markistation"
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+margin_top = 41.0
+margin_right = 266.0
+margin_bottom = 71.0
+text = "The #1 mind-controlled computers"
+
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 71.0
+margin_right = 3.0
+margin_bottom = 79.0
+size_flags_horizontal = 0
+
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
 margin_top = 79.0
 margin_right = 200.0
 margin_bottom = 121.0
@@ -209,20 +216,20 @@ size_flags_horizontal = 0
 theme_type_variation = "Secondary"
 text = "More information"
 script = ExtResource( 4 )
-website = "markisa.passionfruit.com"
+website = "markistation.passionfruit.com"
 
 [node name="hSeparator10" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 457.0
+margin_top = 642.0
 margin_right = 620.0
-margin_bottom = 465.0
+margin_bottom = 650.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
-margin_top = 473.0
+margin_top = 658.0
 margin_right = 633.0
-margin_bottom = 573.0
+margin_bottom = 758.0
 rect_min_size = Vector2( 0, 100 )
 color = Color( 0.0117647, 0.0196078, 0.0392157, 1 )
 

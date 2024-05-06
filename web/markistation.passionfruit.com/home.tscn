@@ -1,16 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3" type="AudioStream" id=2]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=4]
-[ext_resource path="res://os/assets/bootloader/logo2.png" type="Texture" id=5]
-[ext_resource path="res://web/passionfruit.com/assets/markisaOsScreenshotMobile.png" type="Texture" id=6]
-[ext_resource path="res://web/markisa.passionfruit.com/scripts/screenshot.gd" type="Script" id=7]
-[ext_resource path="res://web/passionfruit.com/assets/bg2.png" type="Texture" id=8]
-[ext_resource path="res://web/passionfruit.com/assets/markisaOsScreenshot4.png" type="Texture" id=9]
-[ext_resource path="res://web/passionfruit.com/assets/aLotOfApps.png" type="Texture" id=10]
-[ext_resource path="res://web/passionfruit.com/assets/markisaOsScreenshot3.png" type="Texture" id=11]
+[ext_resource path="res://web/passionfruit.com/assets/markistationU5.png" type="Texture" id=5]
+[ext_resource path="res://web/passionfruit.com/assets/markistation.png" type="Texture" id=12]
 
 [node name="markisa" type="Control"]
 anchor_right = 1.0
@@ -18,11 +13,16 @@ anchor_bottom = 1.0
 margin_right = -214.0
 size_flags_horizontal = 3
 script = ExtResource( 1 )
-Title = "MarkisaOS"
-Description = "The official website for Passionfruit MarkisaOS."
-Tags = PoolStringArray( "company", "passionfruit", "markisa", "computers", "os", "software" )
+Title = "Markistation"
+Description = "The official website for Passionfruit's Markistations."
+Tags = PoolStringArray( "company", "passionfruit", "markisa", "computers" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 2 )
+
+[node name="translationNotes" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "\"Home​\" has 1 zws"
+}
 
 [node name="background" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -37,7 +37,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 1331.0
+margin_bottom = 1014.0
 size_flags_horizontal = 3
 alignment = 1
 
@@ -49,265 +49,310 @@ margin_bottom = 8.0
 [node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
 margin_top = 16.0
 margin_right = 633.0
-margin_bottom = 168.0
+margin_bottom = 170.0
 alignment = 1
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 63.0
-margin_right = 334.0
-margin_bottom = 152.0
-rect_min_size = Vector2( 271, 152 )
-texture = ExtResource( 6 )
+margin_left = 108.0
+margin_right = 260.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 152, 152 )
+texture = ExtResource( 5 )
 expand = true
 stretch_mode = 6
-script = ExtResource( 7 )
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 342.0
-margin_right = 569.0
-margin_bottom = 152.0
+margin_left = 268.0
+margin_right = 524.0
+margin_bottom = 154.0
+custom_constants/separation = 0
 alignment = 1
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
-margin_top = 4.0
-margin_right = 227.0
-margin_bottom = 62.0
-rect_min_size = Vector2( 227, 58 )
-texture = ExtResource( 5 )
+margin_right = 256.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 256, 58 )
+texture = ExtResource( 12 )
 expand = true
 stretch_mode = 5
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
-margin_top = 70.0
-margin_right = 227.0
-margin_bottom = 147.0
+margin_top = 58.0
+margin_right = 256.0
+margin_bottom = 99.0
 theme_type_variation = "Header"
-text = "The ultimate operating system."
+text = "Unlock your mind."
+autowrap = true
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 99.0
+margin_right = 256.0
+margin_bottom = 154.0
+text = "Markistations are the #1 mind-controlled computers."
 autowrap = true
 
 [node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 176.0
+margin_top = 178.0
 margin_right = 620.0
-margin_bottom = 184.0
+margin_bottom = 186.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 192.0
+margin_top = 194.0
 margin_right = 633.0
-margin_bottom = 233.0
+margin_bottom = 235.0
 theme_type_variation = "Header"
-text = "MarkisaOS Me is out!"
+text = "Explore the lineup"
 align = 1
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 241.0
+margin_top = 243.0
 margin_right = 633.0
-margin_bottom = 271.0
-text = "Enjoy the latest and greatest version of an already great operating system."
+margin_bottom = 273.0
+text = "Markistations can be bought on the Marketplace app."
 align = 1
 
-[node name="button" type="Button" parent="scrollContainer/vBoxContainer"]
-margin_left = 141.0
-margin_top = 279.0
-margin_right = 491.0
-margin_bottom = 321.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 4
-disabled = true
-text = "Download MarkisaOS Me - 12.5 GB"
-
-[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 329.0
+[node name="hBoxContainer3" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 281.0
 margin_right = 633.0
-margin_bottom = 359.0
-text = "You already have MarkisaOS Me!"
+margin_bottom = 482.0
+alignment = 1
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 8.0
+margin_right = 208.0
+margin_bottom = 201.0
+custom_constants/separation = 0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
+margin_top = 96.0
+margin_right = 200.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 0, 50 )
+theme_type_variation = "Header"
+text = "Home​"
 align = 1
+valign = 2
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
+margin_top = 146.0
+margin_right = 200.0
+margin_bottom = 201.0
+rect_min_size = Vector2( 200, 0 )
+text = "Everyday tasks for casual users"
+align = 1
+autowrap = true
+
+[node name="vBoxContainer2" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 216.0
+margin_right = 416.0
+margin_bottom = 201.0
+custom_constants/separation = 0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer2"]
+margin_top = 96.0
+margin_right = 200.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 0, 50 )
+theme_type_variation = "Header"
+text = "Workstation"
+align = 1
+valign = 2
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer2"]
+margin_top = 146.0
+margin_right = 200.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 200, 0 )
+text = "Students and offices"
+align = 1
+autowrap = true
+
+[node name="vBoxContainer3" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 424.0
+margin_right = 624.0
+margin_bottom = 201.0
+custom_constants/separation = 0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer3"]
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer3"]
+margin_top = 96.0
+margin_right = 200.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 0, 50 )
+theme_type_variation = "Header"
+text = "Professional"
+align = 1
+valign = 2
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer3"]
+margin_top = 146.0
+margin_right = 200.0
+margin_bottom = 201.0
+rect_min_size = Vector2( 200, 0 )
+text = "Gaming and professional workloads"
+align = 1
+autowrap = true
 
 [node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 367.0
+margin_top = 490.0
 margin_right = 620.0
-margin_bottom = 375.0
+margin_bottom = 498.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 383.0
+margin_top = 506.0
 margin_right = 633.0
-margin_bottom = 424.0
+margin_bottom = 547.0
 theme_type_variation = "Header"
-text = "A familiar interface"
+text = "Why 2071 Markistations are the best option"
 align = 1
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_left = 91.0
-margin_top = 432.0
-margin_right = 541.0
-margin_bottom = 487.0
-rect_min_size = Vector2( 450, 0 )
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 555.0
+margin_right = 633.0
+margin_bottom = 719.0
+custom_constants/separation = -2
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer"]
+margin_left = 66.0
+margin_right = 566.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 500, 0 )
 size_flags_horizontal = 4
-text = "MarkisaOS is designed to be used, and with MarkisaOS it has become even easier."
+text = "1. Markistations run MarkisaOS, more information at markisa.passionfruit.com"
 align = 1
 autowrap = true
 
-[node name="hBoxContainer2" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
-margin_top = 495.0
-margin_right = 633.0
-margin_bottom = 602.0
-alignment = 1
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer"]
+margin_left = 66.0
+margin_top = 53.0
+margin_right = 566.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 500, 0 )
+size_flags_horizontal = 4
+text = "2. 2071 Markistations are the fastest Markistations to date"
+align = 1
+autowrap = true
 
-[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
-margin_left = 23.0
-margin_right = 213.0
-margin_bottom = 107.0
-rect_min_size = Vector2( 190, 107 )
-texture = ExtResource( 6 )
-expand = true
-stretch_mode = 6
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer"]
+margin_left = 66.0
+margin_top = 81.0
+margin_right = 566.0
+margin_bottom = 136.0
+rect_min_size = Vector2( 500, 0 )
+size_flags_horizontal = 4
+text = "3. 2071 Markistations are built with durable and resistant materials"
+align = 1
+autowrap = true
 
-[node name="textureRect3" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
-margin_left = 221.0
-margin_right = 411.0
-margin_bottom = 107.0
-rect_min_size = Vector2( 190, 107 )
-texture = ExtResource( 11 )
-expand = true
-stretch_mode = 6
-
-[node name="textureRect4" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
-margin_left = 419.0
-margin_right = 609.0
-margin_bottom = 107.0
-rect_min_size = Vector2( 190, 107 )
-texture = ExtResource( 9 )
-expand = true
-stretch_mode = 6
+[node name="label8" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer"]
+margin_left = 66.0
+margin_top = 134.0
+margin_right = 566.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 500, 0 )
+size_flags_horizontal = 4
+text = "3. 2071 Markistations feature cutting-edge security technology"
+align = 1
+autowrap = true
 
 [node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 610.0
+margin_top = 727.0
 margin_right = 620.0
-margin_bottom = 618.0
+margin_bottom = 735.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
-self_modulate = Color( 1, 1, 1, 0.498039 )
-margin_top = 626.0
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 743.0
 margin_right = 633.0
-margin_bottom = 811.0
-rect_min_size = Vector2( 0, 185 )
-size_flags_horizontal = 3
-texture = ExtResource( 8 )
-expand = true
-stretch_mode = 7
-
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -225.0
-margin_top = -64.5
-margin_right = 225.0
-margin_bottom = 64.5
-
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
-margin_right = 450.0
-margin_bottom = 41.0
+margin_bottom = 784.0
 theme_type_variation = "Header"
-text = "Less waiting. More speed."
+text = "Still using MarkisaBoxes?"
 align = 1
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
-margin_top = 49.0
-margin_right = 450.0
-margin_bottom = 129.0
-rect_min_size = Vector2( 450, 0 )
+[node name="vBoxContainer2" type="VBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 792.0
+margin_right = 633.0
+margin_bottom = 906.0
+custom_constants/separation = -2
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer2"]
+margin_left = 66.0
+margin_right = 566.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 500, 0 )
 size_flags_horizontal = 4
-text = "MarkisaOS Me runs lighting quick. Apps open fast, and MarkisaOS supports Ultranet technology for even faster internet speeds."
+text = "1. MarkisaBoxes are discontinued and stuck on old software"
 align = 1
 autowrap = true
 
-[node name="hSeparator5" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-margin_left = 13.0
-margin_top = 819.0
-margin_right = 620.0
-margin_bottom = 827.0
-rect_min_size = Vector2( 607, 0 )
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer2"]
+margin_left = 66.0
+margin_top = 28.0
+margin_right = 566.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 500, 0 )
 size_flags_horizontal = 4
-
-[node name="label6" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 835.0
-margin_right = 633.0
-margin_bottom = 876.0
-theme_type_variation = "Header"
-text = "Reliable & Secure"
-align = 1
-
-[node name="label7" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_left = 91.0
-margin_top = 884.0
-margin_right = 541.0
-margin_bottom = 1014.0
-rect_min_size = Vector2( 450, 0 )
-size_flags_horizontal = 4
-text = "MarkisaOS Me is built on 60 years of stability of the Frambos core foundation. In these years, we have developed advanced features to protect your computer. MarkisaOS is used everywhere, from the military to the homes of people like you."
+text = "2. Markistations are faster and more secure"
 align = 1
 autowrap = true
 
-[node name="hSeparator6" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-margin_left = 13.0
-margin_top = 1022.0
-margin_right = 620.0
-margin_bottom = 1030.0
-rect_min_size = Vector2( 607, 0 )
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer2"]
+margin_left = 66.0
+margin_top = 56.0
+margin_right = 566.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 500, 0 )
 size_flags_horizontal = 4
-
-[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer"]
-self_modulate = Color( 1, 1, 1, 0.270588 )
-margin_top = 1038.0
-margin_right = 633.0
-margin_bottom = 1223.0
-rect_min_size = Vector2( 0, 185 )
-size_flags_horizontal = 3
-texture = ExtResource( 10 )
-expand = true
-stretch_mode = 7
-
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect2"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -225.0
-margin_top = -64.5
-margin_right = 225.0
-margin_bottom = 64.5
-
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/vBoxContainer"]
-margin_right = 450.0
-margin_bottom = 41.0
-theme_type_variation = "Header"
-text = "More apps than you can count"
+text = "3. Getting a Markistation moves the world towards the future"
 align = 1
+autowrap = true
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/vBoxContainer"]
-margin_top = 49.0
-margin_right = 450.0
-margin_bottom = 104.0
-rect_min_size = Vector2( 450, 0 )
+[node name="label8" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer2"]
+margin_left = 66.0
+margin_top = 84.0
+margin_right = 566.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 500, 0 )
 size_flags_horizontal = 4
-text = "MarkisaOS has a wide ecosystem of apps for everything you could ever imagine."
+text = "4. The security of Markistations are now better than ever"
 align = 1
 autowrap = true
 
 [node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
-margin_top = 1231.0
+margin_top = 914.0
 margin_right = 633.0
-margin_bottom = 1331.0
+margin_bottom = 1014.0
 rect_min_size = Vector2( 0, 100 )
 color = Color( 0.0117647, 0.0196078, 0.0392157, 1 )
 
