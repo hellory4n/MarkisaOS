@@ -1,0 +1,228 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://apps/passionfruit/connect/music/garbageGoodCorporate.mp3" type="AudioStream" id=2]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=4]
+[ext_resource path="res://os/assets/bootloader/bios.png" type="Texture" id=5]
+[ext_resource path="res://web/passionfruit.com/assets/bg.png" type="Texture" id=6]
+
+[node name="passionfruit" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+Title = "Passionfruit Corporation"
+Description = "The official website for Passionfruit."
+Tags = PoolStringArray( "company", "passionfruit", "markisa", "computers", "os", "software", "business", "developer", "government_partner" )
+Icon = ExtResource( 3 )
+Music = ExtResource( 2 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.027451, 0.054902, 0.0980392, 1 )
+
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 45.0
+rect_clip_content = false
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_right = 633.0
+margin_bottom = 620.0
+size_flags_horizontal = 3
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_right = 633.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 0, 240 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 7
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -195.0
+margin_top = -58.0
+margin_right = 195.0
+margin_bottom = 58.0
+custom_constants/separation = 0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+margin_right = 390.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 390, 75 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+margin_top = 75.0
+margin_right = 390.0
+margin_bottom = 116.0
+theme_type_variation = "Header"
+text = "Powering the world."
+align = 1
+
+[node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_left = 13.0
+margin_top = 248.0
+margin_right = 620.0
+margin_bottom = 256.0
+rect_min_size = Vector2( 607, 0 )
+size_flags_horizontal = 4
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 264.0
+margin_right = 633.0
+margin_bottom = 305.0
+rect_min_size = Vector2( 500, 0 )
+theme_type_variation = "Header"
+text = "Partners"
+align = 1
+autowrap = true
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 313.0
+margin_right = 633.0
+margin_bottom = 343.0
+text = "Loading..."
+align = 1
+
+[node name="hSeparator11" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_left = 13.0
+margin_top = 351.0
+margin_right = 620.0
+margin_bottom = 359.0
+rect_min_size = Vector2( 607, 0 )
+size_flags_horizontal = 4
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 367.0
+margin_right = 633.0
+margin_bottom = 408.0
+rect_min_size = Vector2( 500, 0 )
+theme_type_variation = "Header"
+text = "Jobs"
+align = 1
+autowrap = true
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 416.0
+margin_right = 633.0
+margin_bottom = 446.0
+text = "Jobs available for software engineer, computer engineer"
+align = 1
+
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 216.0
+margin_top = 454.0
+margin_right = 416.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "Apply"
+script = ExtResource( 4 )
+website = "business.passionfruit.com/jobs.tscn"
+
+[node name="hSeparator10" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_left = 13.0
+margin_top = 504.0
+margin_right = 620.0
+margin_bottom = 512.0
+rect_min_size = Vector2( 607, 0 )
+size_flags_horizontal = 4
+
+[node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
+margin_top = 520.0
+margin_right = 633.0
+margin_bottom = 620.0
+rect_min_size = Vector2( 0, 100 )
+color = Color( 0.0117647, 0.0196078, 0.0392157, 1 )
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/footer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -48.0
+margin_right = 502.0
+text = "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+align = 2
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/footer"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -80.0
+margin_right = 502.0
+margin_bottom = -32.0
+text = "Made in Turtingas City, TG"
+
+[node name="toolbar" type="Panel" parent="."]
+anchor_right = 1.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Toolbar"
+
+[node name="hBoxContainer" type="HBoxContainer" parent="toolbar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="button" type="Button" parent="toolbar/hBoxContainer"]
+margin_right = 127.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "Passionfruit"
+script = ExtResource( 4 )
+website = "passionfruit.com"
+
+[node name="button2" type="Button" parent="toolbar/hBoxContainer"]
+margin_left = 127.0
+margin_right = 255.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "MarkisaOS"
+script = ExtResource( 4 )
+website = "markisa.passionfruit.com"
+
+[node name="button3" type="Button" parent="toolbar/hBoxContainer"]
+margin_left = 255.0
+margin_right = 383.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "Markistations"
+script = ExtResource( 4 )
+website = "markistation.passionfruit.com"
+
+[node name="button5" type="Button" parent="toolbar/hBoxContainer"]
+margin_left = 383.0
+margin_right = 511.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "Business"
+script = ExtResource( 4 )
+website = "business.passionfruit.com"
+
+[node name="button4" type="Button" parent="toolbar/hBoxContainer"]
+margin_left = 511.0
+margin_right = 639.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+theme_type_variation = "ToolbarButton"
+text = "Developers"
+script = ExtResource( 4 )
+website = "developers.passionfruit.com"
