@@ -8,7 +8,7 @@ public partial class OneSingletonToRuleThemAll : Node
 {
     bool happened = false;
 
-    public void TestAI()
+    /*public void TestAI()
     {
         if (happened) {
             return;
@@ -25,7 +25,7 @@ public partial class OneSingletonToRuleThemAll : Node
                 happened = true;
             }
         }
-    }
+    }*/
 }
 
 }
