@@ -33,7 +33,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 570.0
+margin_bottom = 828.0
 size_flags_horizontal = 3
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
@@ -44,18 +44,18 @@ texture = ExtResource( 6 )
 expand = true
 stretch_mode = 7
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -195.0
-margin_top = -58.0
-margin_right = 195.0
-margin_bottom = 58.0
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/textureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect/centerContainer"]
+margin_left = 121.0
+margin_top = 62.0
+margin_right = 511.0
+margin_bottom = 178.0
 custom_constants/separation = 0
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/vBoxContainer"]
 margin_right = 390.0
 margin_bottom = 75.0
 rect_min_size = Vector2( 390, 75 )
@@ -63,7 +63,7 @@ texture = ExtResource( 5 )
 expand = true
 stretch_mode = 6
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/vBoxContainer"]
 margin_top = 75.0
 margin_right = 390.0
 margin_bottom = 116.0
@@ -142,10 +142,17 @@ margin_bottom = 462.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
-[node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
+[node name="control" type="Control" parent="scrollContainer/vBoxContainer"]
 margin_top = 470.0
 margin_right = 633.0
-margin_bottom = 570.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 250 )
+mouse_filter = 2
+
+[node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
+margin_top = 728.0
+margin_right = 633.0
+margin_bottom = 828.0
 rect_min_size = Vector2( 0, 100 )
 color = Color( 0.0117647, 0.0196078, 0.0392157, 1 )
 

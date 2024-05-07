@@ -48,18 +48,18 @@ texture = ExtResource( 6 )
 expand = true
 stretch_mode = 7
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -195.0
-margin_top = -58.0
-margin_right = 195.0
-margin_bottom = 58.0
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/textureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect/centerContainer"]
+margin_left = 121.0
+margin_top = 62.0
+margin_right = 511.0
+margin_bottom = 178.0
 custom_constants/separation = 0
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/vBoxContainer"]
 margin_right = 390.0
 margin_bottom = 75.0
 rect_min_size = Vector2( 390, 75 )
@@ -67,7 +67,7 @@ texture = ExtResource( 5 )
 expand = true
 stretch_mode = 6
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/vBoxContainer"]
 margin_top = 75.0
 margin_right = 390.0
 margin_bottom = 116.0
@@ -99,17 +99,17 @@ texture = ExtResource( 8 )
 expand = true
 stretch_mode = 7
 
-[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -176.0
-margin_top = -60.5
-margin_right = 176.0
-margin_bottom = 60.5
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer"]
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/centerContainer"]
+margin_left = 140.0
+margin_top = 32.0
+margin_right = 492.0
+margin_bottom = 153.0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/centerContainer/hBoxContainer"]
 margin_right = 100.0
 margin_bottom = 121.0
 rect_min_size = Vector2( 100, 100 )
@@ -117,32 +117,32 @@ texture = ExtResource( 7 )
 expand = true
 stretch_mode = 6
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer"]
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/centerContainer/hBoxContainer"]
 margin_left = 108.0
 margin_right = 352.0
 margin_bottom = 121.0
 custom_constants/separation = 0
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/centerContainer/hBoxContainer/vBoxContainer"]
 margin_right = 244.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "MarkisaOS"
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/centerContainer/hBoxContainer/vBoxContainer"]
 margin_top = 41.0
 margin_right = 244.0
 margin_bottom = 71.0
 text = "The ultimate operating system."
 
-[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/centerContainer/hBoxContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 71.0
 margin_right = 3.0
 margin_bottom = 79.0
 size_flags_horizontal = 0
 
-[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/hBoxContainer/vBoxContainer"]
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2/centerContainer/hBoxContainer/vBoxContainer"]
 margin_top = 79.0
 margin_right = 200.0
 margin_bottom = 121.0
@@ -165,17 +165,17 @@ texture = ExtResource( 10 )
 expand = true
 stretch_mode = 7
 
-[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -187.0
-margin_top = -60.5
-margin_right = 187.0
-margin_bottom = 60.5
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer"]
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/centerContainer"]
+margin_left = 129.0
+margin_top = 32.0
+margin_right = 503.0
+margin_bottom = 153.0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/centerContainer/hBoxContainer"]
 margin_right = 100.0
 margin_bottom = 121.0
 rect_min_size = Vector2( 100, 100 )
@@ -183,32 +183,32 @@ texture = ExtResource( 9 )
 expand = true
 stretch_mode = 6
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer"]
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/centerContainer/hBoxContainer"]
 margin_left = 108.0
 margin_right = 374.0
 margin_bottom = 121.0
 custom_constants/separation = 0
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/centerContainer/hBoxContainer/vBoxContainer"]
 margin_right = 266.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "Markistation"
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/centerContainer/hBoxContainer/vBoxContainer"]
 margin_top = 41.0
 margin_right = 266.0
 margin_bottom = 71.0
 text = "The #1 mind-controlled computers"
 
-[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/centerContainer/hBoxContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
 margin_top = 71.0
 margin_right = 3.0
 margin_bottom = 79.0
 size_flags_horizontal = 0
 
-[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/hBoxContainer/vBoxContainer"]
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect3/centerContainer/hBoxContainer/vBoxContainer"]
 margin_top = 79.0
 margin_right = 200.0
 margin_bottom = 121.0

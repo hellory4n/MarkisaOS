@@ -3,99 +3,111 @@ msgstr ""
 "Project-Id-Version: MarkisaOS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8-bit\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: web/passionfruit.com/home.tscn
 msgid "Passionfruit Corporation"
-msgstr ""
+msgstr "Passionfruit S.A."
 
 #: web/passionfruit.com/home.tscn
 msgid "The official website for Passionfruit."
-msgstr ""
+msgstr "O site oficial da Passionfruit."
 
 # this is a website tag
 #: web/passionfruit.com/home.tscn
 msgid "company"
-msgstr ""
+msgstr "empresa"
 
 # this is a website tag
 #: web/passionfruit.com/home.tscn
 msgid "markisa"
-msgstr ""
+msgstr "markisa"
 
 # this is a website tag
 #: web/passionfruit.com/home.tscn
 msgid "computers"
-msgstr ""
+msgstr "computadores"
 
 # this is a website tag
 # os = operating system
 #: web/passionfruit.com/home.tscn
 msgid "os"
-msgstr ""
+msgstr "sistema_operacional"
 
 # this is a website tag
 #: web/passionfruit.com/home.tscn
 msgid "software"
-msgstr ""
+msgstr "programas"
 
 # this is a website tag
 #: web/passionfruit.com/home.tscn
 msgid "business"
-msgstr ""
+msgstr "negócios"
 
 # this is a website tag
 #: web/passionfruit.com/home.tscn
 msgid "developer"
-msgstr ""
+msgstr "desenvolvimento"
 
 # this is a website tag
 #: web/passionfruit.com/home.tscn
 msgid "government_partner"
-msgstr ""
+msgstr "parceiro_do_governo"
 
 #: web/passionfruit.com/home.tscn
 msgid "Powering the world."
-msgstr ""
+msgstr "Criando a estrutura do mundo."
 
 #: web/passionfruit.com/home.tscn
 msgid "MarkisaOS"
-msgstr ""
+msgstr "MarkisaOS"
 
 #: web/passionfruit.com/home.tscn
 msgid "The ultimate operating system."
-msgstr ""
+msgstr "O sistema operacional do futuro."
 
 #: web/passionfruit.com/home.tscn
 msgid "More information"
-msgstr ""
+msgstr "Mais informações"
 
 # it's a device that runs markisaOS
 #: web/passionfruit.com/home.tscn
 msgid "Markistation"
-msgstr ""
+msgstr "Markistation"
 
 #: web/passionfruit.com/home.tscn
 msgid "The #1 mind-controlled computers"
-msgstr ""
+msgstr "Os computadores controlados pela mente nº 1"
+
+#: web/business.passionfruit.com/home.tscn
+msgid "Partners"
+msgstr "Parceiros"
+
+#: web/business.passionfruit.com/home.tscn
+msgid "Jobs"
+msgstr "Empregos"
 
 #: web/passionfruit.com/home.tscn
 msgid "Copyright © 2071 Passionfruit Corporation. All rights reserved."
-msgstr ""
+msgstr "Copyright © 2071 Passionfruit S.A. Todos os direitos reservados."
 
 #: web/passionfruit.com/home.tscn
 msgid "Passionfruit"
-msgstr ""
+msgstr "Passionfruit"
 
 # this one is different, it's in plural form
 #: web/passionfruit.com/home.tscn
 msgid "Markistations"
-msgstr ""
+msgstr "Markistations"
 
 #: web/passionfruit.com/home.tscn
 msgid "Business"
-msgstr ""
+msgstr "Negócios"
 
 #: web/passionfruit.com/home.tscn
 msgid "Developers"
-msgstr ""
+msgstr "Desenvolvedores"

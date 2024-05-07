@@ -159,7 +159,7 @@ margin_right = 541.0
 margin_bottom = 575.0
 rect_min_size = Vector2( 450, 0 )
 size_flags_horizontal = 4
-text = "MarkisaOS is designed to be used, and with MarkisaOS Me it has become even easier."
+text = "MarkisaOS is designed to be easy to use, and with MarkisaOS Me it has become even easier."
 align = 1
 autowrap = true
 
@@ -215,24 +215,24 @@ texture = ExtResource( 8 )
 expand = true
 stretch_mode = 7
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -225.0
-margin_top = -64.5
-margin_right = 225.0
-margin_bottom = 64.5
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/textureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect/centerContainer"]
+margin_left = 91.0
+margin_top = 28.0
+margin_right = 541.0
+margin_bottom = 157.0
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/vBoxContainer"]
 margin_right = 450.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "Less waiting. More speed."
 align = 1
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/vBoxContainer"]
 margin_top = 49.0
 margin_right = 450.0
 margin_bottom = 129.0
@@ -288,24 +288,24 @@ texture = ExtResource( 10 )
 expand = true
 stretch_mode = 7
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect2"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -225.0
-margin_top = -64.5
-margin_right = 225.0
-margin_bottom = 64.5
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/textureRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/vBoxContainer"]
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect2/centerContainer"]
+margin_left = 91.0
+margin_top = 40.0
+margin_right = 541.0
+margin_bottom = 144.0
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/centerContainer/vBoxContainer"]
 margin_right = 450.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "More apps than you can count"
 align = 1
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/vBoxContainer"]
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/textureRect2/centerContainer/vBoxContainer"]
 margin_top = 49.0
 margin_right = 450.0
 margin_bottom = 104.0

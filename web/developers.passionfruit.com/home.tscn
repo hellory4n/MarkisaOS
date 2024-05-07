@@ -46,17 +46,17 @@ texture = ExtResource( 8 )
 expand = true
 stretch_mode = 7
 
-[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -195.0
-margin_top = -62.0
-margin_right = 195.0
-margin_bottom = 62.0
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/textureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect/centerContainer"]
+margin_left = 121.0
+margin_top = 58.0
+margin_right = 511.0
+margin_bottom = 182.0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/vBoxContainer"]
 margin_right = 390.0
 margin_bottom = 75.0
 rect_min_size = Vector2( 390, 75 )
@@ -64,7 +64,7 @@ texture = ExtResource( 5 )
 expand = true
 stretch_mode = 6
 
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/vBoxContainer"]
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/vBoxContainer"]
 margin_top = 83.0
 margin_right = 390.0
 margin_bottom = 124.0
@@ -156,6 +156,10 @@ margin_right = 364.0
 margin_bottom = 151.0
 text = "Device unsupported."
 
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/vBoxContainer/textureRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
 [node name="hSeparator5" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
 margin_top = 457.0
@@ -171,13 +175,13 @@ margin_bottom = 624.0
 alignment = 1
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 43.0
-margin_right = 590.0
+margin_left = 16.0
+margin_right = 616.0
 margin_bottom = 151.0
 custom_constants/separation = 0
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
-margin_right = 547.0
+margin_right = 600.0
 margin_bottom = 41.0
 theme_type_variation = "Header"
 text = "MarkisaOS SDK"
@@ -185,7 +189,7 @@ align = 1
 
 [node name="label5" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 41.0
-margin_right = 547.0
+margin_right = 600.0
 margin_bottom = 71.0
 text = "Develop applications for MarkisaOS"
 align = 1
@@ -199,11 +203,12 @@ size_flags_horizontal = 0
 
 [node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 79.0
-margin_right = 547.0
+margin_right = 600.0
 margin_bottom = 121.0
+rect_min_size = Vector2( 600, 0 )
 
 [node name="button" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer/hBoxContainer"]
-margin_right = 259.0
+margin_right = 296.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
 theme_type_variation = "Secondary"
@@ -211,8 +216,8 @@ disabled = true
 text = "MksMeSdkInstall.mpkg - 30 GB"
 
 [node name="button2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer/hBoxContainer"]
-margin_left = 267.0
-margin_right = 547.0
+margin_left = 304.0
+margin_right = 600.0
 margin_bottom = 42.0
 size_flags_horizontal = 3
 theme_type_variation = "Secondary"
@@ -221,7 +226,7 @@ text = "MksVisionSdkInstall.mpkg - 35 GB"
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 121.0
-margin_right = 547.0
+margin_right = 600.0
 margin_bottom = 151.0
 text = "I'm gonna enable the buttons when I add modding :)"
 align = 1

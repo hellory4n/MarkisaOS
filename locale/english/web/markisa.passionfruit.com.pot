@@ -101,10 +101,6 @@ msgstr ""
 msgid "Passionfruit"
 msgstr ""
 
-#: web/markisa.passionfruit.com/home.tscn
-msgid "MarkisaOS"
-msgstr ""
-
 # this one is different, it's in plural form
 #: web/markisa.passionfruit.com/home.tscn
 msgid "Markistations"

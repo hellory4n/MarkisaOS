@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS"
+msgstr "MarkisaOS"
+
+# this is a website tag
+#: web/markisa.passionfruit.com/home.tscn
+msgid "company"
+msgstr "empresa"
+
+# this is a website tag
+#: web/markisa.passionfruit.com/home.tscn
+msgid "markisa"
+msgstr "markisa"
+
+# this is a website tag
+#: web/markisa.passionfruit.com/home.tscn
+msgid "computers"
+msgstr "computadores"
+
+# this is a website tag
+# os = operating system
+#: web/markisa.passionfruit.com/home.tscn
+msgid "os"
+msgstr "sistemas_operacionais"
+
+# this is a website tag
+#: web/markisa.passionfruit.com/home.tscn
+msgid "software"
+msgstr "programas"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "The official website for Passionfruit MarkisaOS."
+msgstr "O site oficial do MarkisaOS da Passionfruit"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "The ultimate operating system."
+msgstr "O sistema operacional do futuro."
+
+# "Me" is the version, like how there's windows XP, windows vista, windows 7, etc
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS Me is out!"
+msgstr "MarkisaOS Me está disponível!"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid ""
+"Enjoy the latest and greatest version of an already great operating system."
+msgstr "A melhor e mais recente versão de um sistema operacional já excelente."
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Download MarkisaOS Me - 12.5 GB"
+msgstr "Baixar MarkisaOS Me - 12,5 GB"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "You already have MarkisaOS Me!"
+msgstr "Você já tem o MarkisaOS Me!"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "A familiar interface"
+msgstr "Uma interface familiar"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "MarkisaOS is designed to be easy to use, and with MarkisaOS Me it has become even easier."
+msgstr "MarkisaOS é feito pra ser simples de usar, e com o MarkisaOS Me agora é ainda mais simples."
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Less waiting. More speed."
+msgstr "Menos espera. Mais velocidade."
+
+# ultranet is a made up term
+#: web/markisa.passionfruit.com/home.tscn
+msgid ""
+"MarkisaOS Me runs lighting quick. Apps open fast, and MarkisaOS supports "
+"Ultranet technology for even faster internet speeds."
+msgstr "MarkisaOS Me roda incrivelmente rápido. Os aplicativos abrem rapidamente e o MarkisaOS têm suporte à tecnologia Ultranet para velocidades de internet ainda mais rápidas."
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Reliable & Secure"
+msgstr "Confiável e Seguro"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid ""
+"MarkisaOS Me is built on 60 years of stability of the Frambos core "
+"foundation. In these years, we have developed advanced features to protect "
+"your computer. MarkisaOS is used everywhere, from the military to the homes "
+"of people like you."
+msgstr "MarkisaOS Me é construído sobre 60 anos de estabilidade do núcleo Frambos. Nestes anos, desenvolvemos funcionalidades avançadas para proteger o seu computador. MarkisaOS é usado em todos os lugares, desde as Forças Armadas até casas de pessoas como você."
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "More apps than you can count"
+msgstr "Mais aplicativos do que você pode contar"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid ""
+"MarkisaOS has a wide ecosystem of apps for everything you could ever imagine."
+msgstr "MarkisaOS tem um vasto ecosistema de aplicativos para tudo que você pode imaginar."
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+msgstr "Copyright © 2071 Passionfruit S.A. Todos os direitos reservados."
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Passionfruit"
+msgstr "Passionfruit"
+
+# this one is different, it's in plural form
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Markistations"
+msgstr "Markistations"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Business"
+msgstr "Negócios"
+
+#: web/markisa.passionfruit.com/home.tscn
+msgid "Developers"
+msgstr "Desenvolvedores"

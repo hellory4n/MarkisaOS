@@ -85,7 +85,6 @@ margin_right = 256.0
 margin_bottom = 99.0
 theme_type_variation = "Header"
 text = "Unlock your mind."
-autowrap = true
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 99.0
