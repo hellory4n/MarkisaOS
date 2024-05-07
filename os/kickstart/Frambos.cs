@@ -212,8 +212,18 @@ public class Frambos : Node
             return "res://apps/passionfruit/websites/browserSites/newtab.tscn";
         }
 
-        // ahhhhhhhhh fuck
-        return "404";
+        // maybe it should be redirected?
+        string he = "404";
+        foreach (var item in Redirector5000.Stuff) {
+            if (url.Replace(item.Key, item.Value) != url) {
+                he = GetRealWebPath(url.Replace(item.Key, item.Value));
+                break;
+            } 
+        }
+
+        // yes
+        // he should either be 404 or the redirected address
+        return he;
     }
 
     /// <summary>
