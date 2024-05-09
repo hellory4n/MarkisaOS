@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/koni.com/assets/music.ogg" type="AudioStream" id=2]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=4]
+[ext_resource path="res://web/koni.com/theme.tres" type="Theme" id=11]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.956863, 0.262745, 0.211765, 1 )
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+expand_margin_bottom = 2.0
+shadow_size = 13
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="koni" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+theme = ExtResource( 11 )
+script = ExtResource( 1 )
+Title = "Koni Studio"
+Description = "The official website for Koni."
+Tags = PoolStringArray( "company", "koni", "computers", "software", "games" )
+Icon = ExtResource( 3 )
+Music = ExtResource( 2 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.933333, 0.933333, 0.933333, 1 )
+
+[node name="toolbar" type="Panel" parent="."]
+anchor_right = 1.0
+rect_min_size = Vector2( 0, 45 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="hBoxContainer" type="HBoxContainer" parent="toolbar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="MksHyperlink" type="Button" parent="toolbar/hBoxContainer"]
+margin_right = 639.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 2 )
+script = ExtResource( 4 )

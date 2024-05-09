@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music.ogg-662bf8b3fe7ec58f9b898cf0e7307108.oggstr"
+
+[deps]
+
+source_file="res://web/koni.com/assets/music.ogg"
+dest_files=[ "res://.import/music.ogg-662bf8b3fe7ec58f9b898cf0e7307108.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

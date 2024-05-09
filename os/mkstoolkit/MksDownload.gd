@@ -1,4 +1,5 @@
 extends Button
+class_name MksDownload
 
 export var file = ""
 export(String, MULTILINE) var content = ""
