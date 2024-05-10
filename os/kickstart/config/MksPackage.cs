@@ -9,9 +9,9 @@ namespace markisa.foundation
 public struct MksPackage
 {
     /// <summary>
-    /// The display names for each language the app supports, with the key being a code like "en" or "pt" or "es" or "ru"
+    /// The name for the app
     /// </summary>
-    public Dictionary<string, string> DisplayNames { get; set; }
+    public string DisplayName { get; set; }
     /// <summary>
     /// Who made this app
     /// </summary>
@@ -24,10 +24,6 @@ public struct MksPackage
     /// A path to the scene with the app, with a MksWindow as its root.
     /// </summary>
     public string Executable { get; set; }
-    /// <summary>
-    /// A path to the scene with the uninstaller for this app. If set to "", this app cannot be uninstalled.
-    /// </summary>
-    public string Uninstaller { get; set; }
     public Categories[] AppCategories { get; set; }
 
     public enum Categories

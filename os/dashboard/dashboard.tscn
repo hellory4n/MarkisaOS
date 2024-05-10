@@ -636,6 +636,9 @@ same_column_width = true
 icon_mode = 0
 script = ExtResource( 1 )
 
+[node name="timer" type="Timer" parent="interface/appLauncher/itemList"]
+autostart = true
+
 [node name="panel" type="Panel" parent="interface"]
 anchor_right = 1.0
 rect_min_size = Vector2( 0, 40 )
@@ -1416,6 +1419,7 @@ script = ExtResource( 43 )
 [connection signal="text_entered" from="interface/calculator/expression" to="interface/calculator/expression" method="Fuck"]
 [connection signal="pressed" from="interface/calculator/GridContainer/Button3" to="interface/calculator/expression" method="Suffering"]
 [connection signal="item_selected" from="interface/appLauncher/itemList" to="interface/appLauncher/itemList" method="OnItemSelected"]
+[connection signal="timeout" from="interface/appLauncher/itemList/timer" to="interface/appLauncher/itemList" method="LoadStuffLmao"]
 [connection signal="timeout" from="interface/panel/stuff/money/timer" to="interface/panel/stuff/money" method="Beans"]
 [connection signal="pressed" from="tutorial/5desktop/start/button" to="." method="TutorialComplete"]
 [connection signal="pressed" from="tutorial/5mobile/start/button" to="." method="TutorialComplete"]

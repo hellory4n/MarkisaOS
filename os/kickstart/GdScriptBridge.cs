@@ -36,12 +36,12 @@ public class GdScriptBridge : Node
     void WhyThough(string filename, string content, ProgressBar bar)
     {
         // this syntax is weird
-        var file = new MksFile(filename) {
+        var file = new MksFile(Tr(filename)) {
             Data = content
         };
         file.Save();
 
-        Frambos.Notify("Websites", Tr("{file} was downloaded.").Replace("{file}", filename));
+        Frambos.Notify("Websites", Tr("{file} was downloaded.").Replace("{file}", Tr(filename)));
         Frambos.Play(SystemSound.Notification);
 
         // so it doesn't show up 856893959395090390 times

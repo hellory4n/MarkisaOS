@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=1]
+[ext_resource path="res://os/mkstoolkit/MksPopup.cs" type="Script" id=2]
+[ext_resource path="res://apps/koni/ghostsOnCars/smallicon.png" type="Texture" id=3]
+[ext_resource path="res://apps/koni/ghostsOnCars/dockicon.png" type="Texture" id=4]
+[ext_resource path="res://apps/koni/ghostsOnCars/fullicon.png" type="Texture" id=5]
+
+[node name="ghostsOnCars" type="Control"]
+margin_right = 789.0
+margin_bottom = 395.0
+script = ExtResource( 1 )
+WindowTitle = "Ghosts On Cars"
+DockIcon = ExtResource( 4 )
+SmallIcon = ExtResource( 3 )
+FullIcon = ExtResource( 5 )
+SizePercentage = Vector2( 100, 100 )
+MemoryUsage = 50
+DiskUsage = 25
+ContentRoot = NodePath("contents")
+
+[node name="contents" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+
+[node name="lmao" type="Node" parent="contents"]
+
+[node name="popup" type="Panel" parent="contents"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -183.5
+margin_right = 183.5
+margin_bottom = 192.0
+theme_type_variation = "MksPopup"
+script = ExtResource( 2 )
+
+[node name="label" type="Label" parent="contents/popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "ERROR: Your Markistation does not support the required graphics features."
+autowrap = true
+
+[connection signal="ready" from="contents/lmao" to="contents/popup" method="ShowPopup"]
