@@ -16,6 +16,7 @@ public class AppLauncher : ItemList
         Clear();
 
         var config = new Config<AppStuff>();
+        packages = config.Data.InstalledApps;
         var plfhfhfs = defaultApps.Concat(config.Data.InstalledApps).ToArray();
 
         foreach (MksPackage pkg in plfhfhfs) {
@@ -65,7 +66,6 @@ public class AppLauncher : ItemList
                 // the custom apps are added right afterwards
                 MksPackage pkg = packages[idx - defaultAppCount];
                 j = pkg.Executable;
-                GD.Print("name", pkg.DisplayName);
                 break;
         }
 

@@ -64,7 +64,7 @@ anchor_bottom = 1.0
 margin_top = 45.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
-margin_right = 639.0
+margin_right = 434.0
 margin_bottom = 236.0
 size_flags_horizontal = 3
 
