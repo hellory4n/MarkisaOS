@@ -52,6 +52,7 @@ Description = "The official website for Koni."
 Tags = PoolStringArray( "company", "koni", "computers", "software", "games" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 2 )
+TranslationPot = "res://locale/english/web/koni.com.pot"
 
 [node name="background" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -64,7 +65,7 @@ anchor_bottom = 1.0
 margin_top = 45.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
-margin_right = 434.0
+margin_right = 639.0
 margin_bottom = 236.0
 size_flags_horizontal = 3
 
@@ -99,7 +100,7 @@ custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 4 )
 text = "Download"
 script = ExtResource( 7 )
-file = "ghosts_on_wheels.mpkg"
+file = "ghosts_on_cars.mpkg"
 content = "{\"DisplayName\":\"Ghosts On Cars\",\"Author\":\"Koni Development\",\"Icon\":\"res://apps/koni/ghostsOnCars/dockicon.png\",\"Executable\":\"res://apps/koni/ghostsOnCars/app.tscn\",\"AppCategories\":[2]}"
 time = 200
 

@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: web/koni.com/home.tscn
+msgid "Koni Development"
+msgstr "Koni Desenvolvimento"
+
+#: web/koni.com/home.tscn
+msgid "The official website for Koni."
+msgstr "O site oficial da Koni."
+
+# this is a website tag
+#: web/koni.com/home.tscn
+msgid "company"
+msgstr "empresa"
+
+# this is a website tag
+#: web/koni.com/home.tscn
+msgid "koni"
+msgstr "koni"
+
+# this is a website tag
+#: web/koni.com/home.tscn
+msgid "computers"
+msgstr "computadores"
+
+# this is a website tag
+#: web/koni.com/home.tscn
+msgid "software"
+msgstr "programas"
+
+# this is a website tag
+#: web/koni.com/home.tscn
+msgid "games"
+msgstr "jogos"
+
+#: web/koni.com/home.tscn
+msgid "Ghosts On Cars"
+msgstr "Ghosts On Cars"
+
+#: web/koni.com/home.tscn
+msgid "Download"
+msgstr "Baixar"
+
+# the name of the file for the installer
+#: web/koni.com/home.tscn
+msgid "ghosts_on_cars.mpkg"
+msgstr "ghosts_on_cars.mpkg"
+
+#: web/koni.com/home.tscn
+msgid "Copyright © 2071 Koni Development. All rights reserved."
+msgstr "Copyright © 2071 Koni Desenvolvimento. Todos os direitos reservados."
+
+#: apps/koni/ghostsOnCars/app.tscn
+msgid "ERROR: Your Markistation does not support the required graphics features."
+msgstr "ERRO: Seu Markistation não suporta as funcionalidades gráficas necessárias."

@@ -212,7 +212,7 @@ margin_bottom = 175.0
 [node name="label" type="Label" parent="contents/downloads/hehehe/ha"]
 margin_right = 300.0
 margin_bottom = 30.0
-text = "Downloading file...."
+text = "Downloading file..."
 align = 1
 
 [node name="paradoxBar" type="ProgressBar" parent="contents/downloads/hehehe/ha"]
