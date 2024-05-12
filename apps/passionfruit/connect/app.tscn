@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://apps/passionfruit/connect/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/connect/fullicon.png" type="Texture" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://os/assets/highPeaks/icons/comedyMask.png" type="Texture" id=9]
 [ext_resource path="res://os/assets/highPeaks/icons/movie.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/help.png" type="Texture" id=11]
-[ext_resource path="res://apps/passionfruit/connect/ui/music.gd" type="Script" id=12]
 [ext_resource path="res://os/mkstoolkit/SidebarButton.gd" type="Script" id=13]
 [ext_resource path="res://apps/passionfruit/connect/backgrounds/trending.png" type="Texture" id=14]
 [ext_resource path="res://apps/passionfruit/connect/music/quiteABitGoingOn.mp3" type="AudioStream" id=15]
@@ -30,6 +29,8 @@
 [ext_resource path="res://apps/passionfruit/connect/ui/refreshBookmarks.gd" type="Script" id=28]
 [ext_resource path="res://apps/passionfruit/connect/ui/TheAlgorithm.cs" type="Script" id=29]
 [ext_resource path="res://apps/passionfruit/connect/ui/SharePost.cs" type="Script" id=30]
+[ext_resource path="res://apps/passionfruit/connect/ui/MuteMusic.cs" type="Script" id=31]
+[ext_resource path="res://os/assets/highPeaks/icons/musicNote.png" type="Texture" id=32]
 
 [node name="connect" type="Control"]
 margin_right = 789.0
@@ -62,7 +63,6 @@ anchor_bottom = 1.0
 stream = ExtResource( 15 )
 autoplay = true
 bus = "music"
-script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/trending"]
 anchor_right = 1.0
@@ -80,10 +80,26 @@ theme_type_variation = "Toolbar"
 [node name="label" type="Label" parent="contents/categories/trending/header"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -40.0
 theme_type_variation = "Bold"
 text = "Trending"
 align = 1
 valign = 1
+
+[node name="button" type="Button" parent="contents/categories/trending/header"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+theme_type_variation = "ToolbarButton"
+toggle_mode = true
+icon = ExtResource( 32 )
+icon_align = 1
+script = ExtResource( 31 )
 
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/trending"]
 anchor_right = 1.0
@@ -116,6 +132,7 @@ text = "More"
 script = ExtResource( 19 )
 
 [node name="popup" type="Panel" parent="contents/categories/trending"]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -250.0
@@ -171,7 +188,6 @@ stream = ExtResource( 16 )
 autoplay = true
 stream_paused = true
 bus = "music"
-script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/helpCenter"]
 anchor_right = 1.0
@@ -189,10 +205,26 @@ theme_type_variation = "Toolbar"
 [node name="label" type="Label" parent="contents/categories/helpCenter/header"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -40.0
 theme_type_variation = "Bold"
 text = "Help Center"
 align = 1
 valign = 1
+
+[node name="button" type="Button" parent="contents/categories/helpCenter/header"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+theme_type_variation = "ToolbarButton"
+toggle_mode = true
+icon = ExtResource( 32 )
+icon_align = 1
+script = ExtResource( 31 )
 
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/helpCenter"]
 anchor_right = 1.0
@@ -281,7 +313,6 @@ stream = ExtResource( 18 )
 autoplay = true
 stream_paused = true
 bus = "music"
-script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/comedy"]
 anchor_right = 1.0
@@ -298,10 +329,26 @@ theme_type_variation = "Toolbar"
 [node name="label" type="Label" parent="contents/categories/comedy/header"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -40.0
 theme_type_variation = "Bold"
 text = "Comedy"
 align = 1
 valign = 1
+
+[node name="button" type="Button" parent="contents/categories/comedy/header"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+theme_type_variation = "ToolbarButton"
+toggle_mode = true
+icon = ExtResource( 32 )
+icon_align = 1
+script = ExtResource( 31 )
 
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/comedy"]
 anchor_right = 1.0
@@ -385,12 +432,11 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="music2" type="AudioStreamPlayer" parent="contents/categories/technology"]
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/technology"]
 stream = ExtResource( 20 )
 autoplay = true
 stream_paused = true
 bus = "music"
-script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/technology"]
 anchor_right = 1.0
@@ -407,10 +453,26 @@ theme_type_variation = "Toolbar"
 [node name="label" type="Label" parent="contents/categories/technology/header"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -40.0
 theme_type_variation = "Bold"
 text = "Technology"
 align = 1
 valign = 1
+
+[node name="button" type="Button" parent="contents/categories/technology/header"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+theme_type_variation = "ToolbarButton"
+toggle_mode = true
+icon = ExtResource( 32 )
+icon_align = 1
+script = ExtResource( 31 )
 
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/technology"]
 anchor_right = 1.0
@@ -494,12 +556,11 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="music3" type="AudioStreamPlayer" parent="contents/categories/entertainment"]
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/entertainment"]
 stream = ExtResource( 23 )
 autoplay = true
 stream_paused = true
 bus = "music"
-script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/entertainment"]
 anchor_right = 1.0
@@ -516,10 +577,26 @@ theme_type_variation = "Toolbar"
 [node name="label" type="Label" parent="contents/categories/entertainment/header"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -40.0
 theme_type_variation = "Bold"
 text = "Entertainment"
 align = 1
 valign = 1
+
+[node name="button" type="Button" parent="contents/categories/entertainment/header"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+theme_type_variation = "ToolbarButton"
+toggle_mode = true
+icon = ExtResource( 32 )
+icon_align = 1
+script = ExtResource( 31 )
 
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/entertainment"]
 anchor_right = 1.0
@@ -603,12 +680,11 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="music4" type="AudioStreamPlayer" parent="contents/categories/creativity"]
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/creativity"]
 stream = ExtResource( 22 )
 autoplay = true
 stream_paused = true
 bus = "music"
-script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/creativity"]
 anchor_right = 1.0
@@ -625,10 +701,26 @@ theme_type_variation = "Toolbar"
 [node name="label" type="Label" parent="contents/categories/creativity/header"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -40.0
 theme_type_variation = "Bold"
 text = "Creativity"
 align = 1
 valign = 1
+
+[node name="button" type="Button" parent="contents/categories/creativity/header"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+theme_type_variation = "ToolbarButton"
+toggle_mode = true
+icon = ExtResource( 32 )
+icon_align = 1
+script = ExtResource( 31 )
 
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/creativity"]
 anchor_right = 1.0
@@ -712,12 +804,11 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="music5" type="AudioStreamPlayer" parent="contents/categories/discussion"]
+[node name="music" type="AudioStreamPlayer" parent="contents/categories/discussion"]
 stream = ExtResource( 17 )
 autoplay = true
 stream_paused = true
 bus = "music"
-script = ExtResource( 12 )
 
 [node name="textureRect" type="TextureRect" parent="contents/categories/discussion"]
 anchor_right = 1.0
@@ -734,10 +825,26 @@ theme_type_variation = "Toolbar"
 [node name="label" type="Label" parent="contents/categories/discussion/header"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -40.0
 theme_type_variation = "Bold"
 text = "Discussion"
 align = 1
 valign = 1
+
+[node name="button" type="Button" parent="contents/categories/discussion/header"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+theme_type_variation = "ToolbarButton"
+toggle_mode = true
+icon = ExtResource( 32 )
+icon_align = 1
+script = ExtResource( 31 )
 
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/discussion"]
 anchor_right = 1.0
@@ -1021,6 +1128,7 @@ script = ExtResource( 13 )
 sidebarRoot = NodePath("../../../../categories")
 
 [node name="share" type="Panel" parent="contents"]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -250.0

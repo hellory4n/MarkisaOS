@@ -39,19 +39,13 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 1419.0
+margin_bottom = 1403.0
 size_flags_horizontal = 3
 alignment = 1
 
-[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 633.0
-margin_bottom = 8.0
-
 [node name="textureRect3" type="TextureRect" parent="scrollContainer/vBoxContainer"]
-margin_top = 16.0
 margin_right = 633.0
-margin_bottom = 256.0
+margin_bottom = 240.0
 rect_min_size = Vector2( 0, 240 )
 texture = ExtResource( 12 )
 expand = true
@@ -98,65 +92,65 @@ autowrap = true
 
 [node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 264.0
+margin_top = 248.0
 margin_right = 620.0
-margin_bottom = 272.0
+margin_bottom = 256.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 280.0
+margin_top = 264.0
 margin_right = 633.0
-margin_bottom = 321.0
+margin_bottom = 305.0
 theme_type_variation = "Header"
 text = "MarkisaOS Me is out!"
 align = 1
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 329.0
+margin_top = 313.0
 margin_right = 633.0
-margin_bottom = 359.0
+margin_bottom = 343.0
 text = "Enjoy the latest and greatest version of an already great operating system."
 align = 1
 
 [node name="button" type="Button" parent="scrollContainer/vBoxContainer"]
 margin_left = 141.0
-margin_top = 367.0
+margin_top = 351.0
 margin_right = 491.0
-margin_bottom = 409.0
+margin_bottom = 393.0
 rect_min_size = Vector2( 350, 0 )
 size_flags_horizontal = 4
 disabled = true
 text = "Download MarkisaOS Me - 12.5 GB"
 
 [node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 417.0
+margin_top = 401.0
 margin_right = 633.0
-margin_bottom = 447.0
+margin_bottom = 431.0
 text = "You already have MarkisaOS Me!"
 align = 1
 
 [node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 455.0
+margin_top = 439.0
 margin_right = 620.0
-margin_bottom = 463.0
+margin_bottom = 447.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 471.0
+margin_top = 455.0
 margin_right = 633.0
-margin_bottom = 512.0
+margin_bottom = 496.0
 theme_type_variation = "Header"
 text = "A familiar interface"
 align = 1
 
 [node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_left = 91.0
-margin_top = 520.0
+margin_top = 504.0
 margin_right = 541.0
-margin_bottom = 575.0
+margin_bottom = 559.0
 rect_min_size = Vector2( 450, 0 )
 size_flags_horizontal = 4
 text = "MarkisaOS is designed to be easy to use, and with MarkisaOS Me it has become even easier."
@@ -164,9 +158,9 @@ align = 1
 autowrap = true
 
 [node name="hBoxContainer2" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
-margin_top = 583.0
+margin_top = 567.0
 margin_right = 633.0
-margin_bottom = 690.0
+margin_bottom = 674.0
 alignment = 1
 
 [node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
@@ -198,17 +192,17 @@ stretch_mode = 6
 
 [node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 698.0
+margin_top = 682.0
 margin_right = 620.0
-margin_bottom = 706.0
+margin_bottom = 690.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.498039 )
-margin_top = 714.0
+margin_top = 698.0
 margin_right = 633.0
-margin_bottom = 899.0
+margin_bottom = 883.0
 rect_min_size = Vector2( 0, 185 )
 size_flags_horizontal = 3
 texture = ExtResource( 8 )
@@ -244,25 +238,25 @@ autowrap = true
 
 [node name="hSeparator5" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 907.0
+margin_top = 891.0
 margin_right = 620.0
-margin_bottom = 915.0
+margin_bottom = 899.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="label6" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 923.0
+margin_top = 907.0
 margin_right = 633.0
-margin_bottom = 964.0
+margin_bottom = 948.0
 theme_type_variation = "Header"
 text = "Reliable & Secure"
 align = 1
 
 [node name="label7" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_left = 91.0
-margin_top = 972.0
+margin_top = 956.0
 margin_right = 541.0
-margin_bottom = 1102.0
+margin_bottom = 1086.0
 rect_min_size = Vector2( 450, 0 )
 size_flags_horizontal = 4
 text = "MarkisaOS Me is built on 60 years of stability of the Frambos core foundation. In these years, we have developed advanced features to protect your computer. MarkisaOS is used everywhere, from the military to the homes of people like you."
@@ -271,17 +265,17 @@ autowrap = true
 
 [node name="hSeparator6" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_left = 13.0
-margin_top = 1110.0
+margin_top = 1094.0
 margin_right = 620.0
-margin_bottom = 1118.0
+margin_bottom = 1102.0
 rect_min_size = Vector2( 607, 0 )
 size_flags_horizontal = 4
 
 [node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer"]
 self_modulate = Color( 1, 1, 1, 0.270588 )
-margin_top = 1126.0
+margin_top = 1110.0
 margin_right = 633.0
-margin_bottom = 1311.0
+margin_bottom = 1295.0
 rect_min_size = Vector2( 0, 185 )
 size_flags_horizontal = 3
 texture = ExtResource( 10 )
@@ -316,9 +310,9 @@ align = 1
 autowrap = true
 
 [node name="footer" type="ColorRect" parent="scrollContainer/vBoxContainer"]
-margin_top = 1319.0
+margin_top = 1303.0
 margin_right = 633.0
-margin_bottom = 1419.0
+margin_bottom = 1403.0
 rect_min_size = Vector2( 0, 100 )
 color = Color( 0.0117647, 0.0196078, 0.0392157, 1 )
 
