@@ -41,6 +41,7 @@ public class Webview : Control
     /// </summary>
     public bool IsActive { get; set; }
     AudioStreamPlayer awesomePlayer;
+    Button musicEnabled;
 
     public override void _Ready()
     {
@@ -50,11 +51,14 @@ public class Webview : Control
             Autoplay = true
         };
         AddChild(awesomePlayer);
+
+        // find the music button shit
+        musicEnabled = GetNode<Button>("../../sidebar/vBoxContainer/top/music");
     }
 
     public override void _Process(float delta)
     {
-        awesomePlayer.StreamPaused = !IsActive;
+        awesomePlayer.StreamPaused = !IsActive || musicEnabled.Pressed;
     }
 }
 

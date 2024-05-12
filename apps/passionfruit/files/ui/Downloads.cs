@@ -87,7 +87,7 @@ public class Downloads : ItemList
         var g = JsonConvert.DeserializeObject<MksPackage>(data);
         var config = new Config<AppStuff>();
         // i hope you have an ultrawide monitor
-        if (config.Data.InstalledApps.ToList().Exists(x => x.DisplayName == g.Author && x.DisplayName == g.Author && x.Icon == g.Icon)) {
+        if (!config.Data.InstalledApps.ToList().Exists(x => x.DisplayName == g.Author && x.DisplayName == g.Author && x.Icon == g.Icon)) {
             config.Data.InstalledApps = config.Data.InstalledApps.Append(g).ToArray();
         }
         config.Save();
