@@ -57,6 +57,9 @@ public class MksWindow : Control
     /// Yes
     /// </summary>
     public Control RealContentRoot { get; set; }
+    public bool IsActive { get {
+        return GetPositionInParent() == GetParent().GetChildCount() - 1;
+    }}
 
     StyleBox backgroundStyle;
     StyleBox titleStyle;

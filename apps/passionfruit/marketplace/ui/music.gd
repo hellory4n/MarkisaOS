@@ -1,4 +1,4 @@
 extends AudioStreamPlayer
 
 func _process(_delta):
-	stream_paused = !get_parent().get_parent().visible
+	stream_paused = !get_parent().get_parent().visible || !get_parent().get_parent().get_parent().get_parent().get_parent().get_IsActive()
