@@ -36,6 +36,7 @@ public class TheAppsPage : ItemList
         GD.Print("hehe");
         var config = new Config<AppStuff>();
         var J = config.Data.InstalledApps.ToList();
+        GD.Print(selected.DisplayName, " by ", selected.Author);
         J.RemoveAll(x => x.DisplayName == selected.DisplayName && x.Author == selected.Author);
         config.Data.InstalledApps = J.ToArray();
         config.Save();

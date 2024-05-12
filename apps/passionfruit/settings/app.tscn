@@ -967,6 +967,7 @@ theme_type_variation = "Danger"
 text = "Delete everything"
 script = ExtResource( 33 )
 
+[connection signal="item_selected" from="contents/hSplitContainer/control/apps/apps" to="contents/hSplitContainer/control/apps/apps" method="OnItemSelected"]
 [connection signal="pressed" from="contents/hSplitContainer/control/apps/hBoxContainer/button" to="contents/hSplitContainer/control/apps/apps" method="ImOnHellOnEarthInTermsOfClimate"]
 [connection signal="item_selected" from="contents/hSplitContainer/control/wallpapers" to="contents/hSplitContainer/control/wallpapers" method="Fuck"]
 [connection signal="value_changed" from="contents/hSplitContainer/control/sound/vBoxContainer/hBoxContainer/hSlider" to="contents/hSplitContainer/control/sound/vBoxContainer/hBoxContainer/hSlider" method="_on_HSlider_value_changed"]
