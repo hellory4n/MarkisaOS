@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Uninstall"
+msgstr ""
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Mute Music"
+msgstr ""
+
+#: apps/passionfruit/downloads/app.tscn
+msgid "Installing..."
+msgstr ""

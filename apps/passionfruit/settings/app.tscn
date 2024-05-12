@@ -415,7 +415,6 @@ margin_right = 704.0
 margin_bottom = 383.0
 
 [node name="home" type="CenterContainer" parent="contents/hSplitContainer/control"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -444,6 +443,7 @@ align = 1
 valign = 1
 
 [node name="apps" type="VBoxContainer" parent="contents/hSplitContainer/control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 
