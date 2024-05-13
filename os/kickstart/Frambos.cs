@@ -68,12 +68,11 @@ public class Frambos : Node
 		else {
             // we check the actual OS so forcing mobile on desktop isn't
             // completely broken
-            Vector2 fullSize = GetViewport().GetVisibleRect().Size;
             Vector2 safeArea = OS.GetWindowSafeArea().Size;
             // we have to do this thing since high DPI phones exist, and that means
             // things would get pretty small
             var safeAspect = safeArea.x / safeArea.y;
-            var widthLol = 480 * safeAspect;
+            var widthLol = 460 * safeAspect;
 
             GetTree().SetScreenStretch(
                 SceneTree.StretchMode.Mode2d, SceneTree.StretchAspect.Keep, new Vector2(widthLol, 480));
