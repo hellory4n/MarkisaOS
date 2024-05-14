@@ -79,6 +79,7 @@ Frambos="*res://os/kickstart/Frambos.cs"
 ComputerNoises="*res://os/kickstart/ComputerNoises.cs"
 GdScriptBridge="*res://os/kickstart/GdScriptBridge.cs"
 OneSingletonToRuleThemAll="*res://social/ai/OneSingletonToRuleThemAll.cs"
+WebIndexer="*res://os/kickstart/network/WebIndexer.cs"
 
 [display]
 
