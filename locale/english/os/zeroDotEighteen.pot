@@ -13,6 +13,10 @@ msgstr ""
 msgid "Mute Music"
 msgstr ""
 
+#: apps/passionfruit/websites/app.tscn
+msgid "Tags"
+msgstr ""
+
 #: apps/passionfruit/downloads/app.tscn
 msgid "Installing..."
 msgstr ""

@@ -151,6 +151,22 @@ public class WebTabs : VBoxContainer
             fig.Data.History.Add(path);
             fig.Save();
         }
+
+        // show the handsome tags :)
+        Node h = GetNode("../../../../../tags/scrollContainer/vBoxContainer");
+        foreach (var g in h.GetChildren().Cast<Node>()) {
+            if (g is Label lol) {
+                if (lol.ThemeTypeVariation == "Header") {
+                    continue;
+                }
+            }
+            g.QueueFree();
+        }
+        foreach (string tag in wideWorldOfWeb.Tags) {
+            h.AddChild(new Label {
+                Text = tag
+            });
+        }
     }
 
     public void OnTabSwitch(Button button)

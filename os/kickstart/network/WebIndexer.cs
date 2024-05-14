@@ -8,7 +8,7 @@ public class WebIndexer : Node
     {
         #if DEBUG
         // i release beta versions on saturday, i need to update the indexing
-        if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday) {
+        if (DateTime.Now.DayOfWeek != DayOfWeek.Saturday) {
             return;
         }
 

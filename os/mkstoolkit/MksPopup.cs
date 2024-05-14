@@ -11,7 +11,6 @@ public class MksPopup : Panel
         ThemeTypeVariation = "MksPopup";
 
         if (!Engine.EditorHint) {
-            SetAnchorsPreset(LayoutPreset.CenterTop);
             Modulate = Colors.Transparent;
             Visible = false;
             RectPosition = new Vector2(RectPosition.x, -RectSize.y);
