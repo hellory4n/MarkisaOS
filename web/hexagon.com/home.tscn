@@ -13,7 +13,7 @@ font_data = ExtResource( 4 )
 font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxLine" id=3]
-color = Color( 0, 0, 0, 0.439216 )
+color = Color( 1, 1, 1, 0.439216 )
 thickness = 2
 
 [node name="hexagon" type="Control"]
@@ -26,6 +26,7 @@ Title = "Hexagon"
 Description = "The official website for Hexagon."
 Tags = PoolStringArray( "company", "hexagon", "government_partner", "food", "essentials" )
 Icon = ExtResource( 2 )
+TranslationPot = "locale/english/web/hexagon.com.pot"
 
 [node name="background" type="TextureRect" parent="."]
 anchor_right = 1.0
