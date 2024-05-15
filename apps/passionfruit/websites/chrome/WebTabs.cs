@@ -102,6 +102,8 @@ public class WebTabs : VBoxContainer
         PackedScene packed;
         string jsigtksk = Frambos.GetRealWebPath(path);
         if (jsigtksk == "404") {
+            // if it ends with .com,. 
+            //if ()
             packed = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/404.tscn");
         }
         else {
