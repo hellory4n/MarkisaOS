@@ -97,14 +97,19 @@ public class WebTabs : VBoxContainer
         OnTabSwitch(buttOn);
     }
 
-    public void LoadStuff(string path)
+    public void LoadStuff(string address)
     {
         PackedScene packed;
-        string jsigtksk = Frambos.GetRealWebPath(path);
+        string jsigtksk = Frambos.GetRealWebPath(address.Replace(" ", ""));
         if (jsigtksk == "404") {
-            // if it ends with .com,. 
-            //if ()
-            packed = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/404.tscn");
+            // if it ends with .com, .net, or .org, the user probably tried to type an address
+            if (address.EndsWith(".com") || address.EndsWith(".net") || address.EndsWith(".org")) {
+                packed = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/404.tscn");
+            }
+            // search stuff
+            else {
+                packed = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/search.tscn");
+            }
         }
         else {
             packed = GD.Load<PackedScene>(jsigtksk);
@@ -124,22 +129,27 @@ public class WebTabs : VBoxContainer
         Button close = EpicCloseButtons.FirstOrDefault(x => x.Value == EpicTabs[ActiveBullshit]).Key;
         EpicCloseButtons[close] = wideWorldOfWeb;
         EpicTabs[ActiveBullshit] = wideWorldOfWeb;
-        EpicAwesomeEpicAddresses[ActiveBullshit] = path;
+        EpicAwesomeEpicAddresses[ActiveBullshit] = address;
 
         OnTabSwitch(ActiveBullshit);
 
+        // lol
+        if (packed.ResourcePath == "res://apps/passionfruit/websites/browserSites/search.tscn") {
+            wideWorldOfWeb.EditorDescription = address;
+        }
+
         // save it in the user's history :)
-        if (path != "404" && path != "") {
+        if (address != "404" && address != "" && address == "res://apps/passionfruit/websites/browserSites/search.tscn") {
             var fig = new Config<WebsiteConfig>();
 
             // translation crap
             var config = new Config<StringFinder>();
-            if (!fig.Data.History.Contains(path)) {
+            if (!fig.Data.History.Contains(address)) {
                 var jgssggsIthink = new Config<StringFinder>();
                 jgssggsIthink.Data.Strings.Add(new HashSet<TranslationString>() {
                     new TranslationString {
                         Path = jsigtksk,
-                        MessageId = $"You have unlocked '{path}', ask @hellory4n for the strings (it would be too much work to make this extract the strings from the scene)"
+                        MessageId = $"You have unlocked '{address}', ask @hellory4n for the strings (it would be too much work to make this extract the strings from the scene)"
                     },
                 });
                 jgssggsIthink.Save();
@@ -150,7 +160,7 @@ public class WebTabs : VBoxContainer
                 }
             }
             
-            fig.Data.History.Add(path);
+            fig.Data.History.Add(address);
             fig.Save();
         }
 
