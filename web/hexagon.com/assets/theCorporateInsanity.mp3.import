@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/theCorporateInsanity.mp3-eff7f8b4642ae234bac965057177d494.mp3str"
+
+[deps]
+
+source_file="res://web/hexagon.com/assets/theCorporateInsanity.mp3"
+dest_files=[ "res://.import/theCorporateInsanity.mp3-eff7f8b4642ae234bac965057177d494.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

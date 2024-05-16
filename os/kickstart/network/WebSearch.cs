@@ -8,10 +8,9 @@ namespace markisa.network {
 
 public class WebSearch : Node
 {
-    //public static Dictionary<string, string[]> Index { get; private set; } = new Dictionary<string, string[]>();
-    public static Dictionary<string, string[]> Index { get; private set; } = new Dictionary<string, string[]>() {
-        { "bee", new string[] { "res://web//beemovie.net/home.tscn/", } }, { "movie", new string[] { "res://web//beemovie.net/home.tscn/", } }, { "company", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//markisa.passionfruit.com/home.tscn/", "res://web//markistation.passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/jobs.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//developers.passionfruit.com/home.tscn/", "res://web//koni.com/home.tscn/", "res://web//hexagon.com/home.tscn/", "res://web//kaiatu.com/home.tscn/", } }, { "passionfruit", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//markisa.passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/jobs.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//developers.passionfruit.com/home.tscn/", } }, { "markisa", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//markisa.passionfruit.com/home.tscn/", "res://web//markistation.passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//developers.passionfruit.com/home.tscn/", } }, { "computers", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//markisa.passionfruit.com/home.tscn/", "res://web//markistation.passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/jobs.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//developers.passionfruit.com/home.tscn/", "res://web//koni.com/home.tscn/", } }, { "os", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//markisa.passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//developers.passionfruit.com/home.tscn/", } }, { "software", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//markisa.passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/jobs.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//developers.passionfruit.com/home.tscn/", "res://web//koni.com/home.tscn/", } }, { "business", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/jobs.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//developers.passionfruit.com/home.tscn/", } }, { "developer", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//developers.passionfruit.com/home.tscn/", } }, { "government_partner", new string[] { "res://web//passionfruit.com/home.tscn/", "res://web//business.passionfruit.com/home.tscn/", "res://web//hexagon.com/home.tscn/", "res://web//kaiatu.com/home.tscn/", } }, { "jobs", new string[] { "res://web//business.passionfruit.com/jobs.tscn/", } }, { "koni", new string[] { "res://web//koni.com/home.tscn/", } }, { "games", new string[] { "res://web//koni.com/home.tscn/", } }, { "hexagon", new string[] { "res://web//hexagon.com/home.tscn/", } }, { "food", new string[] { "res://web//hexagon.com/home.tscn/", } }, { "essentials", new string[] { "res://web//hexagon.com/home.tscn/", "res://web//kaiatu.com/home.tscn/", } }, { "kaiatu", new string[] { "res://web//kaiatu.com/home.tscn/", } }
-    };
+    //public static Dictionary<string, HashSet<string>> Index { get; private set; } = new Dictionary<string, HashSet<string>>();
+    public static Dictionary<string, HashSet<string>> Index { get; private set; } = new Dictionary<string, HashSet<string>>() {
+        { "bee", new HashSet<string>(new string[] { "res://web//beemovie.net/home.tscn", }) }, { "movie", new HashSet<string>(new string[] { "res://web//beemovie.net/home.tscn", }) }, { "company", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//markistation.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", "res://web//koni.com/home.tscn", "res://web//hexagon.com/home.tscn", "res://web//kaiatu.com/home.tscn", }) }, { "passionfruit", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", }) }, { "markisa", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//markistation.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", }) }, { "computers", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//markistation.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", "res://web//koni.com/home.tscn", }) }, { "os", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", }) }, { "software", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", "res://web//koni.com/home.tscn", }) }, { "business", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", }) }, { "developer", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", }) }, { "government_partner", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//hexagon.com/home.tscn", "res://web//kaiatu.com/home.tscn", }) }, { "empresa", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//markistation.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", "res://web//koni.com/home.tscn", "res://web//hexagon.com/home.tscn", "res://web//kaiatu.com/home.tscn", }) }, { "computadores", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//markistation.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", "res://web//koni.com/home.tscn", }) }, { "sistema_operacional", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", }) }, { "programas", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//markisa.passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", "res://web//koni.com/home.tscn", }) }, { "negócios", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", }) }, { "desenvolvimento", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//developers.passionfruit.com/home.tscn", }) }, { "parceiro_do_governo", new HashSet<string>(new string[] { "res://web//passionfruit.com/home.tscn", "res://web//business.passionfruit.com/home.tscn", "res://web//hexagon.com/home.tscn", "res://web//kaiatu.com/home.tscn", }) }, { "koni", new HashSet<string>(new string[] { "res://web//koni.com/home.tscn", }) }, { "games", new HashSet<string>(new string[] { "res://web//koni.com/home.tscn", }) }, { "jogos", new HashSet<string>(new string[] { "res://web//koni.com/home.tscn", }) }, { "hexagon", new HashSet<string>(new string[] { "res://web//hexagon.com/home.tscn", }) }, { "food", new HashSet<string>(new string[] { "res://web//hexagon.com/home.tscn", }) }, { "essentials", new HashSet<string>(new string[] { "res://web//hexagon.com/home.tscn", "res://web//kaiatu.com/home.tscn", }) }, { "comida", new HashSet<string>(new string[] { "res://web//hexagon.com/home.tscn", }) }, { "essenciais", new HashSet<string>(new string[] { "res://web//hexagon.com/home.tscn", "res://web//kaiatu.com/home.tscn", }) }, { "kaiatu", new HashSet<string>(new string[] { "res://web//kaiatu.com/home.tscn", }) },  };
     List<string> everySingleWebsite = new List<string>();
     // website: tags[]
     // it's supposed to be tag: websites[]
@@ -34,12 +33,28 @@ public class WebSearch : Node
         // for every goddamn website we need to check the tags
         foreach (string website in everySingleWebsite) {
             var webview = GD.Load<PackedScene>(website).Instance<Webview>();
-            backwardsIndex.Add(website, webview.Tags);
             webview.QueueFree();
+
+            // duplicate the tags to include the translated stuff :)
+            TranslationServer.SetLocale("pt");
+            foreach (var tag in webview.Tags) {
+                webview.Tags = webview.Tags.Append(Tr(tag)).ToArray();
+            }
+
+            TranslationServer.SetLocale("es");
+            foreach (var tag in webview.Tags) {
+                webview.Tags = webview.Tags.Append(Tr(tag)).ToArray();
+            }
+
+            TranslationServer.SetLocale("id");
+            foreach (var tag in webview.Tags) {
+                webview.Tags = webview.Tags.Append(Tr(tag)).ToArray();
+            }
 
             foreach (string tag in webview.Tags) {
                 tags.Add(website);
             }
+            backwardsIndex.Add(website, webview.Tags);
         }
 
         // then we do the fucking
@@ -49,22 +64,22 @@ public class WebSearch : Node
 
             foreach (string tag in tags) {
                 if (Index.ContainsKey(tag)) {
-                    Index[tag] = Index[tag].Append(website).ToArray();
+                    Index[tag].Add(website);
                 }
                 else {
-                    Index[tag] = new string[] { website };
+                    Index[tag] = new HashSet<string>(new string[] { website });
                 }
             }
         }
 
         // now we turn the index into something we can paste into code :)
-        string code = "new Dictionary<string, string[]>() { ";
+        string code = "new Dictionary<string, HashSet<string>>() { ";
         foreach (var pair in Index) {
-            code += $"{{ \"{pair.Key}\", new string[] {{ ";
+            code += $"{{ \"{pair.Key}\", new HashSet<string>(new string[] {{ ";
             foreach (string website in pair.Value) {
                 code += $"\"{website}\", ";
             }
-            code += "} }, ";
+            code += "}) }, ";
         }
         code += " }";
         OS.Clipboard = code;
@@ -82,7 +97,7 @@ public class WebSearch : Node
                     FindAllWebsites($"{path}/{filename}");
                 }
                 else {
-                    if (filename.Extension() == "tscn") everySingleWebsite.Add($"{path}/{filename}/");
+                    if (filename.Extension() == "tscn") everySingleWebsite.Add($"{path}/{filename}");
                 }
                 filename = dir.GetNext();
             }

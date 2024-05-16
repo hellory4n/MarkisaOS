@@ -9,7 +9,7 @@ namespace passionfruit.coreapps.websites {
 
 public class Search : Node
 {
-    public override void _Ready()
+    public void Lol()
     {
         // lmao
         string query = GetParent().EditorDescription;
@@ -19,21 +19,19 @@ public class Search : Node
         string[] tags = query.Split(' ');
 
         // search.
-        var websites = new List<string>();
-        foreach (string tag in tags) {
-            // if the user has put "mucka_blucka_by_fabloo_band_tally_hall" we should just immediately give up
-            if (!WebSearch.Index.ContainsKey(tag)) {
+        HashSet<string> websites = WebSearch.Index[tags[0]];
+
+        foreach (string tag in tags.Skip(1))
+        {
+            if (!WebSearch.Index.ContainsKey(tag))
+            {
+                // If any tag is not found in the dictionary, no website will satisfy the condition
                 websites.Clear();
                 break;
             }
 
-            // ???
-            if (websites.Count == 0) {
-                websites.AddRange(WebSearch.Index[tag]);
-            }
-            else {
-                websites = websites.Intersect(WebSearch.Index[tag]).ToList();
-            }
+            // Find the intersection of websites containing the current tag and the existing list
+            websites = websites.Intersect(WebSearch.Index[tag]).ToHashSet();
         }
 
         // display results
@@ -43,11 +41,12 @@ public class Search : Node
             
             place.AddChild(new RichTextLabel {
                 BbcodeEnabled = true,
-                BbcodeText = $"[b]{Tr(webview.Title)} - {website}[/b]\n{Tr(webview.Description)}"
+                BbcodeText = $"[b]{Tr(webview.Title)} - {website.Replace("res://web//", "").Replace("/home.tscn", "")}[/b]\n{Tr(webview.Description)}",
+                FitContentHeight = true
             });
 
             place.AddChild(new Button {
-                Name = Tr("Open website"),
+                Text = "Open website",
                 ThemeTypeVariation = "Secondary"
             });
 

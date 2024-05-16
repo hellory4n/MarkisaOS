@@ -136,6 +136,10 @@ public class WebTabs : VBoxContainer
         // lol
         if (packed.ResourcePath == "res://apps/passionfruit/websites/browserSites/search.tscn") {
             wideWorldOfWeb.EditorDescription = address;
+            wideWorldOfWeb.GetNode<Search>("search").Lol();
+        }
+        else {
+            address = address.Replace(" ", "");
         }
 
         // save it in the user's history :)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/hexagon.com/assets/hexagonColorful.png" type="Texture" id=2]
 [ext_resource path="res://web/hexagon.com/assets/soFrutigerAero.png" type="Texture" id=3]
 [ext_resource path="res://web/koni.com/assets/Quicksand-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://web/hexagon.com/assets/theCorporateInsanity.mp3" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -26,6 +27,7 @@ Title = "Hexagon"
 Description = "The official website for Hexagon."
 Tags = PoolStringArray( "company", "hexagon", "government_partner", "food", "essentials" )
 Icon = ExtResource( 2 )
+Music = ExtResource( 5 )
 TranslationPot = "locale/english/web/hexagon.com.pot"
 
 [node name="background" type="TextureRect" parent="."]

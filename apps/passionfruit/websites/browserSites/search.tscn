@@ -58,6 +58,7 @@ anchor_bottom = 1.0
 margin_left = -250.0
 margin_right = -250.0
 rect_min_size = Vector2( 250, 0 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 
 [node name="vBoxContainer" type="VBoxContainer" parent="panel"]
