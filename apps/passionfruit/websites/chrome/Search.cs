@@ -19,19 +19,20 @@ public class Search : Node
         string[] tags = query.Split(' ');
 
         // search.
-        HashSet<string> websites = WebSearch.Index[tags[0]];
+        HashSet<string> websites;
+        if (WebSearch.Index.ContainsKey(tags[0])) {
+            websites = WebSearch.Index[tags[0]];
+            foreach (string tag in tags.Skip(1)) {
+                if (!WebSearch.Index.ContainsKey(tag)) {
+                    websites.Clear();
+                    break;
+                }
 
-        foreach (string tag in tags.Skip(1))
-        {
-            if (!WebSearch.Index.ContainsKey(tag))
-            {
-                // If any tag is not found in the dictionary, no website will satisfy the condition
-                websites.Clear();
-                break;
+                websites = websites.Intersect(WebSearch.Index[tag]).ToHashSet();
             }
-
-            // Find the intersection of websites containing the current tag and the existing list
-            websites = websites.Intersect(WebSearch.Index[tag]).ToHashSet();
+        }
+        else {
+            websites = new HashSet<string>();
         }
 
         // display results
@@ -50,13 +51,14 @@ public class Search : Node
                 ThemeTypeVariation = "Secondary"
             };
             place.AddChild(j);
-            j.Connect("pressed", this, nameof(Lol), new Godot.Collections.Array { website });
+            j.Connect("pressed", this, nameof(Lol2), new Godot.Collections.Array { website });
+            
 
             webview.QueueFree();
         }
     }
 
-    public void Lol(string website)
+    public void Lol2(string website)
     {
         var fufjk = GetNode<Button>("../lazy");
         fufjk.Set("website", website.Replace("res://web//", "").Replace("/home.tscn", ""));

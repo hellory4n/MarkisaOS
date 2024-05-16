@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/idle.mp3-a2dc00b3974de868bafe9a49c130d70f.mp3str"
+
+[deps]
+
+source_file="res://apps/passionfruit/websites/browserSites/idle.mp3"
+dest_files=[ "res://.import/idle.mp3-a2dc00b3974de868bafe9a49c130d70f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

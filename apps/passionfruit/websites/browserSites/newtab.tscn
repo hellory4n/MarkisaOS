@@ -1,15 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://os/assets/bootloader/onboardingWallpaper.png" type="Texture" id=2]
-[ext_resource path="res://apps/passionfruit/websites/fullicon.png" type="Texture" id=3]
+[ext_resource path="res://apps/passionfruit/websites/noshit.png" type="Texture" id=3]
 [ext_resource path="res://apps/passionfruit/websites/smallicon.png" type="Texture" id=4]
-[ext_resource path="res://apps/passionfruit/websites/browserSites/dogwater.mp3" type="AudioStream" id=5]
+[ext_resource path="res://apps/passionfruit/websites/browserSites/idle.mp3" type="AudioStream" id=5]
+[ext_resource path="res://os/assets/highPeaks/icons/language.png" type="Texture" id=6]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=7]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=8]
 
 [node name="newtab" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_clip_content = true
+size_flags_horizontal = 3
 script = ExtResource( 1 )
 Title = "New Tab"
 Description = "The new tab on the Websites browser."
@@ -24,58 +28,90 @@ texture = ExtResource( 2 )
 expand = true
 stretch_mode = 7
 
-[node name="colorRect" type="ColorRect" parent="."]
+[node name="lol" type="ColorRect" parent="."]
+anchor_bottom = 1.0
+rect_min_size = Vector2( 350, 0 )
+color = Color( 0, 0, 0, 0.32549 )
+
+[node name="vBoxContainer" type="VBoxContainer" parent="lol"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.294118 )
+margin_left = 8.0
+margin_right = -8.0
+alignment = 1
 
-[node name="centerContainer" type="CenterContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="hSeparator" type="HSeparator" parent="lol/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 105.0
+margin_right = 334.0
+margin_bottom = 113.0
 
-[node name="vBoxContainer" type="VBoxContainer" parent="centerContainer"]
-margin_left = 245.0
-margin_top = 96.0
-margin_right = 608.0
-margin_bottom = 383.0
-
-[node name="textureRect" type="TextureRect" parent="centerContainer/vBoxContainer"]
-margin_right = 363.0
-margin_bottom = 96.0
-rect_min_size = Vector2( 96, 96 )
-texture = ExtResource( 3 )
-expand = true
-stretch_mode = 6
-
-[node name="label" type="Label" parent="centerContainer/vBoxContainer"]
-margin_top = 104.0
-margin_right = 363.0
-margin_bottom = 145.0
+[node name="label" type="Label" parent="lol/vBoxContainer"]
+margin_top = 121.0
+margin_right = 334.0
+margin_bottom = 162.0
 theme_type_variation = "Header"
-text = "Welcome to the Websites app!"
-align = 1
-valign = 1
-
-[node name="hSeparator" type="HSeparator" parent="centerContainer/vBoxContainer"]
-margin_top = 153.0
-margin_right = 363.0
-margin_bottom = 161.0
-
-[node name="label3" type="Label" parent="centerContainer/vBoxContainer"]
-margin_top = 169.0
-margin_right = 363.0
-margin_bottom = 224.0
-text = "Awesome placeholder until I find something interesting to put here"
-align = 1
-valign = 1
+text = "Recommended websites"
 autowrap = true
 
-[node name="label2" type="Label" parent="centerContainer/vBoxContainer"]
-margin_top = 232.0
-margin_right = 363.0
-margin_bottom = 287.0
-theme_type_variation = "Italic"
-text = "(this music is a placeholder to test the music system, it's from epok bus sim lol)"
-align = 1
-valign = 1
-autowrap = true
+[node name="MksHyperlink" type="Button" parent="lol/vBoxContainer"]
+margin_top = 170.0
+margin_right = 334.0
+margin_bottom = 215.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "The official Passionfruit website"
+icon = ExtResource( 7 )
+expand_icon = true
+script = ExtResource( 8 )
+website = "passionfruit.com"
+
+[node name="MksHyperlink2" type="Button" parent="lol/vBoxContainer"]
+margin_top = 223.0
+margin_right = 334.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "The government"
+script = ExtResource( 8 )
+website = "government.org"
+
+[node name="MksHyperlink3" type="Button" parent="lol/vBoxContainer"]
+margin_top = 276.0
+margin_right = 334.0
+margin_bottom = 321.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "DOESN'T EXIST YET"
+icon = ExtResource( 6 )
+expand_icon = true
+script = ExtResource( 8 )
+website = "todayfoundation.org"
+
+[node name="MksHyperlink4" type="Button" parent="lol/vBoxContainer"]
+margin_top = 329.0
+margin_right = 334.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "Secondary"
+text = "DOESN'T EXIST YET"
+icon = ExtResource( 6 )
+expand_icon = true
+script = ExtResource( 8 )
+website = "news.passionfruit.com"
+
+[node name="tutorial" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -165.0
+margin_top = 45.0
+margin_right = -8.0
+margin_bottom = 45.0
+texture = ExtResource( 3 )
+
+[node name="referenceRect" type="ReferenceRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 639, 480 )
+border_width = 2.0
