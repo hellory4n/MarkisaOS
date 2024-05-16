@@ -45,13 +45,22 @@ public class Search : Node
                 FitContentHeight = true
             });
 
-            place.AddChild(new Button {
+            var j = new Button {
                 Text = "Open website",
                 ThemeTypeVariation = "Secondary"
-            });
+            };
+            place.AddChild(j);
+            j.Connect("pressed", this, nameof(Lol), new Godot.Collections.Array { website });
 
             webview.QueueFree();
         }
+    }
+
+    public void Lol(string website)
+    {
+        var fufjk = GetNode<Button>("../lazy");
+        fufjk.Set("website", website.Replace("res://web//", "").Replace("/home.tscn", ""));
+        fufjk.Call("_pressed");
     }
 }
 

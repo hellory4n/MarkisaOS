@@ -17,6 +17,32 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
+# as in the concept of search, not the verb
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "Search"
+msgstr ""
+
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "Search websites"
+msgstr ""
+
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "Results"
+msgstr ""
+
+# not the money kind
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "Tips"
+msgstr ""
+
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "1. Use underscores (_) as spaces then use spaces to separate words, e.g. \"government_partner essentials\""
+msgstr ""
+
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "2. You can find new tags in the label button"
+msgstr ""
+
 #: apps/passionfruit/downloads/app.tscn
 msgid "Installing..."
 msgstr ""

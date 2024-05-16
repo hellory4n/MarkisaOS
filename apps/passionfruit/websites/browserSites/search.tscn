@@ -85,7 +85,7 @@ margin_right = 234.0
 margin_bottom = 195.0
 rect_min_size = Vector2( 234, 0 )
 size_flags_horizontal = 0
-text = "1. Use underscores (_) as spaces then use spaces to separate words, e.g. \"government_partner company\""
+text = "1. Use underscores (_) as spaces then use spaces to separate tags, e.g. \"government_partner essentials\""
 autowrap = true
 
 [node name="label3" type="Label" parent="panel/vBoxContainer"]
