@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://web/government.org/assets/IBMPlexSerif-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://web/government.org/assets/IBMPlexSerif-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[resource]
+default_font = SubResource( 2 )
+Header/base_type = "Label"
+Header/fonts/font = SubResource( 1 )

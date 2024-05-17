@@ -1,0 +1,197 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/government.org/assets/coolMap.png" type="Texture" id=2]
+[ext_resource path="res://web/government.org/assets/flagIconBoth.png" type="Texture" id=3]
+[ext_resource path="res://web/government.org/assets/theme.tres" type="Theme" id=4]
+[ext_resource path="res://web/government.org/assets/flagWaving.png" type="Texture" id=5]
+[ext_resource path="res://web/government.org/assets/president.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxLine" id=1]
+color = Color( 1, 1, 1, 0.494118 )
+grow_begin = -20.0
+grow_end = -20.0
+thickness = 2
+
+[node name="government" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+theme = ExtResource( 4 )
+script = ExtResource( 1 )
+Title = "The Government"
+Description = "The national government."
+Tags = PoolStringArray( "government_partner", "government", "lelclub" )
+Icon = ExtResource( 3 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
+
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = false
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_right = 634.0
+margin_bottom = 681.0
+size_flags_horizontal = 3
+
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer"]
+margin_right = 634.0
+margin_bottom = 175.0
+rect_min_size = Vector2( 0, 175 )
+
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/centerContainer"]
+margin_top = 12.0
+margin_right = 634.0
+margin_bottom = 162.0
+custom_constants/separation = 20
+
+[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer/centerContainer/hBoxContainer"]
+margin_right = 167.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 167, 150 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/centerContainer/hBoxContainer"]
+margin_left = 187.0
+margin_right = 447.0
+margin_bottom = 150.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/centerContainer/hBoxContainer/vBoxContainer"]
+margin_top = 40.0
+margin_right = 260.0
+margin_bottom = 80.0
+theme_type_variation = "Header"
+text = "Welcome to Lelisia"
+align = 1
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/centerContainer/hBoxContainer/vBoxContainer"]
+margin_top = 80.0
+margin_right = 260.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 260, 0 )
+text = "Home of the Lelclub government"
+align = 1
+autowrap = true
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/centerContainer/hBoxContainer"]
+margin_left = 467.0
+margin_right = 634.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 167, 150 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 183.0
+margin_right = 634.0
+margin_bottom = 191.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 199.0
+margin_right = 634.0
+margin_bottom = 239.0
+theme_type_variation = "Header"
+text = "Our President"
+align = 1
+
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 247.0
+margin_right = 634.0
+margin_bottom = 377.0
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer"]
+margin_left = 130.0
+margin_right = 230.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer"]
+margin_left = 238.0
+margin_right = 503.0
+margin_bottom = 130.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_right = 265.0
+margin_bottom = 40.0
+theme_type_variation = "Header"
+text = "Simon Tranderson"
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 40.0
+margin_right = 265.0
+margin_bottom = 70.0
+text = "President since 2066"
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 70.0
+margin_right = 265.0
+margin_bottom = 100.0
+text = "Party of the Union of the Republic"
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 100.0
+margin_right = 265.0
+margin_bottom = 130.0
+text = "Born in Benediction City, BN"
+
+[node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 385.0
+margin_right = 634.0
+margin_bottom = 393.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 401.0
+margin_right = 634.0
+margin_bottom = 441.0
+theme_type_variation = "Header"
+text = "Ministries"
+align = 1
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 449.0
+margin_right = 634.0
+margin_bottom = 579.0
+text = "Ministry of Plenty, Ministry of Peace, Ministry of Truth, Ministry of Building, Ministry of Communication, Ministry of Planning, Ministry of Innovation, Ministry of Culture, Ministry of Human Rights, Ministry of Education, Ministry of Sports, Ministry of Management, Ministry of Integration, Ministry of Energy, Ministry of Health, Ministry of Work, Ministry of "
+align = 1
+autowrap = true
+
+[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 587.0
+margin_right = 634.0
+margin_bottom = 595.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 603.0
+margin_right = 634.0
+margin_bottom = 643.0
+theme_type_variation = "Header"
+text = "The States of Our Union"
+align = 1
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 651.0
+margin_right = 634.0
+margin_bottom = 681.0
+text = "list states :)"
+align = 1
+autowrap = true
