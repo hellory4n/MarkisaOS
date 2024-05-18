@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/government.org/assets/coolMap.png" type="Texture" id=2]
@@ -6,6 +6,22 @@
 [ext_resource path="res://web/government.org/assets/theme.tres" type="Theme" id=4]
 [ext_resource path="res://web/government.org/assets/flagWaving.png" type="Texture" id=5]
 [ext_resource path="res://web/government.org/assets/president.png" type="Texture" id=6]
+[ext_resource path="res://web/government.org/assets/handshake.png" type="Texture" id=7]
+[ext_resource path="res://web/government.org/assets/paid.png" type="Texture" id=8]
+[ext_resource path="res://web/government.org/assets/accessibility_new.png" type="Texture" id=9]
+[ext_resource path="res://web/government.org/assets/theater_comedy.png" type="Texture" id=10]
+[ext_resource path="res://web/government.org/assets/school.png" type="Texture" id=11]
+[ext_resource path="res://web/government.org/assets/ecg.png" type="Texture" id=12]
+[ext_resource path="res://web/government.org/assets/bolt.png" type="Texture" id=13]
+[ext_resource path="res://web/government.org/assets/new_releases.png" type="Texture" id=14]
+[ext_resource path="res://web/government.org/assets/apartment.png" type="Texture" id=15]
+[ext_resource path="res://web/government.org/assets/podium.png" type="Texture" id=16]
+[ext_resource path="res://web/government.org/assets/emoji_objects.png" type="Texture" id=17]
+[ext_resource path="res://web/government.org/assets/rocket_launch.png" type="Texture" id=18]
+[ext_resource path="res://web/government.org/assets/sports_and_outdoors.png" type="Texture" id=19]
+[ext_resource path="res://web/government.org/assets/contract.png" type="Texture" id=20]
+[ext_resource path="res://web/government.org/assets/business_center.png" type="Texture" id=21]
+[ext_resource path="res://web/government.org/assets/hub.png" type="Texture" id=22]
 
 [sub_resource type="StyleBoxLine" id=1]
 color = Color( 1, 1, 1, 0.494118 )
@@ -37,7 +53,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 634.0
-margin_bottom = 681.0
+margin_bottom = 861.0
 size_flags_horizontal = 3
 
 [node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer"]
@@ -158,40 +174,34 @@ margin_right = 634.0
 margin_bottom = 393.0
 custom_styles/separator = SubResource( 1 )
 
-[node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_top = 401.0
 margin_right = 634.0
 margin_bottom = 441.0
 theme_type_variation = "Header"
-text = "Ministries"
-align = 1
-
-[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 449.0
-margin_right = 634.0
-margin_bottom = 579.0
-text = "Ministry of Plenty, Ministry of Peace, Ministry of Truth, Ministry of Building, Ministry of Communication, Ministry of Planning, Ministry of Innovation, Ministry of Culture, Ministry of Human Rights, Ministry of Education, Ministry of Sports, Ministry of Management, Ministry of Integration, Ministry of Energy, Ministry of Health, Ministry of Work, Ministry of "
-align = 1
-autowrap = true
-
-[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-margin_top = 587.0
-margin_right = 634.0
-margin_bottom = 595.0
-custom_styles/separator = SubResource( 1 )
-
-[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 603.0
-margin_right = 634.0
-margin_bottom = 643.0
-theme_type_variation = "Header"
 text = "The States of Our Union"
 align = 1
 
-[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 651.0
+[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 449.0
 margin_right = 634.0
-margin_bottom = 681.0
-text = "list states :)"
+margin_bottom = 457.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 465.0
+margin_right = 634.0
+margin_bottom = 505.0
+theme_type_variation = "Header"
+text = "Ministries"
 align = 1
-autowrap = true
+
+[node name="itemList" type="ItemList" parent="scrollContainer/vBoxContainer"]
+margin_top = 513.0
+margin_right = 634.0
+margin_bottom = 861.0
+items = [ "Plenty", ExtResource( 8 ), false, "Peace", ExtResource( 7 ), false, "Truth", ExtResource( 14 ), false, "Building", ExtResource( 15 ), false, "Communication", ExtResource( 16 ), false, "Planning", ExtResource( 17 ), false, "Innovation", ExtResource( 18 ), false, "Culture", ExtResource( 10 ), false, "Human Rights", ExtResource( 9 ), false, "Education", ExtResource( 11 ), false, "Sports", ExtResource( 19 ), false, "Management", ExtResource( 20 ), false, "Integration", ExtResource( 22 ), false, "Energy", ExtResource( 13 ), false, "Health", ExtResource( 12 ), false, "Work", ExtResource( 21 ), false ]
+auto_height = true
+max_columns = 4
+same_column_width = true
+fixed_icon_size = Vector2( 40, 40 )
