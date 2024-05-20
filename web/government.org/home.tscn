@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/government.org/assets/coolMap.png" type="Texture" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://web/government.org/assets/bolt.png" type="Texture" id=13]
 [ext_resource path="res://web/government.org/assets/new_releases.png" type="Texture" id=14]
 [ext_resource path="res://web/government.org/assets/apartment.png" type="Texture" id=15]
-[ext_resource path="res://web/government.org/assets/podium.png" type="Texture" id=16]
 [ext_resource path="res://web/government.org/assets/emoji_objects.png" type="Texture" id=17]
 [ext_resource path="res://web/government.org/assets/rocket_launch.png" type="Texture" id=18]
 [ext_resource path="res://web/government.org/assets/sports_and_outdoors.png" type="Texture" id=19]
@@ -23,6 +22,9 @@
 [ext_resource path="res://web/government.org/assets/business_center.png" type="Texture" id=21]
 [ext_resource path="res://web/government.org/assets/hub.png" type="Texture" id=22]
 [ext_resource path="res://web/government.org/assets/states.png" type="Texture" id=23]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/biggerMarkisa.png" type="Texture" id=24]
+[ext_resource path="res://web/hexagon.com/assets/hexagonColorful.png" type="Texture" id=25]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=26]
 
 [sub_resource type="StyleBoxLine" id=1]
 color = Color( 1, 1, 1, 0.494118 )
@@ -41,6 +43,7 @@ Title = "The Government"
 Description = "The national government."
 Tags = PoolStringArray( "government_partner", "government", "lelclub" )
 Icon = ExtResource( 3 )
+TranslationPot = "res://locale/portuguese/web/government.org.po"
 
 [node name="background" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -54,7 +57,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 634.0
-margin_bottom = 1421.0
+margin_bottom = 1569.0
 size_flags_horizontal = 3
 
 [node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer"]
@@ -167,27 +170,85 @@ text = "Party of the Union of the Republic"
 margin_top = 100.0
 margin_right = 265.0
 margin_bottom = 130.0
-text = "Born in Benediction City, BN"
+text = "Born in Benediction, BN"
 
-[node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+[node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_top = 385.0
 margin_right = 634.0
 margin_bottom = 393.0
 custom_styles/separator = SubResource( 1 )
 
-[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_top = 401.0
 margin_right = 634.0
 margin_bottom = 441.0
+theme_type_variation = "Header"
+text = "Government Partners"
+align = 1
+
+[node name="hBoxContainer3" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 449.0
+margin_right = 634.0
+margin_bottom = 513.0
+alignment = 1
+
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 42.0
+margin_right = 262.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 220, 64 )
+theme_type_variation = "Header"
+text = "Passionfruit"
+icon = ExtResource( 24 )
+flat = true
+expand_icon = true
+script = ExtResource( 26 )
+website = "passionfruit.com"
+
+[node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 270.0
+margin_right = 455.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 185, 64 )
+theme_type_variation = "Header"
+text = "Hexagon"
+icon = ExtResource( 25 )
+flat = true
+expand_icon = true
+script = ExtResource( 26 )
+website = "hexagon.com"
+
+[node name="MksHyperlink3" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 463.0
+margin_right = 591.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 128, 64 )
+theme_type_variation = "Header"
+text = "Kaiatu"
+flat = true
+expand_icon = true
+script = ExtResource( 26 )
+website = "kaiatu.com"
+
+[node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 521.0
+margin_right = 634.0
+margin_bottom = 529.0
+custom_styles/separator = SubResource( 1 )
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 537.0
+margin_right = 634.0
+margin_bottom = 577.0
 theme_type_variation = "Header"
 text = "The Provinces of Our Union"
 align = 1
 
 [node name="hBoxContainer2" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
 margin_left = 17.0
-margin_top = 449.0
+margin_top = 585.0
 margin_right = 617.0
-margin_bottom = 649.0
+margin_bottom = 785.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 4
 alignment = 1
@@ -296,18 +357,18 @@ text = "Kelapa (KP)"
 align = 1
 
 [node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 657.0
+margin_top = 793.0
 margin_right = 634.0
-margin_bottom = 697.0
+margin_bottom = 833.0
 theme_type_variation = "Header"
 text = "Biggest Cities"
 align = 1
 
 [node name="hFlowContainer" type="HFlowContainer" parent="scrollContainer/vBoxContainer"]
 margin_left = 17.0
-margin_top = 705.0
+margin_top = 841.0
 margin_right = 617.0
-margin_bottom = 1001.0
+margin_bottom = 1137.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 4
 custom_constants/hseparation = 0
@@ -447,29 +508,196 @@ text = "15. Whosjo, TG - 1.5 million"
 align = 1
 
 [node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-margin_top = 1009.0
+margin_top = 1145.0
 margin_right = 634.0
-margin_bottom = 1017.0
+margin_bottom = 1153.0
 custom_styles/separator = SubResource( 1 )
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 1025.0
+margin_top = 1161.0
 margin_right = 634.0
-margin_bottom = 1065.0
+margin_bottom = 1201.0
 theme_type_variation = "Header"
 text = "Ministries"
 align = 1
 
-[node name="itemList" type="ItemList" parent="scrollContainer/vBoxContainer"]
-margin_left = 8.0
-margin_top = 1073.0
-margin_right = 626.0
-margin_bottom = 1421.0
-rect_min_size = Vector2( 618, 0 )
+[node name="hFlowContainer2" type="HFlowContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 1209.0
+margin_right = 634.0
+margin_bottom = 1569.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+alignment = 1
+
+[node name="button" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 2.0
+margin_right = 212.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 210, 0 )
 mouse_filter = 2
-size_flags_horizontal = 4
-items = [ "Plenty", ExtResource( 8 ), false, "Peace", ExtResource( 7 ), false, "Truth", ExtResource( 14 ), false, "Building", ExtResource( 15 ), false, "Communication", ExtResource( 16 ), false, "Planning", ExtResource( 17 ), false, "Innovation", ExtResource( 18 ), false, "Culture", ExtResource( 10 ), false, "Human Rights", ExtResource( 9 ), false, "Education", ExtResource( 11 ), false, "Sports", ExtResource( 19 ), false, "Management", ExtResource( 20 ), false, "Integration", ExtResource( 22 ), false, "Energy", ExtResource( 13 ), false, "Health", ExtResource( 12 ), false, "Work", ExtResource( 21 ), false ]
-auto_height = true
-max_columns = 4
-same_column_width = true
-fixed_icon_size = Vector2( 40, 40 )
+text = "Plenty"
+icon = ExtResource( 8 )
+flat = true
+
+[node name="button2" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 212.0
+margin_right = 422.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Peace"
+icon = ExtResource( 7 )
+flat = true
+
+[node name="button3" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 422.0
+margin_right = 632.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Truth"
+icon = ExtResource( 14 )
+flat = true
+
+[node name="button4" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 2.0
+margin_top = 60.0
+margin_right = 212.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Building"
+icon = ExtResource( 15 )
+flat = true
+
+[node name="button5" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 212.0
+margin_top = 60.0
+margin_right = 422.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Communication"
+icon = ExtResource( 15 )
+flat = true
+
+[node name="button6" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 422.0
+margin_top = 60.0
+margin_right = 632.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Planning"
+icon = ExtResource( 17 )
+flat = true
+
+[node name="button7" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 2.0
+margin_top = 120.0
+margin_right = 212.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Innovation"
+icon = ExtResource( 18 )
+flat = true
+
+[node name="button8" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 212.0
+margin_top = 120.0
+margin_right = 422.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Culture"
+icon = ExtResource( 10 )
+flat = true
+
+[node name="button9" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 422.0
+margin_top = 120.0
+margin_right = 632.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Human Rights"
+icon = ExtResource( 9 )
+flat = true
+
+[node name="button10" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 2.0
+margin_top = 180.0
+margin_right = 212.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Education"
+icon = ExtResource( 11 )
+flat = true
+
+[node name="button11" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 212.0
+margin_top = 180.0
+margin_right = 422.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Sports"
+icon = ExtResource( 19 )
+flat = true
+
+[node name="button12" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 422.0
+margin_top = 180.0
+margin_right = 632.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Management"
+icon = ExtResource( 20 )
+flat = true
+
+[node name="button13" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 2.0
+margin_top = 240.0
+margin_right = 212.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Integration"
+icon = ExtResource( 22 )
+flat = true
+
+[node name="button14" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 212.0
+margin_top = 240.0
+margin_right = 422.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Energy"
+icon = ExtResource( 13 )
+flat = true
+
+[node name="button15" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 422.0
+margin_top = 240.0
+margin_right = 632.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Health"
+icon = ExtResource( 12 )
+flat = true
+
+[node name="button16" type="Button" parent="scrollContainer/vBoxContainer/hFlowContainer2"]
+margin_left = 212.0
+margin_top = 300.0
+margin_right = 422.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 210, 0 )
+mouse_filter = 2
+text = "Work"
+icon = ExtResource( 21 )
+flat = true

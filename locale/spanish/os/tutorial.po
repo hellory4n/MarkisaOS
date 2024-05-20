@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: os/dashboard/dashboard.tscn
+msgid "Welcome to MarkisaOS Me"
+msgstr "Bienvenido a MarkisaOS Me."
+
+#: os/dashboard/dashboard.tscn
+msgid "This short guide will help you learn everything you need to know to get started with MarkisaOS."
+msgstr "Esta breve guía te ayudará a aprender todo lo que necesitas saber para empezar a usar MarkisaOS."
+
+#: os/dashboard/dashboard.tscn
+msgid "Notes"
+msgstr "Notas"
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can remind yourself of important things."
+msgstr "Aqui te puedes recordar de cosas importantes."
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can quickly tweak settings."
+msgstr "Aquí puedes rápidamente cambiar ajustes""
+
+#: os/dashboard/dashboard.tscn
+msgid "Next"
+msgstr "Siguiente"
+
+# this shouldn't be a literal translation, just come up with a dumb name for the stuff at the left of the screen
+#: os/dashboard/dashboard.tscn
+msgid "Dock"
+msgstr "Panel"
+
+#: os/dashboard/dashboard.tscn
+msgid "Here you can switch between applications as well as launching them."
+msgstr "Aqui puedes alternar entre aplicaciones y abrir nuevas."
+
+#: os/dashboard/dashboard.tscn
+msgid "Thanks for choosing MarkisaOS Me"
+msgstr "Gracias por escoger MarkisaOS Me"
+
+#: os/dashboard/dashboard.tscn
+msgid "For more information, check out passionfruit.com."
+msgstr "Para más información, visite passionfruit.com."
+
+#: os/dashboard/dashboard.tscn
+msgid "Finish"
+msgstr "Terminar"
+
+#: os/dashboard/dashboard.tscn
+msgid "You can switch between applications using the button with 2 squares, as well as launching them with the button with a grid of circles. The home button hides all apps, so you can see the time, date, and your money."
+msgstr "Puedes alternar entre aplicaciones usando el botón con does cuadros, y abrir nuevas usando el botón con una cuadrícula de círculos. El botón de hogar esconde las aplicaciones, para que puedas ver el reloj, el día, y tu dinero."

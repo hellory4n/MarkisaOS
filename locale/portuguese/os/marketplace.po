@@ -45,7 +45,7 @@ msgstr "Seu pacote chegou."
 
 #: apps/passionfruit/marketplace/app.tscn
 msgid "Greater Lelisia"
-msgstr "Grande Lelisia"
+msgstr "Grande Lelísia"
 
 #: apps/passionfruit/marketplace/app.tscn
 msgid "Motteto"

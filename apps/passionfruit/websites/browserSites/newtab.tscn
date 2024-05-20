@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://os/assets/bootloader/onboardingWallpaper.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://os/assets/highPeaks/icons/language.png" type="Texture" id=6]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=7]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=8]
+[ext_resource path="res://web/government.org/assets/flagIconBoth.png" type="Texture" id=9]
 
 [node name="newtab" type="Control"]
 anchor_right = 1.0
@@ -42,22 +43,22 @@ alignment = 1
 
 [node name="hSeparator" type="HSeparator" parent="lol/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 105.0
+margin_top = 104.0
 margin_right = 334.0
-margin_bottom = 113.0
+margin_bottom = 112.0
 
 [node name="label" type="Label" parent="lol/vBoxContainer"]
-margin_top = 121.0
+margin_top = 120.0
 margin_right = 334.0
-margin_bottom = 162.0
+margin_bottom = 161.0
 theme_type_variation = "Header"
 text = "Recommended websites"
 autowrap = true
 
 [node name="MksHyperlink" type="Button" parent="lol/vBoxContainer"]
-margin_top = 170.0
+margin_top = 169.0
 margin_right = 334.0
-margin_bottom = 215.0
+margin_bottom = 214.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "The official Passionfruit website"
@@ -67,34 +68,35 @@ script = ExtResource( 8 )
 website = "passionfruit.com"
 
 [node name="MksHyperlink2" type="Button" parent="lol/vBoxContainer"]
-margin_top = 223.0
+margin_top = 222.0
 margin_right = 334.0
-margin_bottom = 268.0
+margin_bottom = 270.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "The government"
+icon = ExtResource( 9 )
 script = ExtResource( 8 )
 website = "government.org"
 
 [node name="MksHyperlink3" type="Button" parent="lol/vBoxContainer"]
-margin_top = 276.0
+margin_top = 278.0
 margin_right = 334.0
-margin_bottom = 321.0
+margin_bottom = 323.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
-text = "DOESN'T EXIST YET"
+text = "Today Foundation"
 icon = ExtResource( 6 )
 expand_icon = true
 script = ExtResource( 8 )
 website = "todayfoundation.org"
 
 [node name="MksHyperlink4" type="Button" parent="lol/vBoxContainer"]
-margin_top = 329.0
+margin_top = 331.0
 margin_right = 334.0
-margin_bottom = 374.0
+margin_bottom = 376.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
-text = "DOESN'T EXIST YET"
+text = "The latest news"
 icon = ExtResource( 6 )
 expand_icon = true
 script = ExtResource( 8 )

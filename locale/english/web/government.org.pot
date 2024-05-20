@@ -1,0 +1,236 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: web/government.org/home.tscn
+msgid "The Government"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "The national government."
+msgstr ""
+
+# website tag
+#: web/government.org/home.tscn
+msgid "government_partner"
+msgstr ""
+
+# website tag
+#: web/government.org/home.tscn
+msgid "government"
+msgstr ""
+
+# website tag, lelclub is the country
+#: web/government.org/home.tscn
+msgid "lelclub"
+msgstr ""
+
+# lelisia is the capital
+#: web/government.org/home.tscn
+msgid "Welcome to Lelisia"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Home of the Lelclub government"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Our President"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Simon Tranderson"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "President since 2066"
+msgstr ""
+
+# party as in political party
+#: web/government.org/home.tscn
+msgid "Party of the Union of the Republic"
+msgstr ""
+
+# BN is a shortened
+#: web/government.org/home.tscn
+msgid "Born in Benediction City, BN"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Government Partners"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "The Provinces Of Our Union"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Federal Province (FP)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Motteto (MT)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Turtingas (TG)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Benediction (BN)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Onneto (ON)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Lumi (LM)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Skala (SK)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Visoko (VI)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Kelapa (KP)"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Biggest Cities"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "1. Turtingas, TG - 17.1 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "2. Benediction, BN - 9.3 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "3. Lelisia, FP (capital) - 4.2 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "4. Luminara, LM - 3.6 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "5. Mikrelium, SK - 3.6 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "6. New Bobbis, FP - 3.4 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "7. Cubatiri, KP - 3 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "8. Simonn, TG - 2.5 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "9. Rodomia, LM - 2.1 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "10. Thetaki, BN - 2.1 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "11. Victories, VI - 1.9 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "12. Great River, ON - 1.9 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "13. Lelville, MT - 1.8 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "14. Lauraland, SK - 1.6 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "15. Whosjo, TG - 1.5 million"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Ministries"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Plenty"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Peace"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Truth"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Building"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Communication"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Planning"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Innovation"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Culture"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Human Rights"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Education"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Sports"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Management"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Integration"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Energy"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Health"
+msgstr ""
+
+#: web/government.org/home.tscn
+msgid "Work"
+msgstr ""
