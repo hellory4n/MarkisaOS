@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/government.org/assets/coolMap.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://web/government.org/assets/contract.png" type="Texture" id=20]
 [ext_resource path="res://web/government.org/assets/business_center.png" type="Texture" id=21]
 [ext_resource path="res://web/government.org/assets/hub.png" type="Texture" id=22]
+[ext_resource path="res://web/government.org/assets/states.png" type="Texture" id=23]
 
 [sub_resource type="StyleBoxLine" id=1]
 color = Color( 1, 1, 1, 0.494118 )
@@ -53,7 +54,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 634.0
-margin_bottom = 861.0
+margin_bottom = 1421.0
 size_flags_horizontal = 3
 
 [node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer"]
@@ -179,27 +180,294 @@ margin_top = 401.0
 margin_right = 634.0
 margin_bottom = 441.0
 theme_type_variation = "Header"
-text = "The States of Our Union"
+text = "The Provinces of Our Union"
+align = 1
+
+[node name="hBoxContainer2" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_left = 17.0
+margin_top = 449.0
+margin_right = 617.0
+margin_bottom = 649.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 6
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
+margin_left = 208.0
+margin_right = 600.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="hFlowContainer" type="HFlowContainer" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer"]
+margin_top = 9.0
+margin_right = 392.0
+margin_bottom = 191.0
+rect_min_size = Vector2( 344, 0 )
+size_flags_horizontal = 3
+custom_constants/hseparation = 0
+alignment = 1
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 4.0
+margin_right = 196.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 192, 0 )
+text = "Federal Province (FP)"
+align = 1
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 196.0
+margin_right = 388.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 192, 0 )
+text = "Motteto (MT)"
+align = 1
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 4.0
+margin_top = 38.0
+margin_right = 196.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 192, 0 )
+text = "Turtingas (TG)"
+align = 1
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 196.0
+margin_top = 38.0
+margin_right = 388.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 192, 0 )
+text = "Benediction (BN)"
+align = 1
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 4.0
+margin_top = 76.0
+margin_right = 196.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 192, 0 )
+text = "Onneto (ON)"
+align = 1
+
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 196.0
+margin_top = 76.0
+margin_right = 388.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 192, 0 )
+text = "Lumi (LM)"
+align = 1
+
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 4.0
+margin_top = 114.0
+margin_right = 196.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 192, 0 )
+text = "Skala (SK)"
+align = 1
+
+[node name="label8" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 196.0
+margin_top = 114.0
+margin_right = 388.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 192, 0 )
+text = "Visoko (VI)"
+align = 1
+
+[node name="label9" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/hFlowContainer"]
+margin_left = 100.0
+margin_top = 152.0
+margin_right = 292.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 192, 0 )
+text = "Kelapa (KP)"
+align = 1
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 657.0
+margin_right = 634.0
+margin_bottom = 697.0
+theme_type_variation = "Header"
+text = "Biggest Cities"
+align = 1
+
+[node name="hFlowContainer" type="HFlowContainer" parent="scrollContainer/vBoxContainer"]
+margin_left = 17.0
+margin_top = 705.0
+margin_right = 617.0
+margin_bottom = 1001.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 4
+custom_constants/hseparation = 0
+alignment = 1
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 30.0
+margin_right = 300.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 270, 0 )
+text = "1. Turtingas, TG - 17.1 million"
+align = 1
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 300.0
+margin_right = 570.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 270, 0 )
+text = "2. Benediction, BN - 9.3 million"
+align = 1
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 30.0
+margin_top = 38.0
+margin_right = 300.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 270, 0 )
+text = "3. Lelisia, FP (capital) - 4.2 million"
+align = 1
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 300.0
+margin_top = 38.0
+margin_right = 570.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 270, 0 )
+text = "4. Luminara, LM - 3.6 million"
+align = 1
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 30.0
+margin_top = 76.0
+margin_right = 300.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 270, 0 )
+text = "5. Mikrelium, SK - 3.6 million"
+align = 1
+
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 300.0
+margin_top = 76.0
+margin_right = 570.0
+margin_bottom = 106.0
+rect_min_size = Vector2( 270, 0 )
+text = "6. New Bobbis, FP - 3.4 million"
+align = 1
+
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 30.0
+margin_top = 114.0
+margin_right = 300.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 270, 0 )
+text = "7. Cubatiri, KP - 3 million"
+align = 1
+
+[node name="label8" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 300.0
+margin_top = 114.0
+margin_right = 570.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 270, 0 )
+text = "8. Simonn, TG - 2.5 million"
+align = 1
+
+[node name="label9" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 30.0
+margin_top = 152.0
+margin_right = 300.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 270, 0 )
+text = "9. Rodomia, LM - 2.1 million"
+align = 1
+
+[node name="label10" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 300.0
+margin_top = 152.0
+margin_right = 570.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 270, 0 )
+text = "10. Thetaki, BN - 2.1 million"
+align = 1
+
+[node name="label11" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 30.0
+margin_top = 190.0
+margin_right = 300.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 270, 0 )
+text = "11. Victories, VI - 1.9 million"
+align = 1
+
+[node name="label12" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 300.0
+margin_top = 190.0
+margin_right = 570.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 270, 0 )
+text = "12. Great River, ON - 1.9 million"
+align = 1
+
+[node name="label14" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 30.0
+margin_top = 228.0
+margin_right = 300.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 270, 0 )
+text = "13. Lelville, MT - 1.8 million"
+align = 1
+
+[node name="label15" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 300.0
+margin_top = 228.0
+margin_right = 570.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 270, 0 )
+text = "14. Lauraland, SK - 1.6 million"
+align = 1
+
+[node name="label13" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer"]
+margin_left = 165.0
+margin_top = 266.0
+margin_right = 435.0
+margin_bottom = 296.0
+rect_min_size = Vector2( 270, 0 )
+text = "15. Whosjo, TG - 1.5 million"
 align = 1
 
 [node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-margin_top = 449.0
+margin_top = 1009.0
 margin_right = 634.0
-margin_bottom = 457.0
+margin_bottom = 1017.0
 custom_styles/separator = SubResource( 1 )
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 465.0
+margin_top = 1025.0
 margin_right = 634.0
-margin_bottom = 505.0
+margin_bottom = 1065.0
 theme_type_variation = "Header"
 text = "Ministries"
 align = 1
 
 [node name="itemList" type="ItemList" parent="scrollContainer/vBoxContainer"]
-margin_top = 513.0
-margin_right = 634.0
-margin_bottom = 861.0
+margin_left = 8.0
+margin_top = 1073.0
+margin_right = 626.0
+margin_bottom = 1421.0
+rect_min_size = Vector2( 618, 0 )
+mouse_filter = 2
+size_flags_horizontal = 4
 items = [ "Plenty", ExtResource( 8 ), false, "Peace", ExtResource( 7 ), false, "Truth", ExtResource( 14 ), false, "Building", ExtResource( 15 ), false, "Communication", ExtResource( 16 ), false, "Planning", ExtResource( 17 ), false, "Innovation", ExtResource( 18 ), false, "Culture", ExtResource( 10 ), false, "Human Rights", ExtResource( 9 ), false, "Education", ExtResource( 11 ), false, "Sports", ExtResource( 19 ), false, "Management", ExtResource( 20 ), false, "Integration", ExtResource( 22 ), false, "Energy", ExtResource( 13 ), false, "Health", ExtResource( 12 ), false, "Work", ExtResource( 21 ), false ]
 auto_height = true
 max_columns = 4
