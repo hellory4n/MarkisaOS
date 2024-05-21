@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Connect"
+msgstr "Connect"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Trending"
+msgstr "Trending"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "More"
+msgstr "Lebih banyak"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Loading..."
+msgstr "Memuat..."
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Help Center"
+msgstr "Pusat Bantuan"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Comedy"
+msgstr "Komedi"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Technology"
+msgstr "Teknologi"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Entertainment"
+msgstr "Hiburan"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Creativity"
+msgstr "Kreatifitas"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Discussion"
+msgstr "Diskusi"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Bookmarks"
+msgstr "Bookmark"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Refresh"
+msgstr "Refresh"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Who are you gonna share this with?"
+msgstr "Kepada siapa Anda akan membagikan ini?"
+
+#: apps/passionfruit/connect/app.tscn
+msgid "You have no contacts."
+msgstr "Anda tidak punya kontak."
+
+#: apps/passionfruit/connect/app.tscn
+msgid "Copy Link"
+msgstr "Salin Link"
+
+#: apps/passionfruit/connect/ui/TheAlgorithm.cs
+msgid "Link copied."
+msgstr "Link disalin."
+
+#: apps/passionfruit/connect/ui/TheAlgorithm.cs
+msgid "Post added to bookmarks"
+msgstr "Postingan ditambahkan ke bookmark."
+
+#: apps/passionfruit/connect/ui/SharePost.cs
+msgid "Dear {name},(/n)(/n)I found a post you might be interested in:(/n)(/n){post info}(/n)(/n)Cheers,(/n){user}"
+msgstr "Kepada {name},\n"
+"\n"
+"Aku menemukan sebuah postingan yang mungkin Anda tertarik:\n"
+"\n"
+"{post info}\n"
+"\n"
+"Salam,\n"
+"{user}"

@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Uninstall"
+msgstr "Uninstal"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Mute Music"
+msgstr "Bisukan Musik"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Tags"
+msgstr "Tag"
+
+# as in the concept of search, not the verb
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "Search"
+msgstr "Cari"
+
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "Search websites"
+msgstr "Cari situs web"
+
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "Results"
+msgstr "Hasil"
+
+# not the money kind
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "Tips"
+msgstr "Kiat"
+
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "1. Use underscores (_) as spaces then use spaces to separate words, e.g. \"government_partner essentials\""
+msgstr "1. Gunakan garis bawah (_) sebagai spasi lalu gunakan spasi untuk memisahkan kata, mis. \"mitra_pemerintah kebutuhan\""
+
+#: apps/passionfruit/websites/browserSites/search.tscn
+msgid "2. You can find new tags in the label button"
+msgstr "2. Anda bisa menemukan tag baru dalam tombol label"
+
+#: apps/passionfruit/downloads/app.tscn
+msgid "Installing..."
+msgstr "Menginstal..."

@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: apps/passionfruit/email/app.tscn
+msgid "Emails"
+msgstr "Email"
+
+#: apps/passionfruit/email/ui/ListEmails.cs
+msgid "Link copied."
+msgstr "Link disalin."
+
+# [b] is a formatting thing, keep it as it is
+#: apps/passionfruit/email/ui/ListEmails.cs
+msgid "[b]You -"
+msgstr "[b]Anda -"

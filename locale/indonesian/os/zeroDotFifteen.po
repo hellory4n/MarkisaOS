@@ -1,0 +1,37 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Share"
+msgstr "Bagi"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "Who are you gonna share this with?"
+msgstr "Kepada siapa Anda membagikan ini?"
+
+#: apps/passionfruit/websites/app.tscn
+msgid "You have no contacts."
+msgstr "Anda tidak punya kontak"
+
+#: apps/passionfruit/websites/chrome/ShareWebsites.cs
+msgid ""
+"Dear {name},(/n)I found a website you might be interested in: {website}(/n)(/"
+"n)Cheers,(/n){user}"
+msgstr "Kepada {name},\n"
+"\n"
+"Aku menemukan situs web yang mungkin Anda tertarik: {website}\n"
+"\n"
+"Salam,\n"
+"{user}"
+
+#: os/kickstart/GdScriptBridge.cs
+msgid "{file} was downloaded."
+msgstr "{file} telah diunduh."
+

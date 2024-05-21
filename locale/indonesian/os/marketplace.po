@@ -1,0 +1,91 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Marketplace"
+msgstr "Pasar"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Your package should arrive soon."
+msgstr "Paket Anda akan segera tiba."
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Address"
+msgstr "Alamat"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Cart"
+msgstr "Keranjang"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Essentials"
+msgstr "Kebutuhan"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Technology"
+msgstr "Teknologi"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Local Market"
+msgstr "Pasar Lokal"
+
+#: apps/passionfruit/marketplace/ui/ListStoreGarbage.cs
+msgid "Your package has arrived."
+msgstr "Paket Anda telah sampai."
+
+# the following are place names, you're only supposed to adapt it to the language's spelling rules (or just leave it as it is)
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Greater Lelisia"
+msgstr "Greater Lelisia"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Motteto"
+msgstr "Motteto"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Turtingas"
+msgstr "Turtingas"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Benediction"
+msgstr "Benediction"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Onneto"
+msgstr "Onneto"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Lumi"
+msgstr "Lumi"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Skala"
+msgstr "Skala"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Visoko"
+msgstr "Visoko"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Kelapa"
+msgstr "Kelapa"
+
+#: apps/passionfruit/marketplace/app.tscn
+msgid "Maleta Island"
+msgstr "Pulau Maleta"
+
+#: apps/passionfruit/marketplace/ListStoreGarbage.cs
+msgid "View - {price}"
+msgstr "Lihat - {price}"
+
+#: apps/passionfruit/marketplace/ListStoreGarbage.cs
+msgid "Buy - {price}"
+msgstr "Beli - {price}"

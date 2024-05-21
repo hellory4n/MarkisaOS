@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Bank"
+msgstr "Bank"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Cash"
+msgstr "Tunai"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Assets"
+msgstr "Aset-aset"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Debt"
+msgstr "Utang"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "All transactions"
+msgstr "Semua transaksi"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "You don't have a credit card."
+msgstr "Anda tidak memiliki kartu kredit."
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Once you sign up you will receive an email in up to 5 business days."
+msgstr "Saat Anda mendaftar Anda akan menerima email dalam sampai 5 hari kerja."
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Get a credit card"
+msgstr "Dapatkan kartu kredit"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Send money"
+msgstr "Kirim uang"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "No contacts."
+msgstr "Tidak ada kontak."
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Send"
+msgstr "Kirim"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "No loans available. Check again later."
+msgstr "Tidak ada pinjaman tersedia. Periksa lagi nanti"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "History"
+msgstr "Riwayat"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Credit Card"
+msgstr "Kartu Kredit"
+
+#: apps/passionfruit/bank/app.tscn
+msgid "Loans"
+msgstr "Pinjaman"
+
+#: apps/passionfruit/bank/ui/SendYourLifeSavingsToANigerianPrince.cs
+msgid "Money send successfully."
+msgstr "Uang berhasil dikirim."
+
+#: apps/passionfruit/bank/ui/ListTransactions.cs
+msgid "{money} sent to {person}"
+msgstr "{money} dikirim ke {person}"
+
+#: apps/passionfruit/bank/ui/ListTransactions.cs
+msgid "{money} sent from {person}"
+msgstr "{money} dikirim dari {person}"
+
+#: apps/passionfruit/bank/ui/SignUpForCreditCard.cs
+msgid "National Lelclub Bank"
+msgstr "Bank Lelclub Nasional"
+
+#: apps/passionfruit/bank/ui/SignUpForCreditCard.cs
+msgid "Dear {user},(/n)(/n)We regret to inform you that your recent application for a credit card has been declined. We understand that this may be disappointing news, and we appreciate the time you took to apply with us.(/n)(/n)Thank you for considering the National Lelclub Bank for your financial needs. We appreciate the opportunity to serve you, and we wish you the best in your financial journey.(/n)(/n)Sincerely,(/n)Andrew Talley(/n)National Lelclub Bank"
+msgstr "Kepada {user},\n"
+"\n"
+"Kami menyesal untuk memberitahu Anda bahwa permintaan terakhir untuk kartu kredit telah ditolak. Kami mengerti bahwa ini bisa menjadi kabar mengecewakan, dan kami menghargai masa yang Anda butuhkan untuk bekerja dengan kami.\n"
+"\n"
+"Terima kasih telah mempertimbangakan Bank Lelclub Nasional sebagai kebutuhan finansial Anda. Kami menghargai kesempatan untuk melayani Anda, dan kami mengharapkan yang terbaik dalam perjalanan finansial Anda.\n"
+"\n"
+"Dengan hormat,\n"
+"Andrew Talley\n"
+"Bank Lelclub Nasional"
