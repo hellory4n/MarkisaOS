@@ -61,7 +61,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 510.0
+margin_bottom = 547.0
 size_flags_horizontal = 3
 custom_constants/separation = 4
 
@@ -122,24 +122,32 @@ custom_fonts/font = SubResource( 5 )
 text = "Wood music isn't just music. It's an experience."
 align = 1
 
-[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_top = 233.0
 margin_right = 633.0
-margin_bottom = 241.0
+margin_bottom = 266.0
+custom_fonts/font = SubResource( 5 )
+text = "POST ON CONNECT \"ross is a genius\""
+align = 1
+
+[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 270.0
+margin_right = 633.0
+margin_bottom = 278.0
 custom_styles/separator = SubResource( 7 )
 
 [node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 245.0
+margin_top = 282.0
 margin_right = 633.0
-margin_bottom = 290.0
+margin_bottom = 327.0
 custom_fonts/font = SubResource( 1 )
 text = "Albums"
 align = 1
 
 [node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
-margin_top = 294.0
+margin_top = 331.0
 margin_right = 633.0
-margin_bottom = 510.0
+margin_bottom = 547.0
 custom_constants/separation = 20
 alignment = 1
 
