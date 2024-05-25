@@ -1,0 +1,450 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/rosstibeeth.com/assets/jamesVsTheStars.mp3" type="AudioStream" id=2]
+[ext_resource path="res://web/rosstibeeth.com/assets/bg.png" type="Texture" id=3]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=4]
+[ext_resource path="res://web/rosstibeeth.com/assets/Kanit-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://web/rosstibeeth.com/assets/Kanit-SemiBold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://web/rosstibeeth.com/assets/jamesVsTheStars.png" type="Texture" id=7]
+[ext_resource path="res://web/rosstibeeth.com/ui/tracklistStuff.gd" type="Script" id=8]
+[ext_resource path="res://web/rosstibeeth.com/ui/musicProgress.gd" type="Script" id=9]
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 1, 1, 1, 0.121569 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxLine" id=7]
+color = Color( 1, 1, 1, 1 )
+grow_begin = -20.0
+grow_end = -20.0
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 1, 1, 1, 0.215686 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="rosstibeeth" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+Title = "James VS The Stars"
+Description = "James is in a legendary fight with the stars... or is it? According to my cat, James VS The Stars is a major breakthrough in wood music composing and storytelling."
+Tags = PoolStringArray( "ross", "tibeeth", "ross_tibeeth", "music", "wood", "wood_music", "experimental", "experimental_music", "james_vs_the_stars" )
+Icon = ExtResource( 7 )
+
+[node name="background" type="TextureRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.682353 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 7
+
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = false
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_right = 633.0
+margin_bottom = 1308.0
+size_flags_horizontal = 3
+custom_constants/separation = 4
+
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 633.0
+margin_bottom = 8.0
+
+[node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 12.0
+margin_right = 633.0
+margin_bottom = 20.0
+
+[node name="MksDownload" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 166.0
+margin_top = 24.0
+margin_right = 466.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 4
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "Back"
+script = ExtResource( 4 )
+website = "rosstibeeth.com"
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 66.0
+margin_right = 633.0
+margin_bottom = 111.0
+custom_fonts/font = SubResource( 1 )
+text = "James VS The Stars (January 2071)"
+align = 1
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 115.0
+margin_right = 591.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "James is in a legendary fight with the stars... or is it? According to my cat, James VS The Stars is a major breakthrough in wood music composing and storytelling."
+align = 1
+autowrap = true
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_top = 208.0
+margin_right = 633.0
+margin_bottom = 508.0
+rect_min_size = Vector2( 0, 300 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 512.0
+margin_right = 633.0
+margin_bottom = 520.0
+custom_styles/separator = SubResource( 7 )
+
+[node name="lol" type="AudioStreamPlayer" parent="scrollContainer/vBoxContainer"]
+stream = ExtResource( 2 )
+autoplay = true
+bus = "music"
+
+[node name="progressBar" type="ProgressBar" parent="scrollContainer/vBoxContainer"]
+margin_left = 116.0
+margin_top = 524.0
+margin_right = 516.0
+margin_bottom = 556.0
+rect_min_size = Vector2( 400, 32 )
+size_flags_horizontal = 4
+custom_styles/fg = SubResource( 8 )
+custom_styles/bg = SubResource( 9 )
+percent_visible = false
+script = ExtResource( 9 )
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 560.0
+margin_right = 633.0
+margin_bottom = 605.0
+custom_fonts/font = SubResource( 1 )
+text = "Tracklist"
+align = 1
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 609.0
+margin_right = 591.0
+margin_bottom = 642.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "0:00. Whoopsie, Committed Vehicular Manslaughter"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+end = 8.0
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 646.0
+margin_right = 591.0
+margin_bottom = 679.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "0:08. In Court"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 8.0
+end = 19.0
+
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 683.0
+margin_right = 591.0
+margin_bottom = 716.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "0:19 Condemn Him To The Infirmary"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 19.0
+end = 34.0
+
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 720.0
+margin_right = 591.0
+margin_bottom = 753.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "0:34 Unstoppable Agony"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 34.0
+end = 42.0
+
+[node name="label8" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 757.0
+margin_right = 591.0
+margin_bottom = 790.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "0:42 Hello Friend"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 42.0
+end = 52.0
+
+[node name="label9" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 794.0
+margin_right = 591.0
+margin_bottom = 827.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "0:52 I Must End The Stars"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 52.0
+end = 54.0
+
+[node name="label10" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 831.0
+margin_right = 591.0
+margin_bottom = 864.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "0:54 I Don't Think This Banana Will Help"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 54.0
+end = 56.0
+
+[node name="label11" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 868.0
+margin_right = 591.0
+margin_bottom = 901.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "0:56 How Can I Take That Guy's Gun? I Can Shoot The Sun"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 56.0
+end = 60.0
+
+[node name="label12" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 905.0
+margin_right = 591.0
+margin_bottom = 938.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "1:00 OH GOD NO I BEG YOU PLEASE NOTHJR8YAEY6EA4KN Y6I89USE5A"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 60.0
+end = 61.0
+
+[node name="label13" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 942.0
+margin_right = 591.0
+margin_bottom = 975.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "1:01 The Lightning Strikes Pt. I"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 61.0
+end = 73.0
+
+[node name="label14" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 979.0
+margin_right = 591.0
+margin_bottom = 1012.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "1:13 The Lightning Strikes Pt. II"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 73.0
+end = 77.0
+
+[node name="label15" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 1016.0
+margin_right = 591.0
+margin_bottom = 1049.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "1:17 SUFFER! HAHAHAHA!"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 77.0
+end = 87.0
+
+[node name="label16" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 1053.0
+margin_right = 591.0
+margin_bottom = 1086.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "1:27 See How I Laugh At You? You'll Never Understand."
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 87.0
+end = 97.0
+
+[node name="label17" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 1090.0
+margin_right = 591.0
+margin_bottom = 1123.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "1:37 Bow Down Before Your Real God"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 97.0
+end = 103.0
+
+[node name="label18" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 1127.0
+margin_right = 591.0
+margin_bottom = 1160.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "1:43 I Hear Things... They Are Talking To Me..."
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 103.0
+end = 125.0
+
+[node name="label19" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 1164.0
+margin_right = 591.0
+margin_bottom = 1197.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "2:05 I'm Gonna Steal That Gun"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 125.0
+end = 130.0
+
+[node name="label20" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 1201.0
+margin_right = 591.0
+margin_bottom = 1234.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "2:10 The Lightning Strikes Pt. III"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 130.0
+end = 143.0
+
+[node name="label21" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 1238.0
+margin_right = 591.0
+margin_bottom = 1271.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "2:23 I Am A Broken Man; A Shadow Of Who I Once Was"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 143.0
+end = 152.0
+
+[node name="label22" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 41.0
+margin_top = 1275.0
+margin_right = 591.0
+margin_bottom = 1308.0
+rect_min_size = Vector2( 550, 0 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 5 )
+text = "2:32 Rotting Alone Until"
+align = 1
+autowrap = true
+script = ExtResource( 8 )
+seconds = 152.0
+end = 169.0

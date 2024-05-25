@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/jamesVsTheStars.mp3-edb4c2e28ee47cd818d7e9718592ec83.mp3str"
+
+[deps]
+
+source_file="res://web/rosstibeeth.com/assets/jamesVsTheStars.mp3"
+dest_files=[ "res://.import/jamesVsTheStars.mp3-edb4c2e28ee47cd818d7e9718592ec83.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

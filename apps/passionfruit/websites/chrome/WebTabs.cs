@@ -143,7 +143,7 @@ public class WebTabs : VBoxContainer
         }
 
         // save it in the user's history :)
-        if (address != "404" && address != "" && address == "res://apps/passionfruit/websites/browserSites/search.tscn") {
+        if (address != "404" && address != "" && address != "res://apps/passionfruit/websites/browserSites/search.tscn") {
             var fig = new Config<WebsiteConfig>();
 
             // translation crap
