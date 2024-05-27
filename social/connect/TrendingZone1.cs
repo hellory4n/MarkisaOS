@@ -17,6 +17,19 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             Link = "rosstibeeth.com",
             Replies = new MksPost[] {
                 new MksPost {
+                    User = "iredvent",
+                    ProfilePicture = "res://web/rosstibeeth.com/assets/rossHimself.png",
+                    Content = "can i marry you"
+                },
+
+                new MksPost {
+                    User = "Ross Tibeeth",
+                    Verified = true,
+                    ProfilePicture = "res://web/rosstibeeth.com/assets/rossHimself.png",
+                    Content = "<ping>iredvent</ping> wtf"
+                },
+
+                new MksPost {
                     User = "Daily Thoughts",
                     ProfilePicture = "social/connectpeople/dailyThoughts.png",
                     Content = "how did you do that bold thing?"
@@ -24,6 +37,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
 
                 new MksPost {
                     User = "Ross Tibeeth",
+                    Verified = true,
                     ProfilePicture = "res://web/rosstibeeth.com/assets/rossHimself.png",
                     Content = "<ping>Daily Thoughts</ping> [ b] this without the spaces[ /b]"
                 },

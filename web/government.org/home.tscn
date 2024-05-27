@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/government.org/assets/coolMap.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://web/government.org/assets/bolt.png" type="Texture" id=13]
 [ext_resource path="res://web/government.org/assets/new_releases.png" type="Texture" id=14]
 [ext_resource path="res://web/government.org/assets/apartment.png" type="Texture" id=15]
+[ext_resource path="res://web/government.org/assets/probablyAShoeStore.mp3" type="AudioStream" id=16]
 [ext_resource path="res://web/government.org/assets/emoji_objects.png" type="Texture" id=17]
 [ext_resource path="res://web/government.org/assets/rocket_launch.png" type="Texture" id=18]
 [ext_resource path="res://web/government.org/assets/sports_and_outdoors.png" type="Texture" id=19]
@@ -43,6 +44,7 @@ Title = "The Government"
 Description = "The national government."
 Tags = PoolStringArray( "government_partner", "government", "lelclub" )
 Icon = ExtResource( 3 )
+Music = ExtResource( 16 )
 TranslationPot = "res://locale/portuguese/web/government.org.po"
 
 [node name="background" type="ColorRect" parent="."]
@@ -57,7 +59,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 634.0
-margin_bottom = 913.0
+margin_bottom = 1569.0
 size_flags_horizontal = 3
 
 [node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer"]
@@ -133,6 +135,7 @@ margin_bottom = 377.0
 alignment = 1
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer"]
+visible = false
 margin_left = 130.0
 margin_right = 230.0
 margin_bottom = 130.0
@@ -142,8 +145,8 @@ expand = true
 stretch_mode = 6
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 238.0
-margin_right = 503.0
+margin_left = 184.0
+margin_right = 449.0
 margin_bottom = 130.0
 custom_constants/separation = 0
 alignment = 1
@@ -153,24 +156,28 @@ margin_right = 265.0
 margin_bottom = 40.0
 theme_type_variation = "Header"
 text = "Simon Tranderson"
+align = 1
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 40.0
 margin_right = 265.0
 margin_bottom = 70.0
 text = "President since 2066"
+align = 1
 
 [node name="label3" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 70.0
 margin_right = 265.0
 margin_bottom = 100.0
 text = "Party of the Union of the Republic"
+align = 1
 
 [node name="label4" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 100.0
 margin_right = 265.0
 margin_bottom = 130.0
 text = "Born in Benediction, BN"
+align = 1
 
 [node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 margin_top = 385.0

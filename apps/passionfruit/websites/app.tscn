@@ -119,6 +119,8 @@ margin_bottom = 305.0
 size_flags_vertical = 3
 
 [node name="tabs" type="VBoxContainer" parent="contents/container/sidebar/vBoxContainer/middle"]
+margin_right = 150.0
+margin_bottom = 215.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
@@ -344,7 +346,7 @@ anchor_bottom = 1.0
 margin_bottom = -53.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/tags/scrollContainer"]
-margin_right = 65.0
+margin_right = 250.0
 margin_bottom = 41.0
 size_flags_horizontal = 3
 custom_constants/separation = 0

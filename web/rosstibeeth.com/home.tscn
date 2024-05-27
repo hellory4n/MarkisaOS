@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/rosstibeeth.com/assets/Kanit-Italic.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://web/rosstibeeth.com/assets/Kanit-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://web/rosstibeeth.com/assets/Kanit-SemiBold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://web/rosstibeeth.com/assets/jamesVsTheStars.png" type="Texture" id=7]
+[ext_resource path="res://web/rosstibeeth.com/ui/playStuff.gd" type="Script" id=8]
+[ext_resource path="res://web/rosstibeeth.com/assets/dyingDuringABrainSurgery.mp3" type="AudioStream" id=9]
+[ext_resource path="res://web/rosstibeeth.com/assets/dyingDuringABrainSurgery.png" type="Texture" id=10]
+[ext_resource path="res://web/rosstibeeth.com/assets/butAndTheIredvent.wav" type="AudioStream" id=11]
+[ext_resource path="res://web/rosstibeeth.com/assets/butAndTheIredvent.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -61,7 +66,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 547.0
+margin_bottom = 925.0
 size_flags_horizontal = 3
 custom_constants/separation = 4
 
@@ -147,43 +152,44 @@ align = 1
 [node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
 margin_top = 331.0
 margin_right = 633.0
-margin_bottom = 547.0
+margin_bottom = 519.0
 custom_constants/separation = 20
 alignment = 1
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 50.0
-margin_right = 178.0
-margin_bottom = 216.0
+margin_left = 15.0
+margin_right = 143.0
+margin_bottom = 188.0
 rect_min_size = Vector2( 128, 128 )
 texture = ExtResource( 7 )
 expand = true
 stretch_mode = 6
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 198.0
-margin_right = 583.0
-margin_bottom = 216.0
+margin_left = 163.0
+margin_right = 618.0
+margin_bottom = 188.0
 alignment = 1
 
 [node name="label6" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
-margin_right = 385.0
+margin_right = 455.0
 margin_bottom = 45.0
+rect_min_size = Vector2( 455, 0 )
 custom_fonts/font = SubResource( 1 )
-text = "James VS The Stars (January 2071)"
+text = "James VS The Stars (Jan 2071)"
 
 [node name="label7" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 53.0
-margin_right = 385.0
-margin_bottom = 170.0
+margin_right = 455.0
+margin_bottom = 142.0
 custom_fonts/font = SubResource( 5 )
 text = "James is in a legendary fight with the stars... or is it? According to my cat, James VS The Stars is a major breakthrough in wood music composing and storytelling."
 autowrap = true
 
 [node name="MksDownload" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
-margin_top = 178.0
-margin_right = 385.0
-margin_bottom = 216.0
+margin_top = 150.0
+margin_right = 455.0
+margin_bottom = 188.0
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/focus = SubResource( 4 )
@@ -192,3 +198,155 @@ custom_styles/normal = SubResource( 4 )
 text = "Listen (2:46)"
 script = ExtResource( 4 )
 website = "rosstibeeth.com/jvts.tscn"
+
+[node name="hSeparator5" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 523.0
+margin_right = 633.0
+margin_bottom = 531.0
+
+[node name="hBoxContainer2" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 535.0
+margin_right = 633.0
+margin_bottom = 667.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
+margin_left = 15.0
+margin_right = 143.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 128, 128 )
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
+margin_left = 163.0
+margin_right = 618.0
+margin_bottom = 132.0
+alignment = 1
+
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer"]
+margin_right = 455.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 455, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "Dying During A Brain Surgery (Dec 2070)"
+
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer"]
+margin_top = 53.0
+margin_right = 455.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 5 )
+text = "A short story. The title says all"
+autowrap = true
+
+[node name="MksDownload" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer"]
+margin_top = 94.0
+margin_right = 455.0
+margin_bottom = 132.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "Listen (0:08)"
+script = ExtResource( 8 )
+
+[node name="m" type="AudioStreamPlayer" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer/MksDownload"]
+stream = ExtResource( 9 )
+bus = "music"
+
+[node name="hSeparator6" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 671.0
+margin_right = 633.0
+margin_bottom = 679.0
+
+[node name="hBoxContainer3" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 683.0
+margin_right = 633.0
+margin_bottom = 815.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 15.0
+margin_right = 143.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 128, 128 )
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 163.0
+margin_right = 618.0
+margin_bottom = 132.0
+alignment = 1
+
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
+margin_right = 455.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 455, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "But & The I're'd'ven't (Jul 2070)"
+
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
+margin_top = 53.0
+margin_right = 455.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 5 )
+text = "The greatest music you will ever hear in your entire life."
+autowrap = true
+
+[node name="MksDownload" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
+margin_top = 94.0
+margin_right = 455.0
+margin_bottom = 132.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "Listen (0:02)"
+script = ExtResource( 8 )
+
+[node name="m" type="AudioStreamPlayer" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer/MksDownload"]
+stream = ExtResource( 11 )
+bus = "music"
+
+[node name="hSeparator7" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 819.0
+margin_right = 633.0
+margin_bottom = 827.0
+
+[node name="hSeparator8" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 831.0
+margin_right = 633.0
+margin_bottom = 839.0
+
+[node name="hSeparator9" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 843.0
+margin_right = 633.0
+margin_bottom = 851.0
+
+[node name="label8" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 855.0
+margin_right = 633.0
+margin_bottom = 888.0
+custom_fonts/font = SubResource( 6 )
+text = "\"He might need special treatment\""
+align = 1
+
+[node name="label9" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 892.0
+margin_right = 633.0
+margin_bottom = 925.0
+custom_fonts/font = SubResource( 5 )
+text = "- my mother"
+align = 1

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/probablyAShoeStore.mp3-73423865a60e719ec992810e1a3752d9.mp3str"
+
+[deps]
+
+source_file="res://web/government.org/assets/probablyAShoeStore.mp3"
+dest_files=[ "res://.import/probablyAShoeStore.mp3-73423865a60e719ec992810e1a3752d9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

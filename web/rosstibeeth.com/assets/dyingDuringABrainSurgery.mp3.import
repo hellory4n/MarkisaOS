@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dyingDuringABrainSurgery.mp3-027066b11c79c4e7edddd699b0a167da.mp3str"
+
+[deps]
+
+source_file="res://web/rosstibeeth.com/assets/dyingDuringABrainSurgery.mp3"
+dest_files=[ "res://.import/dyingDuringABrainSurgery.mp3-027066b11c79c4e7edddd699b0a167da.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
