@@ -55,6 +55,57 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
                 },
             }
         },
+
+        new MksPost {
+            User = "iredvent",
+            ProfilePicture = "res://web/rosstibeeth.com/assets/rossHimself.png",
+            Content = "ROSS IS A BITCH he broke up with me :(",
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "Ross Smith",
+                    ProfilePicture = "res://os/assets/userIcons/duck.png",
+                    Content = "Who are you?"
+                },
+
+                new MksPost {
+                    User = "Ross Tibeeth (.com)",
+                    Verified = true,
+                    ProfilePicture = "res://web/rosstibeeth.com/assets/rossHimself.png",
+                    Content = "i never dated you"
+                },
+
+                new MksPost {
+                    User = "Daily Thoughts",
+                    ProfilePicture = "social/connectpeople/dailyThoughts.png",
+                    Content = "understandable"
+                },
+            }
+        },
+
+        new MksPost {
+            User = "Daily Thoughts",
+            ProfilePicture = "social/connectpeople/dailyThoughts.png",
+            Content = "if i kill my neighbor it's murder, if i kill the president it's an assassination",
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "Ross Smith",
+                    ProfilePicture = "res://os/assets/userIcons/duck.png",
+                    Content = "What?????"
+                },
+
+                new MksPost {
+                    User = "Rob Smith",
+                    ProfilePicture = "res://os/assets/userIcons/duck.png",
+                    Content = "Stop copying me"
+                },
+
+                new MksPost {
+                    User = "Ross Smith",
+                    ProfilePicture = "res://os/assets/userIcons/duck.png",
+                    Content = "?"
+                },
+            }
+        },
     }
 };
 

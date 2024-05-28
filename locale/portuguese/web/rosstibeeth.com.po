@@ -1,0 +1,256 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Ross Tibeeth"
+msgstr "Rodrigo Biffé"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "ross tibeeth is not just music; it's an experience."
+msgstr "rodrigo biffé não é só música; é uma experiência."
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "ross"
+msgstr "rodrigo"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "tibeeth"
+msgstr "biffé"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "ross_tibeeth"
+msgstr "rodrigo_biffé"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "music"
+msgstr "música"
+
+# website tag
+# wood is a genre
+#: web/rosstibeeth.com/home.tscn
+msgid "wood"
+msgstr "wood"
+
+# website tag
+# wood is a genre
+#: web/rosstibeeth.com/home.tscn
+msgid "wood_music"
+msgstr "música_wood"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "experimental"
+msgstr "experimental"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "experimental_music"
+msgstr "música_experimental"
+
+# website tag
+# this is an album name
+#: web/rosstibeeth.com/home.tscn
+msgid "james_vs_the_stars"
+msgstr "joão_vs_as_estrelas"
+
+# website tag
+# this is a song name
+#: web/rosstibeeth.com/home.tscn
+msgid "dying_during_a_brain_surgery"
+msgstr "morrendo_durante_uma_cirurgia_cerebral"
+
+# website tag
+# this is a song name, But & The I're'd'ven't
+# it shouldn't make sense
+#: web/rosstibeeth.com/home.tscn
+msgid "but_and_the_iredvent"
+msgstr "mas_e_o_uma_eu"
+
+# website tag
+# short for james vs the stars
+#: web/rosstibeeth.com/home.tscn
+msgid "jvts"
+msgstr "jvae"
+
+# website tag
+# short for dying during a brain surgery
+#: web/rosstibeeth.com/home.tscn
+msgid "ddabs"
+msgstr "mducc"
+
+# website tag
+# short for But & The I're'd'ven't
+#: web/rosstibeeth.com/home.tscn
+msgid "iredvent"
+msgstr "meoue"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "the best wood music."
+msgstr "a melhor música wood."
+
+#: web/rosstibeeth.com/home.tscn
+msgid "\"At first I was confused. Now I'm more confused.\""
+msgstr "\"No começo eu tava confuso. Agora eu tô mais confuso.\""
+
+#: web/rosstibeeth.com/home.tscn
+msgid "- my brother"
+msgstr "- meu irmão"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Wood music isn't just music. It's an experience."
+msgstr "Música wood não é só música. É uma experiência."
+
+#: web/rosstibeeth.com/home.tscn
+msgid "POST ON CONNECT \"ross is a genius\""
+msgstr "POSTE NO CONEXÕES \"o rodrigo é um gênio\""
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Albums"
+msgstr "Álbuns"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "James VS The Stars (Jan 2071)"
+msgstr "João VS As Estrelas (Jan 2071)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "James is in a legendary fight with the stars... or is it? According to my "
+"cat, James VS The Stars is a major breakthrough in wood music composing and "
+"storytelling."
+msgstr "João está em uma batalha lendária com as estrelas... ou será que não? De acordo com o meu gato, João VS As Estrelas é um avanço estarrecedor em música wood."
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Listen (2:46)"
+msgstr "Ouvir (2:46)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Dying During A Brain Surgery (Dec 2070)"
+msgstr "Morrendo Durante Uma Cirurgia Cerebral (Dez 2070)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "A short story. The title says all"
+msgstr "Uma história curta. O título diz tudo"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Listen (0:08)"
+msgstr "Ouvir (0:08)"
+
+# this isn't supposed to make sense
+#: web/rosstibeeth.com/home.tscn
+msgid "But & The I're'd'ven't (Jul 2070)"
+msgstr "Mas E O Uma Eu (Jul 2070)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "The greatest music you will ever hear in your entire life."
+msgstr "A melhor música que você vai ouvir na sua vida inteira."
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Listen (0:02)"
+msgstr "Ouvir (0:02)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "\"He might need special treatment\""
+msgstr "\"Ele precisa de tratamento especial\""
+
+#: web/rosstibeeth.com/home.tscn
+msgid "- my mother"
+msgstr "- minha mãe"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "Back"
+msgstr "Voltar"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "James VS The Stars (January 2071)"
+msgstr "João VS As Estrelas (Janeiro 2071)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Tracklist"
+msgstr "Músicas"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "1. 0:00 Whoopsie, Committed Vehicular Manslaughter"
+msgstr "1. 0:00 Opa, Cometi Homicídio Culposo Veicular"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "2. 0:08. In Court"
+msgstr "2. 0:08. No Tribunal"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "3. 0:19 Condemn Him To The Infirmary"
+msgstr "3. 0:19 Condenado A Enfermaria"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "4. 0:34 Unstoppable Agony"
+msgstr "4. 0:34 Agonia Imparável"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "5. 0:42 Hello Friend"
+msgstr "5. 0:42 Olá Amigo"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "6. 0:52 I Must End The Stars"
+msgstr "6. 0:52 Eu Tenho Que Destruir As Estrelas"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "7. 0:54 I Don't Think This Banana Will Help"
+msgstr "7. 0:54 Acho Que Essa Banana Não Vai Ajudar"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "8. 0:56 How Can I Take That Guy's Gun? I Can Shoot The Sun"
+msgstr "8. 0:56 Como Que Eu Vou Roubar Aquela Arma? Eu Vou Atirar No Sol"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "9. 1:00 OH GOD NO I BEG YOU PLEASE NOTHJR8YAEY6EA4KN Y6I89USE5A"
+msgstr "10. 1:00 NÃO PELO AMOR DE DEUSHJSUHJMSRIYJSYJRYIOJSAT94WKY"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "10. 1:01 The Lightning Strikes Pt. I"
+msgstr "10. 1:01 O Raio Atinge Pt. I"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "11. 1:13 The Lightning Strikes Pt. II"
+msgstr "11. 1:13 O Raio Atinge Pt. II"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "12. 1:17 SUFFER! HAHAHAHA!"
+msgstr "12. 1:17 SOFRA! HAHAHAHA!"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "13. 1:27 See How I Laugh At You? You'll Never Understand."
+msgstr "13. 1:27 Vê Como Eu Rio De Você? Nunca Entenderá."
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "14. 1:37 Bow Down Before Your Real God"
+msgstr "14. 1:37 Curva-se Diante De Seu Deus Real"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "15. 1:43 I Hear Things... They Are Talking To Me..."
+msgstr "15. 1:43 Tô Ouvindo Coisas... Tão Falando Comigo..."
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "16. 2:05 I'm Gonna Steal That Gun"
+msgstr "16. 2:05 Vou Roubar Aquela Arma"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "17. 2:10 The Lightning Strikes Pt. III"
+msgstr "17. 2:10 O Raio Atinge Pt. III"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "18. 2:23 I Am A Broken Man; A Shadow Of Who I Once Was"
+msgstr "18. 2:23 Eu Sou Um Homem Quebrado; Uma Sombra De Quem Eu Era"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "19. 2:32 Rotting Alone Until"
+msgstr "19. 2:32 Apodrecendo Sozinho Até"

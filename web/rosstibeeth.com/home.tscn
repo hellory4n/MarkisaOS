@@ -47,9 +47,10 @@ margin_right = -214.0
 size_flags_horizontal = 3
 script = ExtResource( 1 )
 Title = "Ross Tibeeth"
-Description = "ross tibeeth is not just music: it's an experience."
-Tags = PoolStringArray( "ross", "tibeeth", "ross_tibeeth", "music", "wood", "wood_music", "experimental", "experimental_music", "james_vs_the_stars" )
+Description = "ross tibeeth is not just music; it's an experience."
+Tags = PoolStringArray( "ross", "tibeeth", "ross_tibeeth", "music", "wood", "wood_music", "experimental", "experimental_music", "james_vs_the_stars", "dying_during_a_brain_surgery", "but_and_the_iredvent", "jvts", "ddabs", "iredvent" )
 Icon = ExtResource( 7 )
+TranslationPot = "/home/hellory4n/GameProjects/MarkisaOS/locale/english/web/rosstibeeth.com.pot"
 
 [node name="background" type="TextureRect" parent="."]
 self_modulate = Color( 1, 1, 1, 0.682353 )
@@ -157,8 +158,8 @@ custom_constants/separation = 20
 alignment = 1
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 15.0
-margin_right = 143.0
+margin_left = 12.0
+margin_right = 140.0
 margin_bottom = 188.0
 rect_min_size = Vector2( 128, 128 )
 texture = ExtResource( 7 )
@@ -166,21 +167,22 @@ expand = true
 stretch_mode = 6
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer"]
-margin_left = 163.0
-margin_right = 618.0
+margin_left = 160.0
+margin_right = 620.0
 margin_bottom = 188.0
 alignment = 1
 
 [node name="label6" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 45.0
-rect_min_size = Vector2( 455, 0 )
+rect_min_size = Vector2( 460, 0 )
 custom_fonts/font = SubResource( 1 )
 text = "James VS The Stars (Jan 2071)"
+autowrap = true
 
 [node name="label7" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 53.0
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 142.0
 custom_fonts/font = SubResource( 5 )
 text = "James is in a legendary fight with the stars... or is it? According to my cat, James VS The Stars is a major breakthrough in wood music composing and storytelling."
@@ -188,7 +190,7 @@ autowrap = true
 
 [node name="MksDownload" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer/vBoxContainer"]
 margin_top = 150.0
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 188.0
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
@@ -213,8 +215,8 @@ custom_constants/separation = 20
 alignment = 1
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
-margin_left = 15.0
-margin_right = 143.0
+margin_left = 12.0
+margin_right = 140.0
 margin_bottom = 132.0
 rect_min_size = Vector2( 128, 128 )
 texture = ExtResource( 10 )
@@ -222,21 +224,22 @@ expand = true
 stretch_mode = 6
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
-margin_left = 163.0
-margin_right = 618.0
+margin_left = 160.0
+margin_right = 620.0
 margin_bottom = 132.0
 alignment = 1
 
 [node name="label6" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer"]
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 45.0
-rect_min_size = Vector2( 455, 0 )
+rect_min_size = Vector2( 460, 0 )
 custom_fonts/font = SubResource( 1 )
 text = "Dying During A Brain Surgery (Dec 2070)"
+autowrap = true
 
 [node name="label7" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer"]
 margin_top = 53.0
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 86.0
 custom_fonts/font = SubResource( 5 )
 text = "A short story. The title says all"
@@ -244,7 +247,7 @@ autowrap = true
 
 [node name="MksDownload" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer2/vBoxContainer"]
 margin_top = 94.0
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 132.0
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
@@ -272,8 +275,8 @@ custom_constants/separation = 20
 alignment = 1
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
-margin_left = 15.0
-margin_right = 143.0
+margin_left = 12.0
+margin_right = 140.0
 margin_bottom = 132.0
 rect_min_size = Vector2( 128, 128 )
 texture = ExtResource( 12 )
@@ -281,21 +284,22 @@ expand = true
 stretch_mode = 6
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
-margin_left = 163.0
-margin_right = 618.0
+margin_left = 160.0
+margin_right = 620.0
 margin_bottom = 132.0
 alignment = 1
 
 [node name="label6" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 45.0
-rect_min_size = Vector2( 455, 0 )
+rect_min_size = Vector2( 460, 0 )
 custom_fonts/font = SubResource( 1 )
 text = "But & The I're'd'ven't (Jul 2070)"
+autowrap = true
 
 [node name="label7" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
 margin_top = 53.0
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 86.0
 custom_fonts/font = SubResource( 5 )
 text = "The greatest music you will ever hear in your entire life."
@@ -303,7 +307,7 @@ autowrap = true
 
 [node name="MksDownload" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer3/vBoxContainer"]
 margin_top = 94.0
-margin_right = 455.0
+margin_right = 460.0
 margin_bottom = 132.0
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )

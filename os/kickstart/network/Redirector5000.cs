@@ -13,8 +13,11 @@ public class Redirector5000
         {"desenvolvedores.passionfruit.com", "developers.passionfruit.com"},
         {"developer.passionfruit.com", "developers.passionfruit.com"},
         {"desenvolvedor.passionfruit.com", "developers.passionfruit.com"},
-        {"desenvolvimento.passionfruit.com", "dvelopers.passionfruit.com"},
-        {"exemplo.com", "example.com"}
+        {"desenvolvimento.passionfruit.com", "developers.passionfruit.com"},
+        {"exemplo.com", "example.com"},
+        {"governo.org", "government.org"},
+        {"rodrigobiffé.com", "rosstibeeth.com"},
+        {"rodrigobiffe.com", "rosstibeeth.com"},
     };
 }
 
