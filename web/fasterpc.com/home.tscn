@@ -1,0 +1,420 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/fasterpc.com/assets/Oxygen-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://web/fasterpc.com/assets/bg.png" type="Texture" id=3]
+[ext_resource path="res://web/fasterpc.com/assets/Oxygen-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://web/fasterpc.com/assets/fasterpc.png" type="Texture" id=5]
+[ext_resource path="res://os/mkstoolkit/MksDownload.gd" type="Script" id=6]
+[ext_resource path="res://web/kaiatu.com/jjjgggjgfhjfhdf.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+Header/base_type = "Label"
+Header/fonts/font = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0, 0, 0, 0.564706 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxLine" id=5]
+color = Color( 1, 1, 1, 0.494118 )
+grow_begin = -20.0
+grow_end = -20.0
+thickness = 2
+
+[node name="fasterpc" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+theme = SubResource( 3 )
+script = ExtResource( 1 )
+Title = "FasterPC"
+Description = "FasterPC: Make your computer faster and more secure."
+Tags = PoolStringArray( "company", "computers", "software", "business", "antivirus", "security", "cleaning" )
+Icon = ExtResource( 5 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0705882, 0.0823529, 0.0980392, 1 )
+
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = false
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_right = 633.0
+margin_bottom = 826.0
+size_flags_horizontal = 3
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0.72549 )
+margin_right = 633.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 7
+
+[node name="centerContainer" type="CenterContainer" parent="scrollContainer/vBoxContainer/textureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer/textureRect/centerContainer"]
+margin_left = 100.0
+margin_top = 43.0
+margin_right = 533.0
+margin_bottom = 156.0
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/hBoxContainer"]
+margin_right = 96.0
+margin_bottom = 113.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/hBoxContainer"]
+margin_left = 104.0
+margin_right = 433.0
+margin_bottom = 113.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/hBoxContainer/vBoxContainer"]
+margin_right = 329.0
+margin_bottom = 39.0
+theme_type_variation = "Header"
+text = "FasterPC"
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/hBoxContainer/vBoxContainer"]
+margin_top = 39.0
+margin_right = 329.0
+margin_bottom = 68.0
+text = "Make your computer faster and more secure"
+
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/hBoxContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 68.0
+margin_right = 329.0
+margin_bottom = 76.0
+
+[node name="MksDownload" type="Button" parent="scrollContainer/vBoxContainer/textureRect/centerContainer/hBoxContainer/vBoxContainer"]
+margin_top = 76.0
+margin_right = 329.0
+margin_bottom = 113.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "Download (free!)"
+script = ExtResource( 6 )
+file = "fasterpc.mpkg"
+content = "{\"DisplayName\":\"FasterPC\",\"Author\":\"Creator of FasterPC\",\"Icon\":\"res://apps/fasterpc/dockicon.png\",\"Executable\":\"res://apps/fasterpc/app.tscn\",\"AppCategories\":[8]}"
+time = 50
+
+[node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 208.0
+margin_right = 633.0
+margin_bottom = 238.0
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer"]
+margin_left = 157.0
+margin_right = 187.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer"]
+margin_left = 195.0
+margin_right = 475.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 280, 0 )
+text = "7 layers of security"
+autowrap = true
+
+[node name="hBoxContainer2" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 246.0
+margin_right = 633.0
+margin_bottom = 276.0
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
+margin_left = 157.0
+margin_right = 187.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer2"]
+margin_left = 195.0
+margin_right = 475.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 280, 0 )
+text = "Protection against malware"
+autowrap = true
+
+[node name="hBoxContainer3" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 284.0
+margin_right = 633.0
+margin_bottom = 314.0
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 157.0
+margin_right = 187.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
+margin_left = 195.0
+margin_right = 475.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 280, 0 )
+text = "Malware removal technology"
+autowrap = true
+
+[node name="hBoxContainer4" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 322.0
+margin_right = 633.0
+margin_bottom = 375.0
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer4"]
+margin_left = 157.0
+margin_right = 187.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer4"]
+margin_left = 195.0
+margin_right = 475.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 280, 0 )
+text = "Clean unnecessary files and programs"
+autowrap = true
+
+[node name="hBoxContainer5" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 383.0
+margin_right = 633.0
+margin_bottom = 413.0
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer5"]
+margin_left = 157.0
+margin_right = 187.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer5"]
+margin_left = 195.0
+margin_right = 475.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 280, 0 )
+text = "Speed up your computer"
+autowrap = true
+
+[node name="hBoxContainer6" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 421.0
+margin_right = 633.0
+margin_bottom = 451.0
+alignment = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer6"]
+margin_left = 157.0
+margin_right = 187.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer6"]
+margin_left = 195.0
+margin_right = 475.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 280, 0 )
+text = "No need to worry about malware"
+autowrap = true
+
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 459.0
+margin_right = 633.0
+margin_bottom = 467.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 475.0
+margin_right = 633.0
+margin_bottom = 514.0
+theme_type_variation = "Header"
+text = "Testimonials"
+align = 1
+
+[node name="hFlowContainer7" type="HFlowContainer" parent="scrollContainer/vBoxContainer"]
+margin_top = 522.0
+margin_right = 633.0
+margin_bottom = 580.0
+alignment = 1
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hFlowContainer7"]
+margin_left = 14.0
+margin_right = 172.0
+margin_bottom = 58.0
+custom_constants/separation = 0
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer7/vBoxContainer"]
+margin_right = 158.0
+margin_bottom = 29.0
+text = "\"It's pretty good\""
+align = 1
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer7/vBoxContainer"]
+margin_top = 29.0
+margin_right = 158.0
+margin_bottom = 58.0
+text = "- Creator of FasterPC"
+align = 1
+
+[node name="vBoxContainer2" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hFlowContainer7"]
+margin_left = 180.0
+margin_right = 407.0
+margin_bottom = 58.0
+custom_constants/separation = 0
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer7/vBoxContainer2"]
+margin_right = 227.0
+margin_bottom = 29.0
+text = "\"Mues FasterPC's fucking epic\""
+align = 1
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer7/vBoxContainer2"]
+margin_top = 29.0
+margin_right = 227.0
+margin_bottom = 58.0
+text = "- Creator of FasterPC's son"
+align = 1
+
+[node name="vBoxContainer3" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hFlowContainer7"]
+margin_left = 415.0
+margin_right = 618.0
+margin_bottom = 58.0
+custom_constants/separation = 0
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer7/vBoxContainer3"]
+margin_right = 203.0
+margin_bottom = 29.0
+text = "\"I like the logo\""
+align = 1
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer/hFlowContainer7/vBoxContainer3"]
+margin_top = 29.0
+margin_right = 203.0
+margin_bottom = 58.0
+text = "- Creator of FasterPC's wife"
+align = 1
+
+[node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 588.0
+margin_right = 633.0
+margin_bottom = 596.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 604.0
+margin_right = 633.0
+margin_bottom = 643.0
+theme_type_variation = "Header"
+text = "System Requirements"
+align = 1
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 651.0
+margin_right = 633.0
+margin_bottom = 680.0
+text = "- MarkisaOS Me or newer"
+align = 1
+
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 688.0
+margin_right = 633.0
+margin_bottom = 717.0
+text = "-  Any Markistation that turns on successfully"
+align = 1
+
+[node name="hSeparator6" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+margin_top = 725.0
+margin_right = 633.0
+margin_bottom = 733.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="MksDownload2" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 166.0
+margin_top = 741.0
+margin_right = 466.0
+margin_bottom = 778.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 4
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 4 )
+text = "Download (free!)"
+script = ExtResource( 6 )
+file = "fasterpc.mpkg"
+content = "{\"DisplayName\":\"FasterPC\",\"Author\":\"Creator of FasterPC\",\"Icon\":\"res://apps/fasterpc/dockicon.png\",\"Executable\":\"res://apps/fasterpc/app.tscn\",\"AppCategories\":[8]}"
+time = 50
+
+[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 786.0
+margin_right = 633.0
+margin_bottom = 794.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 802.0
+margin_right = 633.0
+margin_bottom = 810.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="hSeparator5" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 818.0
+margin_right = 633.0
+margin_bottom = 826.0
+custom_styles/separator = SubResource( 5 )

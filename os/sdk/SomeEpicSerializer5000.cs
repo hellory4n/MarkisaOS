@@ -13,12 +13,12 @@ public class SomeEpicSerializer5000 : Node2D
     public override void _Ready()
     {
         var serializee = new MksPackage {
-            DisplayName = "Ghosts On Wheels",
-            Author = "Koni Development",
-            Icon = "res://apps/koni/ghostsOnCars/dockicon.png",
-            Executable = "res://apps/koni/ghostsOnCars/app.tscn",
+            DisplayName = "FasterPC",
+            Author = "Creator of FasterPC",
+            Icon = "res://apps/fasterpc/dockicon.png",
+            Executable = "res://apps/fasterpc/app.tscn",
             AppCategories = new MksPackage.Categories[] {
-                MksPackage.Categories.Games
+                MksPackage.Categories.Utilities
             }
         };
 
