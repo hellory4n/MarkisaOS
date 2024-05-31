@@ -52,7 +52,7 @@ theme = SubResource( 3 )
 script = ExtResource( 1 )
 Title = "FasterPC"
 Description = "FasterPC: Make your computer faster and more secure."
-Tags = PoolStringArray( "company", "computers", "software", "business", "antivirus", "security", "cleaning" )
+Tags = PoolStringArray( "company", "computers", "software", "business", "antivirus", "security", "cleaning", "fasterpc" )
 Icon = ExtResource( 4 )
 Music = ExtResource( 8 )
 

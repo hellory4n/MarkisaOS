@@ -1,6 +1,7 @@
 using Godot;
 using markisa.foundation;
 using markisa.mkstoolkit;
+using markisa.network;
 using passionfruit.coreapps.websites;
 using System;
 
@@ -61,5 +62,26 @@ public class GdScriptBridge : Node
         var addressBar = window.GetNode<AddressBar>("contents/container/sidebar/vBoxContainer/address");
         addressBar.Text = website;
         addressBar.Djfjsgjs(website);
+    }
+
+    public void Emailer(string name, string pfp, string text)
+    {
+        // we make a timer since it would be weird for the email to be sent instantly
+        var timer = new Timer {
+            WaitTime = 2,
+            OneShot = true,
+            Autostart = true
+        };
+        AddChild(timer);
+        timer.Connect("timeout", this, nameof(ActuallySendEmail), new Godot.Collections.Array { name, pfp, text });
+    }
+
+    void ActuallySendEmail(string name, string pfp, string text)
+    {
+        Frambos.SendEmail(new MksEmail {
+            User = name,
+            ProfilePicture = pfp,
+            Content = text
+        });
     }
 }

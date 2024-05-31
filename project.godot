@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://os/mkstoolkit/MksDownload.gd"
 }, {
 "base": "Button",
+"class": "MksEmailer",
+"language": "GDScript",
+"path": "res://os/mkstoolkit/MksEmailer.gd"
+}, {
+"base": "Button",
 "class": "MksHyperlink",
 "language": "GDScript",
 "path": "res://os/mkstoolkit/MksHyperlink.gd"
@@ -52,6 +57,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "MksConversation": "",
 "MksDownload": "",
+"MksEmailer": "",
 "MksHyperlink": "",
 "MksPopupHide": "",
 "MksPopupShow": "",

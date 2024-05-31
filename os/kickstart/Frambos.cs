@@ -250,6 +250,8 @@ public class Frambos : Node
         email.Time = Now;
         
         var config = new Config<SocialInfo>();
+        var emailButDifferent = email;
+        emailButDifferent.Content = emailButDifferent.Content.Replace("{user}", CurrentUserDisplayName);
         config.Data.Emails = config.Data.Emails.Append(email).ToArray();
         if (!config.Data.Contacts.Contains(email.User)) {
             config.Data.Contacts = config.Data.Contacts.Append(email.User).ToArray();
