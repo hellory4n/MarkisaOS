@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://os/assets/highPeaks/icons/internet.png" type="Texture" id=2]
-[ext_resource path="res://os/mkstoolkit/MksEmailer.gd" type="Script" id=3]
-[ext_resource path="res://os/assets/userIcons/unknown.png" type="Texture" id=4]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=3]
 [ext_resource path="res://web/fasterpc.org/assets/Oxygen-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://web/fasterpc.com/typeATraduire.mp3" type="AudioStream" id=6]
 [ext_resource path="res://web/fasterpc.org/assets/Oxygen-Bold.ttf" type="DynamicFontData" id=7]
@@ -25,7 +24,7 @@ content_margin_left = 8.0
 content_margin_right = 8.0
 content_margin_top = 8.0
 content_margin_bottom = 8.0
-bg_color = Color( 1, 1, 1, 1 )
+bg_color = Color( 0, 0, 0, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -38,16 +37,28 @@ margin_right = -214.0
 size_flags_horizontal = 3
 theme = SubResource( 3 )
 script = ExtResource( 1 )
-Title = "Single women in your area!"
-Description = "There are single women in your area!"
+Title = "The government is looking for yo!"
+Description = "Click here to not get arestesD!"
 Tags = PoolStringArray( "__fasterpc_ads__" )
 Icon = ExtResource( 2 )
 Music = ExtResource( 6 )
 
 [node name="background" type="ColorRect" parent="."]
+anchor_right = 0.5
+anchor_bottom = 1.0
+color = Color( 0, 0, 1, 1 )
+
+[node name="background3" type="ColorRect" parent="."]
+anchor_left = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0705882, 0.0823529, 0.0980392, 1 )
+
+[node name="background2" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 1, 0, 1 )
 
 [node name="scrollContainer" type="ScrollContainer" parent="."]
 anchor_right = 1.0
@@ -56,32 +67,58 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 639.0
-margin_bottom = 121.0
+margin_bottom = 317.0
 size_flags_horizontal = 3
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
 margin_right = 639.0
 margin_bottom = 39.0
 theme_type_variation = "Header"
-text = "Single women in your area!"
+text = "THE GOVENRNEMTN IS LOOKING FOR YOU"
 align = 1
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
 margin_left = 19.0
 margin_top = 47.0
 margin_right = 619.0
 margin_bottom = 76.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 4
-text = "To talk to them we will first send an email to confirm your identity."
+text = "please input tyou rdetails to not get arested"
 align = 1
 autowrap = true
 
+[node name="lineEdit" type="LineEdit" parent="scrollContainer/vBoxContainer"]
+margin_top = 84.0
+margin_right = 639.0
+margin_bottom = 125.0
+text = "WRITE YOUR FULL NAME HERE"
+
+[node name="lineEdit2" type="LineEdit" parent="scrollContainer/vBoxContainer"]
+margin_top = 133.0
+margin_right = 639.0
+margin_bottom = 174.0
+text = "WRITE YOUR ADDRESS HERE"
+
+[node name="lineEdit3" type="LineEdit" parent="scrollContainer/vBoxContainer"]
+margin_top = 182.0
+margin_right = 639.0
+margin_bottom = 223.0
+text = "WRITE THE TIME OF THE DAY WHERE YOU USUALLY SLEEP HERE"
+
+[node name="lineEdit4" type="LineEdit" parent="scrollContainer/vBoxContainer"]
+margin_top = 231.0
+margin_right = 639.0
+margin_bottom = 272.0
+text = "write any otheri mportant personal imfortmation here"
+
 [node name="mfkd" type="Button" parent="scrollContainer/vBoxContainer"]
 margin_left = 219.0
-margin_top = 84.0
+margin_top = 280.0
 margin_right = 419.0
-margin_bottom = 121.0
+margin_bottom = 317.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
 custom_styles/hover = SubResource( 4 )
@@ -89,13 +126,6 @@ custom_styles/pressed = SubResource( 4 )
 custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 4 )
-text = "Send email"
+text = "Submit"
 script = ExtResource( 3 )
-user = "Confirmation Email"
-userPfp = ExtResource( 4 )
-emailText = "Dear {user},
-
-Please send us Ø15 to get aacess to our advanced chattting app. After seding the quantity, we''ll send the lin kfor downmloading the app.
-
-Cheers,
-A Company"
+website = "government.org"

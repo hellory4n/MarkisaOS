@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/typeATraduire.mp3-6c6478aad433b4712b8c2c71fc50f4f0.mp3str"
+
+[deps]
+
+source_file="res://web/fasterpc.com/typeATraduire.mp3"
+dest_files=[ "res://.import/typeATraduire.mp3-6c6478aad433b4712b8c2c71fc50f4f0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

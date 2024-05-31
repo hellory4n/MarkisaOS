@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://os/assets/highPeaks/icons/internet.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://web/fasterpc.org/assets/Oxygen-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://web/fasterpc.com/typeATraduire.mp3" type="AudioStream" id=6]
 [ext_resource path="res://web/fasterpc.org/assets/Oxygen-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://web/fasterpc.com/moneymoneymoney.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -25,7 +26,7 @@ content_margin_left = 8.0
 content_margin_right = 8.0
 content_margin_top = 8.0
 content_margin_bottom = 8.0
-bg_color = Color( 1, 1, 1, 1 )
+bg_color = Color( 0, 0, 0, 0.564706 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -38,16 +39,18 @@ margin_right = -214.0
 size_flags_horizontal = 3
 theme = SubResource( 3 )
 script = ExtResource( 1 )
-Title = "Single women in your area!"
-Description = "There are single women in your area!"
+Title = "You just won Ø1,000,000!"
+Description = "Claim your prize!"
 Tags = PoolStringArray( "__fasterpc_ads__" )
 Icon = ExtResource( 2 )
 Music = ExtResource( 6 )
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
+modulate = Color( 0.729412, 0.729412, 0.729412, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.0705882, 0.0823529, 0.0980392, 1 )
+texture = ExtResource( 8 )
+expand = true
 
 [node name="scrollContainer" type="ScrollContainer" parent="."]
 anchor_right = 1.0
@@ -63,7 +66,7 @@ size_flags_horizontal = 3
 margin_right = 639.0
 margin_bottom = 39.0
 theme_type_variation = "Header"
-text = "Single women in your area!"
+text = "YOU JUST WON Ø1,000,000!!!!!"
 align = 1
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
@@ -73,7 +76,7 @@ margin_right = 619.0
 margin_bottom = 76.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 4
-text = "To talk to them we will first send an email to confirm your identity."
+text = "To claim your prize we will first send an email to confirm your identity."
 align = 1
 autowrap = true
 
@@ -95,7 +98,7 @@ user = "Confirmation Email"
 userPfp = ExtResource( 4 )
 emailText = "Dear {user},
 
-Please send us Ø15 to get aacess to our advanced chattting app. After seding the quantity, we''ll send the lin kfor downmloading the app.
+Please send us Ø15 to confirm your identity, we w ill use that to get your banking detals to send the money.
 
 Cheers,
 A Company"

@@ -68,8 +68,8 @@ margin_top = 40.0
 rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
-margin_right = 633.0
-margin_bottom = 826.0
+margin_right = 329.0
+margin_bottom = 768.0
 size_flags_horizontal = 3
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
