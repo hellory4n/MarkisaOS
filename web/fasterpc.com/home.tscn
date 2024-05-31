@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://os/mkstoolkit/MksDownload.gd" type="Script" id=2]
@@ -38,6 +38,11 @@ grow_begin = -20.0
 grow_end = -20.0
 thickness = 2
 
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 0, 0, 0.607843 )
+shadow_size = 13
+shadow_offset = Vector2( 0, 1 )
+
 [node name="fasterpc" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -59,6 +64,7 @@ color = Color( 0.0705882, 0.0823529, 0.0980392, 1 )
 [node name="scrollContainer" type="ScrollContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = 40.0
 rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
@@ -420,3 +426,15 @@ margin_top = 818.0
 margin_right = 633.0
 margin_bottom = 826.0
 custom_styles/separator = SubResource( 5 )
+
+[node name="panel" type="Panel" parent="."]
+anchor_right = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 6 )
+
+[node name="label" type="Label" parent="panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "2071 version now available! Update for your safety."
+align = 1
+valign = 1

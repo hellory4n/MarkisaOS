@@ -1,0 +1,136 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://web/fasterpc.org/assets/Oxygen-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=2]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/bigMarkisa.png" type="Texture" id=3]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=4]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/biggerMarkisa.png" type="Texture" id=5]
+[ext_resource path="res://web/fasterpc.org/assets/Oxygen-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://apps/fasterpc/prgojrebs.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.580392, 0.345098, 0.262745, 1 )
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.266667, 0.541176, 1, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0, 0, 0, 0.756863 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color( 1, 1, 1, 0.6 )
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0, 0, 0, 0.756863 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color( 1, 1, 1, 0.6 )
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0, 0, 0, 0.756863 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color( 1, 1, 1, 0.6 )
+shadow_size = 30
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 4.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0, 0, 0, 0.545098 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxTexture" id=9]
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 30, 30 )
+margin_left = 15.0
+margin_right = 15.0
+margin_top = 15.0
+margin_bottom = 15.0
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+Button/styles/focus = SubResource( 4 )
+Button/styles/hover = SubResource( 5 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 7 )
+Header/base_type = "Label"
+Header/fonts/font = SubResource( 3 )
+ProgressBar/styles/bg = SubResource( 8 )
+ProgressBar/styles/fg = SubResource( 9 )
+
+[node name="whythough" type="Control"]
+margin_right = 576.0
+margin_bottom = 275.0
+script = ExtResource( 2 )
+WindowTitle = "fasterpc.infect.CopyAdLink"
+DockIcon = ExtResource( 3 )
+SmallIcon = ExtResource( 4 )
+FullIcon = ExtResource( 5 )
+Floating = true
+SizePercentage = Vector2( 50, 50 )
+ContentRoot = NodePath("contents")
+
+[node name="contents" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = true
+theme = SubResource( 2 )
+
+[node name="label" type="Label" parent="contents"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -161.5
+margin_top = -75.0
+margin_right = 161.5
+margin_bottom = 75.0
+rect_min_size = Vector2( 323, 150 )
+theme_type_variation = "Header"
+text = "A link was copied. Now open it in your browser."
+align = 1
+valign = 1
+autowrap = true

@@ -103,7 +103,7 @@ public class WebTabs : VBoxContainer
         string jsigtksk = Frambos.GetRealWebPath(address.Replace(" ", ""));
         if (jsigtksk == "404") {
             // if it ends with .com, .net, or .org, the user probably tried to type an address
-            if (address.EndsWith(".com") || address.EndsWith(".net") || address.EndsWith(".org")) {
+            if (address.EndsWith(".com") || address.EndsWith(".net") || address.EndsWith(".org") || address.EndsWith(".tscn")) {
                 packed = GD.Load<PackedScene>("res://apps/passionfruit/websites/browserSites/404.tscn");
             }
             // search stuff
