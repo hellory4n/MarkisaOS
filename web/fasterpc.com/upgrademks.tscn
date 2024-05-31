@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://os/assets/highPeaks/icons/internet.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://web/fasterpc.org/assets/Oxygen-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://web/fasterpc.com/typeATraduire.mp3" type="AudioStream" id=6]
 [ext_resource path="res://web/fasterpc.org/assets/Oxygen-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://os/assets/highPeaks/colorIcons/biggerMarkisa.png" type="Texture" id=8]
+[ext_resource path="res://os/assets/wallpapers/space.jpg" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -38,54 +40,62 @@ margin_right = -214.0
 size_flags_horizontal = 3
 theme = SubResource( 3 )
 script = ExtResource( 1 )
-Title = "The government is looking for yo!"
-Description = "Click here to not get arestesD!"
+Title = "Introducing the new markisaos vision"
+Description = "Upgrade to day!"
 Tags = PoolStringArray( "__fasterpc_ads__" )
 Icon = ExtResource( 2 )
 Music = ExtResource( 6 )
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 1, 1 )
+texture = ExtResource( 9 )
+expand = true
 
 [node name="scrollContainer" type="ScrollContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 7.0
-margin_top = 214.0
-margin_right = 7.0
-margin_bottom = 214.0
 rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
-margin_right = 639.0
-margin_bottom = 121.0
+margin_right = 633.0
+margin_bottom = 527.0
 size_flags_horizontal = 3
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_right = 639.0
+margin_right = 633.0
 margin_bottom = 39.0
 theme_type_variation = "Header"
-text = "COMPUTER STLOW?????????"
+text = "Introducing markisaos vision"
 align = 1
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_left = 19.0
+margin_left = 16.0
 margin_top = 47.0
-margin_right = 619.0
+margin_right = 616.0
 margin_bottom = 76.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 4
-text = "We will send an email s o you can dow nload professsional PC speedup software"
+text = "It's like markisaos me, but better."
+align = 1
+autowrap = true
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 16.0
+margin_top = 84.0
+margin_right = 616.0
+margin_bottom = 137.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 4
+text = "To downlaod it we will first send an email to confirm that you will download markisaos vision confirming markisaos vision download."
 align = 1
 autowrap = true
 
 [node name="mfkd" type="Button" parent="scrollContainer/vBoxContainer"]
-margin_left = 180.0
-margin_top = 84.0
-margin_right = 458.0
-margin_bottom = 121.0
+margin_left = 132.0
+margin_top = 145.0
+margin_right = 500.0
+margin_bottom = 182.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
@@ -99,13 +109,32 @@ custom_styles/pressed = SubResource( 4 )
 custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 4 )
-text = "SEND EMAIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"
+text = "UPGRADE TO MARKISAOS VISION IMMEDIATLY!"
 script = ExtResource( 3 )
 user = "Confirmation Email"
 userPfp = ExtResource( 4 )
 emailText = "Dear {user},
 
-Please send us Ø15 to get acces to our very much huigh quality PC speedup sofware.
+Please send us Ø15 download markisaos vision.
 
 Cheers,
-A Company"
+Oassionfruit Corp"
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_top = 190.0
+margin_right = 633.0
+margin_bottom = 490.0
+rect_min_size = Vector2( 0, 300 )
+texture = ExtResource( 8 )
+expand = true
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 16.0
+margin_top = 498.0
+margin_right = 616.0
+margin_bottom = 527.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 4
+text = "MarkisaOS Logo."
+align = 1
+autowrap = true

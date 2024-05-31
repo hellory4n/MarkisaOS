@@ -176,7 +176,7 @@ margin_right = 403.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 0, 45 )
 size_flags_horizontal = 3
-text = "Clean PC"
+text = "Cleans PC"
 script = ExtResource( 9 )
 
 [node name="ParadoxBar" type="ProgressBar" parent="contents/centerContainer/vBoxContainer"]

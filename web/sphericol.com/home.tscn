@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/fasterpc.com/typeATraduire.mp3" type="AudioStream" id=2]
+[ext_resource path="res://web/sphericol.com/assets/sphericol.png" type="Texture" id=3]
+[ext_resource path="res://web/sphericol.com/assets/sphericol2.png" type="Texture" id=4]
+[ext_resource path="res://web/fasterpc.org/assets/Oxygen-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://os/assets/wallpapers/space.jpg" type="Texture" id=6]
+[ext_resource path="res://web/fasterpc.org/assets/Oxygen-Bold.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+Header/base_type = "Label"
+Header/fonts/font = SubResource( 1 )
+
+[node name="sphericol" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+theme = SubResource( 3 )
+script = ExtResource( 1 )
+Title = "Sphericol"
+Description = "The greatest browser of all time."
+Tags = PoolStringArray( "company", "computers", "software", "business", "sphericol", "browser" )
+Icon = ExtResource( 3 )
+Music = ExtResource( 2 )
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_clip_content = false
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_right = 639.0
+margin_bottom = 163.0
+size_flags_horizontal = 3
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_right = 639.0
+margin_bottom = 67.0
+texture = ExtResource( 4 )
+stretch_mode = 4
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 75.0
+margin_right = 639.0
+margin_bottom = 114.0
+theme_type_variation = "Header"
+text = "Sphericol is best browser is ever."
+align = 1
+
+[node name="button" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 223.0
+margin_top = 122.0
+margin_right = 416.0
+margin_bottom = 163.0
+size_flags_horizontal = 4
+disabled = true
+text = "Download coming soon."
