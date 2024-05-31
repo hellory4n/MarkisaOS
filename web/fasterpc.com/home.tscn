@@ -129,8 +129,8 @@ custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 4 )
 text = "Download (free!)"
 script = ExtResource( 2 )
-file = "fasterpc.mpkg"
-content = "{\"DisplayName\":\"FasterPC\",\"Author\":\"Creator of FasterPC\",\"Icon\":\"res://apps/fasterpc/dockicon.png\",\"Executable\":\"res://apps/fasterpc/app.tscn\",\"AppCategories\":[8]}"
+file = "fasterpc2071.mpkg"
+content = "{\"DisplayName\":\"FasterPC 2071\",\"Author\":\"Creator of FasterPC\",\"Icon\":\"res://apps/fasterpc/dockicon.png\",\"Executable\":\"res://apps/fasterpcDotcom/app.tscn\",\"AppCategories\":[8]}"
 time = 50
 
 [node name="hBoxContainer" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
@@ -396,8 +396,8 @@ custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 4 )
 text = "Download (free!)"
 script = ExtResource( 2 )
-file = "fasterpc.mpkg"
-content = "{\"DisplayName\":\"FasterPC\",\"Author\":\"Creator of FasterPC\",\"Icon\":\"res://apps/fasterpc/dockicon.png\",\"Executable\":\"res://apps/fasterpc/app.tscn\",\"AppCategories\":[8]}"
+file = "fasterpc2071.mpkg"
+content = "{\"DisplayName\":\"FasterPC 2071\",\"Author\":\"Creator of FasterPC\",\"Icon\":\"res://apps/fasterpc/dockicon.png\",\"Executable\":\"res://apps/fasterpcDotcom/app.tscn\",\"AppCategories\":[8]}"
 time = 50
 
 [node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]

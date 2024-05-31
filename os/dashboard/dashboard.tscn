@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://os/dashboard/AppLauncher.cs" type="Script" id=1]
 [ext_resource path="res://apps/passionfruit/email/dockicon.png" type="Texture" id=2]
@@ -49,6 +49,7 @@
 [ext_resource path="res://os/dashboard/TimeDashboardPanel.cs" type="Script" id=47]
 [ext_resource path="res://os/dashboard/MoneyDashboardPanel.cs" type="Script" id=48]
 [ext_resource path="res://os/dashboard/tutorial/nextButtonMobile4.gd" type="Script" id=49]
+[ext_resource path="res://os/dashboard/TimeMoneyDashboardPanelMobileMicrosoftWindows.cs" type="Script" id=50]
 
 [sub_resource type="Animation" id=1]
 resource_name = "hideBigPopup"
@@ -160,10 +161,14 @@ anchor_bottom = 1.0
 margin_right = -50.0
 margin_bottom = -35.0
 theme_type_variation = "Header"
-text = "2069-13-32 25:61
-Ø0.01"
+text = "..."
 align = 2
 valign = 2
+script = ExtResource( 50 )
+
+[node name="epicTimer" type="Timer" parent="mobileTimeMoney"]
+wait_time = 0.5
+autostart = true
 
 [node name="windows" type="Control" parent="."]
 anchor_right = 1.0
@@ -1412,6 +1417,7 @@ theme_type_variation = "Secondary"
 text = "Finish"
 script = ExtResource( 43 )
 
+[connection signal="timeout" from="mobileTimeMoney/epicTimer" to="mobileTimeMoney" method="Beans"]
 [connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer/HSlider" method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer2/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer2/HSlider" method="_on_HSlider_value_changed"]
 [connection signal="value_changed" from="interface/quickSettings/VBoxContainer/HBoxContainer3/HSlider" to="interface/quickSettings/VBoxContainer/HBoxContainer3/HSlider" method="_on_HSlider_value_changed"]
