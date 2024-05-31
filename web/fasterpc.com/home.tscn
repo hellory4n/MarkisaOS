@@ -1,19 +1,20 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
-[ext_resource path="res://web/fasterpc.com/assets/Oxygen-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://web/fasterpc.com/assets/bg.png" type="Texture" id=3]
-[ext_resource path="res://web/fasterpc.com/assets/Oxygen-Bold.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://web/fasterpc.com/assets/fasterpc.png" type="Texture" id=5]
-[ext_resource path="res://os/mkstoolkit/MksDownload.gd" type="Script" id=6]
-[ext_resource path="res://web/kaiatu.com/jjjgggjgfhjfhdf.png" type="Texture" id=7]
+[ext_resource path="res://os/mkstoolkit/MksDownload.gd" type="Script" id=2]
+[ext_resource path="res://web/fasterpc.org/assets/bg.png" type="Texture" id=3]
+[ext_resource path="res://web/fasterpc.org/assets/fasterpc.png" type="Texture" id=4]
+[ext_resource path="res://web/fasterpc.org/assets/Oxygen-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://web/kaiatu.com/jjjgggjgfhjfhdf.png" type="Texture" id=6]
+[ext_resource path="res://web/fasterpc.org/assets/Oxygen-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://web/fasterpc.org/assets/paypalModApk.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
-font_data = ExtResource( 4 )
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 2 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="Theme" id=3]
 default_font = SubResource( 2 )
@@ -47,7 +48,8 @@ script = ExtResource( 1 )
 Title = "FasterPC"
 Description = "FasterPC: Make your computer faster and more secure."
 Tags = PoolStringArray( "company", "computers", "software", "business", "antivirus", "security", "cleaning" )
-Icon = ExtResource( 5 )
+Icon = ExtResource( 4 )
+Music = ExtResource( 8 )
 
 [node name="background" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -87,7 +89,7 @@ margin_bottom = 156.0
 margin_right = 96.0
 margin_bottom = 113.0
 rect_min_size = Vector2( 96, 96 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
@@ -126,7 +128,7 @@ custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 4 )
 text = "Download (free!)"
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 file = "fasterpc.mpkg"
 content = "{\"DisplayName\":\"FasterPC\",\"Author\":\"Creator of FasterPC\",\"Icon\":\"res://apps/fasterpc/dockicon.png\",\"Executable\":\"res://apps/fasterpc/app.tscn\",\"AppCategories\":[8]}"
 time = 50
@@ -142,7 +144,7 @@ margin_left = 157.0
 margin_right = 187.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 
@@ -165,7 +167,7 @@ margin_left = 157.0
 margin_right = 187.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 
@@ -188,7 +190,7 @@ margin_left = 157.0
 margin_right = 187.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 
@@ -211,7 +213,7 @@ margin_left = 157.0
 margin_right = 187.0
 margin_bottom = 53.0
 rect_min_size = Vector2( 30, 30 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 
@@ -234,7 +236,7 @@ margin_left = 157.0
 margin_right = 187.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 
@@ -257,7 +259,7 @@ margin_left = 157.0
 margin_right = 187.0
 margin_bottom = 30.0
 rect_min_size = Vector2( 30, 30 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 
@@ -393,7 +395,7 @@ custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 4 )
 text = "Download (free!)"
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 file = "fasterpc.mpkg"
 content = "{\"DisplayName\":\"FasterPC\",\"Author\":\"Creator of FasterPC\",\"Icon\":\"res://apps/fasterpc/dockicon.png\",\"Executable\":\"res://apps/fasterpc/app.tscn\",\"AppCategories\":[8]}"
 time = 50
