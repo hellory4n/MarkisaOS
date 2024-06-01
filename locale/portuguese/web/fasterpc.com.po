@@ -1,0 +1,275 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# it's important to note that all typos and bad grammar here are
+# intentional and should be included in the translations
+# don't put too much typos tho, it should be still readable
+
+# depending on the language you can make the typos roughly the same
+# (you can do that in portuguese)
+
+# also if you only got fasterpc.com.po and not fasterpc.org.po
+# then you should complain immediately
+
+# .mpkg is like .exe or .apk, but in markisaOS
+#: web/fasterpc.com/home.tscn
+msgid "fasterpc2071.mpkg"
+msgstr "fasterpc2071.mpkg"
+
+#: web/fasterpc.com/home.tscn
+msgid "2071 version now available! Update for your safety."
+msgstr "Agora a versão de 2071 está disponível! Atualize para sua segurança."
+
+# subtle typo for "Clean PC" (as in to clean a pc, not a pc that is clean)
+#: apps/fasterpcDotcom/app.tscn
+msgid "Cleans PC"
+msgstr "Limpa PC"
+
+#: apps/fasterpcDotcom/suspicious.tscn
+msgid "fasterpc.infect.CopyAdLink"
+msgstr "fasterpc.infectar.CopiarLinkDoAnuncio"
+
+#: apps/fasterpcDotcom/suspicious.tscn
+msgid "A link was copied. Now open it in your browser."
+msgstr "Um link foi copiado. Agora abra-o no seu navegador."
+
+#: apps/fasterpcDotcom/ad1.png
+msgid "Single women in your area! Click here!"
+msgstr "Mulheres solteiras na sua área! Clique aqui!"
+
+#: apps/fasterpcDotcom/ad2.png
+msgid "YOU JUST WON Ø1,000,000(/n)(/n)CLICK HERE!!!"
+msgstr "VOCÊ VENCEU Ø1.000.000\n"
+"\n"
+"CLIQUE AQUI!!!"
+
+#: apps/fasterpcDotcom/ad3.png
+msgid "THE GOVERMENT IS LOOKNG FOR YOU CLICCK HERE TO NOT GET ARRESTTED"
+msgstr "O GOVERNO ESTÁ TE PROCURNDO VOCÊ CLIQUEE AQUI PARA NÃO SER PRESSO"
+
+#: apps/fasterpcDotcom/ad4.png
+msgid "Your compter's slow? Click heer!!!!!"
+msgstr "Seu comptador esta lento? Clique aquii!!!!!"
+
+#: apps/fasterpcDotcom/ad5.png
+msgid "Get our fster Browsar! Click here"
+msgstr "Baixe nosso Nevegador muito rápdo! Clique aqui!"
+
+#: apps/fasterpcDotcom/ad6.png
+msgid "introducing markisaos vision click here to upgrade"
+msgstr "apresentando markisaos vision clique aqui para atualizar"
+
+#: web/fasterpc.com/women.tscn
+msgid "Single women in your area!"
+msgstr "Mulheres solteiras na sua área!"
+
+#: web/fasterpc.com/women.tscn
+msgid "There are single women in your area!"
+msgstr "Tem mulheres solteiras na sua área!"
+
+# website tag
+#: web/fasterpc.com/women.tscn
+msgid "__fasterpc_ads__"
+msgstr "__anúncios_do_fasterpc__"
+
+#: web/fasterpc.com/women.tscn
+msgid "To talk to them we will first send an email to confirm your identity."
+msgstr "Para falar com elas nós vamos primeiro mandar um email para confirmar sua identidade."
+
+#: web/fasterpc.com/women.tscn
+msgid "Send email"
+msgstr "Mandar email"
+
+#: web/fasterpc.com/women.tscn
+msgid "Confirmation Email"
+msgstr "Email de Confirmação"
+
+#: web/fasterpc.com/women.tscn
+msgid "Dear {user},(/n)(/n)Please send us Ø15 to get aacess to our advanced chattting app. After seding the quantity, we''ll send the lin kfor downmloading the app.(/n)(/n)Cheers,(/n)A Company"
+msgstr "Caro {user},\n"
+"\n"
+"Por favor nos mande Ø15 para ter aaceso ao nosso aplicativo avançado de conversssas. Depois de madar a quantidade, noss vamos mandar  o lin kpara baoxar o aplicativo.\n"
+"\n"
+"Sinceramente,\n"
+"Uma Empresa"
+
+#: web/fasterpc.com/moneys.tscn
+msgid "You just won Ø1,000,000!"
+msgstr "Você acabou de ganhar Ø1.000.000!"
+
+#: web/fasterpc.com/moneys.tscn
+msgid "Claim your prize!"
+msgstr "Pegue seu prêmio!"
+
+#: web/fasterpc.com/moneys.tscn
+msgid "YOU JUST WON Ø1,000,000!!!!!"
+msgstr "VOCÊ GANHOU Ø1.000.000!!!!!"
+
+#: web/fasterpc.com/moneys.tscn
+msgid "To claim your prize we will first send an email to confirm your identity."
+msgstr "Para ganhar seu prêmio nós vamos primeiro mandar um email para confirmar sua identidade."
+
+#: web/fasterpc.com/women.tscn
+msgid "Dear {user},(/n)(/n)Please send us Ø15 to confirm your identity, we w ill use that to get your banking detals to send the money.(/n)(/n)Cheers,(/n)A Company"
+msgstr "Caro {user},\n"
+"\n"
+"Por favor nos mande Ø15 para confirmar sua identidade e d epois nós vamos usar isso para obter suas informações bancários par amandar o dinheiro.\n"
+"Sinceramente,\n"
+"Uma Empresa"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "The government is looking for yo!"
+msgstr "O governo está procurando voc!"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "Click here to not get arestesD!"
+msgstr "Clique aqui para não ser presaO!"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "THE GOVENRNEMTN IS LOOKING FOR YOU"
+msgstr "O GOVERNJO ESTÁ TE PREOCURANDO"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "please input tyou rdetails to not get arested"
+msgstr "escreva suas infromaçções para não esr presso"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "WRITE YOUR FULL NAME HERE"
+msgstr "ESCREVA SEU NOME COMPLETO AQUI"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "WRITE YOUR ADDRESS HERE"
+msgstr "ESCREVA SEU ENDEREÇO AQUI"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "WRITE THE TIME OF THE DAY WHERE YOU USUALLY SLEEP HERE"
+msgstr "ESCREVA O TEMPO DO DIA ONDE VOCÊ NORMALMENTE DORME AQUI"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "write any otheri mportant personal imfortmation here"
+msgstr "escreva outros deltathles pessois inportantes qui"
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "Submit"
+msgstr "Enviar"
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "Computer stlow?"
+msgstr "Computador lsento?"
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "FIX THIS HERE!!!"
+msgstr "ARRUME ISSO AQUI!!!"
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "COMPUTER STLOW?????????"
+msgstr "COMPUTADOR LSENTO??????"
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "We will send an email s o you can dow nload professsional PC speedup software"
+msgstr "Nós vamos mandar um email para você baix ar software profisssional de aceleramemtno de computadores"
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "SEND EMAIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"
+msgstr "MANDAR EMAIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "Dear {user},(/n)(/n)Please send us Ø15 to get acces to our very much huigh quality PC speedup sofware.(/n)(/n)Cheers,(/n)A Company"
+msgstr "Caro {user},\n"
+"\n"
+"Nos mande Ø15 para conseguir acceso para nosso software de alta, qualidade de acelaramento de computadores.\n"
+"\n"
+"Sinceramente,\n"
+"Uma Empresa"
+
+# it's supposed to have an O so i can put the cool logo on the place of the O
+#: web/sphericol.com/home.tscn
+msgid "Sphericol"
+msgstr "Sphericol"
+
+#: web/sphericol.com/home.tscn
+msgid "The greatest browser of all time."
+msgstr "O melhor navegador de todos os tempos."
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "company"
+msgstr "empresa"
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "computers"
+msgstr "computadores"
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "software"
+msgstr "programas"
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "business"
+msgstr "negócios"
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "sphericol"
+msgstr "sphericol"
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "browser"
+msgstr "navegador"
+
+#: web/sphericol.com/home.tscn
+msgid "Sphericol is best browser is ever."
+msgstr "Sphericol é o melhor é navegador."
+
+#: web/sphericol.com/home.tscn
+msgid "Download coming soon."
+msgstr "Arquivo estará disponível em breve."
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "Introducing the new markisaos vision"
+msgstr "Apresentando o novo markisaos vision"
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "Upgrade to day!"
+msgstr "Atualize ho je!"
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "Introducing markisaos vision"
+msgstr "Apresentando markisaos vision"
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "It's like markisaos me, but better."
+msgstr "É tipo o markisaos me, só que melhor."
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "To downlaod it we will first send an email to confirm that you will download markisaos vision confirming markisaos vision download."
+msgstr "Para baoxar-lo nós vamos primeiro mandar um email para confirmar que você vai baixar o markisaos vision confirmando baixar markisaos vision."
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "UPGRADE TO MARKISAOS VISION IMMEDIATLY!"
+msgstr "ATUALIZE PARA O MARKISAOS VISION IMEDIATAMANTE!"
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "Dear {user},(/n)(/n)Please send us Ø15 download markisaos vision.(/n)(/n)Cheers,(/n)Oassionfruit Corp"
+msgstr "Caro {user},\n"
+"\n"
+"Nos mande Ø15 baixar markisaos vision.\n"
+"\n"
+"Sinceramente,\n"
+"Oassionfruit S.A."
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "MarkisaOS Logo."
+msgstr "Logo do MarkisaOS."

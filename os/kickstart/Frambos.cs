@@ -251,8 +251,12 @@ public class Frambos : Node
         
         var config = new Config<SocialInfo>();
         var emailButDifferent = email;
-        emailButDifferent.Content = emailButDifferent.Content.Replace("{user}", CurrentUserDisplayName);
-        config.Data.Emails = config.Data.Emails.Append(email).ToArray();
+        emailButDifferent.User = oopMoment.Tr(email.User);
+        emailButDifferent.Content = oopMoment.Tr(email.Content)
+            .Replace("{user}", CurrentUserDisplayName)
+            .Replace("(/n)", "\n");
+        
+        config.Data.Emails = config.Data.Emails.Append(emailButDifferent).ToArray();
         if (!config.Data.Contacts.Contains(email.User)) {
             config.Data.Contacts = config.Data.Contacts.Append(email.User).ToArray();
         }
@@ -261,10 +265,10 @@ public class Frambos : Node
         // localization is some tricky stuff
         if (email.User != "You") {
             switch (TranslationServer.GetLocale()) {
-                default: Notify($"{email.User} sent an email", email.Content); break;
-                case "pt": Notify($"{oopMoment.Tr(email.User)} enviou um email", oopMoment.Tr(email.Content)); break;
-                case "es": Notify($"{oopMoment.Tr(email.User)} te a enviado un email", oopMoment.Tr(email.Content)); break;
-                case "id": Notify($"{oopMoment.Tr(email.User)} mengirimkan email", oopMoment.Tr(email.Content)); break;
+                default: Notify($"{email.User} sent an email", email.Content.Replace("{user}", CurrentUserDisplayName).Replace("(/n)", "\n")); break;
+                case "pt": Notify($"{oopMoment.Tr(email.User)} enviou um email", oopMoment.Tr(email.Content).Replace("{user}", CurrentUserDisplayName).Replace("(/n)", "\n")); break;
+                case "es": Notify($"{oopMoment.Tr(email.User)} te a enviado un email", oopMoment.Tr(email.Content).Replace("{user}", CurrentUserDisplayName).Replace("(/n)", "\n")); break;
+                case "id": Notify($"{oopMoment.Tr(email.User)} mengirimkan email", oopMoment.Tr(email.Content).Replace("{user}", CurrentUserDisplayName).Replace("(/n)", "\n")); break;
             }
             Play(SystemSound.Notification);
         }

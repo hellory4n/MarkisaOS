@@ -1,0 +1,266 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+# it's important to note that all typos and bad grammar here are
+# intentional and should be included in the translations
+
+# also if you only got fasterpc.com.po and not fasterpc.org.po
+# then you should complain immediately
+
+# .mpkg is like .exe or .apk, but in markisaOS
+#: web/fasterpc.com/home.tscn
+msgid "fasterpc2071.mpkg"
+msgstr ""
+
+#: web/fasterpc.com/home.tscn
+msgid "2071 version now available! Update for your safety."
+msgstr ""
+
+# subtle typo for "Clean PC"
+#: apps/fasterpcDotcom/app.tscn
+msgid "Cleans PC"
+msgstr ""
+
+#: apps/fasterpcDotcom/suspicious.tscn
+msgid "fasterpc.infect.CopyAdLink"
+msgstr ""
+
+#: apps/fasterpcDotcom/suspicious.tscn
+msgid "A link was copied. Now open it in your browser."
+msgstr ""
+
+#: apps/fasterpcDotcom/ad1.png
+msgid "Single women in your area! Click here!"
+msgstr ""
+
+#: apps/fasterpcDotcom/ad2.png
+msgid "YOU JUST WON Ø1,000,000\n"
+"\n"
+"CLICK HERE!!!"
+msgstr ""
+
+#: apps/fasterpcDotcom/ad3.png
+msgid "THE GOVERMENT IS LOOKNG FOR YOU CLICCK HERE TO NOT GET ARRESTTED"
+msgstr ""
+
+#: apps/fasterpcDotcom/ad4.png
+msgid "Your compter's slow? Click heer!!!!!"
+msgstr ""
+
+#: apps/fasterpcDotcom/ad5.png
+msgid "Get our fster Browsar! Click here"
+msgstr ""
+
+#: apps/fasterpcDotcom/ad6.png
+msgid "introducing markisaos vision click here to upgrade"
+msgstr ""
+
+#: web/fasterpc.com/women.tscn
+msgid "Single women in your area!"
+msgstr ""
+
+#: web/fasterpc.com/women.tscn
+msgid "There are single women in your area!"
+msgstr ""
+
+# website tag
+#: web/fasterpc.com/women.tscn
+msgid "__fasterpc_ads__"
+msgstr ""
+
+#: web/fasterpc.com/women.tscn
+msgid "To talk to them we will first send an email to confirm your identity."
+msgstr ""
+
+#: web/fasterpc.com/women.tscn
+msgid "Send email"
+msgstr ""
+
+#: web/fasterpc.com/women.tscn
+msgid "Confirmation Email"
+msgstr ""
+
+#: web/fasterpc.com/women.tscn
+msgid "Dear {user},\n"
+"\n"
+"Please send us Ø15 to get aacess to our advanced chattting app. After seding the quantity, we''ll send  the lin kfor downmloading the app.\n"
+"\n"
+"Cheers,\n"
+"A Company"
+msgstr ""
+
+#: web/fasterpc.com/moneys.tscn
+msgid "You just won Ø1,000,000!"
+msgstr ""
+
+#: web/fasterpc.com/moneys.tscn
+msgid "Claim your prize!"
+msgstr ""
+
+#: web/fasterpc.com/moneys.tscn
+msgid "YOU JUST WON Ø1,000,000!!!!!"
+msgstr ""
+
+#: web/fasterpc.com/moneys.tscn
+msgid "To claim your prize we will first send an email to confirm your identity."
+msgstr ""
+
+#: web/fasterpc.com/women.tscn
+msgid "Dear {user},\n"
+"\n"
+"Please send us Ø15 to confirm your identity, we w ill use that to get your banking detals to send the money."
+""
+"Cheers,\n"
+"A Company"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "The government is looking for yo!"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "Click here to not get arestesD!"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "THE GOVENRNEMTN IS LOOKING FOR YOU"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "please input tyou rdetails to not get arested"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "WRITE YOUR FULL NAME HERE"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "WRITE YOUR ADDRESS HERE"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "WRITE THE TIME OF THE DAY WHERE YOU USUALLY SLEEP HERE"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "write any otheri mportant personal imfortmation here"
+msgstr ""
+
+#: web/fasterpc.com/dontgetarrested.tscn
+msgid "Submit"
+msgstr ""
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "Computer stlow?"
+msgstr ""
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "FIX THIS HERE!!!"
+msgstr ""
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "COMPUTER STLOW?????????"
+msgstr ""
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "We will send an email s o you can dow nload professsional PC speedup software"
+msgstr ""
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "SEND EMAIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"
+msgstr ""
+
+#: web/fasterpc.com/pcslow.tscn
+msgid "Dear {user},\n"
+"\n"
+"Please send us Ø15 to get acces to our very much huigh quality PC speedup sofware.\n"
+"\n"
+"Cheers,\n"
+"A Company\n"
+msgstr ""
+
+#: web/sphericol.com/home.tscn
+msgid "Sphericol"
+msgstr ""
+
+#: web/sphericol.com/home.tscn
+msgid "The greatest browser of all time."
+msgstr ""
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "company"
+msgstr ""
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "computers"
+msgstr ""
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "software"
+msgstr ""
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "business"
+msgstr ""
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "sphericol"
+msgstr ""
+
+# website tag
+#: web/sphericol.com/home.tscn
+msgid "browser"
+msgstr ""
+
+#: web/sphericol.com/home.tscn
+msgid "Sphericol is best browser is ever."
+msgstr ""
+
+#: web/sphericol.com/home.tscn
+msgid "Download coming soon."
+msgstr ""
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "Introducing the new markisaos vision"
+msgstr ""
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "Upgrade to day!"
+msgstr ""
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "Introducing markisaos vision"
+msgstr ""
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "It's like markisaos me, but better."
+msgstr ""
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "To downlaod it we will first send an email to confirm that you will download markisaos vision confirming markisaos vision download."
+msgstr ""
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "UPGRADE TO MARKISAOS VISION IMMEDIATLY!"
+msgstr ""
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "Dear {user},\n"
+"\n"
+"Please send us Ø15 download markisaos vision.\n"
+"Cheers,\n"
+"Oassionfruit Corp"
+msgstr ""
+
+#: web/fasterpc.com/upgrademks.tscn
+msgid "MarkisaOS Logo."
+msgstr ""

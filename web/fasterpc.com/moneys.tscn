@@ -96,9 +96,4 @@ text = "Send email"
 script = ExtResource( 3 )
 user = "Confirmation Email"
 userPfp = ExtResource( 4 )
-emailText = "Dear {user},
-
-Please send us Ø15 to confirm your identity, we w ill use that to get your banking detals to send the money.
-
-Cheers,
-A Company"
+emailText = "Dear {user},(/n)(/n)Please send us Ø15 to confirm your identity, we w ill use that to get your banking detals to send the money.(/n)(/n)Cheers,(/n)A Company"

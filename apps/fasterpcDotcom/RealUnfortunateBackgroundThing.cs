@@ -16,7 +16,6 @@ public class RealUnfortunateBackgroundThing : Node
         };
         timer.Connect("timeout", this, nameof(Annoy));
         AddChild(timer);
-        Annoy(); // for testing
     }
 
     public void Annoy()

@@ -1,0 +1,151 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: web/fasterpc.org/home.tscn
+msgid "FasterPC"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "FasterPC: Make your computer faster and more secure."
+msgstr ""
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "company"
+msgstr ""
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "computers"
+msgstr ""
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "software"
+msgstr ""
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "business"
+msgstr ""
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "antivirus"
+msgstr ""
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "security"
+msgstr ""
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "cleaning"
+msgstr ""
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "fasterpc"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "Make your computer faster and more secure"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "Download (free!)"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "7 layers of security"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "Protection against malware"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "Malware removal technology"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "Clean unnecessary files and programs"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "Speed up your computer"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "No need to worry about malware"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "Testimonials"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "\"It's pretty good\""
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "- Creator of FasterPC"
+msgstr ""
+
+# "mues" is part of 2071 slang, it's a word you can casually put
+# anywhere
+# fucking has also become less serious and stuff
+#: web/fasterpc.org/home.tscn
+msgid "\"Mues FasterPC's fucking epic\""
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "- Creator of FasterPC's son"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "\"I like the logo\""
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "- Creator of FasterPC's wife"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "System Requirements"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "- MarkisaOS Me or newer"
+msgstr ""
+
+#: web/fasterpc.org/home.tscn
+msgid "- Any Markistation that turns on successfully"
+msgstr ""
+
+# .mpkg is like .exe or .apk, but on markisaOS
+#: web/fasterpc.org/home.tscn
+msgid "fasterpc.mpkg"
+msgstr ""
+
+#: apps/fasterpc/app.tscn
+msgid "Your Markistation is safe and clean"
+msgstr ""
+
+#: apps/fasterpc/app.tscn
+msgid "Your Markistation is under threat"
+msgstr ""
+
+#: apps/fasterpc/app.tscn
+msgid "Run Scan"
+msgstr ""
+
+#: apps/fasterpc/app.tscn
+msgid "Clean PC"
+msgstr ""
+

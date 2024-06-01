@@ -38,8 +38,8 @@ margin_right = -214.0
 size_flags_horizontal = 3
 theme = SubResource( 3 )
 script = ExtResource( 1 )
-Title = "The government is looking for yo!"
-Description = "Click here to not get arestesD!"
+Title = "Computer stlow?"
+Description = "FIX THIS HERE!!!"
 Tags = PoolStringArray( "__fasterpc_ads__" )
 Icon = ExtResource( 2 )
 Music = ExtResource( 6 )
@@ -103,9 +103,4 @@ text = "SEND EMAIL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1"
 script = ExtResource( 3 )
 user = "Confirmation Email"
 userPfp = ExtResource( 4 )
-emailText = "Dear {user},
-
-Please send us Ø15 to get acces to our very much huigh quality PC speedup sofware.
-
-Cheers,
-A Company"
+emailText = "Dear {user},(/n)(/n)Please send us Ø15 to get acces to our very much huigh quality PC speedup sofware.(/n)(/n)Cheers,(/n)A Company"

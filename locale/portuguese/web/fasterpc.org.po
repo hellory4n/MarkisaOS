@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: web/fasterpc.org/home.tscn
+msgid "FasterPC"
+msgstr "FasterPC"
+
+#: web/fasterpc.org/home.tscn
+msgid "FasterPC: Make your computer faster and more secure."
+msgstr "FasterPC: Seu computador, mais rápido e seguro."
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "company"
+msgstr "empresa"
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "computers"
+msgstr "computadores"
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "software"
+msgstr "programas"
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "business"
+msgstr "negócios"
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "antivirus"
+msgstr "antivírus"
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "security"
+msgstr "segurança"
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "cleaning"
+msgstr "limpeza"
+
+# website tag
+#: web/fasterpc.org/home.tscn
+msgid "fasterpc"
+msgstr "fasterpc"
+
+#: web/fasterpc.org/home.tscn
+msgid "Make your computer faster and more secure"
+msgstr "Seu computador, mais rápido e seguro."
+
+#: web/fasterpc.org/home.tscn
+msgid "Download (free!)"
+msgstr "Baixar (grátis!)"
+
+#: web/fasterpc.org/home.tscn
+msgid "7 layers of security"
+msgstr "7 camadas de segurança"
+
+#: web/fasterpc.org/home.tscn
+msgid "Protection against malware"
+msgstr "Proteção contra malware"
+
+#: web/fasterpc.org/home.tscn
+msgid "Malware removal technology"
+msgstr "Tecnologia de remoção de malware"
+
+#: web/fasterpc.org/home.tscn
+msgid "Clean unnecessary files and programs"
+msgstr "Limpe programas e arquivos desnecessários"
+
+#: web/fasterpc.org/home.tscn
+msgid "Speed up your computer"
+msgstr "Deixe seu computador mais rápido"
+
+#: web/fasterpc.org/home.tscn
+msgid "No need to worry about malware"
+msgstr "Não se preocupe com malware"
+
+#: web/fasterpc.org/home.tscn
+msgid "Testimonials"
+msgstr "Depoimentos"
+
+#: web/fasterpc.org/home.tscn
+msgid "\"It's pretty good\""
+msgstr "\"É bom\""
+
+#: web/fasterpc.org/home.tscn
+msgid "- Creator of FasterPC"
+msgstr "- Criador do FasterPC"
+
+# "mues" is part of 2071 slang, it's a word you can casually put
+# anywhere
+# fucking has also become less serious and stuff
+#: web/fasterpc.org/home.tscn
+msgid "\"Mues FasterPC's fucking epic\""
+msgstr "\"Mussim o FasterPC é muito foda\""
+
+#: web/fasterpc.org/home.tscn
+msgid "- Creator of FasterPC's son"
+msgstr "- Filho do criador do FasterPC"
+
+#: web/fasterpc.org/home.tscn
+msgid "\"I like the logo\""
+msgstr "\"A logo é boa\""
+
+#: web/fasterpc.org/home.tscn
+msgid "- Creator of FasterPC's wife"
+msgstr "- Esposa do criador do FasterPC"
+
+#: web/fasterpc.org/home.tscn
+msgid "System Requirements"
+msgstr "Requisitos do Sistema"
+
+#: web/fasterpc.org/home.tscn
+msgid "- MarkisaOS Me or newer"
+msgstr "- MarkisaOS Me ou mais recente"
+
+#: web/fasterpc.org/home.tscn
+msgid "- Any Markistation that turns on successfully"
+msgstr "- Qualquer Markistation que liga"
+
+# .mpkg is like .exe or .apk, but on markisaOS
+#: web/fasterpc.org/home.tscn
+msgid "fasterpc.mpkg"
+msgstr "fasterpc.mpkg"
+
+#: apps/fasterpc/app.tscn
+msgid "Your Markistation is safe and clean"
+msgstr "Seu Markistation está limpo e seguro"
+
+#: apps/fasterpc/app.tscn
+msgid "Your Markistation is under threat"
+msgstr "Seu Markistation está correndo perigo!"
+
+#: apps/fasterpc/app.tscn
+msgid "Run Scan"
+msgstr "Escanear PC"
+
+# as in to clean a pc, not a pc that is clean
+#: apps/fasterpc/app.tscn
+msgid "Clean PC"
+msgstr "Limpar PC"

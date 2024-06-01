@@ -113,12 +113,7 @@ text = "UPGRADE TO MARKISAOS VISION IMMEDIATLY!"
 script = ExtResource( 3 )
 user = "Confirmation Email"
 userPfp = ExtResource( 4 )
-emailText = "Dear {user},
-
-Please send us Ø15 download markisaos vision.
-
-Cheers,
-Oassionfruit Corp"
+emailText = "Dear {user},(/n)(/n)Please send us Ø15 download markisaos vision.(/n)(/n)Cheers,(/n)Oassionfruit Corp"
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
 margin_top = 190.0

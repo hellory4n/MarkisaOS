@@ -379,7 +379,7 @@ align = 1
 margin_top = 688.0
 margin_right = 633.0
 margin_bottom = 717.0
-text = "-  Any Markistation that turns on successfully"
+text = "- Any Markistation that turns on successfully"
 align = 1
 
 [node name="hSeparator6" type="HSeparator" parent="scrollContainer/vBoxContainer"]

@@ -84,6 +84,12 @@ margin_right = 419.0
 margin_bottom = 121.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover_pressed = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/focus = SubResource( 4 )
@@ -93,9 +99,4 @@ text = "Send email"
 script = ExtResource( 3 )
 user = "Confirmation Email"
 userPfp = ExtResource( 4 )
-emailText = "Dear {user},
-
-Please send us Ø15 to get aacess to our advanced chattting app. After seding the quantity, we''ll send the lin kfor downmloading the app.
-
-Cheers,
-A Company"
+emailText = "Dear {user},(/n)(/n)Please send us Ø15 to get aacess to our advanced chattting app. After seding the quantity, we''ll send the lin kfor downmloading the app.(/n)(/n)Cheers,(/n)A Company"
