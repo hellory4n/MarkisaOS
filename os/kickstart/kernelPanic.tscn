@@ -1,0 +1,170 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://os/assets/highPeaks/fonts/JetBrainsMono-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://os/assets/highPeaks/fonts/RedHatText-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://os/kickstart/kernelPanic.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "uhoh"
+tracks/0/type = "value"
+tracks/0/path = NodePath("label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("centerContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 72
+font_data = ExtResource( 2 )
+
+[node name="kernelpanic" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="animationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "uhoh"
+anims/uhoh = SubResource( 1 )
+
+[node name="colorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.266667, 0.533333, 1, 1 )
+
+[node name="label" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Critical Frambos kernel panic. Shutting down immediately.
+
+- /markisa/kickstart/frambos.mlua at [color=black]frambos.startup()[/color]
+- /markisa/kickstart/network/web_search.mlua at [color=black]web_search.index()[/color]
+- /markisa/dashboard/dashboard.mlua at [color=black]Dashboard.new()[/color]
+- /markisa/dashboard/app_launcher.mlua at [color=black]AppLauncher.on_app_selected()[/color]
+- /markisa/mkstoolkit/button.mlua at [color=black]Button.on_pressed()[/color]
+- /markisa/drivers/graphics/mkstn2071_graphics_adapter.mlua at [color=black]mkstn2071_graphics.translate_instruction()[/color]
+- /markisa/driver/managers/graphics.mlua at [color=black]graphics_manager.draw_object()[/color]
+- /markisa/lowlevel/mksgl/square.mlua at [color=black]Square.new()[/color]
+- /apps/passionfruit/websites/ui/web_tabs.mlua at [color=black]WebTabs.add_tab()[/color]
+- /apps/passionfruit/websites/d8/d8_engine.mlua at [color=black]d8_engine.render()[/color]
+- /apps/passionfruit/websites/default/new_tab/recommended_websites.mlua at [color=black]RecommendedWebsites.new()[/color]
+
+  [color=red]panic[/color] [color=green]\"Unknown error\"[/color], [color=yellow]KernelPanic[/color].[color=blue]unknown[/color];
+  ^^^^^
+
+KernelPanic.unknown: Unknown error."
+text = "Critical Frambos kernel panic. Shutting down immediately.
+
+- /markisa/kickstart/frambos.mlua at frambos.startup()
+- /markisa/kickstart/network/web_search.mlua at web_search.index()
+- /markisa/dashboard/dashboard.mlua at Dashboard.new()
+- /markisa/dashboard/app_launcher.mlua at AppLauncher.on_app_selected()
+- /markisa/mkstoolkit/button.mlua at Button.on_pressed()
+- /markisa/drivers/graphics/mkstn2071_graphics_adapter.mlua at mkstn2071_graphics.translate_instruction()
+- /markisa/driver/managers/graphics.mlua at graphics_manager.draw_object()
+- /markisa/lowlevel/mksgl/square.mlua at Square.new()
+- /apps/passionfruit/websites/ui/web_tabs.mlua at WebTabs.add_tab()
+- /apps/passionfruit/websites/d8/d8_engine.mlua at d8_engine.render()
+- /apps/passionfruit/websites/default/new_tab/recommended_websites.mlua at RecommendedWebsites.new()
+
+  panic \"Unknown error\", KernelPanic.unknown;
+  ^^^^^
+
+KernelPanic.unknown: Unknown error."
+fit_content_height = true
+
+[node name="centerContainer" type="CenterContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer2" type="VBoxContainer" parent="centerContainer"]
+margin_left = 194.0
+margin_top = 140.0
+margin_right = 658.0
+margin_bottom = 340.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="colorRect" type="ColorRect" parent="centerContainer/vBoxContainer2"]
+margin_left = 203.0
+margin_right = 260.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 57, 104 )
+size_flags_horizontal = 4
+
+[node name="colorRect2" type="ColorRect" parent="centerContainer/vBoxContainer2"]
+margin_top = 104.0
+margin_right = 464.0
+margin_bottom = 145.0
+rect_min_size = Vector2( 464, 41 )
+size_flags_horizontal = 4
+
+[node name="colorRect3" type="ColorRect" parent="centerContainer/vBoxContainer2"]
+margin_top = 145.0
+margin_right = 464.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 464, 55 )
+size_flags_horizontal = 4
+
+[node name="vBoxContainer" type="VBoxContainer" parent="centerContainer"]
+margin_left = 194.0
+margin_top = 140.0
+margin_right = 658.0
+margin_bottom = 340.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="label" type="Label" parent="centerContainer/vBoxContainer"]
+margin_left = 203.0
+margin_right = 260.0
+margin_bottom = 104.0
+rect_pivot_offset = Vector2( 52, 52 )
+size_flags_horizontal = 4
+theme_type_variation = "Header"
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = ":("
+align = 1
+valign = 1
+
+[node name="label3" type="Label" parent="centerContainer/vBoxContainer"]
+margin_top = 104.0
+margin_right = 464.0
+margin_bottom = 145.0
+theme_type_variation = "Header"
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "MarkisaOS has run into a critical error."
+align = 1
+
+[node name="label2" type="Label" parent="centerContainer/vBoxContainer"]
+margin_top = 145.0
+margin_right = 464.0
+margin_bottom = 200.0
+theme_type_variation = "Bold"
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Please restart your Markistation by holding the power button for 10 seconds."
+align = 1
+autowrap = true
