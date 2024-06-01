@@ -79,8 +79,12 @@ public class RealUnfortunateBackgroundThing : Node
             .SetEase(Tween.EaseType.Out)
             .SetTrans(Tween.TransitionType.Cubic);
         
-        // TODO: play annoying sound
-        Frambos.Play(SystemSound.Notification);
+        // play annoying sound
+        ad.AddChild(new AudioStreamPlayer {
+            Autoplay = true,
+            Stream = GD.Load<AudioStream>("res://apps/fasterpcDotcom/hotSinglesInYourArea.mp3"),
+            Bus = "music"
+        });
 
         ad.Connect("pressed", this, nameof(AnnoyMore), new Godot.Collections.Array { link, ad });
     }
