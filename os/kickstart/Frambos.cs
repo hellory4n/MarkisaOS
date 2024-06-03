@@ -14,7 +14,7 @@ public class Frambos : Node
     public static string CurrentUser { get; set; } = "";
     public static string CurrentUserDisplayName { get; set; } = "";
     public static uint MajorVersion => 0;
-    public static uint MinorVersion => 19;
+    public static uint MinorVersion => 20;
     public static uint PatchVersion => 0;
     /// <summary>
     /// The current time in game.
