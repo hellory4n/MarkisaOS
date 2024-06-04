@@ -57,15 +57,15 @@ ContentRoot = NodePath("contents")
 script = ExtResource( 34 )
 label = NodePath("../contents/hSplitContainer/control/system/vBoxContainer/label")
 PortugueseText = "[center]MarkisaOS Me v0.20.0
-© 2069 Passionfruit Corporation
+© 2071 Passionfruit Corporation
 por hellory4n, alex343xd, parfesan, e tradutores
 Faltam 14 dias para WhatsApp 2[/center]"
 SpanishText = "[center]MarkisaOS Me v0.20.0
-© 2069 Passionfruit Corporation
+© 2071 Passionfruit Corporation
 por hellory4n, alex343xd
 Qué[/center]"
 IndonesianText = "[center]MarkisaOS Me v0.20.0
-© 2069 Passionfruit Corporation
+© 2071 Passionfruit Corporation
 oleh hellory4n, alex343xd
 Dijalankan di beberapa perangkat[/center]"
 
@@ -80,9 +80,6 @@ Imagens 3D por parfesan
 Português (Brasil): hellory4n
 Español (Espanhol): Tha Muffin
 Bahasa Indonesia (Indonésio): RThreeFive
-
-[b]Som de inicialização[/b]
-Melodia por alex343xd + o som de inicialização do Zorin OS 16.x + o som de desligamento do Ubuntu 6.10 - 18.04 + vários efeitos
 
 [b]Wallpapers[/b]
 Picos Altos: Nisarg Patel no Unsplash
@@ -145,9 +142,6 @@ Português (Brasil): hellory4n
 Español (Espanhol): Tha Muffin
 Bahasa Indonesia (Indonesio): RThreeFive
 
-[b]Sonido de Inicio[/b]
-Melodia por alex343xd + el sonido de inicialización de Zorin OS 16.x + el som de apagado de Ubuntu 6.10 - 18.04 + varios efectos
-
 [b]Wallpapers[/b]
 Picos Altos: Nisarg Patel no Unsplash
 Flores: Aaron Burden no Unsplash
@@ -207,9 +201,6 @@ Suara oleh alex343xd
 [b]Terjemahan[/b]
 Português (Brazil): hellory4n
 Español (Spanyol): Tha Muffin
-
-[b]Suara startup[/b]
-Melodi oleh alex343xd + Suara startup Zorin OS 16.x + Suara saat mematikan Ubuntu 6.10 - 18.04 + beberapa efek suara
 
 [b]Wallpaper[/b]
 Puncak Tinggi: Nisarg Patel di Unsplash
@@ -734,11 +725,11 @@ margin_bottom = 223.0
 focus_mode = 2
 bbcode_enabled = true
 bbcode_text = "[center]MarkisaOS Me v0.20.0
-© 2069 Passionfruit Corporation
+© 2071 Passionfruit Corporation
 by hellory4n, alex343xd, parfesan, and translators
 Running on some device :)[/center]"
 text = "MarkisaOS Me v0.20.0
-© 2069 Passionfruit Corporation
+© 2071 Passionfruit Corporation
 by hellory4n, alex343xd, parfesan, and translators
 Running on some device :)"
 fit_content_height = true
