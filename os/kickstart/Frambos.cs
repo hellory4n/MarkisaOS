@@ -225,13 +225,10 @@ public class Frambos : Node
         }
 
         // maybe it should be redirected?
-        string he = "404";
-        foreach (var item in Redirector5000.Stuff) {
-            if (url.Replace(item.Key, item.Value) != url) {
-                he = GetRealWebPath(url.Replace(item.Key, item.Value));
-                break;
-            } 
-        }
+        string he = Redirector5000.Stuff
+            .Where(item => url.Contains(item.Key))
+            .Select(item => GetRealWebPath(url.Replace(item.Key, item.Value)))
+            .FirstOrDefault(result => result != url);
 
         // yes
         // he should either be 404 or the redirected address
