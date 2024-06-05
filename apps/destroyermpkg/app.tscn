@@ -25,3 +25,26 @@ rect_clip_content = true
 
 [node name="fuckup" type="Node" parent="contents"]
 script = ExtResource( 5 )
+
+[node name="startPart1" type="Timer" parent="contents/fuckup"]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="part1Loop" type="Timer" parent="contents/fuckup"]
+wait_time = 10.0
+
+[node name="startPart2" type="Timer" parent="contents/fuckup"]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="startPart3" type="Timer" parent="contents/fuckup"]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="contents/fuckup/startPart1" to="contents/fuckup" method="StartPart1"]
+[connection signal="timeout" from="contents/fuckup/part1Loop" to="contents/fuckup" method="Part1Loop"]
+[connection signal="timeout" from="contents/fuckup/startPart2" to="contents/fuckup" method="StartPart2"]
+[connection signal="timeout" from="contents/fuckup/startPart3" to="contents/fuckup" method="StartPart3"]

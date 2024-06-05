@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://os/assets/highPeaks/icons/language.png" type="Texture" id=2]
+[ext_resource path="res://os/mkstoolkit/MksDownload.gd" type="Script" id=3]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=4]
+[ext_resource path="res://web/destroyermpkg.com/sadly.gd" type="Script" id=5]
+
+[node name="destroyermpkg" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+rect_clip_content = true
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+Title = "Destroyer.mpkg"
+Description = "Very friendly software that is not malware at all!"
+Tags = PoolStringArray( "software", "destroyer", "destroyermpkg", "destroyer_mpkg" )
+Icon = ExtResource( 2 )
+
+[node name="MksDownload" type="Button" parent="."]
+margin_right = 20.0
+margin_bottom = 42.0
+rect_pivot_offset = Vector2( -21, -50 )
+script = ExtResource( 3 )
+file = "destroyer.mpkg"
+content = "{\"DisplayName\":\"Destroyer.mpkg\",\"Author\":\"Unknown\",\"Icon\":\"res://os/assets/highPeaks/colorIcons/bigMarkisa.png\",\"Executable\":\"res://apps/destroyermpkg/app.tscn\",\"AppCategories\":[8]}"
+time = 50
+
+[node name="MksHyperlink" type="Button" parent="."]
+margin_right = 20.0
+margin_bottom = 42.0
+script = ExtResource( 4 )
+website = "passionfruit.com"
+
+[node name="node" type="Node" parent="."]
+script = ExtResource( 5 )

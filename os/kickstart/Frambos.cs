@@ -1,4 +1,5 @@
 using Godot;
+using markisa.kickstart;
 using markisa.network;
 using System;
 using System.Collections.Generic;
@@ -288,6 +289,13 @@ public class Frambos : Node
             Notify("System", "Translation strings unlocked. Translate them at BetaTools.");
             Play(SystemSound.Notification);
         }
+    }
+
+    public static void KernelPanic()
+    {
+        oopMoment.Root.GetNode<ComputerNoises>("/root/ComputerNoises").DashboardExists = false;
+        oopMoment.Root.GetNode("/root/dashboard").QueueFree();
+        oopMoment.Root.AddChild(GD.Load<PackedScene>("res://os/kickstart/kernelPanic.tscn").Instance());
     }
 }
 

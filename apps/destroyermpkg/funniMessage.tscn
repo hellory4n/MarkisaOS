@@ -42,9 +42,16 @@ margin_bottom = 109.0
 text = "As the name implies, this will destroy your computer, and there's nothing you can do about it!"
 autowrap = true
 
-[node name="label3" type="Label" parent="contents/vBoxContainer"]
+[node name="label4" type="Label" parent="contents/vBoxContainer"]
 margin_top = 133.0
 margin_right = 576.0
-margin_bottom = 163.0
+margin_bottom = 188.0
+text = "Your computer will start get progressively weirder until everything is destroyed."
+autowrap = true
+
+[node name="label3" type="Label" parent="contents/vBoxContainer"]
+margin_top = 212.0
+margin_right = 576.0
+margin_bottom = 242.0
 text = "Have a nice day :D"
 autowrap = true
