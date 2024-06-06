@@ -5,7 +5,7 @@
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=3]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/bigMarkisa.png" type="Texture" id=4]
 
-[node name="destroyermpkg" type="Control"]
+[node name="destroyermpkg2" type="Control"]
 margin_right = 576.0
 margin_bottom = 275.0
 script = ExtResource( 2 )
@@ -46,7 +46,7 @@ autowrap = true
 margin_top = 133.0
 margin_right = 576.0
 margin_bottom = 188.0
-text = "Your computer will start get progressively weirder until everything is destroyed."
+text = "Your computer will start getting progressively weirder until everything is destroyed."
 autowrap = true
 
 [node name="label3" type="Label" parent="contents/vBoxContainer"]

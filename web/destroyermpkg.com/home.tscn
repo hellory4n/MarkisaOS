@@ -17,6 +17,7 @@ Title = "Destroyer.mpkg"
 Description = "Very friendly software that is not malware at all!"
 Tags = PoolStringArray( "software", "destroyer", "destroyermpkg", "destroyer_mpkg" )
 Icon = ExtResource( 2 )
+TranslationPot = "res://locale/english/web/destroyermpkg.com.pot"
 
 [node name="MksDownload" type="Button" parent="."]
 margin_right = 20.0

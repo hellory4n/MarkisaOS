@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# .mpkg is like .exe or .apk but for markisaOS
+#: web/destroyermpkg.com/home.tscn
+msgid "Destroyer.mpkg"
+msgstr "Destruição.mpkg"
+
+#: web/destroyermpkg.com/home.tscn
+msgid "Very friendly software that is not malware at all!"
+msgstr "Um programa muito bom que com certeza não é um vírus!"
+
+# website tag
+#: web/destroyermpkg.com/home.tscn
+msgid "software"
+msgstr "programas"
+
+# website tag
+#: web/destroyermpkg.com/home.tscn
+msgid "destroyer"
+msgstr "destruição"
+
+# website tag
+#: web/destroyermpkg.com/home.tscn
+msgid "destroyermpkg"
+msgstr "destruiçãompkg"
+
+# website tag
+#: web/destroyermpkg.com/home.tscn
+msgid "destroyer_mpkg"
+msgstr "destruição_mpkg"
+
+#: web/destroyermpkg.com/home.tscn
+msgid "destroyer.mpkg"
+msgstr "destruição.mpkg"
+
+#: apps/destroyermpkg/funniMessage.tscn
+msgid "Welcome to Destroyer.mpkg!"
+msgstr "Bem-vindo ao Destruição.mpkg"
+
+#: apps/destroyermpkg/funniMessage.tscn
+msgid "As the name implies, this will destroy your computer, and there's nothing you can do about it!"
+msgstr "Como o nome diz, seu computador vai ser destruído, e não há nada que possa ser feito sobre isso!"
+
+#: apps/destroyermpkg/funniMessage.tscn
+msgid "Your computer will start getting progressively weirder until everything is destroyed."
+msgstr "Seu computador vai ficar cada vez mais estranho até ser completamente aniquilado."
+
+#: apps/destroyermpkg/funniMessage.tscn
+msgid "Have a nice day :D"
+msgstr "Tenha um bom dia :D"

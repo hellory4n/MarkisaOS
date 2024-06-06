@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+# .mpkg is like .exe or .apk but for markisaOS
+#: web/destroyermpkg.com/home.tscn
+msgid "Destroyer.mpkg"
+msgstr ""
+
+#: web/destroyermpkg.com/home.tscn
+msgid "Very friendly software that is not malware at all!"
+msgstr ""
+
+# website tag
+#: web/destroyermpkg.com/home.tscn
+msgid "software"
+msgstr ""
+
+# website tag
+#: web/destroyermpkg.com/home.tscn
+msgid "destroyer"
+msgstr ""
+
+# website tag
+#: web/destroyermpkg.com/home.tscn
+msgid "destroyermpkg"
+msgstr ""
+
+# website tag
+#: web/destroyermpkg.com/home.tscn
+msgid "destroyer_mpkg"
+msgstr ""
+
+#: web/destroyermpkg.com/home.tscn
+msgid "destroyer.mpkg"
+msgstr ""
+
+#: apps/destroyermpkg/funniMessage.tscn
+msgid "Welcome to Destroyer.mpkg!"
+msgstr ""
+
+#: apps/destroyermpkg/funniMessage.tscn
+msgid "As the name implies, this will destroy your computer, and there's nothing you can do about it!"
+msgstr ""
+
+#: apps/destroyermpkg/funniMessage.tscn
+msgid "Your computer will start getting progressively weirder until everything is destroyed."
+msgstr ""
+
+#: apps/destroyermpkg/funniMessage.tscn
+msgid "Have a nice day :D"
+msgstr ""

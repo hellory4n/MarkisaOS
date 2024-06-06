@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/kernelPanic.mp3-1821bf7f0284fce1bc5262ffdd10ce25.mp3str"
+
+[deps]
+
+source_file="res://os/assets/systemSounds/kernelPanic.mp3"
+dest_files=[ "res://.import/kernelPanic.mp3-1821bf7f0284fce1bc5262ffdd10ce25.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

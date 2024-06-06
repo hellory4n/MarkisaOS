@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://os/assets/highPeaks/fonts/JetBrainsMono-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://os/assets/highPeaks/fonts/RedHatText-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://os/kickstart/kernelPanic.gd" type="Script" id=3]
+[ext_resource path="res://os/assets/systemSounds/kernelPanic.mp3" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "uhoh"
@@ -46,6 +47,11 @@ script = ExtResource( 3 )
 [node name="animationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "uhoh"
 anims/uhoh = SubResource( 1 )
+
+[node name="uhoh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+bus = "sound"
 
 [node name="colorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
