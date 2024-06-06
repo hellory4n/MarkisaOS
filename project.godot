@@ -70,10 +70,10 @@ _global_script_class_icons={
 
 config/name="MarkisaOS"
 config/description="Game"
-run/main_scene="res://os/kickstart/bootscreen.tscn"
+run/main_scene="res://os/kickstart/bios.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="MarkisaOS"
-boot_splash/image="res://os/assets/bootloader/bios.png"
+boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://os/assets/bootloader/icon.png"

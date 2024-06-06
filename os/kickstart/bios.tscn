@@ -1,0 +1,117 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://os/assets/bootloader/bios.png" type="Texture" id=1]
+[ext_resource path="res://os/kickstart/BiosStuffThings.cs" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "G"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("textureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 2.3 ),
+"transitions": PoolRealArray( 0.37, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("centerContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 0.37, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="bios" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="animationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "G"
+anims/G = SubResource( 1 )
+
+[node name="colorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="textureRect" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="centerContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="centerContainer"]
+margin_left = 176.0
+margin_top = 88.0
+margin_right = 676.0
+margin_bottom = 391.0
+alignment = 1
+
+[node name="label" type="Label" parent="centerContainer/vBoxContainer"]
+modulate = Color( 0.956863, 0.262745, 0.211765, 1 )
+margin_right = 500.0
+margin_bottom = 41.0
+theme_type_variation = "Header"
+text = "EPILEPSY WARNING"
+align = 1
+
+[node name="label2" type="Label" parent="centerContainer/vBoxContainer"]
+margin_top = 49.0
+margin_right = 500.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 500, 0 )
+text = "This game contains flashing lights and sudden changes in brightness that may cause discomfort or trigger seizures in individuals with photosensitive epilepsy. Player discretion is advised."
+align = 1
+autowrap = true
+
+[node name="hSeparator" type="HSeparator" parent="centerContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 162.0
+margin_right = 500.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="label3" type="Label" parent="centerContainer/vBoxContainer"]
+margin_top = 186.0
+margin_right = 500.0
+margin_bottom = 241.0
+rect_min_size = Vector2( 500, 0 )
+text = "If necessary, you can enable reduced motion mode in the Settings app to minimize these effects."
+align = 1
+autowrap = true
+
+[node name="hSeparator2" type="HSeparator" parent="centerContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 249.0
+margin_right = 500.0
+margin_bottom = 265.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="label4" type="Label" parent="centerContainer/vBoxContainer"]
+margin_top = 273.0
+margin_right = 500.0
+margin_bottom = 303.0
+rect_min_size = Vector2( 500, 0 )
+text = "Click or press any key to continue."
+align = 1
+autowrap = true
+
+[node name="thething" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )

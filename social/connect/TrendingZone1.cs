@@ -262,7 +262,33 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
                 },
             }
         },
-    }
+
+        new MksPost {
+            User = "Guy McPerson",
+            ProfilePicture = "res://os/assets/userIcons/duck.png",
+            Content = "guys check out this cool app",
+            Link = "destroyermpkg.com",
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "Rob Smith",
+                    ProfilePicture = "res://os/assets/userIcons/duck.png",
+                    Content = "It just goes to passionfruit.com?"
+                },
+
+                new MksPost {
+                    User = "Rob Smith",
+                    ProfilePicture = "res://os/assets/userIcons/duck.png",
+                    Content = "Nevermind"
+                },
+
+                new MksPost {
+                    User = "Daniel McLeinad",
+                    ProfilePicture = "res://os/assets/userIcons/pancakes.png",
+                    Content = "that was something"
+                },
+            }
+        },
+    },
 };
 
 }
