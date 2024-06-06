@@ -44,7 +44,11 @@ wait_time = 60.0
 one_shot = true
 autostart = true
 
+[node name="part3Loop" type="Timer" parent="contents/fuckup"]
+wait_time = 3.0
+
 [connection signal="timeout" from="contents/fuckup/startPart1" to="contents/fuckup" method="StartPart1"]
 [connection signal="timeout" from="contents/fuckup/part1Loop" to="contents/fuckup" method="Part1Loop"]
 [connection signal="timeout" from="contents/fuckup/startPart2" to="contents/fuckup" method="StartPart2"]
 [connection signal="timeout" from="contents/fuckup/startPart3" to="contents/fuckup" method="StartPart3"]
+[connection signal="timeout" from="contents/fuckup/part3Loop" to="contents/fuckup" method="Part3Loop"]
