@@ -278,13 +278,39 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
                 new MksPost {
                     User = "Rob Smith",
                     ProfilePicture = "res://os/assets/userIcons/duck.png",
-                    Content = "Nevermind"
+                    Content = "Nevermind​"
                 },
 
                 new MksPost {
                     User = "Daniel McLeinad",
                     ProfilePicture = "res://os/assets/userIcons/pancakes.png",
                     Content = "that was something"
+                },
+            }
+        },
+
+        new MksPost {
+            User = "Passionfruit",
+            ProfilePicture = "res://social/connectpeople/passionfruit.png",
+            Content = "Here at Passionfruit, we're hard at work on the future of MarkisaOS",
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "Rob Smith",
+                    ProfilePicture = "res://os/assets/userIcons/duck.png",
+                    Content = "when you have nothing to post"
+                },
+            }
+        },
+
+        new MksPost {
+            User = "Simon Tranderson",
+            ProfilePicture = "res://social/connectpeople/government.png",
+            Content = "Good morning Lelclub",
+            Replies = new MksPost[] {
+                new MksPost {
+                    User = "deleted user",
+                    ProfilePicture = "res://os/assets/userIcons/unknown.png",
+                    Content = "[deleted]"
                 },
             }
         },

@@ -448,7 +448,7 @@ anchor_bottom = 1.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/hSplitContainer/control/appearance"]
 margin_right = 450.0
-margin_bottom = 627.0
+margin_bottom = 151.0
 
 [node name="label" type="Label" parent="contents/hSplitContainer/control/appearance/vBoxContainer"]
 margin_right = 450.0
