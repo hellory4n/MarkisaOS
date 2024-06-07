@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: os/kickstart/bios.tscn
+msgid "EPILEPSY WARNING"
+msgstr ""
+
+#: os/kickstart/bios.tscn
+msgid "This game contains flashing lights and sudden changes in brightness that may cause discomfort or trigger seizures in individuals with photosensitive epilepsy. Player discretion is advised."
+msgstr ""
+
+#: os/kickstart/bios.tscn
+msgid "If necessary, you can enable reduced motion mode in the Settings app to minimize these effects."
+msgstr ""
+
+#: os/kickstart/bios.tscn
+msgid "Click or press any key to continue."
+msgstr ""
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Appearance"
+msgstr ""

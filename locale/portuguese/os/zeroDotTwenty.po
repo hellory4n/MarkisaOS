@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: os/kickstart/bios.tscn
+msgid "EPILEPSY WARNING"
+msgstr "AVISO IMPORTANTE"
+
+#: os/kickstart/bios.tscn
+msgid "This game contains flashing lights and sudden changes in brightness that may cause discomfort or trigger seizures in individuals with photosensitive epilepsy. Player discretion is advised."
+msgstr "Este jogo contém luzes piscando e mudanças repentinas de brilho que podem causar desconforto ou causar convulsões em indivíduos com epilepsia fotossensível. O discernimento do jogador é recomendado."
+
+#: os/kickstart/bios.tscn
+msgid "If necessary, you can enable reduced motion mode in the Settings app to remove these visual effects."
+msgstr "Se for necessário, você pode ativar o modo de movimentos reduzidos nas Configurações para remover esses efeitos visuais."
+
+#: os/kickstart/bios.tscn
+msgid "Click or press any key to continue."
+msgstr "Clique ou aperte qualquer tecla para continuar."
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Appearance"
+msgstr "Aparência"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Accessibility"
+msgstr "Acessibilidade"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Reduced motion mode"
+msgstr "Modo de movimentos reduzidos"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Disables visual effects that could trigger seizures"
+msgstr "Remove efeitos visuais que podem causar convulsões"
+
+# this isn't supposed to really mean anything, it's just the name of the default theme
+#: apps/passionfruit/settings/app.tscn
+msgid "High Peaks"
+msgstr "Montanhas Altas"

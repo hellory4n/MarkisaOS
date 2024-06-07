@@ -83,7 +83,6 @@ public class Frambos : Node
 
         // lcoalziation glboalstizagioyn internalizitation
 		var config = new Config<SystemInfo>();
-
 		var file = new File();
 		if (file.FileExists("user://yestheuserhasindeedopenedthegameforthefirsttime")) {
 			TranslationServer.SetLocale(config.Data.Language);

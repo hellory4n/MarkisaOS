@@ -57,3 +57,11 @@ msgstr "Seu computador vai ficar cada vez mais estranho até ser completamente a
 #: apps/destroyermpkg/funniMessage.tscn
 msgid "Have a nice day :D"
 msgstr "Tenha um bom dia :D"
+
+#: apps/destroyermpkg/FuckUp.cs
+msgid "You are an idiot!"
+msgstr "Você é um idiota!"
+
+#: apps/destroyermpkg/FuckUp.cs
+msgid "Hahaha!"
+msgstr "Hahaha!"

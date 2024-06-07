@@ -491,7 +491,7 @@ margin_right = 450.0
 margin_bottom = 627.0
 pressed = true
 group = SubResource( 2 )
-text = "High Peaks (the default theme)"
+text = "High Peaks"
 align = 1
 
 [node name="languages" type="CenterContainer" parent="contents/hSplitContainer/control"]

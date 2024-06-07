@@ -91,7 +91,7 @@ margin_top = 161.0
 margin_right = 600.0
 margin_bottom = 216.0
 rect_min_size = Vector2( 500, 0 )
-text = "If necessary, you can enable reduced motion mode in the Settings app to minimize these effects."
+text = "If necessary, you can enable reduced motion mode in the Settings app to remove these visual effects."
 align = 1
 autowrap = true
 

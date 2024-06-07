@@ -79,7 +79,7 @@ public class FuckUp : Node
         eyestrain.AddChild(GD.Load<PackedScene>("res://apps/destroyermpkg/invertThing.tscn").Instance<Control>());
     }
 
-    public void Part2Loop() => Frambos.Notify("You are an idiot!", "Hahahaha!"); 
+    public void Part2Loop() => Frambos.Notify("You are an idiot!", "Hahaha!"); 
 
     // in part 3 we officially go FUCK YOU and do that tunnel effect from recording programs (pretty unusable)
     // but if reduced motion is enabled we only play random sounds
