@@ -306,7 +306,6 @@ public enum SystemSound
     Confirm,
     Error,
     Notification,
-    CriticalError,
 }
 
 }

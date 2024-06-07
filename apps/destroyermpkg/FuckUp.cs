@@ -16,6 +16,13 @@ public class FuckUp : Node
         "res://apps/passionfruit/settings/app.tscn",
         "res://apps/passionfruit/websites/app.tscn",
     };
+    readonly SystemSound[] randomshit2 = new SystemSound[] {
+        SystemSound.Startup,
+        SystemSound.Shutdown,
+        SystemSound.Confirm,
+        SystemSound.Error,
+        SystemSound.Notification,
+    };
     readonly Random rng = new Random();
     MksWindow handsomeWindow;
     readonly CanvasLayer eyestrain = new CanvasLayer {
@@ -57,18 +64,41 @@ public class FuckUp : Node
 
     // in part 2, we get more machiavellian
     // now there's a shader inverting the colors of the whole screen
-    // TODO: make sure that this doesn't give people a fucking seizure (probably important)
+    // but if reduced motion is enabled we only spam notifications
     public void StartPart2()
     {
+        GetNode<Timer>("part2Loop").Start();
+
+        var config = new Config<ReducedMotion>();
+        if (config.Data.Enabled) {
+            return;
+        }
+
         GetTree().Root.AddChild(eyestrain);
         // quite the mouthful
         eyestrain.AddChild(GD.Load<PackedScene>("res://apps/destroyermpkg/invertThing.tscn").Instance<Control>());
     }
 
+    public void Part2Loop() => Frambos.Notify("You are an idiot!", "Hahahaha!"); 
+
     // in part 3 we officially go FUCK YOU and do that tunnel effect from recording programs (pretty unusable)
+    // but if reduced motion is enabled we only play random sounds
     public void Part3Loop()
     {
         tunnelScale -= 0.1;
+
+        Frambos.Play(randomshit2[rng.Next(0, randomshit2.Length)]);
+
+        // aight we're dead
+        if (tunnelScale < 0.25) {
+            eyestrain.QueueFree();
+            Frambos.KernelPanic();
+        }
+
+        var config = new Config<ReducedMotion>();
+        if (config.Data.Enabled) {
+            return;
+        }
 
         eyestrain.AddChild(new TextureRect {
             Expand = true,
@@ -79,12 +109,6 @@ public class FuckUp : Node
             RectScale = new Vector2((float)tunnelScale, (float)tunnelScale),
             MouseFilter = Control.MouseFilterEnum.Ignore,
         });
-
-        // aight we're dead
-        if (tunnelScale < 0.25) {
-            eyestrain.QueueFree();
-            Frambos.KernelPanic();
-        }
     }
 }
 

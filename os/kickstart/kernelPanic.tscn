@@ -50,6 +50,7 @@ anims/uhoh = SubResource( 1 )
 
 [node name="uhoh" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -5.652
 autoplay = true
 bus = "sound"
 
