@@ -53,8 +53,13 @@ public class Search : Node
             place.AddChild(j);
             j.Connect("pressed", this, nameof(Lol2), new Godot.Collections.Array { website });
             
-
             webview.QueueFree();
+        }
+
+        for (int i = 0; i < 3; i++) {
+            place.AddChild(new HSeparator {
+                Modulate = Colors.Transparent
+            });
         }
     }
 

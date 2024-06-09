@@ -231,8 +231,8 @@ public class Frambos : Node
             .FirstOrDefault(result => result != url);
 
         // yes
-        // he should either be 404 or the redirected address
-        return he;
+        // "he" should either be 404 or the redirected address
+        return he ?? "404";
     }
 
     /// <summary>
