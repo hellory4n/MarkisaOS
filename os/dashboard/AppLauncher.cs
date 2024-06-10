@@ -5,42 +5,47 @@ using System.Linq;
 
 namespace markisa.dashboard {
 
-public class AppLauncher : ItemList
+public class AppLauncher : HFlowContainer
 {
     MksPackage[] packages = {};
     MksPackage[] defaultApps = {};
-    int defaultAppCount;
+    int appCount = 0;
+    int defaultAppCount = 0;
 
     public void LoadStuffLmao()
     {
-        Clear();
+        appCount = 0;
+
+        foreach (Node node in GetChildren().Cast<Node>()) {
+            node.QueueFree();
+        }
 
         var config = new Config<AppStuff>();
         packages = config.Data.InstalledApps;
         var plfhfhfs = defaultApps.Concat(config.Data.InstalledApps).ToArray();
 
         foreach (MksPackage pkg in plfhfhfs) {
-            AddItem(Tr(pkg.DisplayName), GD.Load<Texture>(pkg.Icon));
+            AddItem(pkg.DisplayName, GD.Load<Texture>(pkg.Icon));
         }
     }
 
     public override void _Ready()
     {
-        SetItemText(0, Tr("Websites"));
-        SetItemText(1, Tr("Downloads"));
-        SetItemText(2, Tr("Email"));
-        SetItemText(3, Tr("Connect"));
-        SetItemText(4, Tr("Marketplace"));
-        SetItemText(5, Tr("Settings"));
-        SetItemText(6, Tr("Bank"));
-        SetItemText(7, Tr("BetaTools"));
-        defaultAppCount = GetItemCount();
+        AddItem("Websites", GD.Load<Texture>("res://apps/passionfruit/websites/dockicon.png"));
+        AddItem("Downloads", GD.Load<Texture>("res://apps/passionfruit/files/dockicon.png"));
+        AddItem("Email", GD.Load<Texture>("res://apps/passionfruit/email/dockicon.png"));
+        AddItem("Connect", GD.Load<Texture>("res://apps/passionfruit/connect/dockicon.png"));
+        AddItem("Marketplace", GD.Load<Texture>("res://apps/passionfruit/marketplace/dockicon.png"));
+        AddItem("Settings", GD.Load<Texture>("res://apps/passionfruit/settings/dockicon.png"));
+        AddItem("Bank", GD.Load<Texture>("res://apps/passionfruit/bank/dockicon.png"));
+        AddItem("BetaTools", GD.Load<Texture>("res://os/assets/highPeaks/colorIcons/bigMarkisa.png"));
+        defaultAppCount = GetChildCount();
 
         // save the default stuff so we can automatically refresh
         for (int i = 0; i < defaultAppCount; i++) {
             var jghrfgj = new MksPackage {
-                DisplayName = GetItemText(i),
-                Icon = GetItemIcon(i).ResourcePath
+                DisplayName = GetChildren().Cast<Button>().ToArray()[i].Text,
+                Icon = GetChildren().Cast<Button>().ToArray()[i].Icon.ResourcePath
             };
             defaultApps = defaultApps.Append(jghrfgj).ToArray();
         }
@@ -63,6 +68,8 @@ public class AppLauncher : ItemList
 
             // so this isn't a default app
             default:
+                GD.Print(idx, "; ", defaultAppCount, "; ", idx - defaultAppCount);
+
                 // the custom apps are added right afterwards
                 MksPackage pkg = packages[idx - defaultAppCount];
                 j = pkg.Executable;
@@ -71,6 +78,25 @@ public class AppLauncher : ItemList
 
         var jgd = GD.Load<PackedScene>(j);
         GetNode("/root/dashboard/windows").AddChild(jgd.Instance());
+    }
+
+    public Button AddItem(string name, Texture icon)
+    {
+        var button = new Button {
+            Text = Tr(name),
+            Icon = icon,
+            ExpandIcon = true,
+            RectMinSize = new Vector2(175, 45),
+            MouseFilter = MouseFilterEnum.Pass,
+            ThemeTypeVariation = "OSButton",
+            SizeFlagsHorizontal = (int)SizeFlags.ExpandFill,
+            ClipText = true,
+            Align = Button.TextAlign.Left
+        };
+        AddChild(button);
+        button.Connect("pressed", this, nameof(OnItemSelected), new Godot.Collections.Array { appCount });
+        appCount++;
+        return button;
     }
 }
 

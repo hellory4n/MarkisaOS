@@ -1,12 +1,6 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://os/dashboard/AppLauncher.cs" type="Script" id=1]
-[ext_resource path="res://apps/passionfruit/email/dockicon.png" type="Texture" id=2]
-[ext_resource path="res://apps/passionfruit/marketplace/dockicon.png" type="Texture" id=3]
-[ext_resource path="res://apps/passionfruit/settings/dockicon.png" type="Texture" id=4]
-[ext_resource path="res://apps/passionfruit/websites/dockicon.png" type="Texture" id=5]
-[ext_resource path="res://apps/passionfruit/files/dockicon.png" type="Texture" id=6]
-[ext_resource path="res://apps/passionfruit/connect/dockicon.png" type="Texture" id=7]
 [ext_resource path="res://os/assets/highPeaks/icons/markisa.png" type="Texture" id=8]
 [ext_resource path="res://os/assets/highPeaks/icons/calculator.png" type="Texture" id=9]
 [ext_resource path="res://os/assets/highPeaks/icons/stickyNote.png" type="Texture" id=10]
@@ -16,7 +10,6 @@
 [ext_resource path="res://os/assets/highPeaks/colorIcons/allApps.png" type="Texture" id=14]
 [ext_resource path="res://os/dashboard/Dashboard.cs" type="Script" id=15]
 [ext_resource path="res://os/dashboard/PanelOpener3000.cs" type="Script" id=16]
-[ext_resource path="res://apps/passionfruit/bank/dockicon.png" type="Texture" id=17]
 [ext_resource path="res://os/mkstoolkit/WindowOpener.gd" type="Script" id=18]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/bigMarkisa.png" type="Texture" id=19]
 [ext_resource path="res://os/dashboard/tutorial/nextButton1.gd" type="Script" id=20]
@@ -203,6 +196,7 @@ margin_bottom = 400.0
 rect_min_size = Vector2( 350, 360 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="interface/notifications/ScrollContainer"]
+margin_right = 350.0
 size_flags_horizontal = 3
 alignment = 1
 
@@ -630,18 +624,30 @@ margin_bottom = 480.0
 rect_min_size = Vector2( 400, 300 )
 theme_type_variation = "OSPanel"
 
-[node name="itemList" type="ItemList" parent="interface/appLauncher"]
+[node name="timer" type="Timer" parent="interface/appLauncher"]
+autostart = true
+
+[node name="button5" type="Button" parent="interface/appLauncher"]
+visible = false
+margin_top = 90.0
+margin_right = 400.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 200, 45 )
+mouse_filter = 1
+size_flags_horizontal = 3
+theme_type_variation = "OSButton"
+text = "bdfhbf"
+icon = ExtResource( 19 )
+expand_icon = true
+
+[node name="scrollContainer" type="ScrollContainer" parent="interface/appLauncher"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-items = [ "Websites", ExtResource( 5 ), false, "Downloads", ExtResource( 6 ), false, "Email", ExtResource( 2 ), false, "Connect", ExtResource( 7 ), false, "Marketplace", ExtResource( 3 ), false, "Settings", ExtResource( 4 ), false, "Bank", ExtResource( 17 ), false, "BetaTools", ExtResource( 19 ), false ]
-allow_reselect = true
-max_columns = 20
-same_column_width = true
-icon_mode = 0
-script = ExtResource( 1 )
 
-[node name="timer" type="Timer" parent="interface/appLauncher/itemList"]
-autostart = true
+[node name="hFlowContainer" type="HFlowContainer" parent="interface/appLauncher/scrollContainer"]
+margin_right = 400.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
 
 [node name="panel" type="Panel" parent="interface"]
 anchor_right = 1.0
@@ -1423,8 +1429,7 @@ script = ExtResource( 43 )
 [connection signal="timeout" from="interface/stickyNotes/TextEdit/epicTimer" to="interface/stickyNotes/TextEdit" method="TimerBullshit"]
 [connection signal="text_entered" from="interface/calculator/expression" to="interface/calculator/expression" method="Fuck"]
 [connection signal="pressed" from="interface/calculator/GridContainer/Button3" to="interface/calculator/expression" method="Suffering"]
-[connection signal="item_selected" from="interface/appLauncher/itemList" to="interface/appLauncher/itemList" method="OnItemSelected"]
-[connection signal="timeout" from="interface/appLauncher/itemList/timer" to="interface/appLauncher/itemList" method="LoadStuffLmao"]
+[connection signal="timeout" from="interface/appLauncher/timer" to="interface/appLauncher/scrollContainer/hFlowContainer" method="LoadStuffLmao"]
 [connection signal="timeout" from="interface/panel/stuff/money/timer" to="interface/panel/stuff/money" method="Beans"]
 [connection signal="pressed" from="tutorial/5desktop/start/button" to="." method="TutorialComplete"]
 [connection signal="pressed" from="tutorial/5mobile/start/button" to="." method="TutorialComplete"]
