@@ -67,14 +67,12 @@ size_flags_horizontal = 3
 [node name="richTextLabel" type="RichTextLabel" parent="contents/hSplitContainer/control/scrollContainer/vBoxContainer"]
 margin_right = 599.0
 margin_bottom = 46.0
-focus_mode = 2
 bbcode_enabled = true
 bbcode_text = "[b]Motherfucker - 76/542/52/5 - 2040%\"%\"%:%[/b]
 Good fucking morning"
 text = "Motherfucker - 76/542/52/5 - 2040%\"%\"%:%
 Good fucking morning"
 fit_content_height = true
-selection_enabled = true
 
 [connection signal="item_selected" from="contents/hSplitContainer/itemList" to="contents/hSplitContainer/itemList" method="ItemSelected"]
 [connection signal="timeout" from="contents/hSplitContainer/itemList/timer" to="contents/hSplitContainer/itemList" method="Refresh"]

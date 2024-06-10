@@ -19,6 +19,11 @@ public class OpenFromHistory : Button
         GetParent().GetParent<MksPopup>().HidePopup();
         Disabled = true;
     }
+
+    public override void _Process(float delta)
+    {
+        Disabled = GetNode<ItemList>("../../list").GetSelectedItems().Length == 0;
+    }
 }
 
 }

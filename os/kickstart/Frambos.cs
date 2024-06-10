@@ -180,6 +180,13 @@ public class Frambos : Node
     /// </summary>
     public static string GetRealWebPath(string url)
     {
+        // eliminate garbage, rubbish, trash, ...
+        url = url
+            .Replace("https://", "")
+            .Replace("http://", "")
+            .Replace("www.", "")
+            .Replace(".html", "");
+
         // maybe it happens to already be exactly what we want?
         if (ResourceLoader.Exists(url)) {
             return url;

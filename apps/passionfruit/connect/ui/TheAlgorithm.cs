@@ -304,6 +304,7 @@ public class TheAlgorithm : VBoxContainer
             postUi.GetNode<Button>("m/tools/like").Text = FormatNumber(random.Next(50, 5_000));
             postUi.GetNode("m/tools/reply").QueueFree();
             postUi.GetNode("m/tools/bookmark").QueueFree();
+            postUi.GetNode("m/tools/share").QueueFree();
             postUi.GetNode<Button>("m/tools/views").Text = FormatNumber(random.Next(5_000, 500_000));
 
             list.AddChild(postUi);

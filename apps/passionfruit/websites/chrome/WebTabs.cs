@@ -193,7 +193,7 @@ public class WebTabs : VBoxContainer
             button.Pressed = true;
         }
 
-        emKayEssWindow.WindowTitle = $"{EpicTabs[button].Title} — Websites";
+        emKayEssWindow.WindowTitle = $"{Tr(EpicTabs[button].Title)} — {Tr("Websites")}";
         ActiveBullshit = button;
         addressBar.Text = EpicAwesomeEpicAddresses[button];
     }
