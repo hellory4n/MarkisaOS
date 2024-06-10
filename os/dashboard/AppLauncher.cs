@@ -68,8 +68,6 @@ public class AppLauncher : HFlowContainer
 
             // so this isn't a default app
             default:
-                GD.Print(idx, "; ", defaultAppCount, "; ", idx - defaultAppCount);
-
                 // the custom apps are added right afterwards
                 MksPackage pkg = packages[idx - defaultAppCount];
                 j = pkg.Executable;

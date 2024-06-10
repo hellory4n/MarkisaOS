@@ -18,7 +18,6 @@ public class TheAppsPage : ItemList
 
     public void Refresh()
     {
-        GD.Print("$");
         var config = new Config<AppStuff>();
         packages = config.Data.InstalledApps;
         foreach (var g in config.Data.InstalledApps) {
@@ -33,10 +32,8 @@ public class TheAppsPage : ItemList
 
     public void ImOnHellOnEarthInTermsOfClimate()
     {
-        GD.Print("hehe");
         var config = new Config<AppStuff>();
         var J = config.Data.InstalledApps.ToList();
-        GD.Print(selected.DisplayName, " by ", selected.Author);
         J.RemoveAll(x => x.DisplayName == selected.DisplayName && x.Author == selected.Author);
         config.Data.InstalledApps = J.ToArray();
         config.Save();

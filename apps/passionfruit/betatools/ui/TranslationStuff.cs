@@ -76,8 +76,6 @@ public class TranslationStuff : TabContainer
             ) + 1;
 
             trStr.MessageString = ((TextEdit)godotDotCollectionsDotArray[textEditIndex]).Text;
-            GD.Print(godotDotCollectionsDotArray[textEditIndex].GetType().FullName);
-            GD.Print(i);
 
             // now we can do the .po stuff :)))))))))
             output += $"#:{trStr.Path}\nmsgid \"{trStr.MessageId}\"\nmsgstr \"{trStr.MessageString.Replace("\\n", "\n")}\"\n\n";

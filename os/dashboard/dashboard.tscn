@@ -625,6 +625,7 @@ rect_min_size = Vector2( 400, 300 )
 theme_type_variation = "OSPanel"
 
 [node name="timer" type="Timer" parent="interface/appLauncher"]
+wait_time = 5.0
 autostart = true
 
 [node name="button5" type="Button" parent="interface/appLauncher"]
