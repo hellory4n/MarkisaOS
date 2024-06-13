@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://apps/passionfruit/connect/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/connect/fullicon.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://os/assets/highPeaks/icons/comedyMask.png" type="Texture" id=9]
 [ext_resource path="res://os/assets/highPeaks/icons/movie.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/help.png" type="Texture" id=11]
+[ext_resource path="res://apps/passionfruit/connect/ui/bookmarksAutoRefresh.gd" type="Script" id=12]
 [ext_resource path="res://os/mkstoolkit/SidebarButton.gd" type="Script" id=13]
 [ext_resource path="res://apps/passionfruit/connect/backgrounds/trending.png" type="Texture" id=14]
 [ext_resource path="res://apps/passionfruit/connect/music/quiteABitGoingOn.mp3" type="AudioStream" id=15]
@@ -948,6 +949,10 @@ text = "Bookmarks"
 align = 1
 valign = 1
 
+[node name="timer" type="Timer" parent="contents/categories/bookmarks"]
+autostart = true
+script = ExtResource( 12 )
+
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/bookmarks"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1196,3 +1201,4 @@ script = ExtResource( 30 )
 [connection signal="pressed" from="contents/categories/entertainment/scrollContainer/vBoxContainer/button" to="contents/categories/entertainment/scrollContainer/vBoxContainer" method="LoadMorePosts"]
 [connection signal="pressed" from="contents/categories/creativity/scrollContainer/vBoxContainer/button" to="contents/categories/creativity/scrollContainer/vBoxContainer" method="LoadMorePosts"]
 [connection signal="pressed" from="contents/categories/discussion/scrollContainer/vBoxContainer/button" to="contents/categories/discussion/scrollContainer/vBoxContainer" method="LoadMorePosts"]
+[connection signal="timeout" from="contents/categories/bookmarks/timer" to="contents/categories/bookmarks/scrollContainer/vBoxContainer/button" method="_pressed"]
