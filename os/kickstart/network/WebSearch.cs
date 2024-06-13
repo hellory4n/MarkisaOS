@@ -39,11 +39,13 @@ public class WebSearch : Node
             TranslationServer.SetLocale("pt");
             foreach (var tag in webview.Tags) {
                 webview.Tags = webview.Tags.Append(Tr(tag)).ToArray();
+                webview.Tags = webview.Tags.Append(NoMoreAccents(Tr(tag))).ToArray();
             }
 
             TranslationServer.SetLocale("es");
             foreach (var tag in webview.Tags) {
                 webview.Tags = webview.Tags.Append(Tr(tag)).ToArray();
+                webview.Tags = webview.Tags.Append(NoMoreAccents(Tr(tag))).ToArray();
             }
 
             TranslationServer.SetLocale("id");
@@ -106,6 +108,25 @@ public class WebSearch : Node
         else {
             GD.PushWarning($"Error reading {path}");
         }
+    }
+
+    static string NoMoreAccents(string str)
+    {
+        return str
+            .Replace('á', 'a')
+            .Replace('é', 'e')
+            .Replace('í', 'i')
+            .Replace('ó', 'o')
+            .Replace('ú', 'u')
+            .Replace('ñ', 'n')
+            .Replace('ç', 'c')
+            .Replace('à', 'a')
+            .Replace('â', 'a')
+            .Replace('ê', 'e')
+            .Replace('ô', 'o')
+            .Replace('ã', 'a')
+            .Replace('õ', 'o')
+            .Replace('ü', 'u');
     }
 }
 
