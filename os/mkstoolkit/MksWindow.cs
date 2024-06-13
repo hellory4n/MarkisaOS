@@ -2,6 +2,8 @@ using Godot;
 using markisa.foundation;
 using markisa.internalstuff;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace markisa.mkstoolkit {
 
@@ -267,6 +269,36 @@ public class MksWindow : Control
         
         dockButton?.QueueFree();
         activitiesButton?.QueueFree();
+    }
+
+    public bool IsTitlebarPointVisible(Vector2 point)
+    {
+        if (IsActive) {
+            return true;
+        }
+        
+        // first get all of the rects
+        // amount is here so we can count how many titles overlap, if it's not 0 we return true
+        int amount = 0;
+        var rects = new List<Rect2>();
+        foreach (var window in GetParent().GetChildren().Cast<MksWindow>()) {
+            if (window != this) {
+                rects.Add(window.title.GetGlobalRect().GrowIndividual(0, 0, 0, window.RectSize.y));
+                amount += 1;
+                GD.Print("1 ", rects.Count, "; ", amount);
+            }
+        }
+
+        // now check the rects
+        foreach (Rect2 rect in rects) {
+            GD.Print("does it tho? ", rect.HasPoint(point));
+            // not sure why i did this
+            amount -= rect.HasPoint(point) ? 0 : 1;
+        }
+
+        GD.Print(amount);
+
+        return amount == 0;
     }
 
     void DumbFunctionThatCallsASingleOtherFunctionBecauseGodot3DoesntLetMeUseLambdas() => QueueFree();

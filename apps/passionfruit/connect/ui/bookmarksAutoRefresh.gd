@@ -1,4 +1,4 @@
 extends Timer
 
 func _process(_delta):
-	paused = !get_parent().visible
+	paused = get_parent().visible

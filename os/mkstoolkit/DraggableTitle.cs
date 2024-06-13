@@ -31,7 +31,7 @@ public class DraggableTitle : Node2D
                 Vector2 gpos = GlobalPosition;
 
                 Rect2 rect = new Rect2(GlobalPosition, tsize);
-                if (rect.HasPoint(evpos)) {
+                if (rect.HasPoint(evpos) && window.IsTitlebarPointVisible(mpos)) {
                     window.Raise();
                     status = "clicked";
                     offset = gpos - evpos;
