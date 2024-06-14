@@ -73,6 +73,36 @@ texture = ExtResource( 14 )
 expand = true
 stretch_mode = 7
 
+[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/trending"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/trending/scrollContainer"]
+margin_right = 609.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 29 )
+Background = NodePath("../../textureRect")
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/trending/scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 609.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 0, 48 )
+
+[node name="button" type="Button" parent="contents/categories/trending/scrollContainer/vBoxContainer"]
+margin_left = 179.0
+margin_top = 56.0
+margin_right = 429.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "More"
+script = ExtResource( 19 )
+
 [node name="header" type="Panel" parent="contents/categories/trending"]
 anchor_right = 1.0
 rect_min_size = Vector2( 0, 40 )
@@ -101,36 +131,6 @@ toggle_mode = true
 icon = ExtResource( 32 )
 icon_align = 1
 script = ExtResource( 31 )
-
-[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/trending"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 40.0
-
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/trending/scrollContainer"]
-margin_right = 609.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource( 29 )
-Background = NodePath("../../textureRect")
-
-[node name="hSeparator" type="HSeparator" parent="contents/categories/trending/scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 609.0
-margin_bottom = 8.0
-
-[node name="button" type="Button" parent="contents/categories/trending/scrollContainer/vBoxContainer"]
-margin_left = 179.0
-margin_top = 16.0
-margin_right = 429.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 250, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 19 )
 
 [node name="popup" type="Panel" parent="contents/categories/trending"]
 visible = false
@@ -198,8 +198,40 @@ texture = ExtResource( 21 )
 expand = true
 stretch_mode = 7
 
+[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/helpCenter"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/helpCenter/scrollContainer"]
+margin_right = 609.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 29 )
+Zone = "help center"
+Background = NodePath("../../textureRect")
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/helpCenter/scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 609.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 0, 48 )
+
+[node name="button" type="Button" parent="contents/categories/helpCenter/scrollContainer/vBoxContainer"]
+margin_left = 179.0
+margin_top = 56.0
+margin_right = 429.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "More"
+script = ExtResource( 19 )
+
 [node name="header" type="Panel" parent="contents/categories/helpCenter"]
 anchor_right = 1.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 theme_type_variation = "Toolbar"
 
@@ -226,37 +258,6 @@ toggle_mode = true
 icon = ExtResource( 32 )
 icon_align = 1
 script = ExtResource( 31 )
-
-[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/helpCenter"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 40.0
-
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/helpCenter/scrollContainer"]
-margin_right = 609.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource( 29 )
-Zone = "help center"
-Background = NodePath("../../textureRect")
-
-[node name="hSeparator" type="HSeparator" parent="contents/categories/helpCenter/scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 609.0
-margin_bottom = 8.0
-
-[node name="button" type="Button" parent="contents/categories/helpCenter/scrollContainer/vBoxContainer"]
-margin_left = 179.0
-margin_top = 16.0
-margin_right = 429.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 250, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 19 )
 
 [node name="popup" type="Panel" parent="contents/categories/helpCenter"]
 anchor_left = 0.5
@@ -322,8 +323,40 @@ rect_pivot_offset = Vector2( 304, 197 )
 expand = true
 stretch_mode = 7
 
+[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/comedy"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/comedy/scrollContainer"]
+margin_right = 609.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 29 )
+Zone = "comedy"
+Background = NodePath("../../textureRect")
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/comedy/scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 609.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 48 )
+
+[node name="button" type="Button" parent="contents/categories/comedy/scrollContainer/vBoxContainer"]
+margin_left = 179.0
+margin_top = 16.0
+margin_right = 429.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "More"
+script = ExtResource( 19 )
+
 [node name="header" type="Panel" parent="contents/categories/comedy"]
 anchor_right = 1.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 theme_type_variation = "Toolbar"
 
@@ -350,37 +383,6 @@ toggle_mode = true
 icon = ExtResource( 32 )
 icon_align = 1
 script = ExtResource( 31 )
-
-[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/comedy"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 40.0
-
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/comedy/scrollContainer"]
-margin_right = 609.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource( 29 )
-Zone = "comedy"
-Background = NodePath("../../textureRect")
-
-[node name="hSeparator" type="HSeparator" parent="contents/categories/comedy/scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 609.0
-margin_bottom = 8.0
-
-[node name="button" type="Button" parent="contents/categories/comedy/scrollContainer/vBoxContainer"]
-margin_left = 179.0
-margin_top = 16.0
-margin_right = 429.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 250, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 19 )
 
 [node name="popup" type="Panel" parent="contents/categories/comedy"]
 anchor_left = 0.5
@@ -446,8 +448,40 @@ rect_pivot_offset = Vector2( 304, 197 )
 expand = true
 stretch_mode = 7
 
+[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/technology"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/technology/scrollContainer"]
+margin_right = 609.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 29 )
+Zone = "technology"
+Background = NodePath("../../textureRect")
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/technology/scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 609.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 48 )
+
+[node name="button" type="Button" parent="contents/categories/technology/scrollContainer/vBoxContainer"]
+margin_left = 179.0
+margin_top = 16.0
+margin_right = 429.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "More"
+script = ExtResource( 19 )
+
 [node name="header" type="Panel" parent="contents/categories/technology"]
 anchor_right = 1.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 theme_type_variation = "Toolbar"
 
@@ -474,37 +508,6 @@ toggle_mode = true
 icon = ExtResource( 32 )
 icon_align = 1
 script = ExtResource( 31 )
-
-[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/technology"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 40.0
-
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/technology/scrollContainer"]
-margin_right = 609.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource( 29 )
-Zone = "technology"
-Background = NodePath("../../textureRect")
-
-[node name="hSeparator" type="HSeparator" parent="contents/categories/technology/scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 609.0
-margin_bottom = 8.0
-
-[node name="button" type="Button" parent="contents/categories/technology/scrollContainer/vBoxContainer"]
-margin_left = 179.0
-margin_top = 16.0
-margin_right = 429.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 250, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 19 )
 
 [node name="popup" type="Panel" parent="contents/categories/technology"]
 anchor_left = 0.5
@@ -570,8 +573,40 @@ rect_pivot_offset = Vector2( 304, 197 )
 expand = true
 stretch_mode = 7
 
+[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/entertainment"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/entertainment/scrollContainer"]
+margin_right = 609.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 29 )
+Zone = "entertainment"
+Background = NodePath("../../textureRect")
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/entertainment/scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 609.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 48 )
+
+[node name="button" type="Button" parent="contents/categories/entertainment/scrollContainer/vBoxContainer"]
+margin_left = 179.0
+margin_top = 16.0
+margin_right = 429.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "More"
+script = ExtResource( 19 )
+
 [node name="header" type="Panel" parent="contents/categories/entertainment"]
 anchor_right = 1.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 theme_type_variation = "Toolbar"
 
@@ -598,37 +633,6 @@ toggle_mode = true
 icon = ExtResource( 32 )
 icon_align = 1
 script = ExtResource( 31 )
-
-[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/entertainment"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 40.0
-
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/entertainment/scrollContainer"]
-margin_right = 609.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource( 29 )
-Zone = "entertainment"
-Background = NodePath("../../textureRect")
-
-[node name="hSeparator" type="HSeparator" parent="contents/categories/entertainment/scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 609.0
-margin_bottom = 8.0
-
-[node name="button" type="Button" parent="contents/categories/entertainment/scrollContainer/vBoxContainer"]
-margin_left = 179.0
-margin_top = 16.0
-margin_right = 429.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 250, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 19 )
 
 [node name="popup" type="Panel" parent="contents/categories/entertainment"]
 anchor_left = 0.5
@@ -694,8 +698,40 @@ rect_pivot_offset = Vector2( 304, 197 )
 expand = true
 stretch_mode = 7
 
+[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/creativity"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/creativity/scrollContainer"]
+margin_right = 609.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 29 )
+Zone = "creativity"
+Background = NodePath("../../textureRect")
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/creativity/scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 609.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 48 )
+
+[node name="button" type="Button" parent="contents/categories/creativity/scrollContainer/vBoxContainer"]
+margin_left = 179.0
+margin_top = 16.0
+margin_right = 429.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "More"
+script = ExtResource( 19 )
+
 [node name="header" type="Panel" parent="contents/categories/creativity"]
 anchor_right = 1.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 theme_type_variation = "Toolbar"
 
@@ -722,37 +758,6 @@ toggle_mode = true
 icon = ExtResource( 32 )
 icon_align = 1
 script = ExtResource( 31 )
-
-[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/creativity"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 40.0
-
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/creativity/scrollContainer"]
-margin_right = 609.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource( 29 )
-Zone = "creativity"
-Background = NodePath("../../textureRect")
-
-[node name="hSeparator" type="HSeparator" parent="contents/categories/creativity/scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 609.0
-margin_bottom = 8.0
-
-[node name="button" type="Button" parent="contents/categories/creativity/scrollContainer/vBoxContainer"]
-margin_left = 179.0
-margin_top = 16.0
-margin_right = 429.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 250, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 19 )
 
 [node name="popup" type="Panel" parent="contents/categories/creativity"]
 anchor_left = 0.5
@@ -818,8 +823,40 @@ rect_pivot_offset = Vector2( 304, 197 )
 expand = true
 stretch_mode = 7
 
+[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/discussion"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/discussion/scrollContainer"]
+margin_right = 609.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource( 29 )
+Zone = "discussion"
+Background = NodePath("../../textureRect")
+
+[node name="hSeparator" type="HSeparator" parent="contents/categories/discussion/scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 609.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 48 )
+
+[node name="button" type="Button" parent="contents/categories/discussion/scrollContainer/vBoxContainer"]
+margin_left = 179.0
+margin_top = 16.0
+margin_right = 429.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Secondary"
+text = "More"
+script = ExtResource( 19 )
+
 [node name="header" type="Panel" parent="contents/categories/discussion"]
 anchor_right = 1.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 theme_type_variation = "Toolbar"
 
@@ -846,37 +883,6 @@ toggle_mode = true
 icon = ExtResource( 32 )
 icon_align = 1
 script = ExtResource( 31 )
-
-[node name="scrollContainer" type="ScrollContainer" parent="contents/categories/discussion"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 40.0
-
-[node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/discussion/scrollContainer"]
-margin_right = 609.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 3
-alignment = 1
-script = ExtResource( 29 )
-Zone = "discussion"
-Background = NodePath("../../textureRect")
-
-[node name="hSeparator" type="HSeparator" parent="contents/categories/discussion/scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 609.0
-margin_bottom = 8.0
-
-[node name="button" type="Button" parent="contents/categories/discussion/scrollContainer/vBoxContainer"]
-margin_left = 179.0
-margin_top = 16.0
-margin_right = 429.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 250, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 19 )
 
 [node name="popup" type="Panel" parent="contents/categories/discussion"]
 anchor_left = 0.5
@@ -936,19 +942,6 @@ rect_pivot_offset = Vector2( 304, 197 )
 expand = true
 stretch_mode = 7
 
-[node name="header" type="Panel" parent="contents/categories/bookmarks"]
-anchor_right = 1.0
-rect_min_size = Vector2( 0, 40 )
-theme_type_variation = "Toolbar"
-
-[node name="label" type="Label" parent="contents/categories/bookmarks/header"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme_type_variation = "Bold"
-text = "Bookmarks"
-align = 1
-valign = 1
-
 [node name="timer" type="Timer" parent="contents/categories/bookmarks"]
 autostart = true
 script = ExtResource( 12 )
@@ -956,7 +949,6 @@ script = ExtResource( 12 )
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/bookmarks"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 40.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/categories/bookmarks/scrollContainer"]
 margin_right = 609.0
@@ -972,6 +964,7 @@ Background = NodePath("../../textureRect")
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 609.0
 margin_bottom = 8.0
+rect_min_size = Vector2( 0, 48 )
 
 [node name="button" type="Button" parent="contents/categories/bookmarks/scrollContainer/vBoxContainer"]
 margin_left = 179.0
@@ -983,6 +976,20 @@ size_flags_horizontal = 4
 theme_type_variation = "Secondary"
 text = "Refresh"
 script = ExtResource( 28 )
+
+[node name="header" type="Panel" parent="contents/categories/bookmarks"]
+anchor_right = 1.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+theme_type_variation = "Toolbar"
+
+[node name="label" type="Label" parent="contents/categories/bookmarks/header"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_type_variation = "Bold"
+text = "Bookmarks"
+align = 1
+valign = 1
 
 [node name="popup" type="Panel" parent="contents/categories/bookmarks"]
 anchor_left = 0.5
