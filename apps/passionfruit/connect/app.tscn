@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://apps/passionfruit/connect/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/connect/fullicon.png" type="Texture" id=2]
@@ -11,8 +11,7 @@
 [ext_resource path="res://os/assets/highPeaks/icons/comedyMask.png" type="Texture" id=9]
 [ext_resource path="res://os/assets/highPeaks/icons/movie.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/help.png" type="Texture" id=11]
-[ext_resource path="res://apps/passionfruit/connect/ui/bookmarksAutoRefresh.gd" type="Script" id=12]
-[ext_resource path="res://os/mkstoolkit/SidebarButton.gd" type="Script" id=13]
+[ext_resource path="res://apps/passionfruit/connect/ui/sidebarButtonButConnect.gd" type="Script" id=12]
 [ext_resource path="res://apps/passionfruit/connect/backgrounds/trending.png" type="Texture" id=14]
 [ext_resource path="res://apps/passionfruit/connect/music/quiteABitGoingOn.mp3" type="AudioStream" id=15]
 [ext_resource path="res://apps/passionfruit/connect/music/fairlyCorporateSong.mp3" type="AudioStream" id=16]
@@ -27,7 +26,6 @@
 [ext_resource path="res://os/mkstoolkit/MksPopupHide.gd" type="Script" id=25]
 [ext_resource path="res://apps/passionfruit/connect/ui/skgjduiosjgisrgyord.gd" type="Script" id=26]
 [ext_resource path="res://os/assets/highPeaks/icons/bookmark.png" type="Texture" id=27]
-[ext_resource path="res://apps/passionfruit/connect/ui/refreshBookmarks.gd" type="Script" id=28]
 [ext_resource path="res://apps/passionfruit/connect/ui/TheAlgorithm.cs" type="Script" id=29]
 [ext_resource path="res://apps/passionfruit/connect/ui/SharePost.cs" type="Script" id=30]
 [ext_resource path="res://apps/passionfruit/connect/ui/MuteMusic.cs" type="Script" id=31]
@@ -942,10 +940,6 @@ rect_pivot_offset = Vector2( 304, 197 )
 expand = true
 stretch_mode = 7
 
-[node name="timer" type="Timer" parent="contents/categories/bookmarks"]
-autostart = true
-script = ExtResource( 12 )
-
 [node name="scrollContainer" type="ScrollContainer" parent="contents/categories/bookmarks"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -965,17 +959,6 @@ modulate = Color( 1, 1, 1, 0 )
 margin_right = 609.0
 margin_bottom = 8.0
 rect_min_size = Vector2( 0, 48 )
-
-[node name="button" type="Button" parent="contents/categories/bookmarks/scrollContainer/vBoxContainer"]
-margin_left = 179.0
-margin_top = 16.0
-margin_right = 429.0
-margin_bottom = 58.0
-rect_min_size = Vector2( 250, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Secondary"
-text = "Refresh"
-script = ExtResource( 28 )
 
 [node name="header" type="Panel" parent="contents/categories/bookmarks"]
 anchor_right = 1.0
@@ -1059,8 +1042,9 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Trending"
 icon = ExtResource( 7 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
+thyAlgorithm = NodePath("../../../../categories/trending/scrollContainer/vBoxContainer")
 
 [node name="helpCenter" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 45.0
@@ -1070,8 +1054,9 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Help Center"
 icon = ExtResource( 11 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
+thyAlgorithm = NodePath("../../../../categories/helpCenter/scrollContainer/vBoxContainer")
 
 [node name="comedy" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 90.0
@@ -1081,8 +1066,9 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Comedy"
 icon = ExtResource( 9 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
+thyAlgorithm = NodePath("../../../../categories/comedy/scrollContainer/vBoxContainer")
 
 [node name="technology" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 135.0
@@ -1092,8 +1078,9 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Technology"
 icon = ExtResource( 4 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
+thyAlgorithm = NodePath("../../../../categories/technology/scrollContainer/vBoxContainer")
 
 [node name="entertainment" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 180.0
@@ -1103,8 +1090,9 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Entertainment"
 icon = ExtResource( 10 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
+thyAlgorithm = NodePath("../../../../categories/entertainment/scrollContainer/vBoxContainer")
 
 [node name="creativity" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 225.0
@@ -1114,8 +1102,9 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Creativity"
 icon = ExtResource( 5 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
+thyAlgorithm = NodePath("../../../../categories/creativity/scrollContainer/vBoxContainer")
 
 [node name="discussion" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 270.0
@@ -1125,8 +1114,9 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Discussion"
 icon = ExtResource( 8 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
+thyAlgorithm = NodePath("../../../../categories/discussion/scrollContainer/vBoxContainer")
 
 [node name="bookmarks" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 315.0
@@ -1136,8 +1126,9 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
 text = "Bookmarks"
 icon = ExtResource( 27 )
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
+thyAlgorithm = NodePath("../../../../categories/bookmarks/scrollContainer/vBoxContainer")
 
 [node name="share" type="Panel" parent="contents"]
 visible = false
@@ -1208,4 +1199,3 @@ script = ExtResource( 30 )
 [connection signal="pressed" from="contents/categories/entertainment/scrollContainer/vBoxContainer/button" to="contents/categories/entertainment/scrollContainer/vBoxContainer" method="LoadMorePosts"]
 [connection signal="pressed" from="contents/categories/creativity/scrollContainer/vBoxContainer/button" to="contents/categories/creativity/scrollContainer/vBoxContainer" method="LoadMorePosts"]
 [connection signal="pressed" from="contents/categories/discussion/scrollContainer/vBoxContainer/button" to="contents/categories/discussion/scrollContainer/vBoxContainer" method="LoadMorePosts"]
-[connection signal="timeout" from="contents/categories/bookmarks/timer" to="contents/categories/bookmarks/scrollContainer/vBoxContainer/button" method="_pressed"]

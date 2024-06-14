@@ -1,9 +1,14 @@
 extends Button
 
+onready var getparent = get_parent()
+var getchildren
+
+func _ready():
+	getchildren = getparent.get_children()
+
 func _pressed():
-	var ha = get_parent()
-	for m in ha.get_children():
+	for m in getchildren:
 		if m is PanelContainer:
 			m.queue_free()
 	
-	get_parent().LoadMorePosts()
+	getparent.LoadMorePosts()

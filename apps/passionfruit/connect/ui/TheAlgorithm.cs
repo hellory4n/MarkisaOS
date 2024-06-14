@@ -27,11 +27,22 @@ public class TheAlgorithm : VBoxContainer
         var texture = GD.Load<Texture>(zone.Background);
         GetNode<TextureRect>(Background).Texture = texture;
 
-        LoadMorePosts();
+        if (Zone == "trending") {
+            LoadMorePosts();
+        }
     }
 
     public void LoadMorePosts()
     {
+        // hehe
+        if (Zone == "bookmarks") {
+            foreach (var var_ in GetChildren().Cast<Node>()) {
+                if (var_ is PanelContainer) {
+                    var_.QueueFree();
+                }
+            }
+        }
+
         MksConnectZone zone = GetConnectZone(Zone, 1);
 
         // the more button just reloads everything again, we can handle translation now :)
