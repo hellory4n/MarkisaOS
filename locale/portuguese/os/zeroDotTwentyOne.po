@@ -1,0 +1,14 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: os/dashboard/dashboard.tscn
+msgid "You received Ø1,300 as part of the government's war aid program. Your next payment will be next month."
+msgstr "Você recebeu Ø1.300 como parte do programa de auxílio em tempos de guerra. Seu próximo pagamento será no próximo mês."

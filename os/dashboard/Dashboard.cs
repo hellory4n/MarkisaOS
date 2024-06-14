@@ -36,6 +36,23 @@ public class Dashboard : Control
             GetNode<Control>("tutorial").Visible = true;
             GetNode<Control>(tutorialPath).Visible = true;
         }
+
+        // get free money!!!!!!
+        // we do the check here since if this is a new player, the notification should come after the tutorial
+        if (config2.Data.Installed) {
+            var freemoneyconf = new Config<FreeMoneySchedule>();
+            if (freemoneyconf.Data.TimeToReceive) {
+                var moneyconf = new Config<Banking>();
+                moneyconf.Data.Cash += 1300;
+                freemoneyconf.Data.TimeToReceive = false;
+                freemoneyconf.Data.PreviousMonth++;
+                moneyconf.Save();
+                freemoneyconf.Save();
+                
+                Frambos.Notify("The Government", "You received Ø1,300 as part of the government's war aid program. Your next payment will be next month.");
+                Frambos.Play(SystemSound.Notification);
+            }
+        }
     }
 
     public void TutorialComplete()
@@ -43,6 +60,19 @@ public class Dashboard : Control
         var config = new Config<SystemInfo>();
         config.Data.Installed = true;
         config.Save();
+
+        var freemoneyconf = new Config<FreeMoneySchedule>();
+        if (freemoneyconf.Data.TimeToReceive) {
+            var moneyconf = new Config<Banking>();
+            moneyconf.Data.Cash += 1300;
+            freemoneyconf.Data.TimeToReceive = false;
+            freemoneyconf.Data.PreviousMonth++;
+            moneyconf.Save();
+            freemoneyconf.Save();
+            
+            Frambos.Notify("The Government", "You received Ø1,300 as part of the government's war aid program. Your next payment will be next month.");
+            Frambos.Play(SystemSound.Notification);
+        }
     }
 }
 
