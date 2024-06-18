@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://os/assets/bootloader/onboardingWallpaper.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://os/assets/highPeaks/colorIcons/smallMarkisa.png" type="Texture" id=7]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=8]
 [ext_resource path="res://web/government.org/assets/flagIconBoth.png" type="Texture" id=9]
+[ext_resource path="res://web/thenews.org/assets/thynews.png" type="Texture" id=10]
 
 [node name="newtab" type="Control"]
 anchor_right = 1.0
@@ -97,10 +98,10 @@ margin_bottom = 376.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "The latest news"
-icon = ExtResource( 6 )
+icon = ExtResource( 10 )
 expand_icon = true
 script = ExtResource( 8 )
-website = "news.passionfruit.com"
+website = "thenews.org"
 
 [node name="tutorial" type="TextureRect" parent="."]
 anchor_left = 1.0
