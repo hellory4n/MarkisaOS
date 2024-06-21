@@ -1,81 +1,12 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/thenews.org/assets/top.png" type="Texture" id=2]
 [ext_resource path="res://web/thenews.org/assets/thynews.png" type="Texture" id=3]
 [ext_resource path="res://web/thenews.org/assets/bakingNews.mp3" type="AudioStream" id=4]
-[ext_resource path="res://web/thenews.org/assets/IBMPlexSans-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://web/thenews.org/assets/j.tres" type="Theme" id=5]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=6]
-[ext_resource path="res://web/thenews.org/assets/IBMPlexSans-BoldItalic.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://web/thenews.org/assets/buttonFocus.png" type="Texture" id=10]
-[ext_resource path="res://web/thenews.org/assets/buttonPressed.png" type="Texture" id=11]
-[ext_resource path="res://web/thenews.org/assets/buttonNormal.png" type="Texture" id=12]
-[ext_resource path="res://web/thenews.org/assets/buttonHover.png" type="Texture" id=13]
 [ext_resource path="res://web/thenews.org/assets/mikreliumBoom.png" type="Texture" id=14]
-
-[sub_resource type="StyleBoxTexture" id=6]
-content_margin_left = 8.0
-content_margin_right = 8.0
-content_margin_top = 8.0
-content_margin_bottom = 8.0
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 45, 45 )
-margin_left = 22.0
-margin_right = 22.0
-margin_top = 22.0
-margin_bottom = 22.0
-
-[sub_resource type="StyleBoxTexture" id=7]
-content_margin_left = 8.0
-content_margin_right = 8.0
-content_margin_top = 8.0
-content_margin_bottom = 8.0
-texture = ExtResource( 13 )
-region_rect = Rect2( 0, 0, 45, 45 )
-margin_left = 22.0
-margin_right = 22.0
-margin_top = 22.0
-margin_bottom = 22.0
-
-[sub_resource type="StyleBoxTexture" id=8]
-content_margin_left = 8.0
-content_margin_right = 8.0
-content_margin_top = 8.0
-content_margin_bottom = 8.0
-texture = ExtResource( 12 )
-region_rect = Rect2( 0, 0, 45, 45 )
-margin_left = 22.0
-margin_right = 22.0
-margin_top = 22.0
-margin_bottom = 22.0
-
-[sub_resource type="StyleBoxTexture" id=9]
-content_margin_left = 8.0
-content_margin_right = 8.0
-content_margin_top = 8.0
-content_margin_bottom = 8.0
-texture = ExtResource( 11 )
-region_rect = Rect2( 0, 0, 45, 45 )
-margin_left = 22.0
-margin_right = 22.0
-margin_top = 22.0
-margin_bottom = 22.0
-
-[sub_resource type="DynamicFont" id=1]
-size = 24
-font_data = ExtResource( 7 )
-
-[sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 5 )
-
-[sub_resource type="Theme" id=3]
-default_font = SubResource( 2 )
-Button/styles/focus = SubResource( 6 )
-Button/styles/hover = SubResource( 7 )
-Button/styles/normal = SubResource( 8 )
-Button/styles/pressed = SubResource( 9 )
-Header/base_type = "Label"
-Header/fonts/font = SubResource( 1 )
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 2 )
@@ -94,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -214.0
 size_flags_horizontal = 3
-theme = SubResource( 3 )
+theme = ExtResource( 5 )
 script = ExtResource( 1 )
 Title = "Mikrelium bombed by Tokemire"
 Description = "In a shocking escalation of the ongoing conflict, this morning (2071-01-01) our enemies of Tokemire sent a bomb towards Mikrelium, the capital and biggest city of Skala. The bombing affected Hexagon warehouses and some bullet train lines. 79 people were left injured."

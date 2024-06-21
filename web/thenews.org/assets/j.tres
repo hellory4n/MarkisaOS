@@ -1,0 +1,86 @@
+[gd_resource type="Theme" load_steps=15 format=2]
+
+[ext_resource path="res://web/thenews.org/assets/IBMPlexSans-BoldItalic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://web/thenews.org/assets/IBMPlexSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://web/thenews.org/assets/buttonFocus.png" type="Texture" id=3]
+[ext_resource path="res://web/thenews.org/assets/buttonPressed.png" type="Texture" id=4]
+[ext_resource path="res://web/thenews.org/assets/buttonNormal.png" type="Texture" id=5]
+[ext_resource path="res://web/thenews.org/assets/buttonHover.png" type="Texture" id=6]
+[ext_resource path="res://web/thenews.org/assets/buttonDisabled.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxTexture" id=10]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id=6]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id=7]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id=8]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id=9]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[resource]
+default_font = SubResource( 2 )
+Button/styles/disabled = SubResource( 10 )
+Button/styles/focus = SubResource( 6 )
+Button/styles/hover = SubResource( 7 )
+Button/styles/normal = SubResource( 8 )
+Button/styles/pressed = SubResource( 9 )
+Header/base_type = "Label"
+Header/fonts/font = SubResource( 1 )
