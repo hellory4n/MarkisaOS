@@ -1,0 +1,326 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/thenews.org/assets/top.png" type="Texture" id=2]
+[ext_resource path="res://web/thenews.org/assets/thynews.png" type="Texture" id=3]
+[ext_resource path="res://web/thenews.org/assets/bakingNews.mp3" type="AudioStream" id=4]
+[ext_resource path="res://web/thenews.org/assets/IBMPlexSans-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=6]
+[ext_resource path="res://web/thenews.org/assets/IBMPlexSans-BoldItalic.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://os/assets/bootloader/icon.png" type="Texture" id=8]
+[ext_resource path="res://web/thenews.org/assets/buttonFocus.png" type="Texture" id=10]
+[ext_resource path="res://web/thenews.org/assets/buttonPressed.png" type="Texture" id=11]
+[ext_resource path="res://web/thenews.org/assets/buttonNormal.png" type="Texture" id=12]
+[ext_resource path="res://web/thenews.org/assets/buttonHover.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxTexture" id=6]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id=7]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id=8]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id=9]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 45, 45 )
+margin_left = 22.0
+margin_right = 22.0
+margin_top = 22.0
+margin_bottom = 22.0
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+Button/styles/focus = SubResource( 6 )
+Button/styles/hover = SubResource( 7 )
+Button/styles/normal = SubResource( 8 )
+Button/styles/pressed = SubResource( 9 )
+Header/base_type = "Label"
+Header/fonts/font = SubResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 40, 40 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+shadow_size = 7
+shadow_offset = Vector2( 0, 3 )
+
+[node name="thenews" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+theme = SubResource( 3 )
+script = ExtResource( 1 )
+Title = "The News"
+Description = "Lelclub's finest news source."
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "markisa", "markisaos", "vision", "developers", "markisaos_vision" )
+Icon = ExtResource( 3 )
+Music = ExtResource( 4 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.12549, 0.0196078, 0.0196078, 1 )
+
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+rect_clip_content = false
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_left = 16.0
+margin_right = 616.0
+margin_bottom = 1085.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 6
+
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 600.0
+margin_bottom = 8.0
+
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 150.0
+margin_top = 16.0
+margin_right = 450.0
+margin_bottom = 61.0
+rect_min_size = Vector2( 300, 45 )
+size_flags_horizontal = 4
+text = "More amazing news"
+script = ExtResource( 6 )
+website = "thenews.org"
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 69.0
+margin_right = 600.0
+margin_bottom = 109.0
+theme_type_variation = "Header"
+text = "MarkisaOS Vision now available for testing"
+align = 1
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_left = 125.0
+margin_top = 117.0
+margin_right = 475.0
+margin_bottom = 317.0
+rect_min_size = Vector2( 350, 200 )
+size_flags_horizontal = 4
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 7
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 325.0
+margin_right = 600.0
+margin_bottom = 405.0
+text = "Our majestic people at Passionfruit are hard at work on the next generation of MarkisaOS, known as MarkisaOS Vision, which is expected to release around March."
+align = 1
+autowrap = true
+
+[node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 413.0
+margin_right = 600.0
+margin_bottom = 421.0
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 429.0
+margin_right = 600.0
+margin_bottom = 459.0
+text = "We interviewed Sean McIncompet, a programmer at Passionfruit."
+align = 1
+autowrap = true
+
+[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 467.0
+margin_right = 600.0
+margin_bottom = 475.0
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 483.0
+margin_right = 600.0
+margin_bottom = 513.0
+text = "Interviewer: So, what is gonna be introduced in MarkisaOS Vision?"
+align = 1
+autowrap = true
+
+[node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 521.0
+margin_right = 600.0
+margin_bottom = 529.0
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 537.0
+margin_right = 600.0
+margin_bottom = 592.0
+text = "Sean McIncompet: Y'know, this new version will truly make MarkisaOS even better. Users might notice updates in the interface."
+align = 1
+autowrap = true
+
+[node name="hSeparator5" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 600.0
+margin_right = 600.0
+margin_bottom = 608.0
+
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 616.0
+margin_right = 600.0
+margin_bottom = 646.0
+text = "Interviewer: Mhm."
+align = 1
+autowrap = true
+
+[node name="hSeparator6" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 654.0
+margin_right = 600.0
+margin_bottom = 662.0
+
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 670.0
+margin_right = 600.0
+margin_bottom = 725.0
+text = "Sean McIncompet: The focus of this update is updating, so not only we updated the user interface, but also added new features that are very convenient."
+align = 1
+autowrap = true
+
+[node name="hSeparator7" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 733.0
+margin_right = 600.0
+margin_bottom = 741.0
+
+[node name="label8" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 749.0
+margin_right = 600.0
+margin_bottom = 779.0
+text = "Interviewer: Yeah."
+align = 1
+autowrap = true
+
+[node name="hSeparator8" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 787.0
+margin_right = 600.0
+margin_bottom = 795.0
+
+[node name="label9" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 803.0
+margin_right = 600.0
+margin_bottom = 858.0
+text = "Sean McIncompet: This update also features improvements in usability and efficiency, as well as changing the development environment."
+align = 1
+autowrap = true
+
+[node name="hSeparator9" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 866.0
+margin_right = 600.0
+margin_bottom = 874.0
+
+[node name="label10" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 882.0
+margin_right = 600.0
+margin_bottom = 912.0
+text = "Interviewer: Very informative."
+align = 1
+autowrap = true
+
+[node name="hSeparator10" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 920.0
+margin_right = 600.0
+margin_bottom = 928.0
+
+[node name="label11" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 936.0
+margin_right = 600.0
+margin_bottom = 1016.0
+text = "You can test MarkisaOS Vision today, as long as you have a developer license and a Markistation 2071 Pro with the latest updates installed, otherwise it's probably gonna take more than a day."
+align = 1
+autowrap = true
+
+[node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 150.0
+margin_top = 1024.0
+margin_right = 450.0
+margin_bottom = 1069.0
+rect_min_size = Vector2( 300, 45 )
+size_flags_horizontal = 4
+text = "Get MarkisaOS Vision"
+script = ExtResource( 6 )
+website = "developers.passionfruit.com"
+
+[node name="hSeparator11" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 1077.0
+margin_right = 600.0
+margin_bottom = 1085.0
+
+[node name="uh" type="Panel" parent="."]
+anchor_right = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="uh2" type="Panel" parent="uh"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="label" type="Label" parent="uh"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "The News"
+align = 1
+valign = 1
