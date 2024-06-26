@@ -430,6 +430,7 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
+website = "thenews.org/2071/1/nesuprantuDesertBombing.tscn"
 
 [node name="vBoxContainer5" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
 margin_left = 208.0
@@ -529,7 +530,7 @@ margin_top = 132.0
 margin_right = 200.0
 margin_bottom = 237.0
 rect_min_size = Vector2( 0, 105 )
-text = "Our spies managed to investigate Nesuprantu culture since why not"
+text = "Our spies managed to steal top secret military plans from Nesuprantu"
 autowrap = true
 
 [node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer6/vBoxContainer4"]

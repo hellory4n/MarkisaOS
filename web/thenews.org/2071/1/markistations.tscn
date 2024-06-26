@@ -6,7 +6,7 @@
 [ext_resource path="res://web/thenews.org/assets/bakingNews.mp3" type="AudioStream" id=4]
 [ext_resource path="res://web/thenews.org/assets/j.tres" type="Theme" id=5]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=6]
-[ext_resource path="res://os/assets/bootloader/icon.png" type="Texture" id=8]
+[ext_resource path="res://web/thenews.org/assets/newMarkistations.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 2 )
@@ -27,9 +27,9 @@ margin_right = -214.0
 size_flags_horizontal = 3
 theme = ExtResource( 5 )
 script = ExtResource( 1 )
-Title = "Man attempted to kill president"
-Description = "Today, the president Simon Tranderson narrowly escaped an assassination attempt, marking the 23rd time such incident in the past 12 months."
-Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "president_assassination", "president" )
+Title = "Our review of the new 2071 Markistations, are they good?"
+Description = "Click here to find out!!!!!"
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "markisa", "passionfruit", "markistation" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 4 )
 
@@ -47,7 +47,7 @@ rect_clip_content = false
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_left = 16.0
 margin_right = 616.0
-margin_bottom = 579.0
+margin_bottom = 514.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 6
 
@@ -70,64 +70,64 @@ website = "thenews.org"
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_top = 69.0
 margin_right = 600.0
-margin_bottom = 109.0
+margin_bottom = 144.0
 theme_type_variation = "Header"
-text = "Man attempted to kill president"
+text = "Our review of the new 2071 Markistations, are they good?"
 align = 1
 autowrap = true
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
 margin_left = 125.0
-margin_top = 117.0
+margin_top = 152.0
 margin_right = 475.0
-margin_bottom = 317.0
+margin_bottom = 352.0
 rect_min_size = Vector2( 350, 200 )
 size_flags_horizontal = 4
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 expand = true
 stretch_mode = 7
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 325.0
+margin_top = 360.0
 margin_right = 600.0
-margin_bottom = 380.0
-text = "Today, the president Simon Tranderson narrowly escaped an assassination attempt, marking the 23rd time such incident in the past 12 months."
+margin_bottom = 390.0
+text = "Yes."
 align = 1
 autowrap = true
 
 [node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 388.0
+margin_top = 398.0
 margin_right = 600.0
-margin_bottom = 396.0
+margin_bottom = 406.0
 
 [node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 404.0
+margin_top = 414.0
 margin_right = 600.0
-margin_bottom = 509.0
-text = "The president was making a speech when someone appeared in the crowd, and proceeded to scream \"Muahahaha, it's over Simon, I'm the new president and stuff\", before running towards the president. Fortunately, the president is still young enough to dodge knifes."
+margin_bottom = 444.0
+text = "They're pretty good."
 align = 1
 autowrap = true
 
 [node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 517.0
+margin_top = 452.0
 margin_right = 600.0
-margin_bottom = 525.0
+margin_bottom = 460.0
 
 [node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 533.0
+margin_top = 468.0
 margin_right = 600.0
-margin_bottom = 563.0
-text = "Not sure what else to say."
+margin_bottom = 498.0
+text = "Tyler from across the street loves it."
 align = 1
 autowrap = true
 
-[node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+[node name="hSeparator10" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 571.0
+margin_top = 506.0
 margin_right = 600.0
-margin_bottom = 579.0
+margin_bottom = 514.0
 
 [node name="uh" type="Panel" parent="."]
 anchor_right = 1.0

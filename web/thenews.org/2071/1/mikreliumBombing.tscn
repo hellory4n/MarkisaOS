@@ -29,7 +29,7 @@ theme = ExtResource( 5 )
 script = ExtResource( 1 )
 Title = "Mikrelium bombed by Tokemire"
 Description = "In a shocking escalation of the ongoing conflict, this morning (2071-01-01) our enemies of Tokemire sent a bomb towards Mikrelium, the capital and biggest city of Skala. The bombing affected Hexagon warehouses and some bullet train lines. 79 people were left injured."
-Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "mikrelium_bombing", "mikrelium", "bombing", "tokemire" )
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "mikrelium_bombing", "mikrelium", "bombing", "tokemire", "war" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 4 )
 

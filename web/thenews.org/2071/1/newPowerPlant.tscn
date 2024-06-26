@@ -6,7 +6,7 @@
 [ext_resource path="res://web/thenews.org/assets/bakingNews.mp3" type="AudioStream" id=4]
 [ext_resource path="res://web/thenews.org/assets/j.tres" type="Theme" id=5]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=6]
-[ext_resource path="res://os/assets/bootloader/icon.png" type="Texture" id=8]
+[ext_resource path="res://web/thenews.org/assets/newPowerPlant.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 2 )
@@ -27,9 +27,9 @@ margin_right = -214.0
 size_flags_horizontal = 3
 theme = ExtResource( 5 )
 script = ExtResource( 1 )
-Title = "Man attempted to kill president"
-Description = "Today, the president Simon Tranderson narrowly escaped an assassination attempt, marking the 23rd time such incident in the past 12 months."
-Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "president_assassination", "president" )
+Title = "Kaiatu planning to build new power plant between Turtingas and Benediction"
+Description = "The new oil-based power plant will best utilize Lelclub's most valuable resources, as well as minimize blackouts in the east coast."
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "kaiatu", "oil", "power", "power_plant" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 4 )
 
@@ -47,7 +47,7 @@ rect_clip_content = false
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_left = 16.0
 margin_right = 616.0
-margin_bottom = 579.0
+margin_bottom = 510.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 6
 
@@ -70,64 +70,50 @@ website = "thenews.org"
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_top = 69.0
 margin_right = 600.0
-margin_bottom = 109.0
+margin_bottom = 144.0
 theme_type_variation = "Header"
-text = "Man attempted to kill president"
+text = "Kaiatu planning to build new power plant between Turtingas and Benediction"
 align = 1
 autowrap = true
 
 [node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
 margin_left = 125.0
-margin_top = 117.0
+margin_top = 152.0
 margin_right = 475.0
-margin_bottom = 317.0
+margin_bottom = 352.0
 rect_min_size = Vector2( 350, 200 )
 size_flags_horizontal = 4
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 expand = true
 stretch_mode = 7
 
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 325.0
+margin_top = 360.0
 margin_right = 600.0
-margin_bottom = 380.0
-text = "Today, the president Simon Tranderson narrowly escaped an assassination attempt, marking the 23rd time such incident in the past 12 months."
+margin_bottom = 415.0
+text = "The new oil-based power plant will best utilize Lelclub's most valuable resources, as well as minimize blackouts in the east coast."
 align = 1
 autowrap = true
 
 [node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 388.0
+margin_top = 423.0
 margin_right = 600.0
-margin_bottom = 396.0
-
-[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 404.0
-margin_right = 600.0
-margin_bottom = 509.0
-text = "The president was making a speech when someone appeared in the crowd, and proceeded to scream \"Muahahaha, it's over Simon, I'm the new president and stuff\", before running towards the president. Fortunately, the president is still young enough to dodge knifes."
-align = 1
-autowrap = true
-
-[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 517.0
-margin_right = 600.0
-margin_bottom = 525.0
+margin_bottom = 431.0
 
 [node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 533.0
+margin_top = 439.0
 margin_right = 600.0
-margin_bottom = 563.0
-text = "Not sure what else to say."
+margin_bottom = 494.0
+text = "The proposed plant, named the \"Hyperlarge Electricity Complex IV Part II\", will provide quite a bit of energy."
 align = 1
 autowrap = true
 
-[node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+[node name="hSeparator10" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 571.0
+margin_top = 502.0
 margin_right = 600.0
-margin_bottom = 579.0
+margin_bottom = 510.0
 
 [node name="uh" type="Panel" parent="."]
 anchor_right = 1.0
