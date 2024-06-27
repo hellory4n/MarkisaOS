@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/thenews.org/assets/top.png" type="Texture" id=2]
+[ext_resource path="res://web/thenews.org/assets/thynews.png" type="Texture" id=3]
+[ext_resource path="res://web/thenews.org/assets/bakingNews.mp3" type="AudioStream" id=4]
+[ext_resource path="res://web/thenews.org/assets/j.tres" type="Theme" id=5]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=6]
+[ext_resource path="res://web/thenews.org/assets/whoopsie.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 40, 40 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+shadow_size = 7
+shadow_offset = Vector2( 0, 3 )
+
+[node name="thenews" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+theme = ExtResource( 5 )
+script = ExtResource( 1 )
+Title = "Do we need a reform of the current government system?"
+Description = "Not a whole lot to talk about, I just really wanted to make the entire nation know about this"
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "onneto" )
+Icon = ExtResource( 3 )
+Music = ExtResource( 4 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.12549, 0.0196078, 0.0196078, 1 )
+
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+rect_clip_content = false
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_left = 19.0
+margin_right = 619.0
+margin_bottom = 431.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 6
+
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 600.0
+margin_bottom = 8.0
+
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 150.0
+margin_top = 16.0
+margin_right = 450.0
+margin_bottom = 61.0
+rect_min_size = Vector2( 300, 45 )
+size_flags_horizontal = 4
+text = "More amazing news"
+script = ExtResource( 6 )
+website = "thenews.org"
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 69.0
+margin_right = 600.0
+margin_bottom = 144.0
+theme_type_variation = "Header"
+text = "Local man really wanted to escape Lelclub, ends up in Onneto"
+align = 1
+autowrap = true
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_left = 125.0
+margin_top = 152.0
+margin_right = 475.0
+margin_bottom = 352.0
+rect_min_size = Vector2( 350, 200 )
+size_flags_horizontal = 4
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 7
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 360.0
+margin_right = 600.0
+margin_bottom = 415.0
+text = "Not a whole lot to talk about, I just really wanted to make the entire nation know about this"
+align = 1
+autowrap = true
+
+[node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 423.0
+margin_right = 600.0
+margin_bottom = 431.0
+
+[node name="uh" type="Panel" parent="."]
+anchor_right = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="uh2" type="Panel" parent="uh"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="label" type="Label" parent="uh"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "The News"
+align = 1
+valign = 1

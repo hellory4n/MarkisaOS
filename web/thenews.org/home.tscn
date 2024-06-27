@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/thenews.org/assets/top.png" type="Texture" id=2]
@@ -9,13 +9,14 @@
 [ext_resource path="res://web/government.org/assets/flag.png" type="Texture" id=7]
 [ext_resource path="res://web/government.org/assets/states.png" type="Texture" id=8]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=9]
+[ext_resource path="res://web/thenews.org/assets/rossTibeeth.png" type="Texture" id=10]
+[ext_resource path="res://web/thenews.org/assets/whoopsie.png" type="Texture" id=11]
 [ext_resource path="res://web/thenews.org/assets/mikreliumBoom.png" type="Texture" id=14]
 [ext_resource path="res://web/thenews.org/assets/bombTokemire.png" type="Texture" id=15]
 [ext_resource path="res://web/thenews.org/assets/newPowerPlant.png" type="Texture" id=16]
 [ext_resource path="res://web/thenews.org/assets/nesuprantuFlag.png" type="Texture" id=17]
 [ext_resource path="res://web/thenews.org/assets/ripNesuprantuDesert.png" type="Texture" id=18]
 [ext_resource path="res://web/thenews.org/assets/newMarkistations.png" type="Texture" id=19]
-[ext_resource path="res://web/rosstibeeth.com/assets/rossHimself.png" type="Texture" id=20]
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 2 )
@@ -587,15 +588,16 @@ custom_constants/separation = 0
 margin_right = 200.0
 margin_bottom = 132.0
 rect_min_size = Vector2( 200, 132 )
-texture = ExtResource( 6 )
+texture = ExtResource( 11 )
 expand = true
+stretch_mode = 7
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer6/vBoxContainer6"]
 margin_top = 132.0
 margin_right = 200.0
 margin_bottom = 237.0
 rect_min_size = Vector2( 0, 105 )
-text = "News."
+text = "Local man really wanted to escape Lelclub, ends up in Onneto"
 autowrap = true
 
 [node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer6/vBoxContainer6"]
@@ -606,6 +608,7 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
+website = "thenews.org/2071/1/tragic.tscn"
 
 [node name="f3" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_left = 141.0
@@ -636,7 +639,7 @@ custom_constants/separation = 0
 margin_right = 200.0
 margin_bottom = 132.0
 rect_min_size = Vector2( 200, 132 )
-texture = ExtResource( 20 )
+texture = ExtResource( 10 )
 expand = true
 stretch_mode = 7
 
