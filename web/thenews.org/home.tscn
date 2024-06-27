@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/thenews.org/assets/top.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://web/thenews.org/assets/bakingNews.mp3" type="AudioStream" id=4]
 [ext_resource path="res://web/thenews.org/assets/j.tres" type="Theme" id=5]
 [ext_resource path="res://os/assets/bootloader/icon.png" type="Texture" id=6]
+[ext_resource path="res://web/government.org/assets/flag.png" type="Texture" id=7]
 [ext_resource path="res://web/government.org/assets/states.png" type="Texture" id=8]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=9]
 [ext_resource path="res://web/thenews.org/assets/mikreliumBoom.png" type="Texture" id=14]
@@ -57,7 +58,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 2547.0
+margin_bottom = 2234.0
 size_flags_horizontal = 3
 
 [node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
@@ -461,6 +462,7 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
+website = "thenews.org/2071/1/newPowerPlant.tscn"
 
 [node name="vBoxContainer6" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer3"]
 margin_left = 416.0
@@ -491,6 +493,7 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
+website = "thenews.org/2071/1/markistations.tscn"
 
 [node name="f5" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_left = 141.0
@@ -541,6 +544,7 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
+website = "thenews.org/2071/1/nesuprantuMilitary.tscn"
 
 [node name="vBoxContainer5" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer6"]
 margin_left = 208.0
@@ -571,6 +575,7 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
+website = "thenews.org/2071/1/tokemireBombingPlan.tscn"
 
 [node name="vBoxContainer6" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer6"]
 margin_left = 416.0
@@ -590,7 +595,7 @@ margin_top = 132.0
 margin_right = 200.0
 margin_bottom = 237.0
 rect_min_size = Vector2( 0, 105 )
-text = "Look at how cool Eszaki is!!! We're also gonna make a really big deal with them"
+text = "News."
 autowrap = true
 
 [node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer6/vBoxContainer6"]
@@ -650,6 +655,7 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
+website = "thenews.org/2071/1/insanityInterview.tscn"
 
 [node name="vBoxContainer5" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer4"]
 margin_left = 208.0
@@ -679,6 +685,7 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
+website = "thenews.org/2071/1/turtingasRobotAttack.tscn"
 
 [node name="vBoxContainer6" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer4"]
 margin_left = 416.0
@@ -690,7 +697,7 @@ custom_constants/separation = 0
 margin_right = 200.0
 margin_bottom = 132.0
 rect_min_size = Vector2( 200, 132 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 expand = true
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer4/vBoxContainer6"]
@@ -698,7 +705,7 @@ margin_top = 132.0
 margin_right = 200.0
 margin_bottom = 212.0
 rect_min_size = Vector2( 0, 80 )
-text = "A Nesuprantu spy really insisted on us interviewing him"
+text = "Do we need a reform of the current government system?"
 autowrap = true
 
 [node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer4/vBoxContainer6"]
@@ -709,119 +716,13 @@ rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "Secondary"
 text = "More"
 script = ExtResource( 9 )
-
-[node name="f4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_left = 141.0
-margin_top = 2226.0
-margin_right = 491.0
-margin_bottom = 2266.0
-rect_min_size = Vector2( 350, 0 )
-size_flags_horizontal = 4
-theme_type_variation = "Header"
-text = "Discussions"
-align = 1
-
-[node name="hBoxContainer5" type="HBoxContainer" parent="scrollContainer/vBoxContainer"]
-margin_left = 8.0
-margin_top = 2274.0
-margin_right = 624.0
-margin_bottom = 2531.0
-rect_min_size = Vector2( 616, 0 )
-size_flags_horizontal = 4
-alignment = 1
-
-[node name="vBoxContainer4" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer5"]
-margin_right = 200.0
-margin_bottom = 257.0
-custom_constants/separation = 0
-
-[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer4"]
-margin_right = 200.0
-margin_bottom = 132.0
-rect_min_size = Vector2( 200, 132 )
-texture = ExtResource( 6 )
-expand = true
-
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer4"]
-margin_top = 132.0
-margin_right = 200.0
-margin_bottom = 212.0
-text = "Are lelclubian children learning enough about whales?"
-autowrap = true
-
-[node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer4"]
-margin_top = 212.0
-margin_right = 200.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 0, 45 )
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 9 )
-
-[node name="vBoxContainer5" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer5"]
-margin_left = 208.0
-margin_right = 408.0
-margin_bottom = 257.0
-custom_constants/separation = 0
-
-[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer5"]
-margin_right = 200.0
-margin_bottom = 132.0
-rect_min_size = Vector2( 200, 132 )
-texture = ExtResource( 6 )
-expand = true
-
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer5"]
-margin_top = 132.0
-margin_right = 200.0
-margin_bottom = 212.0
-text = "Should the government improve our political system?"
-autowrap = true
-
-[node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer5"]
-margin_top = 212.0
-margin_right = 200.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 0, 45 )
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 9 )
-
-[node name="vBoxContainer6" type="VBoxContainer" parent="scrollContainer/vBoxContainer/hBoxContainer5"]
-margin_left = 416.0
-margin_right = 616.0
-margin_bottom = 257.0
-custom_constants/separation = 0
-
-[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer6"]
-margin_right = 200.0
-margin_bottom = 132.0
-rect_min_size = Vector2( 200, 132 )
-texture = ExtResource( 6 )
-expand = true
-
-[node name="label" type="Label" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer6"]
-margin_top = 132.0
-margin_right = 200.0
-margin_bottom = 212.0
-rect_min_size = Vector2( 0, 80 )
-text = "Do we need more regulation of dreams?"
-autowrap = true
-
-[node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer/hBoxContainer5/vBoxContainer6"]
-margin_top = 212.0
-margin_right = 200.0
-margin_bottom = 257.0
-rect_min_size = Vector2( 0, 45 )
-theme_type_variation = "Secondary"
-text = "More"
-script = ExtResource( 9 )
+website = "thenews.org/2071/1/governmentReform.tscn"
 
 [node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 2539.0
+margin_top = 2226.0
 margin_right = 633.0
-margin_bottom = 2547.0
+margin_bottom = 2234.0
 
 [node name="uh" type="Panel" parent="."]
 anchor_right = 1.0

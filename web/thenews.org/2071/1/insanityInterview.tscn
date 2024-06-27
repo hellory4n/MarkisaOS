@@ -1,0 +1,280 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/thenews.org/assets/top.png" type="Texture" id=2]
+[ext_resource path="res://web/thenews.org/assets/thynews.png" type="Texture" id=3]
+[ext_resource path="res://web/thenews.org/assets/bakingNews.mp3" type="AudioStream" id=4]
+[ext_resource path="res://web/thenews.org/assets/j.tres" type="Theme" id=5]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=6]
+[ext_resource path="res://web/rosstibeeth.com/assets/rossHimself.png" type="Texture" id=7]
+[ext_resource path="res://social/connectmedia/myLifeBeLike.png" type="Texture" id=8]
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 40, 40 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+shadow_size = 7
+shadow_offset = Vector2( 0, 3 )
+
+[node name="thenews" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+theme = ExtResource( 5 )
+script = ExtResource( 1 )
+Title = "Interview with someone with serious mental health issues"
+Description = "Ross Tibeeth is a musician famous for the hit album James VS The Stars and pioneering Wood music. We asked a local man what did he think of Ross Tibeeth, and he said \"get out of my house\""
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "ross", "tibeeth", "ross_tibeeth" )
+Icon = ExtResource( 3 )
+Music = ExtResource( 4 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.12549, 0.0196078, 0.0196078, 1 )
+
+[node name="scrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+rect_clip_content = false
+
+[node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
+margin_left = 16.0
+margin_right = 616.0
+margin_bottom = 1456.0
+rect_min_size = Vector2( 600, 0 )
+size_flags_horizontal = 6
+
+[node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 600.0
+margin_bottom = 8.0
+
+[node name="MksHyperlink" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 150.0
+margin_top = 16.0
+margin_right = 450.0
+margin_bottom = 61.0
+rect_min_size = Vector2( 300, 45 )
+size_flags_horizontal = 4
+text = "More amazing news"
+script = ExtResource( 6 )
+website = "thenews.org"
+
+[node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 69.0
+margin_right = 600.0
+margin_bottom = 144.0
+theme_type_variation = "Header"
+text = "Interview with someone with serious mental health issues"
+align = 1
+autowrap = true
+
+[node name="textureRect" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_left = 125.0
+margin_top = 152.0
+margin_right = 475.0
+margin_bottom = 352.0
+rect_min_size = Vector2( 350, 200 )
+size_flags_horizontal = 4
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 7
+
+[node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 360.0
+margin_right = 600.0
+margin_bottom = 440.0
+text = "Ross Tibeeth is a musician famous for the hit album James VS The Stars and pioneering Wood music. We asked a local man what did he think of Ross Tibeeth, and he said \"get out of my house\""
+align = 1
+autowrap = true
+
+[node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer"]
+margin_left = 150.0
+margin_top = 448.0
+margin_right = 450.0
+margin_bottom = 493.0
+rect_min_size = Vector2( 300, 45 )
+size_flags_horizontal = 4
+text = "Ross Tibeeth's website"
+script = ExtResource( 6 )
+website = "rosstibeeth.com"
+
+[node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 501.0
+margin_right = 600.0
+margin_bottom = 509.0
+
+[node name="label3" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 517.0
+margin_right = 600.0
+margin_bottom = 572.0
+text = "Interviewer: Ross, it's great to have you here today. Can you tell us a bit about how you first got into music?"
+align = 1
+autowrap = true
+
+[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 580.0
+margin_right = 600.0
+margin_bottom = 588.0
+
+[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 596.0
+margin_right = 600.0
+margin_bottom = 676.0
+text = "Ross Tibeeth: So, you know, well, uh, um, yeah, you know, I once got a keyboard, it wasn't a musical keyboard, it's the kind of keyboard you use for writing stuff on personal computers, mues."
+align = 1
+autowrap = true
+
+[node name="hSeparator4" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 684.0
+margin_right = 600.0
+margin_bottom = 692.0
+
+[node name="label5" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 700.0
+margin_right = 600.0
+margin_bottom = 730.0
+text = "Interviewer: What?"
+align = 1
+autowrap = true
+
+[node name="hSeparator5" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 738.0
+margin_right = 600.0
+margin_bottom = 746.0
+
+[node name="label6" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 754.0
+margin_right = 600.0
+margin_bottom = 784.0
+text = "Ross Tibeeth: Next question, mues."
+align = 1
+autowrap = true
+
+[node name="hSeparator6" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 792.0
+margin_right = 600.0
+margin_bottom = 800.0
+
+[node name="label7" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 808.0
+margin_right = 600.0
+margin_bottom = 863.0
+text = "Interviewer: Uh, your latest album, \"James VS The Stars\", has received a lot of praise. What was the inspiration behind it?"
+align = 1
+autowrap = true
+
+[node name="hSeparator7" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 871.0
+margin_right = 600.0
+margin_bottom = 879.0
+
+[node name="label8" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 887.0
+margin_right = 600.0
+margin_bottom = 917.0
+text = "Ross Tibeeth: The voices in my head."
+align = 1
+autowrap = true
+
+[node name="hSeparator8" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 925.0
+margin_right = 600.0
+margin_bottom = 933.0
+
+[node name="label9" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 941.0
+margin_right = 600.0
+margin_bottom = 996.0
+text = "Interviewer: I'll pretend like I didn't hear that, you’ve been described as having a unique sound. How would you describe your music style?"
+align = 1
+autowrap = true
+
+[node name="hSeparator9" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 1004.0
+margin_right = 600.0
+margin_bottom = 1012.0
+
+[node name="label10" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 1020.0
+margin_right = 600.0
+margin_bottom = 1050.0
+text = "Ross Tibeeth: The voices are telling me you're plotting murder."
+align = 1
+autowrap = true
+
+[node name="hSeparator10" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 1058.0
+margin_right = 600.0
+margin_bottom = 1066.0
+
+[node name="label11" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 1074.0
+margin_right = 600.0
+margin_bottom = 1104.0
+text = "Interviewer: What? Where are you going?"
+align = 1
+autowrap = true
+
+[node name="hSeparator11" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 1112.0
+margin_right = 600.0
+margin_bottom = 1120.0
+
+[node name="label12" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_top = 1128.0
+margin_right = 600.0
+margin_bottom = 1183.0
+text = "The interviewer asked since Ross Tibeeth politely left the room. We asked him about it through the internet, and he just replied with this image:"
+align = 1
+autowrap = true
+
+[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_top = 1191.0
+margin_right = 600.0
+margin_bottom = 1440.0
+texture = ExtResource( 8 )
+stretch_mode = 6
+
+[node name="hSeparator12" type="HSeparator" parent="scrollContainer/vBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 1448.0
+margin_right = 600.0
+margin_bottom = 1456.0
+
+[node name="uh" type="Panel" parent="."]
+anchor_right = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="uh2" type="Panel" parent="uh"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="label" type="Label" parent="uh"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "The News"
+align = 1
+valign = 1

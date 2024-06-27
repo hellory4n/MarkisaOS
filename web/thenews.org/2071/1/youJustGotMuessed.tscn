@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
+[ext_resource path="res://web/thenews.org/assets/top.png" type="Texture" id=2]
+[ext_resource path="res://web/thenews.org/assets/thynews.png" type="Texture" id=3]
+[ext_resource path="res://web/thenews.org/assets/mrBeastificationKiller3000.mp3" type="AudioStream" id=4]
+[ext_resource path="res://web/thenews.org/assets/j.tres" type="Theme" id=5]
+[ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=6]
+[ext_resource path="res://web/thenews.org/assets/IBMPlexSans-BoldItalic.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.5, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+width = 639
+
+[sub_resource type="DynamicFont" id=8]
+size = 36
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 40, 40 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+shadow_size = 7
+shadow_offset = Vector2( 0, 3 )
+
+[node name="thenews" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -214.0
+size_flags_horizontal = 3
+theme = ExtResource( 5 )
+script = ExtResource( 1 )
+Title = "A concerningly detailed plan on how we will bomb the same spot in Tokemire for the 6th time"
+Description = "The editor advised me to not leak classified military documents, BUT I DID ANYWAY!!!!!! "
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "war", "tokemire", "bombing" )
+Icon = ExtResource( 3 )
+Music = ExtResource( 4 )
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 7 )
+expand = true
+
+[node name="MksHyperlink" type="Button" parent="."]
+margin_left = 166.0
+margin_top = 56.0
+margin_right = 466.0
+margin_bottom = 101.0
+rect_min_size = Vector2( 300, 45 )
+size_flags_horizontal = 4
+text = "More amazing news"
+script = ExtResource( 6 )
+website = "thenews.org"
+
+[node name="label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+theme_type_variation = "Header"
+custom_fonts/font = SubResource( 8 )
+text = "YOU JUST GOT MUESSED!!!!!!!!!! SEND THIS TO ALL YOUR FRIENDS TO TOTALLY MUES THEM"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="uh" type="Panel" parent="."]
+anchor_right = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="uh2" type="Panel" parent="uh"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/panel = SubResource( 5 )
+
+[node name="label" type="Label" parent="uh"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "The News"
+align = 1
+valign = 1

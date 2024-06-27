@@ -6,7 +6,7 @@
 [ext_resource path="res://web/thenews.org/assets/bakingNews.mp3" type="AudioStream" id=4]
 [ext_resource path="res://web/thenews.org/assets/j.tres" type="Theme" id=5]
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=6]
-[ext_resource path="res://web/thenews.org/assets/bombTokemire.png" type="Texture" id=7]
+[ext_resource path="res://web/government.org/assets/flag.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 2 )
@@ -27,9 +27,9 @@ margin_right = -214.0
 size_flags_horizontal = 3
 theme = ExtResource( 5 )
 script = ExtResource( 1 )
-Title = "A concerningly detailed plan on how we will bomb the same spot in Tokemire for the 6th time"
-Description = "Operation Delta Mues VI"
-Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "war", "tokemire", "bombing" )
+Title = "Do we need a reform of the current government system?"
+Description = "Click here to find out!!!!!!!!!!!"
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "government_reform", "reforma" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 4 )
 
@@ -45,9 +45,9 @@ margin_top = 40.0
 rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
-margin_left = 16.0
-margin_right = 616.0
-margin_bottom = 591.0
+margin_left = 19.0
+margin_right = 619.0
+margin_bottom = 406.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 6
 
@@ -72,7 +72,7 @@ margin_top = 69.0
 margin_right = 600.0
 margin_bottom = 144.0
 theme_type_variation = "Header"
-text = "A concerningly detailed plan on how we will bomb the same spot in Tokemire for the 6th time"
+text = "Do we need a reform of the current government system?"
 align = 1
 autowrap = true
 
@@ -90,51 +90,16 @@ stretch_mode = 7
 [node name="label2" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_top = 360.0
 margin_right = 600.0
-margin_bottom = 415.0
-text = "The editor advised me to not leak classified military documents, BUT I DID ANYWAY!!!!!! "
+margin_bottom = 390.0
+text = "No."
 align = 1
 autowrap = true
-
-[node name="MksHyperlink2" type="Button" parent="scrollContainer/vBoxContainer"]
-margin_left = 150.0
-margin_top = 423.0
-margin_right = 450.0
-margin_bottom = 468.0
-rect_min_size = Vector2( 300, 45 )
-size_flags_horizontal = 4
-text = "MILITARY DOCUMENTS!!"
-script = ExtResource( 6 )
-website = "thenews.org/2071/1/youJustGotMuessed.tscn"
 
 [node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 476.0
+margin_top = 398.0
 margin_right = 600.0
-margin_bottom = 484.0
-
-[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 492.0
-margin_right = 600.0
-margin_bottom = 522.0
-text = "edit: i was fired, please send places that are currently hiring"
-align = 1
-autowrap = true
-
-[node name="button" type="Button" parent="scrollContainer/vBoxContainer"]
-margin_left = 150.0
-margin_top = 530.0
-margin_right = 450.0
-margin_bottom = 575.0
-rect_min_size = Vector2( 300, 45 )
-size_flags_horizontal = 4
-disabled = true
-text = "send stuff"
-
-[node name="hSeparator12" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 583.0
-margin_right = 600.0
-margin_bottom = 591.0
+margin_bottom = 406.0
 
 [node name="uh" type="Panel" parent="."]
 anchor_right = 1.0
