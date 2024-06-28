@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: os/kickstart/bios.tscn
+msgid "EPILEPSY WARNING"
+msgstr "PERINGATAN EPILEPSI"
+
+#: os/kickstart/bios.tscn
+msgid "This game contains flashing lights and sudden changes in brightness that may cause discomfort or trigger seizures in individuals with photosensitive epilepsy. Player discretion is advised."
+msgstr "Game ini mengandung cahaya berkedip dan perubahan kecerahan dengan cepat yang dapat membuat ketidaknyamanan atau kejang untuk orang yang memiliki epilepsi fotosensitif. Kebijakan pemain disarankan."
+
+#: os/kickstart/bios.tscn
+msgid "If necessary, you can enable reduced motion mode in the Settings app to remove these visual effects."
+msgstr "Jika perlu, Anda bisa menghidupkan mode gerak halus di aplikasi Pengaturan untuk menghilangkan efek visual tersebut."
+
+#: os/kickstart/bios.tscn
+msgid "Click or press any key to continue."
+msgstr "Klik atau tekan tombol apa saja untuk melanjutkan."
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Appearance"
+msgstr "Tampilan"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Accessibility"
+msgstr "Aksesibilitas"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Reduced motion mode"
+msgstr "Mode gerak halus"
+
+#: apps/passionfruit/settings/app.tscn
+msgid "Disables visual effects that could trigger seizures"
+msgstr "Menghilangkan efek visual yang dapat menyebabkan kejang"
+
+# this isn't supposed to really mean anything, it's just the name of the default theme
+#: apps/passionfruit/settings/app.tscn
+msgid "High Peaks"
+msgstr "Puncak Tinggi"

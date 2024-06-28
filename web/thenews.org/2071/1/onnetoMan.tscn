@@ -65,7 +65,7 @@ rect_min_size = Vector2( 300, 45 )
 size_flags_horizontal = 4
 text = "More amazing news"
 script = ExtResource( 6 )
-website = "Onneto man attempted to stab mountains"
+website = "thenews.org"
 
 [node name="label" type="Label" parent="scrollContainer/vBoxContainer"]
 margin_top = 69.0

@@ -29,7 +29,7 @@ theme = ExtResource( 5 )
 script = ExtResource( 1 )
 Title = "Do we need a reform of the current government system?"
 Description = "Click here to find out!!!!!!!!!!!"
-Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "government_reform", "reforma" )
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "government_reform", "reform" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 4 )
 

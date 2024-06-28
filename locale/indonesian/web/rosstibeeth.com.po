@@ -1,0 +1,255 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Ross Tibeeth"
+msgstr "Ross Tibeeth"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "ross tibeeth is not just music; it's an experience."
+msgstr "ross tibeeth bukan hanya sekedar musik; ross tibeeth adalah pengalaman."
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "ross"
+msgstr "ross"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "tibeeth"
+msgstr "tibeeth"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "ross_tibeeth"
+msgstr "ross_tibeeth"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "music"
+msgstr "musik"
+
+# website tag
+# wood is a genre
+#: web/rosstibeeth.com/home.tscn
+msgid "wood"
+msgstr "wood"
+
+# website tag
+# wood is a genre
+#: web/rosstibeeth.com/home.tscn
+msgid "wood_music"
+msgstr "musik_wood"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "experimental"
+msgstr "eksperimental"
+
+# website tag
+#: web/rosstibeeth.com/home.tscn
+msgid "experimental_music"
+msgstr "musik_eksperimental"
+
+# website tag
+# this is an album name
+#: web/rosstibeeth.com/home.tscn
+msgid "james_vs_the_stars"
+msgstr "james_vs_bintang-bintang"
+
+# website tag
+# this is a song name
+#: web/rosstibeeth.com/home.tscn
+msgid "dying_during_a_brain_surgery"
+msgstr "sekarat_saat_operasi_otak"
+
+# website tag
+# this is a song name, But & The I're'd'ven't
+# it shouldn't make sense
+#: web/rosstibeeth.com/home.tscn
+msgid "but_and_the_iredvent"
+msgstr "tapi_dan_kumunya"
+
+# website tag
+# short for james vs the stars
+#: web/rosstibeeth.com/home.tscn
+msgid "jvts"
+msgstr "jvbb"
+
+# website tag
+# short for dying during a brain surgery
+#: web/rosstibeeth.com/home.tscn
+msgid "ddabs"
+msgstr "ssoo"
+
+# website tag
+# short for But & The I're'd'ven't
+#: web/rosstibeeth.com/home.tscn
+msgid "iredvent"
+msgstr "tdk"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "the best wood music."
+msgstr "musik wood terbaik."
+
+#: web/rosstibeeth.com/home.tscn
+msgid "\"At first I was confused. Now I'm more confused.\""
+msgstr "\"Dulunya aku bingung. Sekarang aku semakin bingung.\""
+
+#: web/rosstibeeth.com/home.tscn
+msgid "- my brother"
+msgstr "- saudaraku"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Wood music isn't just music. It's an experience."
+msgstr "Musik wood bukan sekedar musik. Musik wood juga merupakan pengalaman."
+
+#: web/rosstibeeth.com/home.tscn
+msgid "POST ON CONNECT \"ross is a genius\""
+msgstr "POSTINGAN DI CONNECT \"ross adalah orang jenius\""
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Albums"
+msgstr "Album"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "James VS The Stars (Jan 2071)"
+msgstr "James VS Bintang-Bintang (Jan 2071)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "James is in a legendary fight with the stars... or is it? According to my "
+"cat, James VS The Stars is a major breakthrough in wood music composing and "
+"storytelling."
+msgstr "James berada dalam pertarungan besar dengan bintang-bintang... atau memang begitu? Menurut kucingku, James VS Bintang-Bintang adalah terobosan besar dalam pembuatan musik wood dan pembacaan cerita."
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Listen (2:46)"
+msgstr "Dengarkan (2:46)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Dying During A Brain Surgery (Dec 2070)"
+msgstr "Sekarat Saat Operasi Otak (Des 2070)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "A short story. The title says all"
+msgstr "Sebuah cerita singkat. Judulnya sudah menjelaskan semuanya"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Listen (0:08)"
+msgstr "Dengarkan (0:08)"
+
+# this isn't supposed to make sense
+#: web/rosstibeeth.com/home.tscn
+msgid "But & The I're'd'ven't (Jul 2070)"
+msgstr "Tapi & -ku-mu-nya (Jul 2070)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "The greatest music you will ever hear in your entire life."
+msgstr "Musik terbaik yang pernah kamu dengarkan sepanjang hidupmu."
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Listen (0:02)"
+msgstr "Dengarkan (0:02)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "\"He might need special treatment\""
+msgstr "\"Dia mungkin butuh penanganan khusus\""
+
+#: web/rosstibeeth.com/home.tscn
+msgid "- my mother"
+msgstr "- Ibuku"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "Back"
+msgstr "Kembali"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "James VS The Stars (January 2071)"
+msgstr "James VS Bintang-Bintang (Januari 2071)"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "Tracklist"
+msgstr "Daftar musik"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "1. 0:00 Whoopsie, Committed Vehicular Manslaughter"
+msgstr "1. 0:00 Ups, Telah Melakukan Pembunuhan Berencana"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "2. 0:08. In Court"
+msgstr "2. 0:08. Dalam Pengadilan"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "3. 0:19 Condemn Him To The Infirmary"
+msgstr "3. 0:19 Masukkan Dia Ke Rumah Sakit"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "4. 0:34 Unstoppable Agony"
+msgstr "4. 0:34 Rasa Sakit Yang Tak Terhentikan"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "5. 0:42 Hello Friend"
+msgstr "5. 0:42 Halo Teman"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "6. 0:52 I Must End The Stars"
+msgstr "6. 0:52 Aku Harus Menghabisi Bintang-Bintang"
+
+#: web/rosstibeeth.com/home.tscn
+msgid "7. 0:54 I Don't Think This Banana Will Help"
+msgstr "7. 0:54 Aku Tidak Yakin Pisang Ini Membantu"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "8. 0:56 How Can I Take That Guy's Gun? I Can Shoot The Sun"
+msgstr "8. 0:56 Bagaimana Cara Aku Mengambil Pistol Orang Itu? Aku Bisa Menembak Matahari"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "9. 1:00 OH GOD NO I BEG YOU PLEASE NOTHJR8YAEY6EA4KN Y6I89USE5A"
+msgstr "10. 1:00 YA TUHAN JANGAN KUMOHON TOLONG JEHEJHFWKJDKDVJSJWJWHEBWKB"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "10. 1:01 The Lightning Strikes Pt. I"
+msgstr "10. 1:01 Petir Menyambar Bg. I"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "11. 1:13 The Lightning Strikes Pt. II"
+msgstr "11. 1:13 Petir Menyambar Bg. II"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "12. 1:17 SUFFER! HAHAHAHA!"
+msgstr "12. 1:17 MENDERITA! HAHAHAHA!"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "13. 1:27 See How I Laugh At You? You'll Never Understand."
+msgstr "13. 1:27 Lihat Bagaimana Aku Menertawakanmu? Kamu Tidak Akan Paham."
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "14. 1:37 Bow Down Before Your Real God"
+msgstr "14. 1:37 Bersujud Sebelum Tuhan Aslimu"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "15. 1:43 I Hear Things... They Are Talking To Me..."
+msgstr "15. 1:43 Aku Mendengar Sesuatu... Mereka Berbicara Kepadaku..."
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "16. 2:05 I'm Gonna Steal That Gun"
+msgstr "16. 2:05 Aku Akan Mencuri Pistol Itu"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "17. 2:10 The Lightning Strikes Pt. III"
+msgstr "17. 2:10 Petir Menyambar Bg. III"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "18. 2:23 I Am A Broken Man; A Shadow Of Who I Once Was"
+msgstr "18. 2:23 Aku Adalah Orang Yang Hancur; Sebuah Bayangan Dari Siapa Aku Dulunya"
+
+#: web/rosstibeeth.com/jvts.tscn
+msgid "19. 2:32 Rotting Alone Until"
+msgstr "19. 2:32 Sendiri Membusuk Selamanya"

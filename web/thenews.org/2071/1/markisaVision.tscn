@@ -29,7 +29,7 @@ theme = ExtResource( 5 )
 script = ExtResource( 1 )
 Title = "MarkisaOS Vision now available for testing"
 Description = "Our majestic people at Passionfruit are hard at work on the next generation of MarkisaOS, known as MarkisaOS Vision, which is expected to release around March."
-Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "markisa", "markisaos", "vision", "developers", "markisaos_vision" )
+Tags = PoolStringArray( "business", "government_partner", "scandal", "news", "the_news", "markisa", "developer", "markisaos_vision" )
 Icon = ExtResource( 3 )
 Music = ExtResource( 4 )
 

@@ -91,7 +91,7 @@ stretch_mode = 2
 margin_top = 325.0
 margin_right = 600.0
 margin_bottom = 380.0
-text = "This evening, an army of robots from the Tokemire-Nesuprantu coalision sent a new army of robots in Turtingas City, the biggest metropolis in the nation."
+text = "This evening, the Tokemire-Nesuprantu coalision sent a new army of robots in Turtingas City, the biggest metropolis in the nation."
 align = 1
 autowrap = true
 
@@ -105,7 +105,7 @@ margin_bottom = 396.0
 margin_top = 404.0
 margin_right = 600.0
 margin_bottom = 459.0
-text = "This drastically affected the stock market. Tyler from across the street said \"GET THE FUCK OUTTA HERE\", while the editor said \"this sucks, like always\""
+text = "This drastically affected the stock market. Tyler from across the street said \"GET THE FUCK OUTTA HERE\", while the editor said \"this article sucks, like always\""
 align = 1
 autowrap = true
 

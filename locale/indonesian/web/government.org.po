@@ -1,0 +1,239 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: web/government.org/home.tscn
+msgid "The Government"
+msgstr "Pemerintah"
+
+#: web/government.org/home.tscn
+msgid "The national government."
+msgstr "Pemerintah nasional."
+
+# website tag
+#: web/government.org/home.tscn
+msgid "government_partner"
+msgstr "mitra_pemerintah"
+
+# website tag
+#: web/government.org/home.tscn
+msgid "government"
+msgstr "pemerintah"
+
+# website tag, lelclub is the country
+#: web/government.org/home.tscn
+msgid "lelclub"
+msgstr "lelclub"
+
+# lelisia is the capital
+#: web/government.org/home.tscn
+msgid "Welcome to Lelisia"
+msgstr "Selamat datang di Lelisia"
+
+#: web/government.org/home.tscn
+msgid "Home of the Lelclub government"
+msgstr "Rumah dari pemerintah Lelclub"
+
+#: web/government.org/home.tscn
+msgid "Our President"
+msgstr "Presiden kami"
+
+#: web/government.org/home.tscn
+msgid "Simon Tranderson"
+msgstr "Simon Tranderson"
+
+#: web/government.org/home.tscn
+msgid "President since 2066"
+msgstr "Presiden sejak 2066"
+
+# party as in political party
+#: web/government.org/home.tscn
+msgid "Party of the Union of the Republic"
+msgstr "Partai dari Persatuan Republik"
+
+# BN is a shortened
+#: web/government.org/home.tscn
+msgid "Born in Benediction, BN"
+msgstr "Lahir di Benediction, BN"
+
+#: web/government.org/home.tscn
+msgid "Government Partners"
+msgstr "Mitra Pemerintah"
+
+#: web/government.org/home.tscn
+msgid "The Provinces of Our Union"
+msgstr "Provinsi dari Persatuan Kami"
+
+#: web/government.org/home.tscn
+msgid "Federal Province (FP)"
+msgstr "Provinsi Federal (PF)"
+
+#: web/government.org/home.tscn
+msgid "Motteto (MT)"
+msgstr "Motteto (MT)"
+
+#: web/government.org/home.tscn
+msgid "Turtingas (TG)"
+msgstr "Turtingas (TG)"
+
+#: web/government.org/home.tscn
+msgid "Benediction (BN)"
+msgstr "Benediction (BN)"
+
+#: web/government.org/home.tscn
+msgid "Onneto (ON)"
+msgstr "Onneto (ON)"
+
+#: web/government.org/home.tscn
+msgid "Lumi (LM)"
+msgstr "Lumi (LM)"
+
+#: web/government.org/home.tscn
+msgid "Skala (SK)"
+msgstr "Skala (SK)"
+
+#: web/government.org/home.tscn
+msgid "Visoko (VI)"
+msgstr "Visoko (VI)"
+
+#: web/government.org/home.tscn
+msgid "Kelapa (KP)"
+msgstr "Kelapa (KP)"
+
+#: web/government.org/home.tscn
+msgid "Biggest Cities"
+msgstr "Kota Terbesar"
+
+#: web/government.org/home.tscn
+msgid "1. Turtingas, TG - 17.1 million"
+msgstr "1. Turtingas, TG - 17,1 juta"
+
+#: web/government.org/home.tscn
+msgid "2. Benediction, BN - 9.3 million"
+msgstr "2. Benediction, BN - 9,3 juta"
+
+#: web/government.org/home.tscn
+msgid "3. Lelisia, FP (capital) - 4.2 million"
+msgstr "3. Lelisia, PF (ibukota) - 4,2 juta"
+
+#: web/government.org/home.tscn
+msgid "4. Luminara, LM - 3.6 million"
+msgstr "4. Luminara, LM - 3,6 juta"
+
+#: web/government.org/home.tscn
+msgid "5. Mikrelium, SK - 3.6 million"
+msgstr "5. Mikrelium, SK - 3,6 juta"
+
+#: web/government.org/home.tscn
+msgid "6. New Bobbis, FP - 3.4 million"
+msgstr "6. Bobbis Baru, PF - 3,4 juta"
+
+#: web/government.org/home.tscn
+msgid "7. Cubatiri, KP - 3 million"
+msgstr "7. Cubatiri, KP - 3 juta"
+
+#: web/government.org/home.tscn
+msgid "8. Simonn, TG - 2.5 million"
+msgstr "8. Simonn, TG - 2,5 juta"
+
+#: web/government.org/home.tscn
+msgid "9. Rodomia, LM - 2.1 million"
+msgstr "9. Rodomia, LM - 2,1 juta"
+
+#: web/government.org/home.tscn
+msgid "10. Thetaki, BN - 2.1 million"
+msgstr "10. Thetaki, BN - 2,1 juta"
+
+#: web/government.org/home.tscn
+msgid "11. Victories, VI - 1.9 million"
+msgstr "11. Victorias, VI - 1,9 juta"
+
+#: web/government.org/home.tscn
+msgid "12. Great River, ON - 1.9 million"
+msgstr "12. Sungai Besar, ON - 1,9 juta"
+
+#: web/government.org/home.tscn
+msgid "13. Lelville, MT - 1.8 million"
+msgstr "13. Lelville, MT - 1,8 juta"
+
+#: web/government.org/home.tscn
+msgid "14. Lauraland, SK - 1.6 million"
+msgstr "14. Lauraland, SK - 1,6 juta"
+
+#: web/government.org/home.tscn
+msgid "15. Whosjo, TG - 1.5 million"
+msgstr "15. Whosjo, TG - 1,5 juta"
+
+#: web/government.org/home.tscn
+msgid "Ministries"
+msgstr "Kementrian"
+
+#: web/government.org/home.tscn
+msgid "Plenty"
+msgstr "Keuangan"
+
+#: web/government.org/home.tscn
+msgid "Peace"
+msgstr "Perdamaian"
+
+#: web/government.org/home.tscn
+msgid "Truth"
+msgstr "Kebenaran"
+
+#: web/government.org/home.tscn
+msgid "Building"
+msgstr "Pembangunan"
+
+#: web/government.org/home.tscn
+msgid "Communication"
+msgstr "Komunikasi"
+
+#: web/government.org/home.tscn
+msgid "Planning"
+msgstr "Perencanaan"
+
+#: web/government.org/home.tscn
+msgid "Innovation"
+msgstr "Inovasi"
+
+#: web/government.org/home.tscn
+msgid "Culture"
+msgstr "Kultur"
+
+#: web/government.org/home.tscn
+msgid "Human Rights"
+msgstr "Hak Asasi Manusia"
+
+#: web/government.org/home.tscn
+msgid "Education"
+msgstr "Pendidikan"
+
+#: web/government.org/home.tscn
+msgid "Sports"
+msgstr "Olahraga"
+
+#: web/government.org/home.tscn
+msgid "Management"
+msgstr "Manjemen"
+
+#: web/government.org/home.tscn
+msgid "Integration"
+msgstr "Integrasi"
+
+#: web/government.org/home.tscn
+msgid "Energy"
+msgstr "Energi"
+
+#: web/government.org/home.tscn
+msgid "Health"
+msgstr "Kesehatan"
+
+#: web/government.org/home.tscn
+msgid "Work"
+msgstr "Pekerjaan"

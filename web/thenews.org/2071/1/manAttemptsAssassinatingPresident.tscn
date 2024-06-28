@@ -91,7 +91,7 @@ stretch_mode = 7
 margin_top = 325.0
 margin_right = 600.0
 margin_bottom = 380.0
-text = "Today, the president Simon Tranderson narrowly escaped an assassination attempt, marking the 23rd time such incident in the past 12 months."
+text = "Today, the president Simon Tranderson narrowly escaped an assassination attempt, marking the 23rd time such incident happened in the past 12 months."
 align = 1
 autowrap = true
 
@@ -105,21 +105,7 @@ margin_bottom = 396.0
 margin_top = 404.0
 margin_right = 600.0
 margin_bottom = 509.0
-text = "The president was making a speech when someone appeared in the crowd, and proceeded to scream \"Muahahaha, it's over Simon, I'm the new president and stuff\", before running towards the president. Fortunately, the president is still young enough to dodge knifes."
-align = 1
-autowrap = true
-
-[node name="hSeparator3" type="HSeparator" parent="scrollContainer/vBoxContainer"]
-modulate = Color( 1, 1, 1, 0 )
-margin_top = 517.0
-margin_right = 600.0
-margin_bottom = 525.0
-
-[node name="label4" type="Label" parent="scrollContainer/vBoxContainer"]
-margin_top = 533.0
-margin_right = 600.0
-margin_bottom = 563.0
-text = "Not sure what else to say."
+text = "The president was making a speech when someone appeared in the crowd, and proceeded to scream \"Muahahaha, it's over Simon, I'm the new president and stuff\", before running towards the president. Fortunately, the president is still young enough to dodge knives."
 align = 1
 autowrap = true
 

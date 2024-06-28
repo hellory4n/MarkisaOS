@@ -1,0 +1,586 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: web/thenews.org/home.tscn
+msgid "The News"
+msgstr "As Notícias"
+
+#: web/thenews.org/home.tscn
+msgid "Lelclub's finest news source."
+msgstr "A melhor fonte de notícias do país."
+
+# website tag
+#: web/thenews.org/home.tscn
+msgid "scandal"
+msgstr "escândalo"
+
+# website tag
+#: web/thenews.org/home.tscn
+msgid "news"
+msgstr "notícias"
+
+# website tag
+#: web/thenews.org/home.tscn
+msgid "the_news"
+msgstr "as_notícias"
+
+# mikrelium is a state, tokemire is a country
+#: web/thenews.org/home.tscn
+msgid "Mikrelium bombed by Tokemire"
+msgstr "Mikrelium bombardeado por Tokemire"
+
+# western as in the west coast of the nation
+#: web/thenews.org/home.tscn
+msgid "Experts say western economy will be drastically affected"
+msgstr "Especialistas dizem que a economia da costa oeste pode ser drasticamente afetada."
+
+#: web/thenews.org/home.tscn
+msgid "Other News"
+msgstr "Outras Notícias"
+
+#: web/thenews.org/home.tscn
+msgid "MarkisaOS Vision now available for testing"
+msgstr "MarkisaOS Visão agora disponível para testes"
+
+#: web/thenews.org/home.tscn
+msgid "Man attempted to kill president"
+msgstr "Homem tenta assassinar presidente"
+
+# onneto is a state
+#: web/thenews.org/home.tscn
+msgid "Onneto man attempted to stab mountains"
+msgstr "Homem de Onneto tenta esfaquear montanhas"
+
+#: web/thenews.org/home.tscn
+msgid "Weather"
+msgstr "Clima"
+
+# these are the same cities as the one in government.org btw
+#: web/thenews.org/home.tscn
+msgid "1. Turtingas, TG - 30 °C"
+msgstr "2. Turtingas, TG - 30 °C"
+
+#: web/thenews.org/home.tscn
+msgid "2. Benediction, BN - 26 °C"
+msgstr "2. Benedição, BN - 26 °C"
+
+#: web/thenews.org/home.tscn
+msgid "3. Lelisia, FP - 29 °C"
+msgstr "3. Lelísia, PF - 29 °C"
+
+#: web/thenews.org/home.tscn
+msgid "4. Luminara, LM - 21 °C"
+msgstr "4. Luminara, LM - 21 °C"
+
+#: web/thenews.org/home.tscn
+msgid "5. Mikrelium, SK - 24 °C"
+msgstr "5. Mikrelium, SK - 24 °C"
+
+#: web/thenews.org/home.tscn
+msgid "6. New Bobbis, FP - 30 °C"
+msgstr "6. Nova Bobbis, PF - 30 °C"
+
+#: web/thenews.org/home.tscn
+msgid "7. Cubatiri, KP - 31 °C"
+msgstr "7. Cubatiri, KP - 31 °C"
+
+#: web/thenews.org/home.tscn
+msgid "8. Simonn, TG - 29 °C"
+msgstr "8. Simonn, TG - 29 °C"
+
+#: web/thenews.org/home.tscn
+msgid "9. Rodomia, LM - 28 °C"
+msgstr "9. Rodômia, LM - 28 °C"
+
+#: web/thenews.org/home.tscn
+msgid "10. Thetaki, BN - 23 °C"
+msgstr "10. Tetaki, BN - 23 °C"
+
+#: web/thenews.org/home.tscn
+msgid "11. Victories, VI - 29 °C"
+msgstr "11. Vitórias, VI - 29 °C"
+
+#: web/thenews.org/home.tscn
+msgid "12. Great River, ON - 32 °C"
+msgstr "12. Grande Rio, ON - 32 °C"
+
+#: web/thenews.org/home.tscn
+msgid "13. Lelville, MT - 29 °C"
+msgstr "13. Lelville, MT - 29 °C"
+
+#: web/thenews.org/home.tscn
+msgid "14. Lauraland, SK - 26 °C"
+msgstr "14. Lauralândia, SK - 26 °C"
+
+#: web/thenews.org/home.tscn
+msgid "15. Whosjo, TG - 31 °C"
+msgstr "15. Whosjo, TG - 31 °C"
+
+#: web/thenews.org/home.tscn
+msgid "More News"
+msgstr "Mais Notícias"
+
+# nesuprantu is a country
+#: web/thenews.org/home.tscn
+msgid "Tensions mount after most of the Nesuprantu desert was destroyed"
+msgstr "Tensões aumentam depois da maioria do deserto de Nesuprantu ser destruído"
+
+# you can abbreviate the cities to TG and BN if necessary
+#: web/thenews.org/home.tscn
+msgid "Kaiatu planning to build new power plant between Turtingas and Benediction"
+msgstr "Kaiatu irá construir uma usina elétrica entre Turtingas e Benedição"
+
+#: web/thenews.org/home.tscn
+msgid "Our review of the new 2071 Markistations, are they good?"
+msgstr "Os novos Markistations de 2071 são bons?"
+
+# bullshit-y name for even more news
+#: web/thenews.org/home.tscn
+msgid "Morning Reading"
+msgstr "Mais Notícias"
+
+#: web/thenews.org/home.tscn
+msgid "Our spies managed to steal top secret military plans from Nesuprantu"
+msgstr "Nossos espiões roubaram planos ultra secretos de Nesuprantu"
+
+#: web/thenews.org/home.tscn
+msgid "A concerningly detailed plan on how we will bomb the same spot in Tokemire for the 6th time"
+msgstr "Um plano preocupantemente detalhado de como iremos bombardear Tokemire pela sexta vez"
+
+#: web/thenews.org/home.tscn
+msgid "Local man really wanted to escape Lelclub, ends up in Onneto"
+msgstr "Homem queria muito fugir do Lelclub, chega em Onneto"
+
+# aka even morer news
+#: web/thenews.org/home.tscn
+msgid "Additional Information"
+msgstr "Informações Adicionais"
+
+#: web/thenews.org/home.tscn
+msgid "Interview with someone with serious mental health issues"
+msgstr "Entrevista com alguém com problemas mentais sérios"
+
+#: web/thenews.org/home.tscn
+msgid "Robot soldiers attack Turtingas for the 52nd time"
+msgstr "Soldados robôs atacam Turtingas pela 52ª vez"
+
+#: web/thenews.org/home.tscn
+msgid "Do we need a reform of the current government system?"
+msgstr "Precisamos de uma reforma do sistema governamental?"
+
+#: web/thenews.org/home.tscn
+msgid "World Map"
+msgstr "Mapa-Múndi"
+
+#: web/thenews.org/2071/1/governmentReform.tscn
+msgid "Click here to find out!!!!!!!!!!!"
+msgstr "Clique aqui para descobrir!!!!!!!!!!!"
+
+# website tag
+#: web/thenews.org/2071/1/governmentReform.tscn
+msgid "government_reform"
+msgstr "reforma_governamental"
+
+# website tag
+#: web/thenews.org/2071/1/governmentReform.tscn
+msgid "reform"
+msgstr "reforma"
+
+#: web/thenews.org/2071/1/governmentReform.tscn
+msgid "More amazing news"
+msgstr "Mais notícias incríveis"
+
+#: web/thenews.org/2071/1/governmentReform.tscn
+msgid "No."
+msgstr "Não."
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Ross Tibeeth is a musician famous for the hit album James VS The Stars and pioneering Wood music. We asked a local man what did he think of Ross Tibeeth, and he said \"get out of my house\""
+msgstr "Rodrigo Biffé é um músico famoso pelo álbum João VS As Estrelas, e também um pioneiro da música wood. Nós perguntamos uma pessoa da região o que ela achave do Rodrigo Biffé, e ela disse \"sai da minha casa\"."
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Ross Tibeeth's website"
+msgstr "Site do Rodrigo Biffé"
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Interviewer: Ross, it's great to have you here today. Can you tell us a bit about how you first got into music?"
+msgstr "Entrevistador: Rodrigo, é ótimo ter você aqui hoje. Poderia contar um pouco sobre como você começou a fazer música?"
+
+# use as many of those words you say when you're still thinking as possible
+# mues is an incomprehensible meaningless slang that fits with any scenario possible
+# i hope the keyboard joke works, if it doesn't then come up with some nonsense
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Ross Tibeeth: So, you know, well, uh, um, yeah, you know, I once got a keyboard, it wasn't a musical keyboard, it's the kind of keyboard you use for writing stuff on personal computers, mues."
+msgstr "Rodrigo Biffé: Então, sabe, tipo, né, sabe, tipo, uma vez eu consegui um teclado, só que não era um teclado músical, era o teclado que cê usa pra escrever coisas em computadores pessoais, mussim."
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Interviewer: What?"
+msgstr "Entrevistador: Quê?"
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Ross Tibeeth: Next question, mues."
+msgstr "Rodrigo Biffé: Próxima questão, mussim."
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Interviewer: Uh, your latest album, \"James VS The Stars\", has received a lot of praise. What was the inspiration behind it?"
+msgstr "Entrevistador: Então, seu último álbum, \"João VS As Estrelas\", recebeu incontáveis elogios. Qual foi a sua inspiração?"
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Ross Tibeeth: The voices in my head."
+msgstr "Rodrigo Biffé: As vozes na minha cabeça."
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Interviewer: I'll pretend like I didn't hear that, you've been described as having a unique sound. How would you describe your music style?"
+msgstr "Entrevistador: Vou fingir que não ouvi isso, muitos dizem que a sua música tem um som muito único, exótico até. Como que você descreveria o seu estilo?"
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Ross Tibeeth: The voices are telling me you're plotting murder."
+msgstr "Rodrigo Biffé: As vozes na minha cabeça dizem que você está planejando assassinato."
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "Interviewer: What? Where are you going?"
+msgstr "Entrevistador: Quê? Onde cê tá indo? Oxi..."
+
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "The interviewer asked since Ross Tibeeth politely left the room. We asked him about it through the internet, and he just replied with this image:"
+msgstr "O entrevistador perguntou já que o Rodrigo Biffé educadamente saiu da sala. Perguntamos a ele sobre isso pela internet, e ele só respondeu com essa imagem:"
+
+# this is the text in the aforementioned image
+#: web/thenews.org/2071/1/insanityInterview.tscn
+msgid "MY LIFE BE LIKE XD"
+msgstr "MINHA VIDA É TIPO ASSIM XD"
+
+# website tag
+#: web/thenews.org/2071/1/manAttemptsAssassinatingPresident.tscn
+msgid "president_assassination"
+msgstr "assassinato_do_presidente"
+
+# website tag
+#: web/thenews.org/2071/1/manAttemptsAssassinatingPresident.tscn
+msgid "president"
+msgstr "presidente"
+
+#: web/thenews.org/2071/1/manAttemptsAssassinatingPresident.tscn
+msgid "Today, the president Simon Tranderson narrowly escaped an assassination attempt, marking the 23rd time such incident happened in the past 12 months."
+msgstr "Hoje, o presidente Samuel Trandersom por pouco escapou de uma tentativa de assassinato, marcando a 23ª vez que esse incidente aconteceu nos últimos 12 meses."
+
+#: web/thenews.org/2071/1/manAttemptsAssassinatingPresident.tscn
+msgid "The president was making a speech when someone appeared in the crowd, and proceeded to scream \"Muahahaha, it's over Simon, I'm the new president and stuff\", before running towards the president. Fortunately, the president is still young enough to dodge knives."
+msgstr "O presidente estava fazendo um discurso quando alguém apareceu no meio da multidão, e gritou \"Hahaha, é o fim, senhor Samuel, eu sou o novo presidente, ou algo assim\", antes de correr até o presidente. Felizmente, o president ainda é jovem o suficiente pra desviar de facas."
+
+# website tag
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "markisaos_vision"
+msgstr "markisaos_visão"
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Our majestic people at Passionfruit are hard at work on the next generation of MarkisaOS, known as MarkisaOS Vision, which is expected to release around March."
+msgstr "Nossos parceiros maravilhosos da Passionfruit estão trabalhando duro na próxima geração do MarkisaOS, o MarkisaOS Visão, que provavelmente irá lançar em Março."
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "We interviewed Sean McIncompet, a programmer at Passionfruit."
+msgstr "Nós entrevistamos Renato Incompetem, um programador na Passionfruit"
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Interviewer: So, what is gonna be introduced in MarkisaOS Vision?"
+msgstr "Entrevistador: Então, o que vai ser adicionado no MarkisaOS Visão?"
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Sean McIncompet: Y'know, this new version will truly make MarkisaOS even better. Users might notice updates in the interface."
+msgstr "Renato Incompetem: Sabe, essa nova versão vai realmente fazer o MarkisaOS ainda melhor. Usuários costumam perceber mudanças na interface."
+
+# mhm = yes but when you don't feel like speaking
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Interviewer: Mhm."
+msgstr "Entrevistador: Interessante."
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Sean McIncompet: The focus of this update is updating, so not only we updated the user interface, but also added new features that are very convenient."
+msgstr "Renato Incompetem: O foco dessa versão é melhorar o sistema, então nós atualizamos várias áreas do sistema, e também adicionamos novas funcionalidades."
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Interviewer: Yeah."
+msgstr "Entrevistador: Realmente."
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Sean McIncompet: This update also features improvements in usability and efficiency, as well as changing the development environment."
+msgstr "Renato Incompetem: Essa versão também melhora várias partes do sistema, e contém mudanças no ambiente de desenvolvimento."
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Interviewer: Very informative."
+msgstr "Entrevistador: Fascinante."
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "You can test MarkisaOS Vision today, as long as you have a developer license and a Markistation 2071 Pro with the latest updates installed, otherwise it's probably gonna take more than a day."
+msgstr "Se você têm um Markistation Profissional de 2071 com todas as atualizações, você pode testar o MarkisaOS Visão hoje, mas se você não tem um Markistation Profissional de 2071, provavelmente vai demorar mais de um dia."
+
+#: web/thenews.org/2071/1/markisaVision.tscn
+msgid "Get MarkisaOS Vision"
+msgstr "Testar o MarkisaOS Visão"
+
+#: web/thenews.org/2071/1/markistations.tscn
+msgid "Yes."
+msgstr "Sim."
+
+# they = new 2071 markistations
+#: web/thenews.org/2071/1/markistations.tscn
+msgid "They're pretty good."
+msgstr "São ótimos."
+
+# it = new 2071 markistations
+#: web/thenews.org/2071/1/markistations.tscn
+msgid "Tyler from across the street loves it."
+msgstr "O Tiago (meu vizinho) ama os novos Markistations."
+
+# website tag
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "mikrelium_bombing"
+msgstr "bombardeio_em_mikrelium"
+
+# website tag
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "mikrelium"
+msgstr "mikrelium"
+
+# website tag
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "bombing"
+msgstr "bombardeio"
+
+# website tag
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "tokemire"
+msgstr "tokemire"
+
+# website tag
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "war"
+msgstr "guerra"
+
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "In a shocking escalation of the ongoing conflict, this morning (2071-01-01) our enemies of Tokemire sent a bomb towards Mikrelium, the capital and biggest city of Skala. The bombing affected Hexagon warehouses and some bullet train lines. 79 people were left injured."
+msgstr "Em uma escalação chocante do conflito atual, nessa manhã (2071-01-01) nossos inimigos de Tokemire mandaram uma bomba até Mikrelium, a capital e maior cidade do estado de Skala. O bombardeio afetou armazéns da Hexagon e várias linhas de trens-bala. 79 pessoas foram feridas."
+
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "Mark Polaria, governor of Skala, called the recent attack a \"barbaric act of aggression\". As of writing, the president is currently in Eszaki to further discuss our new alliance, and as such he hasn't answered."
+msgstr "Marcos Polaria, governador de Skala, chamou o ataque \"uma barbaridade\". No momento em que isso foi escrito, o presidente está atualmente em Eszaki para discutir a nova aliança, e ainda não respondeu ao ataque."
+
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "Advertisement"
+msgstr "Anúncio"
+
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "Shout out to Hexagon! They're very cool and so are their products."
+msgstr "A Hexagon é incrível, assim como seus produtos!"
+
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "Back to the news"
+msgstr "De volta para as notícias"
+
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "Meanwhile, our Minister of Peace said \"Tokemire will pay a heavy price\", and the Eszaki Ministry of Defense said, \"Tokemire has damaged an essential city of our ally, which is of course, bad.\", a truly insightful comment."
+msgstr "Enquanto isso, nosso Ministro da Paz disse \"Tokemire vai pagar um preço altíssimo!\", e o Ministro da Defesa de Eszaki disse \"Tokemire danificiou uma cidade significante do nosso aliado, que, obviamente, é ruim.\", um comentário verdadeiramente perspicaz."
+
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "We tried to send a reporter to Mikrelium, however due to the damaged bullet train lines, the ones that still work were very crowded, so our reporter couldn't get to Mikrelium."
+msgstr "Tentamos enviar um repórter para Mikrelium, porém os trens estavam extremamente lotados, então o repórter não conseguiu chegar em Mikrelium."
+
+#: web/thenews.org/2071/1/mikreliumBombing.tscn
+msgid "Since many bullet train lines cross Mikrelium as well as neighboring cities, this attack will drastically affect the economy of the west coast, as well as west-east coast relations."
+msgstr "Já que muitas linhas de trem-bala passam por Mikrelium e região, esse ataque vai drasticamente afetar a economia da costa oeste, sem contar as relações entre as costas leste e oeste."
+
+# website tag
+#: web/thenews.org/2071/1/nesuprantuDesertBombing.tscn
+msgid "nesuprantu"
+msgstr "nesuprantu"
+
+# website tag
+#: web/thenews.org/2071/1/nesuprantuDesertBombing.tscn
+msgid "teluji"
+msgstr "teluji"
+
+#: web/thenews.org/2071/1/nesuprantuDesertBombing.tscn
+msgid "Recently Teluji annihilated the entirety of the desert in Nesuprantu, drastically affecting the stock market."
+msgstr "Recentemente, Teluji completamente aniquilou o deserto em Nesuprantu, drasticamente afetando a bolsa de valores."
+
+#: web/thenews.org/2071/1/nesuprantuDesertBombing.tscn
+msgid "Although the region is sparsely populated, it holds significant strategic importance due to its oil reserves and military installations."
+msgstr "Embora a região tenha uma população minúscula, ela tem um papel estratégico muito importante graças as suas instalações militares e reservas de petróleo."
+
+#: web/thenews.org/2071/1/nesuprantuDesertBombing.tscn
+msgid "As Teluji is an ally of Lelclub and Nesuprantu is an enemy, we must say that this attack was certainly necessary and most definitely a good use of tax payer money."
+msgstr "Já que Teluji é um aliado do Lelclub e Nesuprantu é um inimigo, nós temos que dizer que esse ataque foi extramente necessário e definitivamente um bom uso de impostos."
+
+#: web/thenews.org/2071/1/nesuprantuMilitary.tscn
+msgid "Nesuprantu is planning to bomb the presidential palace with their latest NM-57 intercontinental ballistic missiles featuring state-of-the-art technology?!"
+msgstr "Estaria Nesuprantu planejando bombardear o palácio presidencial com o míssil balístico intercontinental NM-57 com tecnologia de ponta?!"
+
+#: web/thenews.org/2071/1/nesuprantuMilitary.tscn
+msgid "No, they won't bomb the presidential palace, we just added that so more people keep reading."
+msgstr "Não, eles não vão bombardear o palácio presidencial, nós só incluímos aquilo para que mais pessoas leiam."
+
+#: web/thenews.org/2071/1/nesuprantuMilitary.tscn
+msgid "We are facing unprecedented challenges, both from external threats and internal discord. Now, more than ever, we must stand together as one nation. In this period of tough times, we need the unwavering support of everyone to succeed. And that includes you."
+msgstr "Estamos enfrentando desafios sem precedentes, tanto de ameaças externas quanto de discórdia interna. Agora, mais do que nunca, devemos ficar juntos como uma nação. Nesse período de tempos difíceis, precisamos do apoio inabalável de todos para ter sucesso. E isso inclui você."
+
+#: web/thenews.org/2071/1/nesuprantuMilitary.tscn
+msgid "Our majestic nation stands at crossroads. With the intelligence we possess, we have the power to protect our future. It's imperative that we come together, support our leaders, and contribute to our national defense."
+msgstr "Nossa nação magnífica está em cruzamentos. Com as informações que nós obtivemos, temos o poder para proteger nosso futuro. É imperativo que nós fiquemos unidos, suportando nossos líderes e contribuíndo para nossa defesa nacional."
+
+# website tag
+# oil as in petroleum
+#: web/thenews.org/2071/1/newPowerPlant.tscn
+msgid "oil"
+msgstr "petróleo"
+
+# website tag
+# power as in electricity
+#: web/thenews.org/2071/1/newPowerPlant.tscn
+msgid "power"
+msgstr "eletricidade"
+
+# website tag
+#: web/thenews.org/2071/1/newPowerPlant.tscn
+msgid "power_plant"
+msgstr "usina_elétrica"
+
+#: web/thenews.org/2071/1/newPowerPlant.tscn
+msgid "The new oil-based power plant will best utilize Lelclub's most valuable resources, as well as minimize blackouts in the east coast."
+msgstr "A nova usina elétrica à base de petróleo vai utilizar o recurso mais valioso da nação, além de reduzir apagões na costa leste."
+
+#: web/thenews.org/2071/1/newPowerPlant.tscn
+msgid "The proposed plant, named the \"Hyperlarge Electricity Complex IV Part II\", will provide quite a bit of energy."
+msgstr "A usina proposta, chamada de \"Complexo Elétrico Muito-Grande IV Parte II\", fornecerá quantidades significativas de energia."
+
+# website tag
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "onneto_man"
+msgstr "homem_de_onneto"
+
+# website tag
+# bullshit-y named for some rail lines connecting the 2 coasts
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "intercoast_platform"
+msgstr "plataforma_continental"
+
+# website tag
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "onneto"
+msgstr "onneto"
+
+# website tag
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "john_proafmencksthoo"
+msgstr "joão_proafimenquesto"
+
+# website tag
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "tyler"
+msgstr "tiago"
+
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "In a certainly unusal protest, John Proafmencksthoo from Onneto travelled all the way from Great River, ON to the scorching desert just to stab the mountains with a knife."
+msgstr "Em um protesto definitivamente único, João Proafimenquesto de Onneto viajou de Grande Rio, On até o deserto escaldante só para esfaquear as montanhas."
+
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "We interviewed John Proafmencksthoo to ask why would anyone ever do that? He answered \"well, the fucking government won't fucking finish the fucking intercoast platform shitfuckery so i'm gonna fucking make my own fucking [inaudible]\""
+msgstr "Nós perguntamos João Proafimenquesto porque qualquer um em sã consciência iria fazer isso, e ele respondeu \"né, a porra do governo não termina a porra da bosta da plataforma interbostal então eu tô aqui tentando fazer uma bosta [inaudível]\""
+
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "We don't believe him, and Tyler from across the street really believes that the Onneto climate leads to serious mental health issues, some of them even permanent."
+msgstr "Não acreditamos nele, e o Tiago (meu visinho) acredita piamente de o clima de Onneto causa sérios problemas mentais, podendo até ser permanentes."
+
+# "new north upton snodsbury" can be anything as long as it sounds awful
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "Something that helps his theory is that New North Upton Snodsbury, the town in the scorching desert to which John Proafmencksthoo went, only has 2 houses, one of them is up for sale and the other one tried to murder our reporter."
+msgstr "Algo que ajuda a teoria dele é que Nova Itapipocalândiapólis do Norte Sul, a cidade no deserto onde João Proafimenquesto foi, só tem 2 casas, uma delas está à venda e a outra tentou matar nosso repórter."
+
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "In unrelated news, Tyler from across the street bought a house in the scorching desert of Onneto."
+msgstr "Tiago também acabou de comprar uma casa no deserto escaldante de Onneto (não relacionado aos eventos atualmente sendo discutidos)"
+
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "If you're from Onneto, please let us know if the local climate has led to permanent mental health issues that make you seriously consider stabbing mountains."
+msgstr "Se você é de Onneto, nos informe se o clima local levou à problemas mentais sérios que fazem você seriamente considerar esfaquear montanhas."
+
+#: web/thenews.org/2071/1/onnetoMan.tscn
+msgid "Let us know"
+msgstr "Nos informe"
+
+#: web/thenews.org/2071/1/tokemireBombingPlan.tscn
+msgid "Operation Delta Mues VI"
+msgstr "Operação Delta Mussim VI"
+
+#: web/thenews.org/2071/1/tokemireBombingPlan.tscn
+msgid "The editor advised me to not leak classified military documents, BUT I DID ANYWAY!!!!!!"
+msgstr "O editor disse que vazar documentos do exército \"não é uma boa ideia\", MAS EU VOU VAZAR MESMO ASSIM!!!!!!!!!!"
+
+# this is in a button
+#: web/thenews.org/2071/1/tokemireBombingPlan.tscn
+msgid "MILITARY DOCUMENTS!!"
+msgstr "DOCUMENTOS ULTRA SECRETOS!!"
+
+#: web/thenews.org/2071/1/tokemireBombingPlan.tscn
+msgid "edit: i was fired, please send places that are currently hiring"
+msgstr "ATUALIZAÇÃO: eu fui demitido, mande lugares atualmente contratando"
+
+# also a button
+#: web/thenews.org/2071/1/tokemireBombingPlan.tscn
+msgid "send stuff"
+msgstr "mandar coisas"
+
+#: web/thenews.org/2071/1/tragic.tscn
+msgid "Not a whole lot to talk about, I just really wanted to make the entire nation know about this"
+msgstr "Não há muito a dizer, só queria fazer o país inteiro saber disso"
+
+# website tag
+#: web/thenews.org/2071/1/turtingasRobotAttack.tscn
+msgid "turtingas"
+msgstr "turtingas"
+
+# website tag
+# as in turtingas being the one attacked
+#: web/thenews.org/2071/1/turtingasRobotAttack.tscn
+msgid "turtingas_attack"
+msgstr "ataque_em_turtingas"
+
+# website tag
+#: web/thenews.org/2071/1/turtingasRobotAttack.tscn
+msgid "robot"
+msgstr "robôs"
+
+# website tag
+#: web/thenews.org/2071/1/turtingasRobotAttack.tscn
+msgid "robot_army"
+msgstr "exército_de_robôs"
+
+# website tag
+#: web/thenews.org/2071/1/turtingasRobotAttack.tscn
+msgid "robot_attack"
+msgstr "ataque_de_robôs"
+
+# website tag
+#: web/thenews.org/2071/1/turtingasRobotAttack.tscn
+msgid "robot_army_attack"
+msgstr "ataque_do_exército_de_robôs"
+
+#: web/thenews.org/2071/1/turtingasRobotAttack.tscn
+msgid "This evening, the Tokemire-Nesuprantu coalision sent a new army of robots in Turtingas City, the biggest metropolis in the nation."
+msgstr "Essa noite, a coalização Tokemire-Nesuprantu enviou um novo exército de robôs para Turtingas, a maior metrópole do país."
+
+#: web/thenews.org/2071/1/turtingasRobotAttack.tscn
+msgid "This drastically affected the stock market. Tyler from across the street said \"GET THE FUCK OUTTA HERE\", while the editor said \"this article sucks, like always\""
+msgstr "Isso drasticamente afetou a bolsa de valores. Tiago (meu vizinho) disse \"SAI DAQUI\", enquanto o editor disse \"esse artigo é uma merda, como sempre\""
+
+# again mues is an incomprehensible slang, here it's being used as a verb
+#: web/thenews.org/2071/1/youJustGotMuessed.tscn
+msgid "YOU JUST GOT MUESSED!!!!!!!!!! SEND THIS TO ALL YOUR FRIENDS TO TOTALLY MUES THEM"
+msgstr "CÊ FOI MUSSINADO!!!!!!!!!!!! MANDE PARA TODOS OS SEUS AMIGOS PARA TOTALMENTE MUSSINAR ELES"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://os/mkstoolkit/Webview.cs" type="Script" id=1]
 [ext_resource path="res://web/thenews.org/assets/top.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://os/mkstoolkit/MksHyperlink.gd" type="Script" id=9]
 [ext_resource path="res://web/thenews.org/assets/rossTibeeth.png" type="Texture" id=10]
 [ext_resource path="res://web/thenews.org/assets/whoopsie.png" type="Texture" id=11]
+[ext_resource path="res://web/thenews.org/assets/map.png" type="Texture" id=12]
 [ext_resource path="res://web/thenews.org/assets/mikreliumBoom.png" type="Texture" id=14]
 [ext_resource path="res://web/thenews.org/assets/bombTokemire.png" type="Texture" id=15]
 [ext_resource path="res://web/thenews.org/assets/newPowerPlant.png" type="Texture" id=16]
@@ -59,7 +60,7 @@ rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
 margin_right = 633.0
-margin_bottom = 2234.0
+margin_bottom = 2605.0
 size_flags_horizontal = 3
 
 [node name="hSeparator" type="HSeparator" parent="scrollContainer/vBoxContainer"]
@@ -721,11 +722,31 @@ text = "More"
 script = ExtResource( 9 )
 website = "thenews.org/2071/1/governmentReform.tscn"
 
+[node name="f4" type="Label" parent="scrollContainer/vBoxContainer"]
+margin_left = 141.0
+margin_top = 2226.0
+margin_right = 491.0
+margin_bottom = 2266.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 4
+theme_type_variation = "Header"
+text = "World Map"
+align = 1
+
+[node name="textureRect2" type="TextureRect" parent="scrollContainer/vBoxContainer"]
+margin_top = 2274.0
+margin_right = 633.0
+margin_bottom = 2589.0
+rect_min_size = Vector2( 0, 315 )
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
 [node name="hSeparator2" type="HSeparator" parent="scrollContainer/vBoxContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = 2226.0
+margin_top = 2597.0
 margin_right = 633.0
-margin_bottom = 2234.0
+margin_bottom = 2605.0
 
 [node name="uh" type="Panel" parent="."]
 anchor_right = 1.0

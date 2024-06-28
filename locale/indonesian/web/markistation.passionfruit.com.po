@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MarkisaOS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id\n"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Markistation"
+msgstr "Markistation"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "The official website for Passionfruit's Markistations."
+msgstr "Situs web resmi untuk Markistation milik Passionfruit."
+
+# this is a website tag
+#: web/markistation.passionfruit.com/home.tscn
+msgid "company"
+msgstr "perusahaan"
+
+# this is a website tag
+#: web/markistation.passionfruit.com/home.tscn
+msgid "markisa"
+msgstr "markisa"
+
+# this is a website tag
+#: web/markistation.passionfruit.com/home.tscn
+msgid "computers"
+msgstr "komputer"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Unlock your mind."
+msgstr "Buka pikiran Anda."
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Markistations are the #1 mind-controlled computers."
+msgstr "Markistation adalah komputer yang dikendalikan oleh pikiran nomor 1."
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Explore the lineup"
+msgstr "Jelajahi edisi kami"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Markistations can be bought on the Marketplace app."
+msgstr "Markistation bisa dibeli di aplikasi Pasar."
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Home​"
+msgstr "Rumah"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Everyday tasks for casual users"
+msgstr "Tugas sehari-hari untuk pengguna biasa"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Workstation"
+msgstr "Stasiun kerja"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Students and offices"
+msgstr "Siswa dan perkantoran"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Professional"
+msgstr "Profesional"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Gaming and professional workloads"
+msgstr "Gaming dan tugas profesional"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Why 2071 Markistations are the best option"
+msgstr "Mengapa Markistation 2071 adalah pilihan terbaik"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "1. Markistations run MarkisaOS, more information at markisa.passionfruit.com"
+msgstr "1. Markistation menggunakan MarkisaOS, informasi lebih lanjut di markisa.passionfruit.com"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "2. 2071 Markistations are the fastest Markistations to date"
+msgstr "2. Markistation 2071 adalah Markistation tercepat sampai sekarang"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "3. 2071 Markistations are built durable and resistant materials"
+msgstr "3. Markistation 2071 dibuat menggunakan bahan kuat dan tahan lama"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "4. 2071 Markistations feature cutting-edge security technology"
+msgstr "4. Markistation 2071 menyediakan teknologi keamanan yang canggih"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Still using MarkisaBoxes?"
+msgstr "Masih menggunakan MarkisaBoxes?"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "1. MarkisaBoxes are discontinued and stuck on old software"
+msgstr "1. MarkisaBoxes telah diberhentikan dan terjebak dalam software kuno"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "2. Markistations are faster and more secure"
+msgstr "2. Markistation lebih cepat dan lebih aman"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "3. Getting a Markistation moves the world towards the future"
+msgstr "3. Mendapatkan Markistation menggerakkan dunia ke masa depan"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "4. The security of Markistations are now better than ever"
+msgstr "4. Keamanan dari Markistation lebih baik dari sebelumnya"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+msgstr "Copyright © 2071 Passionfruit Corporation. All rights reserved."
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Passionfruit"
+msgstr "Passionfruit"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "MarkisaOS"
+msgstr "MarkisaOS"
+
+# this one is different, it's in plural form
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Markistations"
+msgstr "Markistation"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Business"
+msgstr "Bisnis"
+
+#: web/markistation.passionfruit.com/home.tscn
+msgid "Developers"
+msgstr "Pengembang"
