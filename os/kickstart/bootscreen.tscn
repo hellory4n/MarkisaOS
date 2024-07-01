@@ -157,7 +157,7 @@ margin_bottom = 345.0
 custom_fonts/bold_italics_font = SubResource( 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[color=lime][i][b]MarkisaOS v0.22.0[/b][/i]
+bbcode_text = "[color=lime][i][b]MarkisaOS v0.23.0[/b][/i]
 by hellory4n, alex343xd, parfesan, and translators[/color]
 
 Starting Frambos kernel v7.4 core...
@@ -172,7 +172,7 @@ Starting the network manager...
 Starting Dashboard Core...
 
 Dashboard GUI is ready to be loaded."
-text = "MarkisaOS v0.22.0
+text = "MarkisaOS v0.23.0
 by hellory4n, alex343xd, parfesan, and translators
 
 Starting Frambos kernel v7.4 core...
@@ -232,7 +232,7 @@ text = "      +++   +++
 [node name="Label2" type="Label" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -22.0
+margin_top = -23.0
 margin_right = 853.0
 custom_colors/font_color = Color( 1, 1, 1, 0.529412 )
 custom_fonts/font = SubResource( 3 )
