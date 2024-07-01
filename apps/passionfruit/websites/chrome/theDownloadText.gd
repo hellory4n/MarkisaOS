@@ -4,7 +4,7 @@ onready var paradoxBar = $"../paradoxBar"
 onready var progress = $"../progress"
 onready var finished = $"../finished"
 
-func _process(_delta):
+func hlaol():
 	if paradoxBar.value >= paradoxBar.max_value:
 		progress.visible = false
 		finished.visible = true

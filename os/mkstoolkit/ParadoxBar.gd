@@ -8,6 +8,8 @@ func _ready():
 	randomize()
 
 func _process(delta):
+	if max_value == 0: return
+	
 	if rand_range(0, instability) < 1:
 		value += rand_range(0, 90) * delta
 	

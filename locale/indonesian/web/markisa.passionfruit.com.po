@@ -31,7 +31,7 @@ msgstr "komputer"
 # os = operating system
 #: web/markisa.passionfruit.com/home.tscn
 msgid "os"
-msgstr "sistem_operasi
+msgstr "sistem_operasi"
 
 # this is a website tag
 #: web/markisa.passionfruit.com/home.tscn

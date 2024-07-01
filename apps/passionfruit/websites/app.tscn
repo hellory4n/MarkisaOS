@@ -282,6 +282,9 @@ popup = NodePath("../../..")
 [node name="lmao" type="Node" parent="contents/downloads/hehehe/ha"]
 script = ExtResource( 21 )
 
+[node name="timer" type="Timer" parent="contents/downloads/hehehe/ha"]
+autostart = true
+
 [node name="share" type="Panel" parent="contents"]
 visible = false
 anchor_left = 0.5
@@ -387,3 +390,4 @@ popup = NodePath("..")
 [connection signal="pressed" from="contents/container/sidebar/vBoxContainer/top/history" to="contents/history/list" method="LoadStuff"]
 [connection signal="text_entered" from="contents/container/sidebar/vBoxContainer/address" to="contents/container/sidebar/vBoxContainer/address" method="Djfjsgjs"]
 [connection signal="pressed" from="contents/container/sidebar/vBoxContainer/hBoxContainer/addTabs" to="contents/container/sidebar/vBoxContainer/middle/tabs" method="AddTab"]
+[connection signal="timeout" from="contents/downloads/hehehe/ha/timer" to="contents/downloads/hehehe/ha/lmao" method="hlaol"]

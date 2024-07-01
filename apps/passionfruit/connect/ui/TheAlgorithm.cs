@@ -140,6 +140,8 @@ public class TheAlgorithm : VBoxContainer
                 JsonConvert.SerializeObject(post)
             });
         }
+
+        GetNode("more").Raise();
     }
 
     static MksConnectZone GetConnectZone(string zone, uint month)

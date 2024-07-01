@@ -45,8 +45,7 @@ margin_top = 40.0
 rect_clip_content = false
 
 [node name="vBoxContainer" type="VBoxContainer" parent="scrollContainer"]
-margin_left = 16.0
-margin_right = 616.0
+margin_right = 600.0
 margin_bottom = 1085.0
 rect_min_size = Vector2( 600, 0 )
 size_flags_horizontal = 6
