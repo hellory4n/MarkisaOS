@@ -120,8 +120,6 @@ margin_bottom = 305.0
 size_flags_vertical = 3
 
 [node name="tabs" type="VBoxContainer" parent="contents/container/sidebar/vBoxContainer/middle"]
-margin_right = 150.0
-margin_bottom = 215.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0

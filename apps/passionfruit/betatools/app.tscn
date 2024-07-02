@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://apps/passionfruit/betatools/ui/feedbackButton.gd" type="Script" id=1]
 [ext_resource path="res://os/mkstoolkit/SidebarButton.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://os/mkstoolkit/MksWindow.cs" type="Script" id=6]
 [ext_resource path="res://os/assets/highPeaks/colorIcons/biggerMarkisa.png" type="Texture" id=7]
 [ext_resource path="res://apps/passionfruit/betatools/ui/TranslationStuff.cs" type="Script" id=8]
+[ext_resource path="res://apps/passionfruit/betatools/ui/ResetTranslations.cs" type="Script" id=9]
 
 [node name="betatools" type="Control"]
 margin_right = 789.0
@@ -93,5 +94,14 @@ theme_type_variation = "SidebarButton"
 text = "Translations"
 script = ExtResource( 2 )
 sidebarRoot = NodePath("../../../categories")
+
+[node name="translations2" type="Button" parent="contents/sidebar/vBoxContainer"]
+margin_top = 135.0
+margin_right = 180.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "Reset Translations"
+script = ExtResource( 9 )
 
 [connection signal="pressed" from="contents/sidebar/vBoxContainer/configs" to="contents/categories/configs" method="Load"]
