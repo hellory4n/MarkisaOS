@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://apps/passionfruit/connect/smallicon.png" type="Texture" id=1]
 [ext_resource path="res://apps/passionfruit/connect/fullicon.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://os/assets/highPeaks/icons/movie.png" type="Texture" id=10]
 [ext_resource path="res://os/assets/highPeaks/icons/help.png" type="Texture" id=11]
 [ext_resource path="res://apps/passionfruit/connect/ui/sidebarButtonButConnect.gd" type="Script" id=12]
+[ext_resource path="res://apps/passionfruit/connect/ui/BluckBluckBluckBaBluckBluckBlucka.cs" type="Script" id=13]
 [ext_resource path="res://apps/passionfruit/connect/backgrounds/trending.png" type="Texture" id=14]
 [ext_resource path="res://apps/passionfruit/connect/music/quiteABitGoingOn.mp3" type="AudioStream" id=15]
 [ext_resource path="res://apps/passionfruit/connect/music/fairlyCorporateSong.mp3" type="AudioStream" id=16]
@@ -1046,13 +1047,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="vBoxContainer" type="VBoxContainer" parent="contents/sidebar/scrollContainer"]
-margin_right = 180.0
-margin_bottom = 360.0
+margin_right = 174.0
+margin_bottom = 405.0
 size_flags_horizontal = 3
 custom_constants/separation = 0
 
 [node name="trending" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
-margin_right = 180.0
+margin_right = 174.0
 margin_bottom = 45.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
@@ -1064,7 +1065,7 @@ thyAlgorithm = NodePath("../../../../categories/trending/scrollContainer/vBoxCon
 
 [node name="helpCenter" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 45.0
-margin_right = 180.0
+margin_right = 174.0
 margin_bottom = 90.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
@@ -1076,7 +1077,7 @@ thyAlgorithm = NodePath("../../../../categories/helpCenter/scrollContainer/vBoxC
 
 [node name="comedy" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 90.0
-margin_right = 180.0
+margin_right = 174.0
 margin_bottom = 135.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
@@ -1088,7 +1089,7 @@ thyAlgorithm = NodePath("../../../../categories/comedy/scrollContainer/vBoxConta
 
 [node name="technology" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 135.0
-margin_right = 180.0
+margin_right = 174.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
@@ -1100,7 +1101,7 @@ thyAlgorithm = NodePath("../../../../categories/technology/scrollContainer/vBoxC
 
 [node name="entertainment" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 180.0
-margin_right = 180.0
+margin_right = 174.0
 margin_bottom = 225.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
@@ -1112,7 +1113,7 @@ thyAlgorithm = NodePath("../../../../categories/entertainment/scrollContainer/vB
 
 [node name="creativity" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 225.0
-margin_right = 180.0
+margin_right = 174.0
 margin_bottom = 270.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
@@ -1124,7 +1125,7 @@ thyAlgorithm = NodePath("../../../../categories/creativity/scrollContainer/vBoxC
 
 [node name="discussion" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 270.0
-margin_right = 180.0
+margin_right = 174.0
 margin_bottom = 315.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
@@ -1136,7 +1137,7 @@ thyAlgorithm = NodePath("../../../../categories/discussion/scrollContainer/vBoxC
 
 [node name="bookmarks" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
 margin_top = 315.0
-margin_right = 180.0
+margin_right = 174.0
 margin_bottom = 360.0
 rect_min_size = Vector2( 0, 45 )
 theme_type_variation = "SidebarButton"
@@ -1145,6 +1146,16 @@ icon = ExtResource( 27 )
 script = ExtResource( 12 )
 sidebarRoot = NodePath("../../../../categories")
 thyAlgorithm = NodePath("../../../../categories/bookmarks/scrollContainer/vBoxContainer")
+
+[node name="gfhf" type="Button" parent="contents/sidebar/scrollContainer/vBoxContainer"]
+margin_top = 360.0
+margin_right = 174.0
+margin_bottom = 405.0
+rect_min_size = Vector2( 0, 45 )
+theme_type_variation = "SidebarButton"
+text = "GREGIFICATION"
+clip_text = true
+script = ExtResource( 13 )
 
 [node name="share" type="Panel" parent="contents"]
 visible = false

@@ -1,3 +1,5 @@
+using static markisa.network.PostZone;
+
 namespace markisa.network {
 
 public class TrendingZone1
@@ -15,6 +17,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             Content = "My wood album [b]James VS The Stars[/b] is out! This is a breakthrough in music composition and storytelling",
             Images = new string[] { "res://web/rosstibeeth.com/assets/jvstAd.png" },
             Link = "rosstibeeth.com",
+            Zones = new PostZone[] { Entertainment, Creativity },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "iredvent",
@@ -60,6 +63,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "iredvent",
             ProfilePicture = "res://web/rosstibeeth.com/assets/rossHimself.png",
             Content = "ROSS IS A BITCH he broke up with me :(",
+            Zones = new PostZone[] { Entertainment },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Ross Smith",
@@ -86,6 +90,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Daily Thoughts",
             ProfilePicture = "res://social/connectpeople/dailyThoughts.png",
             Content = "if i kill my neighbor it's murder, if i kill the president it's an assassination",
+            Zones = new PostZone[] { Discussion, Comedy },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Ross Smith",
@@ -111,6 +116,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Daily Thoughts",
             ProfilePicture = "res://social/connectpeople/dailyThoughts.png",
             Content = "imagine if we're'all just virtual people on a game with a dumb idea",
+            Zones = new PostZone[] { Discussion, Comedy },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Rob Smith",
@@ -125,6 +131,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             ProfilePicture = "res://social/connectpeople/dailyThoughts.png",
             // translators: this can be any tongue twister, doesn't matter
             Content = "How much wood would a woodchuck chuck if a woodchuck could chuck wood?",
+            Zones = new PostZone[] { Discussion, Comedy },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "John A. Melton",
@@ -138,6 +145,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "John A. Melton",
             ProfilePicture = "res://os/assets/userIcons/dog.png",
             Content = "Just noticed i have 206470572039523 downloads :)",
+            Zones = new PostZone[] { Comedy },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Faster PC",
@@ -159,6 +167,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Daniel McLeinad",
             ProfilePicture = "res://os/assets/userIcons/pancakes.png",
             Content = "eating a pizza, i'm miserable",
+            Zones = new PostZone[] { Comedy },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Faster PC",
@@ -179,6 +188,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Daniel McLeinad",
             ProfilePicture = "res://os/assets/userIcons/pancakes.png",
             Content = "still eating a pizza, i'm still miserable",
+            Zones = new PostZone[] { Comedy },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Faster PC",
@@ -200,6 +210,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             ProfilePicture = "res://os/assets/userIcons/pancakes.png",
             // translators: james vs the stars is a reference to ross tibeeth, you probably already translated it
             Content = "just listened to james vs the stars, does anybody genuinely like this shit?",
+            Zones = new PostZone[] { Entertainment },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Daniel McLeinad",
@@ -235,6 +246,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             ProfilePicture = "res://social/connectpeople/fasterpc.png",
             Content = "Slow PC? Use FasterPC! It's free!",
             Link = "fasterpc.org",
+            Zones = new PostZone[] { HelpCenter, Technology },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Rob Smith",
@@ -268,6 +280,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             ProfilePicture = "res://os/assets/userIcons/duck.png",
             Content = "guys check out this cool app",
             Link = "destroyermpkg.com",
+            Zones = new PostZone[] { HelpCenter, Technology },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Rob Smith",
@@ -293,6 +306,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Passionfruit",
             ProfilePicture = "res://social/connectpeople/passionfruit.png",
             Content = "Here at Passionfruit, we're hard at work on the future of MarkisaOS",
+            Zones = new PostZone[] { Technology },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Rob Smith",
@@ -306,6 +320,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Simon Tranderson",
             ProfilePicture = "res://social/connectpeople/government.png",
             Content = "Good morning Lelclub",
+            Zones = new PostZone[] { Discussion },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "deleted user",
@@ -319,6 +334,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Daily Thoughts",
             ProfilePicture = "res://social/connectpeople/dailyThoughts.png",
             Content = "Where does the wind start",
+            Zones = new PostZone[] { Comedy, Discussion },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "John A. Melton",
@@ -357,6 +373,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             ProfilePicture = "res://social/connectpeople/dailyThoughts.png",
             Content = "We should dig a couple of really big holes across lelclub, would definitely boost the economy",
             Images = new string[] { "res://social/connectmedia/digAHole.png" },
+            Zones = new PostZone[] { Comedy, Discussion },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "PROUD TURTINGAS CITIZEN",
@@ -413,6 +430,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "MrAssassination",
             ProfilePicture = "res://os/assets/userIcons/unknown.png",
             Content = "Today I murdered a family of 4",
+            Zones = new PostZone[] { Discussion },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "Rob Smith",
@@ -438,6 +456,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             User = "Simon Tranderson",
             ProfilePicture = "res://social/connectpeople/government.png",
             Content = "Today I woke up and saw a very nice lady, she is my wife",
+            Zones = new PostZone[] { Discussion },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "MrAssassination",
@@ -470,6 +489,7 @@ public static MksConnectZone Data { get; set; } = new MksConnectZone {
             ProfilePicture = "res://os/assets/userIcons/car.png",
             Content = "does anyone know how to fix this game? i have a 2071 markisation pro, it should work",
             Link = "koni.com",
+            Zones = new PostZone[] { Entertainment, HelpCenter },
             Replies = new MksPost[] {
                 new MksPost {
                     User = "parmesan",
